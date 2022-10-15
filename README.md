@@ -47,9 +47,10 @@ git checkout -b my-new-branch
           src="Buttons/your_github_username/index.html"
 ></iframe>
 ```
-Note: Don't forget to replace 'your_github_username' with GitHub Username.
-
-If you are adding more than one buttons then give proper names such as Spyware007_1,Spyware007_2, your_github_username_1,etc
+# Note: 
+- Make sure to align your button centered horizontally as well as vertically.
+- Don't forget to replace 'your_github_username' with GitHub Username.
+- If you are adding more than one buttons then give proper names such as Spyware007_1,Spyware007_2, your_github_username_1,etc
 
 - Stage your changes. 
 ```
