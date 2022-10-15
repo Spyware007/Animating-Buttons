@@ -3,23 +3,42 @@
 }
 .text {
   text-align: center;
-  color: #000000;
+  /* color: #000000; */
   text-shadow: 0px 0px 30px #ffffff;
   font-size: 40px;
   margin: 40px 0px 0px;
 }
 .gradient_bg {
-  background-color: #000000;
   padding: 4px 10px;
   border-radius: 12px;
 }
+
+.light_mode {
+  background-color: #000 ;
+}
+.dark_mode {
+  background-color: rgb(240, 240, 240) ;
+}
+
+
 .gradient {
   font-size: 40px;
+}
+
+.light_mode .gradient {
   background: -webkit-linear-gradient(#d6d6a5, #c7f3f6, #b6d1ff, #f8cafc);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.dark_mode .gradient {
+  background: -webkit-linear-gradient(#ffff43, #3fefff, #3c84ff, #ea37fa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .socials_container {
   display: flex;
   justify-content: center;
