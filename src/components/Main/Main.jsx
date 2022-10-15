@@ -6,7 +6,12 @@ const Main = () => {
     <>
       <h1 className={classes.text}>Explore the Buttons by our Contributors.</h1>
       <div className={classes.btns_container}>
-      <iframe
+        <iframe
+          className={classes.container}
+          title="AmanPathan"
+          src="Buttons/AmanPathan/index.html"
+        ></iframe>
+        <iframe
           className={classes.container}
           title="AashviKothari"
           src="Buttons/AashviKothari/index.html"
@@ -60,7 +65,7 @@ const Main = () => {
           className={classes.container}
           title="Ayushi8989"
           src="Buttons/Ayushi8989/index.html"
-          ></iframe>
+        ></iframe>
         <iframe
           className={classes.container}
           title="Sakshy18"
