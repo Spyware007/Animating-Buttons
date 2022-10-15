@@ -8,6 +8,11 @@ const Main = () => {
       <div className={classes.btns_container}>
         <iframe
           className={classes.container}
+          title="Princeton21_1"
+          src="Buttons/Princeton21_1/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
           title="abc"
           src="Buttons/Princeton21/index.html"
         ></iframe>
