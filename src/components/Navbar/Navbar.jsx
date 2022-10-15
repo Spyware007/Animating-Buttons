@@ -17,7 +17,7 @@ const Navbar = () => {
         </a>
         <a
           className={classes.link}
-          href="https://github.com/DSC-DYPCOE/Animating-Buttons"
+          href="https://github.com/Spyware007/Animating-Buttons"
           target="_blank"
           rel="noreferrer"
         >
