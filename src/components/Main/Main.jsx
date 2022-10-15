@@ -18,13 +18,8 @@ const Main = () => {
         ></iframe>
         <iframe
           className={classes.container}
-
           title="ganraj21_1"
           src="Buttons/ganraj21_1/index.html"
-          
-          title="SaurabhBarde-007"
-          src="Buttons/SaurabhBarde-007/index.html"
-
         ></iframe>
         <iframe
           className={classes.container}
