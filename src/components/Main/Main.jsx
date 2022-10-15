@@ -8,8 +8,18 @@ const Main = () => {
       <div className={classes.btns_container}>
         <iframe
           className={classes.container}
+          title="Princeton21_1"
+          src="Buttons/Princeton21_1/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
           title="abc"
           src="Buttons/Princeton21/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
+          title="SaurabhBarde-007"
+          src="Buttons/SaurabhBarde-007/index.html"
         ></iframe>
         <iframe
           className={classes.container}
@@ -20,6 +30,11 @@ const Main = () => {
           className={classes.container}
           title="Arjun-Ingole"
           src="Buttons/Arjun-Ingole/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
+          title="Arjun-Ingole"
+          src="Buttons/Arjun-Ingole_1/index.html"
         ></iframe>
         <iframe
           className={classes.container}
@@ -35,6 +50,21 @@ const Main = () => {
           className={classes.container}
           title="abc"
           src="Buttons/Spyware007_5/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
+          title="Ayushi8989"
+          src="Buttons/Ayushi8989/index.html"
+          ></iframe>
+        <iframe
+          className={classes.container}
+          title="Sakshy18"
+          src="Buttons/Sakshy18/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
+          title="Aaditya1612"
+          src="Buttons/Aaditya1612/index.html"
         ></iframe>
       </div>
     </>
