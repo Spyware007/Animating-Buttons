@@ -1,34 +1,36 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background: #0c002b;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-a{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    position: absolute;
-    top: 35%;
 
-    left: 49%;
-    transform: translate(-50%,50%);
+a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 40px;
+    transform: translate(-50%, -50%);
     color: #1670f0;
-    padding: 30px 60px;
-    font-size: 30px;
+    padding: 30px;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-decoration: none;
-    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
     overflow: hidden;
 }
-a:before{
-    position: absolute;
+
+a:before {
     content: '';
+    position: absolute;
     top: 2px;
     left: 2px;
     bottom: 2px;
     width: 50%;
     background: rgba(255, 255, 255, 0.05);
 }
-a span:nth-child(1){
+
+a span:nth-child(1) {
     position: absolute;
     top: 0;
     left: 0;
@@ -37,15 +39,20 @@ a span:nth-child(1){
     background: linear-gradient(to right, #0c002b, #1779ff);
     animation: animate1 2s linear infinite;
 }
+
 @keyframes animate1 {
-    0%{
+    0% {
         transform: translateX(-100%);
+
     }
-    100%{
+
+    100% {
         transform: translateX(100%);
+
     }
 }
-a span:nth-child(2){
+
+a span:nth-child(2) {
     position: absolute;
     top: 0;
     right: 0;
@@ -54,17 +61,21 @@ a span:nth-child(2){
     background: linear-gradient(to bottom, #0c002b, #1779ff);
     animation: animate2 2s linear infinite;
     animation-delay: 1s;
+}
 
-}
 @keyframes animate2 {
-    0%{
+    0% {
         transform: translateY(-100%);
+
     }
-    100%{
+
+    100% {
         transform: translateY(100%);
+
     }
 }
-a span:nth-child(3){
+
+a span:nth-child(3) {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -72,18 +83,21 @@ a span:nth-child(3){
     height: 2px;
     background: linear-gradient(to left, #0c002b, #1779ff);
     animation: animate3 2s linear infinite;
-    animation-delay: 2s;
+}
 
-}
 @keyframes animate3 {
-    0%{
+    0% {
         transform: translateX(100%);
+
     }
-    100%{
+
+    100% {
         transform: translateX(-100%);
+
     }
 }
-a span:nth-child(4){
+
+a span:nth-child(4) {
     position: absolute;
     top: 0;
     left: 0;
@@ -91,14 +105,17 @@ a span:nth-child(4){
     height: 100%;
     background: linear-gradient(to top, #0c002b, #1779ff);
     animation: animate4 2s linear infinite;
-    animation-delay: 3s;
-
+    animation-delay: 1s;
 }
+
 @keyframes animate4 {
-    0%{
+    0% {
         transform: translateY(100%);
+
     }
-    100%{
+
+    100% {
         transform: translateY(-100%);
+
     }
 }
