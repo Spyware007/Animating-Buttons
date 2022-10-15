@@ -59,7 +59,7 @@ a:hover::before {
 }
 
 a:hover {
-  color: #f4b400;
+  color: #fff;
 }
 
 a:active:before {
