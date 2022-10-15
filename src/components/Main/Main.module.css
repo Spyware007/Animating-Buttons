@@ -1,0 +1,20 @@
+.text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.btns_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  margin-bottom: 100px;
+}
+.container {
+  all: unset;
+  width: 340px;
+  height: 250px;
+  border: 1px solid #8b8b8b;
+  box-shadow: 0px 4px 20px 0px #00000040;
+  border-radius: 12px;
+}
