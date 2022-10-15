@@ -18,6 +18,16 @@ const Main = () => {
         ></iframe>
         <iframe
           className={classes.container}
+          title="Arjun-Ingole"
+          src="Buttons/Arjun-Ingole/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
+          title="Arjun-Ingole"
+          src="Buttons/Arjun-Ingole_1/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
           title="abc"
           src="Buttons/Spyware007_4/index.html"
         ></iframe>
@@ -30,6 +40,11 @@ const Main = () => {
           className={classes.container}
           title="abc"
           src="Buttons/Spyware007_5/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
+          title="Sakshy18"
+          src="Buttons/Sakshy18/index.html"
         ></iframe>
       </div>
     </>
