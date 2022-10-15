@@ -1,3 +1,7 @@
+
+<div align="center">
+<img width="300"  alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
+</div>
 <h1 align="center">✨✨HacktoberFest 2022✨✨</h1>
 <img width="1440" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png">
 
@@ -43,9 +47,10 @@ git checkout -b my-new-branch
           src="Buttons/your_github_username/index.html"
 ></iframe>
 ```
-Note: Don't forget to replace 'your_github_username' with GitHub Username.
-
-If you are adding more than one buttons then give proper names such as Spyware007_1,Spyware007_2, your_github_username_1,etc
+# Note: 
+- Make sure to align your button centered horizontally as well as vertically.
+- Don't forget to replace 'your_github_username' with GitHub Username.
+- If you are adding more than one buttons then give proper names such as Spyware007_1,Spyware007_2, your_github_username_1,etc
 
 - Stage your changes. 
 ```
@@ -72,6 +77,16 @@ git push origin my-new-branch
 * Also, make sure you comment your code wherever necessary. 
 
 ----
+
+# Our Beloved Contributors 😍
+
+---
+
+<a href="https://github.com/Spyware007/Animating-Buttons/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Spyware007/Animating-Buttons" />
+</a>
+
+---
 
 <h3 align="center"> DON'T FORGET TO ⭐STAR⭐ THIS REPOSITORY !!✨✨
 </h3> 
