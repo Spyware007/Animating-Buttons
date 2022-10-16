@@ -1,18 +1,15 @@
-.buttonspcl
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 button
 {
     background-color: aquamarine;
-    width: 100px;
-    height: 50px;
+    width: 140px;
+    height: 70px;
     border-radius: 17px;
     font-family: 'Fuzzy Bubbles', cursive;
     font-weight: 800;
     letter-spacing: 1px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
 }
 button:hover
 {
