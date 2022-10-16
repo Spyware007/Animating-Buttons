@@ -6,7 +6,12 @@ const Main = () => {
     <>
       <h1 className={classes.text}>Explore the Buttons by our Contributors.</h1>
       <div className={classes.btns_container}>
-      <iframe
+        <iframe
+          className={classes.container}
+          title="AmanPathan"
+          src="Buttons/AmanPathan/index.html"
+        ></iframe>
+        <iframe
           className={classes.container}
           title="AashviKothari"
           src="Buttons/AashviKothari/index.html"
@@ -30,6 +35,11 @@ const Main = () => {
           className={classes.container}
           title="123shuklaayush"
           src="Buttons/123shuklaayush/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
+          title="123shuklaayush"
+          src="Buttons/123shuklaayush_1/index.html"
         ></iframe>
         <iframe
           className={classes.container}
@@ -60,7 +70,7 @@ const Main = () => {
           className={classes.container}
           title="Ayushi8989"
           src="Buttons/Ayushi8989/index.html"
-          ></iframe>
+        ></iframe>
         <iframe
           className={classes.container}
           title="Sakshy18"
@@ -78,8 +88,16 @@ const Main = () => {
         ></iframe>
         <iframe
           className={classes.container}
+
           title="Bhushan_Kale"
           src="Buttons/Bhushan_Kale/index.html"
+                  ></iframe>
+                          <iframe
+          className={classes.container}
+
+          title="sks8784"
+          src="Buttons/sks8784/index.html"
+
         ></iframe>
       </div>
     </>
