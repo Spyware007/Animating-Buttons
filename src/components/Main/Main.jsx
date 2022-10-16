@@ -174,12 +174,6 @@ const Main = () => {
           title="Shubhammete"
           src="Buttons/Shubhammete/index.html"
        ></iframe>
-       <iframe
-          className={classes.container}
-          title="Fallen-Ecstasy"
-          src="Buttons/Fallen-Ecstasy/index.html"
-       ></iframe>
-
 
       </div>
     </>
