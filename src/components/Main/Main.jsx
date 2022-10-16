@@ -14,7 +14,7 @@ const Main = () => {
           src="Buttons/SaurabhBarde-007_2/index.html"
         ></iframe>
         <div className={classes.download}>
-          <button type="submit" onClick ={()=> {download(`SaurabhBarde-007_2`)}} className={classes.btn}>Download</button>
+          <button type="submit" onClick ={()=> {download(`SaurabhBarde-007_2`, `index`, `styles`)}} className={classes.btn}>Download</button>
           </div>
         </div>
         <iframe
