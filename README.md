@@ -43,7 +43,7 @@ git checkout -b my-new-branch
 ```
 <iframe
           className={classes.container}
-          title="your_github_username"
+          title=""
           src="Buttons/your_github_username/index.html"
 ></iframe>
 ```
