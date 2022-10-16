@@ -194,8 +194,6 @@ const Main = () => {
           src="Buttons/akpaswan67/index.html"
         ></iframe>
 
-
-       ></iframe>
   <iframe
           className={classes.container}
           title="mundadapurva"
