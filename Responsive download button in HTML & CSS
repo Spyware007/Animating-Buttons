@@ -1,0 +1,364 @@
+<button class="button">
+    <svg class="background" preserveAspectRatio="none" viewBox="0 0 164 45">
+        <path d="M0 3C0 1.34315 1.33152 0 2.98838 0C15.6933 0 52.8204 0 82 0C111.114 0 148.441 0 161.007 0C162.664 0 164 1.34315 164 3V42C164 43.6569 162.657 45 161 45H3C1.34314 45 0 43.6569 0 42V3Z" />
+    </svg>
+    <div class="label">&#68;ownload</div>
+    <div class="success">Open file</div>
+    <svg class="progress" viewBox="0 0 164 32"></svg>
+</button>
+
+<!-- dribbble - twitter -->
+<a class="dribbble" href="https://dribbble.com/ai" target="_blank"><img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a>
+<a class="twitter" target="_blank" href="https://twitter.com/aaroniker_me"><svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+        <path d="M67.812 16.141a26.246 26.246 0 0 1-7.519 2.06 13.134 13.134 0 0 0 5.756-7.244 26.127 26.127 0 0 1-8.313 3.176A13.075 13.075 0 0 0 48.182 10c-7.229 0-13.092 5.861-13.092 13.093 0 1.026.118 2.021.338 2.981-10.885-.548-20.528-5.757-26.987-13.679a13.048 13.048 0 0 0-1.771 6.581c0 4.542 2.312 8.551 5.824 10.898a13.048 13.048 0 0 1-5.93-1.638c-.002.055-.002.11-.002.162 0 6.345 4.513 11.638 10.504 12.84a13.177 13.177 0 0 1-3.449.457c-.846 0-1.667-.078-2.465-.231 1.667 5.2 6.499 8.986 12.23 9.09a26.276 26.276 0 0 1-16.26 5.606A26.21 26.21 0 0 1 4 55.976a37.036 37.036 0 0 0 20.067 5.882c24.083 0 37.251-19.949 37.251-37.249 0-.566-.014-1.134-.039-1.694a26.597 26.597 0 0 0 6.533-6.774z"></path>
+    </svg></a>
+    
+    ------------------------------------------------------------------------
+    
+    .button {
+    --background: #1a1c27;
+    --background-hover: #292c3b;
+    --background-progress: #999eb4;
+    --background-progress-active: #275efe;
+    --background-progress-success: #292c3b;
+    --text: #fff;
+    --success-text: #292c3b;
+    display: flex;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    border: 0;
+    padding: 0;
+    line-height: 21px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    background: none;
+    color: var(--text);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    --letters-y: 0px;
+    --letters-r: 0deg;
+    --letters-o: 1;
+    --progress-opacity: 0;
+    --background-opacity: 1;
+    --progress: 157;
+    --progress-y: 0.5px;
+    --progress-sx: 1;
+    --progress-sy: 1;
+    --success-opacity: 0;
+    &:hover {
+        --fill: var(--background-hover);
+    }
+    &.active {
+        --fill: var(--background-progress);
+        --fill-delay: 0.2s;
+        --fill-duration: 0.4s;
+    }
+    &.success {
+        --success-background: var(--background-progress-success);
+    }
+    svg {
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        &.background {
+            height: 45px;
+            top: 0;
+            opacity: var(--background-opacity);
+            fill: var(--fill, var(--background));
+            transition: fill var(--fill-duration, 0.2s) linear
+                var(--fill-delay, 0s);
+        }
+        &.progress {
+            height: 32px;
+            bottom: -13px;
+            stroke: var(--background-progress);
+            fill: none;
+            stroke-width: 7;
+            stroke-linecap: round;
+            pointer-events: none;
+            opacity: var(--progress-opacity);
+            transform: translateY(var(--progress-y))
+                scale(var(--progress-sx), var(--progress-sy)) translateZ(0);
+            path {
+                &:last-child {
+                    stroke-dasharray: 157;
+                    stroke-dashoffset: var(--progress);
+                    stroke: var(
+                        --success-background,
+                        var(--background-progress-active)
+                    );
+                    transition: stroke 0.2s linear;
+                }
+            }
+        }
+    }
+    .label,
+    .success {
+        z-index: 1;
+    }
+    .label {
+        position: relative;
+        display: flex;
+        padding: 12px 40px;
+        opacity: var(--letters-o);
+        span {
+            display: block;
+            transform: translateY(calc(var(--letters-y) * var(--move)))
+                translateZ(0)
+                rotate(calc(var(--letters-r) * var(--rotate) * var(--part)));
+        }
+    }
+    .success {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 12px;
+        color: var(--success-text);
+        opacity: var(--success-opacity);
+    }
+}
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: inherit;
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+// Center & dribbble
+body {
+    min-height: 100vh;
+    display: flex;
+    font-family: "Inter", Arial;
+    justify-content: center;
+    align-items: center;
+    background: #eceef6;
+    .dribbble {
+        position: fixed;
+        display: block;
+        right: 20px;
+        bottom: 20px;
+        img {
+            display: block;
+            height: 28px;
+        }
+    }
+    .twitter {
+        position: fixed;
+        display: block;
+        right: 64px;
+        bottom: 14px;
+        svg {
+            width: 32px;
+            height: 32px;
+            fill: #1da1f2;
+        }
+    }
+}
+
+----------------------------------------------------------------------
+
+gsap.registerPlugin(MorphSVGPlugin);
+
+document.querySelectorAll(".button").forEach((button) => {
+    let label = button.querySelector(".label"),
+        path = button.querySelector(".background path"),
+        svgProgress = button.querySelector(".progress"),
+        letters = label.textContent.trim().split(""),
+        pathProgress = new Proxy(
+            {
+                y: null
+            },
+            {
+                set(target, key, value) {
+                    target[key] = value;
+                    if (target.y !== null) {
+                        svgProgress.innerHTML = getPath(target.y, 0.3);
+                    }
+                    return true;
+                },
+                get(target, key) {
+                    return target[key];
+                }
+            }
+        );
+
+    pathProgress.y = 16;
+
+    label.innerHTML = "";
+
+    function elements(letter, index, array) {
+        let element = document.createElement("span"),
+            part = index >= array.length / 2 ? -1 : 1,
+            position =
+                index >= array.length / 2
+                    ? array.length / 2 - index + (array.length / 2 - 1)
+                    : index,
+            move = position / (array.length / 2),
+            rotate = 1 - move;
+
+        element.innerHTML = !letter.trim() ? "&nbsp;" : letter;
+        element.style.setProperty("--move", move);
+        element.style.setProperty("--rotate", rotate);
+        element.style.setProperty("--part", part);
+
+        label.appendChild(element);
+    }
+
+    letters.forEach(elements);
+
+    button.addEventListener("mouseenter", (e) => {
+        if (button.classList.contains("active")) {
+            return;
+        }
+        gsap.to(path, {
+            duration: 0.15,
+            morphSVG:
+                "M0 3C0 1.34315 1.33159 0.0090786 2.98745 0.0667219C15.6914 0.508972 52.8196 3 82 3C111.115 3 148.443 0.520171 161.009 0.0697387C162.664 0.010385 164 1.34315 164 3V42C164 43.6569 162.657 45 161 45H3C1.34314 45 0 43.6569 0 42V3Z"
+        });
+        gsap.to(button, {
+            duration: 0.15,
+            "--letters-y": "2px",
+            "--letters-r": "8deg"
+        });
+    });
+
+    button.addEventListener("mouseleave", (e) => {
+        if (button.classList.contains("active")) {
+            return;
+        }
+        gsap.to(path, {
+            duration: 0.15,
+            morphSVG:
+                "M0 3C0 1.34315 1.33152 0 2.98838 0C15.6933 0 52.8204 0 82 0C111.114 0 148.441 0 161.007 0C162.664 0 164 1.34315 164 3V42C164 43.6569 162.657 45 161 45H3C1.34314 45 0 43.6569 0 42V3Z"
+        });
+        gsap.to(button, {
+            duration: 0.15,
+            "--letters-y": "0px",
+            "--letters-r": "0deg"
+        });
+    });
+
+    button.addEventListener("click", (e) => {
+        if (button.classList.contains("active")) {
+            return;
+        }
+        button.classList.add("active");
+        gsap.to(button, {
+            "--letters-o": 0,
+            "--letters-y": "8px",
+            "--letters-r": "12deg",
+            duration: 0.2
+        });
+        gsap.to(path, {
+            keyframes: [
+                {
+                    morphSVG:
+                        "M0 3C0 1.34315 1.33326 0.0498162 2.96247 0.351221C15.6427 2.69708 52.8005 16 82 16C111.136 16 148.496 2.75523 161.036 0.366778C162.663 0.0567542 164 1.34315 164 3V42C164 43.6569 162.657 45 161 45H3C1.34314 45 0 43.6569 0 42V3Z",
+                    duration: 0.2,
+                    ease: "none"
+                },
+                {
+                    morphSVG:
+                        "M0 42C0 40.3431 1.33152 39 2.98838 39C15.6933 39 52.8204 39 82 39C111.114 39 148.441 39 161.007 39C162.664 39 164 40.3431 164 42V42C164 43.6569 162.657 45 161 45H3C1.34314 45 0 43.6569 0 42V42Z",
+                    duration: 0.4,
+                    ease: "elastic.out(1, .9)",
+                    onComplete() {
+                        gsap.set(button, {
+                            "--background-opacity": 0,
+                            "--progress-opacity": 1
+                        });
+                        gsap.to(button, {
+                            "--progress": 0,
+                            duration: 3,
+                            onComplete() {
+                                button.classList.add("success");
+                                gsap.to(pathProgress, {
+                                    keyframes: [
+                                        {
+                                            duration: 0.2,
+                                            y: 10
+                                        },
+                                        {
+                                            duration: 0.6,
+                                            ease: "elastic.out(1, .5)",
+                                            y: 16
+                                        }
+                                    ]
+                                });
+                                gsap.to(button, {
+                                    "--progress-y": "-8px",
+                                    "--progress-sx": 0.42,
+                                    "--progress-sy": 0.35,
+                                    "--success-opacity": 1,
+                                    duration: 0.2,
+                                    delay: 0.1,
+                                    onComplete() {
+                                        button.addEventListener(
+                                            "click",
+                                            (e) => {
+                                                window.open(
+                                                    "https://twitter.com/aaroniker_me",
+                                                    "_blank"
+                                                );
+                                            }
+                                        );
+                                    }
+                                });
+                            }
+                        });
+                    }
+                }
+            ]
+        });
+    });
+});
+
+function getPoint(point, i, a, smoothing) {
+    let cp = (current, previous, next, reverse) => {
+            let p = previous || current,
+                n = next || current,
+                o = {
+                    length: Math.sqrt(
+                        Math.pow(n[0] - p[0], 2) + Math.pow(n[1] - p[1], 2)
+                    ),
+                    angle: Math.atan2(n[1] - p[1], n[0] - p[0])
+                },
+                angle = o.angle + (reverse ? Math.PI : 0),
+                length = o.length * smoothing;
+            return [
+                current[0] + Math.cos(angle) * length,
+                current[1] + Math.sin(angle) * length
+            ];
+        },
+        cps = cp(a[i - 1], a[i - 2], point, false),
+        cpe = cp(point, a[i - 1], a[i + 1], true);
+    return `C ${cps[0]},${cps[1]} ${cpe[0]},${cpe[1]} ${point[0]},${point[1]}`;
+}
+
+function getPath(update, smoothing) {
+    let points = [
+            [3.5, 16],
+            [82, update],
+            [160.5, 16]
+        ],
+        d = points.reduce(
+            (acc, point, i, a) =>
+                i === 0
+                    ? `M ${point[0]},${point[1]}`
+                    : `${acc} ${getPoint(point, i, a, smoothing)}`,
+            ""
+        );
+    return `<path d="${d}" /><path d="${d}" />`;
+}
