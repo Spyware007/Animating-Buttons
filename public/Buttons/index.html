@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <link rel="stylesheet" href="Button.css">
+
+    <style>
+        .buttonstyle {
+          display: inline-block;
+          border-radius: 4px;
+          background-color: #f4511e;
+          border: none;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 28px;
+          padding: 20px;
+          width: 200px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+        }
+        
+        .buttonstyle span {
+          cursor: pointer;
+          display: center;
+          position: relative;
+          transition: 0.5s;
+        }
+        
+        .buttonstyle span:after {
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+        }
+        
+        .buttonstyle:hover span {
+          padding-right: 25px;
+        }
+        
+        .buttonstyle:hover span:after {
+          opacity: 1;
+          right: 0;
+        }
+        .buttonstyle:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        .buttonstyle {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        </style>
+
+</head>
+<body>
+    <button type="button" class="buttonstyle" onclick="alert('Hello guys, I am Pranav !')"><span>Hover </span></button>
+</body>
+</html>
