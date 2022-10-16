@@ -20,13 +20,14 @@
 ```terminal
 git clone https://github.com/**username**/Animating-Buttons.git
 ```
-```terminal
-npm i
-npm start
-```
 - Navigate to project directory.
 ```terminal
 cd Animating-Buttons
+```
+
+```terminal
+npm i
+npm start
 ```
 
 - Create a new Branch
@@ -43,7 +44,7 @@ git checkout -b my-new-branch
 ```
 <iframe
           className={classes.container}
-          title=""
+          title="your_github_username"
           src="Buttons/your_github_username/index.html"
 ></iframe>
 ```
