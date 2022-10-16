@@ -33,6 +33,18 @@ const Main = () => {
           src="Buttons/ganraj21_1/index.html"
         ></iframe>
 
+
+        <iframe
+          className={classes.container}
+          title="ganraj21_2"
+          src="Buttons/ganraj21_2/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
+          title="ganraj21_3"
+          src="Buttons/ganraj21_3/index.html"
+        ></iframe>
+
         <iframe
           className={classes.container}
           title="AmanPathan"
@@ -173,12 +185,26 @@ const Main = () => {
           className={classes.container}
           title="Shubhammete"
           src="Buttons/Shubhammete/index.html"
+
         ></iframe>
 
         <iframe
           className={classes.container}
           title="akpaswan67"
           src="Buttons/akpaswan67/index.html"
+        ></iframe>
+
+
+       ></iframe>
+  <iframe
+          className={classes.container}
+          title="mundadapurva"
+          src="Buttons/mundadapurva/index.html"
+></iframe>
+        <iframe
+          className={classes.container}
+          title="NMN03"
+          src="Buttons/NMN03/index.html"
         ></iframe>
 
 
