@@ -1,5 +1,9 @@
+
 .button {
  font-family: inherit;
+ display:flex;
+ justify-content:center;
+ align-items:center;
  font-weight: 400;
  background: #f2295b;
  color: white;
