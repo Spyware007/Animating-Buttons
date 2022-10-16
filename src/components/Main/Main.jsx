@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Main.module.css";
+import download from "../Functions/Download"
 
 const Main = () => {
   return (
@@ -13,10 +14,8 @@ const Main = () => {
           src="Buttons/SaurabhBarde-007_2/index.html"
         ></iframe>
         <div className={classes.download}>
-          <div>Download</div>
-          <div><a href="Buttons/SaurabhBarde-007_2/index.html" download>HTML</a></div>
-          <div><a href="Buttons/SaurabhBarde-007_2/style.css" download>CSS</a></div>
-        </div>
+          <button type="submit" onClick ={()=> {download(`SaurabhBarde-007_2`)}} className={classes.btn}>Download</button>
+          </div>
         </div>
         <iframe
           className={classes.container}
