@@ -93,42 +93,34 @@ const Main = () => {
         ></iframe>
         <iframe
           className={classes.container}
-
-          title="abhishekkhairnar"
-          src="Buttons/abhishekkhairnar/index.html"
-           ></iframe>
-<iframe
+          title="AbhishekKhairnar"
+          src="Buttons/AbhishekKhairnar/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
           title="GauriBhand023"
           src="Buttons/GauriBhand023/index.html"
         ></iframe>
         <iframe
           className={classes.container}
-
           title="Sapna127"
           src="Buttons/Sapna127/index.html"
-          ></iframe>
+        ></iframe>
 
-      <iframe
+        <iframe
           className={classes.container}
           title="richesh27"
           src="Buttons/richesh27/index.html"
-           ></iframe>
-                   <iframe
+        ></iframe>
+        <iframe
           className={classes.container}
-
-
           title="Bhushan_Kale"
           src="Buttons/Bhushan_Kale/index.html"
-                  ></iframe>
-                          <iframe
+        ></iframe>
+        <iframe
           className={classes.container}
-
           title="sks8784"
           src="Buttons/sks8784/index.html"
-
-
-
-
         ></iframe>
       </div>
     </>
