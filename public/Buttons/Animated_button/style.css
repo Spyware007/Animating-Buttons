@@ -1,0 +1,87 @@
+@import url('https://fonts.googlepis.com/css?family=oswald:400,700');
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing:  border-box;
+	font-family:'oswald',arial ;
+
+}
+body{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 100vh;
+	background: #16ba04;
+	background-size: 100% 100%;
+	margin-left: 220px;
+}
+ul{
+	position: relative;
+	transform: skewY(-15deg);
+	
+}
+ul li{
+	position: relative;
+	list-style: none;
+	width: 200px;
+	background: #3e3f46;
+	padding: 15px;
+	z-index: var(--i);
+	transition: 0.5s;
+
+}
+ul li:hover{
+	background: #33a3ee;
+	transform: translateX(-50px);
+
+}
+ul li::before{
+	content: '';
+	position:absolute ;
+	top: 0;
+	left: -40px;
+	width: 40px;
+	height: 100%;
+	background: #2e3133;
+	transform-origin: right ;
+	transform: skewY(45deg);
+	transition: 0.5s;
+}
+ul li:hover::before{
+	background:#1f5378 ;
+
+}
+ul li::after{
+	content: '';
+	position: absolute;
+	top: -40px;
+	left: 0px;
+	width: 100%;
+	height: 40px;
+	background: #35383e;
+	transform-origin: bottom ;
+	transform: skewX(45deg);
+	transition: 0.5s;
+
+}
+ul li:hover::after{
+	background: #2982b9;
+}
+ul li a{
+	text-decoration: none;
+	color: #999;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
+	transition: 0.5;
+}
+ul li:hover a{
+	color: #fff;
+
+}
+ul li:Last-child:after{
+	box-shadow: -100px 100px 20px rgba(0, 0, 0, 0.25);
+}
