@@ -100,6 +100,12 @@ const Main = () => {
         ></iframe>
         <iframe
           className={classes.container}
+
+          title="25Vaishnavibarge17"
+          src="Buttons/25Vaishnavibarge17/index.html"
+                  ></iframe>
+        <iframe
+          className={classes.container}
           title="Aaditya1612"
           src="Buttons/Aaditya1612/index.html"
         ></iframe>
@@ -138,6 +144,12 @@ const Main = () => {
           className={classes.container}
           title="sks8784"
           src="Buttons/sks8784/index.html"
+
+        ></iframe>
+        <iframe
+          className={classes.container}
+          title="Vaibhav-xt"
+          src="Buttons/Vaibhav-xt/index.html"
         ></iframe>
       </div>
     </>
