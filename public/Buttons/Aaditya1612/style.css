@@ -9,8 +9,16 @@ html, body {
   justify-content: center;
 }
 
+body{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
 .button {
-  min-width: 300px;
+  min-width: 250px;
   min-height: 60px;
   font-family: 'Nunito', sans-serif;
   font-size: 22px;
