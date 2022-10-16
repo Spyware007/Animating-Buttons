@@ -1,13 +1,13 @@
 import React from "react";
 import classes from "./Socials.module.css";
 
-const Socials = () => {
+const Socials = ({ modeToggle }) => {
   return (
     <>
       <div className={classes.social_container}>
         <h1 className={classes.text}>
           Explore Amazing{" "}
-          <span className={classes.gradient_bg}>
+          <span className={`${classes.gradient_bg} ${modeToggle ? classes.dark_mode : classes.light_mode}`}>
             <span className={classes.gradient}>Buttons</span>
           </span>{" "}
           animation <br /> for your next project.
