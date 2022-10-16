@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fff;
+}
+button
+{
+    background-color: aquamarine;
+    width: 140px;
+    height: 70px;
+    border-radius: 17px;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-weight: 800;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+button:hover
+{
+    cursor: pointer;
+    scale: 1.2;
+    box-shadow: 5px 5px 5px;
+    animation-name: example;
+    animation-duration: 4s;
+}
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: orange;}
+    100% {background-color: green;}
+}
