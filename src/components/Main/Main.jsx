@@ -6,11 +6,18 @@ const Main = () => {
     <>
       <h1 className={classes.text}>Explore the Buttons by our Contributors.</h1>
       <div className={classes.btns_container}>
+        <div>
         <iframe
           className={classes.container}
           title="SaurabhBarde-007"
           src="Buttons/SaurabhBarde-007_2/index.html"
         ></iframe>
+        <div className={classes.download}>
+          <div>Download</div>
+          <div><a href="Buttons/SaurabhBarde-007_2/index.html" download>HTML</a></div>
+          <div><a href="Buttons/SaurabhBarde-007_2/style.css" download>CSS</a></div>
+        </div>
+        </div>
         <iframe
           className={classes.container}
           title="SaurabhBarde-007"
