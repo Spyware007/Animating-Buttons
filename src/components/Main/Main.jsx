@@ -32,7 +32,18 @@ const Main = () => {
           title="ganraj21_1"
           src="Buttons/ganraj21_1/index.html"
         ></iframe>
-        
+
+        <iframe
+          className={classes.container}
+          title="ganraj21_2"
+          src="Buttons/ganraj21_2/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
+          title="ganraj21_3"
+          src="Buttons/ganraj21_3/index.html"
+        ></iframe>
+
         <iframe
           className={classes.container}
           title="AmanPathan"
