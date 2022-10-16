@@ -20,13 +20,14 @@
 ```terminal
 git clone https://github.com/**username**/Animating-Buttons.git
 ```
-```terminal
-npm i
-npm start
-```
 - Navigate to project directory.
 ```terminal
 cd Animating-Buttons
+```
+
+```terminal
+npm i
+npm start
 ```
 
 - Create a new Branch
