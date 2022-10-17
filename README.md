@@ -20,13 +20,14 @@
 ```terminal
 git clone https://github.com/**username**/Animating-Buttons.git
 ```
-```terminal
-npm i
-npm start
-```
 - Navigate to project directory.
 ```terminal
 cd Animating-Buttons
+```
+
+```terminal
+npm i
+npm start
 ```
 
 - Create a new Branch
@@ -83,7 +84,7 @@ git push origin my-new-branch
 ---
 
 <a href="https://github.com/Spyware007/Animating-Buttons/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Spyware007/Animating-Buttons" />
+  <img align="center" src="https://contrib.rocks/image?max=100&repo=Spyware007/Animating-Buttons" />
 </a>
 
 ---
