@@ -219,6 +219,11 @@ const Main = () => {
           title="NMN03_1"
           src="Buttons/NMN03_1/index.html"
         ></iframe>
+         <iframe
+          className={classes.container}
+          title="DipHire"
+          src="Buttons/DipHire/index.html"
+        ></iframe>
 
       </div>
     </>
