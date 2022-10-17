@@ -9,7 +9,7 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;  
-    border: 9px solid rgb(89, 0, 255);
+    border: 1px solid rgb(112, 85, 162);
     background: #b8ffff;
     display: flex;
     justify-content: center;
@@ -17,22 +17,18 @@ body{
 
 }
 button{
-    width: 20rem;
-    font-size: 1.9rem;
-    height: 5rem;
     font-family: 'Times New Roman', Times, serif;
-    font-weight: 500;
+    font-weight: 200;
+    border: 2px solid #695ebc ;
     border-radius: 15%;
     padding: 10px;
-    background-color: #7460f6;
+    font-size: 20px;
+    background-color: #695ebc;
 }
 
 button:hover{
-    background: #6148fd;
-    font-weight: bolder;
-    font-size: 34px;
+    background: #7a70be;
     cursor: pointer;
-    width: 21rem;
-    box-shadow: 10px 10px 5px 5px #7460f6;
+    box-shadow: 4px 4px 5px 5px #9d93e7;
 }
 
