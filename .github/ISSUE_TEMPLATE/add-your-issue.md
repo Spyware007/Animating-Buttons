@@ -15,8 +15,9 @@ assignees: ''
 <!-- choose one by changing [ ] to [x] -->
 - [ ] Update to an existing Animated Button
 - [ ] Any Error
-- [ ] Proposal to the Repository
+- [ x ] Proposal to the Repository
 - [ ] Documentation / README.md changes
 
 **Details:**
 <!-- Details of issue to be added/updated -->
+Added new buttons of different style
