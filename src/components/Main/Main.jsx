@@ -163,13 +163,6 @@ const Main = () => {
           title="sumeetk10"
           src="Buttons/sumeetk10/index.html"
         ></iframe>
-          <iframe
-
-
-          title="sumeetk10"
-          src="Buttons/sumeetk10/index.html"
-        ></iframe>
-
         <iframe
           className={classes.container}
 
