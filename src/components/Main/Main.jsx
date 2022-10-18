@@ -26,6 +26,12 @@ const Main = () => {
           title="onkar2921"
           src="Buttons/onkar2921/index.html"
         ></iframe>
+
+        <iframe
+          className={classes.container}
+          title="tanishq_khandelwal1"
+          src="Buttons/tanishq_khandelwal1/index.html"
+        ></iframe>
         <iframe
           className={classes.container}
           title="SaurabhBarde-007"
