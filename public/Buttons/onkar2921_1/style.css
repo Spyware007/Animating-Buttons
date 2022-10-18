@@ -7,10 +7,11 @@
 }
 
 body{
+  justify-content: center;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: black;
 }
 
 
@@ -29,21 +30,28 @@ body{
     font-family: serif;
     font-style: italic;
     font-variant: small-caps;
-    box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+    /* box-shadow: 5px 5px 8px gray,  5px 5px 8px green; */
+    box-shadow: 0 0 10px 5px #48abe0,
+    0 0 20px 7px #ebecca,
+    0 0 25px 20px #8a2be2,
+    0 0 5px 5px #ff1493;
+   
 }
 
 .button:hover{
     transition-duration: 0ms;
-    background-color: yellow;
+    background-color:green;
     color: black;
     font-weight: 800;
-    font-size: 20;
-    border: 2px solid black;
+    font-size: 16;
+    border: 2px solid white;
     border-radius:50%;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:serif;
     text-shadow: 1px 1px white;
     box-shadow:   5px 5px 8px red;
+    box-shadow: 5px 5px 5px gray 0px 0px 0px none 5px 5px 5px red ;
    
+cursor: pointer;
 }
 
 .button span {
