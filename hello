@@ -7,15 +7,17 @@ const Main = () => {
     <>
       <h1 className={classes.text}>Explore the Buttons by our Contributors.</h1>
       <div className={classes.btns_container}>
-        <div> <iframe
+        <div>
+        <iframe
           className={classes.container}
-          title="AshutoshRajGupta"
-          src="Buttons/AshutoshRajGupta/index.html"
-        ></iframe> 
+          title="SaurabhBarde-007"
+          src="Buttons/SaurabhBarde-007_2/index.html"
+        ></iframe>
         <div className={classes.download}>
-          <button type="submit" onClick ={()=> {download(`AshutoshRajGupta`, `index`, `style`)}} className={classes.btn}>Download</button>
+          <button type="submit" onClick ={()=> {download(`SaurabhBarde-007_2`, `index`, `styles`)}} className={classes.btn}>Download</button>
           </div>
         </div>
+
         <div> <iframe
           className={classes.container}
           title="SaurabhBarde-007"
@@ -232,85 +234,13 @@ const Main = () => {
           className={classes.container}
           title="Vaibhav-xt"
           src="Buttons/Vaibhav-xt/index.html"
-        ></iframe>  
+        >
+        </iframe>  
         <div className={classes.download}>
           <button type="submit" onClick ={()=> {download(`Vaibhav-xt`, `index`, `style`)}} className={classes.btn}>Download</button>
           </div>
         </div>
-
-        <div> <iframe
-          className={classes.container}
-
-          title="geeky-hypertext629"
-          src="Buttons/geeky-hypertext629/index.html"
-        ></iframe> 
-        <div className={classes.download}>
-          <button type="submit" onClick ={()=> {download(`geeky-hypertext629`, `index`, `style`)}} className={classes.btn}>Download</button>
-          </div>
-        </div>
-        <div> <iframe
-          className={classes.container}
-          title="Shubhammete"
-          src="Buttons/Shubhammete/index.html"
-
-        ></iframe> <div className={classes.download}>
-          <button type="submit" onClick ={()=> {download(`Shubhammete`, `index`, `button`)}} className={classes.btn}>Download</button>
-          </div>
-        </div>
-
-        <div> <iframe
-          className={classes.container}
-          title="akpaswan67"
-          src="Buttons/akpaswan67/index.html"
-        ></iframe><div className={classes.download}>
-          <button type="submit" onClick ={()=> {download(`akpaswan67`, `index`, `style`)}} className={classes.btn}>Download</button>
-          </div>
-         </div>
-
-  <div> <iframe
-          className={classes.container}
-          title="mundadapurva"
-          src="Buttons/mundadapurva/index.html"
-></iframe> <div className={classes.download}>
-          <button type="submit" onClick ={()=> {download(`mundadapurva`, `index`, `style`)}} className={classes.btn}>Download</button>
-          </div>
-        </div>
-        <div> <iframe
-          className={classes.container}
-          title="NMN03"
-          src="Buttons/NMN03/index.html"
-        ></iframe> <div className={classes.download}>
-          <button type="submit" onClick ={()=> {download(`NMN03`, `index`, `styles`)}} className={classes.btn}>Download</button>
-          </div>
-        </div>
-        <div> <iframe
-          className={classes.container}
-          title="FallenEcstasy"
-          src="Buttons/FallenEcstasy/index.html"
-        ></iframe> <div className={classes.download}>
-          <button type="submit" onClick ={()=> {download(`FallenEcstasy`, `index`, `style`)}} className={classes.btn}>Download</button>
-          </div>
-        </div>
-        <div> <iframe
-          className={classes.container}
-          title="NMN03_1"
-          src="Buttons/NMN03_1/index.html"
-        ></iframe> <div className={classes.download}>
-          <button type="submit" onClick ={()=> {download(`NMN03_1`, `index`, `styles`)}} className={classes.btn}>Download</button>
-          </div>
-        </div>
-        <div>
-        <iframe
-          className={classes.container}
-          title="tanishq_khandelwal"
-          src="Buttons/tanishq_khandelwal/index.html"
-        ></iframe>
-        <div className={classes.download}>
-          <button type="submit" onClick ={()=> {download(`tanishq_khandelwal`, `index`, `style`)}} className={classes.btn}>Download</button>
-          </div>
-        </div>
       </div>
-  
     </>
   );
 };
