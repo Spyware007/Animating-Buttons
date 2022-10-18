@@ -225,6 +225,12 @@ const Main = () => {
           src="Buttons/NMN03_1/index.html"
         ></iframe>
 
+<iframe
+          className={classes.container}
+          title="tanishq_khandelwal"
+          src="Buttons/tanishq_khandelwal/index.html"
+        ></iframe>
+
       </div>
     </>
   );
