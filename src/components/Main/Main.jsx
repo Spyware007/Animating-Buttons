@@ -225,6 +225,12 @@ const Main = () => {
           title="NMN03_1"
           src="Buttons/NMN03_1/index.html"
         ></iframe>
+        <iframe
+          className={classes.container}
+
+          title="25Vaishnavibarge17_2"
+          src="Buttons/25Vaishnavibarge17_2/index.html"
+        ></iframe>
 
       </div>
     </>
