@@ -12,9 +12,11 @@ We are happy to welcome all the contributions from anyone willing to improve/add
 Thank you for helping out and remember, **no contribution is too small.**
 Being an open source contributor doesn't just mean writing code, either. You can help out by writing documentation, tests, or even giving suggestions. 🏆
 
+
+
 </br>
 
-## Note : All PRs to this repo must be made only to develop branch ( master is used only for deployment ).
+## Note : All PRs to this repo must be made only to develop branch ( main is used only for deployment ).
 
 ### 1 : Issues
 
@@ -101,7 +103,28 @@ Then add a title and description to your pull request that explains your contrib
 🎉🎊
 
 
-### Note : Do not add images, rather 👇 
-- You can do that by hosting all you images and screenshots to any images hosting sites such as [imgur](https://imgur.com/), [imgbb](https://imgbb.com/), [postimages](https://postimages.org/).
-- Then link your uploaded images to README files.
+### Note  👇 
+
+- Make sure to align your button centered horizontally as well as vertically.
+- Don't forget to replace 'your_github_username' with GitHub Username.
+- If you are adding more than one buttons then give proper names such as Spyware007_1,Spyware007_2, your_github_username_1,etc
+
+- Stage your changes. 
+```
+git add .
+```
+- Commit your changes.
+
+```
+git commit -m "Relevant message"
+```
+- Then push 
+```
+git push origin my-new-branch
+```
+- Finally, create a new pull request from your forked repository
+
+- Then link your uploaded images to README.md files.
+
+----
     
