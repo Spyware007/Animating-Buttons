@@ -1,3 +1,8 @@
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 
 .loader {
   width: 6em;
