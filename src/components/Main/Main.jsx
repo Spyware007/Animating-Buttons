@@ -133,6 +133,12 @@ const Main = () => {
         ></iframe>
         <iframe
           className={classes.container}
+
+          title="25Vaishnavibarge17_1"
+          src="Buttons/25Vaishnavibarge17_1/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
           title="Aaditya1612"
           src="Buttons/Aaditya1612/index.html"
         ></iframe>
@@ -201,18 +207,16 @@ const Main = () => {
           title="PranavKale03"
           src="Buttons/PranavKale03/index.html"
        ></iframe>
-
         <iframe
           className={classes.container}
           title="akpaswan67"
           src="Buttons/akpaswan67/index.html"
         ></iframe>
-
-  <iframe
+        <iframe
           className={classes.container}
           title="mundadapurva"
           src="Buttons/mundadapurva/index.html"
-></iframe>
+        ></iframe>
         <iframe
           className={classes.container}
           title="NMN03"
@@ -230,16 +234,19 @@ const Main = () => {
         ></iframe>
         <iframe
           className={classes.container}
+          title="25Vaishnavibarge17_2"
+          src="Buttons/25Vaishnavibarge17_2/index.html"
+        ></iframe>
+        <iframe
+          className={classes.container}
           title="DipHire"
           src="Buttons/DipHire/index.html"
         ></iframe>
-
-<iframe
+        <iframe
           className={classes.container}
           title="tanishq_khandelwal"
           src="Buttons/tanishq_khandelwal/index.html"
         ></iframe>
-
       </div>
     </>
   );
