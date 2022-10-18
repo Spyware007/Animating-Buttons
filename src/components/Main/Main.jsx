@@ -124,9 +124,7 @@ const Main = () => {
           title="sumeetk10"
           src="Buttons/sumeetk10/index.html"
         ></iframe>
-        <iframe
-          className={classes.container}
-
+          <iframe
           title="Sapna127"
           src="Buttons/Sapna127/index.html"
         ></iframe>
@@ -156,6 +154,7 @@ const Main = () => {
           title="Vaibhav-xt"
           src="Buttons/Vaibhav-xt/index.html"
         ></iframe>
+<<<<<<< HEAD
         <iframe
           className={classes.container}
           title="Shubhammete"
@@ -167,6 +166,8 @@ const Main = () => {
           src="Buttons/sumeetk10_1/index.html"
         ></iframe>
 
+=======
+>>>>>>> parent of 1960e08 (added new button)
       </div>
     </>
   );
