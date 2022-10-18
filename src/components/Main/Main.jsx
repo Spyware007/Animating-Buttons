@@ -10,27 +10,25 @@ const Main = () => {
       <div className={classes.btns_container}>
         {Data.map((d, i) => {
           return (
-            <>
-              <div key={i}>
-                <iframe
-                  className={classes.container}
-                  title={d}
-                  src={`Buttons/${d}/index.html`}
-                ></iframe>
-                <div className={classes.download}>
-                  <p>Created by {d}</p>
-                  <button
-                    type="submit"
-                    onClick={() => {
-                      download(d, `index`, `style`);
-                    }}
-                    className={classes.btn}
-                  >
-                    Download
-                  </button>
-                </div>
+            <div key={i}>
+              <iframe
+                className={classes.container}
+                title={d}
+                src={`Buttons/${d}/index.html`}
+              ></iframe>
+              <div className={classes.download}>
+                <p>Created by {d}</p>
+                <button
+                  type="submit"
+                  onClick={() => {
+                    download(d);
+                  }}
+                  className={classes.btn}
+                >
+                  Download
+                </button>
               </div>
-            </>
+            </div>
           );
         })}
       </div>
@@ -39,4 +37,3 @@ const Main = () => {
 };
 
 export default Main;
-

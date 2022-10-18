@@ -1,14 +1,19 @@
-function download(name, index, css) {
+function download(name) {
   var filesDownload = [];
   filesDownload.push({
-    path: `Buttons/${name}/${index}.html`,
-    name: `${index}.html`,
+    path: `Buttons/${name}/index.html`,
+    name: `index.html`,
   });
   filesDownload.push({
-    path: `Buttons/${name}/${css}.css`,
-    name: `${css}.css`,
+    path: `Buttons/${name}/style.css`,
+    name: `style.css`,
+  });
+  filesDownload.push({
+    path: `Buttons/${name}/app.js`,
+    name: `app.js`,
   });
 
+  console.log(filesDownload);
   var tempDownloadLink = document.createElement("a");
   tempDownloadLink.style.display = "none";
   document.body.appendChild(tempDownloadLink);
