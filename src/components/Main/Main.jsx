@@ -284,6 +284,14 @@ const Main = () => {
           title="tanishq_khandelwal"
           src="Buttons/tanishq_khandelwal/index.html"
         ></iframe>
+
+          <iframe
+          className={classes.container}
+          title="NomikaGajula"
+          src="Buttons/NomikaGajula/index.html"
+        ></iframe>
+
+
       </div>
     </>
   );
