@@ -23,27 +23,26 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .app {
-  position: relative;
-  display: block;
+  position: absolute;
+  display: flex;
   height: 100%;
   width: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 
 .light {
   background-color: var(--light-bg-color);
   color: var(--light-text-color);
-  transition: all 0.4s ease;
+  transition: all 0.8s ease;
 }
 
 .dark {
   background-color: var(--dark-bg-color);
   color: var(--dark-text-color);
-  transition: all 0.4s ease;
+  transition: all 0.8s ease;
 }
