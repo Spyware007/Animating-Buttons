@@ -39,9 +39,7 @@ button {
   border: none;
   background: none;
   cursor: pointer;
-  
   font-family: "Source Code Pro";
-  font-weight: 900;
   text-transform: uppercase;
   font-size: 30px;  
   color: var(--text-color);
