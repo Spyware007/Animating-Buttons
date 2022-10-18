@@ -1,0 +1,34 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;  
+    border: 1px solid rgb(112, 85, 162);
+    background: #b8ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+}
+button{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    border: 2px solid #695ebc ;
+    border-radius: 15%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #695ebc;
+}
+
+button:hover{
+    background: #7a70be;
+    cursor: pointer;
+    box-shadow: 4px 4px 5px 5px #9d93e7;
+}
+
