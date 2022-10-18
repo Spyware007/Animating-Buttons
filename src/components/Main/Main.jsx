@@ -155,15 +155,11 @@ const Main = () => {
           title="Vaibhav-xt"
           src="Buttons/Vaibhav-xt/index.html"
         ></iframe>
-<<<<<<< HEAD
         <iframe
           className={classes.container}
           title="Shubhammete"
           src="Buttons/Shubhammete/index.html"
        ></iframe>
-
-=======
->>>>>>> parent of 1960e08 (added new button)
       </div>
     </>
   );
