@@ -1,122 +1,94 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
-
-:root {
-  --text-color: hsla(210, 50%, 85%, 1);
-  --shadow-color: hsla(210, 40%, 52%, .4);
-  --btn-color: hsl(210, 80%, 42%);
-  --bg-color: #141218;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
+body {
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: var(--bg-color);
+  align-items: center;
+  min-height: 100vh;
+  background-color: #F8F005;
 }
 
-button {
-  position:relative;
-  padding: 10px 20px;  
-  border: none;
-  background: none;
-  cursor: pointer;
+button, button::after {
+  width: 380px;
+  height: 86px;
+  font-size: 36px;
+  font-family: 'Bebas Neue', cursive;
+  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 88px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: relative;
+}
+
+button::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
   
-  font-family: "Source Code Pro";
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 30px;  
-  color: var(--text-color);
-  
-  background-color: var(--btn-color);
-  box-shadow: var(--shadow-color) 2px 2px 22px;
-  border-radius: 4px; 
-  z-index: 0;  
-  overflow: hidden;   
-}
-
-button:focus {
-  outline-color: transparent;
-  box-shadow: var(--btn-color) 2px 2px 22px;
-}
-
-.right::after, button::after {
-  content: var(--content);
+  content: 'AVAILABLE NOW';
   display: block;
   position: absolute;
-  white-space: nowrap;
-  padding: 40px 40px;
-  pointer-events:none;
-}
-
-button::after{
-  font-weight: 200;
-  top: -30px;
-  left: -20px;
-} 
-
-.right, .left {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
-.right {
-  left: 66%;
-}
-.left {
-  right: 66%;
-}
-.right::after {
-  top: -30px;
-  left: calc(-66% - 20px);
-  
-  background-color: var(--bg-color);
-  color:transparent;
-  transition: transform .4s ease-out;
-  transform: translate(0, -90%) rotate(0deg)
-}
-
-button:hover .right::after {
-  transform: translate(0, -47%) rotate(0deg)
-}
-
-button .right:hover::after {
-  transform: translate(0, -50%) rotate(-7deg)
-}
-
-button .left:hover ~ .right::after {
-  transform: translate(0, -50%) rotate(7deg)
-}
-
-/* bubbles */
-button::before {
-  content: '';
-  pointer-events: none;
-  opacity: .6;
-  background:
-    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
-    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
-    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
-
-  width: 100%;
-  height: 300%;
   top: 0;
   left: 0;
-  position: absolute;
-  animation: bubbles 5s linear infinite both;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
 }
 
-@keyframes bubbles {
-  from {
-    transform: translate();
+button:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
   }
-  to {
-    transform: translate(0, -66.666%);
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
   }
 }
