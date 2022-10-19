@@ -37,17 +37,10 @@ git checkout -b my-new-branch
 ```
 ## Go to [public/Buttons](https://github.com/Spyware007/Animating-Buttons/blob/main/src/components/Main/Main.jsx) folder and add a new folder with your GitHub username including your button code (index.html + style.css files)
 
-## Then go to [src/components/Main/Main.jsx](https://github.com/Spyware007/Animating-Buttons/tree/main/public/Buttons)
+## Then go to [src/Data.js](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)
 
-- Add this code in the btns-container div
+- Add your folder name (github_username, github_username_1,etc) code in [src/Data.js](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js) file
 
-```
-<iframe
-          className={classes.container}
-          title="your_github_username"
-          src="Buttons/your_github_username/index.html"
-></iframe>
-```
 # Note: 
 - Make sure to align your button centered horizontally as well as vertically.
 - Don't forget to replace 'your_github_username' with GitHub Username.
@@ -89,7 +82,7 @@ git push origin my-new-branch
 
 ---
 
-<h3 align="center"> DON'T FORGET TO ⭐STAR⭐ THIS REPOSITORY !!✨✨
+<h3 align="center"> DON'T FORGET TO ⭐ THIS REPOSITORY !!
 </h3> 
 
 
