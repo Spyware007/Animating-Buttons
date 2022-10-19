@@ -20,6 +20,7 @@ export const Data = [
   "DipHire_3",
   "DipHire_4",
   "DipHire_5",
+  "DipHire_6",
   "FallenEcstasy",
   "ganraj21",
   "ganraj21_1",
