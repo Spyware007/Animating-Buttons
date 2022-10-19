@@ -56,9 +56,7 @@ export const Data = [
   "onkar2921_3",
   "PranavKale03_1",
   "onkar2921_4",
-  "tanishq_khandelwal1",
   "PranavKale03_2",
-  "tanishq_khandelwal11",
   "tanishq_khandelwal01",
-
+  "PranavKale03_3",
 ];
