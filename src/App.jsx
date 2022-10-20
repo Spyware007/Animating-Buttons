@@ -9,7 +9,7 @@ const App = () => {
     <div className={`app ${toggleMode ? "dark" : "light"}`}>
       <Navbar modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
       <Socials modeToggle={toggleMode} />
-      <Main />
+      <Main modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
     </div>
   );
 };
