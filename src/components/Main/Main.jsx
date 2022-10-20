@@ -3,7 +3,7 @@ import classes from "./Main.module.css";
 import download from "../../Functions/Download";
 import { Data } from "../../Data";
 
-const Main = () => {
+const Main = ({ modeToggle, modeToggleFunc }) =>  {
   return (
     <>
       <h1 className={classes.text}>Explore the Buttons by our Contributors.</h1>
@@ -23,7 +23,7 @@ const Main = () => {
                   onClick={() => {
                     download(d);
                   }}
-                  className={classes.btn}
+                  className={`${classes.mode_toggle} ${modeToggle ? classes.dark_mode : classes.light_mode}`} onClick={()=>modeToggleFunc(!modeToggle)}
                 >
                   Download
                 </button>
