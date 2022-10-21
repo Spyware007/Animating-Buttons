@@ -4,7 +4,6 @@ import download from "../../Functions/Download";
 import { Data } from "../../Data";
 
 const Main = ({ modeToggle }) => {
-  console.log("main " + modeToggle)
   return (
     <>
       <h1 className={classes.text}>Explore the Buttons by our Contributors.</h1>

@@ -2,7 +2,6 @@ import React from "react";
 import classes from "./Socials.module.css";
 
 const Socials = ({ modeToggle }) => {
-  console.log("socials "+ modeToggle)
   return (
     <>
     
