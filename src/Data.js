@@ -70,5 +70,5 @@ export const Data = [
   "shreya2703_4",
   "ybhavu",
   "NomikaGajula_1",
-  "NomikaGajula_2"
+  "NomikaGajula_2",
 ];
