@@ -39,7 +39,7 @@ button {
   font-weight: 500;
   width: 340px;
   color: #000;
-  background-color: #fff;
+  //background-color: transparent;
   border: none;
   font-family: "Montserrat", sans-serif;
   border-radius: 12px;
@@ -59,3 +59,13 @@ button:hover {
 button:active {
   transform: translateY(-1px);
 }
+
+.light_mode {
+  background-color: rgb(240, 240, 240);
+   ;
+}
+.dark_mode {
+  background-color: #000;
+  color: white;
+}
+
