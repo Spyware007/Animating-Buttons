@@ -27,11 +27,14 @@ a{
   text-align: center;
   position: relative;
   transition: all .35s;
+  
 }
 
+
 a span{
-  position: relative;
-  z-index: 2;
+ 
+position: relative;
+z-index: 2;
 }
 
 a:after{
