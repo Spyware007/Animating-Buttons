@@ -1,8 +1,14 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
+  height: 100vh;
 }
 .custom-btn {
   width: 130px;

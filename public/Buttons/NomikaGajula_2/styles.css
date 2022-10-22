@@ -1,12 +1,15 @@
 * {
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   
-  html{
+  body{
     background-color: black;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    padding-left:40vw;
-    padding-top: 20vw;
+    display: flex;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
   }
   
   
