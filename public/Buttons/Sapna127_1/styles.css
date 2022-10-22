@@ -1,53 +1,53 @@
-.main_div {
-    --color: #e639e0;
-    position: relative;
-    z-index: 1;
-   }
-   
-   .main_div::before {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    top: -7px;
-    left: -7px;
-    z-index: -5;
-    border-top: 3px solid var(--color);
-    border-left: 3px solid var(--color);
-    transition: 0.5s;
-   }
-   
-   .main_div::after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    bottom: -7px;
-    right: -7px;
-    z-index: -5;
-    border-right: 3px solid var(--color);
-    border-bottom: 3px solid var(--color);
-    transition: 0.5s;
-   }
-   
-   .main_div:hover::before {
-    width: 100%;
-    height: 100%;
-   }
-   
-   .main_div:hover::after {
-    width: 100%;
-    height: 100%;
-   }
-   
-   .main_div button {
-    padding: 0.7em 2em;
-    font-size: 16px;
-    background: #222222;
-    color: #fff;
+button {
     border: none;
+    display: block;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 18px;
+    background: transparent;
     cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(212, 65, 225);
+    z-index: 1;
     font-family: inherit;
+    font-weight: 500;
+   }
+   
+   button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid rgb(212, 65, 225);
+   }
+   
+   button span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+   }
+   
+   button:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: rgb(212, 65, 225);
+   }
+   
+   button:hover {
+    color: white;
+   }
+   
+   button:active span::before {
+    background: rgb(212, 65, 225);
    }
