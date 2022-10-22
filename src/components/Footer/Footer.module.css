@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+}
+.footer_right {
+  display: flex;
+  list-style: none;
+}
+.footer_icons {
+  margin: 20px;
+  font-size: 30px;
+  transition: all 0.2s ease-in;
+}
+.linkg {
+  color: #211f1f;
+}
+.linki {
+  color: #c13584;
+}
+.linkt {
+  color: #00acee;
+}
+.linkl {
+  color: #0e76a8;
+}
+.footer_icons:hover {
+  transform: rotate(20deg) scale(1.2);
+}
