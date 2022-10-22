@@ -23,8 +23,7 @@ const Main = ({ modeToggle, modeToggleFunc }) =>  {
                   onClick={() => {
                     download(d);
                   }}
-                  className={`${classes.mode_toggle} ${modeToggle ? classes.dark_mode : classes.light_mode}`} onClick={()=>modeToggleFunc(!modeToggle)}
-                >
+                  className={`${classes.mode_toggle} ${modeToggle ? classes.dark_mode : classes.light_mode}`} >
                   Download
                 </button>
               </div>
