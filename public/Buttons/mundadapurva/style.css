@@ -3,6 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: white;
+  min-height: 100vh;
 }
 .custom-btn {
   width: 130px;
