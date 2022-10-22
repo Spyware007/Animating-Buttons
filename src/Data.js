@@ -1,4 +1,4 @@
-export const Data = [
+export const Data =[
   "rcode321",
   "AFPedreros",
   "25Vaishnavibarge17",
