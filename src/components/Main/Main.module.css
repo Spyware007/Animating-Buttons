@@ -59,3 +59,8 @@ button:hover {
 button:active {
   transform: translateY(-1px);
 }
+
+.dark_mode {
+  background-color: rgb(20, 20, 20) ;
+  color: white;
+}
