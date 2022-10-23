@@ -1,0 +1,77 @@
+body {
+    background-color: rgba(0, 70, 100, .3);
+    
+    font-family:Helvetica;
+    font-size:16px;
+    font-weight:bold;
+    color:#555555;
+  }
+  
+  p {  
+    text-shadow: -1px 1px rgba(255, 255, 255, 1), -2px 2px rgba(255, 255, 255, 1);
+  }
+  
+ 
+  
+  .button1 {
+    display:block;
+    width:100px;
+    height:50px;
+    background: rgba(200, 100, 100, 1);
+    border-radius:25px;
+    border:2px solid rgba(200, 100, 100, 1);
+    transition: all .5s;
+    overflow:hidden;
+    margin-top: 25rem;
+
+  }
+  
+  .button1:hover {
+    display:block;
+    width:150px;
+    height:50px;
+    background: rgba(200, 100, 100, 1);
+    border-radius:13px;
+    border:2px solid rgba(200, 100, 100, 1);
+    cursor:pointer;
+    transition: all .5s;
+    overflow:hidden;
+  }
+  
+  .button1-content {
+    font-family:Helvetica;
+    font-size:12px;
+    font-weight:normal;
+    line-height:50px;
+    color: rgba(255, 255, 255, 1);
+    width:150px;
+    position: relative;
+    transition: all 1s;
+    left:200px;
+    height:55px;
+  }
+  
+  .button1-content:before {
+    content: 'Hover';
+    position: absolute;
+    right: 250px;
+    background-color: rgba(255, 255, 255, 1);
+    width:100px;
+    height:50px;
+    border-radius:25px;
+    color: rgba(200, 100, 100, 1);
+  }
+  
+  .button1:hover .button1-content {
+    font-family:Helvetica;
+    font-size:12px;
+    font-weight:normal;
+    line-height:50px;
+    color: rgba(255, 255, 255, 1);
+    width:150px;
+    transition: all 1s;
+    left:0px;
+    background-color: rgba(200, 100, 100, 1);
+    height:50px;
+    border-radius:8px;
+  }
