@@ -82,6 +82,7 @@ export const Data = [
   "akpaswan67",
   "AmanPathan",
   "annakimdev",
+  "ANMOLYADAV1402",
   "Arjun-Ingole",
   "Arjun-Ingole_1",
   "AshutoshRajGupta",
@@ -138,6 +139,7 @@ export const Data = [
   "PranavKale03_1",
   "onkar2921_4",
   "PranavKale03_2",
+  "tanishq_khandelwal_02",
   "tanishq_khandelwal01",
   "PranavKale03_3",
   "shreya2703_2",
@@ -146,4 +148,7 @@ export const Data = [
   "ybhavu",
   "NomikaGajula_1",
   "NomikaGajula_2",
+  "sidmadke",
+  "tanmay-S12",
+  "ShaikhHeeba07"
 ];
