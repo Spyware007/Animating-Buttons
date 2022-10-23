@@ -7,16 +7,12 @@
   border: 0 solid;
   box-sizing: border-box;
 }
+
 body{
    background-color: #CCFFBD;
-}
-.btn-62{
- 
-    position: absolute;
-    top: 250px;
-    left: 550px;
-    justify-content: center;
-    
+   display:flex;
+   justify-content:center;
+   align-items:center;
 }
 
 .btn-62 {
