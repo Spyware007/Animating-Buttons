@@ -35,6 +35,7 @@ a span{
  
 position: relative;
 z-index: 2;
+bottom: 5px;
 }
 
 a:after{
