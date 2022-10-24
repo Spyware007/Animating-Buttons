@@ -1,3 +1,8 @@
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+}
 .button-50 {
   appearance: button;
   background-color: rgb(250, 247, 91);
@@ -13,7 +18,6 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  margin: 50% 50% 50% 50%;
   overflow: visible;
   padding: 12px 40px;
   text-align: center;
