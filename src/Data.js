@@ -75,5 +75,4 @@ export const Data =[
   "NomikaGajula_1",
   "NomikaGajula_2",
   "sidmadke",
-  "OneAutumLeaf",
 ];
