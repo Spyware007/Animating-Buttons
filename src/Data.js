@@ -84,8 +84,6 @@ export const Data = [
   "shreya2703_3",
   "shreya2703_4",
   "shreya2703_5",
-  "shreya2703_6",
-  "shreya2704_5",
   "shubham-2410",
   "shubham-2410_1",
   "shubham-2410_2",
