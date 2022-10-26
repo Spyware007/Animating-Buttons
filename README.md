@@ -17,22 +17,22 @@
 <a class="github-button" href="https://github.com/Spyware007/Animating-Buttons/fork" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">here</a>
 - Clone on your local machine
 
-```terminal
+```bash
 git clone https://github.com/**username**/Animating-Buttons.git
 ```
 - Navigate to project directory.
-```terminal
+```bash
 cd Animating-Buttons
 ```
 
-```terminal
+```bash
 npm i
 npm start
 ```
 
 - Create a new Branch
 
-```
+```bash
 git checkout -b my-new-branch
 ```
 ## Go to [public/Buttons](https://github.com/Spyware007/Animating-Buttons/blob/main/src/components/Main/Main.jsx) folder and add a new folder with your GitHub username including your button code (index.html + style.css files)
@@ -47,18 +47,21 @@ git checkout -b my-new-branch
 - If you are adding more than one buttons then give proper names such as Spyware007_1,Spyware007_2, your_github_username_1,etc
 
 - Stage your changes. 
-```
+
+```bash
 git add .
 ```
 - Commit your changes.
 
-```
+```bash
 git commit -m "Relevant message"
 ```
 - Then push 
-```
+
+```bash
 git push origin my-new-branch
 ```
+
 - Finally, create a new pull request from your forked repository
 ----
 
