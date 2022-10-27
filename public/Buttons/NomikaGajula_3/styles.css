@@ -5,14 +5,17 @@ body{
 }
 
 
-
-
-.container{
-  margin-top: 310px;
+*{
+margin: 0;
+padding: 0;
 }
 
-.text-center {
-  text-align: center;
+.container{
+display: flex;
+width: 100vw;
+height: 100vh;
+justify-content: center;
+align-items: center;
 }
 
 .rainbow{
@@ -24,8 +27,6 @@ body{
   
 }
 
-
-
 .rainbow-2:hover{
   background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
   animation:slidebg 2s linear infinite;
@@ -36,12 +37,5 @@ body{
   to {
     background-position:20vw;
   }
-}
-
-
-.follow a{
-  color: black;
-  padding: 8px 16px;
-  text-decoration: none;
 }
 
