@@ -7,9 +7,9 @@ import {
 } from "react-icons/fa";
 import classes from "./Footer.module.css";
 
-const Footer = () => {
+const Footer = ({ modeToggle }) => {
   return (
-    <>
+    <div className={ modeToggle ? classes.dark_mode : classes.light_mode}>
       <div className={classes.footer}>
         <div className={classes.footer_left}>
           <p className={classes.footer_copyright}>
@@ -58,7 +58,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 
