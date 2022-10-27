@@ -10,15 +10,8 @@
   <body>
     <div class="checkbox"></div>
     <div class="container">
-      <div class="buttons" id="clickme">
+      <div class="buttons">
         <a class="btn btn2"> Click Me <span></span></a>
-        <script>
-          const queryString = window.location.search;
-          const urlParams = new URLSearchParams(queryString);
-          const isDark = urlParams.get('c')
-          const button = document.getElementById("clickme");
-          button.classList.add(isDark);
-        </script>
       </div>
     </div>
   </body>

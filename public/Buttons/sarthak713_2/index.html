@@ -8,7 +8,7 @@
 
 <body>
 
-    <button class="btn" id="click">
+    <button class="btn">
         <div class="in1"></div>
         <div class="in2"></div>
         <div class="in3"></div>
@@ -16,13 +16,6 @@
             click
         </span>
     </button>
-    <script>
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      const isDark = urlParams.get('c')
-      const button = document.getElementById("click");
-      button.classList.add(isDark);
-    </script>
 
 </body>
 

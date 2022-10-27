@@ -25,12 +25,12 @@ button:after {
   left: 0;
   right: 0;
   bottom: 0;
-  box-shadow: 0px 0 0 0 white;
+  box-shadow: 0px 0 0 0 rgb(5, 5, 5);
   transition: all 2s ease;
 }
 
 button:hover:after {
-  box-shadow: 0px -13px 56px 12px #ffffffa6;
+  box-shadow: 0px -13px 56px 12px #716e6ea6;
 }
 
 button span {
@@ -43,12 +43,12 @@ button span {
   letter-spacing: 3px;
   text-align: center;
   transform: translate(-50%, -50%);
-  color: black;
+  color: rgb(124, 119, 119);
   transition: all 2s ease;
 }
 
 button:hover span {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 button:before {
@@ -56,7 +56,7 @@ button:before {
   position: absolute;
   width: 0;
   height: 100%;
-  background-color: black;
+  background-color: #0FC3FF ;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -65,11 +65,4 @@ button:before {
 
 button:hover:before {
   width: 100%;
-}
-
-.dark_mode span {
-  color: white;
-}
-.dark_mode:before {
-  background-color: #0FC3FF ;
 }
