@@ -17,6 +17,8 @@ export const Data = [
   "Arjun-Ingole_1",
   "AshutoshRajGupta",
   "Ayushi8989",
+  "bharat70_3",
+  "bharat70_2",
   "Bhushan_Kale",
   "Bhushan_Kale_1",
   "Bhushan_Kale_2",
@@ -108,5 +110,4 @@ export const Data = [
   "tanmay-S12",
   "Vaibhav-xt",
   "ybhavu",
-  "bharat70_2"
 ];
