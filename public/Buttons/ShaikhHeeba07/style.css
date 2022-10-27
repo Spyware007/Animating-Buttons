@@ -8,9 +8,16 @@
   box-sizing: border-box;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
    background-color: #CCFFBD;
    display:flex;
+   height: 100vh;
    justify-content:center;
    align-items:center;
 }
