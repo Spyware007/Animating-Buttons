@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button><span>PLAY NOW</span></button>
+    <button id="playnow"><span>PLAY NOW</span></button>
+    <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const isDark = urlParams.get('c')
+      const button = document.getElementById("playnow");
+      button.classList.add(isDark);
+    </script>
+   
   </body>
 </html>

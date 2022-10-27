@@ -60,3 +60,9 @@ body{
 .btn2:hover::before{
     transform: translate(5px, 5px);
 }
+.dark_mode a {
+    color: white;
+  }
+  .dark_mode .btn2::after, .btn2::before {
+    border: 3px solid white;
+  }

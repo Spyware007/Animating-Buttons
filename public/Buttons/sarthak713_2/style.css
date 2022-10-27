@@ -82,3 +82,7 @@ body {
 .btn:active .in3 {
     background-color:#435f6e;
 }
+
+.dark_mode .text {
+    color: white;
+}
