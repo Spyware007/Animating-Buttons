@@ -28,3 +28,24 @@
 .footer_icons:hover {
   transform: rotate(20deg) scale(1.2);
 }
+
+.dark_mode {
+  background-color: rgb(20, 20, 20) ;
+  color: white;
+}
+.dark_mode .linkg{
+  filter: brightness(0%) invert(1);
+}
+.dark_mode .linki{
+  filter: brightness(0%) invert(1);
+}
+.dark_mode .linkl{
+  filter: brightness(0%) invert(1);
+}
+.dark_mode .linkt{
+  filter: brightness(0%) invert(1);
+}
+.dark_mode .footer_left a{
+  color: rgb(170, 169, 169);
+
+}

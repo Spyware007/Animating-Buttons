@@ -9,7 +9,7 @@ const App = () => {
       <Navbar modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
       <Socials modeToggle={toggleMode} />
       <Main modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
-      <Footer />
+      <Footer modeToggle={toggleMode}/>
     </div>
   );
 };
