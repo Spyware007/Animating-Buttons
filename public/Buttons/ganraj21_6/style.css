@@ -1,0 +1,67 @@
+@keyframes gradient {
+  0% {
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 125, 125, 0) 0%,
+      #fff 0%,
+      #fff 100%
+    );
+  }
+  25% {
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 125, 125, 0.3) 24%,
+      #fff 25%,
+      #fff 100%
+    );
+  }
+  50% {
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 125, 125, 0.5) 49%,
+      #fff 50%,
+      #fff 100%
+    );
+  }
+  75% {
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 125, 125, 0.8) 74%,
+      #fff 75%,
+      #fff 100%
+    );
+  }
+  100% {
+    color: #fff;
+    background: radial-gradient(
+      circle at center,
+      #f88 99%,
+      #fff 100%,
+      #fff 100%
+    );
+  }
+}
+
+body {
+  background: #68d;
+}
+button {
+  margin-left: calc(50vw - 175px);
+  margin-top: calc(50vh - 30px);
+  width: 280px;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  background: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #666;
+  box-shadow: 0 6px 6px #06f;
+  outline: none;
+}
+button:active {
+  animation: gradient 100ms;
+  background: #f88;
+  color: #fff;
+  box-shadow: none;
+}
