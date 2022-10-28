@@ -1,12 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
-  
   background-color:#04293A;
 }
 .center {
   display: flex;
+  height: 100vh;
   justify-content: center;
   align-items: center;
-  margin-top:26%;
 }
 .button-33 {
   background-color: #c2fbd7;
