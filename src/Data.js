@@ -23,6 +23,7 @@ export const Data = [
   "Bhushan_Kale_1",
   "Bhushan_Kale_2",
   "Chandak-Keshav",
+  "shell-raiser",
   "DipHire",
   "DipHire_2",
   "DipHire_3",
@@ -42,6 +43,7 @@ export const Data = [
   "jatin-code21",
   "jatin-code21_2",
   "kishanlalchoudhary",
+  "KishorBhagat",
   "KratikJain10",
   "mundadapurva",
   "NMN03",
@@ -112,4 +114,5 @@ export const Data = [
   "ybhavu",
   "NomikaGajula_3",
   "riddhitech",
+  "SankalpaFernando"
 ];
