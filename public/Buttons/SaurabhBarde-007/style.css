@@ -38,11 +38,11 @@ body{
 /* button 2 */
 
 .btn2{
-    color: black;
+    color: rgb(126, 125, 125);
 }
 
 .btn2::after, .btn2::before{
-    border: 3px solid black;
+    border: 3px solid rgb(126, 125, 125);
     content: "";
     position: absolute;
     width: calc(100% - 6px);
