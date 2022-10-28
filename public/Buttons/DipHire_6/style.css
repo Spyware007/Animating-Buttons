@@ -42,7 +42,7 @@ button:after {
 
 button:before {
   transform: scale(1);
-  background-image: url("https://www.teahub.io/photos/full/116-1162820_naruto-wallpaper-hd.jpg");
+  background-image: url(asset/naruto.jpg);
   background-size: cover;
   transition: 0.3s ease transform;
   z-index: 1;

@@ -5,7 +5,6 @@
   
   body {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-      url(https://images.pexels.com/photos/2166927/pexels-photo-2166927.jpeg?cs=srgb&dl=animal-aquarium-aquatic-2166927.jpg&fm=jpg)
         no-repeat center center/cover;
     font-family: Arial, Helvetica, sans-serif;
   }

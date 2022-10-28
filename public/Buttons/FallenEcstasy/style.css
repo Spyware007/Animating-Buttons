@@ -30,8 +30,8 @@
   letter-spacing: 1px;
   font-weight: bold;
   background: #000;
-  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
-  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  -webkit-mask: url(asset/urban-sprite.png);
+  mask: url(asset/urban-sprite.png);
   -webkit-mask-size: 3000% 100%;
   mask-size: 3000% 100%;
   border: none;
