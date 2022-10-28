@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 body {
-    width: 100vw;
-    height: 100vh;
+    /* width: 100%; */
+/*     height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
