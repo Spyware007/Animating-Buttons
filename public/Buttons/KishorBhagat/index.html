@@ -23,7 +23,12 @@
       sendBtn.onclick = (e) => {
         e.target.classList.add("clicked");
         btnText.innerHTML = "Sent!";
-        console.log("clicked");
+        setTimeout(reset, 1500);
+        function reset() {
+          console.log("Clicked");
+          e.target.classList.remove("clicked");
+          clearTimeout(reset);
+        }
       };
     </script>
   </body>
