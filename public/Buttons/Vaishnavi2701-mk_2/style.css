@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #d8003a;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a {
+  text-decoration: none;
+  font-family: arial;
+  font-size: 20px;
+  color: #262626;
+  text-transform: uppercase;
+}
+
+a div {
+  display: inline-block;
+  background: #fff;
+  position: relative;
+  text-align: center;
+  line-height: 60px;
+  overflow: hidden;
+}
+
+a div span {
+  position: relative;
+  transition: 0.2s;
+}
+
+a div:nth-child(1) {
+  width: 150px;
+  height: 60px;
+}
+
+a div:nth-child(2) {
+  width: 60px;
+  height: 60px;
+  left: -6px;
+}
+
+a div:nth-child(1) div,
+a div:nth-child(2) div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+a div:nth-child(1) div {
+  background: #fff;
+}
+
+a div:nth-child(2) div {
+  background: #262626;
+}
+
+a div:nth-child(1) div:before,
+a div:nth-child(2) div:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+a div:nth-child(1) div:before {
+  background: #262626;
+}
+
+a div:nth-child(2) div:before {
+  background: #fff;
+}
+
+a:hover div:nth-child(1) div:before {
+  transform: translateX(-100%);
+}
+
+a div:nth-child(1) span {
+  color: #fff;
+  z-index: 1;
+}
+
+a:hover div:nth-child(1) span {
+  color: #262626;
+  z-index: 1;
+}
+a div:nth-child(2) span {
+  color: #262626;
+  z-index: 1;
+}
+
+a:hover div:nth-child(2) span {
+  color: #fff;
+  z-index: 1;
+}
+
+a:hover div:nth-child(2) div:before {
+  transform: translateX(100%);
+}
