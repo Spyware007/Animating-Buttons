@@ -115,6 +115,5 @@ export const Data = [
   "NomikaGajula_3",
   "riddhitech",
   "SankalpaFernando",
-  "Sahil-Rathod",
-  "Sahil-Rathod02",
+  "Sahil-Rathod"
 ];
