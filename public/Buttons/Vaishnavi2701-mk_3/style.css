@@ -40,20 +40,12 @@ body {
   transition: all 0.3s ease-out;
 }
 .wrapper .button:nth-child(1):hover .icon {
-  background: #4267b2;
-}
-.wrapper .button:nth-child(2):hover .icon {
   background: #1da1f2;
 }
-.wrapper .button:nth-child(3):hover .icon {
-  background: #e1306c;
-}
-.wrapper .button:nth-child(4):hover .icon {
+.wrapper .button:nth-child(2):hover .icon {
   background: #333;
 }
-.wrapper .button:nth-child(5):hover .icon {
-  background: #ff0000;
-}
+
 .wrapper .button .icon i {
   font-size: 25px;
   line-height: 60px;
@@ -70,17 +62,8 @@ body {
   transition: all 0.3s ease-out;
 }
 .wrapper .button:nth-child(1) span {
-  color: #4267b2;
-}
-.wrapper .button:nth-child(2) span {
   color: #1da1f2;
 }
-.wrapper .button:nth-child(3) span {
-  color: #e1306c;
-}
-.wrapper .button:nth-child(4) span {
+.wrapper .button:nth-child(2) span {
   color: #333;
-}
-.wrapper .button:nth-child(5) span {
-  color: #ff0000;
 }
