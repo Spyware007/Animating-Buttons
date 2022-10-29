@@ -118,5 +118,4 @@ export const Data = [
   "SankalpaFernando",
   "uddinArsalan",
   "Vaishnavi2701-mk_1",
-  "Vaishnavi2701-mk_2"
 ];
