@@ -1,54 +1,96 @@
-* {
-  padding: 0;
-  margin: 0;
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap");
+:root {
+  --font-style: "Nunito Sans", sans-serif;
 }
 
 body {
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-style);
+  width: 100%;
+  background: #053a3d;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-a {
-  font-size: 1.5rem;
-  padding: 1rem 3rem;
-  color: #f4f4f4;
-  text-transform: uppercase;
-}
-
-.btn {
-  text-decoration: none;
-  border: 1px solid rgb(146, 148, 248);
-  position: relative;
-  overflow: hidden;
-}
-
-.btn:hover {
-  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
-}
-
-.btn:before {
-  content: "";
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(146, 148, 248, 0.4),
-    transparent
-  );
-  transition: all 650ms;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.btn:hover:before {
-  left: 100%;
+button {
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 20px 30px;
+  background: #1a2929;
+}
+
+span {
+  display: block;
+  padding: 25px 80px;
+}
+
+button::before,
+button::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #54e6e7;
+}
+
+span::before,
+span::after {
+  content: "";
+  width: 2px;
+  height: 0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #54e6e7;
+}
+
+button:hover::before,
+button:hover::after {
+  width: 100%;
+}
+
+button:hover span::before,
+button:hover span::after {
+  height: 100%;
+}
+
+button::after {
+  right: 0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+
+button span::after {
+  right: 0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+
+button::before {
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+
+button span::before {
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
 }
