@@ -54,7 +54,7 @@ body {
   left: calc(100% - 55px);
 }
 .btn:after {
-  content: ''; 
+  content: "";
   position: absolute;
   width: 80px;
   height: 100%;
