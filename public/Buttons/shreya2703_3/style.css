@@ -5,6 +5,7 @@ body {
     align-items: center;
     justify-content: center;
     background: cornsilk;
+    overflow: hidden;
   }
   
   ul {
