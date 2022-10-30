@@ -18,7 +18,7 @@ body {
 a {
   text-decoration: none;
   font-family: arial;
-  font-size: 20px;
+  font-size: 13px;
   color: #262626;
   text-transform: uppercase;
 }
@@ -28,7 +28,7 @@ a div {
   background: #fff;
   position: relative;
   text-align: center;
-  line-height: 60px;
+  line-height: 50px;
   overflow: hidden;
 }
 
@@ -38,13 +38,13 @@ a div span {
 }
 
 a div:nth-child(1) {
-  width: 150px;
-  height: 60px;
+  width: 100px;
+  height: 50px;
 }
 
 a div:nth-child(2) {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   left: -6px;
 }
 
