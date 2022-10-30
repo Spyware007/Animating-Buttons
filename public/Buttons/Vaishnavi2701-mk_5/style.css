@@ -8,12 +8,13 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: #14213D;
 }
 
 .center {
   position: absolute;
-  top: 45%;
-  left: 45%;
+  top: 38%;
+  left: 25%;
   transform: translate(-50%, -50%);
 }
 
@@ -33,9 +34,9 @@ a:before {
   top: 0;
   left: 0;
   padding: 15px 40px;
-  background: #fff;
-  color: #000;
-  border: 3px solid #000;
+  background:#14213D;
+  color: #FCA311;
+  border: 3px solid #FCA311;
   transition: 0.5s;
   transform-origin: right;
   transform: translateX(-100%) rotateY(90deg);
@@ -47,9 +48,9 @@ a:after {
   top: 0;
   left: 0;
   padding: 15px 40px;
-  background: #000;
-  color: #fff;
-  border: 3px solid #000;
+  background: #FCA311;
+  color: #14213D;
+  border: 3px solid #FCA311;
   transition: 0.5s;
   transform-origin: left;
   transform: translateX(0) rotateY(0deg);
