@@ -2,6 +2,7 @@ body {
   background: #ffffff;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #c2c2c2;
+  overflow: hidden;
 }
 
 .center {
