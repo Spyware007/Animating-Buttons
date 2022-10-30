@@ -2,13 +2,14 @@ body {
 	background: #e30a0a;
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 	color: #e91c1c;
+	overflow: hidden;
 }
 
 .center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 90vh;
+	height: 100vh;
 	font-size: 24px;
 }
 
