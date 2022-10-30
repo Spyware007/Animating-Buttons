@@ -10,6 +10,7 @@
     height: 100vh;
     align-content: center;
     justify-content: center;
+    overflow: hidden;
   }
   
   

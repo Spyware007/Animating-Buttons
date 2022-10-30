@@ -4,6 +4,7 @@ import download from "../../Functions/Download";
 import { Data } from "../../Data";
 
 const Main = ({ modeToggle, modeToggleFunc }) =>  {
+  const isDark = modeToggle ? "dark_mode" : "light_mode";
   return (
     <>
       <h1 className={classes.text}>Explore the Buttons by our Contributors.</h1>
@@ -14,7 +15,7 @@ const Main = ({ modeToggle, modeToggleFunc }) =>  {
               <iframe
                 className={classes.container}
                 title={d}
-                src={`Buttons/${d}/index.html`}
+                src={`Buttons/${d}/index.html?c=${isDark}`}
               ></iframe>
               <div className={classes.download}>
                 <p>Created by {d}</p>

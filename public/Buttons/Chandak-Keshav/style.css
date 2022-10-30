@@ -12,11 +12,11 @@ body {
   .button {
     cursor: pointer;
     overflow: hidden;
-    padding: 20px;
+    padding: 15px;
     border: solid 2px blue;
     position: absolute;
-    top: 40%;
-    margin-top: 100px;
+    top: 50%;
+    /* margin-top: 100px; */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 120px;

@@ -6,6 +6,10 @@
     background-color: #25252A;
 }
 
+body {
+    overflow: hidden;
+}
+
 .container
 {
     display: flex;
