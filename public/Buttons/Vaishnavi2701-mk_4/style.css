@@ -1,57 +1,83 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
+  background: #f3f3f3;
 }
 
-.center {
+.checkbox-btn {
   position: absolute;
-  top: 45%;
-  left: 45%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  width: 100px;
+  height: 40px;
+  background: #ccc;
 }
 
-a {
-  font-size: 20px;
-  font-family: arial;
-  text-decoration: none;
-  text-transform: uppercase;
-  transform-style: preserve-3d;
-  position: relative;
-  transition: 0 0.5s;
-}
-
-a:before {
-  content: attr(title);
+.checkbox-btn input {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 15px 40px;
-  background: #fff;
-  color: #000;
-  border: 3px solid #000;
-  transition: 0.5 s;
-  transform-origin: right;
-  transform: translateX(-100%) rotateY(90deg);
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
 }
 
-a:after {
-  content: attr(title);
+.checkbox-btn div {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 15px 40px;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #000;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.checkbox-btn div .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
   background: #000;
+  transition: 0.5s;
+}
+
+.checkbox-btn input:checked + div .slide {
+  transform: translateX(60px);
+}
+
+.checkbox-btn .slide:before {
+  content: "ON";
+  position: absolute;
+  top: 0;
+  left: -60px;
+  text-align: center;
+  width: 60px;
+  height: 100%;
+  line-height: 40px;
+  background: #00da00;
+  font-weight: bold;
   color: #fff;
-  border: 3px solid #000;
-  transition: 0.5 s;
-  transform-origin: left;
-  transform: translateX(0) rotateY(0deg);
 }
 
-a:hover:before {
-  transform: translateX(0) rotateY(0deg);
-}
-
-a:hover:after {
-  transform: translateX(100%) rotateY(90deg);
+.checkbox-btn .slide:after {
+  content: "OFF";
+  position: absolute;
+  top: 0;
+  right: -60px;
+  text-align: center;
+  width: 60px;
+  height: 100%;
+  line-height: 40px;
+  background: #ff002d;
+  font-weight: bold;
+  color: #fff;
 }
