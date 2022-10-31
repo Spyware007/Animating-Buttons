@@ -126,5 +126,6 @@ export const Data = [
   "Vaishnavi2701-mk_4",
   "Vaishnavi2701-mk_5",
   "Vaishnavi2701-mk_6",
+  "pranjalwagh",
   "Vishakha0411"
 ];
