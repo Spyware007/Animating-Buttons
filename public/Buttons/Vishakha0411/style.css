@@ -2,6 +2,10 @@
  body {
 	 background-color: #f4f4fa;
 	 font-family: "Source Sans Pro";
+	 display: flex;
+	 height: 100vh;
+	 justify-content: center;
+	 align-items: center;
 }
  .container {
 	 padding: 0 20px;
