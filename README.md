@@ -1,4 +1,4 @@
-# Freelance Marketplace Project
+# Project Marketplace 
 This is a freelance marketplace platform that allows users to buy and sell projects related to various domains. It is based on web3 login and crypto payment options, enabling secure and transparent transactions. 
 
 ## Live Demo
