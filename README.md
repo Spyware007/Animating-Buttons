@@ -5,7 +5,7 @@
 <h1 align="center">✨✨HacktoberFest 2022✨✨</h1>
 <img width="1440" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png">
 
-## What can You contribute ⚠️ 
+## What can You Contribute ⚠️ 
 * You can contribute any animated buttons. 🤩
 * You can update or refine an existing animated button  or even add your own new buttons in this repo. 🚀
 * Make sure you follow the below steps before making your contributions❗❗❗
