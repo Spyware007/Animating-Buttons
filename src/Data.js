@@ -45,6 +45,7 @@ export const Data = [
   "GauriBhand023",
   "geeky-hypertext629",
   "Gopal2021025",
+  "huzaifa9999",
   "jatin-code21",
   "jatin-code21_2",
   "jonathanmani",
@@ -53,6 +54,7 @@ export const Data = [
   "KishorBhagat",
   "KratikJain10",
   "mundadapurva",
+  "MrCuber",
   "NMN03",
   "NMN03_1",
   "NomikaGajula",
@@ -133,5 +135,5 @@ export const Data = [
   "Vishakha0411",
   "ybhavu",
   "Aayush895",
-
+  "dassoumen98_1"
 ];
