@@ -13,7 +13,7 @@ const Footer = ({ modeToggle }) => {
       <div className={classes.footer}>
         <div className={classes.footer_left}>
           <p className={classes.footer_copyright}>
-            © 2022 by{" "}
+            © 2023 by{" "}
             <span>
               <a href="https://github.com/spyware007">Spyware007</a>
             </span>
