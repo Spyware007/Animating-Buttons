@@ -54,6 +54,7 @@ export const Data = [
   "KratikJain10",
   "mundadapurva",
   "MrCuber",
+  "MrCuber_1",
   "NMN03",
   "NMN03_1",
   "NomikaGajula",
