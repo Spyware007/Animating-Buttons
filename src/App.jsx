@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { Main, Navbar, Socials, Footer, Loader } from "./components";
+import { Loader } from "./components";
+import MainPage from "./MainPage";
+import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
-  const [toggleMode, setToggleMode] = useState(false);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
@@ -11,22 +12,7 @@ const App = () => {
     }, 2500);
   }, []);
 
-  return (
-    <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <div className={`app ${toggleMode ? "dark" : "light"}`}>
-            <Navbar modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
-            <Socials modeToggle={toggleMode} />
-            <Main modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
-            <Footer modeToggle={toggleMode} />
-          </div>
-        </>
-      )}
-    </>
-  );
+  return <BrowserRouter>{loading ? <Loader /> : <MainPage />}</BrowserRouter>;
 };
 
 export default App;

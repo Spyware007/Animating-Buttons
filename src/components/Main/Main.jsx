@@ -1,9 +1,10 @@
 import React from "react";
 import classes from "./Main.module.css";
 import download from "../../Functions/Download";
+// import open from "../../Functions/open";
 import { Data } from "../../Data";
 
-const Main = ({ modeToggle, modeToggleFunc }) =>  {
+const Main = ({ modeToggle, modeToggleFunc }) => {
   const isDark = modeToggle ? "dark_mode" : "light_mode";
   return (
     <>
@@ -21,10 +22,13 @@ const Main = ({ modeToggle, modeToggleFunc }) =>  {
                 <p>Created by {d}</p>
                 <button
                   type="submit"
-                  onClick={() => {
-                    download(d);
-                  }}
-                  className={`${classes.mode_toggle} ${modeToggle ? classes.dark_mode : classes.light_mode}`} >
+                  onClick={() => download(d)}
+                  // onClick={() => open(d)}
+                  className={`${classes.mode_toggle} ${
+                    modeToggle ? classes.dark_mode : classes.light_mode
+                  }`}
+                >
+                  {/* See Code */}
                   Download
                 </button>
               </div>
