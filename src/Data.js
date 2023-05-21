@@ -22,7 +22,6 @@ export const Data = [
   "Arjun-Ingole_2",
   "AshutoshRajGupta",
   "Atharva-3000_1",
-  "Atharva-3000_2",
   "Ayushi8989",
   "bharat70_2",
   "bharat70_3",
