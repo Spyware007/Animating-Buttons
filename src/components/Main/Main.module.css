@@ -77,9 +77,10 @@ button:active {
 }
 
 .paginationItem {
+  color: white;
   padding: 10px 16px;
-  background-color: #ffcc00;
-  border: 1px solid #ff9900;
+  background-color: #494949;
+  border: 1px solid #353535;
   cursor: pointer;
   border-radius: 50%;
   transition: background-color 0.3s, color 0.3s;
@@ -87,7 +88,7 @@ button:active {
 
 .paginationItem:hover,
 .paginationItem.active {
-  background-color: #ff9900;
+  background-color: #151515;
   color: #ffffff;
 }
 
