@@ -14,9 +14,6 @@
   display: flex;
   flex-direction: column;
 }
-.btn_container > button {
-  margin: 2px;
-}
 .container {
   all: unset;
   width: 340px;
@@ -40,6 +37,7 @@
 
 button {
   padding: 1.3em 3em;
+  margin: 3px;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2.5px;

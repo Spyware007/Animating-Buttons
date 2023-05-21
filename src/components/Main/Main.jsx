@@ -31,14 +31,16 @@ const Main = ({ modeToggle, modeToggleFunc }) => {
               <div className={classes.download}>
                 <p>Created by {d}</p>
                 <div className={classes.btn_container}>
-                  <button
-                    type="submit"
-                    className={`${classes.mode_toggle} ${
-                      modeToggle ? classes.dark_mode : classes.light_mode
-                    }`}
-                  >
-                    <Link to={`/show/${d}`}>Show Code</Link>
-                  </button>
+                  <Link to={`/show/${d}`}>
+                    <button
+                      type="submit"
+                      className={`${classes.mode_toggle} ${
+                        modeToggle ? classes.dark_mode : classes.light_mode
+                      }`}
+                    >
+                      Show Code
+                    </button>
+                  </Link>
                   <button
                     type="submit"
                     onClick={() => download(d)}
