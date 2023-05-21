@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./Main.module.css";
-import download from "../../Functions/Download";
-// import open from "../../Functions/open";
+import { Link } from "react-router-dom";
 import { Data } from "../../Data";
+import download from "../../Functions/Download";
 
 const Main = ({ modeToggle, modeToggleFunc }) => {
   const isDark = modeToggle ? "dark_mode" : "light_mode";
@@ -20,17 +20,25 @@ const Main = ({ modeToggle, modeToggleFunc }) => {
               ></iframe>
               <div className={classes.download}>
                 <p>Created by {d}</p>
-                <button
-                  type="submit"
-                  onClick={() => download(d)}
-                  // onClick={() => open(d)}
-                  className={`${classes.mode_toggle} ${
-                    modeToggle ? classes.dark_mode : classes.light_mode
-                  }`}
-                >
-                  {/* See Code */}
-                  Download
-                </button>
+                <div className={classes.btn_container}>
+                  <button
+                    type="submit"
+                    className={`${classes.mode_toggle} ${
+                      modeToggle ? classes.dark_mode : classes.light_mode
+                    }`}
+                  >
+                    <Link to={`/show/${d}`}>Show Code</Link>
+                  </button>
+                  <button
+                    type="submit"
+                    onClick={() => download(d)}
+                    className={`${classes.mode_toggle} ${
+                      modeToggle ? classes.dark_mode : classes.light_mode
+                    }`}
+                  >
+                    Download
+                  </button>
+                </div>
               </div>
             </div>
           );

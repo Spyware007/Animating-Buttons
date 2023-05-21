@@ -1,5 +1,5 @@
 import React from "react";
-import { Main, Navbar, Socials, Footer, DownloadPage } from "./components";
+import { Main, Navbar, Socials, Footer, ShowPage } from "./components";
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
@@ -9,15 +9,17 @@ export default function MainPage() {
     <>
       <div className={`app ${toggleMode ? "dark" : "light"}`}>
         <Navbar modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
-        <Socials modeToggle={toggleMode} />
         <Routes>
           <Route
             path="/"
             element={
-              <Main modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
+              <div>
+                <Socials modeToggle={toggleMode} />
+                <Main modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
+              </div>
             }
           />
-          <Route path="/show" element={<DownloadPage />} />
+          <Route path={"/show/:id"} element={<ShowPage />} />
         </Routes>
         <Footer modeToggle={toggleMode} />
       </div>

@@ -10,6 +10,13 @@
   gap: 100px;
   margin-bottom: 100px;
 }
+.btn_container {
+  display: flex;
+  flex-direction: column;
+}
+.btn_container > button {
+  margin: 2px;
+}
 .container {
   all: unset;
   width: 340px;
@@ -61,7 +68,6 @@ button:active {
 }
 
 .dark_mode {
-  background-color: rgb(20, 20, 20) ;
+  background-color: rgb(20, 20, 20);
   color: white;
 }
-
