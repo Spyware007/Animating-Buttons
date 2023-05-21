@@ -1,3 +1,4 @@
+import React from "react";
 import {
   LandingPage,
   HomePage,
@@ -16,15 +17,15 @@ export const routes = [
   },
   {
     path: "/detail/:id",
-    element: <DetailPage />,
+    element: <DetailPage  />,
   },
   {
     path: "/dashboard",
-    element: <DashboardPage />,
+    element: <DashboardPage  />,
   },
   {
     path: "/projects",
-    element: <ProjectsPage />,
+    element: <ProjectsPage  />,
   },
   {
     path: "/orders",
@@ -32,7 +33,7 @@ export const routes = [
   },
   {
     path: "/invoices",
-    element: <InvoicesPage />,
+    element: <InvoicesPage  />,
   },
   {
     path: "/cryptowallet",

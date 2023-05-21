@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import UserLogo from "../assets/user.png";
 import MetaMaskLogo from "../assets/l1.png";
 
-const MainNavBar = () => {
+const MainNavBar = ({isDarkMode}) => {
   const [walletAddress, setWalletAddress] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -62,9 +62,9 @@ const MainNavBar = () => {
       console.log("Please install MetaMask");
     }
   };
-
+  const rootClassName = isDarkMode ? "dark-mode" : "light-mode";
   return (
-    <div className="flex justify-center h-16 px-10 py-6 bg-white shadow-md border border-b-neutral-200  ">
+    <div className={`flex justify-center h-16 px-10 py-6 ${rootClassName} shadow-md ${isDarkMode ? 'border-black' : 'border border-b-neutral-200'} transition-all duration-500`}>
       <div className="flex  items-center justify-between  w-full 2xl:max-w-6xl">
         <div className="flex items-center">
           <div className="mr-5">
@@ -87,9 +87,9 @@ const MainNavBar = () => {
         ) : (
           <div
             onClick={connectWallet}
-            className="flex items-center gap-2 bg-primary px-4 py-1 shadow-md rounded-md cursor-pointer"
+            className={`flex items-center gap-2 ${isDarkMode ? 'bg-blue-500' : 'bg-primary'} px-4 py-1 shadow-md rounded-md cursor-pointer`}
           >
-            <p className="text-white">Login with </p>
+            <p className={`${isDarkMode ? 'text-gray-300' : 'text-white'}`}>Login with </p>
             <img src={MetaMaskLogo} alt="" className="h-8 w-8" />
           </div>
         )}

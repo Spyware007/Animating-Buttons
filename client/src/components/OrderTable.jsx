@@ -1,11 +1,14 @@
-import React,{useMemo} from "react";
+import React, { useMemo } from "react";
 import { recentOrdersColumns, recentOrdersData } from "../mock/mockData";
 
-const OrderTable = () => {
-  const columns = useMemo(() => recentOrdersColumns);
+const OrderTable = ({ isDarkMode }) => {
+  const columns = useMemo(() => recentOrdersColumns, []);
+
+  const rootClassName = isDarkMode ? "dark-mode" : "light-mode";
+  const borderClassName = isDarkMode ? "border-gray-700" : "border-gray-200";
 
   return (
-    <table className="table-auto w-full mt-8 ">
+    <table className={`table-auto w-full mt-8 ${rootClassName}`}>
       <thead>
         <tr>
           {columns.map((column, index) => (
@@ -20,11 +23,11 @@ const OrderTable = () => {
       </thead>
       <tbody>
         {recentOrdersData.map((row, rowIndex) => (
-          <tr key={`row-${rowIndex}`} className=" border-b-gray-200">
+          <tr key={`row-${rowIndex}`} className={`border-b ${borderClassName}`}>
             {recentOrdersColumns.map((column, columnIndex) => (
               <td
                 key={`cell-${columnIndex}`}
-                className="border-b-2 border-gray-200 font-semibold py-4 px-2 md:px-4"
+                className={`border-b-2 ${borderClassName} font-semibold py-4 px-2 md:px-4`}
               >
                 {column.accessorKey === "imageURL" && (
                   <img
