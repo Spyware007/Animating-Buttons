@@ -3,11 +3,13 @@ import classes from "./Main.module.css";
 import download from "../../Functions/Download";
 import { Data } from "../../Data";
 
-const Main = ({ modeToggle, modeToggleFunc }) =>  {
+const Main = ({ modeToggle, modeToggleFunc }) => {
   const isDark = modeToggle ? "dark_mode" : "light_mode";
   return (
     <>
-      <h1 className={classes.text}>Explore the Buttons by our Contributors.</h1>
+      <h1 className={classes.text}>
+        Explore from the list of {Data?.length} Buttons by our Contributors.
+      </h1>
       <div className={classes.btns_container}>
         {Data.map((d, i) => {
           return (
@@ -24,7 +26,10 @@ const Main = ({ modeToggle, modeToggleFunc }) =>  {
                   onClick={() => {
                     download(d);
                   }}
-                  className={`${classes.mode_toggle} ${modeToggle ? classes.dark_mode : classes.light_mode}`} >
+                  className={`${classes.mode_toggle} ${
+                    modeToggle ? classes.dark_mode : classes.light_mode
+                  }`}
+                >
                   Download
                 </button>
               </div>
