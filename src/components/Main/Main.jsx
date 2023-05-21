@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Main.module.css";
 import download from "../../Functions/Download";
 import { Data } from "../../Data";
 
-const Main = ({ modeToggle, modeToggleFunc }) =>  {
+const Main = ({ modeToggle, modeToggleFunc }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 24; // Number of items to display per page
+
+  // Calculate the index range for the current page
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
+
   const isDark = modeToggle ? "dark_mode" : "light_mode";
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <>
       <h1 className={classes.text}>Explore the Buttons by our Contributors.</h1>
       <div className={classes.btns_container}>
-        {Data.map((d, i) => {
+        {currentItems.map((d, i) => {
           return (
             <div key={i}>
               <iframe
@@ -24,13 +37,35 @@ const Main = ({ modeToggle, modeToggleFunc }) =>  {
                   onClick={() => {
                     download(d);
                   }}
-                  className={`${classes.mode_toggle} ${modeToggle ? classes.dark_mode : classes.light_mode}`} >
+                  className={`${classes.mode_toggle} ${
+                    modeToggle ? classes.dark_mode : classes.light_mode
+                  }`}
+                >
                   Download
                 </button>
               </div>
             </div>
           );
         })}
+      </div>
+      <div className={classes.pagination}>
+        {Data.length > itemsPerPage && (
+          <ul className={classes.paginationList}>
+            {Array(Math.ceil(Data.length / itemsPerPage))
+              .fill()
+              .map((_, index) => (
+                <li
+                  key={index}
+                  className={`${classes.paginationItem} ${
+                    currentPage === index + 1 ? classes.active : ""
+                  }`}
+                  onClick={() => handlePageChange(index + 1)}
+                >
+                  {index + 1}
+                </li>
+              ))}
+          </ul>
+        )}
       </div>
     </>
   );
