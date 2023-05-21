@@ -71,3 +71,28 @@ button:active {
   background-color: rgb(20, 20, 20);
   color: white;
 }
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationList {
+  list-style-type: none;
+  display: flex;
+  gap: 5px;
+}
+
+.paginationItem {
+  padding: 15px 20px;
+  background-color: #eaeaea;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.paginationItem:hover,
+.paginationItem.active {
+  background-color: #ccc;
+  color: #fff;
+}
