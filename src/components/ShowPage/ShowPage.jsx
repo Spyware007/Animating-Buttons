@@ -9,7 +9,7 @@ export default function ShowPage() {
   const components = componentValues.map((component, i) => {
     return (
       <div className={classes.text_field} key={i}>
-        <textarea value={`$This is a {component} Text Field`} readOnly />
+        <textarea value={`This is a ${component} Text Field`} readOnly />
         <button onClick={() => navigator.clipboard.writeText("text")}>
           Copy {component}
         </button>
