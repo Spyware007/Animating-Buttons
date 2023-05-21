@@ -1,30 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./ShowPage.module.css";
 import { useParams } from "react-router";
 
 export default function ShowPage() {
   const d = useParams();
-  console.log(d);
   const componentValues = ["html", "css", "js"];
-  const [html, setHtml] = useState("");
-  const [css, setCss] = useState("");
-  const [js, setjs] = useState("");
 
-  const components = componentValues.map((v) => {
+  const components = componentValues.map((component, i) => {
     return (
-      <div className={classes.text_field}>
-        <textarea
-          className="text-field"
-          value={`${v}`}
-          onChange={(e) => setHtml(e.target.value)}
-          placeholder={`Enter ${v}`}
-        />
-
-        <button
-          className="copy-button"
-          onClick={() => navigator.clipboard.writeText("text")}
-        >
-          Copy {v}
+      <div className={classes.text_field} key={i}>
+        <textarea value={`$This is a {component} Text Field`} readOnly />
+        <button onClick={() => navigator.clipboard.writeText("text")}>
+          Copy {component}
         </button>
       </div>
     );
