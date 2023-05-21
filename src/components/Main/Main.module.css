@@ -77,14 +77,20 @@ button:active {
 }
 
 .paginationItem {
-  padding: 15px 20px;
-  background-color: #eaeaea;
-  border: 1px solid #ccc;
+  padding: 10px 16px;
+  background-color: #ffcc00;
+  border: 1px solid #ff9900;
   cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .paginationItem:hover,
 .paginationItem.active {
-  background-color: #ccc;
-  color: #fff;
+  background-color: #ff9900;
+  color: #ffffff;
+}
+
+.paginationItem:hover {
+  transform: scale(1.1);
 }
