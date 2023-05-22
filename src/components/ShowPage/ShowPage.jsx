@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./ShowPage.module.css";
 import { useParams } from "react-router";
-import getPagesInText from "../../Functions/getPages";
 
 export default function ShowPage() {
   const { id } = useParams();
   const componentValues = ["html", "css", "js"];
-  const data = getPagesInText(id);
-  console.log(data);
+
+  const [htmlCode, setHtmlCode] = useState();
+  const [cssCode, setCssCode] = useState();
+  const [jsCode, setJsCode] = useState();
+  let codes = [htmlCode, cssCode, jsCode];
+
+  fetch(`/Buttons/${id}/index.html`)
+    .then((response) => response.text())
+    .then((text) => setHtmlCode(text));
+
+  fetch(`/Buttons/${id}/style.css`)
+    .then((response) => response.text())
+    .then((text) => setCssCode(text));
+
+  fetch(`/Buttons/${id}/app.js`)
+    .then((response) => response.text())
+    .then((text) => setJsCode(text));
 
   const components = componentValues.map((component, i) => {
     return (
       <div className={classes.text_field} key={i}>
-        <textarea value={`${data}`} readOnly />
+        <textarea value={`${codes[i]}`} readOnly />
         <button onClick={(e) => navigator.clipboard.writeText(e.target.value)}>
           Copy {component}
         </button>
