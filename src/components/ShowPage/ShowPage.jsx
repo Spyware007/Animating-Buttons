@@ -1,25 +1,14 @@
 import React from "react";
 import classes from "./ShowPage.module.css";
 import { useParams } from "react-router";
+import getPagesInText from "../../Functions/getPages";
 
 export default function ShowPage() {
   const { id } = useParams();
   const componentValues = ["html", "css", "js"];
-
-  var data = [];
-  fetch(`/Buttons/${id}/index.html`)
-    .then((res) => res.text())
-    .then((text) => data.push(text));
-
-  fetch(`/Buttons/${id}/style.css`)
-    .then((res) => res.text())
-    .then((text) => data.push(text));
-
-  fetch(`/Buttons/${id}/app.js`)
-    .then((res) => res.text())
-    .then((text) => data.push(text));
-
+  const data = getPagesInText(id);
   console.log(data);
+
   const components = componentValues.map((component, i) => {
     return (
       <div className={classes.text_field} key={i}>
