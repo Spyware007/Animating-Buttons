@@ -5,6 +5,16 @@ a {
     color: antiquewhite;
 }
 
+/* Center the button */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
 /*Button-CSS start from here!*/
 .bn30 {
     border: 5em;
@@ -22,7 +32,6 @@ a {
     color: white;
     cursor: pointer;
     text-align: center;
-    margin-top: 360px;
 }
 
 .bn30 .text {
@@ -53,8 +62,4 @@ a {
 
 .bn30:hover .text {
     background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
-}
-
-.container {
-    text-align: center;
 }
