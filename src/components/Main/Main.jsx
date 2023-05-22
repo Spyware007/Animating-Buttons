@@ -11,6 +11,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
 
+
   const isDark = modeToggle ? "dark_mode" : "light_mode";
 
   const handlePageChange = (pageNumber) => {
@@ -18,7 +19,9 @@ export default function Main({ modeToggle, modeToggleFunc }) {
   };
   return (
     <>
-      <h1 className={classes.text}>Explore the Buttons by our Contributors.</h1>
+      <h1 className={classes.text}>
+        Explore from the list of {Data?.length} Buttons by our Contributors.
+      </h1>
       <div className={classes.btns_container}>
         {currentItems.map((d, i) => {
           return (
