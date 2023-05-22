@@ -52,6 +52,7 @@ export const Data = [
   "jatin-code21_2",
   "jonathanmani",
   "KalebArmbrust",
+  "KhushiKhandelwal610",
   "kishanlalchoudhary",
   "KishorBhagat",
   "KratikJain10",
