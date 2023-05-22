@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+  }
+  body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw; 
+      overflow: hidden;
+  }
+  .sticky_share_btn {
+      position: fixed;
+      left: 30px;
+      bottom: 30px;
+  }
+  .share-toggle,
+  .fixed_share ul.listing > li {
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 2px solid;
+      border-radius: 50%;
+      transition: all 0.5s ease-in-out;
+  }
+  ul.listing {
+      list-style: none;
+      display: none;
+  }
+  .fixed_share ul.listing > li {
+    margin-bottom: 10px; 
+  }
+  .fixed_share ul.listing > li > a {
+      display: block;
+      width: 100%;
+      height: auto;
+      text-align: center;
+  }
+  .share-toggle:hover,
+  .fixed_share ul.listing > li:hover {
+    transform: scale(1.1) rotate(360deg);
+  }
+  
+  .fixed_share .twitter, 
+  .fixed_share .twitter > a{
+    color: #00acee;
+  }
+  .fixed_share .pinterest, 
+  .fixed_share .pinterest > a{
+    color: #E60023;
+  }
+  .fixed_share .linkedin, 
+  .fixed_share .linkedin > a{
+    color: #0e76a8;
+  }
+  .fixed_share .whatsapp, 
+  .fixed_share .whatsapp > a{
+    color: #25D366;
+  }
