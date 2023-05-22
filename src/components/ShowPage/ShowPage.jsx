@@ -23,9 +23,14 @@ export default function ShowPage() {
     .then((response) => response.text())
     .then((text) => setJsCode(text));
 
+  const styles = {
+    margin: "2px",
+  };
+
   const components = componentValues.map((component, i) => {
     return (
       <div className={classes.text_field} key={i}>
+        <div style={styles}>{component.toUpperCase()} Code</div>
         <textarea value={`${codes[i]}`} readOnly />
         <button onClick={(e) => navigator.clipboard.writeText(e.target.value)}>
           Copy {component}
