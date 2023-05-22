@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Data } from "../../Data";
 import download from "../../Functions/Download";
 
-const Main = ({ modeToggle, modeToggleFunc }) => {
+export default function Main({ modeToggle, modeToggleFunc }) {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 24; // Number of items to display per page
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -77,6 +77,4 @@ const Main = ({ modeToggle, modeToggleFunc }) => {
       </div>
     </>
   );
-};
-
-export default Main;
+}

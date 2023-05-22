@@ -3,14 +3,28 @@ import classes from "./ShowPage.module.css";
 import { useParams } from "react-router";
 
 export default function ShowPage() {
-  const d = useParams();
+  const { id } = useParams();
   const componentValues = ["html", "css", "js"];
 
+  var data = [];
+  fetch(`/Buttons/${id}/index.html`)
+    .then((res) => res.text())
+    .then((text) => data.push(text));
+
+  fetch(`/Buttons/${id}/style.css`)
+    .then((res) => res.text())
+    .then((text) => data.push(text));
+
+  fetch(`/Buttons/${id}/app.js`)
+    .then((res) => res.text())
+    .then((text) => data.push(text));
+
+  console.log(data);
   const components = componentValues.map((component, i) => {
     return (
       <div className={classes.text_field} key={i}>
-        <textarea value={`This is a ${component} Text Field`} readOnly />
-        <button onClick={() => navigator.clipboard.writeText("text")}>
+        <textarea value={`${data}`} readOnly />
+        <button onClick={(e) => navigator.clipboard.writeText(e.target.value)}>
           Copy {component}
         </button>
       </div>
@@ -22,8 +36,8 @@ export default function ShowPage() {
       <div className={classes.iframe_container}>
         <iframe
           className={classes.container}
-          title={d.id}
-          src={`../../Buttons/${d.id}/index.html?c=light_mode`}
+          title={id}
+          src={`../../Buttons/${id}/index.html?c=light_mode`}
         ></iframe>
       </div>
       <div className={classes.components_container}>{components}</div>
