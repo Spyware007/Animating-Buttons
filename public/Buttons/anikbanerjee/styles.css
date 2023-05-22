@@ -1,0 +1,63 @@
+.animating-button {
+    position: relative;
+    display: inline-block;
+    padding: 16px 48px;
+    font-size: 24px;
+    color: #fff;
+    background-color: #ff4081;
+    border: none;
+    cursor: pointer;
+    overflow: visible;
+    outline: none;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    z-index: 1;
+  }
+  
+  .animating-button:hover {
+    transform: rotateY(180deg);
+  }
+  
+  .animating-button .front,
+  .animating-button .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .animating-button .front {
+    transform: rotateY(0deg);
+  }
+  
+  .animating-button .back {
+    transform: rotateY(-180deg);
+  }
+  
+  .animating-button .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(0deg);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .animating-button .text span {
+    display: block;
+  }
+  
+  .animating-button:hover .text {
+    transform: translate(-50%, -50%) rotateY(180deg);
+  }
+  
