@@ -10,38 +10,6 @@ body {
   height: 100vh;
   background: #e8e8e8;
 }
-.pulse-btn {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  position: relative;
-  overflow: hidden;
-}
-
-.pulse-btn::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  opacity: 0;
-  transition: width 0.5s ease-out, height 0.5s ease-out, opacity 0.5s ease-out;
-  pointer-events: none;
-}
-
-.pulse-btn:hover::after {
-  width: 200px;
-  height: 200px;
-  opacity: 1;
-}
 
 .neon-btn {
   padding: 10px 20px;
