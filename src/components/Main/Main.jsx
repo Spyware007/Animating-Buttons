@@ -5,49 +5,36 @@ import { Data } from "../../Data";
 import download from "../../Functions/Download";
 
 export default function Main({ modeToggle, modeToggleFunc }) {
-  // Function To Redirect User To The Github Of Creator
+  const toogleMode = modeToggle ? classes.dark_mode : classes.light_mode;
+
   const redirectToGitHub = (username) => {
-    const sure = window.confirm(
-      `This Will Take You To Github of ${username} ?`
-    );
-    if (sure) {
+    if (window.confirm(`This Will Take You To Github of ${username} ?`)) {
       const url = `https://github.com/${username}`;
       window.open(url, "_blank");
     }
   };
 
-  // Component
-  const CreatedBy = ({ d }) => {
-    return (
-      <p onClick={() => redirectToGitHub(d)} className={classes.createdBy}>
-        Created by
-        <span className={classes.user}> {d}</span>
-      </p>
-    );
-  };
-
-  // Component
   const DownloadBtn = ({ d, modeToggle }) => {
     return (
-      <div className={classes.download}>
-        <Link to={`/show/${d}`}>
+      <>
+        <p onClick={() => redirectToGitHub(d)} className={classes.createdBy}>
+          Created by
+          <span className={classes.user}> {d}</span>
+        </p>
+        <div className={classes.download}>
+          <Link to={`/show/${d}`}>
+            <button className={`${classes.download_btn} ${toogleMode}`}>
+              Show Code
+            </button>
+          </Link>
           <button
-            className={`${classes.download_btn} ${
-              modeToggle ? classes.dark_mode : classes.light_mode
-            }`}
+            onClick={() => download(d)}
+            className={`${classes.download_btn} ${toogleMode}`}
           >
-            Show Code
+            Download
           </button>
-        </Link>
-        <button
-          onClick={() => download(d)}
-          className={`${classes.download_btn} ${
-            modeToggle ? classes.dark_mode : classes.light_mode
-          }`}
-        >
-          Download
-        </button>
-      </div>
+        </div>
+      </>
     );
   };
 
@@ -63,6 +50,21 @@ export default function Main({ modeToggle, modeToggleFunc }) {
     setCurrentPage(pageNumber);
     window.scrollTo({ top: 500, behavior: "smooth" });
   };
+
+  const pageNumberComponent = Array(Math.ceil(Data.length / itemsPerPage))
+    .fill()
+    .map((_, index) => (
+      <li
+        key={index}
+        className={`${classes.paginationItem} ${
+          currentPage === index + 1 ? classes.active : ""
+        }`}
+        onClick={() => handlePageChange(index + 1)}
+      >
+        {index + 1}
+      </li>
+    ));
+
   return (
     <>
       <h1 className={classes.text}>
@@ -77,8 +79,6 @@ export default function Main({ modeToggle, modeToggleFunc }) {
                 title={d}
                 src={`Buttons/${d}/index.html?c=${isDark}`}
               ></iframe>
-              <CreatedBy d={d} />
-              <></>
               <DownloadBtn d={d} modeToggle={modeToggle} />
             </div>
           );
@@ -86,21 +86,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
       </div>
       <div className={classes.pagination}>
         {Data.length > itemsPerPage && (
-          <ul className={classes.paginationList}>
-            {Array(Math.ceil(Data.length / itemsPerPage))
-              .fill()
-              .map((_, index) => (
-                <li
-                  key={index}
-                  className={`${classes.paginationItem} ${
-                    currentPage === index + 1 ? classes.active : ""
-                  }`}
-                  onClick={() => handlePageChange(index + 1)}
-                >
-                  {index + 1}
-                </li>
-              ))}
-          </ul>
+          <ul className={classes.paginationList}>{pageNumberComponent}</ul>
         )}
       </div>
     </>
