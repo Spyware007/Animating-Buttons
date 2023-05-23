@@ -58,6 +58,7 @@ const Main = ({ modeToggle, modeToggleFunc }) => {
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
+    window.scrollTo({ top: 500, behavior: 'smooth' });
   };
 
   return (

@@ -152,15 +152,22 @@ button:active {
 
 /* Styles For Pagination */
 .paginationItem {
-  padding: 15px 20px;
-  background-color: #eaeaea;
-  border: 1px solid #ccc;
+  color: white;
+  padding: 10px 16px;
+  background-color: #494949;
+  border: 1px solid #353535;
   cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .paginationItem:hover,
 .paginationItem.active {
-  background-color: #ccc;
-  color: #fff;
+  background-color: #151515;
+  color: #ffffff;
+}
+
+.paginationItem:hover {
+  transform: scale(1.1);
 }
 
