@@ -19,22 +19,22 @@ const Socials = ({ modeToggle }) => {
           <iframe
             className={classes.socials}
             title="abc"
-            src="Buttons/Spyware007/index.html"
+            src="Buttons/ombhojane/index.html"
           ></iframe>
           <iframe
             className={classes.socials}
             title="abc"
-            src="Buttons/Spyware007_1/index.html"
+            src="Buttons/ombhojane_1/index.html"
           ></iframe>
           <iframe
             className={classes.socials}
             title="abc"
-            src="Buttons/Spyware007_2/index.html"
+            src="Buttons/ombhojane_2/index.html"
           ></iframe>
           <iframe
             className={classes.socials}
             title="abc"
-            src="Buttons/Spyware007_3/index.html"
+            src="Buttons/ombhojane_3/index.html"
           ></iframe>
         </div>
       </div>
