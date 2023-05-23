@@ -1,37 +1,37 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #000;
+   display: flex;
+   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
 }
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
 }
 .container a{
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    border: 2px solid #0f0;
-    margin: 40px;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-decoration: none;
-    letter-spacing: 2px;
-    color: #fff;
-    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
-    transition: 0.5s;
-    transition-delay: 0s;
+     position: relative;
+     display: inline-block;
+     padding: 15px 30px;
+     border: 2px solid #0f0;
+     margin: 40px;
+     text-transform: uppercase;
+     font-weight: 600;
+     text-decoration: none;
+     letter-spacing: 2px;
+     color: #fff;
+     -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+     transition: 0.5s;
+     transition-delay: 0s;
 }
 
 .container a:hover{
@@ -45,8 +45,8 @@ body{
 }
 
 .container a span{
-    position: relative;
-    z-index: 100;
+     position: relative;
+     z-index: 100;
 }
 
 .container a:nth-child(2){
