@@ -1,0 +1,99 @@
+@import url(https://unpkg.com/open-props/open-props.min.css);
+  @import url(https://unpkg.com/open-props/normalize.min.css);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: var(--gray-12);
+}
+
+ul {
+  padding: 0;
+  display: inline-grid;
+  grid-auto-flow: column;
+  list-style-type: none;
+  grid-template-columns: auto repeat(3, calc((var(--active, 0) * 130px) + 10px));
+  transition: grid-template-columns 0.35s var(--ease-elastic-1);
+}
+
+main {
+  width: 66ch;
+}
+
+li {
+  display: grid;
+  justify-content: end;
+  z-index: calc(var(--count) - var(--index));
+}
+
+nav {
+  position: relative;
+}
+
+nav > button {
+  position: absolute;
+  left: 0;
+  background: red;
+  z-index: var(--count);
+}
+
+a {
+  background: hsl(0 0% 60% / 0.18);
+  display: inline-block;
+  padding: var(--size-2) var(--size-4);
+  border-radius: var(--radius-5);
+  margin: 0;
+  color: var(--gray-0);
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-0);
+  backdrop-filter: blur(40px);
+  transition: color 0.2s, background 0.2s;  
+}
+
+a:visited {
+  color: var(--gray-0);
+}
+
+svg {
+  height: 24px;
+  aspect-ratio: 1;
+  fill: currentColor;
+}
+
+span {
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-template-columns: 16px 1fr;
+  gap: 0.25rem;
+}
+
+li:is(
+  :nth-of-type(2),
+  :nth-of-type(3),
+  :nth-of-type(4)
+) span {
+  opacity: var(--active, 0);
+}
+
+li:is(
+  :nth-of-type(2),
+  :nth-of-type(3),
+  :nth-of-type(4)
+) a:is(:hover, :focus) {
+  background: var(--gray-0);
+  color: var(--gray-12);
+}
+
+a:focus-visible {
+  outline-color: transparent;
+}
+
+ul:is(:focus-within, :hover) {
+  --active: 1;
+}
