@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(107, 104, 104);
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 350px auto;
+    padding: 1rem 0.75rem;
+    width: 100px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-radius: 10px;
+    font-family: 'poppins' sans-serif;
+    font-weight: bold;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover{
+    padding: 1rem 5rem;
+    letter-spacing: 5px;
+    border-right: 8px solid #fff;
+    border-left: 8px solid #fff;
+}
