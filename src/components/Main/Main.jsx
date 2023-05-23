@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import classes from "./Main.module.css";
-import download from "../../Functions/Download";
+import { Link } from "react-router-dom";
 import { Data } from "../../Data";
+import download from "../../Functions/Download";
 
+export default function Main({ modeToggle, modeToggleFunc }) {
 // Function To Redirect User To The Github Of Creator
 const redirectToGitHub = (username) => {
   const sure = window.confirm(`This Will Take You To Github of ${username} ?`)
@@ -42,12 +44,8 @@ const DownloadBtn = ({ d , modeToggle}) => {
 }
 
 
-const Main = ({ modeToggle, modeToggleFunc }) => {
-
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 24; // Number of items to display per page
-
-  // Calculate the index range for the current page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
@@ -60,7 +58,6 @@ const Main = ({ modeToggle, modeToggleFunc }) => {
     setCurrentPage(pageNumber);
     window.scrollTo({ top: 500, behavior: 'smooth' });
   };
-
   return (
     <>
       <h1 className={classes.text}>
@@ -74,6 +71,7 @@ const Main = ({ modeToggle, modeToggleFunc }) => {
                 className={classes.container}
                 title={d}
                 src={`Buttons/${d}/index.html?c=${isDark}`}
+
 
               >
 
@@ -106,6 +104,4 @@ const Main = ({ modeToggle, modeToggleFunc }) => {
       </div>
     </>
   );
-};
-
-export default Main;
+}

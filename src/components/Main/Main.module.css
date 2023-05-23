@@ -14,6 +14,11 @@
   margin-bottom: 100px;
 }
 
+.btn_container {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   all: unset;
   width: 340px;
@@ -41,8 +46,9 @@
 }
 
 button {
-  padding: 1em 2.5em;
-  font-size: 14px;
+  padding: 1.3em 3em;
+  margin: 3px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
