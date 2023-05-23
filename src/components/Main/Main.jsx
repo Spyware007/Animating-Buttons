@@ -5,6 +5,45 @@ import { Data } from "../../Data";
 import download from "../../Functions/Download";
 
 export default function Main({ modeToggle, modeToggleFunc }) {
+// Function To Redirect User To The Github Of Creator
+const redirectToGitHub = (username) => {
+  const sure = window.confirm(`This Will Take You To Github of ${username} ?`)
+  if (sure) {
+    const url = `https://github.com/${username}`;
+    window.open(url, '_blank'); 
+  }
+};
+
+// Component 
+const CreatedBy = ({ d }) => {
+  return (
+    <p 
+    onClick={() => redirectToGitHub(d)}
+    className={classes.createdBy}>Created by
+      <span className={classes.user}>
+        {" "}{d}
+      </span>
+    </p>
+  )
+}
+
+// Component
+const DownloadBtn = ({ d , modeToggle}) => {
+  return (
+    <div className={classes.download}>
+      <button
+        type="submit"
+        onClick={() => {
+          download(d);
+        }}
+        className={`${classes.download_btn} ${modeToggle ? classes.dark_mode : classes.light_mode}`} >
+        Download
+      </button>
+    </div>
+  )
+}
+
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 24; // Number of items to display per page
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -12,10 +51,12 @@ export default function Main({ modeToggle, modeToggleFunc }) {
   const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
 
 
+
   const isDark = modeToggle ? "dark_mode" : "light_mode";
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
+    window.scrollTo({ top: 500, behavior: 'smooth' });
   };
   return (
     <>
@@ -30,31 +71,14 @@ export default function Main({ modeToggle, modeToggleFunc }) {
                 className={classes.container}
                 title={d}
                 src={`Buttons/${d}/index.html?c=${isDark}`}
-              ></iframe>
-              <div className={classes.download}>
-                <p>Created by {d}</p>
-                <div className={classes.btn_container}>
-                  <Link to={`/show/${d}`}>
-                    <button
-                      type="submit"
-                      className={`${classes.mode_toggle} ${
-                        modeToggle ? classes.dark_mode : classes.light_mode
-                      }`}
-                    >
-                      Show Code
-                    </button>
-                  </Link>
-                  <button
-                    type="submit"
-                    onClick={() => download(d)}
-                    className={`${classes.mode_toggle} ${
-                      modeToggle ? classes.dark_mode : classes.light_mode
-                    }`}
-                  >
-                    Download
-                  </button>
-                </div>
-              </div>
+
+
+              >
+
+              </iframe>
+              <CreatedBy d={d} />
+              <DownloadBtn d ={d} modeToggle={modeToggle}/>
+
             </div>
           );
         })}
