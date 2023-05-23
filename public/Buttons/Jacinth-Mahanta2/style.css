@@ -14,7 +14,6 @@ body{
     flex-wrap: wrap;
     min-height: 100vh;
     background: #222;
-    gap: 10px;
 }
 
 .btn{
