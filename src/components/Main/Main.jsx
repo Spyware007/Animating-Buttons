@@ -4,6 +4,7 @@ import download from "../../Functions/Download";
 import { Data } from "../../Data";
 
 const Main = ({ modeToggle, modeToggleFunc }) => {
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 24; // Number of items to display per page
 
@@ -11,6 +12,7 @@ const Main = ({ modeToggle, modeToggleFunc }) => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
+
 
   const isDark = modeToggle ? "dark_mode" : "light_mode";
 
@@ -20,7 +22,9 @@ const Main = ({ modeToggle, modeToggleFunc }) => {
 
   return (
     <>
-      <h1 className={classes.text}>Explore the Buttons by our Contributors.</h1>
+      <h1 className={classes.text}>
+        Explore from the list of {Data?.length} Buttons by our Contributors.
+      </h1>
       <div className={classes.btns_container}>
         {currentItems.map((d, i) => {
           return (
