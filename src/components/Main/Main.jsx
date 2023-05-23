@@ -5,7 +5,7 @@ import { Data } from "../../Data";
 
 const Main = ({ modeToggle, modeToggleFunc }) => {
 
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(parseInt(localStorage.getItem("current_page")) || 1);
   const itemsPerPage = 24; // Number of items to display per page
 
   // Calculate the index range for the current page
@@ -18,6 +18,7 @@ const Main = ({ modeToggle, modeToggleFunc }) => {
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
+    localStorage.setItem("current_page", pageNumber)
   };
 
   return (
