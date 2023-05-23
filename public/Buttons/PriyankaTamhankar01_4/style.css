@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+  
+.main_box{
+    width: 4em;
+    height: 4em;
+    position: relative;
+}
+  
+#share_button{
+    display: none;
+}
+  
+span,a{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+  
+span{
+    width: 4em;
+    height: 4em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #eee;
+    color: #333;
+    font-size: 2em;
+    z-index: 1;
+    cursor: pointer;
+    /* border-radius: 30%; */
+}
+  
+.sm_list{
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+  
+.sm_list a{
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s;
+    font-size: 1.5em;
+}
+  
+#share_button:checked ~ .sm_list a:nth-child(1){
+    background-color: #3B5998;
+    transition-delay: 0.2s;
+    transform: translateX(-6em);
+}
+  
+#share_button:checked ~ .sm_list a:nth-child(2){
+    background-color: #dd2553;
+    transition-delay: 0.2s;
+    transform: translateX(6em);
+}
+  
+#share_button:checked ~ .sm_list a:nth-child(3){
+    background-color:  #0a66c2;
+
+    transition-delay: 0.3s;
+    transform: translateX(12em);
+}
+  
+#share_button:checked ~ .sm_list a:nth-child(4){
+    background-color: #1077ec;
+    transition-delay: 0.3s;
+    transform: translateX(-12em);
+}
+  
+#share_button:checked ~ .sm_list a:nth-child(5){
+    background-color: #25D366;
+    transition-delay: 0.4s;
+    transform: translateX(18em);
+}
+  
+#share_button:checked ~ .sm_list a:nth-child(6){
+    background: linear-gradient(70deg,blue,green,red,yellow);
+    transition-delay: 0.4s;
+    transform: translateX(-18em);
+}
+  
+/* Hovering Effects */
+#share_button:checked ~ .sm_list a:nth-child(1):hover{
+    background-color: #ffffff;
+    color: #3B5998;
+    /* transition-delay: 0.2s;
+    transform: translateX(-6em); */
+}
+  
+#share_button:checked ~ .sm_list a:nth-child(2):hover{
+    color: #dd2553;
+    background-color: #fff;
+}
+  
+#share_button:checked ~ .sm_list a:nth-child(3):hover{
+    color: #0a66c2;
+    background-color: #fff;
+}
+  
+#share_button:checked ~ .sm_list a:nth-child(4):hover{
+    color: #1077ec;
+    background-color: #fff;
+}
+  
+#share_button:checked ~ .sm_list a:nth-child(5):hover{
+    color:  #25D366;
+    background-color: #fff;
+}
+  
+#share_button:checked ~ .sm_list a:nth-child(6):hover{
+    color: black;
+    background-image: linear-gradient(90deg,rgb(233, 216, 216),rgb(11, 133, 204));
+}
+  
+span:visited{
+    background-color: #000f94;
+}
