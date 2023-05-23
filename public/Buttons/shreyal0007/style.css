@@ -1,0 +1,94 @@
+.button {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      padding: 20px 40px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 2rem;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: #3498db;
+      border: none;
+      cursor: pointer;
+      z-index: 1;
+    }
+    
+    .button:before,
+    .button:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      z-index: -1;
+      transition: transform 0.5s ease;
+    }
+    
+    .button:before {
+      transform: translateX(-100%);
+    }
+    
+    .button:after {
+      transform: translateX(100%);
+    }
+    
+    .button:hover:before,
+    .button:hover:after {
+      transform: translateX(0);
+    }
+    
+    .button span {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .button span:before,
+    .button span:after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: #fff;
+      transition: transform 0.3s ease;
+    }
+    
+    .button span:before {
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+    }
+    
+    .button span:after {
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-45deg);
+    }
+    
+    .button:hover span:before {
+      transform: translateX(-50%) rotate(225deg);
+    }
+    
+    .button:hover span:after {
+      transform: translateX(-50%) rotate(135deg);
+    }
+    .maindiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        vertical-align: middle;
+    }
+.buttontext{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:black;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0;
+    z-index: 2;
+}    
