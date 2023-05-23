@@ -1,0 +1,18 @@
+button {
+    font-size: 16px;
+    padding: 15px;
+    width: 125px;
+    background: transparent;
+    border: 1px solid ;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+button:hover {
+    transition: all 0.1s ease-out;
+    transform: scale(1.1)
+}
