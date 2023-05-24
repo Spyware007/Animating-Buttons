@@ -15,7 +15,6 @@ body {
   text-align: center;
   border-radius: 30px;
 }
-
 .blob-btn {
   z-index: 1;
   position: relative;
@@ -92,9 +91,7 @@ body {
   transform: translate3d(0, 150%, 0) scale(1.7);
   transition: transform 0.45s;
 }
-@supports (filter: url('#goo')) {
-  transform: translate3d(0, 150%, 0) scale(1.4);
-}
+
 .blob-btn__blob:nth-child(1) {
   left: 0%;
   transition-delay: 0s;
@@ -113,7 +110,4 @@ body {
 }
 .blob-btn:hover .blob-btn__blob {
   transform: translateZ(0) scale(1.7);
-}
-@supports (filter: url('#goo')) {
-  transform: translateZ(0) scale(1.4);
 }
