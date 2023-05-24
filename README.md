@@ -1,8 +1,4 @@
-# Project Marketplace 
-This is a freelance marketplace platform that allows users to buy and sell projects related to various domains. It is based on web3 login and crypto payment options, enabling secure and transparent transactions. 
 
-## Live Demo
-Check out the live demo of [Project Marketplace](https://the-project-marketplace.vercel.app/).
 <div align="center">
 <img width="300"  alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
 </div>
@@ -17,35 +13,28 @@ This project aims to provide a collection of animated buttons that you can use t
 <h1 align="center">✨✨HacktoberFest 2022✨✨</h1>
 <img width="1440" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png">
 
-## Tech Stack
-This project is built using the MERN stack, which includes:
-- MongoDB for the database
-- Express and Node.js for the backend
-- React for the frontend
+## What can You Contribute ⚠️ 
+* You can contribute any animated buttons. 🤩
+* You can update or refine an existing animated button  or even add your own new buttons in this repo. 🚀
+* Make sure you follow the below steps before making your contributions❗❗❗
 
-
-We used Spheron for deploying our backend and Vercel for deploying the frontend.
   <a href = "#top"> Back to top</a>
   
 ### Firstly
 ### 📢 Register [here](https://hacktoberfest.com/) for Hacktoberfest and make 4️⃣ PRs this month to grab free SWAGS 🔥
 
-## Figma Design
-Link to our Figma design is [here](https://www.figma.com/file/6eaNLjWwNMfCRtBjQlPVvV/Hackverse?node-id=0%3A1&t=kf91LFDpRkVXgwCv-1).
+- Fork this repo <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/Spyware007/Animating-Buttons/fork" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">here</a>
+- Clone on your local machine
 
-## Pages
+```terminal
+git clone https://github.com/**username**/Animating-Buttons.git
+```
+- Navigate to project directory.
+```terminal
+cd Animating-Buttons
+```
 
-### Home Screen
-
-<kbd> <img src="images/Homescreen.png" alt="Home Screen" width="600" height="400"> </kbd>
-
-### Dashboard
-
-<kbd> <img src="images/Dashboard.png" alt="Dashboard" width="600" height="400"> </kbd>
-
-### Projects
-
-<kbd> <img src="images/Projects.png" alt="Projects" width="600" height="400"> </kbd>
 ```terminal
 npm i
 npm start
@@ -70,40 +59,39 @@ git checkout -b my-new-branch
 - Don't forget to replace 'your_github_username' with GitHub Username.
 - If you are adding more than one buttons then give proper names such as Spyware007_1,Spyware007_2, your_github_username_1,etc
 
-### Project Details
+- Stage your changes. 
+```
+git add .
+```
+- Commit your changes.
 
-<kbd> <img src="images/Project_Details.png" alt="Project Details" width="600" height="400"> </kbd>
+```
+git commit -m "Relevant message"
+```
+- Then push 
+```
+git push origin my-new-branch
+```
+- Finally, create a new pull request from your forked repository
+----
 
-### Orders
 
-<kbd> <img src="images/Orders.png" alt="Orders" width="600" height="400"> </kbd>
+----
+### PLEASE NOTE
 
-### Metamask Connected
-
-<kbd> <img src="images/Metamask_Connected.png" alt="Metamask Connected" width="600" height="400"> </kbd>
-
+* Make sure you commit your changes in a new branch❗❗
+* Make sure that your file name and your commit message are relevant. 
+* Also, make sure you comment your code wherever necessary. 
 
 ----
 <a href = "#top"> Back to top</a>
 # Our Beloved Contributors 😍
 
-## How to Clone and Run the Project
+---
 
-To clone and run the project, follow these steps:
-1. Open your terminal and navigate to the directory where you want to store the project.
-2. Clone the repository using the following command: git clone [https://github.com/ak736/project-marketplace.git]
-3. Navigate to the project directory
-4. Install the necessary dependencies by running the following command in the root directory: npm install
-5. To start the frontend and backend servers concurrently, run the following command in the root directory:
-  - Frontend : npm run dev
-  - Backend : npm start
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-A big thank you to all our contributors who have made this project better with their valuable contributions! We appreciate your efforts and dedication.
-
-Don't forget to ⭐ this repository to show your support!
+<a href="https://github.com/Spyware007/Animating-Buttons/graphs/contributors">
+  <img align="center" src="https://contrib.rocks/image?max=100&repo=Spyware007/Animating-Buttons" />
+</a>
 
 ---
 
@@ -116,18 +104,11 @@ Don't forget to ⭐ this repository to show your support!
 <h3 align="center"> DON'T FORGET TO ⭐ THIS REPOSITORY !!
 </h3> 
 
-## Credits
 
-Sympto-Tracker was developed by:
-
-- [Aniket Kumar](https://github.com/ak736)
-- [Anto Vimalan](https://github.com/vimalds15)
-
-If you have any questions or feedback, please reach out to [aniketkir63@gmail.com].
 ###  You can follow me [here](https://github.com/Spyware007) ❤
   <a href = "#top"> Back to top</a>
-
 </div>
+  
 
   
 
