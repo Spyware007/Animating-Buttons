@@ -3,14 +3,13 @@ import { Main, Navbar, Socials, Footer, Loader } from "./components";
 import Information from "./components/Information/Information";
 
 const App = () => {
-  const [toggleMode, setToggleMode] = useState(false);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 100);
   }, []);
 
   return (
