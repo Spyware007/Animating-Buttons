@@ -174,11 +174,7 @@ export const Data = [
   "dassoumen98_1",
   "piyushkhurana2019",
   "lakhan06",
-
-  "Ks103"
-  "SyedImtiyazAli"
-
-
+  "Ks103",
   "SyedImtiyazAli",
   "mohitparmar1",
 
