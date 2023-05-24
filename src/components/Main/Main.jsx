@@ -51,7 +51,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
     );
   };
 
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(parseInt(localStorage.getItem("current_page")) || 1);
   const itemsPerPage = 24; // Number of items to display per page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -61,7 +61,9 @@ export default function Main({ modeToggle, modeToggleFunc }) {
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
+    localStorage.setItem("current_page", pageNumber)
     window.scrollTo({ top: 500, behavior: "smooth" });
+
   };
   return (
     <>

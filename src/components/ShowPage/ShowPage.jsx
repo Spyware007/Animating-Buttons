@@ -32,7 +32,7 @@ export default function ShowPage() {
       <div className={classes.text_field} key={i}>
         <div style={styles}>{component.toUpperCase()} Code</div>
         <textarea value={`${codes[i]}`} readOnly />
-        <button onClick={(e) => navigator.clipboard.writeText(e.target.value)}>
+        <button className={classes.copyBtn} onClick={(e) => navigator.clipboard.writeText(codes[i])}>
           Copy {component}
         </button>
       </div>
