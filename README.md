@@ -18,6 +18,8 @@ This project aims to provide a collection of animated buttons that you can use t
 * You can update or refine an existing animated button  or even add your own new buttons in this repo. 🚀
 * Make sure you follow the below steps before making your contributions❗❗❗
 
+  <a href = "#top"> Back to top</a>
+  
 ### Firstly
 ### 📢 Register [here](https://hacktoberfest.com/) for Hacktoberfest and make 4️⃣ PRs this month to grab free SWAGS 🔥
 
@@ -37,7 +39,7 @@ cd Animating-Buttons
 npm i
 npm start
 ```
-<a href = "#top"> Back to top</a>
+  
 - Create a new Branch
 
 ```
@@ -50,6 +52,8 @@ git checkout -b my-new-branch
 
 - Add your folder name (github_username, github_username_1,etc) code in [src/Data.js](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js) file.
 
+  <a href = "#top"> Back to top</a>
+  
 # Note: 
 - Make sure to align your button centered horizontally as well as vertically.
 - Don't forget to replace 'your_github_username' with GitHub Username.
