@@ -1,5 +1,6 @@
 import React from "react";
 import { Main, Navbar, Socials, Footer, ShowPage } from "./components";
+import Information from './components/Information/Information';
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
@@ -9,6 +10,7 @@ export default function MainPage() {
     <>
       <div className={`app ${toggleMode ? "dark" : "light"}`}>
         <Navbar modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
+        <Information modeToggle={toggleMode}/>
         <Routes>
           <Route
             path="/"

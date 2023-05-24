@@ -1,0 +1,37 @@
+.subNav{
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: #828282;
+}
+
+.dark_mode {
+    background-color: var(--light-bg-color);
+    color: var(--light-text-color);
+}
+
+.light_mode {
+background-color: var(--dark-bg-color);
+color: var(--dark-text-color);
+}
+
+.countContainer{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.counts{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.counts:hover{
+    background-color: #1c9bef;
+    color: white;
+    cursor: default;
+}
