@@ -1,4 +1,9 @@
-
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: 100vh;
+    }
 .button{
     --top : rgba(100,100,100,.8) ;
     --bottom : rgba(100,100,100,.2) ;
