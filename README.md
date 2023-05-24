@@ -23,6 +23,7 @@ This project is built using the MERN stack, which includes:
 - Express and Node.js for the backend
 - React for the frontend
 
+
 We used Spheron for deploying our backend and Vercel for deploying the frontend.
   <a href = "#top"> Back to top</a>
   
@@ -81,6 +82,7 @@ git checkout -b my-new-branch
 
 <kbd> <img src="images/Metamask_Connected.png" alt="Metamask Connected" width="600" height="400"> </kbd>
 
+
 ----
 <a href = "#top"> Back to top</a>
 # Our Beloved Contributors 😍
@@ -124,4 +126,8 @@ Sympto-Tracker was developed by:
 If you have any questions or feedback, please reach out to [aniketkir63@gmail.com].
 ###  You can follow me [here](https://github.com/Spyware007) ❤
   <a href = "#top"> Back to top</a>
+
 </div>
+
+  
+
