@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+  }
+  /* css for the div */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+/* css for the button before the action */
+button {
+    text-decoration: none;
+    position: relative;
+    border: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #fff;
+    width: 9em;
+    height: 3em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 300%;
+    border-radius: 10px;
+    z-index: 1;
+  }
+  
+  button:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+  }
+  
+  @keyframes ani {
+    0% {
+      background-position: 0%;
+    }
+  
+    100% {
+      background-position: 400%;
+    }
+  }
+  /* css for button after the action */
+  
+  button:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    /* change the color  */
+    background: linear-gradient(to right, #cc95c0, #dbd4b4, #7aa1d2);
+    background-size: 400%;
+    border-radius: 15px;
+    transition: 1s;
+  }
+  
+  button:hover::before {
+    filter: blur(20px);
+  }
+  
+  button:active {
+    /* change the color  */
+    background: linear-gradient(to right, #ef3b36, #ffffff);
+  }
