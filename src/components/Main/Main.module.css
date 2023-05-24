@@ -19,6 +19,10 @@
   flex-direction: column;
 }
 
+.container_s_bts {
+  display: flex;
+}
+
 .container {
   all: unset;
   width: 340px;
@@ -29,10 +33,9 @@
 }
 
 .download {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
-  flex-direction: column;
+  
   margin-top: 10px;
 
 }
@@ -43,11 +46,12 @@
 
 .download > div > a {
   text-decoration: none;
+  width: 45px;
 }
 
 button {
   padding: 1.3em 3em;
-  margin: 3px;
+  margin: 2px;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -92,11 +96,12 @@ button:active {
 
 /* styles for created by tag */
 .createdBy {
+  display: inline-flex;
   font-family: "Helvetica", Arial, sans-serif;
   font-size: 14px;
   color: #fff;
   background-color: #4285f4;
-  padding: 8px 12px;
+  padding: 12px 12px;
   border-radius: 20px;
   margin-top: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -122,16 +127,15 @@ button:active {
 
 .user{
   font-family: "Helvetica", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   font-style: italic;
 }
 
-
 /* styles for the download button (actual button not the outer div) */
-.download_btn {
+.showcode_btn {
   font-family: "Helvetica", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   color: #fff;
   background-color: #f57c00;
@@ -140,21 +144,42 @@ button:active {
   border-radius: 30px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
-  letter-spacing: 2.5px;
+  letter-spacing: normal;
 }
 
-.download_btn:hover,
-.download_btn:focus {
+.showcode_btn:hover,
+.showcode_btn:focus {
   background-color: #e65100;
   cursor: pointer;
-  letter-spacing: 0.3rem;
 }
 
-.download_btn:focus {
+.download_btn:focus,
+.showcode_btn:focus {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   outline: none;
 }
 
+.download_btn {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  color: #fff;
+  background-color: #f57c00;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  width: 10%;
+  letter-spacing: normal;
+}
+
+.download_btn:hover,
+.download_btn:focus{
+  background-color: #e65100;
+  cursor: pointer;
+  letter-spacing: normal;
+}
 
 /* Styles For Pagination */
 .paginationItem {

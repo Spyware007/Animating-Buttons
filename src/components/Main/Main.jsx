@@ -20,7 +20,6 @@ export default function Main({ modeToggle, modeToggleFunc }) {
   const CreatedBy = ({ d }) => {
     return (
       <p onClick={() => redirectToGitHub(d)} className={classes.createdBy}>
-        Created by
         <span className={classes.user}> {d}</span>
       </p>
     );
@@ -32,7 +31,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
       <div className={classes.download}>
         <Link to={`/show/${d}`}>
           <button
-            className={`${classes.download_btn} ${
+            className={`${classes.showcode_btn} ${
               modeToggle ? classes.dark_mode : classes.light_mode
             }`}
           >
@@ -45,7 +44,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
             modeToggle ? classes.dark_mode : classes.light_mode
           }`}
         >
-          Download
+        <i id="op-menu" class="fas fa-download"></i>
         </button>
       </div>
     );
@@ -79,9 +78,10 @@ export default function Main({ modeToggle, modeToggleFunc }) {
                 title={d}
                 src={`Buttons/${d}/index.html?c=${isDark}`}
               ></iframe>
-              <CreatedBy d={d} />
-              <></>
-              <DownloadBtn d={d} modeToggle={modeToggle} />
+              <div className="container_s_bts">
+                <CreatedBy d={d} />
+                <DownloadBtn d={d} modeToggle={modeToggle} />
+              </div>
             </div>
           );
         })}
