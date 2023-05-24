@@ -59,3 +59,12 @@
   width: 100%;
   height: 100%;
 }
+.countContainer{
+  display: flex;
+  gap: 10px;
+  margin: 0px auto;
+}
+.Count{
+padding: 10px;
+border-radius: 5px;
+}

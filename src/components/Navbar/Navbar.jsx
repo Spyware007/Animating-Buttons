@@ -6,7 +6,8 @@ import spider from "../../assets/spider.png";
 import moon from "../../assets/moon.png";
 import sun from "../../assets/sun.png";
 
-const Navbar = ({ modeToggle, modeToggleFunc }) => {
+const Navbar = ({ modeToggle, modeToggleFunc}) => {
+
   return (
     <>
       <nav className={classes.navbar}>
