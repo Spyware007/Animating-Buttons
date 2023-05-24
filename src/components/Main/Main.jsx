@@ -19,10 +19,15 @@ export default function Main({ modeToggle, modeToggleFunc }) {
   // Component
   const CreatedBy = ({ d }) => {
     return (
-      <p onClick={() => redirectToGitHub(d)} className={classes.createdBy}>
-        Created by
-        <span className={classes.user}> {d}</span>
-      </p>
+      <div className={classes.download}>
+    <button
+        onClick={() => redirectToGitHub(d)}
+        className={`${classes.createdBy}`}
+    >
+      Created by
+      <span className={classes.user}> {d}</span>
+    </button>
+    </div>
     );
   };
 

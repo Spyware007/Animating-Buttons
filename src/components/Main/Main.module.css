@@ -105,6 +105,8 @@ button:active {
   text-align: center;
   color: #000;
   cursor: help;
+  cursor: pointer;
+  text-transform: capitalize;
 }
 
 .createdBy:before {
