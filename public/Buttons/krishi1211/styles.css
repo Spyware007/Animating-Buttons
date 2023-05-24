@@ -28,10 +28,10 @@
 .button{
     display : flex ;
     position : relative ;
-    width : 28px ;
-    height : 8px ;
+    width : 280px ;
+    height : 80px ;
     text-decoration : none ;
-    perspective : 60px ;
+    perspective : 600px ;
     background : linear-gradient( rgba(255,255,255,.1) 0% , rgba(255,255,255,0) 30%  ,rgba(255,255,255,0) 70% , rgba(255,255,255,.1)) ;
     box-shadow : 0 0 32px rgba(0,0,0,1) ;
 }
