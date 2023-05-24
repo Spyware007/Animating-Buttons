@@ -7,15 +7,15 @@ body{
     margin-top: 20vw;
 }
 .btn{
-    width: 30vw;
-    height: 15vh;
+    width: 40vw;
+    height: 20vh;
     color: aqua;
     background-color: black;
     border-radius: 3%;
     cursor: pointer;
 }
 .text{
-    font-size: 21px;
+    font-size: 15px;
 }
 .btn span{
     position:relative;
