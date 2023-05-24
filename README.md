@@ -62,6 +62,11 @@ git checkout -b my-new-branch
 
 - Add your folder name (github_username, github_username_1,etc) code in [src/Data.js](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js) file.
 
+
+- Then go to [src/Data.js](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)
+
+- Add your folder name (github_username, github_username_1,etc) code in [src/Data.js](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js) file.
+
   <a href = "#top"> Back to top</a>
   
 # Note: 
@@ -105,6 +110,12 @@ Don't forget to ⭐ this repository to show your support!
 
 ---
 
+A big thank you to all our contributors who have made this project better with their valuable contributions! We appreciate your efforts and dedication.
+
+Don't forget to ⭐ this repository to show your support!
+
+---
+
 <h3 align="center"> DON'T FORGET TO ⭐ THIS REPOSITORY !!
 </h3> 
 
@@ -119,4 +130,3 @@ If you have any questions or feedback, please reach out to [aniketkir63@gmail.co
 ###  You can follow me [here](https://github.com/Spyware007) ❤
   <a href = "#top"> Back to top</a>
 </div>
-  
