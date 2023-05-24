@@ -89,6 +89,7 @@ export const Data = [
   "rcode321",
   "richesh27",
   "riddhitech",
+  "Rishabh3243",
   "rohitsinghind",
   "sabhisharma-ise",
   "Sakshy18",
