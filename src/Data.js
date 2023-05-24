@@ -169,9 +169,7 @@ export const Data = [
   "piyushkhurana2019",
   "lakhan06",
   "SyedImtiyazAli",
-
   "Divya7201",
-
   "mohitparmar1",
 
 ];
