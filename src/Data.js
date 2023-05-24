@@ -61,6 +61,8 @@ export const Data = [
   "jonathanmani",
   "KalebArmbrust",
   "KhushiKhandelwal610",
+  "Killer2OP_1",
+  "Killer2OP_2",
   "kishanlalchoudhary",
   "KishorBhagat",
   "KratikJain10",
