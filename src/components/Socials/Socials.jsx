@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Socials.module.css";
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
 const Socials = ({ modeToggle }) => {
   return (
     <>
@@ -12,32 +12,32 @@ const Socials = ({ modeToggle }) => {
           </span>{" "}
           animation <br /> for your next project.
         </h1>
-        <p className={classes.para}>An initiative by GDSC-DYPCOE.</p>
-        <div className={classes.socials_container}>
-          {/* Add Your Button Below This */}
-
-          <iframe
-            className={classes.socials}
-            title="abc"
-            src="Buttons/Spyware007/index.html"
-          ></iframe>
-          <iframe
-            className={classes.socials}
-            title="abc"
-            src="Buttons/Spyware007_1/index.html"
-          ></iframe>
-          <iframe
-            className={classes.socials}
-            title="abc"
-            src="Buttons/Spyware007_2/index.html"
-          ></iframe>
-          <iframe
-            className={classes.socials}
-            title="abc"
-            src="Buttons/Spyware007_3/index.html"
-          ></iframe>
+        <p className={classes.para}>An initiative by GDSC-DYPCOE. Join our growing community on</p>
         </div>
+        
+        <div className={classes.socialsection}>
+      <div className={classes.socialcard.instagram}  >
+        <a href="https://www.instagram.com/gdsc_dypcoe/" target="_blank" rel="noopener noreferrer" className={classes.instagram}>
+          <i className="fab fa-instagram"></i>
+        </a>
       </div>
+      <div className={classes.socialcard.instagram}  >
+        <a href="https://www.linkedin.com/company/dsc-dypcoe/mycompany/" target="_blank" rel="noopener noreferrer" className={classes.linkedin}>
+          <i className="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <div className={classes.socialcard.instagram}  >
+        <a href="https://twitter.com/GDSC_DYPCOE" target="_blank" rel="noopener noreferrer" className={classes.twitter}>
+          <i className="fab fa-twitter"></i>
+        </a>
+        
+      </div>
+      <div className={classes.socialcard.instagram}  >
+        <a href="https://github.com/DSC-DYPCOE" target="_blank" rel="noopener noreferrer" className={classes.github}>
+          <i className="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
     </>
   );
 };

@@ -1,5 +1,5 @@
 .social_container {
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 .text {
   text-align: center;
@@ -48,7 +48,7 @@
 }
 .para {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 .socials {
   all: unset;
@@ -63,4 +63,102 @@
   .text {
     font-size: 30px;
   }
+}
+.socialsection {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.socialcard {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.socialcard:hover{
+  transform: scale(1.1);
+}
+
+.socialcontainer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.instagram {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius:5px;
+  font-size: 34px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  background-color: #e4405f;
+  transition: all 100ms ease-in-out;
+}
+.instagram:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 5px 12px rgb(255, 252, 252);
+}
+
+
+.linkedin {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius:5px;
+  font-size: 34px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  background-color: #0077b5;
+  transition: all 100ms ease-in-out;
+}
+.linkedin:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 5px 12px rgb(255, 252, 252);
+}
+.twitter {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius:5px;
+  font-size: 34px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  background-color: #1da1f2;
+  transition: all 100ms ease-in-out;
+}
+.twitter:hover{
+  transform: scale(1.1);box-shadow: 0px 5px 12px rgb(255, 252, 252);
+}
+.github {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius:5px;
+  font-size: 34px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  background-color: #333;
+  transition: all 100ms ease-in-out;
+}
+.github:hover{
+  transform: scale(1.1);box-shadow: 0px 5px 12px rgb(255, 252, 252);
 }
