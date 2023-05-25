@@ -1,0 +1,15 @@
+.text_field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  width: 90%;
+}
+
+.text_field textarea {
+  margin: 1px;
+  width: 100%;
+  height: 50vh;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+}

@@ -43,7 +43,7 @@ const DownloadBtn = ({ d, modeToggle, current, setCurrent }) => {
             className={`${classes.download_btn} ${modeToggle ? classes.dark_mode : classes.light_mode
               }`}
           >
-            Show Code
+            Download
           </button>
         </Link>
         <button
@@ -97,6 +97,21 @@ export default function Main({ modeToggle, modeToggleFunc }) {
     window.scrollTo({ top: 500, behavior: "smooth" });
 
   };
+
+  const pageNumberComponent = Array(Math.ceil(Data.length / itemsPerPage))
+    .fill()
+    .map((_, index) => (
+      <li
+        key={index}
+        className={`${classes.paginationItem} ${
+          currentPage === index + 1 ? classes.active : ""
+        }`}
+        onClick={() => handlePageChange(index + 1)}
+      >
+        {index + 1}
+      </li>
+    ));
+
   return (
     <>
       <h1 className={classes.text}>
