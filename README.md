@@ -2,6 +2,22 @@
 <div align="center">
 <img width="300"  alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
 </div>
+<div align="center">
+      <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+      <img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+      <img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+      <br>
+      <img src="https://img.shields.io/github/repo-size/Spyware007/Animating-Buttons?style=for-the-badge" />
+      <img src="https://img.shields.io/github/issues/Spyware007/Animating-Buttons?style=for-the-badge" />
+      <img src="https://img.shields.io/github/issues-raw/Spyware007/Animating-Buttons?style=for-the-badge" />
+      <img src="https://img.shields.io/github/forks/Spyware007/Animating-Buttons?style=for-the-badge" />
+      <img src="https://img.shields.io/github/issues-pr-closed/Spyware007/Animating-Buttons?style=for-the-badge" />
+      <br>
+      <img src="https://img.shields.io/github/stars/Spyware007/Animating-Buttons?style=for-the-badge" />
+      <img src="https://img.shields.io/github/contributors/Spyware007/Animating-Buttons?style=for-the-badge" />
+      <img src="https://img.shields.io/github/issues-pr-closed/Spyware007/Animating-Buttons?style=for-the-badge" />
+      <img src="https://img.shields.io/github/last-commit/Spyware007/Animating-Buttons?style=for-the-badge" />
+ </div>
 <h1 align="center">✨✨HacktoberFest 2022✨✨</h1>
 <img width="1440" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png">
 
