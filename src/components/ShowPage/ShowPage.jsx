@@ -36,7 +36,8 @@ function App() {
     fetch(`/Buttons/${id}/app.js`)
       .then((response) => response.text())
       .then((text) => setJs(text));
-  }, []);
+  }, [id]);
+
 
   return (
     <div className={classes.editor_container}>
