@@ -193,6 +193,7 @@ export const Data = [
   "adjascently",
   "SyedImtiyazAli",
   "mohitparmar1",
+  "SyedImtiyaz-1",
   "Explorer003",
   "Pritam991",
   "lmalkam"
