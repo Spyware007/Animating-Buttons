@@ -7,11 +7,12 @@ import download from "../../Functions/Download";
 export default function Main({ modeToggle, modeToggleFunc }) {
   // Function To Redirect User To The Github Of Creator
   const redirectToGitHub = (username) => {
+    let githubUsername = username.split("_")[0]; // Extract the base username
     const sure = window.confirm(
-      `This Will Take You To Github of ${username} ?`
+      `This Will Take You To GitHub of ${githubUsername} !`
     );
     if (sure) {
-      const url = `https://github.com/${username}`;
+      const url = `https://github.com/${githubUsername}`;
       window.open(url, "_blank");
     }
   };
