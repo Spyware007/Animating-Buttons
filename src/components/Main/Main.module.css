@@ -1,4 +1,6 @@
-
+*{
+  box-sizing: border-box;
+}
 
 .text {
   text-align: center;
@@ -8,7 +10,7 @@
 .btns_container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
   gap: 100px;
   margin-bottom: 100px;
@@ -32,51 +34,11 @@
   border-radius: 12px;
 }
 
-.download {
-  display: inline-flex;
-  align-items: center;
-  
-  margin-top: 10px;
-
-}
-
-.download > div {
-  margin: auto;
-}
-
-.download > div > a {
-  text-decoration: none;
-  width: 45px;
-}
-
 button {
-  padding: 1.3em 3em;
-  margin: 2px;
-  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 500;
-  width: 100%;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  font-family: "Montserrat", sans-serif;
-  border-radius: 12px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  outline: none;
 }
 
-button:hover {
-  box-shadow: 0px 15px 20px rgba(41, 46, 53, 0.425);
-  font-weight: 700;
-  letter-spacing: 0.8px;
-}
-
-button:active {
-  transform: translateY(-1px);
-}
 
 .dark_mode {
   background-color: rgb(20, 20, 20);
@@ -132,6 +94,12 @@ button:active {
   font-style: italic;
 }
 
+.buttonContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 /* styles for the download button (actual button not the outer div) */
 .showcode_btn {
   font-family: "Helvetica", Arial, sans-serif;
@@ -141,7 +109,7 @@ button:active {
   background-color: #f57c00;
   padding: 12px 20px;
   border: none;
-  border-radius: 30px;
+  border-radius:10px 0px 0px 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
   letter-spacing: normal;
@@ -151,6 +119,27 @@ button:active {
 .showcode_btn:focus {
   background-color: #e65100;
   cursor: pointer;
+}
+
+.arrow{
+  width: 40px;
+  font-size: 25px;
+  margin-bottom: 10px;
+  margin-left: 3px;
+  align-self: start;
+  background-color: #f57c00;
+  border-radius: 0 10px 10px 0;
+  color: #fff;
+
+}
+
+.arrow:hover{
+  background-color: #e65100;
+}
+
+.containerForArrow{
+  display: flex;
+
 }
 
 .download_btn:focus,
