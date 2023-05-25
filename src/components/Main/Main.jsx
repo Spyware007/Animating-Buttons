@@ -20,7 +20,8 @@ const CreatedBy = ({ d }) => {
     </p>
   );
 };
-const FunctioalButtons = ({ d, modeToggle, current, setCurrent }) => {
+
+const DownloadBtn = ({ d, modeToggle, current, setCurrent }) => {
   const [all, setAll] = useState(false);
   return (
     <div className={classes.containerForArrow}>
@@ -105,7 +106,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
                 src={`Buttons/${d}/index.html?c=${isDark}`}
               ></iframe>
               <CreatedBy d={d} />
-              <FunctioalButtons
+              <DownloadBtn
                 d={d}
                 modeToggle={modeToggle}
                 current={current}
