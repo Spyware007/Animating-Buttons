@@ -21,11 +21,14 @@ export default function MainPage() {
               </div>
             }
           />
-          <Route path={"/show/:id"} element={
-            <Suspense fallback={<SuspenseLoader />}>
-              <ShowPage />
-            </Suspense>
-          } />
+          <Route
+            path={"/show/:id"}
+            element={
+              <Suspense fallback={<SuspenseLoader />}>
+                <ShowPage />
+              </Suspense>
+            }
+          />
         </Routes>
         <Footer modeToggle={toggleMode} />
       </div>
