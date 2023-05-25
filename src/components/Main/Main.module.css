@@ -30,8 +30,6 @@
   border-radius: 12px;
 }
 
-
-
 .dark_mode {
   background-color: rgb(20, 20, 20);
   color: white;
@@ -89,7 +87,7 @@
 .buttonContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 /* styles for the download button (actual button not the outer div) */
@@ -101,11 +99,9 @@
   background-color: #f57c00;
   padding: 12px 20px;
   border: none;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
-  letter-spacing: 2.5px;
-  width: 300px;
   margin-bottom: 10px;
 }
 

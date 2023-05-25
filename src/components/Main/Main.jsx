@@ -21,61 +21,32 @@ const CreatedBy = ({ d }) => {
   );
 };
 
-const DownloadBtn = ({ d, modeToggle, current, setCurrent }) => {
-  const [all, setAll] = useState(false);
+const DownloadBtn = ({ d, modeToggle }) => {
+  const displayMode = modeToggle ? classes.dark_mode : classes.light_mode;
   return (
-    <div className={classes.containerForArrow}>
-      <div className={`${classes.buttonContainer}`}>
-        <Link className={`${classes.copyBtn}  `} to={`/show/${d}`}>
-          <button
-            onClick={() => {
-              setCurrent(1);
-            }}
-            hidden={!(current === 1) && !(all === true)}
-            className={`${classes.download_btn} ${
-              modeToggle ? classes.dark_mode : classes.light_mode
-            }`}
-          >
-            Show Code
-          </button>
-        </Link>
-        <button
-          hidden={!(current === 2) && !(all === true)}
-          onClick={() => {
-            setCurrent(2);
-            downloadFiles(d);
-            setAll(false);
-          }}
-          className={`${classes.download_btn} ${
-            modeToggle ? classes.dark_mode : classes.light_mode
-          }`}
-        >
-          Download As Files
+    <div className={`${classes.buttonContainer}`}>
+      <Link className={`${classes.copyBtn}  `} to={`/show/${d}`}>
+        <button className={`${classes.download_btn} ${displayMode}`}>
+          Show Code
         </button>
-        <button
-          hidden={!(current === 3) && !(all === true)}
-          onClick={() => {
-            setCurrent(3);
-            downloadZip(d);
-            setAll(false);
-          }}
-          className={`${classes.download_btn} ${
-            modeToggle ? classes.dark_mode : classes.light_mode
-          }`}
-        >
-          Download As Zip
-        </button>
-      </div>
-
-      <button onClick={() => setAll(!all)} className={`${classes.arrow}`}>
-        &#9662;
+      </Link>
+      <button
+        onClick={() => downloadFiles(d)}
+        className={`${classes.download_btn} ${displayMode}`}
+      >
+        Download Files
+      </button>
+      <button
+        onClick={() => downloadZip(d)}
+        className={`${classes.download_btn} ${displayMode}`}
+      >
+        Download As Zip
       </button>
     </div>
   );
 };
 
 export default function Main({ modeToggle, modeToggleFunc }) {
-  const [current, setCurrent] = useState(1);
   const [currentPage, setCurrentPage] = useState(
     parseInt(localStorage.getItem("current_page")) || 1
   );
@@ -106,12 +77,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
                 src={`Buttons/${d}/index.html?c=${isDark}`}
               ></iframe>
               <CreatedBy d={d} />
-              <DownloadBtn
-                d={d}
-                modeToggle={modeToggle}
-                current={current}
-                setCurrent={setCurrent}
-              />
+              <DownloadBtn d={d} modeToggle={modeToggle} />
             </div>
           );
         })}
