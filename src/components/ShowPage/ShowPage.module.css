@@ -37,3 +37,9 @@
   border: 1px solid #ccc;
   border-radius: 12px;
 }
+
+
+.copyBtn{
+  margin-top: 10px;
+  border: 1px solid;
+}
