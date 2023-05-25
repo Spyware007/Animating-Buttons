@@ -13,3 +13,14 @@
   border: 1px solid #ccc;
   border-radius: 12px;
 }
+button {
+  margin-top: 9px;
+  padding: 1.3em 3em;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}

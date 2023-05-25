@@ -103,7 +103,7 @@ export const Data = [
   "Princeton21",
   "Princeton21_1",
   "Princeton21_2",
-  "PriyankaTamhankar01_1", 
+  "PriyankaTamhankar01_1",
   "PriyankaTamhankar01_2",
   "PriyankaTamhankar01_3",
   "rcode321",
@@ -172,7 +172,7 @@ export const Data = [
   "dassoumen98_1",
   "lakhan06",
   "piyushkhurana2019",
-   "Chinmayjain08",
+  "Chinmayjain08",
   "ayush9492",
   "ayush9492_1",
   "Yashika-Agrawal_1",
@@ -191,11 +191,11 @@ export const Data = [
   "adjascently",
   "SyedImtiyazAli",
   "Naishadha-satya",
-  "AdityaLahane-2003_1"
+  "AdityaLahane-2003_1",
   "mohitparmar1",
   "SyedImtiyaz-1",
   "Explorer003",
   "Pritam991",
-  "lmalkam"
+  "lmalkam",
 ];
 

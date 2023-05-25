@@ -38,7 +38,6 @@ function App() {
       .then((text) => setJs(text));
   }, [id]);
 
-
   return (
     <div className={classes.editor_container}>
       <div className={classes.iframe_container}>
