@@ -65,6 +65,9 @@ export const Data = [
   "KhushiKhandelwal610",
   "Killer2OP_1",
   "Killer2OP_2",
+  "shraddha761",
+  "shraddha761_1",
+  "shraddha761_2",
   "kishanlalchoudhary",
   "KishorBhagat",
   "KratikJain10",
@@ -165,10 +168,7 @@ export const Data = [
   "YashkShrivas4491",
   "Aayush895",
   "dassoumen98_1",
-
-
   "Durgesh4993",
-
   "ManishaSwain8",
   "dassoumen98_1",
   "Chinmayjain08",
@@ -176,8 +176,6 @@ export const Data = [
   "dassoumen98_1",
   "piyushkhurana2019",
   "lakhan06",
-  "shraddha761",
-  "shraddha761_1",
   "SyedImtiyazAli",
   "mohitparmar1",
 ];
