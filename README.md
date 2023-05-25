@@ -7,7 +7,6 @@
       <img src="https://forthebadge.com/images/badges/uses-brains.svg" />
       <img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
       <br>
-<<<<<<< HEAD
       <img src="https://img.shields.io/github/repo-size/Spyware007/Animating-Buttons?style=for-the-badge" />
       <img src="https://img.shields.io/github/issues/Spyware007/Animating-Buttons?style=for-the-badge" />
       <img src="https://img.shields.io/github/issues-raw/Spyware007/Animating-Buttons?style=for-the-badge" />
@@ -18,18 +17,6 @@
       <img src="https://img.shields.io/github/contributors/Spyware007/Animating-Buttons?style=for-the-badge" />
       <img src="https://img.shields.io/github/issues-pr-closed/Spyware007/Animating-Buttons?style=for-the-badge" />
       <img src="https://img.shields.io/github/last-commit/Spyware007/Animating-Buttons?style=for-the-badge" />
-=======
-      <img src="https://img.shields.io/github/repo-size/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <img src="https://img.shields.io/github/issues/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <img src="https://img.shields.io/github/issues-raw/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <img src="https://img.shields.io/github/forks/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <img src="https://img.shields.io/github/issues-pr-closed/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <br>
-      <img src="https://img.shields.io/github/stars/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <img src="https://img.shields.io/github/contributors/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <img src="https://img.shields.io/github/issues-pr-closed/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <img src="https://img.shields.io/github/last-commit/DevFeed404/DevFeed-1.0?style=for-the-badge" />
->>>>>>> 9e422512d07b65ad605e16b25bd4bb893f02fb0a
  </div>
 <h1 align="center">✨✨HacktoberFest 2022✨✨</h1>
 <img width="1440" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png">
