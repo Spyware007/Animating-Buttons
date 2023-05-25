@@ -30,10 +30,6 @@
   border-radius: 12px;
 }
 
-.dark_mode {
-  background-color: rgb(20, 20, 20);
-  color: white;
-}
 .pagination {
   margin-top: 20px;
   display: flex;

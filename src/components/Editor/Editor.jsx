@@ -13,6 +13,7 @@ export default function Editor(props) {
       />
       <button
         type="button"
+        style={classes.copy_button}
         onClick={() => navigator.clipboard.writeText(value)}
       >
         Copy {displayName}
