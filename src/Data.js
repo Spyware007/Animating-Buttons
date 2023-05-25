@@ -148,9 +148,7 @@ export const Data = [
   "dassoumen98_1",
   "piyushkhurana2019",
   "lakhan06",
-<<<<<<< HEAD
-  "shraddha761_1"
-=======
   "shraddha761",
->>>>>>> 9e422512d07b65ad605e16b25bd4bb893f02fb0a
+  "shraddha761_1",
+   "shraddha761_3"
 ];
