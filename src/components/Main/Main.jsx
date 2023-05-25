@@ -8,7 +8,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
   // Function To Redirect User To The Github Of Creator
   const redirectToGitHub = (username) => {
     const sure = window.confirm(
-      `This Will Take You To Github of ${username} ?`
+      `This Will Take You To The Github of ${username} ?`
     );
     if (sure) {
       const url = `https://github.com/${username}`;
