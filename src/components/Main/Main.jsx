@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import classes from "./Main.module.css";
 import { Data } from "../../Data";
 import classes from "./Main.module.css";
 import downloadFiles from "../../Functions/DownloadFiles";
@@ -37,6 +38,7 @@ const FunctioalButtons = ({ d, modeToggle, current, setCurrent }) => {
           >
             Show Code
           </button>
+
         </Link>
         <button
           hidden={!(current === 2) && !(all === true)}
@@ -90,6 +92,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
     localStorage.setItem("current_page", pageNumber);
     window.scrollTo({ top: 500, behavior: "smooth" });
   };
+
   return (
     <>
       <h1 className={classes.text}>
@@ -117,7 +120,6 @@ export default function Main({ modeToggle, modeToggleFunc }) {
       </div>
       <div className={classes.pagination}>
         {Data.length > itemsPerPage && (
-          <ul className={classes.paginationList}>
             {Array(Math.ceil(Data.length / itemsPerPage))
               .fill()
               .map((_, index) => (
