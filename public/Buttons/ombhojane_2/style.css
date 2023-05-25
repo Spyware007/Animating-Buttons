@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4b400;
+  }
+  .outer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  a {
+    all: unset;
+    text-decoration: none;
+    padding: 15px 20px 0px 20px;
+    width: auto;
+    height: 40px;
+    font-size: 23px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.5s;
+    z-index: 1;
+  }
+  
+  a:hover {
+    /* color: #fff; */
+    font-size: 27px;
+    background-color: none;
+    color: white;
+    text-align: center;
+  }
+  
+
+  
+  .tweet:hover{
+    color: #fff;
+  }
+  
