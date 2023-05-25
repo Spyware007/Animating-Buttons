@@ -18,6 +18,8 @@ export const Data = [
   "Abhishek-dab",
   "AbhishekKhairnar",
   "abhishekkhairnar02",
+  "ShauryaK-28",
+  "ShauryaK-28_2",
   "abhishekkhairnar03",
   "AFPedreros",
   "akpaswan67",
