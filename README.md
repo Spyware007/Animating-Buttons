@@ -2,22 +2,12 @@
 <div align="center">
 <img width="300"  alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
 </div>
-<div align="center">
-      <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
-      <img src="https://forthebadge.com/images/badges/uses-brains.svg" />
-      <img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
-      <br>
-      <img src="https://img.shields.io/github/repo-size/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <img src="https://img.shields.io/github/issues/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <img src="https://img.shields.io/github/issues-raw/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <img src="https://img.shields.io/github/forks/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <img src="https://img.shields.io/github/issues-pr-closed/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <br>
-      <img src="https://img.shields.io/github/stars/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <img src="https://img.shields.io/github/contributors/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <img src="https://img.shields.io/github/issues-pr-closed/DevFeed404/DevFeed-1.0?style=for-the-badge" />
-      <img src="https://img.shields.io/github/last-commit/DevFeed404/DevFeed-1.0?style=for-the-badge" />
- </div>
+# ✅ Animation Buttons 
+
+
+Welcome to the Animating Buttons repository! 🎉
+
+This project aims to provide a collection of animated buttons that you can use to enhance your web development projects. Whether you're a beginner or an experienced developer, these buttons will add a touch of inter
 <h1 align="center">✨✨HacktoberFest 2022✨✨</h1>
 <img width="1440" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png">
 
@@ -26,6 +16,8 @@
 * You can update or refine an existing animated button  or even add your own new buttons in this repo. 🚀
 * Make sure you follow the below steps before making your contributions❗❗❗
 
+  <a href = "#top"> Back to top</a>
+  
 ### Firstly
 ### 📢 Register [here](https://hacktoberfest.com/) for Hacktoberfest and make 4️⃣ PRs this month to grab free SWAGS 🔥
 
@@ -45,18 +37,21 @@ cd Animating-Buttons
 npm i
 npm start
 ```
-
+  
 - Create a new Branch
 
 ```
 git checkout -b my-new-branch
 ```
-## Go to [public/Buttons](https://github.com/Spyware007/Animating-Buttons/blob/main/src/components/Main/Main.jsx) folder and add a new folder with your GitHub username including your button code (index.html + style.css files)
 
-## Then go to [src/Data.js](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)
+🚀🚀  **Go to [public/Buttons](https://github.com/Spyware007/Animating-Buttons/blob/main/src/components/Main/Main.jsx) folder and add a new folder with your GitHub username including your button code (index.html + style.css files)**
 
-- Add your folder name (github_username, github_username_1,etc) code in [src/Data.js](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js) file
+- Then go to [src/Data.js](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)
 
+- Add your folder name (github_username, github_username_1,etc) code in [src/Data.js](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js) file.
+
+  <a href = "#top"> Back to top</a>
+  
 # Note: 
 - Make sure to align your button centered horizontally as well as vertically.
 - Don't forget to replace 'your_github_username' with GitHub Username.
@@ -87,7 +82,7 @@ git push origin my-new-branch
 * Also, make sure you comment your code wherever necessary. 
 
 ----
-
+<a href = "#top"> Back to top</a>
 # Our Beloved Contributors 😍
 
 ---
@@ -98,9 +93,17 @@ git push origin my-new-branch
 
 ---
 
+A big thank you to all our contributors who have made this project better with their valuable contributions! We appreciate your efforts and dedication.
+
+Don't forget to ⭐ this repository to show your support!
+
+---
+
 <h3 align="center"> DON'T FORGET TO ⭐ THIS REPOSITORY !!
 </h3> 
 
 
 ###  You can follow me [here](https://github.com/Spyware007) ❤
+  <a href = "#top"> Back to top</a>
+</div>
   
