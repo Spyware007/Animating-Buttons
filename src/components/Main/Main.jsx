@@ -1,23 +1,20 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
-
 import classes from "./Main.module.css";
+import { Link } from "react-router-dom";
 import { Data } from "../../Data";
-import downloadFiles from "../../Functions/DownloadFiles";
 import downloadZip from "../../Functions/DownloadZip";
 
-// Function To Redirect User To The Github Of Creator
-const redirectToGitHub = (username) => {
-  const sure = window.confirm(
-    `This Will Take You To Github of ${username} ?`
-  );
-  if (sure) {
-    const url = `https://github.com/${username}`;
-    window.open(url, "_blank");
-  }
-};
-
+export default function Main({ modeToggle, modeToggleFunc }) {
+  // Function To Redirect User To The Github Of Creator
+  const redirectToGitHub = (username) => {
+    const sure = window.confirm(
+      `This Will Take You To Github of ${username} ?`
+    );
+    if (sure) {
+      const url = `https://github.com/${username}`;
+      window.open(url, "_blank");
+    }
+  };
 
   // Component
   const CreatedBy = ({ d }) => {
@@ -28,17 +25,12 @@ const redirectToGitHub = (username) => {
     );
   };
 
-// Component
-const DownloadBtn = ({ d, modeToggle, current, setCurrent }) => {
-  const [all, setAll] = useState(false)
-
-  return (
-    <div className={classes.containerForArrow}>
-      <div className={`${classes.buttonContainer}`}>
-        <Link className={`${classes.copyBtn}  `} to={`/show/${d}`}>
+  // Component
+  const DownloadBtn = ({ d, modeToggle }) => {
+    return (
+      <div className={classes.download}>
+        <Link to={`/show/${d}`}>
           <button
-            onClick={() => { setCurrent(1) }}
-            hidden={!(current === 1) && !(all === true)}
             className={`${classes.showcode_btn} ${
               modeToggle ? classes.dark_mode : classes.light_mode
             }`}
@@ -47,42 +39,17 @@ const DownloadBtn = ({ d, modeToggle, current, setCurrent }) => {
           </button>
         </Link>
         <button
-          hidden={!(current === 2) && !(all === true)}
-          onClick={() => { setCurrent(2); downloadFiles(d); setAll(false) }}
-          className={`${classes.download_btn} ${modeToggle ? classes.dark_mode : classes.light_mode
-            }`}
-        >
-          Download As Files
-        </button>
-        <button
-          hidden={!(current === 3) && !(all === true)}
-          onClick={() => { setCurrent(3); downloadZip(d); setAll(false) }}
-          className={`${classes.download_btn} ${modeToggle ? classes.dark_mode : classes.light_mode
-            }`}
+          onClick={() => downloadZip(d)}
+          className={`${classes.download_btn} ${
+            modeToggle ? classes.dark_mode : classes.light_mode
+          }`}
         >
         <i id="op-menu" class="fas fa-download"></i>
         </button>
       </div>
+    );
+  };
 
-      <button
-        onClick={() => setAll(!all)}
-        className={`${classes.arrow}`}>
-        &#9662;
-      </button>
-    </div>
-  );
-};
-
-
-
-
-
-export default function Main({ modeToggle, modeToggleFunc }) {
-  
-
-
-
-  const [current, setCurrent] = useState(1)
   const [currentPage, setCurrentPage] = useState(parseInt(localStorage.getItem("current_page")) || 1);
   const itemsPerPage = 24; // Number of items to display per page
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -113,7 +80,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
               ></iframe>
               <div className="container_s_bts">
                 <CreatedBy d={d} />
-                <DownloadBtn d={d} modeToggle={modeToggle} current={current} setCurrent={setCurrent} />
+                <DownloadBtn d={d} modeToggle={modeToggle} />
               </div>
             </div>
           );
@@ -127,8 +94,9 @@ export default function Main({ modeToggle, modeToggleFunc }) {
               .map((_, index) => (
                 <li
                   key={index}
-                  className={`${classes.paginationItem} ${currentPage === index + 1 ? classes.active : ""
-                    }`}
+                  className={`${classes.paginationItem} ${
+                    currentPage === index + 1 ? classes.active : ""
+                  }`}
                   onClick={() => handlePageChange(index + 1)}
                 >
                   {index + 1}
