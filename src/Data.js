@@ -190,6 +190,7 @@ export const Data = [
   "aniketburman014",
   "adjascently",
   "SyedImtiyazAli",
+  "Naishadha-satya",
   "AdityaLahane-2003_1"
   "mohitparmar1",
   "SyedImtiyaz-1",
@@ -197,3 +198,4 @@ export const Data = [
   "Pritam991",
   "lmalkam"
 ];
+
