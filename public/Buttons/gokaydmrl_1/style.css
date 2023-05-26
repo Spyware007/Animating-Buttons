@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+button {
+  text-align: center;
+  /* color: #fee; */
+padding: 1rem;
+  font-size: 2.25rem;
+  font-weight: bolder;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width:  12rem;
+  height: 12rem;
+  background: conic-gradient(from 90deg, violet, indigo, blue, green, yellow, orange, red, violet);
+  /* margin: 10px; */
+  text-shadow: none;
+  transition: 3s;
+}
+button:hover {
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px rgb(237, 247, 244),
+    0 0 2px rgb(221, 225, 223), 0 0 2px rgb(129, 131, 130), 0 0 102px rgb(249, 255, 253),
+    0 0 15px rgb(249, 255, 253);
+  animation-name: spin;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  color: #fee;
+}
+button:focus {
+  color: black;
+  background: conic-gradient(from 90deg, violet, indigo, blue, green, yellow, orange, red, violet);
+}
+@keyframes spin {
+  0% {
+    background: conic-gradient(
+      from 180deg,
+      violet,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange,
+      red,
+      violet
+    );
+  }
+  25% {
+    background: conic-gradient(
+      from 2700deg,
+      violet,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange,
+      red,
+      violet
+    );
+  }
+  50% {
+    background: conic-gradient(
+      from 360deg,
+      violet,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange,
+      red,
+      violet
+    );
+  }
+  100% {
+    background: conic-gradient(
+      from 90deg,
+      violet,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange,
+      red,
+      violet
+    );
+  }
+}
