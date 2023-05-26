@@ -5,9 +5,12 @@
   }
   /* css for the div */
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   width: 1070px;
+  height: 240px;
+  margin: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
     
 
 }
