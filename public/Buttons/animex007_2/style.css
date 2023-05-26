@@ -1,4 +1,18 @@
+* {
+  margin: 0; 
+  padding: 0;
+}
+/* css for the div */
+.container{
+width: 1040px;
+height: 240px;
+margin: 250px;
+display: flex;
+justify-content: center;
+align-items: center;
+  
 
+}
 
 .rainbow-hover {
     font-size: 16px;
