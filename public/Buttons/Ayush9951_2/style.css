@@ -1,0 +1,25 @@
+body {
+    background: white;
+}
+
+button {
+    padding: 14px;
+    width: 150px;
+    display: block;
+    margin: 100px auto;
+    border: none;
+    background: #c46df7;
+    color: white;
+    letter-spacing: 2px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover{
+    transition: all 0.5s ease;
+    background: white;
+    border: 1px solid #c46df7;
+    color: #c46df7;
+    box-shadow: 1px 1px 10px #c46df7;
+}
