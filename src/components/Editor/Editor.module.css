@@ -7,13 +7,21 @@
 }
 
 .text_field textarea {
-  margin: 1px;
+  display: inline-flex;
+  gap: 10px;
+  font-family: monospace;
+  line-height: 21px;
+  background: #282a3a;
+  padding: 10px 10px;
+  color: #ccc;
   width: 100%;
   height: 50vh;
-  border: 1px solid #ccc;
   border-radius: 12px;
+  border-color: #282a3a;
+  resize: none;
 }
-button {
+
+.text_field button {
   margin-top: 9px;
   padding: 1.3em 3em;
   text-transform: uppercase;
