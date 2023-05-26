@@ -62,6 +62,8 @@
   text-align: center;
   color: #000;
   cursor: help;
+  cursor: pointer;
+  /* width: 100%; */
 }
 
 .createdBy:before {
