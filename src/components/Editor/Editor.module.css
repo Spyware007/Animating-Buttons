@@ -30,5 +30,17 @@
   border: none;
   border-radius: 45px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease 0s;
   cursor: pointer;
+}
+
+.text_field button:hover {
+  background-color: #282a3a;
+  box-shadow: 0px 15px 20px rgba(97, 97, 97, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.text_field button:active {
+  transform: translateY(-1px);
 }

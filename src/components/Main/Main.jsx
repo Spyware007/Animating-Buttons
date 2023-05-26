@@ -25,7 +25,7 @@ const DownloadBtn = ({ d, modeToggle }) => {
   const displayMode = modeToggle ? classes.dark_mode : classes.light_mode;
   return (
     <div className={`${classes.buttonContainer}`}>
-      <Link className={`${classes.copyBtn}  `} to={`/show/${d}`}>
+      <Link className={`${classes.copy_button}`} to={`/show/${d}`}>
         <button className={`${classes.download_btn} ${displayMode}`}>
           Show Code
         </button>
@@ -62,6 +62,24 @@ export default function Main({ modeToggle, modeToggleFunc }) {
     localStorage.setItem("current_page", pageNumber);
     window.scrollTo({ top: 500, behavior: "smooth" });
   };
+
+  const isActive = (i) => (currentPage === i + 1 ? classes.active : "");
+  const pageNavigationButtions = (
+    <ul className={classes.paginationList}>
+      {Array(Math.ceil(Data.length / itemsPerPage))
+        .fill()
+        .map((_, index) => (
+          <li
+            key={index}
+            className={`${classes.paginationItem} ${isActive(index)}`}
+            onClick={() => handlePageChange(index + 1)}
+          >
+            {index + 1}
+          </li>
+        ))}
+    </ul>
+  );
+
   return (
     <>
       <h1 className={classes.text}>
@@ -72,7 +90,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
           return (
             <div key={i}>
               <iframe
-                className={classes.container}
+                className={classes.iframe_container}
                 title={d}
                 src={`Buttons/${d}/index.html?c=${isDark}`}
               ></iframe>
@@ -83,23 +101,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
         })}
       </div>
       <div className={classes.pagination}>
-        {Data.length > itemsPerPage && (
-          <ul className={classes.paginationList}>
-            {Array(Math.ceil(Data.length / itemsPerPage))
-              .fill()
-              .map((_, index) => (
-                <li
-                  key={index}
-                  className={`${classes.paginationItem} ${
-                    currentPage === index + 1 ? classes.active : ""
-                  }`}
-                  onClick={() => handlePageChange(index + 1)}
-                >
-                  {index + 1}
-                </li>
-              ))}
-          </ul>
-        )}
+        {Data.length > itemsPerPage && pageNavigationButtions}
       </div>
     </>
   );
