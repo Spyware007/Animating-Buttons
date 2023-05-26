@@ -9,7 +9,7 @@ const App = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 100);
+    }, 1000);
   }, []);
 
   return <BrowserRouter>{loading ? <Loader /> : <MainPage />}</BrowserRouter>;
