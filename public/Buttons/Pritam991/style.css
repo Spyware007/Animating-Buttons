@@ -1,0 +1,90 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+  }
+  
+  .animated-button {
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: #f44336;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation: gradient 3s ease infinite, neon 1s ease-in-out infinite;
+  }
+  
+  .animated-button {
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: #f44336;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation: gradient 3s ease infinite, neon 1s ease-in-out infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes neon {
+    0% {
+      box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #f44336, 0 0 70px #f44336, 0 0 80px #f44336, 0 0 100px #f44336;
+    }
+    50% {
+      box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffcc00, 0 0 70px #ffcc00, 0 0 80px #ffcc00, 0 0 100px #ffcc00;
+    }
+    100% {
+      box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #f44336, 0 0 70px #f44336, 0 0 80px #f44336, 0 0 100px #f44336;
+    }
+  }
+  
+  .animated-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: left 0.5s;
+  }
+  
+  .animated-button:hover::after {
+    left: 100%;
+  }
+  
+  .animated-button::before {
+    content: "";
+    position: absolute;
+    top: -120%;
+    left: -120%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    transition: top 0.3s, left 0.3s;
+  }
+  
+  .animated-button:hover::before {
+    top: 20%;
+    left: 20%;
+  }
+  
+  

@@ -1,4 +1,27 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: orange; 
+}
+
 .navbar {
+  position:sticky;
+  top:0;
+  background-color: rgba(256, 256, 256, 1);
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
