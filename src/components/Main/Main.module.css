@@ -1,15 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
 .text {
   text-align: center;
   margin-bottom: 50px;
 }
+
 .btns_container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 100px;
   margin-bottom: 100px;
 }
+
+.btn_container {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   all: unset;
   width: 340px;
@@ -18,52 +29,12 @@
   box-shadow: 0px 4px 20px 0px #00000040;
   border-radius: 12px;
 }
-.download {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.download > div {
-  margin: auto;
-}
-.download > div > a {
-  text-decoration: none;
-}
-
-button {
-  padding: 1.3em 3em;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
-  width: 340px;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  font-family: "Montserrat", sans-serif;
-  border-radius: 12px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
-  outline: 0.5px solid rgb(175, 162, 162);
-}
-
-button:hover {
-  box-shadow: 0px 15px 20px rgba(41, 46, 53, 0.425);
-  font-weight: 700;
-  letter-spacing: 0.8rem;
-}
-
-button:active {
-  transform: translateY(-1px);
-}
 
 .dark_mode {
   background-color: rgb(20, 20, 20);
   color: white;
 }
+
 .pagination {
   margin-top: 20px;
   display: flex;
@@ -76,15 +47,111 @@ button:active {
   gap: 5px;
 }
 
-.paginationItem {
-  padding: 15px 20px;
-  background-color: #eaeaea;
-  border: 1px solid #ccc;
+/* styles for created by tag */
+.createdBy {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  background-color: #4285f4;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+  text-align: center;
+  color: #000;
+  cursor: help;
+}
+
+.createdBy:before {
+  content: "\f007";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.createdBy:hover {
+  background-color: #3a79e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* styles for the download button (actual button not the outer div) */
+.download_btn {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #f57c00;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.arrow {
+  width: 40px;
+  font-size: 25px;
+  margin-bottom: 10px;
+  margin-left: 3px;
+  align-self: start;
+  background-color: #f57c00;
+  border-radius: 0 10px 10px 0;
+  color: #fff;
+}
+
+.arrow:hover {
+  background-color: #e65100;
+}
+
+.containerForArrow {
+  display: flex;
+}
+
+.download_btn:hover {
+  background-color: #e65100;
   cursor: pointer;
+  letter-spacing: 0.3rem;
+}
+
+.download_btn:focus {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Styles For Pagination */
+.paginationItem {
+  color: white;
+  padding: 10px 16px;
+  background-color: #494949;
+  border: 1px solid #353535;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .paginationItem:hover,
 .paginationItem.active {
-  background-color: #ccc;
-  color: #fff;
+  background-color: #151515;
+  color: #ffffff;
+}
+
+.paginationItem:hover {
+  transform: scale(1.1);
 }
