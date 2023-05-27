@@ -1,0 +1,102 @@
+
+body {
+    background: #2e394d;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  *:before, *:after {
+    content: "";
+    position: absolute;
+  }
+  
+  input {
+    height: 40px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 40px;
+  }
+  
+  .toggle-wrapper {
+    flex: 1 1 calc(100% / 3);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background: #c5de87;
+  
+  }
+  @media (max-width: 960px) {
+    .toggle-wrapper {
+      flex: 1 1 calc(100% / 2);
+    }
+  }
+  @media (max-width: 700px) {
+    .toggle-wrapper {
+      flex: 1 1 100%;
+    }
+  }
+  
+  .name {
+    width: 80%;
+    position: absolute;
+    font: 500 14px "Rubik", sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    bottom: 15px;
+    right: 15px;
+    text-align: right;
+  }
+  
+  .toggle {
+    position: relative;
+    display: inline-block;
+  }
+  
+  label.toggle-item {
+    width: 7em;
+    background: #2e394d;
+    height: 3em;
+    display: inline-block;
+    border-radius: 50px;
+    margin: 40px;
+    position: relative;
+    transition: all 0.3s ease;
+    transform-origin: 20% center;
+    cursor: pointer;
+  }
+  label.toggle-item:before {
+    display: block;
+    transition: all 0.2s ease;
+    width: 2.3em;
+    height: 2.3em;
+    top: 0.25em;
+    left: 0.25em;
+    border-radius: 2em;
+    border: 2px solid #88cf8f;
+    transition: 0.3s ease;
+  }
+  
+  
+  #gravity:checked + label {
+    transform: rotate(90deg);
+  }
+  #gravity:checked + label:before {
+    transform: translateX(67px);
+    transition-delay: 0.2s;
+    transition: 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.2s;
+  }
+  
+  
+  
+  
