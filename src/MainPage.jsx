@@ -1,7 +1,9 @@
-import React from "react";
-import { Main, Navbar, Socials, Footer, ShowPage } from "./components";
+import React, { Suspense, lazy } from "react";
+import { Main, Navbar, Socials, Footer } from "./components";
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
+import SuspenseLoader from "./components/SuspenseLoader/SuspenseLoader";
+const ShowPage = lazy(() => import("./components/ShowPage/ShowPage"));
 
 export default function MainPage() {
   const [toggleMode, setToggleMode] = useState(false);
@@ -19,7 +21,14 @@ export default function MainPage() {
               </div>
             }
           />
-          <Route path={"/show/:id"} element={<ShowPage />} />
+          <Route
+            path={"/show/:id"}
+            element={
+              <Suspense fallback={<SuspenseLoader />}>
+                <ShowPage />
+              </Suspense>
+            }
+          />
         </Routes>
         <Footer modeToggle={toggleMode} />
       </div>

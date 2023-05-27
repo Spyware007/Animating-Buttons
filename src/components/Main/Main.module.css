@@ -1,4 +1,6 @@
-
+* {
+  box-sizing: border-box;
+}
 
 .text {
   text-align: center;
@@ -8,7 +10,7 @@
 .btns_container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 100px;
   margin-bottom: 100px;
@@ -28,56 +30,11 @@
   border-radius: 12px;
 }
 
-.download {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 10px;
-
-}
-
-.download > div {
-  margin: auto;
-}
-
-.download > div > a {
-  text-decoration: none;
-}
-
-button {
-  padding: 1.3em 3em;
-  margin: 3px;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
-  width: 100%;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  font-family: "Montserrat", sans-serif;
-  border-radius: 12px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  outline: none;
-}
-
-button:hover {
-  box-shadow: 0px 15px 20px rgba(41, 46, 53, 0.425);
-  font-weight: 700;
-  letter-spacing: 0.8px;
-}
-
-button:active {
-  transform: translateY(-1px);
-}
-
 .dark_mode {
   background-color: rgb(20, 20, 20);
   color: white;
 }
+
 .pagination {
   margin-top: 20px;
   display: flex;
@@ -120,13 +77,18 @@ button:active {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.user{
+.user {
   font-family: "Helvetica", Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
   font-style: italic;
 }
 
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* styles for the download button (actual button not the outer div) */
 .download_btn {
@@ -137,14 +99,32 @@ button:active {
   background-color: #f57c00;
   padding: 12px 20px;
   border: none;
-  border-radius: 30px;
+  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
-  letter-spacing: 2.5px;
+  margin-bottom: 10px;
 }
 
-.download_btn:hover,
-.download_btn:focus {
+.arrow {
+  width: 40px;
+  font-size: 25px;
+  margin-bottom: 10px;
+  margin-left: 3px;
+  align-self: start;
+  background-color: #f57c00;
+  border-radius: 0 10px 10px 0;
+  color: #fff;
+}
+
+.arrow:hover {
+  background-color: #e65100;
+}
+
+.containerForArrow {
+  display: flex;
+}
+
+.download_btn:hover {
   background-color: #e65100;
   cursor: pointer;
   letter-spacing: 0.3rem;
@@ -154,7 +134,6 @@ button:active {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   outline: none;
 }
-
 
 /* Styles For Pagination */
 .paginationItem {
@@ -176,4 +155,3 @@ button:active {
 .paginationItem:hover {
   transform: scale(1.1);
 }
-
