@@ -165,5 +165,6 @@ export const Data = [
   "piyushkhurana2019",
   "lakhan06",
   "SyedImtiyazAli",
-  "SyedImtiyaz-1"
+  "SyedImtiyaz-1",
+  "Zexxy"
 ];
