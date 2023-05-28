@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box; 
     /* If you set box-sizing: border-box; on an element, padding and border are included in the width and height: Both divs are the same size now! */
-    font-family: 'poppins', sans-serif;
+    font-family: sans-serif;
 }
 
 body{
