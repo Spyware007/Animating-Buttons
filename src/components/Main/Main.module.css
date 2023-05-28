@@ -95,16 +95,16 @@ button:active {
   font-family: "Helvetica", Arial, sans-serif;
   font-size: 14px;
   color: #fff;
-  background-color: #4285f4;
+  background:linear-gradient(45deg,#F57C00 50%,#0079F5 50%);
   padding: 8px 12px;
   border-radius: 20px;
   margin-top: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  opacity: 0.7;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-align: center;
-  color: #000;
-  cursor: help;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 2.5px;
 }
 
 .createdBy:before {
@@ -114,10 +114,12 @@ button:active {
   margin-right: 10px;
 }
 
-.createdBy:hover {
-  background-color: #3a79e8;
-  transform: translateY(-2px);
+.createdBy:hover,
+.createdBy:focus {
+  background:linear-gradient(45deg, #e65100 50%,#0061F5 50%);
+  letter-spacing: 0.2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  outline: none;
 }
 
 .user{

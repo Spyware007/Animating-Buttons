@@ -1,0 +1,62 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+    
+/*LOGOUT*/
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+
+.navigation {
+    width: 100%;
+    height: auto;
+    background-color: #E4E4E4;
+}
+.nav-img {
+    width: 40px;
+    border-radius: 50px;
+    float: left;
+    padding-left: 10px;
+}
+.logout {
+    font-size: .8em;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    right: -18px;
+    bottom: -4px;
+    overflow: hidden;
+    letter-spacing: 3px;
+    opacity: 0;
+    transition: opacity .45s;
+    -webkit-transition: opacity .35s;
+}
+
+.nav-button {
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 12px;
+    margin: 15px;
+    color: white;
+    width: 40px;
+    background-color: black;
+    transition: width .35s;
+    -webkit-transition: width .35s;
+    overflow: hidden
+}
+
+.nav-button:hover {
+    width: 175px;
+    color: white;
+}
+.nav-button:hover .logout {
+    opacity: .9;
+}
+
+.nav-button {
+    text-decoration: none;
+}

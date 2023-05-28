@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Pacifico', cursive;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+button{
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+    color: #A1741F;
+    background-color: #FED881;
+    border: 2px solid #FED881;
+}
+button:hover{
+    background-color: #ffae42;
+}
+button.clicked{
+    background-color: #cff5b3;
+    color: #6aaa3b;
+    border: 2px solid #cff5b3;
+}
+button:hover{
+    transform: rotate(10deg);
+    transition: all 0.15s;
+}
+button.clicked i{
+    position: relative;
+    animation: planefly 1.5s linear;
+}
+
+@keyframes planefly {
+    0%{
+        transform: rotate(10deg);
+        top: 13px;
+        right: 25px;
+    }
+    5%{
+        transform: rotate(10deg);
+        top: 13px;
+    }
+    20%{
+        transform: rotate(-20deg);
+        top: 13px;
+        right: -130px;
+    }
+    50%{
+        transform: rotate(10deg);
+        top: -40px;
+        right: -280px;
+        opacity: 0.3;
+    }
+    100%{
+        transform: rotate(60deg);
+        top: -200px;
+        right: -1000px;
+        opacity: 0;
+    }
+}

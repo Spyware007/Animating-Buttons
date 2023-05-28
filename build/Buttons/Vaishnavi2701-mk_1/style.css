@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@100;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f75128;
+}
+
+a.viewmore {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  overflow: hidden;
+  height: 50px;
+  padding: 5px;
+  margin-top: 5%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+a.viewmore span.tag {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  left: -100%;
+  top: -6px;
+  transition: all 1s cubic-bezier(0.835, -0.0005, 0.06, 1);
+  padding-left: 80px;
+}
+
+a.viewmore span.tag::before {
+  height: 2px;
+  width: 70px;
+  content: "";
+  left: 0px;
+  top: 6px;
+  position: absolute;
+  display: block;
+  background: white;
+}
+
+a.viewmore:hover span.tag {
+  left: 0;
+}
+
+a.viewmore:hover .arrow {
+  width: 5px;
+}
+
+.arrow {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2px;
+  width: 80px;
+  background-color: white;
+  position: relative;
+  display: inline-block;
+  transition: 500ms all;
+  transition: all 1s cubic-bezier(0.835, -0.005, 0.06, 1);
+  float: right;
+}
+
+.arrow span {
+  color: white;
+}
+
+.arrow::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  border: 5px solid transparent;
+  margin-top: -5px;
+}
+
+.arrow--right {
+  margin-left: 10px;
+}
+
+.arrow--right::after {
+  border-left: 7px solid white;
+  right: -7px;
+}
