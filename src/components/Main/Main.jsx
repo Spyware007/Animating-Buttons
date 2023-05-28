@@ -54,7 +54,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
   const itemsPerPage = 24; // Number of items to display per page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
+  // const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
 
   const isDark = modeToggle ? "dark_mode" : "light_mode";
 
@@ -63,13 +63,33 @@ export default function Main({ modeToggle, modeToggleFunc }) {
     localStorage.setItem("current_page", pageNumber);
     window.scrollTo({ top: 500, behavior: "smooth" });
   };
+
+  const [query, setQuery] = useState("");
+
+  const filteredItems = Data.filter((d) =>
+    d.toLowerCase().includes(query.toLowerCase())
+  );
+  const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
+
   return (
     <>
       <h1 className={classes.text}>
         Explore from the list of {Data?.length} Buttons by our Contributors.
       </h1>
+
+      {/* search bar */}
+      <div className={classes.bar}>
+        <input type="text"
+          placeholder="Find Your Perfect Button..."
+          className={classes.search}
+          onChange={e => setQuery(e.target.value)}
+        />
+      </div>
+
+
       <div className={classes.btns_container}>
-        {currentItems.map((d, i) => {
+        {currentItems
+          .filter((d) => d.toLowerCase().includes(query.toLowerCase())).map((d, i) => {
           return (
             <div key={i}>
               <iframe
@@ -84,16 +104,15 @@ export default function Main({ modeToggle, modeToggleFunc }) {
         })}
       </div>
       <div className={classes.pagination}>
-        {Data.length > itemsPerPage && (
+        {filteredItems.length > itemsPerPage && (
           <ul className={classes.paginationList}>
-            {Array(Math.ceil(Data.length / itemsPerPage))
+            {Array(Math.ceil(filteredItems.length / itemsPerPage))
               .fill()
               .map((_, index) => (
                 <li
                   key={index}
-                  className={`${classes.paginationItem} ${
-                    currentPage === index + 1 ? classes.active : ""
-                  }`}
+                  className={`${classes.paginationItem} ${currentPage === index + 1 ? classes.active : ""
+                    }`}
                   onClick={() => handlePageChange(index + 1)}
                 >
                   {index + 1}

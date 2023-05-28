@@ -139,3 +139,28 @@
 .paginationItem:hover {
   transform: scale(1.1);
 }
+
+/* search bar */
+
+.bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+.bar .search{
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  height: 50px;
+  width: 25%;
+  border-radius: 200px;
+  text-align: center;
+}
+.bar .search:hover{
+  border: 1px solid #000;
+}
+.bar .search:focus{
+  outline: none;
+}
