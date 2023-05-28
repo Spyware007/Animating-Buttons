@@ -15,7 +15,6 @@ const redirectToGitHub = (username) => {
 const CreatedBy = ({ d }) => {
   return (
     <p onClick={() => redirectToGitHub(d)} className={classes.createdBy}>
-      Created by
       <span className={classes.user}> {d}</span>
     </p>
   );
@@ -26,7 +25,7 @@ const DownloadBtn = ({ d, modeToggle }) => {
   return (
     <div className={`${classes.buttonContainer}`}>
       <Link className={`${classes.copyBtn}  `} to={`/show/${d}`}>
-        <button className={`${classes.download_btn} ${displayMode}`}>
+        <button className={`${classes.showcode_btn} ${displayMode}`}>
           Show Code
         </button>
       </Link>
@@ -34,13 +33,15 @@ const DownloadBtn = ({ d, modeToggle }) => {
         onClick={() => downloadFiles(d)}
         className={`${classes.download_btn} ${displayMode}`}
       >
-        Download Files
+        <i class="fas fa-download"> </i>
+        Files
       </button>
       <button
         onClick={() => downloadZip(d)}
         className={`${classes.download_btn} ${displayMode}`}
       >
-        Download As Zip
+        <i class="fas fa-download"> </i>
+        Zip
       </button>
     </div>
   );
