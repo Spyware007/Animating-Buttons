@@ -1,0 +1,28 @@
+body {
+    background: white
+}
+
+button {
+    display: block;
+    padding: 10px;
+    height: 50px;
+    width: 150px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin: 100px auto;
+    opacity: 0.8;
+    background: transparent;
+    background: rgb(204, 13, 243);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+button:hover {
+    background: transparent;
+    border: 2px solid rgb(204, 13, 243);
+    color: rgb(204, 13, 243);
+    font-weight: 500;
+}
