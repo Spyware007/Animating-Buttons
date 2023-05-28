@@ -1,4 +1,6 @@
-
+* {
+  box-sizing: border-box;
+}
 
 .text {
   text-align: center;
@@ -8,19 +10,10 @@
 .btns_container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 100px;
   margin-bottom: 100px;
-}
-
-.btn_container {
-  display: flex;
-  flex-direction: column;
-}
-
-.container_s_bts {
-  display: flex;
 }
 
 .container {
@@ -32,35 +25,11 @@
   border-radius: 12px;
 }
 
-.download {
-  display: inline-flex;
-  align-items: center;
-  
-  margin-top: 10px;
-
-}
-
-button {
-  
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-
-button:hover {
-  box-shadow: 0px 15px 20px rgba(41, 46, 53, 0.425);
-  font-weight: 700;
-  letter-spacing: 0.8px;
-}
-
-button:active {
-  transform: translateY(-1px);
-}
-
 .dark_mode {
   background-color: rgb(20, 20, 20);
   color: white;
 }
+
 .pagination {
   margin-top: 20px;
   display: flex;
@@ -75,12 +44,11 @@ button:active {
 
 /* styles for created by tag */
 .createdBy {
-  display: inline-flex;
   font-family: "Helvetica", Arial, sans-serif;
   font-size: 14px;
   color: #fff;
   background-color: #4285f4;
-  padding: 12px 12px;
+  padding: 8px 12px;
   border-radius: 20px;
   margin-top: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -89,14 +57,13 @@ button:active {
   text-align: center;
   color: #000;
   cursor: help;
-  width: 150px
 }
 
 .createdBy:before {
   content: "\f007";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .createdBy:hover {
@@ -105,60 +72,51 @@ button:active {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.user{
+.user {
   font-family: "Helvetica", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   font-style: italic;
 }
 
-/* styles for the download button (actual button not the outer div) */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+/* styles for the showcode button (actual button not the outer div) */
+.download_btn,
 .showcode_btn {
   font-family: "Helvetica", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
   color: #fff;
   background-color: #f57c00;
   padding: 12px 20px;
   border: none;
-  border-radius: 30px;
+  border-radius: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
-  letter-spacing: normal;
+  margin-bottom: 10px;
 }
 
-.showcode_btn:hover,
-.showcode_btn:focus {
+.download_btn{
+  margin-left: 3px;
+}
+
+.download_btn:hover,
+.showcode_btn:hover {
   background-color: #e65100;
   cursor: pointer;
+  letter-spacing: 0.25rem;
 }
 
 .download_btn:focus,
 .showcode_btn:focus {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   outline: none;
-}
-
-.download_btn {
-  display: flex;
-  justify-content: center;
-  font-size: 14px;
-  color: #fff;
-  background-color: #f57c00;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-  width: 10%;
-  letter-spacing: normal;
-}
-
-.download_btn:hover,
-.download_btn:focus{
-  background-color: #e65100;
-  cursor: pointer;
-  letter-spacing: normal;
 }
 
 /* Styles For Pagination */
@@ -181,4 +139,3 @@ button:active {
 .paginationItem:hover {
   transform: scale(1.1);
 }
-
