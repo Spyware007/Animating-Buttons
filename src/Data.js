@@ -210,6 +210,8 @@ export const Data = [
   "Explorer003",
   "Pritam991",
   "lmalkam",
-  "priyam212001"
+  "priyam212001",
+  "Soumyajit2825",
+  "Soumyajit2825_1"
 ];
 
