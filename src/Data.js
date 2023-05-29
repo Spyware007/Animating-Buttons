@@ -133,6 +133,8 @@ export const Data = [
   "SaurabhBarde-007_2",
   "SaurabhBarde-007_3",
   "ShaikhHeeba07",
+  "shee-tal-b",
+  "shee-tal-b_1",
   "shell-raiser",
   "Shivam-Katare",
   "shreya2703_2",
