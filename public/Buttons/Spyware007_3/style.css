@@ -10,6 +10,12 @@ body {
   height: 100vh;
   background: #f4b400;
 }
+.github-logo{
+  height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border-radius: 8px;
+}
 .outer {
   width: 100vw;
   display: flex;
