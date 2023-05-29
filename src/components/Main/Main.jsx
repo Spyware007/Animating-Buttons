@@ -15,7 +15,6 @@ const redirectToGitHub = (username) => {
 const CreatedBy = ({ d }) => {
   return (
     <p onClick={() => redirectToGitHub(d)} className={classes.createdBy}>
-      Created by
       <span className={classes.user}> {d}</span>
     </p>
   );
@@ -25,8 +24,8 @@ const DownloadBtn = ({ d, modeToggle }) => {
   const displayMode = modeToggle ? classes.dark_mode : classes.light_mode;
   return (
     <div className={`${classes.buttonContainer}`}>
-      <Link className={`${classes.copy_button}`} to={`/show/${d}`}>
-        <button className={`${classes.download_btn} ${displayMode}`}>
+      <Link className={`${classes.copyBtn}  `} to={`/show/${d}`}>
+        <button className={`${classes.showcode_btn} ${displayMode}`}>
           Show Code
         </button>
       </Link>
@@ -34,13 +33,15 @@ const DownloadBtn = ({ d, modeToggle }) => {
         onClick={() => downloadFiles(d)}
         className={`${classes.download_btn} ${displayMode}`}
       >
-        Download Files
+        <i class="fas fa-download"> </i>
+        Files
       </button>
       <button
         onClick={() => downloadZip(d)}
         className={`${classes.download_btn} ${displayMode}`}
       >
-        Download As Zip
+        <i class="fas fa-download"> </i>
+        Zip
       </button>
     </div>
   );
@@ -53,7 +54,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
   const itemsPerPage = 24; // Number of items to display per page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
+  // const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
 
   const isDark = modeToggle ? "dark_mode" : "light_mode";
 
@@ -79,26 +80,45 @@ export default function Main({ modeToggle, modeToggleFunc }) {
         ))}
     </ul>
   );
+  const [query, setQuery] = useState("");
+
+  const filteredItems = Data.filter((d) =>
+    d.toLowerCase().includes(query.toLowerCase())
+  );
+  const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
     <>
       <h1 className={classes.text}>
         Explore from the list of {Data?.length} Buttons by our Contributors.
       </h1>
+
+      {/* search bar */}
+      <div className={classes.bar}>
+        <input
+          type="text"
+          placeholder="Find Your Perfect Button..."
+          className={classes.search}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+      </div>
+
       <div className={classes.btns_container}>
-        {currentItems.map((d, i) => {
-          return (
-            <div key={i}>
-              <iframe
-                className={classes.iframe_container}
-                title={d}
-                src={`Buttons/${d}/index.html?c=${isDark}`}
-              ></iframe>
-              <CreatedBy d={d} />
-              <DownloadBtn d={d} modeToggle={modeToggle} />
-            </div>
-          );
-        })}
+        {currentItems
+          .filter((d) => d.toLowerCase().includes(query.toLowerCase()))
+          .map((d, i) => {
+            return (
+              <div key={i}>
+                <iframe
+                  className={classes.iframe_container}
+                  title={d}
+                  src={`Buttons/${d}/index.html?c=${isDark}`}
+                ></iframe>
+                <CreatedBy d={d} />
+                <DownloadBtn d={d} modeToggle={modeToggle} />
+              </div>
+            );
+          })}
       </div>
       <div className={classes.pagination}>
         {Data.length > itemsPerPage && pageNavigationButtions}
