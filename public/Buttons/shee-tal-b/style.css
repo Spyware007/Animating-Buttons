@@ -1,0 +1,36 @@
+body{
+
+    background-color: darkviolet;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+.btn{
+    width: 50vh;
+    height: 20vh;
+    align-self: center;
+    background-color:maroon;
+    color:cyan;
+    font-size:35px;
+    font-family:monospace;
+    letter-spacing: 0.7vh;
+    transition-duration: 0.5s;
+    border:none;
+    box-shadow: 0 5px 15px maroon;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover
+{
+    background-color:rgb(17, 180, 180);
+    color: black;
+    transition-duration: 0.5s;
+    box-shadow: 0 5px 15px darkcyan;
+
+}

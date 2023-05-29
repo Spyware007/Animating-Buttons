@@ -1,0 +1,33 @@
+
+body{
+    background-color: black;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    background-color: transparent;
+   
+    border-color: white;
+    color: white;
+    font-size: 30px ;
+    letter-spacing: 1px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+
+.btn:hover{
+    /* these are the properties when button is hovering*/
+    border-color: transparent;
+    /*Change the colour inside the box according to your convinience*/
+    box-shadow: inset 100vh 0 0 0 yellow;
+    color: black;
+}
