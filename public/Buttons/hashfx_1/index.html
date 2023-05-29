@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hashfx</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div class="button">
+        <input id="button" type="checkbox"></input>
+        <label for="button">
+            <div class="button_inner q">
+                <i class="l ion-log-in"></i>
+                <span class="t">Downloads</span>
+                <span>
+                    <i class="tick ion-checkmark-round"></i>
+                </span>
+
+                <div id="container" class="b_l_quad"></div>
+
+                <script>
+                    var container = document.getElementById("container");
+                    for (var i = 0; i < 50; i++) {
+                        var div = document.createElement("div");
+                        div.className = "button_spots";
+                        container.appendChild(div);
+                    }
+                </script>
+            </div>
+        </label>
+    </div>
+</body>
+
+</html>
