@@ -5,6 +5,7 @@ export const Data = [
   "Jacinth-Mahanta",
   "Jacinth-Mahanta2",
   "Jacinth-Mahanta3",
+   "Shreyans2004",
   "abhi03ruchi",
   "Aryan5464",
   "Ayush9951",
@@ -78,6 +79,8 @@ export const Data = [
   "kishanlalchoudhary",
   "KishorBhagat",
   "KratikJain10",
+  "masked-wolf18",
+  "masked-wolf18_2", 
   "Killer2OP_2",
   "krishi1211",
   "mundadapurva",
@@ -199,6 +202,7 @@ export const Data = [
   "Naishadha-satya",
   "AdityaLahane-2003_1",
   "mohitparmar1",
+  'Nitin1Sahu_button',
   "Saurabh-kumar09",
   "khushbumaheshwarii",
   "marshadkhn",
@@ -206,6 +210,7 @@ export const Data = [
   "Explorer003",
   "Pritam991",
   "lmalkam",
+  "priyam212001"
   "Anik-Banerjee364",
 ];
 
