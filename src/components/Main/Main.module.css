@@ -9,7 +9,7 @@
 
 .btns_container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 100px;
@@ -163,4 +163,12 @@
 }
 .bar .search:focus{
   outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .btns_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
 }

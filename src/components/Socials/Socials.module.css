@@ -1,6 +1,42 @@
 .social_container {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
+
+.scontWrapper.light_mode{
+  background-color: #f9be7a;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scontWrapper.dark_mode{
+  background-color: #141414;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.headingMain{
+  font-size: 60px;
+  font-family: 'system-ui';
+  font-weight: bolder;
+  text-align: center;
+}
+
+.subheadingMain{
+  font-size: 24px;
+  text-align: center;
+}
+
+.lastheadingMain{
+  font-size: 14px;
+  text-align: center;
+}
+
 .text {
   text-align: center;
   /* color: #000000; */

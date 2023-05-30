@@ -42,7 +42,7 @@ a {
   outline: none;
   background: transparent;
   color: #fff;
-  font-family: sans-serif;
+  font-family: 'system-ui';
   font-weight: 700;
   position: relative;
   transition: all 0.5s;

@@ -16,15 +16,12 @@ export default function Socials({ modeToggle }) {
 
   return (
     <div className={classes.social_container}>
-      <h1 className={classes.text}>
-        Explore Amazing{" "}
-        <span className={`${classes.gradient_bg} ${toogleMode}`}>
-          <span className={classes.gradient}>Buttons</span>
-        </span>{" "}
-        animation <br /> for your next project.
-      </h1>
-      <p className={classes.para}>An initiative by GDSC-DYPCOE.</p>
-      <div className={classes.socials_container}>{iFrameComponent}</div>
+      <div className={`${classes.scontWrapper} ${toogleMode}`}>
+        <div className={classes.headingMain}>Animated Buttons</div>
+        <div className={classes.subheadingMain}>Explore amazing animated buttons for your next project.</div>
+        <div className={classes.lastheadingMain}>An Initiative by GDSC-DYPCOE</div>
+        <div className={classes.socials_container}>{iFrameComponent}</div>
+      </div>
     </div>
   );
 }

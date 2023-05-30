@@ -1,9 +1,19 @@
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 20px 100px;
 }
+
+.footer_rights{
+  text-align: center;
+}
+
+.footer_copyright{
+  text-align: center;
+}
+
 .footer_right {
   all: unset;
   display: flex;
@@ -34,8 +44,9 @@
 }
 
 .dark_mode {
-  background-color: rgb(20, 20, 20);
+  background-color: #141414;
   color: white;
+  border-radius: 8px;
 }
 .dark_mode .glow:hover {
   box-shadow: 0px 0px 20px rgb(255, 255, 255);
