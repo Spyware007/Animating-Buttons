@@ -18,6 +18,10 @@
 }
 
 .navbar {
+  position:sticky;
+  top:0;
+  background-color: rgba(256, 256, 256, 1);
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
