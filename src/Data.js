@@ -20,6 +20,7 @@ export const Data = [
   "abansal15",
    "Shreyans2004",
   "abhi03ruchi",
+  "Anmol-Baranwal",
   "Aryan5464",
   "Ayush9951",
   "adarshgupta404",
@@ -78,6 +79,7 @@ export const Data = [
   "geeky-hypertext629",
   "Gopal2021025",
   "Gurnav224",
+  "HarshSharma0801",
   "hashfx_2",
   "hashfx_1",
   "hashfx_3",
@@ -212,6 +214,7 @@ export const Data = [
   "lakhan06",
   "shraddha761_1",
   "shraddha761_2",
+  "shraddha761_3",
   "Ks103",
   "SyedImtiyazAli",
   "mohitparmar1",
@@ -235,4 +238,3 @@ export const Data = [
   "kartikjoshi267",
   "priyam212001"
 ];
-
