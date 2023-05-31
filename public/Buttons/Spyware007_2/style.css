@@ -3,6 +3,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+.instagram-logo{
+
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border-radius: 8px;
+  
+}
 body {
   display: flex;
   justify-content: center;
