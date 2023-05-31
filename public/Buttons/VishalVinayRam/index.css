@@ -1,5 +1,7 @@
 body {
-  background: #e0e5ec;
+  background: #000000;
+  align-items: center;
+  
 }
 h1 {
   position: relative;
@@ -44,7 +46,7 @@ button {
   }
   .btns {
   border: none;
-  color: #000;
+  color: #ffffff;
 }
 .btns:after {
   position: absolute;
@@ -63,7 +65,7 @@ button {
   transition: all 0.3s ease;
 }
 .btns:hover {
-  color: #000;
+  color: #33ff00;
 }
 .btns:hover:after {
   left: auto;
