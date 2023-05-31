@@ -20,6 +20,7 @@ export const Data = [
   "abansal15",
    "Shreyans2004",
   "abhi03ruchi",
+  "Anmol-Baranwal",
   "Aryan5464",
   "Ayush9951",
   "adarshgupta404",
@@ -237,4 +238,3 @@ export const Data = [
   "kartikjoshi267",
   "priyam212001"
 ];
-
