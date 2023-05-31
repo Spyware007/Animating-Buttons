@@ -224,6 +224,7 @@ export const Data = [
   "Explorer003",
   "Pritam991",
   "lmalkam",
+  "kartikjoshi267",
   "priyam212001"
 ];
 
