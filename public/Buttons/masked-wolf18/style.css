@@ -1,0 +1,27 @@
+@keyframes uniqueAnimation {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotate(360deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: rotate(720deg);
+        opacity: 1;
+    }
+}
+
+.uniquely-animated-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #428bca;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    animation: uniqueAnimation 3s ease-in-out infinite;
+}

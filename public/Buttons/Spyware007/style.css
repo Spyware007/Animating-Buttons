@@ -3,6 +3,13 @@
   margin: 0;
   box-sizing: border-box;
 }
+.twitter-logo{
+  height: 50px;
+  width: 55px;
+  background-color: black;
+  padding: 2px;
+  border-radius: 8px;
+}
 body {
   display: flex;
   justify-content: center;
