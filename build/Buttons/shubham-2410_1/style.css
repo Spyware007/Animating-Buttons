@@ -1,0 +1,46 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: white;
+}
+
+
+
+button {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    border: 2px solid green;
+    border-radius: 5%;
+    padding: 20px;
+    font-size: 40px;
+    background-color: green;
+    color: black;
+    font-style: normal;
+    box-shadow: 4px 4px 5px 5px #666;
+
+}
+
+button:hover {
+    background-color: rgb(14, 94, 14);
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(233, 222, 222);
+    font-style: italic;
+
+}
+
+button:active {
+    background-color: rgb(94, 223, 97);
+    box-shadow: 4px 5px rgb(45, 45, 45);
+    transform: translateY(4px);
+    color: white;
+    font-style: oblique;
+}
