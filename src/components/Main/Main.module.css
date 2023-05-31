@@ -40,6 +40,7 @@
   list-style-type: none;
   display: flex;
   gap: 5px;
+  
 }
 
 /* styles for created by tag */
@@ -84,6 +85,7 @@
   justify-content: center;
   align-items: center;
   height: 30px;
+ 
 }
 
 /* styles for the showcode button (actual button not the outer div) */
@@ -123,6 +125,7 @@
 .paginationItem {
   color: white;
   padding: 10px 16px;
+  margin: auto;
   background-color: #494949;
   border: 1px solid #353535;
   cursor: pointer;
@@ -164,3 +167,14 @@
 .bar .search:focus{
   outline: none;
 }
+
+
+@media (min-width:320px){
+  .paginationItem {
+    padding:5px 9.5px;
+  }
+
+  .paginationList {
+    margin-right:2.2rem;
+  }
+} 
