@@ -223,11 +223,11 @@ export const Data = [
   "marshadkhn",
   "SyedImtiyaz-1",
   "Explorer003",
+   "ann29-tdk",
   "Pritam991",
   "lmalkam",
   "priyam212001",
   "kartikjoshi267",
-  "priyam212001,
-   "ann29-tdk"
+  "priyam212001
 ];
 
