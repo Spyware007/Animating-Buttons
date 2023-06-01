@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background:#e3edf7;
+}
+.btn{
+    border: 1px solid rgba(0,0,0,0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15%;
+    background:#e3edf7;
+    height: 65px;
+    width: 65px;
+    box-shadow: 6px 6px 6px -1px rgba(0,0,0,0.15),-6px -6px 10px -1px rgba(255,255,255,0.7);
+    transition: transform 0.5s;
+    margin: 0 10px;
+}
+a{
+    text-decoration: none;
+    color: #545252;
+    font-size: 30px;
+    transition: transform 0.5s;
+}
+.btn:hover{
+transform: translateY(2px);
+box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+ inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+ -0.5px -0.5px 0px rgba(255,255,255,1),
+ 0.5px 0.5px 0px rgba(0,0,0,0.15),
+ 0px 12px 10px -10px rgba(0,0,0,0.05);
+
+
+}
+.btn:hover a{
+    transform: scale(.9);
+}
+.btn:hover .fa-facebook{
+    color: #3b5998;
+}
+.btn:hover .fa-youtube{
+    color: #c4302b;
+}
+.btn:hover .fa-instagram{
+    color: #f14843;
+}
+.btn:hover .fa-twitter{
+    color: #00acee;
+}
