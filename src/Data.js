@@ -87,6 +87,7 @@ export const Data = [
   "huzaifa9999_1",
   "Hypertext-Workaholics",
   "Hypertext-Workaholics_1",
+  "ishita80",
   "jatin-code21",
   "jatin-code21_2",
   "jonathanmani",
@@ -236,5 +237,5 @@ export const Data = [
   "Pritam991",
   "lmalkam",
   "kartikjoshi267",
-  "priyam212001"
+  "priyam212001",
 ];

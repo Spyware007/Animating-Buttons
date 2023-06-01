@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    }
+    
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: black;
+    }
+    
+    a{
+        position: relative;
+        width: 200px;
+        height: 60px;
+        text-align: center;
+        justify-content: center;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        transform-origin: center center;
+        transition: 1s;
+    }
+    
+    span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    line-height: 60px;
+    font-size: 24px;
+    background: rgba(255,255,255,0.05);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    transition: 1s;
+    text-shadow:
+          0 0 5px #fff,
+          0 0 8px #fff,
+          0 0 19px #fff,
+          0 0 40px #0fa,
+          0 0 80px #0fa,
+          0 0 90px #0fa,
+          0 0 100px #0fa,
+          0 0 149px #0fa;
+    }
+    
+    span.front{
+        transform: rotateX(0deg) translateZ(20px);
+    }
+    
+    a:hover span.front{
+        transform: rotateX(-180deg) translateZ(20px);
+    }
+    
+    span.back{
+        transform: rotateX(-180deg) translateZ(20px);
+    }
+    
+    a:hover span.back{
+        transform: rotateX(0deg) translateZ(20px);
+    }
+    
+    span.center{
+        background: linear-gradient(45deg,#0ce39a,#69007f,#fc0987);
+    }
+    
+    a:hover{
+        width: 225px;
+        height: 67px;
+    }
