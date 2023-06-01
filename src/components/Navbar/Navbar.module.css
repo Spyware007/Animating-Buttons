@@ -39,6 +39,10 @@
 
 .logo {
   width: 100px;
+  transition: all 0.4s ease;
+}
+.logo:hover{
+ transform: rotate(360deg) scale(1.2);
 }
 .github {
   width: 60px;
