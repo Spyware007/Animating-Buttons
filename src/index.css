@@ -1,14 +1,15 @@
 :root {
   /* light theme */
   --light-bg-color: #fff;
-  --light-text-color: #151515;
+  --light-text-color: #1a1a1a;
 
   /* dark theme */
-  --dark-bg-color: #151515;
+  --dark-bg-color: #2e2e2e;
   --dark-text-color: #fff;
 }
 
-html,body {
+html,
+body {
   height: 100%;
 }
 
