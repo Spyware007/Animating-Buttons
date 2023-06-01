@@ -1,4 +1,5 @@
 import React from "react";
+import Typewriter from "typewriter-effect";
 import classes from "./Socials.module.css";
 
 export default function Socials({ modeToggle }) {
@@ -15,14 +16,21 @@ export default function Socials({ modeToggle }) {
   ));
 
   return (
-    <div className={classes.social_container}>
-      <h1 className={classes.text}>
-        Explore Amazing{" "}
-        <span className={`${classes.gradient_bg} ${toogleMode}`}>
-          <span className={classes.gradient}>Buttons</span>
-        </span>{" "}
-        animation <br /> for your next project.
-      </h1>
+    <div className={`${classes.social_container} ${toogleMode}`}>
+      <div className={classes.socialHead}>
+        <Typewriter onInit={(Typewriter) => {
+          Typewriter
+            .typeString("Welcome to Open Sourced")
+            .pauseFor(1000)
+            .deleteAll()
+            .typeString("Animated Buttons")
+            .start()
+        }}>
+        </Typewriter>
+      </div>
+
+      
+      <div className={classes.socialSubhead}>Explore amazing animated buttons for your very next project.</div>
       <p className={classes.para}>An initiative by GDSC-DYPCOE.</p>
       <div className={classes.socials_container}>{iFrameComponent}</div>
     </div>

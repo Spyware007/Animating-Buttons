@@ -3,6 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 80%;
+  background-color: slateblue;
 }
 
 .iframe_container {

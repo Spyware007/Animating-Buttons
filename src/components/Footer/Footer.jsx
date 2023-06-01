@@ -7,13 +7,16 @@ import {
 } from "react-icons/fa";
 import classes from "./Footer.module.css";
 
-const Footer = ({ modeToggle }) => {
+const Footer = ({modeToggle}) => {
+
+  const toggleMode = modeToggle ? classes.dark_mode : classes.light_mode;
+
   return (
-    <div className={modeToggle ? classes.dark_mode : classes.light_mode}>
-      <div className={classes.footer}>
+    <div>
+      <div className={`${classes.footer} ${toggleMode}`}>
         <div className={classes.footer_left}>
           <p className={classes.footer_copyright}>
-            © 2022 by{" "}
+            © 2023 by{" "}
             <span>
               <a href="https://github.com/spyware007">Spyware007</a>
             </span>

@@ -12,6 +12,7 @@ const redirectToGitHub = (username) => {
     window.open(url, "_blank");
   }
 };
+
 const CreatedBy = ({ d }) => {
   return (
     <p onClick={() => redirectToGitHub(d)} className={classes.createdBy}>
@@ -54,9 +55,10 @@ export default function Main({ modeToggle, modeToggleFunc }) {
   const itemsPerPage = 24; // Number of items to display per page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
   // const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
 
-  const isDark = modeToggle ? "dark_mode" : "light_mode";
+  const toggleMode = modeToggle ? classes.dark_mode : classes.light_mode;
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -73,9 +75,9 @@ export default function Main({ modeToggle, modeToggleFunc }) {
 
   return (
     <>
-      <h1 className={classes.text}>
+      <div className={classes.text}>
         Explore from the list of {Data?.length} Buttons by our Contributors.
-      </h1>
+      </div>
 
       {/* search bar */}
       <div className={classes.bar}>
@@ -95,7 +97,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
               <iframe
                 className={classes.container}
                 title={d}
-                src={`Buttons/${d}/index.html?c=${isDark}`}
+                src={`Buttons/${d}/index.html?c=${toggleMode}`}
               ></iframe>
               <CreatedBy d={d} />
               <DownloadBtn d={d} modeToggle={modeToggle} />
@@ -105,20 +107,20 @@ export default function Main({ modeToggle, modeToggleFunc }) {
       </div>
       <div className={classes.pagination}>
         {filteredItems.length > itemsPerPage && (
-          <ul className={classes.paginationList}>
+          <div className={classes.paginationList}>
             {Array(Math.ceil(filteredItems.length / itemsPerPage))
               .fill()
               .map((_, index) => (
-                <li
+                <div
                   key={index}
                   className={`${classes.paginationItem} ${currentPage === index + 1 ? classes.active : ""
                     }`}
                   onClick={() => handlePageChange(index + 1)}
                 >
                   {index + 1}
-                </li>
+                </div>
               ))}
-          </ul>
+          </div>
         )}
       </div>
     </>
