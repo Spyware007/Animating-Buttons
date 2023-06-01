@@ -1,0 +1,53 @@
+div{
+    margin:auto;
+    background:linear-gradient(45deg,yellow,pink);
+    height:250px;
+    width:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    overflow: hidden;
+    background:linear-gradient(45deg,yellow,pink);
+}
+button{
+
+    height:150px;
+    width:150px;
+    background:linear-gradient(pink,yellow);
+    border-radius: 200px;
+    color: green;
+    font-size: 20px;
+box-shadow: 2px 2px 2px 2px black;
+}
+button:hover{
+    animation-name: abc;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+
+
+
+}
+@keyframes abc {
+
+    0%{
+        transform: rotateZ(0deg);
+    }
+    20%{
+        transform: rotateZ(90deg);
+    }
+    40%{
+        transform: rotateZ(180deg);
+    }
+    60%{
+        transform: rotateZ(270deg);
+    }
+    80%{
+        transform: rotateZ(360deg);
+
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
