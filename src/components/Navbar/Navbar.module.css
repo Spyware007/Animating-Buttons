@@ -6,19 +6,18 @@
 ::-webkit-scrollbar-track {
   background: black;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: white; 
+  background: white;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: orange; 
+  background: orange;
 }
 
-.navbar{
-  width: 100%;
+.navbar {
   display: flex;
   justify-content: center;
   align-items: center;
