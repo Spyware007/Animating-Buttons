@@ -237,11 +237,7 @@ export const Data = [
   "Pritam991",
   "lmalkam",
   "priyam212001",
-<<<<<<< HEAD
-  
-=======
   "Sushilverma002",
   "kartikjoshi267",
-  "priyam212001"
->>>>>>> d7c4745e85f666fd7ca51d5d8f545d4d5ce2001f
+  "priyam212001",
 ];
