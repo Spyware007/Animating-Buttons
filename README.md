@@ -130,7 +130,7 @@ git add .
 
 | Step | Description                                                                                                     | Link                                                         |
 |------|-----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
-| 1    | Go to the public/Buttons folder in the repository.                                                              | [public/Buttons](https://github.com/Spyware007/Animating-Buttons/blob/main/src/components/Main/Main.jsx)                   |
+| 1    | Go to the public/Buttons folder in the repository.                                                              | [public/Buttons](https://github.com/Spyware007/Animating-Buttons/tree/main/public/Buttons)                   |
 | 2    | Add a new folder with your GitHub username, including your button code (index.html + style.css files).          | -                                                            |
 | 3    | Go to the src/Data.js file.                                                                                     | [src/Data.js](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                                     |
 | 4    | Add your folder name (e.g., `github_username`) and your code in the src/Data.js file.                           | -                                                            |
