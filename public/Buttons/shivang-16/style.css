@@ -64,6 +64,6 @@ body {
   
   /* Button Click Animation */
   .button:active {
-    transform: translateY(30px);
+    transform: translateY(35px);
   }
   
