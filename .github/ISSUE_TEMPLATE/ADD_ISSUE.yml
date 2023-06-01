@@ -1,5 +1,5 @@
-name: New Link 🔗
-description: Use this to add new link into the Hub
+name: 🚀 New Issue
+description: Use this to create a new issue
 title: "[Add] <write what you want to add>"
 labels: ["new issue", "awaiting triage"]
 body:
