@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  background-color: orange;
+}
+
+#container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+
+.submit {
+  padding: 1rem 4rem;
+  cursor: pointer;
+  background-color: gray;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-size: larger;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 5px 10px 5px -6px rgba(0,0,0,0.75);
+  transition: linear .3s;
+}
+
+  .submitting {
+  height: 50px;
+  width: 100%;
+  padding: 1rem 10rem;
+  cursor: pointer;
+  background-color: gray;
+  transition: linear .3s;
+}
+
+.submit:hover {
+  transform: translateY(1px);
+  box-shadow: 5px 10px 5px -8px rgba(0,0,0,0.75);
+}
+
+.submit.submitting::before {
+  content: "";
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 1rem;
+  border-radius: 50%;
+  animation: loading 1s infinite ease-in;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .4;
+    left: 9rem;
+  }
+
+  100% {
+    opacity: 0;
+    left: 18rem;
+  }
+}
+
