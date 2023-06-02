@@ -219,8 +219,6 @@ export const Data = [
   "shraddha761_2",
   "shraddha761_3",
   "Ks103",
-  "SyedImtiyazAli",
-  "mohitparmar1",
   "aniketburman014",
   "adjascently",
   "SyedImtiyazAli",
