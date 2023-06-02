@@ -5,12 +5,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 body{
     display: flex;
-    justify-content: center;
-    align-content: center;
     min-height: 100vh;
     background: linear-gradient(45deg, #ff0057, #2196f3);
 }
