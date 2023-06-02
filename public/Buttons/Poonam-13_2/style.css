@@ -1,0 +1,59 @@
+body {
+  position: absolute;
+  display: flex;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}
+.glowMe,
+.glowAll {
+  opacity: 0;
+  transition: opacity 300ms linear 0s;
+}
+svg {
+  width: 30vw;
+  height: 30vw;
+  cursor: pointer;
+}
+svg:hover .glowMe {
+  opacity: 0.5;
+}
+svg:hover .glowAll {
+  opacity: 1;
+}
+.buttonTop {
+  fill: #5f309b;
+  transition: fill 300ms linear 0s;
+}
+svg:hover .buttonTop {
+  fill: #a661ff;
+}
+.buttonSides {
+  fill: #371b5b;
+  transition: fill 300ms linear 0s;
+}
+svg:hover .buttonSides {
+  fill: #763ac2;
+}
+svg:focus {
+  outline: none;
+}
+svg:focus .buttonTop,
+svg:focus .playSides {
+  stroke: white;
+  stroke-width: 2px;
+}
+svg:focus .playSides {
+  stroke-width: 1px;
+}
+svg:active .buttonTop {
+  fill: #c79cff;
+}
+
+svg:nth-of-type(1) {
+  transform: translate(37%, -35%);
+}
+svg:nth-of-type(3) {
+  transform: translate(-37%, 35%);
+}
