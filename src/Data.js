@@ -235,7 +235,9 @@ export const Data = [
   "SyedImtiyaz-1",
   "Explorer003",
   "Pritam991",
-  "lmalkam",
+  "lmalkam"
+  "animex007",
+  "animex007_2",
   "PVBharadwaj",
   "kartikjoshi267",
   "priyam212001",
