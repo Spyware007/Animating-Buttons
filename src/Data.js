@@ -247,9 +247,7 @@ export const Data = [
   "dheeraj1129",
   "lmalkam",
   "priyam212001",
-ani-btn
   "HimanshuNarware"
-
   "Anish_Kothari",
   "priyam212001",
   "sukanyachopra",
@@ -295,5 +293,4 @@ ani-btn
   "rohanmittal1163",
   "rohanmittal1163-1",
   "Kalivarapubindusree",
- main
 ];
