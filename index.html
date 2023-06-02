@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Click Loading Animation on Button using  HTML, CSS & Javascript</title>
+</head>
+<body>
+    <style>
+        * {
+            border: 0;
+            outline: none;
+            font-family: "Google Sans Regular";
+        }
+        body {
+            height: 95vh;
+            display: grid;
+            place-content: center;
+        }
+        .save-btn{
+            font-size: 22px;
+            color: aquamarine;
+            background: #29ca8e;
+            width: 250px;
+            height: 60px;
+            cursor: pointer;
+            border-radius: 3px;
+            box-shadow: 0 8px 5px -5px rgba(0, 0, 0, 0.2);
+            display:grid;
+            place-content: center;
+            transition: 0.2s;
+        }
+        .loader{
+               pointer-events: none;
+               width: 30px;
+               height: 30px;
+               border-radius: 50%;
+               border: 3px solid transparent;
+               border-top-color: #fff;
+               animation: an1 1s ease infinite; 
+        }
+        @keyframes an1{
+            0% {
+                transform: rotate(0turn);
+            }
+            100%{
+                transform: rotate(1turn);
+            }
+        }
+    </style>
+
+    <button class="save-btn">Save Changes </button>
+    
+
+    <script>
+        save_btn=document.querySelector(".save-btn");
+
+        save_btn.onclick=function(){
+            this.innerHTML="<div class='loader'></div>";
+            setTimeout(() => {
+                this.innerHTML="Changes Saved";
+                this.style="background: #0000FF; color: #333; pointer-events: none"; 
+            }, 2000);
+        }
+         
+    </script>
+    
+</body>
+</html>
