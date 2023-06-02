@@ -1,0 +1,71 @@
+body
+{
+    background-color: bisque;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+.button
+{
+   
+    justify-content: center;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 300px;
+    margin-left: 50%;
+    height: 200px;
+    width: 200px;
+    border-width:5px;
+    border-radius: 20px;
+    box-shadow: 5px 10px gray;
+                
+    cursor: pointer;
+    background-color: aqua;
+    color: blue;
+    font-size: 20px;
+    transition: all 0.5s;
+
+}
+
+.button:hover
+{
+    background-image: linear-gradient(to right,cornflowerblue, aqua);
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: cubic-bezier(0.4,0.47,0,1.93);
+    letter-spacing: 5px;
+    
+}
+
+.button:hover::before
+{
+    transform: rotate(-45deg);
+}
+
+.button:hover::after
+{
+    transform: rotate(-45deg);
+}
+
+
+
+.button:active
+{
+    transform: translateY(5px);
+    box-shadow: 5px 5px gray;
+    
+    transform: rotate(360deg);
+}
+
+body:hover
+{
+    background-image: linear-gradient(to right, white, bisque);
+    opacity: 0.5;
+    
+}
