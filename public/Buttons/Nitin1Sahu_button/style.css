@@ -29,7 +29,7 @@ button {
 
 button:hover {
     z-index: 1;
-    transform: scale(2);
+    transform: scale(1.8);
     color: white;
     animation: rotate 0.3s infinite alternate;
 }
