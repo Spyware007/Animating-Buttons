@@ -1,0 +1,14 @@
+.my-button {
+    background-color: lightblue;
+    color: #000;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: auto;
+  }
+  
+  .my-button:hover {
+    background-color: yellow;
+    color: #000;
+    border-radius: 50%;
+  }
