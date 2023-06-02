@@ -252,7 +252,7 @@ export const Data = [
   "Soumyajit2825_1",
   "dheeraj1129",
   "lmalkam",
-  "priyam212001",
+  "SakshiRawat13",
   "riyaVerma1726_2",
   "kartikjoshi267",
   "priyam212001"
@@ -270,7 +270,6 @@ export const Data = [
   "SyedImtiyaz-3",
   "Somesh-Mallewar",
   "Anish_Kothari",
-  "priyam212001",
   "Anik-Banerjee364",
   "code-gen21",
   "Siddharth961"
