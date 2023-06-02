@@ -228,6 +228,7 @@ export const Data = [
   "Naishadha-satya",
   "AdityaLahane-2003_1",
   "mohitparmar1",
+  "anirudhsalaria",
   "anamithrak15",
   "parag477",
   "coderhersh",
