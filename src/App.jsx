@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { Loader } from "./components";
 import MainPage from "./MainPage";
@@ -13,7 +14,11 @@ const App = () => {
     }, 1000);
   }, []);
 
-  return <BrowserRouter>{loading ? <Loader /> : <MainPage />} <GoToTop/> </BrowserRouter>;
+  return (
+    <>
+      {loading ? <Loader /> : <MainPage />} <GoToTop />{" "}
+    </>
+  );
 };
 
 export default App;
