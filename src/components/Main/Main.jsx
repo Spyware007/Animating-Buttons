@@ -1,109 +1,95 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
-
-import classes from "./Main.module.css";
 import { Data } from "../../Data";
+import classes from "./Main.module.css";
 import downloadFiles from "../../Functions/DownloadFiles";
 import downloadZip from "../../Functions/DownloadZip";
 
-// Function To Redirect User To The Github Of Creator
 const redirectToGitHub = (username) => {
-  const sure = window.confirm(
-    `This Will Take You To Github of ${username} ?`
-  );
+  const sure = window.confirm(`This Will Take You To Github of ${username} ?`);
   if (sure) {
     const url = `https://github.com/${username}`;
     window.open(url, "_blank");
   }
 };
-
-// Component
 const CreatedBy = ({ d }) => {
   return (
     <p onClick={() => redirectToGitHub(d)} className={classes.createdBy}>
-      Created by
       <span className={classes.user}> {d}</span>
     </p>
   );
 };
 
-
-// Component
-const DownloadBtn = ({ d, modeToggle, current, setCurrent }) => {
-  const [all, setAll] = useState(false)
-
+const DownloadBtn = ({ d, modeToggle }) => {
+  const displayMode = modeToggle ? classes.dark_mode : classes.light_mode;
   return (
-    <div className={classes.containerForArrow}>
-      <div className={`${classes.buttonContainer}`}>
-        <Link className={`${classes.copyBtn}  `} to={`/show/${d}`}>
-          <button
-            onClick={() => { setCurrent(1) }}
-            hidden={!(current === 1) && !(all === true)}
-            className={`${classes.download_btn} ${modeToggle ? classes.dark_mode : classes.light_mode
-              }`}
-          >
-            Show Code
-          </button>
-        </Link>
-        <button
-          hidden={!(current === 2) && !(all === true)}
-          onClick={() => { setCurrent(2); downloadFiles(d); setAll(false) }}
-          className={`${classes.download_btn} ${modeToggle ? classes.dark_mode : classes.light_mode
-            }`}
-        >
-          Download As Files
+    <div className={`${classes.buttonContainer}`}>
+      <Link className={`${classes.copyBtn}  `} to={`/show/${d}`}>
+        <button className={`${classes.showcode_btn} ${displayMode}`}>
+          Show Code
         </button>
-        <button
-          hidden={!(current === 3) && !(all === true)}
-          onClick={() => { setCurrent(3); downloadZip(d); setAll(false) }}
-          className={`${classes.download_btn} ${modeToggle ? classes.dark_mode : classes.light_mode
-            }`}
-        >
-          Download As Zip
-        </button>
-      </div>
-
+      </Link>
       <button
-        onClick={() => setAll(!all)}
-        className={`${classes.arrow}`}>
-        &#9662;
+        onClick={() => downloadFiles(d)}
+        className={`${classes.download_btn} ${displayMode}`}
+      >
+        <i class="fas fa-download"> </i>
+        Files
+      </button>
+      <button
+        onClick={() => downloadZip(d)}
+        className={`${classes.download_btn} ${displayMode}`}
+      >
+        <i class="fas fa-download"> </i>
+        Zip
       </button>
     </div>
   );
 };
 
-
-
-
-
 export default function Main({ modeToggle, modeToggleFunc }) {
-  
-
-
-
-  const [current, setCurrent] = useState(1)
-  const [currentPage, setCurrentPage] = useState(parseInt(localStorage.getItem("current_page")) || 1);
+  const [currentPage, setCurrentPage] = useState(
+    parseInt(localStorage.getItem("current_page")) || 1
+  );
   const itemsPerPage = 24; // Number of items to display per page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
+  // const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
 
   const isDark = modeToggle ? "dark_mode" : "light_mode";
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
-    localStorage.setItem("current_page", pageNumber)
+    localStorage.setItem("current_page", pageNumber);
     window.scrollTo({ top: 500, behavior: "smooth" });
-
   };
+
+  const [query, setQuery] = useState("");
+
+  const filteredItems = Data.filter((d) =>
+    d.toLowerCase().includes(query.toLowerCase())
+  );
+  const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
+
   return (
     <>
       <h1 className={classes.text}>
         Explore from the list of {Data?.length} Buttons by our Contributors.
       </h1>
+
+      {/* search bar */}
+      <div className={classes.bar}>
+        <input type="text"
+          placeholder="Find Your Perfect Button..."
+          className={classes.search}
+          onChange={e => setQuery(e.target.value)}
+        />
+      </div>
+
+
       <div className={classes.btns_container}>
-        {currentItems.map((d, i) => {
+        {currentItems
+          .filter((d) => d.toLowerCase().includes(query.toLowerCase())).map((d, i) => {
           return (
             <div key={i}>
               <iframe
@@ -112,16 +98,15 @@ export default function Main({ modeToggle, modeToggleFunc }) {
                 src={`Buttons/${d}/index.html?c=${isDark}`}
               ></iframe>
               <CreatedBy d={d} />
-              <></>
-              <DownloadBtn d={d} modeToggle={modeToggle} current={current} setCurrent={setCurrent} />
+              <DownloadBtn d={d} modeToggle={modeToggle} />
             </div>
           );
         })}
       </div>
       <div className={classes.pagination}>
-        {Data.length > itemsPerPage && (
+        {filteredItems.length > itemsPerPage && (
           <ul className={classes.paginationList}>
-            {Array(Math.ceil(Data.length / itemsPerPage))
+            {Array(Math.ceil(filteredItems.length / itemsPerPage))
               .fill()
               .map((_, index) => (
                 <li
