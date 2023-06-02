@@ -1,0 +1,43 @@
+:root {
+    --gradient: linear-gradient(90deg, #ee6352, purple, #ee6352);
+}
+
+html,
+body {
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+.fun {
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.5em;
+    font-size: 2rem;
+    background-image: var(--gradient);
+    background-size: 300%;
+    background-position: left;
+    transition: all 0.5s;
+}
+
+.fun:hover {
+    background-position: right;
+}
