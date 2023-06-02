@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .neon-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 24px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .neon-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #09f;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .neon-button:hover:before {
+    opacity: 0.6;
+  }
+  
+  .neon-button span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .neon-button:after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border-radius: 40px;
+    background: linear-gradient(45deg, #09f, #0ff, #f0f, #f00);
+    background-size: 400% 400%;
+    animation: gradient 3s ease-in-out infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .neon-button:hover:after {
+    opacity: 1;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
