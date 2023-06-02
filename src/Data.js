@@ -247,6 +247,8 @@ export const Data = [
   "dheeraj1129",
   "lmalkam",
   "priyam212001",
+  "Anish_Kothari",
+  "priyam212001",
   "sukanyachopra",
   "Adityamishra9719",
   "shivansh745",
