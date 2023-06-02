@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+html {
+  font-family: "Fredoka One", cursive;
+  background-color: #fafbff;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  flex-flow: column;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+  top: 0%;
+  left: 0%;
+}
+
+.click-btn {
+  display: flex;
+  width: 120px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  line-height: 35px;
+  border: 1px solid;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.35s;
+  box-sizing: border-box;
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn-style509 {
+  position: relative;
+  background-color: #716eef;
+  border-color: #716eef;
+  color: #fff;
+}
+.btn-style509::before, .btn-style509::after {
+  width: 49px;
+  height: 35px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #4b48cb;
+  transition: all 0.7s ease;
+  transform: scale(0);
+  content: "";
+  z-index: -1;
+}
+.btn-style509::before {
+  top: -8px;
+  left: 10%;
+}
+.btn-style509::after {
+  bottom: -8px;
+  right: 15%;
+}
+.btn-style509:hover {
+  background-color: #4b48cb;
+  border-color: #4b48cb;
+}
+.btn-style509:hover::before, .btn-style509:hover::after {
+  transform: scale(1);
+}
