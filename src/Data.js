@@ -93,10 +93,10 @@ export const Data = [
   "KishorBhagat",
   "KratikJain10",
   "masked-wolf18",
-  "masked-wolf18_2", 
+  "masked-wolf18_2",
   "Killer2OP_2",
   "krishi1211",
-  "Meenal21i" ,
+  "Meenal21i",
   "mundadapurva",
   "MrCuber",
   "MrCuber_1",
@@ -240,6 +240,6 @@ export const Data = [
   "kartikjoshi267",
   "priyam212001",
   "Anish_Kothari",
-  "priyam212001"
+  "priyam212001",
   "Anik-Banerjee364",
 ];
