@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #e8e8e8;
+}
+
+.progress-btn {
+  position: relative;
+  overflow: hidden;
+  background-color: #654E92;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.progress-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #6C9BCF;
+  transition: width 1s;
+  z-index: -1;
+}
+
+.progress-btn:hover::before {
+  width: 100%;
+}
+
