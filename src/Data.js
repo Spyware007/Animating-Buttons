@@ -224,7 +224,6 @@ export const Data = [
   "shraddha761_2",
   "shraddha761_3",
   "Ks103",
-  "CS50X-RGB",
   "aniketburman014",
   "adjascently",
   "Divya7201",
