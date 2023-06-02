@@ -73,35 +73,36 @@ export default function Main({ modeToggle, modeToggleFunc }) {
 
   return (
     <>
-      <h1 className={classes.text}>
+      {/* <h1 className={classes.text}>
         Explore from the list of {Data?.length} Buttons by our Contributors.
-      </h1>
+      </h1> */}
 
       {/* search bar */}
       <div className={classes.bar}>
-        <input type="text"
+        <input
+          type="text"
           placeholder="Find Your Perfect Button..."
           className={classes.search}
-          onChange={e => setQuery(e.target.value)}
+          onChange={(e) => setQuery(e.target.value)}
         />
       </div>
 
-
       <div className={classes.btns_container}>
         {currentItems
-          .filter((d) => d.toLowerCase().includes(query.toLowerCase())).map((d, i) => {
-          return (
-            <div key={i}>
-              <iframe
-                className={classes.container}
-                title={d}
-                src={`Buttons/${d}/index.html?c=${isDark}`}
-              ></iframe>
-              <CreatedBy d={d} />
-              <DownloadBtn d={d} modeToggle={modeToggle} />
-            </div>
-          );
-        })}
+          .filter((d) => d.toLowerCase().includes(query.toLowerCase()))
+          .map((d, i) => {
+            return (
+              <div key={i}>
+                <iframe
+                  className={classes.container}
+                  title={d}
+                  src={`Buttons/${d}/index.html?c=${isDark}`}
+                ></iframe>
+                <CreatedBy d={d} />
+                <DownloadBtn d={d} modeToggle={modeToggle} />
+              </div>
+            );
+          })}
       </div>
       <div className={classes.pagination}>
         {filteredItems.length > itemsPerPage && (
@@ -111,8 +112,9 @@ export default function Main({ modeToggle, modeToggleFunc }) {
               .map((_, index) => (
                 <li
                   key={index}
-                  className={`${classes.paginationItem} ${currentPage === index + 1 ? classes.active : ""
-                    }`}
+                  className={`${classes.paginationItem} ${
+                    currentPage === index + 1 ? classes.active : ""
+                  }`}
                   onClick={() => handlePageChange(index + 1)}
                 >
                   {index + 1}
