@@ -15,41 +15,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet" />
   <title>Animated Buttons</title>
   
+  <link rel="stylesheet" href="src/index.css">
+  
   <style>
     * {
       border: 0;
       outline: none;
       font-family: "Google Sans Regular";
-    }
-    .save-btn {
-      font-size: 22px;
-      color: aquamarine;
-      background: #29ca8e;
-      width: 250px;
-      height: 60px;
-      cursor: pointer;
-      border-radius: 3px;
-      box-shadow: 0 8px 5px -5px rgba(0, 0, 0, 0.2);
-      display: grid;
-      place-content: center;
-      transition: 0.2s;
-    }
-    .loader {
-      pointer-events: none;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #fff;
-      animation: spin 1s ease infinite; 
-    }
-    @keyframes spin {
-      0% {
-        transform: rotate(0turn);
-      }
-      100% {
-        transform: rotate(1turn);
-      }
     }
   </style>
 </head>
@@ -58,23 +30,6 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   
-  <!-- Button element -->
-  <button class="save-btn">Save Changes</button>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var saveBtn = document.querySelector(".save-btn");
-
-      saveBtn.onclick = function() {
-        this.innerHTML = "<div class='loader'></div>";
-        setTimeout(() => {
-          this.innerHTML = "Changes Saved";
-          this.style.background = "#0000FF";
-          this.style.color = "#333";
-          this.style.pointerEvents = "none";
-        }, 2000);
-      };
-    });
-  </script>
+  <script src="src/index.js"></script>
 </body>
 </html>
