@@ -1,4 +1,5 @@
 export const Data = [
+  "AbhaBarge",
   "gokaydmrl",
   "Ayush9951_1",
   "Ayush9951_2",
@@ -264,8 +265,6 @@ export const Data = [
   "purnimagup",
   "SakshiRawat13",
   "riyaVerma1726_2",
-  "kartikjoshi267",
-  "priyam212001"
   "SaiyamTuteja",
   "priyam212001",
   "sohil1234"
