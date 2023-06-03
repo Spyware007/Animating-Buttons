@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Save button</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,32 +13,6 @@
       <!-- <i class='fa fa-circle-o-notch fa-spin fa-1x'></i> -->
       <span class="btn-text">Save</span>
     </button>
-
-     <script>
-      btn = document.querySelector("button"),
-      spinner = document.querySelector(".fa-circle-o-notch.fa-spin"),
-      icon = document.querySelector("i"),
-      btnText = document.querySelector(".btn-text");
-
-      btn.onclick = function() {
-
-        btn.style.cursor = "wait";
-        btnText.textContent = "";
-        btnText.style.margin = 0;
-        icon.classList.remove("fa-check");
-        icon.classList.add("fa-circle-o-notch", "fa-spin");
-
-
-
-        setTimeout(() => {
-          btn.style.pointerEvents = "none";
-          btnText.textContent = "done"; 
-          icon.classList.remove("fa-circle-o-notch", "fa-spin");
-          icon.classList.add("fa-check", "checked");
-        }, 4000);
-
-      }
-    </script>
-
+    <script src="app.js"></script>
 </body>
 </html> 
