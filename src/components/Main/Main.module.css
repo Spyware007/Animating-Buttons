@@ -39,8 +39,9 @@
   margin-top: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   text-align: center;
-  cursor: pointer;
   transition: all 0.2s ease-in-out;
+  color: #000;
+  cursor: pointer;
 }
 
 .createdBy:before {
@@ -154,7 +155,6 @@
   font-size: 20px;
   border: 1px solid #ccc;
   height: 50px;
-  width: 25%;
   border-radius: 200px;
   text-align: center;
 }

@@ -14,9 +14,15 @@ const redirectToGitHub = (username) => {
 };
 const CreatedBy = ({ d }) => {
   return (
-    <p onClick={() => redirectToGitHub(d)} className={classes.createdBy}>
+    <div className={classes.download}>
+    <p
+        onClick={() => redirectToGitHub(d)}
+        className={`${classes.createdBy}`}
+    >
+      Created by
       <span className={classes.user}> {d}</span>
     </p>
+    </div>
   );
 };
 
@@ -89,9 +95,9 @@ export default function Main({ modeToggle, modeToggleFunc }) {
 
   return (
     <>
-      <h1 className={classes.text}>
+      {/* <h1 className={classes.text}>
         Explore from the list of {Data?.length} Buttons by our Contributors.
-      </h1>
+      </h1> */}
 
       {/* search bar */}
       <div className={classes.bar}>
