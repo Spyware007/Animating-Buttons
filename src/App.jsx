@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { Loader } from "./components";
 import MainPage from "./MainPage";
@@ -18,6 +19,7 @@ const App = ({ modeToggleFunc,modeToggle }) => {
   }, []);
 
 
+
   return <BrowserRouter>
 
  <Routes >
@@ -27,6 +29,12 @@ const App = ({ modeToggleFunc,modeToggle }) => {
   </BrowserRouter>;
 
   return <BrowserRouter>{loading ? <Loader /> : <MainPage />} <GoToTop/> </BrowserRouter>;
+
+  return (
+    <>
+      {loading ? <Loader /> : <MainPage />} <GoToTop />{" "}
+    </>
+  );
 
 };
 
