@@ -2,9 +2,6 @@ const btnel = document.querySelector("button")
 const imgel = document.querySelector("img")
 
 btnel.addEventListener("click", ()=>{
-    console.log(1)
-
-    // btnel.innerText = ""
     btnel.innerText = "Order Placed!!"
     btnel.classList.remove("initial")
     btnel.classList.add("middle")
