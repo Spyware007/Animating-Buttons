@@ -40,7 +40,6 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: all 0.2s ease-in-out;
-  color: #000;
   cursor: pointer;
 }
 
@@ -71,13 +70,7 @@
   height: 30px;
 }
 
-.copy_button {
-  width: 100%;
-  margin-left: 77px;
-}
-
-.download_btn,
-.showcode_btn {
+.download_btn {
   font-family: "Helvetica", Arial, sans-serif;
   font-size: 12px;
   font-weight: bold;
@@ -89,11 +82,12 @@
   border-radius: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
-  margin-bottom: 10px;
+  margin-left: 3px;
 }
 
-.download_btn{
-  margin-left: 3px;
+.showcode_btn {
+  color: #fff;
+  text-decoration: none;
 }
 
 .download_btn:hover,
@@ -143,14 +137,15 @@
 
 /* search bar */
 
-.bar{
+.bar {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px;
   margin-bottom: 50px;
 }
-.bar .search{
+
+.bar .search {
   padding: 10px;
   font-size: 20px;
   border: 1px solid #ccc;
@@ -158,9 +153,11 @@
   border-radius: 200px;
   text-align: center;
 }
-.bar .search:hover{
+
+.bar .search:hover {
   border: 1px solid #000;
 }
-.bar .search:focus{
+
+.bar .search:focus {
   outline: none;
 }

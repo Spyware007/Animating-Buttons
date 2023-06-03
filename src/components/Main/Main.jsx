@@ -15,13 +15,10 @@ const redirectToGitHub = (username) => {
 const CreatedBy = ({ d }) => {
   return (
     <div className={classes.download}>
-    <p
-        onClick={() => redirectToGitHub(d)}
-        className={`${classes.createdBy}`}
-    >
-      Created by
-      <span className={classes.user}> {d}</span>
-    </p>
+      <p onClick={() => redirectToGitHub(d)} className={`${classes.createdBy}`}>
+        Created by
+        <span className={classes.user}> {d}</span>
+      </p>
     </div>
   );
 };
@@ -30,11 +27,11 @@ const DownloadBtn = ({ d, modeToggle }) => {
   const displayMode = modeToggle ? classes.dark_mode : classes.light_mode;
   return (
     <div className={`${classes.buttonContainer}`}>
-      <Link className={`${classes.copyBtn}  `} to={`/show/${d}`}>
-        <button className={`${classes.showcode_btn} ${displayMode}`}>
+      <button className={`${classes.download_btn} ${displayMode}`}>
+        <Link className={`${classes.showcode_btn} `} to={`/show/${d}`}>
           Show Code
-        </button>
-      </Link>
+        </Link>
+      </button>
       <button
         onClick={() => downloadFiles(d)}
         className={`${classes.download_btn} ${displayMode}`}
@@ -95,11 +92,6 @@ export default function Main({ modeToggle, modeToggleFunc }) {
 
   return (
     <>
-      {/* <h1 className={classes.text}>
-        Explore from the list of {Data?.length} Buttons by our Contributors.
-      </h1> */}
-
-      {/* search bar */}
       <div className={classes.bar}>
         <input
           type="text"
