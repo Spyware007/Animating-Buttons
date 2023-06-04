@@ -1,0 +1,72 @@
+body {
+  text-align: center;
+}
+h1 {
+  font-family: "Helvetica", sans-serif;
+  margin-top: 40px;
+  color: #2C313C;
+}
+p {
+  font-family: "Helvetica", sans-serif;
+  font-size: 14px;
+  color: #2C313C;
+  margin-bottom: 40px;
+}
+/* BUTTON STYLING =============================================================*/
+.button path {
+  transition: d 0.2s cubic-bezier(.53,.6,.81,2);
+  fill: hotpink;
+}
+
+.button:hover path {
+  d: path("M22,5C12.4,7.1,4,13.1,4,23s8.4,16.3,18,18c13.4,2.4,73.3,2.5,88,0c9.7-1.6,18-8.1,18-18s-8.2-16.5-18-18 C96,2.8,35.6,2,22,5z");
+}
+
+.button:active path {
+  d: path("M22,5C11.9,3,4,13.1,4,23s8,19.8,18,18c38.8-7.4,64.1-4.2,88,0c9.7,1.7,18-8.1,18-18s-8.3-19.9-18-18 C87.8,9.3,50.2,10.5,22,5z");
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  height: 68px;
+  margin: 0px;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  filter: drop-shadow(0px 3px 6px rgba(255, 105, 180, 0.4));
+}
+
+.button-text {
+  z-index: 1000;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1;
+  user-select: none;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+.button-text:hover {
+  transform: scale(1.1);
+}
+
+.button-text:active {
+  transform: scale(0.8);
+}
