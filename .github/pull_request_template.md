@@ -23,6 +23,7 @@ Example how to mark a checkbox:-
 
 - [ ] You've linked this PR to the correct issue.
 - [ ] You have checked that the code is working correctly.
+- [ ] You ⭐️ the repository!
 
 ## Note to reviewers
 
