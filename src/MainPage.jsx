@@ -3,6 +3,7 @@ import { Main, Navbar, Socials, Footer } from "./components";
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import SuspenseLoader from "./components/SuspenseLoader/SuspenseLoader";
+import AddButton from "./components/AddButton/AddButton";
 const ShowPage = lazy(() => import("./components/ShowPage/ShowPage"));
 
 export default function MainPage() {
@@ -28,6 +29,8 @@ export default function MainPage() {
             </Suspense>
           }
         />
+        <Route path="/add" element={<AddButton />} />
+
       </Routes>
       <Footer modeToggle={toggleMode} />
     </div>

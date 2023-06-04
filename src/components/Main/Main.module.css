@@ -161,3 +161,42 @@
 .bar .search:focus {
   outline: none;
 }
+
+.fixedButton {
+  position: fixed;
+  z-index: 999;
+}
+
+.addButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  color: #333333;
+  cursor: pointer;
+}
+
+.buttonText {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #333333;
+  padding: 4px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.addButton:hover .buttonText {
+  opacity: 1;
+}
+

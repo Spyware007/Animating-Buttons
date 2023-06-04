@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/auth";
 import Editor from "../Editor/Editor";
 import classes from "./ShowPage.module.css";
 import { useParams } from "react-router-dom";
 
-function App() {
+function ShowPage() {
   const { id } = useParams();
   const [html, setHtml] = useState("");
   const [css, setCss] = useState("");
@@ -25,21 +27,24 @@ function App() {
   }, [html, css, js]);
 
   useEffect(() => {
-    fetch(`/Buttons/${id}/index.html`)
-      .then((response) => response.text())
-      .then((text) => setHtml(text));
+    const fetchCodeFromFirestore = async () => {
+      try {
+        const docRef = doc(db, "codes", id);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          const codeData = docSnap.data();
+          setHtml(codeData.html);
+          setCss(codeData.css);
+          setJs(codeData.js);
+        } else {
+          console.log("No code found in Firestore for ID: ", id);
+        }
+      } catch (error) {
+        console.error("Error fetching code from Firestore: ", error);
+      }
+    };
 
-    fetch(`/Buttons/${id}/style.css`)
-      .then((response) => response.text())
-      .then((text) => setCss(text));
-
-    fetch(`/Buttons/${id}/app.js`)
-      .then((response) => response.text())
-      .then((text) => {
-        if (text[0] === "<") text = " ";
-        return text;
-      })
-      .then((text) => setJs(text));
+    fetchCodeFromFirestore();
   }, [id]);
 
   return (
@@ -62,4 +67,4 @@ function App() {
   );
 }
 
-export default App;
+export default ShowPage;
