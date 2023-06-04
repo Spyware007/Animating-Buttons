@@ -1,0 +1,54 @@
+name: 🚀 New Issue
+description: Use this to create a new issue
+title: "[Add] <write what you want to add>"
+labels: ["new issue", "awaiting triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for submitting an issue! Before you proceed with the submission, please provide the following information."
+  - type: textarea
+    id: description-feature
+    attributes:
+      label: "Details"
+      description: Please describe the details in a clear and detailed manner.
+      placeholder: Please enter your detailed description of the new issue here. 
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots-feature
+    attributes:
+      label: Screenshots
+      description: Please add screenshots if applicable
+    validations:
+      required: false
+  - type: checkboxes
+    id: contribution-terms
+    attributes:
+      label: "Type of Contribution"
+      options:
+        - label: "Update to an existing Animated Button"
+          required: false
+        - label: "Adding a new Button"
+          required: false
+        - label: "Resolving a bug"
+          required: false
+        - label: "Proposal to the Repository"
+          required: false
+        - label: "Changes related to documentation or README.md"
+          required: false
+        - label: "Other Changes"
+          required: false
+  - type: checkboxes
+    id: checklist-terms
+    attributes:
+      label: "Checklist"
+      description: "By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/Spyware007/Animating-Buttons/blob/main/CODE_OF_CONDUCT.md)"
+      options:
+        - label: "I have checked the existing [issues](https://github.com/Spyware007/Animating-Buttons/issues)"
+          required: true
+        - label: "I have read the [Contributing Guidelines](https://github.com/Spyware007/Animating-Buttons/blob/main/CONTRIBUTING.md)"
+          required: true
+        - label: "I am willing to work on this issue"
+          required: false
+        - label: "I am a GSSoC'23 contributor"
+          required: false
