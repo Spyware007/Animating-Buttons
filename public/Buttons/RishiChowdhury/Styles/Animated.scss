@@ -1,0 +1,49 @@
+:root{
+    --color:#ffffff;
+    --background:#2196f3;
+}
+body{
+    font-family:roboto,sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    background-color: #151b29;
+
+}
+button{
+    background: none;
+    color:#ffa260;
+    border:2px solid;
+    padding:1em 2em;
+    font-size:1em;
+    svg
+    { 
+        height: 45px;
+        left: 0;
+        position: absolute;
+        top: 0; 
+        width: 100%; 
+  }
+    rect {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+  }
+}
+button:hover{
+    border-color:#f1ff5c;
+    color:white;
+    box-shadow:0 0.5em 0.5em -0.4em #f1ff5c;
+    transform:translateY(-0.1em);
+    cursor:pointer;
+    rect {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+}
