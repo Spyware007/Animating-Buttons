@@ -15,13 +15,10 @@ const redirectToGitHub = (username) => {
 const CreatedBy = ({ d }) => {
   return (
     <div className={classes.download}>
-    <p
-        onClick={() => redirectToGitHub(d)}
-        className={`${classes.createdBy}`}
-    >
-      Created by
-      <span className={classes.user}> {d}</span>
-    </p>
+      <p onClick={() => redirectToGitHub(d)} className={`${classes.createdBy}`}>
+        Created by
+        <span className={classes.user}> {d}</span>
+      </p>
     </div>
   );
 };
@@ -30,11 +27,11 @@ const DownloadBtn = ({ d, modeToggle }) => {
   const displayMode = modeToggle ? classes.dark_mode : classes.light_mode;
   return (
     <div className={`${classes.buttonContainer}`}>
-      <Link className={`${classes.copyBtn}  `} to={`/show/${d}`}>
-        <button className={`${classes.showcode_btn} ${displayMode}`}>
+      <button className={`${classes.download_btn} ${displayMode}`}>
+        <Link className={`${classes.showcode_btn} `} to={`/show/${d}`}>
           Show Code
-        </button>
-      </Link>
+        </Link>
+      </button>
       <button
         onClick={() => downloadFiles(d)}
         className={`${classes.download_btn} ${displayMode}`}
@@ -70,6 +67,22 @@ export default function Main({ modeToggle, modeToggleFunc }) {
     window.scrollTo({ top: 500, behavior: "smooth" });
   };
 
+  const isActive = (i) => (currentPage === i + 1 ? classes.active : "");
+  const pageNavigationButtions = (
+    <ul className={classes.paginationList}>
+      {Array(Math.ceil(Data.length / itemsPerPage))
+        .fill()
+        .map((_, index) => (
+          <li
+            key={index}
+            className={`${classes.paginationItem} ${isActive(index)}`}
+            onClick={() => handlePageChange(index + 1)}
+          >
+            {index + 1}
+          </li>
+        ))}
+    </ul>
+  );
   const [query, setQuery] = useState("");
 
   const filteredItems = Data.filter((d) =>
@@ -79,11 +92,6 @@ export default function Main({ modeToggle, modeToggleFunc }) {
 
   return (
     <>
-      {/* <h1 className={classes.text}>
-        Explore from the list of {Data?.length} Buttons by our Contributors.
-      </h1> */}
-
-      {/* search bar */}
       <div className={classes.bar}>
         <input
           type="text"
@@ -100,7 +108,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
             return (
               <div key={i}>
                 <iframe
-                  className={classes.container}
+                  className={classes.iframe_container}
                   title={d}
                   src={`Buttons/${d}/index.html?c=${isDark}`}
                 ></iframe>
@@ -111,23 +119,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
           })}
       </div>
       <div className={classes.pagination}>
-        {filteredItems.length > itemsPerPage && (
-          <ul className={classes.paginationList}>
-            {Array(Math.ceil(filteredItems.length / itemsPerPage))
-              .fill()
-              .map((_, index) => (
-                <li
-                  key={index}
-                  className={`${classes.paginationItem} ${
-                    currentPage === index + 1 ? classes.active : ""
-                  }`}
-                  onClick={() => handlePageChange(index + 1)}
-                >
-                  {index + 1}
-                </li>
-              ))}
-          </ul>
-        )}
+        {Data.length > itemsPerPage && pageNavigationButtions}
       </div>
     </>
   );

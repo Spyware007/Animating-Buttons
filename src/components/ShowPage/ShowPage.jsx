@@ -36,6 +36,10 @@ function App() {
 
     fetch(`/Buttons/${id}/app.js`)
       .then((response) => response.text())
+      .then((text) => {
+        if (text[0] === "<") text = " ";
+        return text;
+      })
       .then((text) => setJs(text));
   }, [id]);
 
@@ -94,6 +98,9 @@ function App() {
           <Editor displayName="JS" value={js} onChange={(v) => setJs(v)} />
         )}
         </div>
+        <Editor displayName="HTML" value={html} onChange={(v) => setHtml(v)} />
+        <Editor displayName="CSS" value={css} onChange={(v) => setCss(v)} />
+        <Editor displayName="JS" value={js} onChange={(v) => setJs(v)} />
       </div>
     </div>
   );
