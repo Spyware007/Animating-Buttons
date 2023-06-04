@@ -206,6 +206,6 @@ export const Data = [
   "Explorer003",
   "Pritam991",
   "lmalkam",
-  "ManaswiKasiraju646",
+  "ManaswiKasiraju646"
 ];
 
