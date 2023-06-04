@@ -9,6 +9,7 @@ export const Data = [
   "Jacinth-Mahanta_3",
   "Jacinth-Mahanta_4",
   "Jacinth-Mahanta_5",
+  "Jacinth-Mahanta_6",
   "sumitkr2000",
   "SONA-1111",
   "SONA-1111_1",
