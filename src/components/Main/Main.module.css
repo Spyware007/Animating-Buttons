@@ -118,11 +118,13 @@
 .paginationItem {
   color: white;
   padding: 10px 16px;
+  margin: auto;
   background-color: #494949;
   border: 1px solid #353535;
   cursor: pointer;
   border-radius: 50%;
   transition: background-color 0.3s, color 0.3s;
+  
 }
 
 .paginationItem:hover,
@@ -161,3 +163,24 @@
 .bar .search:focus {
   outline: none;
 }
+
+@media (min-width:425px){
+  .paginationList {
+    margin-right:2.2rem;
+    flex-wrap: wrap;
+  }
+} 
+
+@media (min-width:375px){
+  .paginationList {
+    margin-right:2.2rem;
+    flex-wrap: wrap;
+  }
+} 
+@media (min-width:320px){
+  .paginationList {
+    margin-right:2.2rem;
+    flex-wrap: wrap;
+  }
+} 
+
