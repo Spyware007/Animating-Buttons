@@ -1,0 +1,81 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body{
+  justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+
+.button{
+    text-align: center;
+    font-size: 18;
+    font-weight: 700;
+    display: inline;
+    border: 2px solid yellow;
+    background:black;
+    color: white;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 5rem;
+    font-family: serif;
+    font-style: italic;
+    font-variant: small-caps;
+    /* box-shadow: 5px 5px 8px gray,  5px 5px 8px green; */
+    box-shadow: 0 0 10px 5px #48abe0,
+    0 0 20px 7px #ebecca,
+    0 0 25px 20px #8a2be2,
+    0 0 5px 5px #ff1493;
+   
+}
+
+.button:hover{
+    transition-duration: 0ms;
+    background-color:green;
+    color: black;
+    font-weight: 800;
+    font-size: 16;
+    border: 2px solid white;
+    border-radius:50%;
+    font-family:serif;
+    text-shadow: 1px 1px white;
+    box-shadow:   5px 5px 8px red;
+    box-shadow: 5px 5px 5px gray 0px 0px 0px none 5px 5px 5px red ;
+   
+cursor: pointer;
+}
+
+.button span {
+    cursor: pointer; 
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+   
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

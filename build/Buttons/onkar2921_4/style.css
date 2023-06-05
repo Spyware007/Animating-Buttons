@@ -1,0 +1,45 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+button{
+    border: 3px solid black;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color:red;
+    background-color: black;
+    font-size: large;
+    font-family:initial;
+    box-shadow: 5px 5px 8px gray, 10px 10px 8px gray, 5px 5px 8px gray
+   
+
+   
+}
+
+button:hover{
+    background-color:black;
+    color:green;
+    box-shadow: 5px 5px 8px #325f10, 10px 10px 8px gray, 5px 5px 8px gray
+   
+}
+
+button:active{
+    box-shadow: 5px 5px #666;
+    transform: translateY(4px);
+}
