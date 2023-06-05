@@ -1,36 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body
 {
+    display: flex;
     background-color: bisque;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
-
-
-
-
-
-
 
 .button
 {
-   
     justify-content: center;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: 300px;
-    margin-left: 50%;
     height: 200px;
     width: 200px;
     border-width:5px;
     border-radius: 20px;
     box-shadow: 5px 10px gray;
-                
     cursor: pointer;
     background-color: aqua;
     color: blue;
     font-size: 20px;
     transition: all 0.5s;
-
 }
 
 .button:hover
@@ -40,7 +37,6 @@ body
     font-family: Georgia, 'Times New Roman', Times, serif;
     transition: cubic-bezier(0.4,0.47,0,1.93);
     letter-spacing: 5px;
-    
 }
 
 .button:hover::before
