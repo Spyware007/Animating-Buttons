@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+.container{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform:translate(-50%, -50%);
+}
+.button{
+    position: relative;
+    width:250px ;
+    padding: 40px ;
+    text-align: center;
+    font-size: 35x;
+    font-family: poppins;
+    color: #15f4ee;
+    font-weight: 400;
+    border: 5px solid #15f4ee;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 15px;
+    border-radius: 100px;
+    transition: 1.5s;
+}
+.button:hover{
+    box-shadow: 0 5px 50px 0#15f4ee inset, 0 5px 50px 0#15f4ee,
+               0 5px 50px 0#15f4ee inset, 0 5px 50px 0#15f4ee;
+    text-shadow:  0 5px 5px 0#15f4ee, 0 5px 5px 0#15f4ee;  
+}
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .spin {
+    animation: spin 0.1s infinite linear;
+  }
