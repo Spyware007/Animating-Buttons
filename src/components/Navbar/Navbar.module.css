@@ -18,35 +18,41 @@
 }
 
 .navbar {
-  position:sticky;
-  top:0;
-  background-color: rgba(256, 256, 256, 1);
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2px 20px;
-  box-shadow: 0px 7px 18px 0px #0000002e;
+  position: sticky;
+    top: 0;
+    
+    /* background-color: silver; */
+    background: rgb(134,132,180);
+background: linear-gradient(90deg, rgba(134,132,180,1) 42%, rgba(181,200,47,1) 68%);
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px 17px;
+   
+    box-shadow: 0px 7px 18px 0px #0000002e;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 .logo {
-  width: 100px;
+  width: 86px;
 }
 .github {
   width: 60px;
 }
 .github,
 .spider {
-  width: 50px;
+  width: 45px;
   filter: grayscale(1);
   transition: all 0.3s ease;
 }
 .github:hover,
 .spider:hover {
   filter: grayscale(0);
-  transform: rotate(-10deg) scale(1.2);
+  transform: rotate(0deg) scale(1.2);
 }
 .spider_img {
-  width: 80px;
+  width: 72px;
 }
 .mode_toggle {
   position: relative;
@@ -62,14 +68,18 @@
 
 .dark_mode {
   background-color: var(--light-bg-color);
+  
   color: var(--light-text-color);
   box-shadow: 3px 3px 5px 0px rgb(192, 191, 191);
 }
 
 .light_mode {
-  background-color: var(--dark-bg-color);
-  color: var(--dark-text-color);
-  box-shadow: 3px 3px 5px 0px #828282;
+  margin-top: -1px;
+    /* background-color: var(--dark-bg-color); */
+    background: rgb(78,75,116);
+background: linear-gradient(90deg, rgba(78,75,116,1) 29%, rgba(110,208,207,1) 61%);
+    color: var(--dark-text-color);
+    box-shadow: 3px 3px 5px 0px #828282;
 }
 
 .light_mode img {

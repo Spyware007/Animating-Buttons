@@ -1,8 +1,22 @@
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 100px;
+  /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 93px 10px 10px 10px; */
+    /* margin: -50px 0px;
+    padding: 58px 95px;
+    background-color: bisque;
+    width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 93px 10px 10px 10px; */
+    margin: -50px 0px;
+    padding: 58px 95px;
+    background-color: #609898;
+    width: 100%;
+
+
 }
 .footer_right {
   all: unset;

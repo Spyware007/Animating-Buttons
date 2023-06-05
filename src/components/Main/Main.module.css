@@ -38,8 +38,9 @@
 
 .paginationList {
   list-style-type: none;
-  display: flex;
-  gap: 5px;
+    display: flex;
+    gap: 5px;
+    padding: 45px 9px;
 }
 
 /* styles for created by tag */
