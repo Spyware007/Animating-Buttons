@@ -68,7 +68,6 @@ This project aims to provide a collection of animated buttons that you can use t
 
 ### Contribution Steps:
 
-
 〽️ First, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
 
 〽️ Clone the forked repo to your local machine using the following command:
@@ -76,12 +75,7 @@ This project aims to provide a collection of animated buttons that you can use t
 git clone https://github.com/**username**/Animating-Buttons.git
 ```
 
-
-- Navigate to project directory.
-
-
 〽️ Navigate to project directory.
-
 ```terminal
 cd Animating-Buttons
 ```
@@ -91,42 +85,14 @@ npm i
 npm start
 ```
 
-
-- Create a new Branch
-
-  
 〽️ Create a new Branch
-
-
 ```
 git checkout -b my-new-branch
 ```
 
-
-🚀🚀 **Go to [public/Buttons](https://github.com/Spyware007/Animating-Buttons/blob/main/src/components/Main/Main.jsx) folder and add a new folder with your GitHub username including your button code (index.html + style.css files)**
-
-🚀🚀  **Animating Buttons Repository Instructions**
-
+-  **Animating Buttons Repository Instructions**
 
 To contribute to the Animating Buttons repository, follow these steps:
-
-
-
-  <a href = "#top"> Back to top</a>
-
-# Note:
-
-- Make sure to align your button centered horizontally as well as vertically.
-- Don't forget to replace 'your_github_username' with GitHub Username.
-- If you are adding more than one buttons then give proper names such as Spyware007_1,Spyware007_2, your_github_username_1,etc
-
-- Stage your changes.
-
-```
-git add .
-```
-
-- Commit your changes.
 
 | Step | Description                                                                                                     | Link                                                         |
 |------|-----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
@@ -137,36 +103,29 @@ git add .
 
 Note: Replace `github_username` with your actual GitHub username.
  
-
-
 | Note                                                                                            |
 |-------------------------------------------------------------------------------------------------|
 | Make sure to align your button centered horizontally as well as vertically.                     |
 | Don't forget to replace 'your_github_username' with your actual GitHub username.                |
 | If you are adding more than one button, give them proper names like Spyware007_1, Spyware007_2, your_github_username_1, etc. |
 
-
 〽️ Stage your changes. 
 ```
 git add .
 ```
-〽️ Commit your changes.
 
+〽️ Commit your changes.
 
 ```
 git commit -m "Relevant message"
 ```
 
-
-- Then push
-
+〽️ Then push 
 ```
 git push origin my-new-branch
 ```
 
-- Finally, create a new pull request from your forked repository
-
----
+〽️ Finally, create a new pull request from your forked repository
 
 ---
 
@@ -176,22 +135,9 @@ git push origin my-new-branch
 - Make sure that your file name and your commit message are relevant.
 - Also, make sure you comment your code wherever necessary.
 
----
-
 <a href = "#top"> Back to top</a>
 
-# Our Beloved Contributors 😍
-
-〽️ Then push 
-```
-git push origin my-new-branch
-```
-〽️ Finally, create a new pull request from your forked repository
-
-
-
 ----
-
 
 | Note                                                                                                                             |
 |----------------------------------------------------------------------------------------------------------------------------------|
@@ -239,6 +185,8 @@ A big thank you to all our contributors who have made this project better with t
 Don't forget to ⭐ this repository to show your support!
 
 ---
+  
+# Our Beloved Contributors 😍
 
 PS: A big thank you to all our contributors who have made this project better with their valuable contributions! We appreciate your efforts and dedication.
 
