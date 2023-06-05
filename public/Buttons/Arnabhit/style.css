@@ -1,0 +1,61 @@
+.glass-panel {
+  
+  
+    color: #fff;
+    margin: 40px auto;
+    background-color: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    border-radius: 15px;
+    padding: 32px;
+    margin-top: 250px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .glass-button {
+    box-shadow:5px 5px   #888888;
+    display: inline-block;
+    padding: 24px 32px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .glass-button:hover {
+    background-color: rgba(255,255,255,0.2);
+  }
+  
+  /* Extra styles for demo */
+  /* Article:  https://superdevresources.com/glassmorphism-ui-css/ */
+  body {
+    display: flex;
+    justify-content: center;
+  
+    align-items: center;
+    background: url(https://superdevresources.com/wp-content/uploads/2015/12/new-york-background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .glass-panel {  
+    max-width: 600px;
+  }
+  
+  .glass-button {
+    margin: 15px;
+    margin-top: 40px;
+  }
+  
+  
