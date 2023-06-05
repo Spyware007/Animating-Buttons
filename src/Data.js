@@ -319,8 +319,9 @@ export const Data = [
   "Dhruv-Srivastava",
   "Samriddhi15_2",
   "Samriddhi15",
-  "Dhruv-Srivastava"
+  "Dhruv-Srivastava",
   "khushbumaheshwarii",
   "khushbumaheshwarii_1",
-  "Arnabhit"
+  "Arnabhit",
+  "Prajwal0225"
 ];
