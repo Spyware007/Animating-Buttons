@@ -1,0 +1,42 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fill {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px 30px;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.fill::after {
+  content: "";
+  background-color: darkcyan;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+.fill:hover {
+  border: 0px;
+  color: black;
+}
+.fill:hover::after {
+  top: 0px;
+  left: 0px;
+}
