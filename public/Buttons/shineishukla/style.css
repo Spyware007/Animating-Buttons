@@ -1,0 +1,30 @@
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .shape-changing-button {
+    padding: 15px 30px;
+    background-color: #e78eaa;
+    color: black;
+    font-size: 16px;
+    border: none;
+    border-radius: 0%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0.6, 0.8);
+  }
+  
+  .shape-changing-button:hover {
+    padding: 25px;
+    width: 100px;
+    border-radius: 90%;
+    transition: 0.7s;
+    outline-color: transparent;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0.6, 0.8);
+  }
+  
+  
