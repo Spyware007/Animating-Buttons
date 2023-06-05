@@ -13,7 +13,7 @@ body{
 .btn {
     padding: 1rem 2rem;
     border: none;
-    animation: tilt 2s ease-in-out infinite;
+    animation: tilt 1.8s ease-in-out infinite;
 }
 .btn-text {
     transform: skew(5deg);
@@ -48,4 +48,8 @@ body{
     background-image: linear-gradient(25deg,rgb(82, 174, 231),rgb(31, 176, 220),rgb(41, 193, 223),rgb(110, 229, 242));
     box-shadow: 1px 4px 5px 4px rgba(8, 36, 59,0.25);
     transform: rotate(0deg) skew(5deg);
+}
+
+.btn-text:active {
+    transform: skew(0deg);
 }
