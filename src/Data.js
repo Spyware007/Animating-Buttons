@@ -327,7 +327,7 @@ export const Data = [
   "Samriddhi15",
   "Dhruv-Srivastava",
   "shruuti321",
-  "HimanshuNarware_1"
+  "HimanshuNarware_1",
   "Explorer003_3",
   "0xabdulkhalid_7",
   "0xabdulkhalid_6",
@@ -337,5 +337,6 @@ export const Data = [
   "0xabdulkhalid_3",
   "khushbumaheshwarii",
   "khushbumaheshwarii_1",
-  "Arnabhit"
+  "Arnabhit",
+  "AnkitMajee",
 ];
