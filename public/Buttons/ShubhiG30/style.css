@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    .button-03 {
+      appearance: none;
+      border-bottom-left-radius: 2em;
+      border-bottom-right-radius: 13rem;
+      border-top-left-radius: 13rem;
+      border-top-right-radius: 2em;
+      border-style: none;
+      box-sizing: border-box;
+      color: #000000;
+      cursor: pointer;
+      display: inline-block;
+      font-family: -apple-system,sans-serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: -.24px;
+      margin: 0;
+      outline: none;
+      padding: 1rem 1.3rem;
+      quotes: auto;
+      text-align: center;
+      text-decoration: none;
+      touch-action: manipulation;
+      background: linear-gradient(45deg, rgb(175, 152, 138) 0%, rgb(175, 152, 138) 40%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+      z-index: 20;
+      transition: opacity 0.2s ease;
+    }
+    
+    .button-03:hover {
+      background-color: #332c3e;
+      box-shadow: #2e233a 0 -6px 8px inset;
+      transform: scale(1.125);
+    }
+    
+    .button-03:active {
+      transform: scale(1.025);
+    }
+    
+    @media (min-width: 768px) {
+      .button-03 {
+        font-size: 1.5rem;
+        padding: .75rem 2rem;
+        color: aliceblue
+      }
+    }
