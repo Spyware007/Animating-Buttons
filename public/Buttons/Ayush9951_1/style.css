@@ -1,0 +1,24 @@
+body {
+    background: white;
+}
+
+button {
+    width: 150px;
+    padding: 14px;
+    background: #5465ff;
+    color: white;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: white;
+    border: 1px solid #4361ee;
+    color: #4361ee;
+}
