@@ -10,6 +10,7 @@ export const Data = [
   "Jacinth-Mahanta_4",
   "Jacinth-Mahanta_5",
   "Jacinth-Mahanta_6",
+  "Jacinth-Mahanta_7",
   "sumitkr2000",
   "SONA-1111",
   "SONA-1111_1",
@@ -296,6 +297,7 @@ export const Data = [
   "code-gen21",
   "Siddharth961",
   "Siddharth961_2",
+  "Siddharth961_3",
   "harshita-2003",
   "rohanmittal1163",
   "rohanmittal1163-1",
@@ -306,5 +308,8 @@ export const Data = [
   "0xabdulkhalid_1",
   "Samriddhi15_1",
   "Dhruv-Srivastava",
-  "Samriddhi15_2"
+  "Samriddhi15_2",
+  "Samriddhi15",
+  "Dhruv-Srivastava",
+  "Arnabhit"
 ];
