@@ -252,10 +252,6 @@ PS: A big thank you to all our contributors who have made this project better wi
 
 </div>
 
-
-### You can follow me [here](https://github.com/Spyware007) 🤍
-
-  <a href = "#top"> Back to top</a>
 </div>
   
 
