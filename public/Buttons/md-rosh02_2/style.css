@@ -1,0 +1,115 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: #1c1c1e;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.container .button {
+  cursor: pointer;
+  background: linear-gradient(130deg, #212123, #171719);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 140px;
+  border-radius: 150px;
+  box-shadow: -4px -4px 20px rgba(255, 255, 255, 0.15),
+    4px 4px 20px rgba(0, 0, 0, 0.9);
+}
+.container .button .left-click-trigger,
+.container .button .right-click-trigger {
+  position: absolute;
+  left: 0;
+  z-index: 50;
+  width: 50%;
+  height: 100%;
+  top: 0;
+}
+.container .button .right-click-trigger {
+  left: 50%;
+}
+.container .button .switch {
+  background: linear-gradient(90deg, #2b2b2e, #0d0d0e);
+  border-radius: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 70%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.container .button .switch .inner {
+  background: linear-gradient(90deg, #171719 45%, #212123 55%);
+  width: 94%;
+  height: 100%;
+  transition: 0.5s cubic-bezier(0.9, 0, 0, 1);
+  position: absolute;
+  left: 6%;
+  border-radius: 150px;
+}
+.container .button .switch .inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #212123 45%, #171719 55%);
+  transition: 0.5s cubic-bezier(0.9, 0, 0, 1);
+  border-radius: 150px;
+  opacity: 0;
+}
+.container .button .icon-on {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  background: #a1f1f2;
+  width: 5px;
+  height: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px 2px rgba(161, 241, 242, 0.8);
+  transition: 0.5s cubic-bezier(0.9, 0, 0, 1);
+}
+.container .button .icon-off {
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  transform: translate(-45%, -50%) rotate3d(0, 1, 0, 25deg);
+  background: #171719;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transition: 0.5s cubic-bezier(0.9, 0, 0, 1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(0, 0, 0, 0.5);
+  border: 5px solid #2d2d30;
+}
+.container .button.off .icon-on {
+  left: 67%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+  background: #2d2d30;
+  transform: translate(-50%, -50%) rotate3d(0, 1, 0, 25deg);
+}
+.container .button.off .icon-off {
+  left: 30%;
+  background: #212123;
+  border-color: #f2a2a1;
+  box-shadow: 0 0 30px rgba(242, 162, 161, 0.8),
+    inset 0 0 15px rgba(242, 162, 161, 0.5);
+  transform: translate(-50%, -50%) rotate3d(0, 1, 0, 0deg);
+}
+.container .button.off .switch .inner {
+  left: 0;
+}
+.container .button.off .switch .inner::after {
+  opacity: 1;
+}
