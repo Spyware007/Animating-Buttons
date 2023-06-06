@@ -125,6 +125,7 @@ export const Data = [
   "MrCuber",
   "MrCuber_1",
   "MrCuber_2",
+  "MrCuber_3",
   "NMN03",
   "NMN03_1",
   "Nagapadmini7",
