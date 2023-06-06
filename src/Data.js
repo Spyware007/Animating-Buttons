@@ -339,6 +339,7 @@ export const Data = [
   "khushbumaheshwarii",
   "khushbumaheshwarii_1",
   "Arnabhit",
+  "Prajwal0225",
   "AnkitMajee",
   "Samriddhi15_3",
   "PayalPadmalyaPrusty"
