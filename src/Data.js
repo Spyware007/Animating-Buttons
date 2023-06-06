@@ -126,6 +126,7 @@ export const Data = [
   "MrCuber",
   "MrCuber_1",
   "MrCuber_2",
+  "MrCuber_3",
   "NMN03",
   "NMN03_1",
   "Nagapadmini7",
@@ -272,6 +273,7 @@ export const Data = [
   "dheeraj1129",
   "lmalkam",
   "priyam212001",
+  "aishjahan",
   "md-rosh02_2",
   "md-rosh02_4",
   "md-rosh02_5",
@@ -346,6 +348,7 @@ export const Data = [
   "khushbumaheshwarii",
   "khushbumaheshwarii_1",
   "Arnabhit",
+  "utkarshjaulkar"
   "Prajwal0225",
   "AnkitMajee",
   "Samriddhi15_3",
