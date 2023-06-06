@@ -1,5 +1,4 @@
 export const Data = [
-  // "HardikMisri",
   "Jacinth-Mahanta_1",
   "Jacinth-Mahanta_2",
   "Jacinth-Mahanta_3",
@@ -9,6 +8,13 @@ export const Data = [
   "Jacinth-Mahanta_7",
   "Jacinth-Mahanta_8",
   "Jacinth-Mahanta_9",
+  // "HardikMisri",
+  "sumitkr2000_1",
+  "Harshu467",
+  "AbhaBarge",
+  "gokaydmrl",
+  "Ayush9951_1",
+  "Ayush9951_2",
   "Harshu467",
   "AbhaBarge",
   "gokaydmrl",
@@ -338,5 +344,9 @@ export const Data = [
   "0xabdulkhalid_3",
   "khushbumaheshwarii",
   "khushbumaheshwarii_1",
-  "Arnabhit"
+  "Arnabhit",
+  "Prajwal0225",
+  "AnkitMajee",
+  "Samriddhi15_3",
+  "PayalPadmalyaPrusty"
 ];
