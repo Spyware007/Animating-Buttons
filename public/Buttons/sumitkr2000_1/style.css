@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background: #ebeef1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 10px 15px;
+  margin: 20px;
+  background: #ebeef1;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  color: #00a037;
+  box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+    -10px -10px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+@keyframes moveRight {
+  from {
+    opacity: 10;
+    transform: translate(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translate(70px);
+  }
+}
+
+@keyframes moveLeft {
+  from {
+    opacity: 10;
+    transform: translate(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-80px);
+  }
+}
+
+button:hover .acpt {
+  animation: moveRight 1.5s linear 0s infinite;
+}
+
+button:hover .rjct {
+  animation: moveLeft 1.5s linear 0s infinite;
+}
+
+button.reject {
+  color: #ed0000;
+  box-shadow: inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+    inset -10px -10px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+button i {
+  padding: 10px;
+  color: #fff;
+  border-radius: 100%;
+}
+
+button .acpt {
+  margin-right: 55px;
+  background-color: #00a037;
+}
+
+button .rjct {
+  margin-left: 70px;
+  background-color: #ed0000;
+}
