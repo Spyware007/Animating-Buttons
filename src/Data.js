@@ -240,8 +240,8 @@ export const Data = [
   "dassoumen98_1",
   "piyushkhurana2019",
   "lakhan06",
-  "SyedImtiyazAli"
-  "yaswika0311"
+  "SyedImtiyazAli",
+  "yaswika0311",
   "SyedImtiyazAli",
   "SyedImtiyaz-1",
   "sudarshan-hub",
@@ -352,10 +352,12 @@ export const Data = [
   "khushbumaheshwarii",
   "khushbumaheshwarii_1",
   "Arnabhit",
-  "utkarshjaulkar"
+  "Ash0807",
+  "utkarshjaulkar",
   "Prajwal0225",
   "AnkitMajee",
   "Samriddhi15_3",
-  "PayalPadmalyaPrusty"
-
+  "PayalPadmalyaPrusty",
+  "PayalPadmalyaPrusty",
+  "Roshnijeewani3457"
 ];
