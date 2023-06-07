@@ -1,0 +1,25 @@
+button {
+    padding: 0.6em 1em;
+    border: 4px solid #f3a801;
+    transition: ease-in-out 0.3s;
+    background-color: transparent;
+    color: #f3a801;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+button:hover {
+    transform: scale(1.21) rotate(5deg);
+    background-color: #ffc101;
+    border: 4px solid #ffc101;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+}
