@@ -4,11 +4,8 @@ import { Loader } from "./components";
 import MainPage from "./MainPage";
 import ErrorPage from './components/ErrorPage/404Error'
 import { BrowserRouter, Routes,Route } from "react-router-dom";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter,Routes,Route} from "react-router-dom";
 import GoToTop from "./components/Top/GoToTop";
-
-
-
 const App = ({ modeToggleFunc,modeToggle }) => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
