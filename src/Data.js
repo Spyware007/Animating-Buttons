@@ -30,7 +30,6 @@ export const Data = [
   "Anmol-Baranwal",
   "Aryan5464",
   "Archit-Kohli",
-  "Shreyans2004_2",
   "Ayush9951",
   "Guli93",
   "adarshgupta404",
@@ -347,7 +346,7 @@ export const Data = [
   "khushbumaheshwarii",
   "khushbumaheshwarii_1",
   "Arnabhit",
-  "utkarshjaulkar"
+  "utkarshjaulkar",
   "Prajwal0225",
   "AnkitMajee",
   "Samriddhi15_3",
