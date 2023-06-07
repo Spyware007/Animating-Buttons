@@ -8,6 +8,7 @@ export const Data = [
   "Jacinth-Mahanta_7",
   "Jacinth-Mahanta_8",
   "Jacinth-Mahanta_9",
+  "Jacinth-Mahanta_10",
   // "HardikMisri",
   "sumitkr2000_1",
   "Harshu467",
@@ -347,10 +348,12 @@ export const Data = [
   "khushbumaheshwarii",
   "khushbumaheshwarii_1",
   "Arnabhit",
+  "Ash0807",
   "utkarshjaulkar",
   "Prajwal0225",
   "AnkitMajee",
   "Samriddhi15_3",
   "PayalPadmalyaPrusty",
   "vedangc03",
+  "Roshnijeewani3457"
 ];
