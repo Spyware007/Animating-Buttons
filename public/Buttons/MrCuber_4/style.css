@@ -2,8 +2,8 @@ body {
     text-align: center;
     align-items: center;
     justify-content: center;
-    height: 95vh;
     display: flex;
+    height: 95vh;
     background-color: rgba(0, 0, 0, 0.658);
 }
 button {
