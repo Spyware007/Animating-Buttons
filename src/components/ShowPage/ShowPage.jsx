@@ -1,54 +1,65 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Editor from "../Editor/Editor";
 import classes from "./ShowPage.module.css";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 
-export default function ShowPage() {
+function App() {
   const { id } = useParams();
-  const componentValues = ["html", "css", "js"];
+  const [html, setHtml] = useState("");
+  const [css, setCss] = useState("");
+  const [js, setJs] = useState("");
+  const [srcDoc, setSrcDoc] = useState("");
 
-  const [htmlCode, setHtmlCode] = useState();
-  const [cssCode, setCssCode] = useState();
-  const [jsCode, setJsCode] = useState();
-  let codes = [htmlCode, cssCode, jsCode];
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setSrcDoc(`
+        <html>
+          <body>${html}</body>
+          <style>${css}</style>
+          <script>${js}</script>
+        </html>
+      `);
+    }, 250);
 
-  fetch(`/Buttons/${id}/index.html`)
-    .then((response) => response.text())
-    .then((text) => setHtmlCode(text));
+    return () => clearTimeout(timeout);
+  }, [html, css, js]);
 
-  fetch(`/Buttons/${id}/style.css`)
-    .then((response) => response.text())
-    .then((text) => setCssCode(text));
+  useEffect(() => {
+    fetch(`/Buttons/${id}/index.html`)
+      .then((response) => response.text())
+      .then((text) => setHtml(text));
 
-  fetch(`/Buttons/${id}/app.js`)
-    .then((response) => response.text())
-    .then((text) => setJsCode(text));
+    fetch(`/Buttons/${id}/style.css`)
+      .then((response) => response.text())
+      .then((text) => setCss(text));
 
-  const styles = {
-    margin: "2px",
-  };
-
-  const components = componentValues.map((component, i) => {
-    return (
-      <div className={classes.text_field} key={i}>
-        <div style={styles}>{component.toUpperCase()} Code</div>
-        <textarea value={`${codes[i]}`} readOnly />
-        <button onClick={(e) => navigator.clipboard.writeText(e.target.value)}>
-          Copy {component}
-        </button>
-      </div>
-    );
-  });
+    fetch(`/Buttons/${id}/app.js`)
+      .then((response) => response.text())
+      .then((text) => {
+        if (text[0] === "<") text = " ";
+        return text;
+      })
+      .then((text) => setJs(text));
+  }, [id]);
 
   return (
     <div className={classes.editor_container}>
       <div className={classes.iframe_container}>
         <iframe
           className={classes.container}
-          title={id}
-          src={`../../Buttons/${id}/index.html?c=light_mode`}
-        ></iframe>
+          srcDoc={srcDoc}
+          title="output"
+          sandbox="allow-scripts"
+          width="100%"
+        />
       </div>
-      <div className={classes.components_container}>{components}</div>
+      <div className={classes.components_container}>
+        <Editor displayName="HTML" value={html} onChange={(v) => setHtml(v)} />
+        <Editor displayName="CSS" value={css} onChange={(v) => setCss(v)} />
+        <Editor displayName="JS" value={js} onChange={(v) => setJs(v)} />
+      </div>
     </div>
   );
 }
+
+export default App;
