@@ -1,6 +1,6 @@
 
 <div align="center">
-<img width="100" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
+<img width="200" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
 </div>
 <div id="top">
 <h1 style="margin-top:0px"align = "center"> ✅ Animating Buttons </h1> 
