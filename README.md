@@ -151,13 +151,13 @@ git push origin my-new-branch
 〽️ Finally, create a new pull request from your forked repository
 create a new pull request from your forked repository
 
-
+|------------------------------------------------------------------------------------------------------|
 | Note                                                                                                 |
 |------------------------------------------------------------------------------------------------------|
-| Make sure you commit your changes in a new branch❗❗                                                |
+| Make sure you commit your changes in a new branch❗❗                                               |
 | Make sure that your file name and your commit message are relevant.                                  |
-| Also, make sure you comment your code wherever necessary.                                             |
-
+| Also, make sure you comment your code wherever necessary.                                            |
+|------------------------------------------------------------------------------------------------------|
 
 ---
 
