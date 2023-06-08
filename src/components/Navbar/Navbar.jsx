@@ -31,9 +31,13 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               About
             </NavLink>
           </li>
-          <li className={classes.image_container_mobile}>
+          <a
+            href="https://github.com/Spyware007/Animating-Buttons"
+            target="__blank"
+            className={classes.image_container_mobile}
+          >
             <img className={classes.image} src={github} alt="Creator" />
-          </li>
+          </a>
           <button
             className={`${classes.mode_toggle} ${
               modeToggle ? classes.dark_mode : classes.light_mode

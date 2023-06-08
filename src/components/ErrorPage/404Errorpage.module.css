@@ -1,36 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700%7D");
 @import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
 
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-}
-
 .pg_not_found {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   font-size: x-large;
-  color: aliceblue;
-  height: 100vh;
+  color: rgb(0, 0, 0);
+  height: 71vh;
   width: 100vw;
 }
-
-body {
-  font-family: "Montserrat", sans-serif;
+.pg_not_found.pg_not_found-dark .heading2,
+.pg_not_found.pg_not_found-dark .para {
+  color: #ff0000;
 }
-
-main {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  text-align: center;
-}
-
 .error {
   color: red;
   font-size: 12.5rem;
@@ -38,6 +22,7 @@ main {
   margin: 0.025em 0;
   text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, 0.25);
   white-space: nowrap;
+  font-family: "Montserrat", sans-serif;
 }
 @media (max-width: 30rem) {
   .error {
@@ -49,36 +34,6 @@ main {
   animation: spooky 2s alternate infinite linear;
   color: #528cce;
   display: inline-block;
-}
-
-h2 {
-  color: black;
-  margin-bottom: 0.4em;
-}
-
-p {
-  color: black;
-  margin-top: 0;
-}
-
-.btn {
-  width: 200px;
-  height: 60px;
-  margin: 30px;
-  font-size: 30px;
-  border: none;
-  color: rgb(0, 0, 0);
-  line-height: 64px;
-  overflow: hidden;
-  border-radius: 70px;
-  outline: none;
-  text-decoration: none;
-}
-
-.btn:hover {
-  color: rgb(0, 0, 0);
-  background-color: rgb(11, 203, 236);
-  box-shadow: 0 0 20px rgb(14, 213, 239), 0 0 30px rgb(14, 213, 240);
 }
 
 @-webkit-keyframes spooky {
@@ -96,5 +51,18 @@ p {
   }
   to {
     transform: translatey(-0.15em);
+  }
+}
+.goback_link {
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .heading2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .para {
+    font-size: 1rem;
+    text-align: center;
   }
 }

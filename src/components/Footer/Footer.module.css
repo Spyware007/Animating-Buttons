@@ -72,6 +72,7 @@
 @media screen and (max-width: 768px) {
   .footer {
     flex-direction: column;
+    padding: 20px 0;
   }
   .footer_left {
     display: flex;

@@ -1,31 +1,34 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
-import "./404Errorpage.css";
 import { NavLink } from "react-router-dom";
+import classes from "./404Errorpage.module.css";
 
-const ErrorPage = () => {
+const ErrorPage = ({ modeToggle, modeToggleFunc }) => {
   return (
     <>
-      <Navbar />
-      <div className="pg_not_found">
-        <h1 className="error">
+      <div
+        className={`${classes.pg_not_found} ${
+          !modeToggle
+            ? classes["pg_not_found-dark"]
+            : classes["pg_not_found-light"]
+        }`}
+      >
+        <h1 className={classes.error}>
           4
           <span>
             <i class="fas fa-ghost"></i>
           </span>
           4
         </h1>
-        <h2>Error: 404 page not found</h2>
-        <p>Sorry, the page you're looking for cannot be accessed</p>
-        <NavLink to="/">
-          <h3 class="btn">
-            <i class="bx bx-arrow-back bx-tada bx-flip-horizontal"></i> Go Back
-          </h3>
+        <h2 className={classes.heading2}>Error: 404 Button not found</h2>
+        <p className={classes.para}>
+          Sorry, the page you're looking for cannot be accessed
+        </p>
+        <NavLink className={classes.goback_link} to="/">
+          Go back to homepage
         </NavLink>
       </div>
-
-      <Footer />
     </>
   );
 };
