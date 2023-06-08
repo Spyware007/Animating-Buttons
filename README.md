@@ -22,6 +22,7 @@
   <img src="https://img.shields.io/github/issues-pr-closed-raw/spyware007/Animating-Buttons?style=for-the-badge" />
   <img src="https://img.shields.io/github/forks/spyware007/Animating-Buttons?style=for-the-badge" />
   <img src="https://svgshare.com/i/tYz.svg" />
+</div>
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -62,7 +63,7 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 </div>  -->
 
 
-# What can You Contribute ⚠️ 
+## What can You Contribute ⚠️ 
 
 | **Contribution Guidelines**                                                                                    |                           |
 |---------------------------------------------------------------------------------------------------------------|---------------------------|
@@ -73,7 +74,7 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 
 <!-- ### Contribution Steps: -->
 
-# How can you contribute?
+## How to contribute?
 ### Animating Buttons Repository Instructions 🚀🚀 
 To contribute to the Animating Buttons repository, follow these steps:
 
