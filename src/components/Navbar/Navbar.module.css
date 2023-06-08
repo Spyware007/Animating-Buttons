@@ -91,7 +91,7 @@
 }
 .github:hover .username {
   color: #000;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .navbar.navbar-dark .username {
   color: #fff;
@@ -112,6 +112,7 @@
   border-radius: 300px;
   margin-left: auto;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .dark_mode {

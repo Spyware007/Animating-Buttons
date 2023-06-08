@@ -25,14 +25,22 @@ const Landing = ({ modeToggle, modeToggleFunc }) => {
             <img className={classes.image} src={Memoji} alt="memoji" />
           </div>
           <div className={classes.social_profile}>
-            <div className={classes.link}>
+            <a
+              href="https://twitter.com/oom_gawande"
+              target="__blank"
+              className={classes.link}
+            >
               <Twitter />
               <span className={classes.text}>@oom_gawande</span>
-            </div>
-            <div className={classes.link}>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/om-gawande/"
+              target="__blank"
+              className={classes.link}
+            >
               <LinkedIn />
               <span className={classes.text}>/om-gawande</span>
-            </div>
+            </a>
           </div>
         </div>
         <div className={classes.rectangle}>
