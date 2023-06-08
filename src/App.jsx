@@ -1,13 +1,16 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import { Loader } from "./components";
-import MainPage from "./MainPage";
 import ErrorPage from "./components/ErrorPage/404Error";
 import { Routes, Route } from "react-router-dom";
 import GoToTop from "./components/Top/GoToTop";
+import { Main, Navbar, Socials, Footer } from "./components";
+import SuspenseLoader from "./components/SuspenseLoader/SuspenseLoader";
+const ShowPage = lazy(() => import("./components/ShowPage/ShowPage"));
 
 const App = ({ modeToggleFunc, modeToggle }) => {
   const [loading, setLoading] = useState(false);
+  const [toggleMode, setToggleMode] = useState(false);
+
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -17,16 +20,42 @@ const App = ({ modeToggleFunc, modeToggle }) => {
 
   return (
     <>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            loading ? <Loader /> : <MainPage modeToggleFunc={modeToggle} />
-          }
-        />
-        <Route path="*" element={<ErrorPage modeToggleFunc={modeToggle} />} />
-      </Routes>
-      <GoToTop />
+      {loading ? (
+        <Loader />
+      ) : (
+        <div className={`${toggleMode ? "dark" : "light"}`}>
+          <Navbar modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
+
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div>
+                  <Socials modeToggle={toggleMode} />
+                  <Main
+                    modeToggle={toggleMode}
+                    modeToggleFunc={setToggleMode}
+                  />
+                </div>
+              }
+            />
+            <Route
+              path={"/show/:id"}
+              element={
+                <Suspense fallback={<SuspenseLoader />}>
+                  <ShowPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path="*"
+              element={<ErrorPage modeToggleFunc={modeToggle} />}
+            />
+          </Routes>
+          <GoToTop />
+          <Footer modeToggle={toggleMode} />
+        </div>
+      )}
     </>
   );
 };

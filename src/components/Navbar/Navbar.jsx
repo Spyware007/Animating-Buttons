@@ -1,8 +1,9 @@
 import React from "react";
 import classes from "./Navbar.module.css";
-import github from "../../assets/github.png";
-import gdsc from "../../assets/gdsc.png";
-import spider from "../../assets/spider.png";
+import { NavLink } from "react-router-dom";
+
+// images
+import spidey from "../../assets/spidey.png";
 import moon from "../../assets/moon.png";
 import sun from "../../assets/sun.png";
 
@@ -14,38 +15,38 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
           !modeToggle ? classes["navbar-light"] : classes["navbar-dark"]
         }`}
       >
-        <a
-          className={classes.link}
-          href="https://gdsc.community.dev/dy-patil-college-of-engineering-pune/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img className={classes.logo} src={gdsc} alt="gdsc_logo" />
-        </a>
-        <a
-          className={classes.spider}
-          href="https://github.com/spyware007"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img className={classes.spider_img} src={spider} alt="spider_logo" />
-        </a>
-        <button
-          className={`${classes.mode_toggle} ${
-            modeToggle ? classes.dark_mode : classes.light_mode
-          }`}
-          onClick={() => modeToggleFunc(!modeToggle)}
-        >
-          <img src={modeToggle ? sun : moon} alt="" />
-        </button>
-        <a
-          className={classes.link}
-          href="https://github.com/Spyware007/Animating-Buttons"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img className={classes.github} src={github} alt="github_link" />
-        </a>
+        <ul className={classes.navlist}>
+          <li className={classes.list_item}>
+            <NavLink className={classes.list_item_link} to="/">
+              Home
+            </NavLink>
+          </li>
+          <li className={classes.list_item}>
+            <NavLink className={classes.list_item_link} to="/explore">
+              Explore
+            </NavLink>
+          </li>
+          <li className={classes.list_item}>
+            <NavLink className={classes.list_item_link} to="/about">
+              About
+            </NavLink>
+          </li>
+          <button
+            className={`${classes.mode_toggle} ${
+              modeToggle ? classes.dark_mode : classes.light_mode
+            }`}
+            onClick={() => modeToggleFunc(!modeToggle)}
+          >
+            <img src={modeToggle ? sun : moon} alt="" />
+          </button>
+        </ul>
+
+        <div className={classes.github}>
+          <div className={classes.image_container}>
+            <img className={classes.image} src={spidey} alt="Creator" />
+          </div>
+          <span className={classes.username}>Spyware007</span>
+        </div>
       </nav>
     </>
   );
