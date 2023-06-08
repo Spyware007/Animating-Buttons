@@ -1,0 +1,55 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f0f0f;
+    
+}
+a{
+    padding: 15px 35px;
+    position: relative;
+    text-decoration: none;
+    font-size: 25px;
+    /* text-transform: uppercase; */
+    color: #fff;
+    background: linear-gradient(60deg, #0ce39a,#c92be9 ) ;
+    border-radius: 9px;
+    font-family: 'Montserrat', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-weight: 100;
+}
+a span{
+    position: relative;
+z-index: 1;
+}
+a::before{
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: #272727;
+    border-radius: 9px;
+
+transition: 0.5s;}
+a:hover::before{
+    opacity: 0.7;
+}
+a::after{
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(45deg, #0ce39a,#69007f)
+    border-radius: 11px;
+
+transition: 0.5s;}
+a:hover::after{
+    opacity: 1;
+}
