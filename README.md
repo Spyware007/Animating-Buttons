@@ -33,11 +33,13 @@
 Coolest place in the digital universe, the Animating Buttons repository! This project aims to provide a collection of animated buttons that you can use to enhance your web development projects. Whether you're a beginner or an experienced developer, these buttons will add a touch of interactivity and flair to your websites.
 </div>
 
+-------------------
+
 # GSSoC 2023 〽️
 
 ![Screenshot](https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png)
 
-
+--------------------
 <!-- <h1 align="center">✨✨HacktoberFest 2022✨✨</h1>
 <img width="1440" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png">
 
@@ -72,10 +74,13 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 | - Make sure you follow the below steps before making your contributions. ❗❗❗                               |                           |
 </div>
 
+------------------------
+
 <!-- ### Contribution Steps: -->
 
-## How to contribute?
-### Animating Buttons Repository Instructions 🚀🚀 
+<h2 align="center"> How to contribute? ⚠️</h2>
+
+### Animating Buttons Repository Instructions 🚀🚀  
 To contribute to the Animating Buttons repository, follow these steps:
 
 - 〽️ First, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
@@ -111,7 +116,7 @@ git checkout -b my-new-branch
 
 Note: Replace `github_username` with your actual GitHub username.
  
-
+-----------------------------------------------------
 
 | Note                                                                                            |
 |-------------------------------------------------------------------------------------------------|
@@ -123,11 +128,11 @@ Note: Replace `github_username` with your actual GitHub username.
 
 <!-- <a href = "#top"> Back to top</a> -->
 
-- ### Note:
+- #### Note:
   - Make sure to align your button centered horizontally as well as vertically.
   - Don't forget to replace 'your_github_username' with GitHub Username.
   - If you are adding more than one buttons then give proper names such as Spyware007_1,Spyware007_2, your_github_username_1,etc
-- ### Next Steps:
+- #### Next Steps:
 〽️ Stage your changes. 
 ```
 git add .
