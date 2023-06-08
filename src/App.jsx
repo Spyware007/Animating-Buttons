@@ -56,7 +56,7 @@ const App = ({ modeToggleFunc, modeToggle }) => {
             />
           </Routes>
           <GoToTop />
-          {/* <Footer modeToggle={toggleMode} /> */}
+          <Footer modeToggle={toggleMode} />
         </div>
       )}
     </>
