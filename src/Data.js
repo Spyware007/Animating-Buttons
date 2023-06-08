@@ -353,16 +353,24 @@ export const Data = [
   "khushbumaheshwarii",
   "khushbumaheshwarii_1",
   "Arnabhit",
+<<<<<<< HEAD
   "Ash0807",
+=======
+>>>>>>> a0dd96a (Clock with stopwatch and Timer)
   "utkarshjaulkar",
   "Prajwal0225",
   "AnkitMajee",
   "Samriddhi15_3",
   "PayalPadmalyaPrusty",
+<<<<<<< HEAD
   "0xabdulkhalid_11",
   "0xabdulkhalid_12",
   "Illaf_1",
   "0xabdulkhalid_10",
   "vedangc03",
   "Roshnijeewani3457"
+=======
+  "VardaPanchal005_1",
+  "VardaPanchal005_2"
+>>>>>>> a0dd96a (Clock with stopwatch and Timer)
 ];
