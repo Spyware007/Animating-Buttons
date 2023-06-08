@@ -4,11 +4,30 @@
 </div>
 <div id="top">
 
-<h1 align = "center"> ✅ Animation Buttons </h1> 
+<h1 align = "center"> ✅ Animating Buttons </h1> 
 
+<div align="center">
+<img src="https://forthebadge.com/images/badges/open-source.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" />
+<img src="https://forthebadge.com/images/badges/built-by-developers.svg" />
+  <br>
+  <img src="https://img.shields.io/github/contributors/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-pr-closed/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-raw/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/stars/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/repo-size/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-closed-raw/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-pr-closed-raw/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/forks/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://svgshare.com/i/tYz.svg" />
+
+
+<div align="center">
 Welcome to the Animating Buttons repository! 🎉
 
 This project aims to provide a collection of animated buttons that you can use to enhance your web development projects. Whether you're a beginner or an experienced developer, these buttons will add a touch of interactivity and flair to your websites.
+</div>
 
 <h1 align="center">✨✨HacktoberFest 2022✨✨</h1>
 <img width="1440" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png">
@@ -33,22 +52,6 @@ This project aims to provide a collection of animated buttons that you can use t
   <div align="center">
   <img width="200" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
 </div>
-
-<div align="center">
-<img src="https://forthebadge.com/images/badges/open-source.svg" />
-<img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" />
-<img src="https://forthebadge.com/images/badges/built-by-developers.svg" />
-  <br>
-  <img src="https://img.shields.io/github/contributors/spyware007/Animating-Buttons?style=for-the-badge" />
-  <img src="https://img.shields.io/github/last-commit/spyware007/Animating-Buttons?style=for-the-badge" />
-  <img src="https://img.shields.io/github/issues-pr-closed/spyware007/Animating-Buttons?style=for-the-badge" />
-  <img src="https://img.shields.io/github/issues-raw/spyware007/Animating-Buttons?style=for-the-badge" />
-  <img src="https://img.shields.io/github/stars/spyware007/Animating-Buttons?style=for-the-badge" />
-  <img src="https://img.shields.io/github/repo-size/spyware007/Animating-Buttons?style=for-the-badge" />
-  <img src="https://img.shields.io/github/issues-closed-raw/spyware007/Animating-Buttons?style=for-the-badge" />
-  <img src="https://img.shields.io/github/issues-pr-closed-raw/spyware007/Animating-Buttons?style=for-the-badge" />
-  <img src="https://img.shields.io/github/forks/spyware007/Animating-Buttons?style=for-the-badge" />
-  <img src="https://svgshare.com/i/tYz.svg" />
 
 # Welcome to Animating Buttons! ![Gif](https://github.com/tuhinaww/Animating-Buttons/assets/119059108/55243a1c-ef56-4e37-86ef-48f2b1036c76)
 #### Coolest place in the digital universe, the Animating Buttons repository! This project aims to provide a collection of animated buttons that you can use to enhance your web development projects. Whether you're a beginner or an experienced developer, these buttons will add a touch of interactivity and flair to your websites.
