@@ -35,10 +35,10 @@ const App = ({ modeToggleFunc, modeToggle }) => {
                     modeToggle={toggleMode}
                     modeToggleFunc={setToggleMode}
                   />
-                  {/* <Main
+                  <Main
                     modeToggle={toggleMode}
                     modeToggleFunc={setToggleMode}
-                  /> */}
+                  />
                 </div>
               }
             />

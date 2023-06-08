@@ -19,7 +19,7 @@
   border-radius: 12px;
 }
 
-.codes{
+.codes {
   display: flex;
   /* flex-direction: column; */
   justify-content: center;
@@ -32,31 +32,29 @@
   border-radius: 12px;
 }
 
-.codeBtn{
+.codeBtn {
   background-color: #8b8b8b;
 }
 
-.navbar{
+.navbar {
   background-color: #3e3e3e;
   border-radius: 0;
   display: flex;
   gap: 8px;
   padding: 5px;
 }
-.navbar_option{
+.navbar_option {
   background-color: #545454;
   color: #ffffff;
   border-radius: 3px;
   padding: 10px;
-
 }
-.navbar_option:focus{
+.navbar_option:focus {
   background-color: #f1f1f1;
   color: rgb(65, 65, 65);
 }
-@media screen and (max-width: 768px){
-  .editor_container{
+@media screen and (max-width: 768px) {
+  .editor_container {
     flex-direction: column;
   }
- 
 }

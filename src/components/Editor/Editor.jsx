@@ -21,8 +21,10 @@ export default function Editor(props) {
       <button
         type="button"
         style={classes.copy_button}
-        // onClick={handleCopy}
-        onClick={() => navigator.clipboard.writeText(value)}
+        onClick={() => {
+          navigator.clipboard.writeText(value);
+          handleCopy();
+        }}
       >
         {isCopied ? "Copied" : `Copy ${displayName}`}
       </button>
