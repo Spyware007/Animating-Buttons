@@ -6,6 +6,8 @@
 
 <h1 align = "center"> ✅ Animating Buttons </h1> 
 
+--------------------------------------------------------------------------------------------------------------------
+
 <div align="center">
 <img src="https://forthebadge.com/images/badges/open-source.svg" />
 <img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" />
@@ -22,10 +24,12 @@
   <img src="https://img.shields.io/github/forks/spyware007/Animating-Buttons?style=for-the-badge" />
   <img src="https://svgshare.com/i/tYz.svg" />
 
+--------------------------------------------------------------------------------------------------------------------
 
-<div align="center">
+
 # Welcome to Animating Buttons! ![Gif](https://github.com/tuhinaww/Animating-Buttons/assets/119059108/55243a1c-ef56-4e37-86ef-48f2b1036c76)
  🎉
+<div align="center">
 
 This project aims to provide a collection of animated buttons that you can use to enhance your web development projects. Whether you're a beginner or an experienced developer, these buttons will add a touch of interactivity and flair to your websites.
 </div>
