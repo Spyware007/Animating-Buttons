@@ -33,7 +33,7 @@ function App() {
       .then((response) => response.text())
       .then((text) => setCss(text));
 
-    fetch(`/Buttons/${id}/app.js`)
+    fetch(`/Buttons/${id}/script.js`)
       .then((response) => response.text())
       .then((text) => {
         if (text[0] === "<") text = " ";
