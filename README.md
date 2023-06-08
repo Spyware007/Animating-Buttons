@@ -4,7 +4,7 @@
 </div>
 <div id="top">
 
-# ✅ Animation Buttons
+<h1  style = "text-align:center;" > ✅ Animation Buttons </h1>
 
 Welcome to the Animating Buttons repository! 🎉
 
