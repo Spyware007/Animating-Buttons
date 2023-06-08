@@ -37,7 +37,7 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 ![Screenshot](https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png)
 
 
-<h1 align="center">✨✨HacktoberFest 2022✨✨</h1>
+<!-- <h1 align="center">✨✨HacktoberFest 2022✨✨</h1>
 <img width="1440" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png">
 
 ## What can You Contribute ⚠️
@@ -53,13 +53,13 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 ### 📢 Register [here](https://hacktoberfest.com/) for Hacktoberfest and make 4️⃣ PRs this month to grab free SWAGS 🔥
 
 - Fork this repo <!-- Place this tag where you want the button to render. -->
-  <a class="github-button" href="https://github.com/Spyware007/Animating-Buttons/fork" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">here</a>
+  <!-- <a class="github-button" href="https://github.com/Spyware007/Animating-Buttons/fork" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">here</a>
 - Clone on your local machine
 
 </div>
   <div align="center">
   <img width="200" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
-</div>
+</div>  -->
 
 
 ## What can You Contribute ⚠️ 
