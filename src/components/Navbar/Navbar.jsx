@@ -3,7 +3,7 @@ import classes from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
 
 // images
-import spidey from "../../assets/spidey.png";
+import github from "../../assets/github.png";
 import moon from "../../assets/moon.png";
 import sun from "../../assets/sun.png";
 
@@ -31,6 +31,9 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               About
             </NavLink>
           </li>
+          <li className={classes.image_container_mobile}>
+            <img className={classes.image} src={github} alt="Creator" />
+          </li>
           <button
             className={`${classes.mode_toggle} ${
               modeToggle ? classes.dark_mode : classes.light_mode
@@ -41,12 +44,16 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
           </button>
         </ul>
 
-        <div className={classes.github}>
+        <a
+          href="https://github.com/Spyware007/Animating-Buttons"
+          target="__blank"
+          className={classes.github}
+        >
           <div className={classes.image_container}>
-            <img className={classes.image} src={spidey} alt="Creator" />
+            <img className={classes.image} src={github} alt="Creator" />
           </div>
           <span className={classes.username}>Spyware007</span>
-        </div>
+        </a>
       </nav>
     </>
   );

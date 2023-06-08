@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: 20px 100px;
+  z-index: 1;
 }
 .navlist {
   display: flex;
@@ -26,12 +27,14 @@
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: blue;
+  background-color: #fedc02;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
 }
-
+.navbar.navbar-light .navlist .list_item::after {
+  background-color: blue;
+}
 .list_item:hover::after {
   visibility: visible;
   transform: scaleX(1);
@@ -52,16 +55,24 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  text-decoration: none;
 }
-.image_container {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid #fff;
-  box-shadow: 0px 4px 1px 0px #00000040;
+.github:hover {
+  background-color: #fedc02;
 }
 
+.image_container,
+.image_container_mobile {
+  width: 40px;
+  height: 40px;
+  /* border-radius: 50%; */
+  overflow: hidden;
+  /* border: 1px solid #fff; */
+  /* box-shadow: 0px 4px 1px 0px #00000040; */
+}
+.image_container_mobile {
+  display: none;
+}
 .image {
   width: 100%;
   height: 100%;
@@ -74,10 +85,22 @@
   text-shadow: 0px 4px 4px 0px #00000040;
   filter: drop-shadow(0px 4px 1px rgba(255, 255, 255, 0.25));
 }
+.navbar.navbar-light .github:hover .username {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.github:hover .username {
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
 .navbar.navbar-dark .username {
   color: #fff;
   text-shadow: 0px 4px 4px 0px #ffffff40;
   filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.25));
+}
+.navbar.navbar-dark .github:hover .username {
+  color: #000;
+  transition: all 0.3s ease-in-out;
 }
 .mode_toggle {
   position: relative;
@@ -111,4 +134,18 @@
   display: block;
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 20px 20px;
+    justify-content: center;
+  }
+  .github {
+    display: none;
+  }
+  .image_container_mobile {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
 }

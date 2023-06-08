@@ -3,13 +3,13 @@ import { Loader } from "./components";
 import ErrorPage from "./components/ErrorPage/404Error";
 import { Routes, Route } from "react-router-dom";
 import GoToTop from "./components/Top/GoToTop";
-import { Main, Navbar, Socials, Footer } from "./components";
+import { Landing, Main, Navbar, Footer } from "./components";
 import SuspenseLoader from "./components/SuspenseLoader/SuspenseLoader";
 const ShowPage = lazy(() => import("./components/ShowPage/ShowPage"));
 
 const App = ({ modeToggleFunc, modeToggle }) => {
   const [loading, setLoading] = useState(false);
-  const [toggleMode, setToggleMode] = useState(false);
+  const [toggleMode, setToggleMode] = useState(true);
 
   useEffect(() => {
     setLoading(true);
@@ -31,11 +31,14 @@ const App = ({ modeToggleFunc, modeToggle }) => {
               path="/"
               element={
                 <div>
-                  <Socials modeToggle={toggleMode} />
-                  <Main
+                  <Landing
                     modeToggle={toggleMode}
                     modeToggleFunc={setToggleMode}
                   />
+                  {/* <Main
+                    modeToggle={toggleMode}
+                    modeToggleFunc={setToggleMode}
+                  /> */}
                 </div>
               }
             />
@@ -53,7 +56,7 @@ const App = ({ modeToggleFunc, modeToggle }) => {
             />
           </Routes>
           <GoToTop />
-          <Footer modeToggle={toggleMode} />
+          {/* <Footer modeToggle={toggleMode} /> */}
         </div>
       )}
     </>
