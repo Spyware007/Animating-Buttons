@@ -35,7 +35,6 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 
 -------------------
 
-# GSSoC 2023 〽️
 
 ![Screenshot](https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png)
 
@@ -64,6 +63,7 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
   <img width="200" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
 </div>  -->
 
+# GSSoC 2023 〽️
 
 ## What can You Contribute ⚠️ 
 
