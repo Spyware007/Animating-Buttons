@@ -71,7 +71,10 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 | - Make sure you follow the below steps before making your contributions. ❗❗❗                               |                           |
 </div>
 
-<!-- ### Contribution Steps:
+<!-- ### Contribution Steps: -->
+
+### Animating Buttons Repository Instructions 🚀🚀 
+To contribute to the Animating Buttons repository, follow these steps:
 
 - 〽️ First, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
 
@@ -93,10 +96,7 @@ npm start
 - 〽️ Create a new Branch
 ```
 git checkout -b my-new-branch
-``` -->
-
-### Animating Buttons Repository Instructions 🚀🚀 
-To contribute to the Animating Buttons repository, follow these steps:
+```
 
 - 〽️ 🚀🚀 **Go to [public/Buttons](https://github.com/Spyware007/Animating-Buttons/blob/main/src/components/Main/Main.jsx) folder and add a new folder with your GitHub username including your button code (index.html + style.css files)**
 
