@@ -247,9 +247,10 @@ ________________________________________________________________________________
   <img src="https://img.shields.io/badge/Hacktoberfest-2022-orange.svg" alt="Hacktoberfest'22">
 </a>
 
+<a href="https://example.com/gssoc23" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/GirlScript%20Summer%20of%20Code-2023-blueviolet.svg" alt="GirlScript Summer of Code'23">
+</a>
 
-[![Hacktoberfest'22 ✨✨](public/hacktoberfest.png)](https://hacktoberfest.digitalocean.com/)
-[![GSSoC'23 ✨✨](public/gssoc.png)](https://gssoc.girlscript.tech/)
 
 </div>
 
