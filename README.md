@@ -118,6 +118,7 @@ git checkout -b my-new-branch
 Note: Replace `github_username` with your actual GitHub username.
 
  - Keep these points in mind before you begin
+ 
 | Note  ❗❗                                                                                        |
 |-------------------------------------------------------------------------------------------------|
 | Make sure to align your button centered horizontally as well as vertically.                     |
@@ -153,7 +154,6 @@ git push origin my-new-branch
 - Finally, create a new pull request from your forked repository
 create a new pull request from your forked repository.
 To know more go to [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 
-
 
 
 | Note                                                                                                                             |
