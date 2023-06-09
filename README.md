@@ -91,7 +91,7 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 
 
 <h2 align="center"> Table of Content </h2>
-<div align = "center">
+<div>
 
  - [Welcome to Animating Buttons](https://github.com/arcVaishali/Animating-Buttons/tree/main#welcome-to-animating-buttons)
  - [What can you Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#what-can-you-contribute-%EF%B8%8F-)
