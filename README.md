@@ -122,7 +122,7 @@ git checkout -b my-new-branch
 
   </div>
      
-      - Note: Replace `github_username` with your **actual GitHub username**.
+      - Note: Replace `github_username` with your actual GitHub username.
 
 
 6. Keep these points in mind before you begin. ❗❗
@@ -172,7 +172,7 @@ To know more about how to contribute, read the [Countributing Guidelines](https:
      - [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
      - [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
 
-<div align="center" style="width:100%;">
+<div style="width:100%;color:red;">
 
 |Note                                                                                                    |
 |--------------------------------------------------------------------------------------------------------|
