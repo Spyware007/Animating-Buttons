@@ -12,6 +12,8 @@
 
 ------------
 
+
+
 <div align="center">
 <img src="https://forthebadge.com/images/badges/open-source.svg" />
 <img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" />
@@ -40,7 +42,8 @@
 Coolest place in the digital universe, the Animating Buttons repository! This project aims to provide a collection of animated buttons that you can use to enhance your web development projects. Whether you're a beginner or an experienced developer, these buttons will add a touch of interactivity and flair to your websites.
 
 </div>
-____________________________________________________________________________________________________________________
+
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -123,7 +126,7 @@ ________________________________________________________________________________
     ```
 
 5. Follow the following steps to start your contricution after you have successfully cloned the repository and created a new branch -                                 
-      <div align="center">
+      <div align="right">
 
       | STEPS |               DESCRIPTION                                                                |
       |-------|------------------------------------------------------------------------------------------|
@@ -139,7 +142,7 @@ ________________________________________________________________________________
 
 
 6. Keep these points in mind before you begin. ❗❗
-<div align="center">
+<div align="right">
 
 | Note                                                                                            |
 |-------------------------------------------------------------------------------------------------|
@@ -185,13 +188,16 @@ To know more about how to contribute, read the [Countributing Guidelines](https:
      - [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
      - [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
 
-<div>
+________________________________________________________________________________________________________________
 
-| **Note**                                                                                               |
-|--------------------------------------------------------------------------------------------------------|
-| Make sure you commit your changes in a new branch ❗❗                                                |
-| Make sure that your file name and your commit message are relevant.                                    |
-| Also, make sure you comment your code wherever necessary.                                              |
+
+<div align="center">
+
+|  **SNo.** |      **Note**                                                                             |
+|-----------|-------------------------------------------------------------------------------------------|
+|     1     | Make sure you commit your changes in a new branch ❗❗                                   |
+|     2     | Make sure that your file name and your commit message are relevant.                       |
+|     3     | Also, make sure you comment your code wherever necessary.                                 |
 
 </div>
 
@@ -207,14 +213,21 @@ ________________________________________________________________________________
 
 </div>
 
+
+
+
 ____________________________________________________________________________________________________________
+
+
+
+
 
 <h2 align='center'> Project Admin </h2>
 <table align='center'>
 <tr>
     <td align="center">
         <a href="https://www.linkedin.com/in/om-gawande/">
-            <img src="https://avatars.githubusercontent.com/u/89961974?v=4" width="200;" alt="Aman Kumar Singh"/>
+            <img src="https://avatars.githubusercontent.com/u/89961974?v=4" width="100;" alt="Aman Kumar Singh"/>
             <br />
             <sub><b>Om Gawande</b></sub>
         </a>
@@ -234,7 +247,13 @@ ________________________________________________________________________________
 
 </table>
 
+
+
 __________________________________________________________________________________________________________________
+
+
+
+
 
 
 <h2 align="center"> Our Beloved Contributors 😍 </h2>
