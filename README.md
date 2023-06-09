@@ -194,10 +194,31 @@ To know more about how to contribute, read the [Countributing Guidelines](https:
 
 </div>
 
-<h2 align="center"> Project Admin </h2>
- <div align="center"> <img width="200" src="https://avatars.githubusercontent.com/u/89961974?v=4">
-  [Om Gawande](https://github.com/Spyware007) </div>
-<h2 align="center"> Project Mentors </h2>
+<h2 align='center'> Project Admin </h2>
+<table align='center'>
+<tr>
+    <td align="center">
+        <a href="https://www.linkedin.com/in/om-gawande/">
+            <img src="https://avatars.githubusercontent.com/u/89961974?v=4" width="100;" alt="Aman Kumar Singh"/>
+            <br />
+            <sub><b>Om Gawande</b></sub>
+        </a>
+    </td>
+  </tr>
+</table>
+
+___________________________________________________________________________________________________________________________________________________________________
+
+<h2 align='center'> Project Mentors </h2>
+<table align='center'>
+<td align="center"><a href="https://www.linkedin.com/in/tanyachanchalani/"><img src="https://media.licdn.com/dms/image/D5603AQFPR1ufAvGojA/profile-displayphoto-shrink_800_800/0/1673109782856?e=1691625600&v=beta&t=-BBNWi9eyMZXTMj91hF7ZJpWxEk8xwUtSH7XhbdOxXw" width="100px;" alt=""/><br /><sub><b> Tanya Chanchalani </b></sub></a></td>
+
+<td align="center"><a href="https://www.linkedin.com/in/poorvi-shetty/"><br /><sub><b>Poorvi Shetty</b></sub></a></td>
+
+<td align="center"><a href="https://www.linkedin.com/in/pratiksha-sankhe/"><img src="https://media.licdn.com/dms/image/D4D03AQFGlCTTvV2yIw/profile-displayphoto-shrink_800_800/0/1670562506482?e=1691625600&v=beta&t=S4YCvFoyDB_P29IWgn83nUYf1UEUybGI90nXiSUJ-zM" width="100px;" alt=""/><br /><sub><b> Pratiksha Sankhe </b></sub></a></td>
+
+</table>
+
 
 <h2 align="center"> Our Beloved Contributors 😍 </h2>
 
