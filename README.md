@@ -45,8 +45,8 @@
 
 <div align="center">
 
-<h5>✨✨HacktoberFest 2022✨✨</h5> &nbsp; &nbsp; <h5>✨✨ GSSoC'23 ✨✨</h5>
-<img src="src\assets\hacktoberfest-gssoc.png">
+<h5>✨✨HacktoberFest 2022✨✨ &nbsp;  ✨✨ GSSoC'23 ✨✨</h5>
+<img src="https://github.com/arcVaishali/Animating-Buttons/blob/main/src/assets/hacktoberfest-gssoc.png">
 
 </div>
 
