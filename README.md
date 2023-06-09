@@ -138,10 +138,10 @@ ________________________________________________________________________________
       </div>
 
 
-       **Note:** Replace `github_username` with your actual GitHub username.
+       Note: Replace `github_username` with your actual GitHub username.
 
 
-6. Keep these points in mind before you begin. ❗❗
+6. Before embarking on your journey, bear these points in mind.. ❗❗
     <div align="right">
 
     | Note                                                                                            |
@@ -201,6 +201,9 @@ ________________________________________________________________________________
 |     1     | Make sure you commit your changes in a new branch ❗❗                                   |
 |     2     | Make sure that your file name and your commit message are relevant.                       |
 |     3     | Also, make sure you comment your code wherever necessary.                                 |
+|     4     | Make sure to align your button centered horizontally as well as vertically.               |
+|     5     | Add a new folder with your GitHub username, including your button code (index.html + style.css )                                                                                                   |
+|     6     | If you are adding more than one button, give them proper names like Spyware007_1, Spyware007_2 your_github_username_1, etc.                                                               |
 
 </div>
 
