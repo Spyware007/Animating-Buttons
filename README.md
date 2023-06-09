@@ -83,14 +83,14 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 ### Animating Buttons Repository Instructions 🚀🚀  
 <!-- To contribute to the Animating Buttons repository, follow these steps: -->
 
-- First, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
+1. First, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
 
-- Clone the forked repo to your local machine using the following command:
+2. Clone the forked repo to your local machine using the following command:
 ```terminal
 git clone https://github.com/**username**/Animating-Buttons.git
 ```
 
-- Navigate to project directory.
+3. Navigate to project directory.
 ```terminal
 cd Animating-Buttons
 ```
@@ -100,11 +100,11 @@ npm i
 npm start
 ```
 
-- Create a new Branch
+4. Create a new Branch
 ```
 git checkout -b my-new-branch
 ```
-- Follow the following steps to start your contricution after you have succesfully cloned the repository and created a new branch -
+5. Follow the following steps to start your contricution after you have succesfully cloned the repository and created a new branch -
 
 <!-- -  🚀🚀 Go to [public/Buttons](https://github.com/Spyware007/Animating-Buttons/blob/main/src/components/Main/Main.jsx) folder and add a new folder with your GitHub username including your button code (index.html + style.css files) -->
 
@@ -117,8 +117,8 @@ git checkout -b my-new-branch
 
 Note: Replace `github_username` with your actual GitHub username.
 
- - Keep these points in mind before you begin
- 
+6. Keep these points in mind before you begin. ❗❗
+
 | Note  ❗❗                                                                                        |
 |-------------------------------------------------------------------------------------------------|
 | Make sure to align your button centered horizontally as well as vertically.                     |
@@ -153,7 +153,7 @@ git push origin my-new-branch
 
 - Finally, create a new pull request from your forked repository
 create a new pull request from your forked repository.
-To know more go to [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 
+To know more about how to contribute, read the [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 🚀🚀
 
 
 | Note                                                                                                                             |
