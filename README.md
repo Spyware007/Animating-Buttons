@@ -107,12 +107,12 @@ git checkout -b my-new-branch
 5. Follow the following steps to start your contricution after you have successfully cloned the repository and created a new branch -                                 
 
      1. Go to the [public/Buttons folder🚀](https://github.com/Spyware007/Animating-Buttons/tree/main/public/Buttons) in the repository.                                                                             
-     - Add a new folder with your GitHub username, including your button code (index.html + style.css files).                                                                
-     -  Go to the [src/Data.js file 🚀](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                                                                                                  
-     - Add your folder name (e.g., `github_username`) and your code in the [src/Data.js file](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)  
+     2. Add a new folder with your GitHub username, including your button code (index.html + style.css files).                                                                
+     3.  Go to the [src/Data.js file 🚀](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                                                                                                  
+     4. Add your folder name (e.g., `github_username`) and your code in the [src/Data.js file](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)  
 
 
-     **Note: Replace `github_username` with your actual GitHub username.**
+     - **Note: Replace `github_username` with your actual GitHub username.**
 
 6. Keep these points in mind before you begin. ❗❗
 
@@ -152,7 +152,7 @@ git push origin my-new-branch
 create a new pull request from your forked repository.
 To know more about how to contribute, read the [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 🚀🚀
 
- You can refer to the following articles on basics of Git and Github and also contact the Project Mentors, in case you are stuck:
+- **You can refer to the following articles on basics of Git and Github and also contact the Project   Mentors, in case you are stuck:**
 
  - [Forking a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
  - [Cloning a Repo](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request-from-github-desktop)
@@ -160,11 +160,11 @@ To know more about how to contribute, read the [Countributing Guidelines](https:
  - [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
 
 
-|Note                                                                                                    |
+|                                Note                                                                    |
 |--------------------------------------------------------------------------------------------------------|
-| Make sure you commit your changes in a new branch ❗❗                                                |
-| Make sure that your file name and your commit message are relevant.                                    |
-| Also, make sure you comment your code wherever necessary.                                              |
+|           Make sure you commit your changes in a new branch ❗❗                                                |
+|           Make sure that your file name and your commit message are relevant.                                    |
+|           Also, make sure you comment your code wherever necessary.                                              |
 
 ---
 
