@@ -106,13 +106,13 @@ git checkout -b my-new-branch
 ```
 5. Follow the following steps to start your contricution after you have successfully cloned the repository and created a new branch -                                 
 
-     1. Go to the [public/Buttons folder🚀](https://github.com/Spyware007/Animating-Buttons/tree/main/public/Buttons) in the repository.                                                                             
-     2. Add a new folder with your GitHub username, including your button code (index.html + style.css files).                                                                
-     3.  Go to the [src/Data.js file 🚀](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                                                                                                  
-     4. Add your folder name (e.g., `github_username`) and your code in the [src/Data.js file](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)  
+  1. Go to the [public/Buttons folder🚀](https://github.com/Spyware007/Animating-Buttons/tree/main/public/Buttons) in the repository.                                                                             
+  2. Add a new folder with your GitHub username, including your button code (index.html + style.css files).                                                                
+  3.  Go to the [src/Data.js file 🚀](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                                                                                                  
+  4. Add your folder name (e.g., `github_username`) and your code in the [src/Data.js file](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)  
 
 
-     - **Note: Replace `github_username` with your actual GitHub username.**
+   - **Note: Replace `github_username` with your actual GitHub username.**
 
 6. Keep these points in mind before you begin. ❗❗
 
@@ -159,12 +159,15 @@ To know more about how to contribute, read the [Countributing Guidelines](https:
  - [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
  - [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
 
+<div align="center">
 
-|                                Note                                                                    |
+|Note                                                                                                    |
 |--------------------------------------------------------------------------------------------------------|
-|           Make sure you commit your changes in a new branch ❗❗                                                |
-|           Make sure that your file name and your commit message are relevant.                                    |
-|           Also, make sure you comment your code wherever necessary.                                              |
+| Make sure you commit your changes in a new branch ❗❗                                                |
+| Make sure that your file name and your commit message are relevant.                                    |
+| Also, make sure you comment your code wherever necessary.                                              |
+
+</div>
 
 ---
 
