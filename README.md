@@ -123,16 +123,16 @@ ________________________________________________________________________________
     ```
 
 5. Follow the following steps to start your contricution after you have successfully cloned the repository and created a new branch -                                 
-  <div align="center">
+      <div align="center">
 
-  | STEPS |               DESCRIPTION                                                                |
-  |-------|------------------------------------------------------------------------------------------|
-  | 1.    | Go to the [public/Buttons folder🚀](https://github.com/Spyware007/Animating-Buttons/tree/main/public/Buttons) in the repository.                                                                 |
-  | 2.    | Add a new folder with your GitHub username, including your button code (index.html + style.css files).                                                                                        |
-  | 3.    | Go to the [src/Data.js file 🚀](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                                                                                           |
-  | 4.    | Add your folder name (e.g., `github_username`) and your code in the [src/Data.js file](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                            |
+      | STEPS |               DESCRIPTION                                                                |
+      |-------|------------------------------------------------------------------------------------------|
+      | 1.    | Go to the [public/Buttons folder🚀](https://github.com/Spyware007/Animating-Buttons/tree/main/public/Buttons) in the repository.                                                                                        |
+      | 2.    | Add a new folder with your GitHub username, including your button code (index.html + style.css files).                                                                                            |
+      | 3.    | Go to the [src/Data.js file 🚀](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                                                                                                |
+      | 4.    | Add your folder name (e.g., `github_username`) and your code in the [src/Data.js file](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                            |
 
-  </div>
+      </div>
 
 
        **Note:** Replace `github_username` with your actual GitHub username.
@@ -187,7 +187,7 @@ To know more about how to contribute, read the [Countributing Guidelines](https:
 
 <div>
 
-|Note                                                                                                    |
+| **Note**                                                                                               |
 |--------------------------------------------------------------------------------------------------------|
 | Make sure you commit your changes in a new branch ❗❗                                                |
 | Make sure that your file name and your commit message are relevant.                                    |
@@ -214,7 +214,7 @@ ________________________________________________________________________________
 <tr>
     <td align="center">
         <a href="https://www.linkedin.com/in/om-gawande/">
-            <img src="https://avatars.githubusercontent.com/u/89961974?v=4" width="100;" alt="Aman Kumar Singh"/>
+            <img src="https://avatars.githubusercontent.com/u/89961974?v=4" width="200;" alt="Aman Kumar Singh"/>
             <br />
             <sub><b>Om Gawande</b></sub>
         </a>
@@ -228,7 +228,7 @@ ________________________________________________________________________________
 <table align='center'>
 <td align="center"><a href="https://www.linkedin.com/in/tanyachanchalani/"><img src="https://media.licdn.com/dms/image/D5603AQFPR1ufAvGojA/profile-displayphoto-shrink_800_800/0/1673109782856?e=1691625600&v=beta&t=-BBNWi9eyMZXTMj91hF7ZJpWxEk8xwUtSH7XhbdOxXw" width="100px;" alt=""/><br /><sub><b> Tanya Chanchalani </b></sub></a></td>
 
-<td align="center"><a href="https://www.linkedin.com/in/poorvi-shetty/"><br /><sub align="bottom"><b>Poorvi Shetty</b></sub></a></td>
+<td align="center"><a href="https://www.linkedin.com/in/poorvi-shetty/"><img src="https://avatars.githubusercontent.com/u/89961974?v=4" width="100px;" alt=""/><br /><sub align="bottom"><b>Poorvi Shetty</b></sub></a></td>
 
 <td align="center"><a href="https://www.linkedin.com/in/pratiksha-sankhe/"><img src="https://media.licdn.com/dms/image/D4D03AQFGlCTTvV2yIw/profile-displayphoto-shrink_800_800/0/1670562506482?e=1691625600&v=beta&t=S4YCvFoyDB_P29IWgn83nUYf1UEUybGI90nXiSUJ-zM" width="100px;" alt=""/><br /><sub><b> Pratiksha Sankhe </b></sub></a></td>
 
