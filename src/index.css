@@ -24,6 +24,9 @@
   --dark-bg-color: #151515;
   --dark-text-color: #fff;
 }
+* {
+  box-sizing: border-box;
+}
 
 html,
 body {

@@ -13,13 +13,14 @@ const redirectToGitHub = (username) => {
   }
 };
 const CreatedBy = ({ d }) => {
+  const realGitHubUsername = d.split("_")[0];
   return (
-    <div className={classes.download}>
-      <p onClick={() => redirectToGitHub(d)} className={`${classes.createdBy}`}>
-        Created by
-        <span className={classes.user}> {d}</span>
-      </p>
-    </div>
+    <p
+      onClick={() => redirectToGitHub(realGitHubUsername)}
+      className={`${classes.createdBy}`}
+    >
+      {d}
+    </p>
   );
 };
 
@@ -29,7 +30,7 @@ const DownloadBtn = ({ d, modeToggle }) => {
     <div className={`${classes.buttonContainer}`}>
       <button className={`${classes.download_btn} ${displayMode}`}>
         <Link className={`${classes.showcode_btn} `} to={`/show/${d}`}>
-          Show Code
+          Code
         </Link>
       </button>
       <button
@@ -37,7 +38,6 @@ const DownloadBtn = ({ d, modeToggle }) => {
         className={`${classes.download_btn} ${displayMode}`}
       >
         <i class="fas fa-download"> </i>
-        Files
       </button>
       <button
         onClick={() => downloadZip(d)}
@@ -92,14 +92,14 @@ export default function Main({ modeToggle, modeToggleFunc }) {
 
   return (
     <>
-      <div className={classes.bar}>
+      {/* <div className={classes.bar}>
         <input
           type="text"
           placeholder="Find Your Perfect Button..."
           className={classes.search}
           onChange={(e) => setQuery(e.target.value)}
         />
-      </div>
+      </div> */}
       <h1 style={{ textAlign: "center" }}>
         Total number of Buttons added {Data.length}
       </h1>
