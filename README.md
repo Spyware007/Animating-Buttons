@@ -104,22 +104,18 @@ npm start
 ```
 git checkout -b my-new-branch
 ```
-5. Follow the following steps to start your contricution after you have succesfully cloned the repository and created a new branch -
+5. Follow the following steps to start your contricution after you have successfully cloned the repository and created a new branch -                                 
 
-<!-- -  🚀🚀 Go to [public/Buttons](https://github.com/Spyware007/Animating-Buttons/blob/main/src/components/Main/Main.jsx) folder and add a new folder with your GitHub username including your button code (index.html + style.css files) -->
+     1. 🚀🚀 Go to the [public/Buttons](https://github.com/Spyware007/Animating-Buttons/tree/main/public/Buttons) folder in the repository.                                                                             
+     2. Add a new folder with your GitHub username, including your button code (index.html + style.css files).                                                                
+     3. 🚀🚀 Go to the [src/Data.js file](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                                                                                                  
+     4. Add your folder name (e.g., `github_username`) and your code in the [src/Data.js file](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)  
 
-| Step | Description                                                                                                     | Link                                                         |
-|------|-----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
-| 1    | 🚀🚀 Go to the public/Buttons folder in the repository.                                                              | [public/Buttons](https://github.com/Spyware007/Animating-Buttons/tree/main/public/Buttons)                   |
-| 2    | Add a new folder with your GitHub username, including your button code (index.html + style.css files).          | -                                                            |
-| 3    | 🚀🚀 Go to the src/Data.js file.                                                                                     | [src/Data.js](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                                     |
-| 4    | Add your folder name (e.g., `github_username`) and your code in the src/Data.js file.                           | -                                                            |
-
-Note: Replace `github_username` with your actual GitHub username.
+     - Note: Replace `github_username` with your actual GitHub username.
 
 6. Keep these points in mind before you begin. ❗❗
 
-| Note  ❗❗                                                                                        |
+| Note                                                                                          |
 |-------------------------------------------------------------------------------------------------|
 | Make sure to align your button centered horizontally as well as vertically.                     |
 | Don't forget to replace 'your_github_username' with your actual GitHub username.                |
@@ -154,6 +150,13 @@ git push origin my-new-branch
 4. Finally, create a new pull request from your forked repository
 create a new pull request from your forked repository.
 To know more about how to contribute, read the [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 🚀🚀
+
+You can refer to the following articles on basics of Git and Github and also contact the Project Mentors, in case you are stuck:
+
+- [Forking a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+- [Cloning a Repo](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request-from-github-desktop)
+- [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
+- [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
 
 
 | Note                                                                                                                             |
