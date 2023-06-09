@@ -182,7 +182,7 @@ To know more about how to contribute, read the [Countributing Guidelines](https:
 
 </div>
 
----
+________________________________________________________________________________________________________________
 
 
 <h2 align ="center"> Tech Stack Used </h2>
@@ -193,6 +193,8 @@ To know more about how to contribute, read the [Countributing Guidelines](https:
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
 </div>
+
+____________________________________________________________________________________________________________
 
 <h2 align='center'> Project Admin </h2>
 <table align='center'>
@@ -213,11 +215,13 @@ ________________________________________________________________________________
 <table align='center'>
 <td align="center"><a href="https://www.linkedin.com/in/tanyachanchalani/"><img src="https://media.licdn.com/dms/image/D5603AQFPR1ufAvGojA/profile-displayphoto-shrink_800_800/0/1673109782856?e=1691625600&v=beta&t=-BBNWi9eyMZXTMj91hF7ZJpWxEk8xwUtSH7XhbdOxXw" width="100px;" alt=""/><br /><sub><b> Tanya Chanchalani </b></sub></a></td>
 
-<td align="center"><a href="https://www.linkedin.com/in/poorvi-shetty/"><br /><sub><b>Poorvi Shetty</b></sub></a></td>
+<td align="center"><a href="https://www.linkedin.com/in/poorvi-shetty/"><br /><sub align="bottom"><b>Poorvi Shetty</b></sub></a></td>
 
 <td align="center"><a href="https://www.linkedin.com/in/pratiksha-sankhe/"><img src="https://media.licdn.com/dms/image/D4D03AQFGlCTTvV2yIw/profile-displayphoto-shrink_800_800/0/1670562506482?e=1691625600&v=beta&t=S4YCvFoyDB_P29IWgn83nUYf1UEUybGI90nXiSUJ-zM" width="100px;" alt=""/><br /><sub><b> Pratiksha Sankhe </b></sub></a></td>
 
 </table>
+
+__________________________________________________________________________________________________________________
 
 
 <h2 align="center"> Our Beloved Contributors 😍 </h2>
