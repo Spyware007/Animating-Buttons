@@ -64,6 +64,11 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 </div>  -->
 
 # GSSoC 2023 〽️
+<div align="center">
+
+<img width="200" src="https://user-images.githubusercontent.com/98798977/236624352-6f5440bb-1b5a-41e3-a2d2-97b5ef2b7387.png">
+
+</div>
 
 ## What can You Contribute ⚠️ 
 
@@ -105,22 +110,28 @@ npm start
 git checkout -b my-new-branch
 ```
 5. Follow the following steps to start your contricution after you have successfully cloned the repository and created a new branch -                                 
+   <div align="center">
 
-   1. Go to the [public/Buttons folder🚀](https://github.com/Spyware007/Animating-Buttons/tree/main/public/Buttons) in the repository.                                                                             
-   2. Add a new folder with your GitHub username, including your button code (index.html + style.css files).                                                                
-   3.  Go to the [src/Data.js file 🚀](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                                                                                                  
-   4. Add your folder name (e.g., `github_username`) and your code in the [src/Data.js file](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)  
-
-
-   - **Note: Replace `github_username` with your actual GitHub username.**
+  | STEPS |               DESCRIPTION                                                                |
+  |--------------------------------------------------------------------------------------------------|
+  | 1.    | Go to the [public/Buttons folder🚀](https://github.com/Spyware007/Animating-Buttons/tree/main/public/Buttons) in the repository.                                                                 |
+  | 2.    | Add a new folder with your GitHub username, including your button code (index.html + style.css files).                                                                                        |
+  | 3.    | Go to the [src/Data.js file 🚀](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                                                                                           |
+  | 4.    | Add your folder name (e.g., `github_username`) and your code in the [src/Data.js file](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                            |
+  
+  </div>
+     - **Note: Replace `github_username` with your actual GitHub username.**
 
 6. Keep these points in mind before you begin. ❗❗
+<div align="center">
 
-| Note                                                                                          |
+| Note                                                                                            |
 |-------------------------------------------------------------------------------------------------|
 | Make sure to align your button centered horizontally as well as vertically.                     |
 | Don't forget to replace 'your_github_username' with your actual GitHub username.                |
-| If you are adding more than one button, give them proper names like Spyware007_1, Spyware007_2, your_github_username_1, etc. |
+| If you are adding more than one button, give them proper names like Spyware007_1, Spyware007_2, your_github_username_1, etc.                                                                      |
+
+</div>
 
 -------------------
 <h2 align="center"> How to Make a PR? </h2>
