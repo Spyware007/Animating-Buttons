@@ -109,6 +109,7 @@ npm start
 ```
 git checkout -b my-new-branch
 ```
+
 5. Follow the following steps to start your contricution after you have successfully cloned the repository and created a new branch -                                 
    <div align="center">
 
@@ -118,9 +119,11 @@ git checkout -b my-new-branch
   | 2.    | Add a new folder with your GitHub username, including your button code (index.html + style.css files).                                                                                        |
   | 3.    | Go to the [src/Data.js file 🚀](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                                                                                           |
   | 4.    | Add your folder name (e.g., `github_username`) and your code in the [src/Data.js file](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                            |
-  |-------|------------------------------------------------------------------------------------------|
+
   </div>
-     - **Note: Replace `github_username` with your actual GitHub username.**
+     
+      - Note: Replace `github_username` with your **actual GitHub username**.
+
 
 6. Keep these points in mind before you begin. ❗❗
 <div align="center">
@@ -169,7 +172,7 @@ To know more about how to contribute, read the [Countributing Guidelines](https:
      - [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
      - [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
 
-<div align="center" width="100%">
+<div align="center" style="width:100%;">
 
 |Note                                                                                                    |
 |--------------------------------------------------------------------------------------------------------|
