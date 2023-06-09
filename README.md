@@ -144,11 +144,11 @@ ________________________________________________________________________________
 6. Keep these points in mind before you begin. ❗❗
 <div align="right">
 
-| Note                                                                                            |
-|-------------------------------------------------------------------------------------------------|
-| Make sure to align your button centered horizontally as well as vertically.                     |
-| Don't forget to replace 'your_github_username' with your actual GitHub username.                |
-| If you are adding more than one button, give them proper names like Spyware007_1, Spyware007_2, your_github_username_1, etc.                                                                      |
+    | Note                                                                                            |
+    |-------------------------------------------------------------------------------------------------|
+    | Make sure to align your button centered horizontally as well as vertically.                     |
+    | Don't forget to replace 'your_github_username' with your actual GitHub username.                |
+    | If you are adding more than one button, give them proper names like Spyware007_1, Spyware007_2, your_github_username_1, etc.                                                                      |
 
 </div>
 
@@ -193,7 +193,9 @@ ________________________________________________________________________________
 
 <div align="center">
 
-|  **SNo.** |      **Note**                                                                             |
+<h2 align="center">  Key Reminders for Your Attention </h2>
+
+|  **SNo.** |      **Description**                                                                      |
 |-----------|-------------------------------------------------------------------------------------------|
 |     1     | Make sure you commit your changes in a new branch ❗❗                                   |
 |     2     | Make sure that your file name and your commit message are relevant.                       |
