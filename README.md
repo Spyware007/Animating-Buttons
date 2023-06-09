@@ -1,6 +1,6 @@
 
 <div align="center">
-<img width="200" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
+<img width="250" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
 </div>
 
 
@@ -15,6 +15,10 @@
 
 
 <div align="center">
+
+
+
+
 <img src="https://forthebadge.com/images/badges/open-source.svg" />
 <img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" />
 <img src="https://forthebadge.com/images/badges/built-by-developers.svg" />
@@ -29,7 +33,26 @@
   <img src="https://img.shields.io/github/issues-pr-closed-raw/spyware007/Animating-Buttons?style=for-the-badge" />
   <img src="https://img.shields.io/github/forks/spyware007/Animating-Buttons?style=for-the-badge" />
   <img src="https://svgshare.com/i/tYz.svg" />
+
+
+
+
+
  </div> 
+
+
+ <h2 align="center"> Involvement in Notable Open Source Programs ✨✨ </h2>
+<div align="center">
+
+<h2 align="center">✨✨HacktoberFest 2022✨✨</h2>
+<img width="1440" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png">
+<h1 align="center">✨✨ GSSoC'23 ✨✨</h1>
+<img width="100%" src="https://user-images.githubusercontent.com/98798977/236624352-6f5440bb-1b5a-41e3-a2d2-97b5ef2b7387.png">
+
+</div>
+
+
+
 
 <div align = "center">
 
@@ -47,10 +70,7 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 
 
 
-<!-- <h1 align="center">✨✨HacktoberFest 2022✨✨</h1>
-<img width="1440" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png">
-
-## What can You Contribute ⚠️
+<!-- ## What can You Contribute ⚠️
 
 - You can contribute any animated buttons. 🤩
 - You can update or refine an existing animated button or even add your own new buttons in this repo. 🚀
@@ -76,7 +96,7 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 
 <img width="100%" src="https://user-images.githubusercontent.com/98798977/236624352-6f5440bb-1b5a-41e3-a2d2-97b5ef2b7387.png">
 
-</div>
+</div> 
 
 ________________________________________________________________________________________________________________________
 <h2 align="center">
