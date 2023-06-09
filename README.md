@@ -78,34 +78,12 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 
 <!-- ### Contribution Steps: -->
 
-<h2 align="center"> How to contribute? ⚠️</h2>
+<h2 align="center"> How to start contributing? ⚠️</h2>
 
 ### Animating Buttons Repository Instructions 🚀🚀  
-To contribute to the Animating Buttons repository, follow these steps:
+<!-- To contribute to the Animating Buttons repository, follow these steps: -->
 
-- 〽️ First, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
-
-- 〽️ Clone the forked repo to your local machine using the following command:
-```terminal
-git clone https://github.com/**username**/Animating-Buttons.git
-```
-
-- 〽️ Navigate to project directory.
-```terminal
-cd Animating-Buttons
-```
-
-```terminal
-npm i
-npm start
-```
-
-- 〽️ Create a new Branch
-```
-git checkout -b my-new-branch
-```
-
-- 〽️ 🚀🚀 **Go to [public/Buttons](https://github.com/Spyware007/Animating-Buttons/blob/main/src/components/Main/Main.jsx) folder and add a new folder with your GitHub username including your button code (index.html + style.css files)**
+-  🚀🚀 Go to [public/Buttons](https://github.com/Spyware007/Animating-Buttons/blob/main/src/components/Main/Main.jsx) folder and add a new folder with your GitHub username including your button code (index.html + style.css files)
 
 | Step | Description                                                                                                     | Link                                                         |
 |------|-----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
@@ -125,6 +103,29 @@ Note: Replace `github_username` with your actual GitHub username.
 | If you are adding more than one button, give them proper names like Spyware007_1, Spyware007_2, your_github_username_1, etc. |
 
 
+<h2 align="center"> How to Make a PR? </h2>
+
+- First, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
+
+- Clone the forked repo to your local machine using the following command:
+```terminal
+git clone https://github.com/**username**/Animating-Buttons.git
+```
+
+- Navigate to project directory.
+```terminal
+cd Animating-Buttons
+```
+
+```terminal
+npm i
+npm start
+```
+
+- Create a new Branch
+```
+git checkout -b my-new-branch
+```
 
 <!-- <a href = "#top"> Back to top</a> -->
 
@@ -132,24 +133,26 @@ Note: Replace `github_username` with your actual GitHub username.
   - Make sure to align your button centered horizontally as well as vertically.
   - Don't forget to replace 'your_github_username' with GitHub Username.
   - If you are adding more than one buttons then give proper names such as Spyware007_1,Spyware007_2, your_github_username_1,etc -->
-- #### Next Steps:
-〽️ Stage your changes. 
+<!-- - #### Next Steps: -->
+- Stage your changes. 
 ```
 git add .
 ```
 
-〽️ Commit your changes.
+- Commit your changes.
 ```
 git commit -m "Relevant message"
 ```
 
-〽️ Then push 
+- Then push 
 ```
 git push origin my-new-branch
 ```
 
-〽️ Finally, create a new pull request from your forked repository
-create a new pull request from your forked repository
+- Finally, create a new pull request from your forked repository
+create a new pull request from your forked repository.
+To know more go to [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 
+
 
 
 | Note                                                                                                                             |
@@ -161,9 +164,8 @@ create a new pull request from your forked repository
 ---
 
 
-<a href = "#top"> Back to top</a>
 
-----
+
 
 
 <h2 align ="center"> Tech Stack Used </h2>
@@ -183,6 +185,7 @@ create a new pull request from your forked repository
 
 ---
 
+<a align = "right" href = "#top"> Back to top</a>
 
 _##A special note for a particular issue some users can face in the project##_
 
