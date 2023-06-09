@@ -243,8 +243,8 @@ ________________________________________________________________________________
 
 <div align="center">
 
-HacktoberFest 2022 ✨✨ 
-GSSoC'23 ✨✨ 
+[![Hacktoberfest'22 ✨✨](public/hacktoberfest.png)](https://hacktoberfest.digitalocean.com/)
+[![GSSoC'23 ✨✨](public/gssoc.png)](https://gssoc.girlscript.tech/)
 
 </div>
 
