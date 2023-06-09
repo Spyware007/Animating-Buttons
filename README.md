@@ -243,6 +243,11 @@ ________________________________________________________________________________
 
 <div align="center">
 
+<a href="https://hacktoberfest.digitalocean.com/" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/Hacktoberfest-2022-orange.svg" alt="Hacktoberfest'22">
+</a>
+
+
 [![Hacktoberfest'22 ✨✨](public/hacktoberfest.png)](https://hacktoberfest.digitalocean.com/)
 [![GSSoC'23 ✨✨](public/gssoc.png)](https://gssoc.girlscript.tech/)
 
