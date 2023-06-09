@@ -83,6 +83,28 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 ### Animating Buttons Repository Instructions 🚀🚀  
 <!-- To contribute to the Animating Buttons repository, follow these steps: -->
 
+- First, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
+
+- Clone the forked repo to your local machine using the following command:
+```terminal
+git clone https://github.com/**username**/Animating-Buttons.git
+```
+
+- Navigate to project directory.
+```terminal
+cd Animating-Buttons
+```
+
+```terminal
+npm i
+npm start
+```
+
+- Create a new Branch
+```
+git checkout -b my-new-branch
+```
+
 -  🚀🚀 Go to [public/Buttons](https://github.com/Spyware007/Animating-Buttons/blob/main/src/components/Main/Main.jsx) folder and add a new folder with your GitHub username including your button code (index.html + style.css files)
 
 | Step | Description                                                                                                     | Link                                                         |
@@ -105,27 +127,6 @@ Note: Replace `github_username` with your actual GitHub username.
 
 <h2 align="center"> How to Make a PR? </h2>
 
-- First, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
-
-- Clone the forked repo to your local machine using the following command:
-```terminal
-git clone https://github.com/**username**/Animating-Buttons.git
-```
-
-- Navigate to project directory.
-```terminal
-cd Animating-Buttons
-```
-
-```terminal
-npm i
-npm start
-```
-
-- Create a new Branch
-```
-git checkout -b my-new-branch
-```
 
 <!-- <a href = "#top"> Back to top</a> -->
 
@@ -162,10 +163,6 @@ To know more go to [Countributing Guidelines](https://github.com/arcVaishali/Ani
 | Also, make sure you comment your code wherever necessary.                                                                         |
 
 ---
-
-
-
-
 
 
 <h2 align ="center"> Tech Stack Used </h2>
