@@ -96,10 +96,16 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
  - [Welcome to Animating Buttons](https://github.com/arcVaishali/Animating-Buttons/tree/main#welcome-to-animating-buttons)
  - [What can you Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#what-can-you-contribute-%EF%B8%8F-)
  - [How to Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#-how-to-start-contributing-%EF%B8%8F)
+    + [Fork,clone,navigate]()
+    + [Initiate your contribution with these steps]()
+    + [Important Note]()
  - [How to Make a PR?](https://github.com/arcVaishali/Animating-Buttons/tree/main#-how-to-make-a-pr-)
+    + [Stage,Commit,PR]()
  - [Key Reminders for your Attention](https://github.com/arcVaishali/Animating-Buttons/tree/main#--key-reminders-for-your-attention-)
  - [Tech Stack](https://github.com/arcVaishali/Animating-Buttons/tree/main#-tech-stack-used-)
  - [Our Involvement in Notable Open Source Programs](https://github.com/arcVaishali/Animating-Buttons/tree/main#-involvement-in-notable-open-source-programs--)
+   + [Hacktoberfest'22]()
+   + [GSSoC'23]()
  - [Connect with Project Admin](https://github.com/arcVaishali/Animating-Buttons/tree/main#-project-admin-)
  - [Connect with Project Mentors](https://github.com/arcVaishali/Animating-Buttons/tree/main#-project-mentors-)  
  - [Our Beloved Contributors](https://github.com/arcVaishali/Animating-Buttons/tree/main#-our-beloved-contributors--)
@@ -109,9 +115,9 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 
 
 ________________________________________________________________________________________________________________________
-<h2 align="center">
-What can You Contribute ⚠️ 
-</h2>
+<h1 align="center">
+What can You Contribute? 👩‍💻 
+</h1>
 
 
 <div align="center">
@@ -128,7 +134,7 @@ ________________________________________________________________________________
 
 <!-- ### Contribution Steps: -->
 
-<h2 align="center"> How to start contributing? ⚠️</h2>
+<h1 align="center"> How to start contributing? 💻 </h1>
 
 ### Animating Buttons Repository Instructions 🚀🚀  
 <!-- To contribute to the Animating Buttons repository, follow these steps: -->
@@ -184,7 +190,7 @@ ________________________________________________________________________________
 
 -------------------
 
-<h2 align="center"> How to Make a PR? </h2>
+<h1 align="center"> How to Make a PR? 👨‍💻 </h1>
 
 
 <!-- <a href = "#top"> Back to top</a> -->
@@ -224,7 +230,7 @@ ________________________________________________________________________________
 
 <div align="center">
 
-<h2 align="center">  Key Reminders for Your Attention </h2>
+<h1 align="center">  Key Reminders for Your Attention </h1>
 
 |  **SNo.** |      **Description**                                                                      |
 |-----------|-------------------------------------------------------------------------------------------|
@@ -239,7 +245,7 @@ ________________________________________________________________________________
 
 _________________________________________________________________________________________________________________
 
-<h2 align="center"> Our Involvement in Notable Open Source Programs </h2>
+<h1 align="center"> Our Involvement in Notable Open Source Programs </h1>
 
 <div align="center">
 
@@ -260,7 +266,7 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________
 
 
-<h2 align ="center"> Tech Stack Used </h2>
+<h1 align ="center"> Tech Stack Used </h1>
 <div align="center">
 
 <img width="100" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS5">
@@ -269,9 +275,6 @@ ________________________________________________________________________________
 
 <img width="150" src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="javascript">
 
-<!-- ![CSS5](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![javascript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) -->
 
 </div>
 
@@ -284,7 +287,7 @@ ________________________________________________________________________________
 
 
 
-<h2 align='center'> Project Admin </h2>
+<h1 align='center'> Project Admin </h1>
 <table align='center'>
 <tr>
     <td align="center">
@@ -299,7 +302,7 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________________________________________________________
 
-<h2 align='center'> Project Mentors </h2>
+<h1 align='center'> Project Mentors </h1>
 <table align='center'>
 <td align="center"><a href="https://www.linkedin.com/in/tanyachanchalani/"><img src="https://media.licdn.com/dms/image/D5603AQFPR1ufAvGojA/profile-displayphoto-shrink_800_800/0/1673109782856?e=1691625600&v=beta&t=-BBNWi9eyMZXTMj91hF7ZJpWxEk8xwUtSH7XhbdOxXw" width="100px;" alt=""/><br /><sub><b> Tanya Chanchalani </b></sub></a></td>
 
@@ -318,7 +321,7 @@ ________________________________________________________________________________
 
 
 
-<h2 align="center"> Our Beloved Contributors 😍 </h2>
+<h1 align="center"> Our Beloved Contributors 😍 </h1>
 
 <a href="https://github.com/Spyware007/Animating-Buttons/graphs/contributors">
   <img align="center" src="https://contrib.rocks/image?max=100&repo=Spyware007/Animating-Buttons" />
