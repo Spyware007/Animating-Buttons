@@ -142,17 +142,18 @@ ________________________________________________________________________________
 
 
 6. Keep these points in mind before you begin. ❗❗
-<div align="right">
+    <div align="right">
 
     | Note                                                                                            |
     |-------------------------------------------------------------------------------------------------|
     | Make sure to align your button centered horizontally as well as vertically.                     |
     | Don't forget to replace 'your_github_username' with your actual GitHub username.                |
-    | If you are adding more than one button, give them proper names like Spyware007_1, Spyware007_2, your_github_username_1, etc.                                                                      |
+    | If you are adding more than one button, give them proper names like Spyware007_1, Spyware007_2 your_github_username_1, etc.                                                                      |
 
-</div>
+    </div>
 
 -------------------
+
 <h2 align="center"> How to Make a PR? </h2>
 
 
