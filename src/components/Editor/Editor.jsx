@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import classes from "./Editor.module.css";
 export default function Editor(props) {
   const { displayName, value } = props;
@@ -8,7 +8,7 @@ export default function Editor(props) {
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
-    }, 2000); 
+    }, 2000);
   };
 
   return (
@@ -21,7 +21,7 @@ export default function Editor(props) {
       <button
         type="button"
         style={classes.copy_button}
-        onClick={handleCopy}
+        // onClick={handleCopy}
         onClick={() => navigator.clipboard.writeText(value)}
       >
         {isCopied ? "Copied" : `Copy ${displayName}`}
