@@ -66,7 +66,7 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 # GSSoC 2023 〽️
 <div align="center">
 
-<img width="200" src="https://user-images.githubusercontent.com/98798977/236624352-6f5440bb-1b5a-41e3-a2d2-97b5ef2b7387.png">
+<img width="100%" src="https://user-images.githubusercontent.com/98798977/236624352-6f5440bb-1b5a-41e3-a2d2-97b5ef2b7387.png">
 
 </div>
 
@@ -113,12 +113,12 @@ git checkout -b my-new-branch
    <div align="center">
 
   | STEPS |               DESCRIPTION                                                                |
-  |--------------------------------------------------------------------------------------------------|
+  |-------|------------------------------------------------------------------------------------------|
   | 1.    | Go to the [public/Buttons folder🚀](https://github.com/Spyware007/Animating-Buttons/tree/main/public/Buttons) in the repository.                                                                 |
   | 2.    | Add a new folder with your GitHub username, including your button code (index.html + style.css files).                                                                                        |
   | 3.    | Go to the [src/Data.js file 🚀](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                                                                                           |
   | 4.    | Add your folder name (e.g., `github_username`) and your code in the [src/Data.js file](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                            |
-  
+  |-------|------------------------------------------------------------------------------------------|
   </div>
      - **Note: Replace `github_username` with your actual GitHub username.**
 
@@ -163,14 +163,13 @@ git push origin my-new-branch
 create a new pull request from your forked repository.
 To know more about how to contribute, read the [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 🚀🚀
 
-- **You can refer to the following articles on basics of Git and Github and also contact the Project   Mentors, in case you are stuck:**
+- You can refer to the following articles on basics of Git and Github and **also contact the Project   Mentors, in case you are stuck:**
+     - [Forking a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+     - [Cloning a Repo](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request-from-github-desktop)
+     - [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
+     - [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
 
- - [Forking a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
- - [Cloning a Repo](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request-from-github-desktop)
- - [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
- - [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
-
-<div align="center">
+<div align="center" width="100%">
 
 |Note                                                                                                    |
 |--------------------------------------------------------------------------------------------------------|
