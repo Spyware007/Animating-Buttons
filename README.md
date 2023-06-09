@@ -6,6 +6,7 @@
 
 
 <h1 style="margin-top:0px"align = "center"> ✅ Animating Buttons </h1> 
+
 ![Screenshot](https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png)
 
 
@@ -27,13 +28,13 @@
   <img src="https://svgshare.com/i/tYz.svg" />
  </div> 
 
-_______________________________________________________________________________________________________________________________
-
 
 # Welcome to Animating Buttons🎉!![Gif](https://github.com/tuhinaww/Animating-Buttons/assets/119059108/55243a1c-ef56-4e37-86ef-48f2b1036c76)
 
 <div align="center">
+
 Coolest place in the digital universe, the Animating Buttons repository! This project aims to provide a collection of animated buttons that you can use to enhance your web development projects. Whether you're a beginner or an experienced developer, these buttons will add a touch of interactivity and flair to your websites.
+
 </div>
 ____________________________________________________________________________________________________________________
 
@@ -62,8 +63,6 @@ ________________________________________________________________________________
   <div align="center">
   <img width="200" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
 </div>  -->
-
-_____________________________________________________________________________________________________________________
 
 <h1 align="center"> GSSoC 2023 〽️ <h1>
 <div align="center">
