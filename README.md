@@ -183,7 +183,7 @@ ________________________________________________________________________________
 create a new pull request from your forked repository.
 To know more about how to contribute, read the [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 🚀🚀
 
-- You can refer to the following articles on basics of Git and Github and *also contact the Project   Mentors, in case you are stuck:*
+5. You can refer to the following articles on basics of Git and Github and *also contact the Project   Mentors, in case you are stuck:*
      - [Forking a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
      - [Cloning a Repo](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request-from-github-desktop)
      - [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
@@ -202,7 +202,7 @@ ________________________________________________________________________________
 |     2     | Make sure that your file name and your commit message are relevant.                       |
 |     3     | Also, make sure you comment your code wherever necessary.                                 |
 |     4     | Make sure to align your button centered horizontally as well as vertically.               |
-|     5     | Add a new folder with your GitHub username, including your button code (index.html + style.css )                                                                                                   |
+|     5     | Make sure your folder name is in correct format (GitHub username)                                                                                               |
 |     6     | If you are adding more than one button, give them proper names like Spyware007_1, Spyware007_2 your_github_username_1, etc.                                                               |
 
 </div>
