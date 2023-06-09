@@ -10,6 +10,7 @@
 ![Screenshot](https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png)
 
 
+------------
 
 <div align="center">
 <img src="https://forthebadge.com/images/badges/open-source.svg" />
@@ -28,8 +29,11 @@
   <img src="https://svgshare.com/i/tYz.svg" />
  </div> 
 
+<div align = "center">
 
-# Welcome to Animating Buttons🎉!![Gif](https://github.com/tuhinaww/Animating-Buttons/assets/119059108/55243a1c-ef56-4e37-86ef-48f2b1036c76)
+# Welcome to Animating Buttons🎉!![Gif](https://github.com/tuhinaww/Animating-Buttons/assets/119059108/55243a1c-ef56-4e37-86ef-48f2b1036c76) 
+
+</div>
 
 <div align="center">
 
@@ -72,8 +76,12 @@ ________________________________________________________________________________
 </div>
 
 ________________________________________________________________________________________________________________________
+<div align="center">
 
 ## What can You Contribute ⚠️ 
+
+ </div>
+
 <div align="center">
 
 | **Contribution Guidelines**                                                                            |
@@ -128,7 +136,7 @@ ________________________________________________________________________________
   </div>
 
 
-      - **Note:** Replace `github_username` with your actual GitHub username.
+       **Note:** Replace `github_username` with your actual GitHub username.
 
 
 6. Keep these points in mind before you begin. ❗❗
