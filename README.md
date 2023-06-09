@@ -41,17 +41,6 @@
  </div> 
 
 
- <h2 align="center"> Involvement in Notable Open Source Programs ✨✨ </h2>
-
-<div align="center">
-
-<h5>✨✨HacktoberFest 2022✨✨ &nbsp;  ✨✨ GSSoC'23 ✨✨</h5>
-<img src="Animating-Buttons\src\assets\hacktoberfest-gssoc.png">
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fitsfoss.com%2Fhacktoberfest-guide%2F&psig=AOvVaw2xzAnDxF_-Y2Jg_ogHHRuS&ust=1686398767745000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNC11Y6Ttv8CFQAAAAAdAAAAABAE">
-
-</div>
-
-
 
 
 <div align = "center">
@@ -226,6 +215,18 @@ ________________________________________________________________________________
 |     6     | If you are adding more than one button, give them proper names like Spyware007_1, Spyware007_2 your_github_username_1, etc.                                                               |
 
 </div>
+
+_________________________________________________________________________________________________________________
+
+<h2 align="center"> Involvement in Notable Open Source Programs ✨✨ </h2>
+
+<div align="center">
+
+- ✨✨HacktoberFest 2022✨✨ 
+- ✨✨ GSSoC'23 ✨✨ 
+
+</div>
+
 
 ________________________________________________________________________________________________________________
 
