@@ -125,7 +125,7 @@ ________________________________________________________________________________
     git checkout -b my-new-branch
     ```
 
-5. Follow the following steps to start your contricution after you have successfully cloned the repository and created a new branch -                                 
+5. Once you have cloned the repository and created a new branch, proceed with the following steps to initiate your contribution-                                 
       <div align="right">
 
       | STEPS |               DESCRIPTION                                                                |
@@ -141,7 +141,7 @@ ________________________________________________________________________________
        Note: Replace `github_username` with your actual GitHub username.
 
 
-6. Before embarking on your journey, bear these points in mind.. ❗❗
+6. Before embarking on your journey, bear these points in mind- ❗❗
     <div align="right">
 
     | Note                                                                                            |
@@ -179,11 +179,11 @@ ________________________________________________________________________________
    git push origin my-new-branch
    ```
 
-4. Finally, create a new pull request from your forked repository
-create a new pull request from your forked repository.
-To know more about how to contribute, read the [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 🚀🚀
+4. Finally, create a new pull request from your forked repository.
 
-5. You can refer to the following articles on basics of Git and Github and *also contact the Project   Mentors, in case you are stuck:*
+5. To know more about how to contribute, read the [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 🚀🚀
+
+6. You can refer to the following articles on basics of Git and Github and *also contact the Project   Mentors, in case you are stuck:*
      - [Forking a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
      - [Cloning a Repo](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request-from-github-desktop)
      - [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
