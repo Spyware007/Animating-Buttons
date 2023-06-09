@@ -2,10 +2,13 @@
 <div align="center">
 <img width="200" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
 </div>
-<div id="top">
-<h1 style="margin-top:0px"align = "center"> ✅ Animating Buttons </h1> 
 
---------------------------------------------------------------------------------------------------------------------
+
+
+<h1 style="margin-top:0px"align = "center"> ✅ Animating Buttons </h1> 
+![Screenshot](https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png)
+
+
 
 <div align="center">
 <img src="https://forthebadge.com/images/badges/open-source.svg" />
@@ -22,9 +25,9 @@
   <img src="https://img.shields.io/github/issues-pr-closed-raw/spyware007/Animating-Buttons?style=for-the-badge" />
   <img src="https://img.shields.io/github/forks/spyware007/Animating-Buttons?style=for-the-badge" />
   <img src="https://svgshare.com/i/tYz.svg" />
-  
+ </div> 
 
---------------------------------------------------------------------------------------------------------------------
+_______________________________________________________________________________________________________________________________
 
 
 # Welcome to Animating Buttons🎉!![Gif](https://github.com/tuhinaww/Animating-Buttons/assets/119059108/55243a1c-ef56-4e37-86ef-48f2b1036c76)
@@ -32,13 +35,10 @@
 <div align="center">
 Coolest place in the digital universe, the Animating Buttons repository! This project aims to provide a collection of animated buttons that you can use to enhance your web development projects. Whether you're a beginner or an experienced developer, these buttons will add a touch of interactivity and flair to your websites.
 </div>
+____________________________________________________________________________________________________________________
 
--------------------
 
 
-![Screenshot](https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png)
-
---------------------
 <!-- <h1 align="center">✨✨HacktoberFest 2022✨✨</h1>
 <img width="1440" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png">
 
@@ -63,23 +63,29 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
   <img width="200" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
 </div>  -->
 
-# GSSoC 2023 〽️
+_____________________________________________________________________________________________________________________
+
+<h1 align="center"> GSSoC 2023 〽️ <h1>
 <div align="center">
 
 <img width="100%" src="https://user-images.githubusercontent.com/98798977/236624352-6f5440bb-1b5a-41e3-a2d2-97b5ef2b7387.png">
 
 </div>
 
-## What can You Contribute ⚠️ 
+________________________________________________________________________________________________________________________
 
-| **Contribution Guidelines**                                                                                    |                           |
-|---------------------------------------------------------------------------------------------------------------|---------------------------|
-| - You can contribute any animated buttons. ⬆️                                                                   |                           |
+## What can You Contribute ⚠️ 
+<div align="center">
+
+| **Contribution Guidelines**                                                                            |
+|--------------------------------------------------------------------------------------------------------|
+| - You can contribute any animated buttons. ⬆️                                                         |
 | - You can update or refine an existing animated button or even add your own new buttons to this repository. 🚀 |                           |
-| - Make sure you follow the below steps before making your contributions. ❗❗❗                               |                           |
+| - Make sure you follow the below steps before making your contributions. ❗❗❗                      |
+
 </div>
 
-------------------------
+__________________________________________________________________________________________________________________________________________
 
 <!-- ### Contribution Steps: -->
 
@@ -91,27 +97,27 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 1. First, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
 
 2. Clone the forked repo to your local machine using the following command:
-```terminal
-git clone https://github.com/**username**/Animating-Buttons.git
-```
+    ```terminal
+    git clone https://github.com/**username**/Animating-Buttons.git
+    ```
 
 3. Navigate to project directory.
-```terminal
-cd Animating-Buttons
-```
+    ```terminal
+    cd Animating-Buttons
+    ```
 
-```terminal
-npm i
-npm start
-```
+    ```terminal
+    npm i
+    npm start
+    ```
 
 4. Create a new Branch
-```
-git checkout -b my-new-branch
-```
+    ```
+    git checkout -b my-new-branch
+    ```
 
 5. Follow the following steps to start your contricution after you have successfully cloned the repository and created a new branch -                                 
-   <div align="center">
+  <div align="center">
 
   | STEPS |               DESCRIPTION                                                                |
   |-------|------------------------------------------------------------------------------------------|
@@ -121,8 +127,9 @@ git checkout -b my-new-branch
   | 4.    | Add your folder name (e.g., `github_username`) and your code in the [src/Data.js file](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                            |
 
   </div>
-     
-      - Note: Replace `github_username` with your actual GitHub username.
+
+
+      - **Note:** Replace `github_username` with your actual GitHub username.
 
 
 6. Keep these points in mind before you begin. ❗❗
@@ -148,19 +155,19 @@ git checkout -b my-new-branch
   - If you are adding more than one buttons then give proper names such as Spyware007_1,Spyware007_2, your_github_username_1,etc -->
 <!-- - #### Next Steps: -->
 1. Stage your changes. 
-```
-git add .
-```
+   ```
+   git add .
+   ```
 
 2. Commit your changes.
-```
-git commit -m "Relevant message"
-```
+   ```
+   git commit -m "Relevant message"
+   ```
 
 3. Then push 
-```
-git push origin my-new-branch
-```
+   ```
+   git push origin my-new-branch
+   ```
 
 4. Finally, create a new pull request from your forked repository
 create a new pull request from your forked repository.
