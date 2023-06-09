@@ -87,6 +87,27 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 
 </div> 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<h2 align="center"> Table of Content </h2>
+<div align = "center">
+
+ - [Welcome to Animating Buttons](https://github.com/arcVaishali/Animating-Buttons/tree/main#welcome-to-animating-buttons)
+ - [What can you Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#what-can-you-contribute-%EF%B8%8F-)
+ - [How to Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#-how-to-start-contributing-%EF%B8%8F)
+ - [How to Make a PR?](https://github.com/arcVaishali/Animating-Buttons/tree/main#-how-to-make-a-pr-)
+ - [Key Reminders for your Attention](https://github.com/arcVaishali/Animating-Buttons/tree/main#--key-reminders-for-your-attention-)
+ - [Tech Stack](https://github.com/arcVaishali/Animating-Buttons/tree/main#-tech-stack-used-)
+ - [Our Involvement in Notable Open Source Programs](https://github.com/arcVaishali/Animating-Buttons/tree/main#-involvement-in-notable-open-source-programs--)
+ - [Connect with Project Admin](https://github.com/arcVaishali/Animating-Buttons/tree/main#-project-admin-)
+ - [Connect with Project Mentors](https://github.com/arcVaishali/Animating-Buttons/tree/main#-project-mentors-)  
+ - [Our Beloved Contributors](https://github.com/arcVaishali/Animating-Buttons/tree/main#-our-beloved-contributors--)
+
+ </div>
+
+
+
 ________________________________________________________________________________________________________________________
 <h2 align="center">
 What can You Contribute ⚠️ 
@@ -218,12 +239,12 @@ ________________________________________________________________________________
 
 _________________________________________________________________________________________________________________
 
-<h2 align="center"> Involvement in Notable Open Source Programs ✨✨ </h2>
+<h2 align="center"> Our Involvement in Notable Open Source Programs </h2>
 
 <div align="center">
 
-- ✨✨HacktoberFest 2022✨✨ 
-- ✨✨ GSSoC'23 ✨✨ 
+HacktoberFest 2022 ✨✨ 
+GSSoC'23 ✨✨ 
 
 </div>
 
