@@ -46,7 +46,8 @@
 <div align="center">
 
 <h5>✨✨HacktoberFest 2022✨✨ &nbsp;  ✨✨ GSSoC'23 ✨✨</h5>
-<img src="https://github.com/arcVaishali/Animating-Buttons/blob/main/src/assets/hacktoberfest-gssoc.png">
+<img src="Animating-Buttons\src\assets\hacktoberfest-gssoc.png">
+<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fitsfoss.com%2Fhacktoberfest-guide%2F&psig=AOvVaw2xzAnDxF_-Y2Jg_ogHHRuS&ust=1686398767745000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNC11Y6Ttv8CFQAAAAAdAAAAABAE">
 
 </div>
 
