@@ -4,10 +4,10 @@ import classes from "./Socials.module.css";
 export default function Socials({ modeToggle }) {
   const toogleMode = modeToggle ? classes.dark_mode : classes.light_mode;
   const iframeSrc = [
-    "Buttons/Spyware007/index.html",
-    "Buttons/Spyware007_1/index.html",
-    "Buttons/Spyware007_2/index.html",
-    "Buttons/Spyware007_3/index.html",
+    "Buttons/ombhojane-1/index.html",
+    "Buttons/ombhojane-2/index.html",
+    "Buttons/ombhojane-3/index.html",
+    "Buttons/ombhojane-4/index.html",
   ];
 
   const iFrameComponent = iframeSrc.map((source) => (
