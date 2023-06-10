@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+a{
+    position: relative;
+    padding: 10px 20px;
+    font-size: 24px;
+    color: #262626;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+}
+
+a:hover{
+    color: #fff;
+    transition: 0.2s;
+    transition-delay: 0.8s;
+}
+
+a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #262626;
+    z-index: -1;
+    transform: scale(0);
+    transform-origin: top left;
+}
+
+a:hover::before{
+    transform: scale(1);
+    transition: 0.5s;
+    transition-delay: 0.8s;
+}
+
+a::after{
+    content: '\f5ad';
+    font-family: fontAwesome;
+    position: absolute;
+    top: -22px;
+    left: 0;
+    color: #262626;
+}
+
+a:hover::after{
+    animation: draw 0.9s linear forwards;
+}
+
+@keyframes draw{
+    0%{
+        top: -22px;
+        left: 0;
+    }
+    20%{
+        top: -22px;
+        left: 100%;
+    }
+    40%{
+        top: calc(100% - 22px);
+        left: 100%;
+    }
+    60%{
+        top: calc(100% - 22px);
+        left: 0;
+    }
+    80%{
+        top: calc(0% - 22px);
+        left: 0;
+    }
+    100%{
+        top: calc(100% - 22px);
+        left: 100%;
+    }
+}
+
+a span{
+    position: absolute;
+}
+
+a span:nth-child(1), a span:nth-child(3){
+    width: 100%;
+    height: 2px;
+    background: #262626;
+}
+
+a span:nth-child(1){
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+a:hover span:nth-child(1){
+    transform: scaleX(1);
+    transition: 0.2s;
+    transition-delay: 0s;
+}
+
+a span:nth-child(3){
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+a:hover span:nth-child(3){
+    transform: scaleX(1);
+    transition: 0.2s;
+    transition-delay: 0.4s;
+}
+
+a span:nth-child(2), a span:nth-child(4){
+    width: 2px;
+    height: 100%;
+    background: #262626;
+}
+
+a span:nth-child(2){
+    top: 0;
+    right: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+
+a:hover span:nth-child(2){
+    transform: scaleY(1);
+    transition: 0.2s;
+    transition-delay: 0.2s;
+}
+
+a span:nth-child(4){
+    top: 0;
+    left: 0;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+
+a:hover span:nth-child(4){
+    transform: scaleY(1);
+    transition: 0.2s;
+    transition-delay: 0.6s;
+}
