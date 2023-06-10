@@ -116,6 +116,7 @@ export const Data = [
   "Killer2OP_3",
   "Killer2OP_4",
   "Killer2OP_5",
+  "Killer2OP_6",
   "kishanlalchoudhary",
   "KishorBhagat",
   "KratikJain10",
