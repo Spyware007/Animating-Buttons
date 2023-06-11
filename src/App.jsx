@@ -1,10 +1,12 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { Loader } from "./components";
 import MainPage from "./MainPage";
-import { BrowserRouter } from "react-router-dom";
+import ErrorPage from "./components/ErrorPage/404Error";
+import { Routes, Route } from "react-router-dom";
 import GoToTop from "./components/Top/GoToTop";
 
-const App = () => {
+const App = ({ modeToggleFunc, modeToggle }) => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
@@ -13,7 +15,20 @@ const App = () => {
     }, 1000);
   }, []);
 
-  return <BrowserRouter>{loading ? <Loader /> : <MainPage />} <GoToTop/> </BrowserRouter>;
+  return (
+    <>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            loading ? <Loader /> : <MainPage modeToggleFunc={modeToggle} />
+          }
+        />
+        <Route path="*" element={<ErrorPage modeToggleFunc={modeToggle} />} />
+      </Routes>
+      <GoToTop />
+    </>
+  );
 };
 
 export default App;

@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Futura md bt";
+    outline: none;
+}
+
+body{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background: #183153;
+
+}
+
+button{
+    width: 140px;
+    height: 50px;
+    color: #183153;
+    background: #63e6be;
+    border-radius: 5px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+button i{
+    font-size: 25px;
+}
+
+.fa-check{
+    border: 1px solid #183153;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.fa-check.checked{
+    color: #63e6be;
+    background: #183153;
+}
+
+button .btn-txt{
+    margin-left: 7px;
+}
+.fa-circle-notch{
+    animation: animate 1s ease infinite;
+}
+
+@keyframes animate {
+    0% {
+        transition: rotate(0turn);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
