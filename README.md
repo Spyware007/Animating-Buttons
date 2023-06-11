@@ -316,7 +316,7 @@ ________________________________________________________________________________
 <table align='center'>
 <td align="center"><a href="https://www.linkedin.com/in/tanyachanchalani/"><img src="https://media.licdn.com/dms/image/D5603AQFPR1ufAvGojA/profile-displayphoto-shrink_800_800/0/1673109782856?e=1691625600&v=beta&t=-BBNWi9eyMZXTMj91hF7ZJpWxEk8xwUtSH7XhbdOxXw" width="100px;" alt=""/><br /><sub><b> Tanya Chanchalani </b></sub></a></td>
 
-<td align="center"><a href="https://www.linkedin.com/in/poorvi-shetty/"><img src="public/blank-contact.png" width="100px;" alt=""/><br /><sub align="bottom"><b>Poorvi Shetty</b></sub></a></td>
+<td align="center"><a href="https://www.linkedin.com/in/poorvi-shetty/"><img src="https://avatars.githubusercontent.com/u/65484904?v=4" width="100px;" alt=""/><br /><sub align="bottom"><b>Poorvi Shetty</b></sub></a></td>
 
 </table>
 
