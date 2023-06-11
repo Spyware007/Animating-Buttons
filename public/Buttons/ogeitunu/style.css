@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 95vh;
   }
   
   .button {
@@ -19,7 +19,7 @@
     text-align: center;
     border-radius: 6px;
     background-color: #f44336;
-    color: #ffffff;
+    color: #fcf4f4;
     cursor: pointer;
     animation: bounce 0.4s infinite alternate;
     text-decoration: none;
@@ -31,5 +31,5 @@
   }
   
   .button:hover {
-    background-color: #ff80ab;
+    background-color: #ffa2c1;
   }
