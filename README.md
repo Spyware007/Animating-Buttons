@@ -7,10 +7,15 @@
 
 <h1 style="margin-top:0px"align = "center"> ✅ Animating Buttons </h1> 
 
+<br><br>
+
 ![Screenshot](https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png)
 
 
 ------------
+
+<br>
+<br>
 
 
 
@@ -41,7 +46,8 @@
  </div> 
 
 
-
+<br>
+<br>
 
 <div align = "center">
 
@@ -90,22 +96,20 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-<h2 align="center"> Table of Content </h2>
+<h1 align="center"> Table of Content </h1>
 <div>
 
  - [Welcome to Animating Buttons](https://github.com/arcVaishali/Animating-Buttons/tree/main#welcome-to-animating-buttons)
  - [What can you Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#what-can-you-contribute-%EF%B8%8F-)
  - [How to Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#-how-to-start-contributing-%EF%B8%8F)
-    + [Fork,clone,navigate]()
-    + [Initiate your contribution with these steps]()
-    + [Important Note]()
+    + [Fork, Clone, Navigate](#fork-clone-navigate-the-repository)
+    + [Initiate your contribution with these steps](#initiate-you-contribution-with-these-steps)
+    + [Important Note](#important-note)
  - [How to Make a PR?](https://github.com/arcVaishali/Animating-Buttons/tree/main#-how-to-make-a-pr-)
-    + [Stage,Commit,PR]()
+    + [Stage, Commit, PR](#stage-commit-pr)
  - [Key Reminders for your Attention](https://github.com/arcVaishali/Animating-Buttons/tree/main#--key-reminders-for-your-attention-)
  - [Tech Stack](https://github.com/arcVaishali/Animating-Buttons/tree/main#-tech-stack-used-)
  - [Our Involvement in Notable Open Source Programs](https://github.com/arcVaishali/Animating-Buttons/tree/main#-involvement-in-notable-open-source-programs--)
-   + [Hacktoberfest'22]()
-   + [GSSoC'23]()
  - [Connect with Project Admin](https://github.com/arcVaishali/Animating-Buttons/tree/main#-project-admin-)
  - [Connect with Project Mentors](https://github.com/arcVaishali/Animating-Buttons/tree/main#-project-mentors-)  
  - [Our Beloved Contributors](https://github.com/arcVaishali/Animating-Buttons/tree/main#-our-beloved-contributors--)
@@ -139,6 +143,7 @@ ________________________________________________________________________________
 ### Animating Buttons Repository Instructions 🚀🚀  
 <!-- To contribute to the Animating Buttons repository, follow these steps: -->
 
+#### Fork, Clone, Navigate the Repository
 1. First, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
 
 2. Clone the forked repo to your local machine using the following command:
@@ -161,6 +166,7 @@ ________________________________________________________________________________
     git checkout -b my-new-branch
     ```
 
+#### Initiate you contribution with these steps
 5. Once you have cloned the repository and created a new branch, proceed with the following steps to initiate your contribution-                                 
       <div align="right">
 
@@ -176,7 +182,7 @@ ________________________________________________________________________________
 
        Note: Replace `github_username` with your actual GitHub username.
 
-
+#### Important Note
 6. Before embarking on your journey, bear these points in mind- ❗❗
     <div align="right">
 
@@ -200,6 +206,8 @@ ________________________________________________________________________________
   - Don't forget to replace 'your_github_username' with GitHub Username.
   - If you are adding more than one buttons then give proper names such as Spyware007_1,Spyware007_2, your_github_username_1,etc -->
 <!-- - #### Next Steps: -->
+
+#### Stage, Commit, PR
 1. Stage your changes. 
    ```
    git add .
@@ -249,11 +257,13 @@ ________________________________________________________________________________
 
 <div align="center">
 
+
 <a href="https://hacktoberfest.digitalocean.com/" target="_blank" rel="noopener noreferrer">
   <img width="200" src="https://img.shields.io/badge/Hacktoberfest-2022-orange.svg" alt="Hacktoberfest'22">
 </a>
 
 <br>
+
 
 <a href="https://gssoc.girlscript.tech/" target="_blank" rel="noopener noreferrer">
   <img width="300" src="https://img.shields.io/badge/GirlScript%20Summer%20of%20Code-2023-blueviolet.svg" alt="GirlScript Summer of Code'23">
@@ -306,9 +316,7 @@ ________________________________________________________________________________
 <table align='center'>
 <td align="center"><a href="https://www.linkedin.com/in/tanyachanchalani/"><img src="https://media.licdn.com/dms/image/D5603AQFPR1ufAvGojA/profile-displayphoto-shrink_800_800/0/1673109782856?e=1691625600&v=beta&t=-BBNWi9eyMZXTMj91hF7ZJpWxEk8xwUtSH7XhbdOxXw" width="100px;" alt=""/><br /><sub><b> Tanya Chanchalani </b></sub></a></td>
 
-<td align="center"><a href="https://www.linkedin.com/in/poorvi-shetty/"><img src="https://avatars.githubusercontent.com/u/89961974?v=4" width="100px;" alt=""/><br /><sub align="bottom"><b>Poorvi Shetty</b></sub></a></td>
-
-<td align="center"><a href="https://www.linkedin.com/in/pratiksha-sankhe/"><img src="https://media.licdn.com/dms/image/D4D03AQFGlCTTvV2yIw/profile-displayphoto-shrink_800_800/0/1670562506482?e=1691625600&v=beta&t=S4YCvFoyDB_P29IWgn83nUYf1UEUybGI90nXiSUJ-zM" width="100px;" alt=""/><br /><sub><b> Pratiksha Sankhe </b></sub></a></td>
+<td align="center"><a href="https://www.linkedin.com/in/poorvi-shetty/"><img src="public/blank-contact.png" width="100px;" alt=""/><br /><sub align="bottom"><b>Poorvi Shetty</b></sub></a></td>
 
 </table>
 
