@@ -49,7 +49,6 @@ function App() {
 
   return (
     <div className={classes.editor_container}>
-      
       <div className={classes.iframe_container}>
         <iframe
           className={classes.container}
@@ -60,47 +59,48 @@ function App() {
         />
       </div>
       <div className={classes.components_container}>
-      <div className={classes.navbar}>
-        <button
-          className={`${classes.navbar_option} ${
-            selectedOption === "HTML" ? classes.active : ""
-          }`}
-          onClick={() => handleOptionChange("HTML")}
-        >
-          HTML
-        </button>
-        <button
-          className={`${classes.navbar_option} ${
-            selectedOption === "CSS" ? classes.active : ""
-          }`}
-          onClick={() => handleOptionChange("CSS")}
-        >
-          CSS
-        </button>
-        <button
-          className={`${classes.navbar_option} ${
-            selectedOption === "JS" ? classes.active : ""
-          }`}
-          onClick={() => handleOptionChange("JS")}
-        >
-          JS
-        </button>
-      </div>
-      
-      <div className={classes.codes}>
-        {selectedOption === "HTML" && (
-          <Editor displayName="HTML" value={html} onChange={(v) => setHtml(v)} />
-        )}
-        {selectedOption === "CSS" && (
-          <Editor displayName="CSS" value={css} onChange={(v) => setCss(v)} />
-        )}
-        {selectedOption === "JS" && (
-          <Editor displayName="JS" value={js} onChange={(v) => setJs(v)} />
-        )}
+        <div className={classes.navbar}>
+          <button
+            className={`${classes.navbar_option} ${
+              selectedOption === "HTML" ? classes.active : ""
+            }`}
+            onClick={() => handleOptionChange("HTML")}
+          >
+            HTML
+          </button>
+          <button
+            className={`${classes.navbar_option} ${
+              selectedOption === "CSS" ? classes.active : ""
+            }`}
+            onClick={() => handleOptionChange("CSS")}
+          >
+            CSS
+          </button>
+          <button
+            className={`${classes.navbar_option} ${
+              selectedOption === "JS" ? classes.active : ""
+            }`}
+            onClick={() => handleOptionChange("JS")}
+          >
+            JS
+          </button>
         </div>
-        <Editor displayName="HTML" value={html} onChange={(v) => setHtml(v)} />
-        <Editor displayName="CSS" value={css} onChange={(v) => setCss(v)} />
-        <Editor displayName="JS" value={js} onChange={(v) => setJs(v)} />
+
+        <div className={classes.codes}>
+          {selectedOption === "HTML" && (
+            <Editor
+              displayName="HTML"
+              value={html}
+              onChange={(v) => setHtml(v)}
+            />
+          )}
+          {selectedOption === "CSS" && (
+            <Editor displayName="CSS" value={css} onChange={(v) => setCss(v)} />
+          )}
+          {selectedOption === "JS" && (
+            <Editor displayName="JS" value={js} onChange={(v) => setJs(v)} />
+          )}
+        </div>
       </div>
     </div>
   );

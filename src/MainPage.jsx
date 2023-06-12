@@ -14,10 +14,10 @@ export default function MainPage() {
         <Route
           path="/"
           element={
-            <div>
+            <>
               <Socials modeToggle={toggleMode} />
               <Main modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
-            </div>
+            </>
           }
         />
         <Route
