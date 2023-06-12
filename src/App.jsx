@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import { Loader } from "./components";
 import MainPage from "./MainPage";

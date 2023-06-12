@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import { Main, Navbar, Socials, Footer } from "./components";
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";

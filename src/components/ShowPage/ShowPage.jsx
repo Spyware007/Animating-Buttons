@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Editor from "../Editor/Editor";
 import classes from "./ShowPage.module.css";
 import { useParams } from "react-router-dom";
