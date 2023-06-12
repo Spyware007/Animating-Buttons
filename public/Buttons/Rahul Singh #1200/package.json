@@ -1,0 +1,11 @@
+{
+  "name": "buttons",
+  "version": "1.0.0",
+  "description": "building animated buttons",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rahul-web-hub",
+  "license": "ISC"
+}
