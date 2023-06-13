@@ -260,7 +260,6 @@ export const Data = [
   "aniketburman014",
   "adjascently",
   "Divya7201",
-  "mohitparmar1",
   "Naishadha-satya",
   "AdityaLahane-2003_1",
   "coderhersh",
