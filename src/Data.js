@@ -335,8 +335,6 @@ export const Data = [
   "harshita-2003",
   "rohanmittal1163",
   "rohanmittal1163-1",
-  "rohanmittal1163",
-  "rohanmittal1163-1",
   "Kalivarapubindusree",
   "0xabdulkhalid_2",
   "0xabdulkhalid_1",
