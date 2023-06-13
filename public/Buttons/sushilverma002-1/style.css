@@ -1,0 +1,75 @@
+.btn {
+	outline: none;
+	position: relative;
+	padding: 20px 50px;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 250px;
+	overflow: hidden;
+	margin: 0 auto;
+	background-color: transparent;
+	border-radius: 60px;
+	border: none;
+	margin-top: 40px;
+	text-align: center;
+}
+
+button span {
+	position: relative;
+	right: 10px;
+	z-index: 1;
+	color: #ffffff;
+	font-size: 16px;
+	letter-spacing: 7px;
+    font-style:italic;
+    font-weight: bold;
+}
+
+button .flow {
+	position: absolute;
+	left: 0;
+	top: -80px;
+	width: 250px;
+	height: 200px;
+	background: rgba(175, 5, 5, 0.863);
+	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+	transition: 0.5s;
+}
+
+button:hover .flow {
+	top: -120px;
+}
+
+button .flow:before,
+button .flow:after {
+	content: '';
+	position: absolute;
+	width: 180%;
+	height: 200%;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -75%);
+}
+
+button .flow:before {
+	border-radius: 45%;
+	background: #e4e0ddef;
+	animation: swing 5s linear infinite;
+}
+
+button .flow:after {
+	border-radius: 40%;
+	background: rgba(3, 1, 1, 0.863);
+	animation: swing 10s linear infinite;
+}
+
+@keyframes swing {
+	0% {
+		transform: translate(-50%, -75%) rotate(0deg);
+	}
+
+	100% {
+		transform: translate(-50%, -75%) rotate(360deg);
+	}
+}
