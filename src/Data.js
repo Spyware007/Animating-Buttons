@@ -360,6 +360,8 @@ export const Data = [
   "AnkitMajee",
   "Samriddhi15_3",
   "PayalPadmalyaPrusty",
+  "HimanshuNarware_2",
+ "0xabdulkhalid_11",
   "Illaf"
   "Once-kaur",
   "RahulBisht001",
@@ -380,5 +382,6 @@ export const Data = [
   "Roshnijeewani3457",
   "0xabdulkhalid_9",
   "Durgesh4993_2",
-  "Kalivarapubindusree_2"
+  "Kalivarapubindusree_2",
+  "Kalivarapubindusree_1"
 ];
