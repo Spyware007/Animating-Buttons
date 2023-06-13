@@ -1,0 +1,59 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+body{
+    background: rgba(85, 4, 191, 0.995);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+div{
+ width: 200px ;
+ height: 200px;
+ border-radius:10px ;
+ cursor: pointer;
+ box-shadow: 16px 14px 20px #0000008c;
+ position: relative;
+ overflow: hidden;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+div::before{
+    content: "";
+    background-image: conic-gradient(#fbe711 20deg, transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+
+div::after{
+    content: "Get Started";
+    font-size: larger;
+    width: 190px;
+    height: 190px;
+    background: #350781;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fbe711;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
