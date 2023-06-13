@@ -366,6 +366,5 @@ export const Data = [
   "0xabdulkhalid_10",
   "vedangc03",
   "Roshnijeewani3457", 
-  "silky-modi22"
-  
+  "silky-modi22"  
 ];
