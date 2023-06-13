@@ -22,9 +22,10 @@ html, body {
 .logout {
     font-size: .8em;
     font-family: 'Oswald', sans-serif;
-    position: relative;
-    right: -18px;
-    bottom: -4px;
+    position: absolute;
+    right: 50px;
+    bottom: 14px;
+    left: 65px;
     overflow: hidden;
     letter-spacing: 3px;
     opacity: 0;
@@ -59,4 +60,6 @@ html, body {
 
 .nav-button {
     text-decoration: none;
+    display:flex;
+    margin:auto;
 }

@@ -1,15 +1,50 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: orange;
+}
+
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2px 20px;
+}
+
+.navbar-light {
+  background-color: rgba(256, 256, 256, 1);
   box-shadow: 0px 7px 18px 0px #0000002e;
 }
+
+.navbar-dark {
+  background-color: rgb(20, 20, 20);
+  box-shadow: 0px 7px 18px 0px #ffffff2e;
+}
+
 .logo {
   width: 100px;
 }
 .github {
-  width: 60px;
+  width: 52px;
+  position: relative;
+  top: 3px;
+  height: 52px;
 }
 .github,
 .spider {
