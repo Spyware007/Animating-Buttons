@@ -1,0 +1,152 @@
+.add {
+    width: 84px;
+    height: 84px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transform: scale(0.5);
+    transform-origin: 50% 50%;
+    transition: transform 0.4s ease;
+  }
+  .add a {
+    display: block;
+    position: relative;
+    width: 50%;
+    padding-bottom: 50%;
+    background: #5628EE;
+    -webkit-backface-visibility: hidden;
+    transition: border-radius 0.3s ease, transform 0.2s ease;
+  }
+  .add a svg {
+    display: block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -7px 0 0 -7px;
+    opacity: 0;
+    fill: #fff;
+    transform: scale(0.6) rotate(-45deg);
+    transition: all 0.15s ease;
+    -webkit-backface-visibility: hidden;
+  }
+  .add a:nth-child(1) {
+    border-radius: 8px 0 0 0;
+  }
+  .add a:nth-child(2) {
+    border-radius: 0 0 0 8px;
+  }
+  .add a:nth-child(3) {
+    border-radius: 0 8px 0 0;
+  }
+  .add a:nth-child(4) {
+    border-radius: 0 0 8px 0;
+  }
+  .add:before, .add:after {
+    content: "";
+    width: 28px;
+    height: 6px;
+    border-radius: 3px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    z-index: 1;
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease;
+  }
+  .add:before {
+    transform: translate(-50%, -50%) scaleY(0.76);
+  }
+  .add:after {
+    transform: translate(-50%, -50%) rotate(90deg) scaleY(0.76);
+  }
+  .add:hover {
+    transform: scale(1) rotate(45deg);
+    transition: transform 0.4s ease 0.1s;
+  }
+  .add:hover:before {
+    transform: translate(-50%, -50%) scaleY(0.76) scaleX(3);
+  }
+  .add:hover:after {
+    transform: translate(-50%, -50%) rotate(90deg) scaleY(0.76) scaleX(3);
+  }
+  .add:hover a {
+    --scale: 1;
+    pointer-events: none;
+    border-radius: 50%;
+    -webkit-animation: pointerEvent 0s linear forwards 0.4s;
+            animation: pointerEvent 0s linear forwards 0.4s;
+    transition: border-radius 0.15s ease 0.1s, transform 0.25s ease 0.15s;
+  }
+  .add:hover a:nth-child(1) {
+    transform: translate(-6px, -6px) scale(var(--scale));
+  }
+  .add:hover a:nth-child(2) {
+    transform: translate(-6px, 6px) scale(var(--scale));
+  }
+  .add:hover a:nth-child(3) {
+    transform: translate(6px, -6px) scale(var(--scale));
+  }
+  .add:hover a:nth-child(4) {
+    transform: translate(6px, 6px) scale(var(--scale));
+  }
+  .add:hover a svg {
+    opacity: 0.7;
+    transition: all 0.3s ease 0.2s;
+    transform: scale(1) rotate(-45deg);
+  }
+  .add:hover a:hover {
+    --scale: .92;
+    transition: border-radius 0.2s ease 0.1s, transform 0.25s ease 0s;
+  }
+  .add:hover a:hover svg {
+    opacity: 1;
+    transition: all 0.3s ease 0s;
+  }
+  
+  @-webkit-keyframes pointerEvent {
+    100% {
+      pointer-events: auto;
+    }
+  }
+  
+  @keyframes pointerEvent {
+    100% {
+      pointer-events: auto;
+    }
+  }
+  html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  * {
+    box-sizing: inherit;
+  }
+  *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    min-height: 100vh;
+    font-family: Roboto, Arial;
+    color: #ADAFB6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F5F9FF;
+  }
+  body .dribbble {
+    position: fixed;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+  }
+  body .dribbble img {
+    display: block;
+    height: 28px;
+  }
