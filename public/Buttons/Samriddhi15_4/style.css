@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=poppons:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container a {
+    text-decoration: none;
+    width: 299px;
+    height: 70px;
+    margin: 10px 0;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.5s;
+    position: relative;
+    z-index: 1;
+}
+
+.container a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transform-origin: left;
+    transition: 0.5s;
+}
+
+.container a:nth-child(1):before {
+    background-image: url(img/btn-bg1.png);
+}
+
+.container a:nth-child(2):before {
+    background-image: url(img/btn-bg2.png);
+}
+
+.container a:hover:before {
+    width: 0;
+}
+
+.container a span {
+    position: relative;
+    z-index: 1;
+}
