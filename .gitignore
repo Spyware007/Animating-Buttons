@@ -6,6 +6,9 @@ node_modules/
 /.pnp
 .pnp.js
 
+#build
+build
+
 # testing
 /coverage
 
@@ -25,3 +28,5 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.vscode

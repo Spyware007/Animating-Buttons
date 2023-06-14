@@ -11,6 +11,8 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -27,14 +29,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
   font-family: "Montserrat", sans-serif;
-}
-
-.app {
-  position: relative;
-  display: block;
-  height: 100%;
-  width: 100%;
-  padding-bottom: 50px;
 }
 
 .light {

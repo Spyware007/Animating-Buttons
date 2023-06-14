@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Digital Clock</title>
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="bg-elem"></div>
+      <div class="bg-elem"></div>
+      <div class="bg-elem"></div>
+      <div class="content">
+        
+        <h3>Digital Clock with Stopwatch and Countdown Timer</h3>
+        <p class="type">Clock</p>
+      </div>
+
+      <div class="main-container">
+        <div class="clock">
+          <div class="wrapper">
+            <div class="main">
+              <div class="hour">
+                <p class="number" id="hour">20</p>
+                <p>hours</p>
+              </div>
+              <p class="colon">:</p>
+              <div class="min">
+                <p class="number" id="min">00</p>
+                <p>minutes</p>
+              </div>
+              <p class="colon">:</p>
+              <div class="sec">
+                <p class="number" id="sec">00</p>
+                <p>seconds</p>
+              </div>
+              <p class="colon">:</p>
+              <div class="ampm">
+                <p class="number" id="ampm">AM</p>
+                <p id="other-ampm">PM</p>
+              </div>
+            </div>
+          </div>
+          <div class="btns">
+            <button class="btn" id="stopwatch-btn">Stopwatch</button>
+            <button class="btn" id="timer-btn">Timer</button>
+          </div>
+        </div>
+
+        <div class="stopwatch hidden">
+          <div class="wrapper">
+            <div class="main">
+              <div class="hour">
+                <p class="number" id="stopwatch-hour">00</p>
+                <p>hours</p>
+              </div>
+              <p class="colon">:</p>
+              <div class="min">
+                <p class="number" id="stopwatch-min">00</p>
+                <p>minutes</p>
+              </div>
+              <p class="colon">:</p>
+              <div class="sec">
+                <p class="number" id="stopwatch-sec">00</p>
+                <p>seconds</p>
+              </div>
+              <p class="colon">:</p>
+              <div class="ms">
+                <p class="number" id="stopwatch-ms">00</p>
+                <p>miliseconds</p>
+              </div>
+            </div>
+          </div>
+          <div class="laps">
+            <div class="lap active">
+              <p>lap 1</p>
+              <p>00:00</p>
+            </div> 
+          </div>
+          <div class="btns">
+            <button class="btn start-stopwatch">Start</button>
+            <button class="btn lap-stopwatch hidden">Lap</button>
+            <button class="btn reset-stopwatch">Reset</button>
+            <button class="btn back-btn">Back</button>
+          </div>
+        </div>
+
+        <div class="timer hidden">
+          <div class="wrapper">
+            <div class="main">
+              <div class="hour">
+                <p class="number" id="timer-hour">00</p>
+                <p>hours</p>
+              </div>
+              <p class="colon">:</p>
+              <div class="min">
+                <p class="number" id="timer-min">00</p>
+                <p>minutes</p>
+              </div>
+              <p class="colon">:</p>
+              <div class="sec">
+                <p class="number" id="timer-sec">00</p>
+                <p>seconds</p>
+              </div>
+              <p class="colon">:</p>
+              <div class="ms">
+                <p class="number" id="timer-ms">00</p>
+                <p>miliseconds</p>
+              </div>
+            </div>
+          </div>
+          <div class="btns">
+            <button class="btn start-timer">Start</button>
+            <button class="btn stop-timer hidden">Stop</button>
+            <button class="btn reset-timer">Reset</button>
+            <button class="btn back-btn">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

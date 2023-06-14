@@ -12,19 +12,13 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 100px;
-  margin-bottom: 100px;
+  gap: 80px;
 }
 
-.btn_container {
-  display: flex;
-  flex-direction: column;
-}
-
-.container {
+.iframe_container {
   all: unset;
-  width: 340px;
-  height: 250px;
+  width: 320px;
+  height: 300px;
   border: 1px solid #8b8b8b;
   box-shadow: 0px 4px 20px 0px #00000040;
   border-radius: 12px;
@@ -35,33 +29,18 @@
   color: white;
 }
 
-.pagination {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.paginationList {
-  list-style-type: none;
-  display: flex;
-  gap: 5px;
-}
-
 /* styles for created by tag */
 .createdBy {
   font-family: "Helvetica", Arial, sans-serif;
   font-size: 14px;
-  color: #fff;
-  background-color: #4285f4;
+  background-color: #7383ddda;
   padding: 8px 12px;
-  border-radius: 20px;
+  border-radius: 12px;
   margin-top: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  opacity: 0.7;
-  transition: opacity 0.3s ease-in-out;
   text-align: center;
-  color: #000;
-  cursor: help;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .createdBy:before {
@@ -72,7 +51,7 @@
 }
 
 .createdBy:hover {
-  background-color: #3a79e8;
+  background-color: #7383ddaf;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -86,56 +65,56 @@
 
 .buttonContainer {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 30px;
 }
 
-/* styles for the download button (actual button not the outer div) */
 .download_btn {
   font-family: "Helvetica", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
+  width: 80%;
   color: #fff;
-  background-color: #f57c00;
+  background-color: #ddc173;
   padding: 12px 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
-  margin-bottom: 10px;
-}
-
-.arrow {
-  width: 40px;
-  font-size: 25px;
-  margin-bottom: 10px;
   margin-left: 3px;
-  align-self: start;
-  background-color: #f57c00;
-  border-radius: 0 10px 10px 0;
+}
+
+.showcode_btn {
   color: #fff;
+  text-decoration: none;
 }
 
-.arrow:hover {
-  background-color: #e65100;
-}
-
-.containerForArrow {
-  display: flex;
-}
-
-.download_btn:hover {
+.download_btn:hover,
+.showcode_btn:hover {
   background-color: #e65100;
   cursor: pointer;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.25rem;
 }
 
-.download_btn:focus {
+.download_btn:focus,
+.showcode_btn:focus {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  outline: none;
 }
 
 /* Styles For Pagination */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationList {
+  list-style-type: none;
+  display: flex;
+  gap: 5px;
+}
+
 .paginationItem {
   color: white;
   padding: 10px 16px;
@@ -154,4 +133,31 @@
 
 .paginationItem:hover {
   transform: scale(1.1);
+}
+
+/* search bar */
+
+.bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+.bar .search {
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  height: 50px;
+  border-radius: 200px;
+  text-align: center;
+}
+
+.bar .search:hover {
+  border: 1px solid #000;
+}
+
+.bar .search:focus {
+  outline: none;
 }
