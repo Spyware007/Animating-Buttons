@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import GoToTop from "./components/Top/GoToTop";
 import { Landing, Main, Navbar, Footer } from "./components";
 import SuspenseLoader from "./components/SuspenseLoader/SuspenseLoader";
-import CodeEditor from "./components/CodeEditor/CodeEditor";
+import Card from "./components/Card/Card";
 const ShowCode = lazy(() => import("./components/ShowCode/ShowCode"));
 
 const App = ({ modeToggleFunc, modeToggle }) => {
@@ -51,7 +51,7 @@ const App = ({ modeToggleFunc, modeToggle }) => {
                 </Suspense>
               }
             />
-            <Route path="/test" element={<CodeEditor />} />
+            <Route path="/test" element={<Card />} />
             <Route
               path="*"
               element={<ErrorPage modeToggleFunc={modeToggle} />}

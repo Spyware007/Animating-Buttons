@@ -83,7 +83,7 @@ const CodeEditor = ({ html, css, js, setHtml, setCss, setJs }) => {
             minimap: {
               enabled: false,
             },
-            fontSize: 20,
+            fontSize: 16,
             automaticLayout: true,
             // Add any additional editor options here
           }}

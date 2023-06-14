@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Data } from "../../Data";
-import classes from "./Main.module.css";
+import classes from "./Explore.module.css";
 import Card from "../Card/Card";
 
-export default function Main({ modeToggle, modeToggleFunc }) {
+export default function Explore({ modeToggle, modeToggleFunc }) {
   const [currentPage, setCurrentPage] = useState(
     parseInt(localStorage.getItem("current_page")) || 1
   );
@@ -36,33 +36,33 @@ export default function Main({ modeToggle, modeToggleFunc }) {
         ))}
     </ul>
   );
-  const [query, setQuery] = useState("");
 
-  const filteredItems = Data.filter((d) =>
-    d.toLowerCase().includes(query.toLowerCase())
-  );
   const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
     <>
-      <div className={classes.main_container}>
-        <h1 style={{ textAlign: "center" }}>
-          Total number of Buttons added {Data.length}
-        </h1>
-        <div className={classes.btns_container}>
-          {currentItems
-            .filter((d) => d.toLowerCase().includes(query.toLowerCase()))
-            .map((d, i) => {
-              return (
-                <>
-                  <Card key={i} button={d} />
-                </>
-              );
-            })}
-        </div>
-        <div className={classes.pagination}>
-          {Data.length > itemsPerPage && pageNavigationButtions}
-        </div>
+      <h1 style={{ textAlign: "center" }}>
+        Total number of Buttons added {Data.length}
+      </h1>
+      <div className={classes.btns_container}>
+        {currentItems.map((d, i) => {
+          return (
+            <>
+              <div key={i}>
+                <iframe
+                  className={classes.iframe_container}
+                  title={d}
+                  src={`Buttons/${d}/index.html?c=${isDark}`}
+                ></iframe>
+                <CreatedBy d={d} />
+                <DownloadBtn d={d} modeToggle={modeToggle} />
+              </div>
+            </>
+          );
+        })}
+      </div>
+      <div className={classes.pagination}>
+        {Data.length > itemsPerPage && pageNavigationButtions}
       </div>
     </>
   );
