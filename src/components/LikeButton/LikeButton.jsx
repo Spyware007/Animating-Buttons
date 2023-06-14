@@ -11,13 +11,13 @@ function LikeButton() {
   };
 
   return (
-    <div className={classes.likeButton}>
-      <div className={classes.heartBg} onClick={handleLike}>
+    <div onClick={handleLike} className={classes.likeButton}>
+      <div className={classes.heartBg}>
         <div
           className={`${classes.heartIcon} ${liked ? classes.liked : ""}`}
         ></div>
       </div>
-      <div className={classes.likesAmount}>{likesAmount}</div>
+      <h1 className={classes.likesAmount}>{likesAmount}</h1>
     </div>
   );
 }

@@ -73,3 +73,6 @@
 .btns:hover {
   background-color: #4d4d4d;
 }
+.stats_btn {
+  align-self: flex-end;
+}

@@ -5,6 +5,7 @@ import Button from "../Button/Button";
 import LikeButton from "../LikeButton/LikeButton";
 
 import downloadZip from "../../Functions/DownloadZip";
+import ViewsIcon from "../ViewsIcon/ViewsIcon";
 
 const Card = ({ button = "hello_1" }) => {
   const user = button.split("_")[0];
@@ -41,7 +42,10 @@ const Card = ({ button = "hello_1" }) => {
             <Button onClick={() => downloadZip(button)} />
           </div>
         </div>
-        <LikeButton />
+        <div className={classes.stats_btn}>
+          {/* <ViewsIcon /> */}
+          <LikeButton />
+        </div>
       </div>
     </>
   );

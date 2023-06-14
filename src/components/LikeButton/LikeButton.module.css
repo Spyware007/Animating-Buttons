@@ -1,6 +1,18 @@
 .likeButton {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  padding: 4px 10px;
+  height: 30px;
+  background-color: rgb(22, 32, 52);
+  border: 0.5px solid pink;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.likeButton:hover {
+  background-color: rgb(37, 47, 66);
 }
 
 .heartIcon {
@@ -44,5 +56,5 @@
   font-family: "Roboto", sans-serif;
   color: #888;
   font-weight: 900;
-  margin-left: 6px;
+  margin: 0;
 }
