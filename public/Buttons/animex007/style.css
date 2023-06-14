@@ -5,9 +5,8 @@
   }
   /* css for the div */
 .container{
-   width: 1070px;
-  height: 240px;
-  margin: 250px;
+   width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
