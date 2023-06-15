@@ -176,7 +176,7 @@ export const Data = [
   "Rishabh3243_3",
   "rohitsinghind",
   "sagnik3788",
-  "sabhisharma-ise",
+  "sabhisharma-ise"
   "Sakshy18",
   "sanjay535",
   "SankalpaFernando",
