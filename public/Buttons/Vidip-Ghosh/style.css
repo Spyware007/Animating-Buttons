@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #28272a;
+    height: 100vh;
+  }
+  .btn {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.35);
+    border-left: 0.5px solid rgba(255, 255, 255, 0.35);
+    padding-left: 40px;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  .btn:hover {
+    padding-left: 0px;
+    padding-right: 40px;
+    color: rgba(255, 255, 255, 1);
+  }
+  .btn span {
+    position: absolute;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: #04fe4d;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1a191d;
+    font-weight: bolder;
+    font-size: 1.6rem;
+  }
+  .btn:hover span {
+    left: calc(100% - 55px);
+  }
+  .btn::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(-170px) skewX(30deg);
+    transition: 0.75s ease-in-out;
+  }
+  .btn:hover::after {
+    transform: translateX(170px) skewX(30deg);
+  }
