@@ -25,6 +25,7 @@ const CodeEditor = ({ html, css, js, setHtml, setCss, setJs }) => {
       value: js,
     },
   };
+  const [activeFile, setActiveFile] = useState("index.html");
   const [fileName, setFileName] = useState("index.html"); // change to "index.html"
   const editorRef = useRef(null);
   const file = files[fileName];
@@ -38,23 +39,31 @@ const CodeEditor = ({ html, css, js, setHtml, setCss, setJs }) => {
     navigator.clipboard.writeText(editorRef.current.getValue());
   };
 
+  const handleEditorChange = (value, event) => {
+    setFileName(value);
+    setActiveFile(value);
+  };
+
   return (
     <>
       <div className={classes.btns_container}>
         <LangButton
           name="HTML"
           image={htmlIcon}
-          onClick={() => setFileName("index.html")}
+          active={activeFile === "index.html"}
+          onClick={() => handleEditorChange("index.html")}
         />
         <LangButton
           name="CSS"
           image={cssIcon}
-          onClick={() => setFileName("style.css")}
+          active={activeFile === "style.css"}
+          onClick={() => handleEditorChange("style.css")}
         />
         <LangButton
           name="JS"
           image={jsIcon}
-          onClick={() => setFileName("app.js")}
+          active={activeFile === "app.js"}
+          onClick={() => handleEditorChange("app.js")}
         />
         <LangButton
           name="COPY"

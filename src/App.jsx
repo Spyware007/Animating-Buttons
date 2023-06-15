@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import GoToTop from "./components/Top/GoToTop";
 import { Landing, Main, Navbar, Footer, AddButton } from "./components";
 import SuspenseLoader from "./components/SuspenseLoader/SuspenseLoader";
+// import Login from "./components/Login/Login";
 const ShowCode = lazy(() => import("./components/ShowCode/ShowCode"));
 
 const App = ({ modeToggleFunc, modeToggle }) => {
@@ -33,6 +34,10 @@ const App = ({ modeToggleFunc, modeToggle }) => {
       path: "/add",
       element: <AddButton />,
     },
+    // {
+    //   path: "/login",
+    //   element: <Login />,
+    // },
     {
       path: "*",
       element: <ErrorPage modeToggleFunc={modeToggle} />,
