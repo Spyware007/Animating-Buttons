@@ -27,13 +27,9 @@ const Card = ({ button = "hello_1" }) => {
                 alt="Spyware007"
               />
             </div>
-            <a
-              href={`https://www.github.com/${user}`}
-              target="_blank"
-              className={classes.contributor_name}
-            >
+            <Link to={`/user/${user}`} className={classes.contributor_name}>
               {user}
-            </a>
+            </Link>
           </div>
           <div className={classes.btns_container}>
             <Link to={`/show/${button}`}>

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import classes from "./ShowCode.module.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import CodeEditor from "../common/CodeEditor/CodeEditor";
+import { Twitter, LinkedIn } from "../../assets/svg";
+import Memoji from "../../assets/memoji.png";
 
 const ShowCode = () => {
   const { id } = useParams();
@@ -10,6 +12,7 @@ const ShowCode = () => {
   const [js, setJs] = useState("");
   const [srcDoc, setSrcDoc] = useState("");
   const [selectedOption, setSelectedOption] = useState("HTML");
+  const user = id.split("_")[0];
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -53,6 +56,26 @@ const ShowCode = () => {
           sandbox="allow-scripts"
           width="100%"
         />
+        <div className={classes.user_info}>
+          <div className={classes.user_row}>
+            <div className={classes.image_container}>
+              <img className={classes.image} src={Memoji} alt="" />
+            </div>
+            <div className={classes.user_data}>
+              <h3 className={classes.username}>@{user}</h3>
+              <div className={classes.socials}>
+                <Twitter />
+                <LinkedIn />
+              </div>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          </p>
+          <Link to={`/user/${user}`}>See More Buttons from {user}</Link>
+        </div>
       </div>
       <div className={classes.components_container}>
         <CodeEditor

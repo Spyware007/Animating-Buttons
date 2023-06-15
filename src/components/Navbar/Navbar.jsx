@@ -1,11 +1,12 @@
 import React from "react";
 import classes from "./Navbar.module.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 // images
 import github from "../../assets/github.png";
 import moon from "../../assets/moon.png";
 import sun from "../../assets/sun.png";
+import { LeaderboardIcon } from "../../assets/svg";
 
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
   return (
@@ -30,6 +31,11 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
             <NavLink className={classes.list_item_link} to="/about">
               About
             </NavLink>
+          </li>
+          <li className={classes.list_item}>
+            <Link className={classes.list_item_link} to={"/leaderboard"}>
+              Creators
+            </Link>
           </li>
           <a
             href="https://github.com/Spyware007/Animating-Buttons"

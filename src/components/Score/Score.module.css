@@ -1,0 +1,62 @@
+.leaderboard_text {
+  font-size: 50px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+  background: linear-gradient(90deg, #db00ff 0%, #970d4f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.leaderboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 0 100px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
+    0 30px 60px -30px rgba(0, 0, 0, 0.3),
+    inset 0 -2px 6px 0 rgba(255, 255, 255, 0.35);
+  transition: all 0.3s ease-in-out;
+}
+.item:hover {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
+    0 30px 60px -30px rgba(0, 0, 0, 0.3),
+    inset 0 -2px 6px 0 rgba(255, 255, 255, 0.35);
+}
+
+.profileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.count {
+  color: #888888;
+}
+@media screen and (max-width: 768px) {
+  .leaderboard {
+    padding: 0 20px;
+  }
+}

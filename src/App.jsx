@@ -1,10 +1,19 @@
 import React, { useState, useEffect, Suspense, lazy } from "react";
-import { Loader } from "./components";
 import ErrorPage from "./components/ErrorPage/404Error";
 import { Routes, Route } from "react-router-dom";
 import GoToTop from "./components/Top/GoToTop";
-import { Landing, Main, Navbar, Footer, AddButton } from "./components";
+import {
+  Landing,
+  Main,
+  Loader,
+  Navbar,
+  Footer,
+  AddButton,
+  Score,
+} from "./components";
 import SuspenseLoader from "./components/SuspenseLoader/SuspenseLoader";
+import UserProfile from "./components/UserProfile/UserProfile";
+
 // import Login from "./components/Login/Login";
 const ShowCode = lazy(() => import("./components/ShowCode/ShowCode"));
 
@@ -38,6 +47,14 @@ const App = ({ modeToggleFunc, modeToggle }) => {
     //   path: "/login",
     //   element: <Login />,
     // },
+    {
+      path: "/user/:userId",
+      element: <UserProfile />,
+    },
+    {
+      path: "/leaderboard",
+      element: <Score />,
+    },
     {
       path: "*",
       element: <ErrorPage modeToggleFunc={modeToggle} />,
