@@ -1,198 +1,47 @@
-:root {
-    /*    color type */
-    --main_color: #08bad1;
-    --sub_color: #080033;
+body {
+    background: #DEDCDD;
+    text-align: center;
+    padding: 60px;
+  }
+  *, body {
+    font-family: 'Grand Hotel', sans-serif;
   }
   
-  body {
-    background: #fff;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
+  /* replace the button styles below to your custom class */
+  button {
+    height: 80px;
+    width: 240px;
+    font-size: 32px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+  }
+  button:hover {
+    color: #ED8C82;
+    text-shadow: 1px 1px 2px #F6A7A7, 0 0 1.45px #ED8C82, 0 0 1.45px rgba(0, 0, 0, 0.25);
+  /*   box-shadow: 3px 3px 8px #ED8C82, -3px -3px 8px #ED8C82; */
   }
   
-  .button {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 256px;
-    height: 72px;
-    overflow: hidden;
-    font-family: "Homenaje", sans-serif;
+  /* Elevated */
+  
+  .elevated {
+    background: linear-gradient(0.45turn, #D4D2D2, #EEECED);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.35), -3px -3px 8px rgba(255, 255, 255, 0.6);
   }
-  .button::before,
-  .button::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform-origin: bottom right;
-    transition: all 0.6s ease;
+  .elevated:active {
+    color: #e1e1e1;
+    background: linear-gradient(90turn, #F6C7CC, #D2837D);
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.35), inset -2px -3px 5px rgba(255, 255, 255, 0.9);
   }
-  .button::before {
-    width: 16px;
-    height: 56px;
-    transform: skewY(45deg);
-    background: var(--main_color);
+  
+  /* Rouned */
+  .rounded {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   }
-  .button::after {
-    width: 240px;
-    height: 16px;
-    transform: skewX(45deg);
-    background: var(--sub_color);
+  .rounded:active {
+    color: #e1e1e1;
+    background: linear-gradient(90turn, #F6C7CC, #D2837D);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   }
-  .button__inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 240px;
-    height: 56px;
-    padding: 8px;
-    box-sizing: border-box;
-    border: solid 2px #000;
-    background: #fff;
-    transition: all 0.6s ease;
-  }
-  .button__inner::before,
-  .button__inner::after {
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: calc(100% - 80px - 8px);
-    height: 8px;
-    transition: all 1.2s linear;
-  }
-  .button__inner::before {
-    z-index: 2;
-    background: var(--main_color);
-    width: 0;
-  }
-  .button__inner::after {
-    z-index: 1;
-    background: var(--sub_color);
-    width: 80px;
-  }
-  .button__text {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    width: calc(100% - 88px);
-    height: 100%;
-    box-sizing: border-box;
-    padding-left: 11px;
-    font-size: 22px;
-    line-height: 22px;
-    color: #000;
-    letter-spacing: 2px;
-  }
-  .button__text::before {
-    content: "CLICK HERE!";
-    position: absolute;
-    top: 0;
-    left: 12px;
-    font-size: 12px;
-    line-height: 12px;
-  }
-  .button__text::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: var(--main_color);
-  }
-  .button__counter {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    width: 8px;
-    height: 8px;
-    box-sizing: border-box;
-    border-right: solid 1px #000;
-    border-bottom: solid 1px #000;
-  }
-  .button__counter::before,
-  .button__counter::after {
-    content: "0";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -16px;
-    width: 12px;
-    height: 24px;
-    font-size: 24px;
-    color: #000;
-    animation: count_reset 0.01s linear;
-    animation-fill-mode: forwards;
-  }
-  .button__counter::before {
-    right: 4px;
-  }
-  .button__counter::after {
-    right: 16px;
-  }
-  .button:hover::before {
-    width: 0;
-  }
-  .button:hover::after {
-    height: 0;
-  }
-  .button:hover .button__inner {
-    top: 16px;
-    left: 16px;
-  }
-  .button:hover .button__inner::before {
-    width: 80px;
-  }
-  .button:hover .button__counter::before,
-  .button:hover .button__counter::after {
-    animation-name: count;
-    animation-timing-function: steps(10);
-    animation-fill-mode: forwards;
-  }
-  .button:hover .button__counter::before {
-    animation-iteration-count: 10;
-    animation-duration: 0.12s;
-  }
-  .button:hover .button__counter::after {
-    animation-duration: 1.2s;
-  }
-  @keyframes count {
-    10% {
-      content: "0";
-    }
-    20% {
-      content: "1";
-    }
-    30% {
-      content: "2";
-    }
-    40% {
-      content: "3";
-    }
-    50% {
-      content: "4";
-    }
-    60% {
-      content: "5";
-    }
-    70% {
-      content: "6";
-    }
-    80% {
-      content: "7";
-    }
-    90% {
-      content: "8";
-    }
-    100% {
-      content: "9";
-    }
-  }
+  
   
