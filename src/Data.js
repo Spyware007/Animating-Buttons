@@ -32,7 +32,7 @@ export const Data = [
   "Shreyans2004",
   "Shreyans2004_2",
   "Shreyans2004_3",
-  "Shreyans2004_4" ,
+  "Shreyans2004_4",
   "abhi03ruchi",
   "Anmol-Baranwal",
   "Aryan5464",
@@ -372,7 +372,7 @@ export const Data = [
   "Samriddhi15_3",
   "PayalPadmalyaPrusty",
   "HimanshuNarware_2",
- "0xabdulkhalid_11",
+  "0xabdulkhalid_11",
   "Illaf",
   "Once-kaur",
   "RahulBisht001",
@@ -383,8 +383,8 @@ export const Data = [
   "Illaf_1",
   "0xabdulkhalid_10",
   "vedangc03",
-  "Roshnijeewani3457", 
-  "silky-modi22",  
+  "Roshnijeewani3457",
+  "silky-modi22",
   "Durgesh4993_2",
   "Vidip-Ghosh",
   "Somesh-Mallewar",
@@ -398,5 +398,6 @@ export const Data = [
   "0xabdulkhalid_9",
   "Durgesh4993_2",
   "Kalivarapubindusree_2",
-  "Kalivarapubindusree_1"
+  "Kalivarapubindusree_1",
+  "Prajwal0225_2"
 ];
