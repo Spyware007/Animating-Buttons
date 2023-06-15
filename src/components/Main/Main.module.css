@@ -161,3 +161,8 @@
 .bar .search:focus {
   outline: none;
 }
+@media screen and (max-width: 768px) {
+  .paginationItem {
+    padding: 5px 8px;
+  }
+}

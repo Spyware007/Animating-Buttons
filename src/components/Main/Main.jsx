@@ -21,27 +21,70 @@ export default function Main({ modeToggle, modeToggleFunc }) {
   };
 
   const isActive = (i) => (currentPage === i + 1 ? classes.active : "");
-  const pageNavigationButtions = (
-    <ul className={classes.paginationList}>
-      {Array(Math.ceil(Data.length / itemsPerPage))
-        .fill()
-        .map((_, index) => (
-          <li
-            key={index}
-            className={`${classes.paginationItem} ${isActive(index)}`}
-            onClick={() => handlePageChange(index + 1)}
-          >
-            {index + 1}
-          </li>
-        ))}
-    </ul>
-  );
+
   const [query, setQuery] = useState("");
 
   const filteredItems = Data.filter((d) =>
     d.toLowerCase().includes(query.toLowerCase())
   );
   const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
+
+  const pageNavigationButtions = (
+    <ul className={classes.paginationList}>
+      <li
+        className={`${classes.paginationItem} ${isActive(0)}`}
+        onClick={() => handlePageChange(1)}
+      >
+        {"<"}
+      </li>
+      {Array(Math.ceil(filteredItems.length / itemsPerPage))
+        .fill()
+        .map((_, index) => {
+          const pageNumber = index + 1;
+          if (
+            pageNumber === 1 ||
+            pageNumber === currentPage ||
+            (pageNumber >= currentPage - 1 && pageNumber <= currentPage + 1) ||
+            pageNumber === Math.ceil(filteredItems.length / itemsPerPage)
+          ) {
+            return (
+              <li
+                key={index}
+                className={`${classes.paginationItem} ${isActive(index)}`}
+                onClick={() => handlePageChange(pageNumber)}
+              >
+                {pageNumber}
+              </li>
+            );
+          } else if (
+            (pageNumber === currentPage - 2 && pageNumber > 1) ||
+            (pageNumber === currentPage + 2 &&
+              pageNumber < Math.ceil(filteredItems.length / itemsPerPage))
+          ) {
+            return (
+              <li
+                key={index}
+                className={`${classes.paginationItem} ${classes.ellipsis}`}
+                onClick={() => handlePageChange(pageNumber)}
+              >
+                ...
+              </li>
+            );
+          }
+          return null;
+        })}
+      <li
+        className={`${classes.paginationItem} ${isActive(
+          Math.ceil(filteredItems.length / itemsPerPage) - 1
+        )}`}
+        onClick={() =>
+          handlePageChange(Math.ceil(filteredItems.length / itemsPerPage))
+        }
+      >
+        {">"}
+      </li>
+    </ul>
+  );
 
   return (
     <>
@@ -52,13 +95,9 @@ export default function Main({ modeToggle, modeToggleFunc }) {
         <div className={classes.btns_container}>
           {currentItems
             .filter((d) => d.toLowerCase().includes(query.toLowerCase()))
-            .map((d, i) => {
-              return (
-                <>
-                  <Card key={i} button={d} />
-                </>
-              );
-            })}
+            .map((d, i) => (
+              <Card key={i} button={d} />
+            ))}
         </div>
         <div className={classes.pagination}>
           {Data.length > itemsPerPage && pageNavigationButtions}
