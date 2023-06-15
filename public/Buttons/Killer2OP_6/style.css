@@ -1,0 +1,475 @@
+.unsub-button {
+  background: none;
+  border: 0;
+  color: #222;
+  display: block;
+  font-family: "Quicksand", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  height: 40px;
+  outline: none;
+  padding-right: 32px;
+  position: relative;
+  width: 160px;
+  -webkit-tap-highlight-color: transparent;
+}
+.unsub-button.ready {
+  cursor: pointer;
+}
+.unsub-button.clicked::before {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  height: 32px;
+  width: 128px;
+}
+.unsub-button.clicked .unsub-button__icon {
+  opacity: 0;
+  transform: translate(-150%, -50%) scale(0);
+}
+.unsub-button.clicked .unsub-button__default-text {
+  opacity: 0;
+  transform: translate(10%, 0%) scale(0);
+}
+.unsub-button.clicked .unsub-button__confirm-text .word {
+  opacity: 1;
+  top: 0;
+}
+.unsub-button.clicked .unsub-button__confirm-text .char {
+  animation-name: bounce;
+}
+.unsub-button.show-instructions .unsub-button__confirm-text {
+  opacity: 0;
+}
+.unsub-button.show-instructions .unsub-button__instruction-text {
+  opacity: 1;
+  top: 110%;
+}
+.unsub-button.show-instructions .unsub-button__kid {
+  pointer-events: auto;
+}
+.unsub-button.show-instructions .unsub-button__kid-wrapper {
+  transform: translate(0px, 20px) rotate(0);
+}
+.unsub-button.show-instructions .target {
+  cursor: pointer;
+}
+.unsub-button.show-instructions.happy .happy {
+  opacity: 1;
+}
+.unsub-button.show-instructions.worried .worried {
+  opacity: 1;
+}
+.unsub-button.show-instructions.sad::after {
+  color: #222;
+  opacity: 1;
+  transition: opacity 600ms linear 400ms, color 400ms linear 1400ms;
+}
+.unsub-button.show-instructions.sad .sad {
+  opacity: 1;
+}
+.unsub-button::before {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 300ms ease-in-out, height 300ms ease-in-out, box-shadow 300ms linear;
+  width: 100%;
+  z-index: 1;
+}
+.unsub-button::after {
+  align-items: center;
+  background: #fff;
+  color: #fff;
+  content: "How could you...";
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 50%;
+  min-width: 300px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 600ms linear 2000ms, color 600ms linear 1400ms;
+  width: 33.34vw;
+  z-index: 10;
+}
+.unsub-button__default-text {
+  display: block;
+  opacity: 1;
+  position: relative;
+  transform: none;
+  transition: opacity 200ms linear, transform 200ms ease;
+  z-index: 3;
+}
+.unsub-button__icon {
+  fill: none;
+  stroke: #222;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 5;
+  opacity: 1;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: opacity 200ms linear, transform 200ms ease;
+  width: 24px;
+  z-index: 2;
+}
+.unsub-button__icon .cancel-color {
+  stroke: #ff6161;
+}
+.unsub-button__confirm-text {
+  left: 50%;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 200ms linear;
+  white-space: nowrap;
+  z-index: 3;
+}
+.unsub-button__confirm-text .word {
+  margin-right: 5px;
+  opacity: 0;
+  position: relative;
+  top: -5px;
+  transition: opacity 400ms linear var(--word-delay), top 400ms linear var(--word-delay);
+}
+.unsub-button__confirm-text .word--bold {
+  color: #ff6161;
+  margin: 0;
+  transition: opacity 400ms linear var(--word-delay);
+  white-space: nowrap;
+}
+.unsub-button__confirm-text .word .char {
+  --bounceHeight: -5px;
+  animation-duration: 400ms;
+  animation-direction: alternate;
+  animation-delay: var(--char-delay);
+  animation-iteration-count: 2;
+  display: inline-block;
+}
+.unsub-button__instruction-text {
+  color: #fff;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  transform: translate(-50%, 0%);
+  transition: top 500ms ease 700ms, opacity 300ms linear 700ms;
+  white-space: nowrap;
+  z-index: 3;
+}
+.unsub-button__kid {
+  bottom: 4px;
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  transform: translate(-50%, 0%);
+  width: 150px;
+  z-index: 5;
+}
+.unsub-button__kid-wrapper {
+  transform: translate(0%, 100%) rotate(20deg);
+  transform-origin: 50% 100%;
+  transition: transform 600ms cubic-bezier(0.6, 1.45, 0.75, 1);
+}
+.unsub-button__kid .happy,
+.unsub-button__kid .worried,
+.unsub-button__kid .sad {
+  opacity: 0;
+}
+.unsub-button--balloon.show-instructions .unsub-button__balloon-wrapper {
+  transform: translate(0, 20px);
+}
+.unsub-button--balloon.show-instructions .unsub-button__balloon-wrapper-inner {
+  animation-name: balloonRock;
+}
+.unsub-button--balloon.show-instructions.sad .balloonPopMask {
+  opacity: 1;
+  transform: scale(1);
+}
+.unsub-button--balloon.show-instructions.sad .balloonPopPiece {
+  opacity: 1;
+}
+.unsub-button--balloon.show-instructions.sad .balloonPopPiece--string {
+  transform: scaleY(0.6);
+  transform-origin: 60% 80%;
+}
+.unsub-button--balloon.show-instructions.sad .balloonPopPiece--1 {
+  transform: translate(35px, -25px);
+}
+.unsub-button--balloon.show-instructions.sad .balloonPopPiece--2 {
+  transform: translate(-40px, -10px);
+}
+.unsub-button--balloon.show-instructions.sad .balloonPopPiece--3 {
+  transform: translate(50px, 10px);
+}
+.unsub-button--balloon .unsub-button__kid .balloonPopMask {
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: 188px 86px;
+  transition: transform 150ms linear;
+}
+.unsub-button--balloon .unsub-button__kid .balloonPopPiece {
+  opacity: 0;
+  transition: transform 1200ms ease-out, opacity 100ms linear;
+}
+.unsub-button--balloon .unsub-button__balloon-wrapper {
+  transform: translate(0%, 100%);
+  transform-origin: 50% 100%;
+  transition: transform 800ms ease-in;
+}
+.unsub-button--balloon .unsub-button__balloon-wrapper-inner {
+  animation-delay: 700ms;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  transform: rotate(8deg);
+  transform-origin: 60% 80%;
+}
+.unsub-button--ice-cream::after {
+  content: "Shame on you...";
+}
+.unsub-button--ice-cream.show-instructions .icecreamPieces {
+  animation-name: bounce;
+}
+.unsub-button--ice-cream.show-instructions .drip {
+  transform: none;
+}
+.unsub-button--ice-cream.show-instructions.sad .icecreamPieces {
+  transition: transform 1200ms ease-out;
+}
+.unsub-button--ice-cream.show-instructions.sad .icecreamPieces--cherry {
+  transform: translate(30px, 45px) rotate(180deg);
+}
+.unsub-button--ice-cream.show-instructions.sad .icecreamPieces--top {
+  transform: translate(-10px, 55px) rotate(90deg);
+}
+.unsub-button--ice-cream.show-instructions.sad .icecreamPieces--middle {
+  transform: translate(-80px, 15px) rotate(-120deg);
+}
+.unsub-button--ice-cream.show-instructions.sad .icecreamPieces--bottom {
+  transform: translate(-25px, 25px) rotate(-60deg);
+}
+.unsub-button--ice-cream.show-instructions.sad .drip {
+  display: none;
+}
+.unsub-button--ice-cream .unsub-button__kid-wrapper {
+  transform: translate(0%, 100%) rotate(-10deg);
+  transition: transform 400ms cubic-bezier(0.6, 1.45, 0.75, 1);
+}
+.unsub-button--ice-cream .icecreamPieces {
+  animation-delay: 100ms;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+.unsub-button--ice-cream .icecreamPieces--cherry {
+  --bounceHeight: -40px;
+  animation-duration: 250ms;
+  transform-origin: 37% 14%;
+}
+.unsub-button--ice-cream .icecreamPieces--top {
+  --bounceHeight: -35px;
+  animation-duration: 200ms;
+  transform-origin: 37% 24%;
+}
+.unsub-button--ice-cream .icecreamPieces--middle {
+  --bounceHeight: -25px;
+  animation-duration: 150ms;
+  transform-origin: 37% 46%;
+}
+.unsub-button--ice-cream .icecreamPieces--bottom {
+  --bounceHeight: -15px;
+  animation-duration: 100ms;
+  transform-origin: 37% 60%;
+}
+.unsub-button--ice-cream .drip {
+  transform: translateY(-12px);
+  transition: transform 800ms ease-out 400ms;
+}
+.unsub-button--ice-cream .drip--slow {
+  transition: transform 1200ms ease-out 800ms;
+}
+.unsub-button--flower::after {
+  content: "You monster...";
+}
+.unsub-button--flower.show-instructions.sad::before {
+  transform: translate(-50%, -50%) rotate(6deg);
+  transition: transform 1ms linear 250ms;
+}
+.unsub-button--flower.show-instructions.sad .unsub-button__piano {
+  bottom: 4px;
+  opacity: 1;
+  transform: translate(-50%, 0%) rotate(6deg);
+}
+.unsub-button--flower.show-instructions.sad .unsub-button__piano-wrapper {
+  transform: none;
+}
+.unsub-button--flower.show-instructions.sad .unsub-button__piano .lid {
+  transform: translateY(10px) rotate(-5deg);
+}
+.unsub-button--flower.show-instructions.sad .unsub-button__piano .crack {
+  opacity: 1;
+  transform: none;
+}
+.unsub-button--flower.show-instructions.sad .unsub-button__piano .debris--1 {
+  transform: translate(120px, -110px);
+}
+.unsub-button--flower.show-instructions.sad .unsub-button__piano .debris--2 {
+  transform: translate(-100px, -60px);
+}
+.unsub-button--flower.show-instructions.sad .unsub-button__piano .debris--3 {
+  transform: translate(40px, -180px);
+}
+.unsub-button--flower.show-instructions.sad .unsub-button__piano .debris-spin {
+  animation-name: spin;
+}
+.unsub-button--flower.show-instructions.sad .unsub-button__piano .dust {
+  opacity: 0.2;
+  transform: scale(1.3) translateY(-20px);
+}
+.unsub-button--flower .unsub-button__kid-wrapper {
+  transform: translate(0%, 100%) rotate(-10deg);
+}
+.unsub-button--flower .unsub-button__piano {
+  bottom: 600px;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: translate(-50%, 0%);
+  transform-origin: 50% 100%;
+  transition: opacity 100ms linear, bottom 250ms linear, transition 1ms linear 250ms;
+  width: 300px;
+  z-index: 6;
+}
+.unsub-button--flower .unsub-button__piano-wrapper {
+  transform: translate(0, -60px);
+  transition: transform 25ms linear 250ms;
+}
+.unsub-button--flower .unsub-button__piano .lid {
+  transform: translateY(-10px) rotate(4deg);
+  transform-origin: 50% 60%;
+  transition: transform 100ms linear 250ms;
+}
+.unsub-button--flower .unsub-button__piano .crack {
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: 30% 46%;
+  transition: transform 100ms linear 250ms;
+}
+.unsub-button--flower .unsub-button__piano .crack--2 {
+  transform-origin: 80% 50%;
+}
+.unsub-button--flower .unsub-button__piano .debris {
+  transform: none;
+  transition: transform 800ms ease-out 300ms;
+}
+.unsub-button--flower .unsub-button__piano .debris--1 .debris-spin {
+  animation-duration: 300ms;
+  transform-origin: 67% 96%;
+}
+.unsub-button--flower .unsub-button__piano .debris--2 .debris-spin {
+  animation-duration: 600ms;
+  transform-origin: 40% 100%;
+}
+.unsub-button--flower .unsub-button__piano .debris--3 .debris-spin {
+  animation-duration: 650ms;
+  transform-origin: 58% 105%;
+}
+.unsub-button--flower .unsub-button__piano .debris-spin {
+  animation-duration: 300ms;
+  animation-delay: 250ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.unsub-button--flower .unsub-button__piano .dust {
+  opacity: 0;
+  transform: none;
+  transform-origin: 40% 100%;
+  transition: transform 800ms ease-out 250ms, opacity 1ms linear 250ms;
+}
+
+@keyframes balloonRock {
+  0% {
+    transform: rotate(8deg);
+  }
+  35% {
+    transform: rotate(-3deg);
+  }
+  85% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(var(--bounceHeight));
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/**** Wrapper styles ****************/
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  min-width: 900px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.background {
+  align-items: center;
+  background: #38a3a5;
+  display: flex;
+  flex: 1;
+  height: 100%;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.background::after {
+  bottom: 15px;
+  color: #fff;
+  content: "2.";
+  font-family: "Quicksand", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  left: 30px;
+  opacity: 0.6;
+  position: absolute;
+}
+.background:first-of-type {
+  background: #22577a;
+}
+.background:first-of-type::after {
+  content: "1.";
+}
+.background:last-of-type {
+  background: #57cc99;
+}
+.background:last-of-type::after {
+  content: "3.";
+}
