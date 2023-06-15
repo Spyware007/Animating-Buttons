@@ -2,10 +2,10 @@ import { useState, useRef, useEffect } from "react";
 import classes from "./CodeEditor.module.css";
 import Editor from "@monaco-editor/react";
 import LangButton from "../LangButton/LangButton";
-import htmlIcon from "../../assets/html.png";
-import cssIcon from "../../assets/css.png";
-import jsIcon from "../../assets/js.png";
-import copyIcon from "../../assets/copy.png";
+import htmlIcon from "../../../assets/html.png";
+import cssIcon from "../../../assets/css.png";
+import jsIcon from "../../../assets/js.png";
+import copyIcon from "../../../assets/copy.png";
 
 const CodeEditor = ({ html, css, js, setHtml, setCss, setJs }) => {
   const files = {

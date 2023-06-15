@@ -3,14 +3,41 @@ import { Loader } from "./components";
 import ErrorPage from "./components/ErrorPage/404Error";
 import { Routes, Route } from "react-router-dom";
 import GoToTop from "./components/Top/GoToTop";
-import { Landing, Main, Navbar, Footer } from "./components";
+import { Landing, Main, Navbar, Footer, AddButton } from "./components";
 import SuspenseLoader from "./components/SuspenseLoader/SuspenseLoader";
-import Card from "./components/Card/Card";
 const ShowCode = lazy(() => import("./components/ShowCode/ShowCode"));
 
 const App = ({ modeToggleFunc, modeToggle }) => {
   const [loading, setLoading] = useState(false);
   const [toggleMode, setToggleMode] = useState(true);
+
+  const routes = [
+    {
+      path: "/",
+      element: (
+        <div>
+          <Landing modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
+          <Main modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
+        </div>
+      ),
+    },
+    {
+      path: "/show/:id",
+      element: (
+        <Suspense fallback={<SuspenseLoader />}>
+          <ShowCode />
+        </Suspense>
+      ),
+    },
+    {
+      path: "/add",
+      element: <AddButton />,
+    },
+    {
+      path: "*",
+      element: <ErrorPage modeToggleFunc={modeToggle} />,
+    },
+  ];
 
   useEffect(() => {
     setLoading(true);
@@ -28,34 +55,9 @@ const App = ({ modeToggleFunc, modeToggle }) => {
           <Navbar modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
 
           <Routes>
-            <Route
-              path="/"
-              element={
-                <div>
-                  <Landing
-                    modeToggle={toggleMode}
-                    modeToggleFunc={setToggleMode}
-                  />
-                  <Main
-                    modeToggle={toggleMode}
-                    modeToggleFunc={setToggleMode}
-                  />
-                </div>
-              }
-            />
-            <Route
-              path={"/show/:id"}
-              element={
-                <Suspense fallback={<SuspenseLoader />}>
-                  <ShowCode />
-                </Suspense>
-              }
-            />
-            <Route path="/test" element={<Card />} />
-            <Route
-              path="*"
-              element={<ErrorPage modeToggleFunc={modeToggle} />}
-            />
+            {routes.map((route, index) => (
+              <Route key={index} path={route.path} element={route.element} />
+            ))}
           </Routes>
           <GoToTop />
           <Footer modeToggle={toggleMode} />

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Data } from "../../Data";
 import classes from "./Main.module.css";
-import Card from "../Card/Card";
+import Card from "../common/Card/Card";
 
 export default function Main({ modeToggle, modeToggleFunc }) {
   const [currentPage, setCurrentPage] = useState(

@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Landing.module.css";
 import ButtonsSvg from "../../assets/buttons.svg";
-import RepoInfo from "../RepoInfo/RepoInfo";
+import RepoInfo from "../common/RepoInfo/RepoInfo";
 import { Twitter, LinkedIn } from "../../assets/svg";
 import Memoji from "../../assets/memoji.png";
 

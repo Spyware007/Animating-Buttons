@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import LikeButton from "../LikeButton/LikeButton";
 
-import downloadZip from "../../Functions/DownloadZip";
+import downloadZip from "../../../Functions/DownloadZip";
 import ViewsIcon from "../ViewsIcon/ViewsIcon";
 
 const Card = ({ button = "hello_1" }) => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classes from "./RepoInfo.module.css";
 
-import { Star, Fork, Contributors } from "../../assets/svg";
+import { Star, Fork, Contributors } from "../../../assets/svg";
 
 const RepoInfo = () => {
   const [stars, setStars] = useState(0);

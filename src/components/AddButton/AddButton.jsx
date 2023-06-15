@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
-import classes from "./ShowCode.module.css";
+import classes from "./AddButton.module.css";
 import { useParams } from "react-router-dom";
 import CodeEditor from "../common/CodeEditor/CodeEditor";
+import { htmlTemplate, cssTemplate, jsTemplate } from "./templates";
 
-const ShowCode = () => {
-  const { id } = useParams();
-  const [html, setHtml] = useState("");
-  const [css, setCss] = useState("");
-  const [js, setJs] = useState("");
+const AddButton = () => {
+  const [html, setHtml] = useState(htmlTemplate);
+  const [css, setCss] = useState(cssTemplate);
+  const [js, setJs] = useState(jsTemplate);
   const [srcDoc, setSrcDoc] = useState("");
-  const [selectedOption, setSelectedOption] = useState("HTML");
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -24,24 +23,6 @@ const ShowCode = () => {
 
     return () => clearTimeout(timeout);
   }, [html, css, js]);
-
-  useEffect(() => {
-    fetch(`/Buttons/${id}/index.html`)
-      .then((response) => response.text())
-      .then((text) => setHtml(text));
-
-    fetch(`/Buttons/${id}/style.css`)
-      .then((response) => response.text())
-      .then((text) => setCss(text));
-
-    fetch(`/Buttons/${id}/app.js`)
-      .then((response) => response.text())
-      .then((text) => {
-        if (text[0] === "<") text = " ";
-        return text;
-      })
-      .then((text) => setJs(text));
-  }, [id]);
 
   return (
     <div className={classes.editor_container}>
@@ -68,4 +49,4 @@ const ShowCode = () => {
   );
 };
 
-export default ShowCode;
+export default AddButton;
