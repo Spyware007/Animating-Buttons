@@ -9,6 +9,7 @@ import ViewsIcon from "../ViewsIcon/ViewsIcon";
 
 const Card = ({ button = "hello_1" }) => {
   const user = button.split("_")[0];
+  console.log(button);
   return (
     <>
       <div className={classes.card_container}>
@@ -16,6 +17,7 @@ const Card = ({ button = "hello_1" }) => {
           className={classes.iframe_container}
           title={button}
           src={`Buttons/${button}/index.html`}
+          sandbox="allow-scripts"
         ></iframe>
 
         <div className={classes.contributor_info}>

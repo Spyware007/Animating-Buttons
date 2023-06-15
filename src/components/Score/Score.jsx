@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Score.module.css";
+import { Link } from "react-router-dom";
 import { Data } from "../../Data";
 import memoji from "../../assets/memoji.png";
 
@@ -21,13 +22,13 @@ const Score = () => {
       <h1 className={classes.leaderboard_text}>LEADERBOARD</h1>
       <div className={classes.leaderboard}>
         {sortedArray.map(([name, count], index) => (
-          <div key={name} className={classes.item}>
+          <Link to={`/user/${name}`} key={name} className={classes.item}>
             <img src={memoji} alt="Profile" className={classes.profileImage} />
             <div className={classes.details}>
               <div className={classes.name}>{name}</div>
               <div className={classes.count}>{count} buttons added</div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </>

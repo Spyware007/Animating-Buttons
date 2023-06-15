@@ -23,6 +23,8 @@
   background-color: #000000;
   padding: 10px;
   border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
   box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
     0 30px 60px -30px rgba(0, 0, 0, 0.3),
     inset 0 -2px 6px 0 rgba(255, 255, 255, 0.35);
