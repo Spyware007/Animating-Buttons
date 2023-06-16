@@ -13,6 +13,7 @@ import {
 } from "./components";
 import SuspenseLoader from "./components/SuspenseLoader/SuspenseLoader";
 import UserProfile from "./components/UserProfile/UserProfile";
+import About from "./pages/About";
 
 // import Login from "./components/Login/Login";
 const ShowCode = lazy(() => import("./components/ShowCode/ShowCode"));
@@ -30,6 +31,10 @@ const App = ({ modeToggleFunc, modeToggle }) => {
           <Main modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
         </div>
       ),
+    },
+    {
+      path: "/about",
+      element: <About modeToggle={toggleMode} />,
     },
     {
       path: "/show/:id",
