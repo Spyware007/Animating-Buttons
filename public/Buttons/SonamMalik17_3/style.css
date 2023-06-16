@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: hidden;
+}
+button{
+    padding: 1rem 3rem;
+    cursor: pointer;
+    background-color: rgb(255, 0, 166);
+    border: 0px;
+    font-size:1.5rem;
+    font-weight: 550;
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+    box-shadow: rgb(3, 12, 172) 6px 6px;
+    outline: transparent;
+    transition: 0.5s;
+}
+button:hover {
+    color: rgb(3, 12, 172);
+    background-color: rgb(249, 83, 191);
+    box-shadow: rgb(3, 12, 172) 16px 16px;
+}
