@@ -6,6 +6,7 @@ import {
   Landing,
   Main,
   Loader,
+  Login,
   Navbar,
   Footer,
   AddButton,
@@ -43,10 +44,10 @@ const App = ({ modeToggleFunc, modeToggle }) => {
       path: "/add",
       element: <AddButton />,
     },
-    // {
-    //   path: "/login",
-    //   element: <Login />,
-    // },
+    {
+      path: "/login",
+      element: <Login />,
+    },
     {
       path: "/user/:userId",
       element: <UserProfile />,
