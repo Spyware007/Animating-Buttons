@@ -301,12 +301,10 @@ export const Data = [
   "SaiyamTuteja",
   "HimanshuNarware",
   "Anish_Kothari",
-<<<<<<< HEAD
   "priyam212001",
   "Anik-Banerjee364",
   "harshita-2003",
   "harshita-2003_2"
-=======
   "sukanyachopra",
   "Adityamishra9719",
   "shivansh745",
@@ -405,5 +403,4 @@ export const Data = [
   "Durgesh4993_2",
   "Kalivarapubindusree_2",
   "Kalivarapubindusree_1"
->>>>>>> c76ae64a037d33e8e3b18e94b31b616f6eb18ac2
 ];
