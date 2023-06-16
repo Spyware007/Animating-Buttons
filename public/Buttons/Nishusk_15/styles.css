@@ -1,77 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --background-page: #22ddce;
-  --pink: #ee5867;
-  --pink-light: #fff0f0;
-  --pink-dark: #ec3a50;
-  font-size: 10px;
-}
-
-html {
-  height: 100vh;
-}
-
-body {
-  background: var(--background-page);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100%;
-}
-
-button {
-  font: 500 4rem 'Rubik', sans-serif;
-  cursor: pointer;
-  outline: none;
-}
-
-.btn_south-face {
-  background: var(--pink);
-  position: relative;
-  width: 30rem;
-  height: 8rem;
-  border: none;
-  border-radius: 1rem;
-  transition: 0.2s;
-}
-
-.btn-3d {
-  background: var(--pink-light);
-  color: #382b22;
-  position: absolute;
-  bottom: 2rem;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: inherit;
-  border-radius: inherit;
-  transition: background 0.2s cubic-bezier(0, 0, 0.58, 1),
-    bottom 0.2s cubic-bezier(0, 0, 0.58, 1);
-}
-
-.btn-3d:hover {
-  background: #ffe5e5;
-  bottom: 1rem;
-}
-
-.btn-3d:active {
-  background: #ffe5e5;
-  bottom: 0;
-}
-
-.btn-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
-  overflow: hidden;
-}
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  .container {
+    display: flex;
+    height: 100%;
+  }
+  
+  .container .button {
+    margin: auto;
+  }
+  
+  .button {
+    background-color: unset;
+    color: white;
+    border: 0;
+    position: relative;
+    font-size: 24px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .button::before {
+    content: "";
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border: 2px solid black;
+    transform-origin: center;
+    transform: perspective(10px) translate(10px) scale(1.2) rotate3d(1, 1, 1, 9deg);
+    transition: 0.2s cubic-bezier(0, 1.5, 1, 1);
+  }
+  
+  .button:hover {
+    color: black;
+  }
+  .button:hover::before {
+    background-color: white;
+    /*transform: perspective(10px) translate(-8px) scale(1.2) rotate3d(1, 1, 1, 352deg);*/
+    transform: perspective(10px) translate(-8px) scale(1.2) rotate3d(1, 1, 1, -8deg);
+    transition: 0.2s cubic-bezier(0, 1.5, 1, 1);
+  }
