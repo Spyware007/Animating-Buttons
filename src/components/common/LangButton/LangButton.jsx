@@ -8,7 +8,7 @@ const LangButton = ({ image, name, active, onClick }) => {
         onClick={onClick}
         className={active ? classes.active_button : classes.button}
       >
-        <img className={classes.lang_image} src={image} alt="language image" />
+        <img className={classes.lang_image} src={image} alt="language _mage" />
         {name}
       </button>
     </>

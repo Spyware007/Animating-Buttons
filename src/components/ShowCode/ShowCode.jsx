@@ -11,7 +11,6 @@ const ShowCode = () => {
   const [css, setCss] = useState("");
   const [js, setJs] = useState("");
   const [srcDoc, setSrcDoc] = useState("");
-  const [selectedOption, setSelectedOption] = useState("HTML");
   const user = id.split("_")[0];
 
   useEffect(() => {

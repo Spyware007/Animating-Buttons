@@ -6,7 +6,6 @@ import { Link, NavLink } from "react-router-dom";
 import github from "../../assets/github.png";
 import moon from "../../assets/moon.png";
 import sun from "../../assets/sun.png";
-import { LeaderboardIcon } from "../../assets/svg";
 
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
   return (

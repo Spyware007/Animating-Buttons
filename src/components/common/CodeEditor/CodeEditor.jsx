@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import classes from "./CodeEditor.module.css";
 import Editor from "@monaco-editor/react";
 import LangButton from "../LangButton/LangButton";
@@ -83,9 +83,9 @@ const CodeEditor = ({ html, css, js, setHtml, setCss, setJs }) => {
           defaultValue={file.value}
           onChange={(value) => {
             // files[fileName].value = value;
-            if (file.name == "index.html") setHtml(value);
-            else if (file.name == "style.css") setCss(value);
-            else if (file.name == "app.js") setJs(value);
+            if (file.name === "index.html") setHtml(value);
+            else if (file.name === "style.css") setCss(value);
+            else if (file.name === "app.js") setJs(value);
             else console.log("error");
           }}
           options={{

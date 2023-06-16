@@ -1,6 +1,4 @@
 import React from "react";
-import Footer from "../Footer/Footer";
-import Navbar from "../Navbar/Navbar";
 import { NavLink } from "react-router-dom";
 import classes from "./404Errorpage.module.css";
 

@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import LikeButton from "../LikeButton/LikeButton";
 
 import downloadZip from "../../../Functions/DownloadZip";
-import ViewsIcon from "../ViewsIcon/ViewsIcon";
+// import ViewsIcon from "../ViewsIcon/ViewsIcon";
 
 const Card = ({ button = "hello_1" }) => {
   const user = button.split("_")[0];

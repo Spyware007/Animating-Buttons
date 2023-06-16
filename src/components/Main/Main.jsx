@@ -12,7 +12,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   // const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
 
-  const isDark = modeToggle ? "dark_mode" : "light_mode";
+  // const isDark = modeToggle ? "dark_mode" : "light_mode";
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -94,7 +94,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
         </h1>
         <div className={classes.btns_container}>
           {currentItems
-            .filter((d) => d.toLowerCase().includes(query.toLowerCase()))
+            // .filter((d) => d.toLowerCase().includes(query.toLowerCase()))
             .map((d, i) => (
               <Card key={i} button={d} />
             ))}
