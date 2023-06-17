@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { collection, doc, setDoc } from "firebase/firestore";
+
+import { collection, doc, setDoc , updateDoc, getDocs, query, where} from "firebase/firestore";
+
 import { getAuth, signInWithPopup, signOut, GithubAuthProvider } from "firebase/auth";
 import { db } from "../../firebase/auth";
 import classes from "./Login.module.css";
@@ -8,7 +10,8 @@ import axios from "axios";
 
 
 const Login = () => {
-  const [user, setUser] = useState(null);
+
+  const [user, setUser] = useState({ username: "", profilePictureUrl: "" });
   const [githubBio, setGithubBio] = useState("");
   const [githubSocialAccounts, setGithubSocialAccounts] = useState([]);
 
@@ -35,7 +38,9 @@ const Login = () => {
 
     try {
       const response = await axios.get(`https://api.github.com/user/${githubId}`);
-      const { bio, blog, twitter_username, linkedin_username, company, location } = response.data;
+
+      const { bio, blog, twitter_username, linkedin_username, company, location, login, avatar_url } = response.data;
+
       setGithubBio(bio);
       const socialAccounts = [];
 
@@ -60,25 +65,44 @@ const Login = () => {
       }
 
       setGithubSocialAccounts(socialAccounts);
-      saveUserDataToFirestore(bio,socialAccounts)
+
+      saveUserDataToFirestore(bio, socialAccounts, login, avatar_url)
+
     } catch (error) {
       console.error("Error fetching GitHub data:", error);
     }
   };
 
-  const saveUserDataToFirestore = async (bio, socialAccounts) => {
+  const saveUserDataToFirestore = async (bio, socialAccounts, username, profilePictureUrl) => {
     try {
       const usersCollectionRef = collection(db, "users");
-      const newDocRef = doc(usersCollectionRef); // Automatically generate a new document ID
   
-      const newUser = {
-        bio: bio,
-        socials: socialAccounts,
-      };
+      // Query the collection to find the document with the user's username
+      const querySnapshot = await getDocs(query(usersCollectionRef, where("username", "==", username)));
   
-      console.log("User data saving to Firestore...");
-      await setDoc(newDocRef, newUser); // Use setDoc with the newDocRef to specify the document ID
-      console.log("User data saved to Firestore");
+      // Check if the document already exists
+      if (querySnapshot.size > 0) {
+        // Update the existing document
+        const docRef = querySnapshot.docs[0].ref;
+        await updateDoc(docRef, {
+          bio: bio,
+          socials: socialAccounts,
+          profilePictureUrl: profilePictureUrl,
+        });
+        console.log("User data updated in Firestore");
+      } else {
+        // Create a new document
+        const newDocRef = doc(usersCollectionRef); // Automatically generate a new document ID
+        const newUser = {
+          bio: bio,
+          socials: socialAccounts,
+          username: username,
+          profilePictureUrl: profilePictureUrl,
+        };
+        await setDoc(newDocRef, newUser);
+        console.log("User data saved to Firestore");
+      }
+
     } catch (error) {
       console.error("Error saving user data to Firestore:", error);
     }
@@ -94,8 +118,6 @@ const Login = () => {
         // Handle successful login
         const user = result.user;
         setUser(user);
-        fetchGithubData(user);
-        // saveUserDataToFirestore(githubBio, githubSocialAccounts);
       })
       .catch((error) => {
         // Handle login error
