@@ -27,6 +27,21 @@
   border-radius: 12px;
 }
 
+.blue_button {
+  background-color: blue;
+  color: white;
+  transition: background-color 0.3s;
+  padding: 10px;
+  font-size: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.blue_button:hover {
+  background-color: yellow;
+  color: black;
+}
+
 @media screen and (max-width: 768px) {
   .editor_container {
     flex-direction: column;
