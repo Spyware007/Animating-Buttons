@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import { Main, Navbar, Socials, Footer } from "./components";
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
@@ -14,10 +14,10 @@ export default function MainPage() {
         <Route
           path="/"
           element={
-            <div>
+            <>
               <Socials modeToggle={toggleMode} />
               <Main modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
-            </div>
+            </>
           }
         />
         <Route
