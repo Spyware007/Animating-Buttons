@@ -1,0 +1,112 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   background:#27282c ;
+   flex-direction: column;
+   font-family: 'Montserrat', sans-serif;
+   font-family: 'Ubuntu', sans-serif;
+   height: 100vh;
+}
+a{
+    position: relative;
+
+    text-decoration: none;
+    background: #fff;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+    font-size: 1.3rem;
+    transition: 0.5s;
+    display: flex;
+  gap: 50px;
+    /* border: 2px solid white; */
+}
+.two-border:hover{
+    letter-spacing: 0.35rem;
+    background: var(--color);
+    color: var(--color);
+    box-shadow: 0 0 35px var(--color);
+    z-index: 1;
+}
+
+.two-border:before{
+content: "";
+position:absolute;
+inset: 2px;
+background: #27282c;
+color: #fff;
+}
+a span{
+    position: relative;
+    z-index: 1;
+}
+.two-border i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+.two-border i::before{
+    content: "";
+    position: absolute;
+    background-color: #27282c;
+    top: 0px;
+    left: 80%;
+    width: 16px;
+    height: 4px;
+transform: translateX(-50%) skewX(325deg);
+transition: 0.5s;
+}
+.two-border:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+.two-border i::after{
+    content: "";
+    position: absolute;
+    background-color: #27282c;
+    bottom: 0px;
+    left: 20%;
+    width: 19px;
+    height: 4px;
+transform: translateX(-50%) skewX(325deg);
+transition: 0.5s;
+}
+.two-border:hover i::after{
+    width: 20px;
+    left: 80%;
+}
+.border-around{
+    width: 150px;
+    /* justify-content: center; */
+position: relative;
+align-items: center;
+background: #27282c;
+/* border-top: 2px solid white;
+animation: border-top 3s infinite alternate; */
+}
+.border-around:before{
+    position: absolute;
+    justify-content: center;
+    content: "";
+    left: 0;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border-top:2px solid white ;
+    border-right: 2px solid white;
+    animation: border-top 3s infinite alternate;
+    box-shadow: 0 0 5px white;
+
+}
