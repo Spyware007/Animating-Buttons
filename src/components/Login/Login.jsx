@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+
 import { collection, doc, setDoc , updateDoc, getDocs, query, where} from "firebase/firestore";
+
 import { getAuth, signInWithPopup, signOut, GithubAuthProvider } from "firebase/auth";
 import { db } from "../../firebase/auth";
 import classes from "./Login.module.css";
@@ -8,6 +10,7 @@ import axios from "axios";
 
 
 const Login = () => {
+
   const [user, setUser] = useState({ username: "", profilePictureUrl: "" });
   const [githubBio, setGithubBio] = useState("");
   const [githubSocialAccounts, setGithubSocialAccounts] = useState([]);
@@ -35,7 +38,9 @@ const Login = () => {
 
     try {
       const response = await axios.get(`https://api.github.com/user/${githubId}`);
+
       const { bio, blog, twitter_username, linkedin_username, company, location, login, avatar_url } = response.data;
+
       setGithubBio(bio);
       const socialAccounts = [];
 
@@ -60,7 +65,9 @@ const Login = () => {
       }
 
       setGithubSocialAccounts(socialAccounts);
+
       saveUserDataToFirestore(bio, socialAccounts, login, avatar_url)
+
     } catch (error) {
       console.error("Error fetching GitHub data:", error);
     }
@@ -95,11 +102,11 @@ const Login = () => {
         await setDoc(newDocRef, newUser);
         console.log("User data saved to Firestore");
       }
+
     } catch (error) {
       console.error("Error saving user data to Firestore:", error);
     }
   };
-  
 
   const handleGitHubLogin = () => {
     const auth = getAuth();
@@ -111,7 +118,6 @@ const Login = () => {
         // Handle successful login
         const user = result.user;
         setUser(user);
-        
       })
       .catch((error) => {
         // Handle login error
