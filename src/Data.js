@@ -237,5 +237,5 @@ export const Data = [
   "lmalkam",
   "kartikjoshi267",
   "priyam212001",
-  "youraj-08",
+  "youraj-08"
 ];
