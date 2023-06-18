@@ -801,9 +801,17 @@ export const Data = [
   "0xabdulkhalid_9",
   "Durgesh4993_2",
   "Kalivarapubindusree_2",
+<<<<<<< HEAD
   "Kalivarapubindusree_1"
+<<<<<<< HEAD
   "Kalivarapubindusree_1",
   "HimanshuNarware_4"
   "dwivedishrey",
   "0xabdulkhalid_18"
+=======
+=======
+  "VardaPanchal005_2",
+  "VardaPanchal005_3"
+>>>>>>> a2cfdba (Dark and Light button)
+>>>>>>> 37cd888 (Dark and Light button)
 ];
