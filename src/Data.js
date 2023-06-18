@@ -1413,7 +1413,6 @@ export const Data = [
   "0xabdulkhalid_18",
   "Poonam-13_2",
   "sarthak713_1",
-<<<<<<< HEAD
   "khushbumaheshwarii_3",
    "khushbumaheshwarii_4",
    "khushbumaheshwarii_7",
@@ -1465,7 +1464,6 @@ export const Data = [
   "VardaPanchal005_3",
   "yaswika0311",
   "0xabdulkhalid_18",
-=======
   "yaswika0311",
   "0xabdulkhalid_18",
   "VardaPanchal005_2",
@@ -1475,7 +1473,6 @@ export const Data = [
   "VardaPanchal005_2",
   "VardaPanchal005_3",
   "0xabdulkhalid_18",
->>>>>>> 01036f9 (fixing data.js file)
   "VardaPanchal005_2",
   "VardaPanchal005_3"
 
