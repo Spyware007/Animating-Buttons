@@ -4,6 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import CodeEditor from "../common/CodeEditor/CodeEditor";
 import { Twitter, LinkedIn } from "../../assets/svg";
 import Memoji from "../../assets/memoji.png";
+import { doc, getDoc, getDocs, query, collection, where } from "firebase/firestore";
+import { db } from "../../firebase/auth";
 
 const ShowCode = () => {
   const { id } = useParams();
@@ -11,8 +13,9 @@ const ShowCode = () => {
   const [css, setCss] = useState("");
   const [js, setJs] = useState("");
   const [srcDoc, setSrcDoc] = useState("");
-  const user = id.split("_")[0];
-
+  const [user, setUser] = useState("");
+  const [githubBio, setGithubBio] = useState("");
+  const [pfp, setpfp] = useState("");
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSrcDoc(`
@@ -28,23 +31,58 @@ const ShowCode = () => {
   }, [html, css, js]);
 
   useEffect(() => {
-    fetch(`/Buttons/${id}/index.html`)
-      .then((response) => response.text())
-      .then((text) => setHtml(text));
-
-    fetch(`/Buttons/${id}/style.css`)
-      .then((response) => response.text())
-      .then((text) => setCss(text));
-
-    fetch(`/Buttons/${id}/app.js`)
-      .then((response) => response.text())
-      .then((text) => {
-        if (text[0] === "<") text = " ";
-        return text;
-      })
-      .then((text) => setJs(text));
+    const fetchCodeData = async () => {
+      try {
+        const docRef = doc(db, "buttons", id);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          console.log(data); // Log the data object to the console
+          setHtml(data.html || "");
+          setCss(data.css || "");
+          setJs(data.js || "");
+          setUser(data.githubUsername || "");
+        } else {
+          console.log("No such document exists!");
+        }
+      } catch (error) {
+        console.log("Error getting document:", error);
+      }
+    };
+  
+    fetchCodeData();
   }, [id]);
 
+  useEffect(() => {
+    const fetchGithubBio = async () => {
+      try {
+        const usersQuery = query(
+          collection(db, "users"),
+          where("username", "==", user)
+        );
+        const usersSnap = await getDocs(usersQuery);
+        if (!usersSnap.empty) {
+          usersSnap.forEach((doc) => {
+            const userData = doc.data();
+            console.log(userData); // Log the user data object to the console
+            setGithubBio(userData.bio || "");
+            setpfp(userData.profilePictureUrl || "");
+          });
+        } else {
+          console.log("User document does not exist!");
+        }
+      } catch (error) {
+        console.log("Error getting user document:", error);
+      }
+    };
+  
+    if (user) {
+      fetchGithubBio();
+    }
+  }, [user]);
+ 
+  
+  
   return (
     <div className={classes.editor_container}>
       <div className={classes.iframe_container}>
@@ -58,7 +96,7 @@ const ShowCode = () => {
         <div className={classes.user_info}>
           <div className={classes.user_row}>
             <div className={classes.image_container}>
-              <img className={classes.image} src={Memoji} alt="" />
+              <img className={classes.image} src={pfp} alt="" />
             </div>
             <div className={classes.user_data}>
               <h3 className={classes.username}>@{user}</h3>
@@ -68,14 +106,11 @@ const ShowCode = () => {
               </div>
             </div>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          </p>
+          <p>{githubBio} </p>
           <Link to={`/user/${user}`}>See More Buttons from {user}</Link>
         </div>
       </div>
+      
       <div className={classes.components_container}>
         <CodeEditor
           html={html}
