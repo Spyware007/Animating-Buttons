@@ -39,6 +39,7 @@ const AddButton = () => {
       likeCounter: 0,
       githubUsername: '',
       displayName: '',
+      likedUsers: [],
     };
 
     try {
