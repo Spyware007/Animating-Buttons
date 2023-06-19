@@ -61,14 +61,15 @@ button {
     margin: 0;
     display: grid;
     grid-template-columns: auto auto;
-    gap: 20px;
+    gap: 10px;
     place-content: center;
     background: #F6F7BD;
+    text-align: center;
   }
   button {
     font-family: system-ui, sans-serif;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 2rem;
     margin: 0;
     cursor: pointer;
     border: none;
