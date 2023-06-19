@@ -1,0 +1,143 @@
+body {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	background: #222;
+	font-family: 'sans-serif';
+}
+.checkbox-wrapper input[type="checkbox"] {
+	visibility: hidden;
+	display: none;
+}
+
+.checkbox-wrapper *,
+.checkbox-wrapper ::after,
+.checkbox-wrapper ::before {
+	box-sizing: border-box;
+}
+
+.checkbox-wrapper .rocker {
+	display: inline-block;
+	position: relative;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	color: #888;
+	width: 7em;
+	height: 4em;
+	overflow: hidden;
+	border-bottom: 0.5em solid #eee;
+}
+
+.checkbox-wrapper .rocker-small {
+	font-size: 0.75em;
+}
+
+.checkbox-wrapper .rocker::before {
+	content: "";
+	position: absolute;
+	top: 0.5em;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #999;
+	border: 0.5em solid #eee;
+	border-bottom: 0;
+}
+
+.checkbox-wrapper .switch-left,
+.checkbox-wrapper .switch-right {
+cursor: pointer;
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 2.5em;
+width: 3em;
+transition: 0.2s;
+user-select: none;
+}
+
+.checkbox-wrapper .switch-left {
+height: 2.4em;
+width: 2.75em;
+left: 0.85em;
+bottom: 0.4em;
+background-color: #ddd;
+transform: rotate(15deg) skewX(15deg);
+}
+
+.checkbox-wrapper .switch-right {
+right: 0.5em;
+bottom: 0;
+background-color: #bd5757;
+color: #fff;
+}
+
+.checkbox-wrapper .switch-left::before,
+.checkbox-wrapper .switch-right::before {
+content: "";
+position: absolute;
+width: 0.4em;
+height: 2.45em;
+bottom: -0.45em;
+background-color: #ccc;
+transform: skewY(-65deg);
+}
+
+.checkbox-wrapper .switch-left::before {
+left: -0.4em;
+}
+
+.checkbox-wrapper .switch-right::before {
+right: -0.375em;
+background-color: transparent;
+transform: skewY(65deg);
+}
+
+.checkbox-wrapper input:checked + .switch-left {
+background-color: #0084d0;
+color: #fff;
+bottom: 0px;
+left: 0.5em;
+height: 2.5em;
+width: 3em;
+transform: rotate(0deg) skewX(0deg);
+}
+
+.checkbox-wrapper input:checked + .switch-left::before {
+background-color: transparent;
+width: 3.0833em;
+}
+
+.checkbox-wrapper input:checked + .switch-left + .switch-right {
+background-color: #ddd;
+color: #888;
+bottom: 0.4em;
+right: 0.8em;
+height: 2.4em;
+width: 2.75em;
+transform: rotate(-15deg) skewX(-15deg);
+}
+
+.checkbox-wrapper input:checked + .switch-left + .switch-right::before {
+background-color: #ccc;
+}
+
+/* Keyboard Users */
+.checkbox-wrapper input:focus + .switch-left {
+color: #333;
+}
+
+.checkbox-wrapper input:checked:focus + .switch-left {
+color: #fff;
+}
+
+.checkbox-wrapper input:focus + .switch-left + .switch-right {
+color: #fff;
+}
+
+.checkbox-wrapper input:checked:focus + .switch-left + .switch-right {
+color: #333;
+}
