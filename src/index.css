@@ -32,6 +32,7 @@ html,
 body {
   height: 100%;
   font-family: "SansationBold", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {

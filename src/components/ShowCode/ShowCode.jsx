@@ -4,7 +4,14 @@ import { Link, useParams } from "react-router-dom";
 import CodeEditor from "../common/CodeEditor/CodeEditor";
 import { Twitter, LinkedIn } from "../../assets/svg";
 import Memoji from "../../assets/memoji.png";
-import { doc, getDoc, getDocs, query, collection, where } from "firebase/firestore";
+import {
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  collection,
+  where,
+} from "firebase/firestore";
 import { db } from "../../firebase/auth";
 
 const ShowCode = () => {
@@ -49,7 +56,7 @@ const ShowCode = () => {
         console.log("Error getting document:", error);
       }
     };
-  
+
     fetchCodeData();
   }, [id]);
 
@@ -75,14 +82,12 @@ const ShowCode = () => {
         console.log("Error getting user document:", error);
       }
     };
-  
+
     if (user) {
       fetchGithubBio();
     }
   }, [user]);
- 
-  
-  
+
   return (
     <div className={classes.editor_container}>
       <div className={classes.iframe_container}>
@@ -110,7 +115,7 @@ const ShowCode = () => {
           <Link to={`/user/${user}`}>See More Buttons from {user}</Link>
         </div>
       </div>
-      
+
       <div className={classes.components_container}>
         <CodeEditor
           html={html}

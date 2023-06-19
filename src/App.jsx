@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Suspense, lazy } from "react";
 import ErrorPage from "./components/ErrorPage/404Error";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import GoToTop from "./components/Top/GoToTop";
 import {
   Landing,
@@ -22,6 +22,11 @@ const ShowCode = lazy(() => import("./components/ShowCode/ShowCode"));
 const App = ({ modeToggleFunc, modeToggle }) => {
   const [loading, setLoading] = useState(false);
   const [toggleMode, setToggleMode] = useState(true);
+
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   const routes = [
     {
