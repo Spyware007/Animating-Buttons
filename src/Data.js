@@ -402,8 +402,6 @@ export const Data = [
   "Aryan5464",
   "Archit-Kohli",
   "Shreyans2004_2",
-  "Ayush9951",
-  "Ayush9951_1",
   "Guli93",
   "adarshgupta404",
   "amrit2611",
