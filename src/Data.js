@@ -629,6 +629,11 @@ export const Data = [
   "Durgesh4993",
   "ManishaSwain8",
   "An525ish",
+  "dassoumen98_1",
+  "piyushkhurana2019",
+  "lakhan06",
+  "SyedImtiyazAli",
+  "yaswika0311",
   "SyedImtiyazAli",
   "SyedImtiyaz-1",
   "sudarshan-hub",
@@ -739,8 +744,8 @@ export const Data = [
   "0xabdulkhalid_2",
   "0xabdulkhalid_1",
   "Samriddhi15",
-  "Dhruv-Srivastava,"
-  "Kalivarapubindusree"
+  "Dhruv-Srivastava",
+  "Kalivarapubindusree",
   "Siddharth961_3",
   "harshita-2003",
   "rohanmittal1163",
@@ -774,6 +779,8 @@ export const Data = [
   "AnkitMajee",
   "Samriddhi15_3",
   "PayalPadmalyaPrusty",
+  "PayalPadmalyaPrusty",
+  "Roshnijeewani3457",
   "HimanshuNarware_2",
   "0xabdulkhalid_11",
   "Illaf",
@@ -801,17 +808,16 @@ export const Data = [
   "0xabdulkhalid_9",
   "Durgesh4993_2",
   "Kalivarapubindusree_2",
-<<<<<<< HEAD
-  "Kalivarapubindusree_1"
-<<<<<<< HEAD
   "Kalivarapubindusree_1",
-  "HimanshuNarware_4"
+  "Kalivarapubindusree_1",
+  "HimanshuNarware_4",
   "dwivedishrey",
-  "0xabdulkhalid_18"
-=======
-=======
+  "0xabdulkhalid_18",
   "VardaPanchal005_2",
-  "VardaPanchal005_3"
->>>>>>> a2cfdba (Dark and Light button)
->>>>>>> 37cd888 (Dark and Light button)
+  "VardaPanchal005_3",
+  "0xabdulkhalid_18",
+  "0xabdulkhalid_15",
+  "0xabdulkhalid_14",
+  "0xabdulkhalid_13",
+  "yaswika0311"
 ];
