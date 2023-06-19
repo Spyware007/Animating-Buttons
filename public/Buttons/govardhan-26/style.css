@@ -1,7 +1,6 @@
 .box{
-    border : 2px solid white;
-    height : 95vh;
-    width : 98vw;
+    height : 90vh;
+    width : 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,9 +27,10 @@ body{
     background: #111;
     cursor: pointer;
     position: relative;
+    right : 30px;
     z-index: 1;
     border: 1px solid radius;
-    transition: transform 1s ease;
+    transition: transform .6s ease;
 }
 
 
