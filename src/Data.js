@@ -1,7 +1,6 @@
 /** @format */
 
 export const Data = [
-  "sabhisharma-ise_2",
   "sabhisharma-ise_1",
   // "HardikMisri",
   "AbhaBarge",
