@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="https://kit.fontawesome.com/a59b9b09ab.js" crossorigin="anonymous"></script>
-    <link href="fontawesome/css/all.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark mode </title>
-    <link rel="icon" href="2.jpg">
-    <style>
+
         * {
             padding: 0px;
             margin:0px;
@@ -107,25 +97,4 @@
             color: #333;
             background-color:rgb(189,186,186);
         }
-    </style>
-</head>
-<body id="body">
-    <div class="box">
-        <input type="checkbox" id="so">
-    <label for="so" class="button" onclick="toggleMode()"></label>
-<span class="dayimage"><i id="sun" class="fas fa-sun"></i></span> <i id="moon" class="fas fa-moon"></i>  </div>
-</body>
-<script>
-    function toggleMode() {
-      var body = document.getElementById("body");
-      
-      if (body.classList.contains("dark-mode")) {
-        body.classList.remove("dark-mode");
-        body.classList.add("light-mode");
-      } else {
-        body.classList.remove("light-mode");
-        body.classList.add("dark-mode");
-      }
-    }
-</script>
-</html>
+    
