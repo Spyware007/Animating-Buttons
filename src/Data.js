@@ -748,8 +748,8 @@ export const Data = [
   "0xabdulkhalid_2",
   "0xabdulkhalid_1",
   "Samriddhi15",
-  "Dhruv-Srivastava,"
-  "Kalivarapubindusree"
+  "Dhruv-Srivastava",
+  "Kalivarapubindusree",
   "Siddharth961_3",
   "harshita-2003",
   "rohanmittal1163",
@@ -817,7 +817,7 @@ export const Data = [
   "Kalivarapubindusree_2",
   "Kalivarapubindusree_1",
   "SurbhiMotwani23",
-  "Prajwal0225_2"
+  "Prajwal0225_2",
   "HimanshuNarware_4",
   "dwivedishrey",
   "0xabdulkhalid_18",
@@ -825,5 +825,6 @@ export const Data = [
   "0xabdulkhalid_15",
   "0xabdulkhalid_14",
   "0xabdulkhalid_13",
-  "yaswika0311"
+  "yaswika0311",
+  "Geeta_1123"
 ];
