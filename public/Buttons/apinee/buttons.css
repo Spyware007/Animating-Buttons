@@ -24,4 +24,10 @@
     padding:9px;
 
    }
+   .cbtn{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    
+   }
    
