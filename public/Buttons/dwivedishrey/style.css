@@ -1,0 +1,30 @@
+body{
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: black;
+
+}
+button{
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 0.5em 1em;
+    color: black;
+    background-color: lightblue;
+    border: 5px solid white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+button:hover{
+  transform: translateY(-10px);
+  border: 10px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;;
+
+}
+.a{
+  text-shadow: 2px 2px black;
+}
