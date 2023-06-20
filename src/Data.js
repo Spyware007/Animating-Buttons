@@ -434,6 +434,7 @@ export const Data = [
    "lakhan06_4",
    "lakhan06_5",
    "lakhan06_6",
-   "lakhan06_7"
+   "lakhan06_7",
+   "lakhan07_8"
 ];
 
