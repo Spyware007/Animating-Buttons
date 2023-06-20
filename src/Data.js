@@ -2,7 +2,6 @@
 
 export const Data = [
   "sabhisharma-ise_3",
-  "sabhisharma-ise_2",
   "rahulraj22",
   "Aryan5464",
   "RashakDude",
