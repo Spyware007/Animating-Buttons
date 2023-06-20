@@ -31,8 +31,8 @@ body{
 
 .shadow:active {
   /* active => on clicking the button */
-  margin-top: 4px;
-  margin-left: 4px;
+  margin-top: 6px;
+  margin-left: 6px;
   box-shadow: none;
   /* this is how we can remove the box shadow as well */
 }
