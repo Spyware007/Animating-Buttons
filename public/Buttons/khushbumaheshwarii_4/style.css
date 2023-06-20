@@ -1,0 +1,200 @@
+body {
+    background: #2e394d;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  *:before, *:after {
+    content: "";
+    position: absolute;
+  }
+  
+  input {
+    height: 40px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 40px;
+  }
+  
+.toggle-wrapper {
+    flex: 1 1 calc(100% / 3);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background: #de8787;
+  }
+  @media (max-width: 960px) {
+    .toggle-wrapper {
+      flex: 1 1 calc(100% / 2);
+    }
+  }
+  @media (max-width: 700px) {
+    .toggle-wrapper {
+      flex: 1 1 100%;
+    }
+  }
+  .name {
+    width: 80%;
+    position: absolute;
+    font: 500 14px "Rubik", sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    bottom: 15px;
+    right: 15px;
+    text-align: right;
+  }
+  
+  .toggle {
+    position: relative;
+    display: inline-block;
+  }
+  
+  label.toggle-item {
+    width: 7em;
+    background: #2e394d;
+    height: 3em;
+    display: inline-block;
+    border-radius: 50px;
+    margin: 40px;
+    position: relative;
+    transition: all 0.3s ease;
+    transform-origin: 20% center;
+    cursor: pointer;
+  }
+  label.toggle-item:before {
+    display: block;
+    transition: all 0.2s ease;
+    width: 2.3em;
+    height: 2.3em;
+    top: 0.25em;
+    left: 0.25em;
+    border-radius: 2em;
+    border: 2px solid #88cf8f;
+    transition: 0.3s ease;
+  }
+  .basketball-hoop label {
+    background: #fdb827;
+  }
+  .basketball-hoop label:before {
+    content: none;
+  }
+  .basketball-hoop .ball {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    position: absolute;
+    background: #FF9800;
+    border: 2px solid black;
+    transition: 0.4s ease;
+    top: 4px;
+    left: 4px;
+    background-image: radial-gradient(circle at -5px 10px, transparent 15px, black 15px, black 17px, transparent 17px), radial-gradient(circle at 41px 25px, transparent 15px, black 15px, black 17px, transparent 17px), linear-gradient(110deg, transparent 22px, black 22px, black 24px, transparent 24px), linear-gradient(18deg, transparent 22px, black 22px, black 24px, transparent 24px);
+  }
+  .basketball-hoop .ball__wrapper {
+    transition: 0.4s ease;
+    width: 195%;
+    height: 200%;
+    transform-origin: 50% -2%;
+  }
+  .basketball-hoop .hoop {
+    top: -50px;
+    right: -84px;
+    width: 50px;
+    background: #f44336;
+    height: 8px;
+    position: absolute;
+  }
+  .basketball-hoop .hoop:before {
+    position: absolute;
+    right: -4px;
+    width: 7px;
+    height: 60px;
+    background: #cd2e22;
+    top: -40px;
+  }
+  .basketball-hoop .hoop:after {
+    width: 40px;
+    height: 35px;
+    background: repeating-linear-gradient(45deg, transparent, transparent 13px, white 13px, white 15px), repeating-linear-gradient(-45deg, transparent, transparent 13px, white 13px, white 15px);
+    top: 8px;
+    border-radius: 0 0 20% 20%/40% 40% 60% 60%;
+    border: 2px solid #fff;
+    border-width: 0 2px;
+    left: 2px;
+    z-index: 20;
+  }
+  
+  #hoop:checked + label {
+    background: #542583;
+    transition-delay: 1.35s;
+  }
+  #hoop:checked + label .ball__wrapper {
+    animation: 1.5s linear ball-wrapper forwards;
+  }
+  #hoop:checked + label .ball {
+    animation: 1.5s linear ball forwards;
+  }
+  
+  @keyframes ball {
+    0% {
+      transform: none;
+    }
+    40% {
+      transform: rotate(-150deg);
+    }
+    48% {
+      transform: rotate(-150deg) translateY(92px);
+    }
+    52% {
+      transform: rotate(-150deg) translate(-10px, 80px);
+    }
+    56% {
+      transform: rotate(-150deg) translate(-25px, 91px);
+    }
+    60% {
+      transform: rotate(-150deg) translate(-35px, 86px);
+    }
+    65% {
+      transform: rotate(-150deg) translate(-45px, 91px);
+    }
+    70% {
+      transform: rotate(-150deg) translate(-50px, 87px);
+    }
+    75% {
+      transform: rotate(-150deg) translate(-60px, 91px);
+    }
+    80% {
+      transform: rotate(-150deg) translate(-65px, 88px);
+    }
+    85% {
+      transform: rotate(-150deg) translate(-70px, 91px);
+    }
+    90% {
+      transform: rotate(-150deg) translate(-75px, 90px);
+    }
+    95% {
+      transform: rotate(-150deg) translate(-80px, 90px);
+    }
+    100% {
+      transform: rotate(-150deg) translate(-82px, 91px);
+    }
+  }
+  @keyframes ball-wrapper {
+    0% {
+      transform: none;
+    }
+    40%, 100% {
+      transform: rotate(150deg);
+    }
+  }
