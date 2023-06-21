@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import classes from "./CodeEditor.module.css";
 import Editor from "@monaco-editor/react";
 import LangButton from "../LangButton/LangButton";
@@ -7,7 +7,7 @@ import cssIcon from "../../../assets/css.png";
 import jsIcon from "../../../assets/js.png";
 import copyIcon from "../../../assets/copy.png";
 
-const CodeEditor = ({ html, css, js, setHtml, setCss, setJs }) => {
+const CodeEditor = ({ html, setHtml, css, setCss, js, setJs }) => {
   const files = {
     "index.html": {
       name: "index.html",
@@ -26,22 +26,28 @@ const CodeEditor = ({ html, css, js, setHtml, setCss, setJs }) => {
     },
   };
   const [activeFile, setActiveFile] = useState("index.html");
-  const [fileName, setFileName] = useState("index.html"); // change to "index.html"
+  const [fileName, setFileName] = useState("index.html");
   const editorRef = useRef(null);
   const file = files[fileName];
 
-  const handleEditorDidMount = (editor, monaco) => {
-    editorRef.current = editor;
-  };
-
   const getEditorValue = () => {
-    // alert(editorRef.current.getValue());
-    navigator.clipboard.writeText(editorRef.current.getValue());
+    const editorValue = editorRef.current.getValue();
+    navigator.clipboard.writeText(editorValue);
   };
 
-  const handleEditorChange = (value, event) => {
-    setFileName(value);
-    setActiveFile(value);
+  const handleEditorChange = (fileName) => {
+    setFileName(fileName);
+    setActiveFile(fileName);
+  };
+
+  const handleEditorValueChange = (value) => {
+    if (file.name === "index.html") {
+      setHtml(value);
+    } else if (file.name === "style.css") {
+      setCss(value);
+    } else if (file.name === "app.js") {
+      setJs(value);
+    }
   };
 
   return (
@@ -65,29 +71,16 @@ const CodeEditor = ({ html, css, js, setHtml, setCss, setJs }) => {
           active={activeFile === "app.js"}
           onClick={() => handleEditorChange("app.js")}
         />
-        <LangButton
-          name="COPY"
-          image={copyIcon}
-          onClick={() => getEditorValue()}
-        />
+        <LangButton name="COPY" image={copyIcon} onClick={getEditorValue} />
       </div>
       <div className={classes.editor}>
         <Editor
           className={classes.editor_component}
-          height="100%"
-          width="100%"
           theme="vs-dark"
-          onMount={handleEditorDidMount}
           path={file.name}
           defaultLanguage={file.language}
-          defaultValue={file.value}
-          onChange={(value) => {
-            // files[fileName].value = value;
-            if (file.name === "index.html") setHtml(value);
-            else if (file.name === "style.css") setCss(value);
-            else if (file.name === "app.js") setJs(value);
-            else console.log("error");
-          }}
+          defaultValue={file.value || ""}
+          onChange={handleEditorValueChange}
           options={{
             minimap: {
               enabled: false,
@@ -95,6 +88,9 @@ const CodeEditor = ({ html, css, js, setHtml, setCss, setJs }) => {
             fontSize: 16,
             automaticLayout: true,
             // Add any additional editor options here
+          }}
+          editorDidMount={(editor, _) => {
+            editorRef.current = editor;
           }}
         />
       </div>
