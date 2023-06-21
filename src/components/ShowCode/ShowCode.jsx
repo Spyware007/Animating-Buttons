@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import classes from "./ShowCode.module.css";
 import { Link, useParams } from "react-router-dom";
 import CodeEditor from "../common/CodeEditor/CodeEditor";
-
+import { Twitter, LinkedIn } from "../../assets/svg";
+import Memoji from "../../assets/memoji.png";
 import {
   doc,
   getDoc,
@@ -22,7 +23,6 @@ const ShowCode = () => {
   const [user, setUser] = useState("");
   const [githubBio, setGithubBio] = useState("");
   const [pfp, setpfp] = useState("");
-
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSrcDoc(`
@@ -37,22 +37,26 @@ const ShowCode = () => {
     return () => clearTimeout(timeout);
   }, [html, css, js]);
 
-  const fetchCodeData = async () => {
-    const docRef = doc(db, "Buttons", id);
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-      const data = docSnap.data();
-      console.log(data); // Log the data object to the console
-      setHtml(data.html || "");
-      setCss(data.css || "");
-      setJs(data.js || "");
-      setUser(data.githubUsername || "");
-    } else {
-      console.log("Link Invalid");
-    }
-  };
-
   useEffect(() => {
+    const fetchCodeData = async () => {
+      try {
+        const docRef = doc(db, "buttons", id);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          console.log(data); // Log the data object to the console
+          setHtml(data.html || "");
+          setCss(data.css || "");
+          setJs(data.js || "");
+          setUser(data.githubUsername || "");
+        } else {
+          console.log("No such document exists!");
+        }
+      } catch (error) {
+        console.log("Error getting document:", error);
+      }
+    };
+
     fetchCodeData();
   }, [id]);
 
@@ -101,6 +105,10 @@ const ShowCode = () => {
             </div>
             <div className={classes.user_data}>
               <h3 className={classes.username}>@{user}</h3>
+              <div className={classes.socials}>
+                <Twitter />
+                <LinkedIn />
+              </div>
             </div>
           </div>
           <p>{githubBio} </p>
@@ -109,16 +117,14 @@ const ShowCode = () => {
       </div>
 
       <div className={classes.components_container}>
-        {html && (
-          <CodeEditor
-            html={html}
-            setHtml={setHtml}
-            css={css}
-            setCss={setCss}
-            js={js}
-            setJs={setJs}
-          />
-        )}
+        <CodeEditor
+          html={html}
+          setHtml={setHtml}
+          css={css}
+          setCss={setCss}
+          js={js}
+          setJs={setJs}
+        />
       </div>
     </div>
   );

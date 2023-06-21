@@ -15,6 +15,8 @@ import {
 import SuspenseLoader from "./components/SuspenseLoader/SuspenseLoader";
 import UserProfile from "./components/UserProfile/UserProfile";
 import About from "./pages/About";
+
+// import Login from "./components/Login/Login";
 const ShowCode = lazy(() => import("./components/ShowCode/ShowCode"));
 
 const App = ({ modeToggleFunc, modeToggle }) => {
@@ -30,10 +32,10 @@ const App = ({ modeToggleFunc, modeToggle }) => {
     {
       path: "/",
       element: (
-        <>
+        <div>
           <Landing modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
           <Main modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
-        </>
+        </div>
       ),
     },
     {
@@ -84,6 +86,7 @@ const App = ({ modeToggleFunc, modeToggle }) => {
       ) : (
         <div className={`${toggleMode ? "dark" : "light"}`}>
           <Navbar modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
+
           <Routes>
             {routes.map((route, index) => (
               <Route key={index} path={route.path} element={route.element} />

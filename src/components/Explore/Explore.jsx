@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Data } from "../../Data";
 import classes from "./Explore.module.css";
+import Card from "../Card/Card";
 
 export default function Explore({ modeToggle, modeToggleFunc }) {
   const [currentPage, setCurrentPage] = useState(
@@ -9,6 +10,8 @@ export default function Explore({ modeToggle, modeToggleFunc }) {
   const itemsPerPage = 24; // Number of items to display per page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  // const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
+
   const isDark = modeToggle ? "dark_mode" : "light_mode";
 
   const handlePageChange = (pageNumber) => {
