@@ -1,4 +1,5 @@
 export const Data = [
+  "uzmakh",
   "thevirengarg_1",
   "Jacinth-Mahanta_1",
   "Jacinth-Mahanta_2",
