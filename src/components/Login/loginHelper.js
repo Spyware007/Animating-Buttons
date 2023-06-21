@@ -99,11 +99,10 @@ export const fetchGithubData = async (
   setGithubSocialAccounts
 ) => {
   //   const githubId = user?.providerData[0]?.uid || user;
-  const githubId = user;
-  console.log(githubId);
+  const githubId = user.providerData[0].uid;
   try {
     const response = await axios.get(
-      `https://api.github.com/user/${githubId.username}`
+      `https://api.github.com/user/${githubId}`
     );
     console.log(response);
     const {
