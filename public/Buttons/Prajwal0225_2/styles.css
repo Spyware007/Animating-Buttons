@@ -1,0 +1,22 @@
+.btn-3d-2 {
+    position: relative;
+    width: 125px;
+    height: 125px;
+    border-radius: 100px;
+    margin-top: 80px;
+    margin-left: 90px;
+    background-color: #FFC300;
+    color: white;
+    font-size: 25px;
+    border: 1px solid black;
+    box-shadow: 0 12px 0 black;
+}
+
+.btn-3d-2:hover {
+    background-color: #E6B325;
+}
+
+.btn-3d-2:active {
+    top: 10px;
+    box-shadow: 0 3px 0 black;
+}
