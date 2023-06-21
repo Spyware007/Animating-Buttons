@@ -823,7 +823,7 @@ export const Data = [
   "Roshnijeewani3457",
   "0xabdulkhalid_9",
   "Durgesh4993_2",
-  "Kalivarapubindusree_3"
+  "Kalivarapubindusree_3",
   "Kalivarapubindusree_2",
   "Kalivarapubindusree_1",
   "Kalivarapubindusree_2",
@@ -842,8 +842,8 @@ export const Data = [
   "yaswika0311",
   "shruuti321_2",
   "yaswika0311",
-  "shruuti321_2"
-  "yaswika0311"
+  "shruuti321_2",
+  "yaswika0311",
   "Kalivarapubindusree_1",
   "dwivedishrey",
   "richaroy7",
