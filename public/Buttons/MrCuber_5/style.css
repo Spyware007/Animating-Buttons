@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 95vh;
+}
+button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.5em 0.8em 1.2em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(0deg, rgba(77,54,208,1) 0%, rgba(132,116,254,1) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #4d36d0be;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+  }
+  button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #4d36d0be;
+    cursor: pointer;
+  }
+  button:active {
+    box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
+  }
