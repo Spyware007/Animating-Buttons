@@ -97,6 +97,7 @@ export const Data = [
   "SankalpaFernando",
   "shraddha761_13",
   "shraddha761_9",
+  "Killer2OP_7",
   "Vidip-Ghosh",
   "PranavKale03",
   "jemma-mg",
@@ -441,4 +442,3 @@ export const Data = [
    "lakhan06_6",
    "lakhan06_7"
 ];
-
