@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+:root{
+  --background:#5252d4;
+}
+body{
+  background: var(--background);
+  display:flex;
+  overflow:hidden;
+  height:100vh;
+  width:100vw;
+  justify-content:center;
+  align-items:center;
+}
+.btn-primary{
+  position:relative;
+  width:8rem;
+  overflow:hidden;
+  height:2.8rem;
+  background:#ffffff00;
+  color:white;
+  font-family:oswald;
+  font-size:16px;
+  letter-spacing:2px;
+  border:1px solid white;
+}
+.btn-primary>span {
+    font-style: normal;
+    display: inline-block;
+    padding-left: 1px;
+    padding-right: 1px;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+ .btn-primary>span:hover {
+     transform: translate3d(0, -6px, 0);
+  }
+.btn-primary:hover{
+  cursor:pointer;
+  color:var(--background);
+}
+.btn-primary:after {
+    content: "";
+    animation-direction:forwards;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    height: 150%;
+    background: #FFF;
+    pointer-events: none;
+    transform: translate3d(0, 40px, 0);
+    transition: all 0.3s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+.btn-primary:hover:after {
+  transform: translate3d(0px,0px,0px);
+}
+.btn-primary:focus {
+  color:#ffffffaa;
+  border-width:2px;
+  border-color:#ffffff6a;
+  transform: scale(0.99);
+}
+.btn-primary:focus:after {
+  transform: translate3d(180px,0px,0px);
+  opacity:10%;
+}
