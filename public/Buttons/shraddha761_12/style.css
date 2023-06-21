@@ -1,0 +1,162 @@
+.add-to-cart {
+    --color: #000;
+    --background: #fff;
+    --drop: #38E739;
+    --background-s: 1;
+    --text-o: 1;
+    --text-x: 10px;
+    --bottle-x: -40%;
+    --bottle-y: -60px;
+    --bottle-s: .4;
+    --bottle-r: 0deg;
+    --bottle-o: 0;
+    --cart-x: -57px;
+    --cart-y: -2px;
+    --cart-r: 0deg;
+    --cart-s: 0.8;
+    --check-y: 0px;
+    --check-s: 0;
+    --check-offset: 8.5px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    outline: none;
+    background: none;
+    border: none;
+    padding: 12px 0;
+    margin: 0;
+    width: 142px;
+    color: var(--color);
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    font: inherit;
+  }
+  .add-to-cart.clipped {
+    -webkit-clip-path: polygon(0 -80px, 100% -80px, 100% 80px, 0 80px);
+            clip-path: polygon(0 -80px, 100% -80px, 100% 80px, 0 80px);
+  }
+  .add-to-cart .background,
+  .add-to-cart .cart,
+  .add-to-cart .check {
+    position: absolute;
+    pointer-events: none;
+  }
+  .add-to-cart .background {
+    left: 0;
+    top: -4px;
+    right: 0;
+    bottom: 0;
+    display: block;
+    fill: var(--background);
+    transform: scale(var(--background-s)) translateZ(0);
+  }
+  .add-to-cart span {
+    position: relative;
+    z-index: 1;
+    line-height: 18px;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: var(--text-o);
+    transform: translateX(var(--text-x)) translateZ(0);
+  }
+  .add-to-cart .drop {
+    position: absolute;
+    z-index: 1;
+    left: 70px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--drop);
+  }
+  .add-to-cart .cart {
+    z-index: 2;
+    bottom: 11px;
+    left: calc(50% - 2px);
+    transform-origin: 10px 17px;
+    transform: translate(var(--cart-x), var(--cart-y)) scale(var(--cart-s)) rotate(var(--cart-r)) translateZ(0);
+  }
+  .add-to-cart .cart svg {
+    display: block;
+    width: 24px;
+    height: 19px;
+    stroke: var(--color);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    position: relative;
+    z-index: 1;
+    transform: translateZ(0);
+  }
+  .add-to-cart .cart img {
+    display: block;
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    opacity: var(--bottle-o);
+    transform-origin: 50% 100%;
+    transform: translate(var(--bottle-x), var(--bottle-y)) scale(var(--bottle-s)) rotate(var(--bottle-r)) translateZ(0);
+  }
+  .add-to-cart .check {
+    bottom: 0;
+    left: 50%;
+    padding: 2px;
+    background: var(--background);
+    border-radius: 50%;
+    transform: translate(-50%, var(--check-y)) scale(var(--check-s)) translateZ(0);
+  }
+  .add-to-cart .check svg {
+    display: block;
+    width: 10px;
+    height: 10px;
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--color);
+    stroke-dasharray: 8.5px;
+    stroke-dashoffset: var(--check-offset);
+  }
+  
+  html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  * {
+    box-sizing: inherit;
+  }
+  *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    font-family: "Inter", Arial;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+  }
+  body .dribbble {
+    position: fixed;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+  }
+  body .dribbble img {
+    display: block;
+    height: 28px;
+  }
+  body .twitter {
+    position: fixed;
+    display: block;
+    right: 64px;
+    bottom: 14px;
+  }
+  body .twitter svg {
+    width: 32px;
+    height: 32px;
+    fill: #1da1f2;
+  }

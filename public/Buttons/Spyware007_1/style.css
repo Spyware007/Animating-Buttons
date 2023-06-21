@@ -10,6 +10,12 @@ body {
   height: 100vh;
   background: #0f9d58;
 }
+.LinkedIN{
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  border-radius: 8px;
+}
 .outer {
   width: 100vw;
   display: flex;
