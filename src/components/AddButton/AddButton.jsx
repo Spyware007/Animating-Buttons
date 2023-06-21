@@ -30,8 +30,14 @@ const AddButton = () => {
 
 
   const saveButtonToFirestore = async () => {
+    const user = auth.currentUser;
+    if (!user) {
+      alert('Please log in to add a button.');
+      return;
+    }
+  
     const buttonCollectionRef = collection(db, 'buttons');
-
+  
     const buttonData = {
       html,
       css,
@@ -40,34 +46,25 @@ const AddButton = () => {
       githubUsername: '',
       displayName: '',
       likedUsers: [],
-
     };
-
+  
     try {
-      const user = auth.currentUser;
+      const githubId = user.providerData.find((provider) => provider.providerId === 'github.com').uid;
+      const response = await axios.get(`https://api.github.com/user/${githubId}`);
+      console.log(response);
+      const { login } = response.data;
+      buttonData.username = login;
 
-      if (user) {
-        const githubId = user.providerData.find((provider) => provider.providerId === 'github.com').uid;
-        const response = await axios.get(`https://api.github.com/user/${githubId}`);
-        console.log(response);
-        const { login } = response.data;
-        buttonData.githubUsername = login;
-
-        const displayName = user.displayName || '';
-        buttonData.displayName = displayName;
-      }
-
+  
       const docRef = await addDoc(buttonCollectionRef, buttonData);
       console.log('Button document saved with ID:', docRef.id);
-
-
-
+  
       window.location.reload();
-
     } catch (error) {
       console.error('Error adding button document:', error);
     }
   };
+  
 
 
 
@@ -100,4 +97,3 @@ const AddButton = () => {
 };
 
 export default AddButton;
-
