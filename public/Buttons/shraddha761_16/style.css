@@ -1,0 +1,301 @@
+.pay-button {
+    --c-color: #000;
+    --c-background: #20D8F9;
+    --c-light: #FCBB33;
+    --c-light-shine: linear-gradient(90deg, rgba(252, 187, 51, 0.9), rgba(252, 187, 51, 0));
+    --c-base: #0D6E9D;
+    --c-wheel: #0D6E9D;
+    --c-wheel-inner: #004e71;
+    --c-wheel-dot: #fff;
+    --c-back: #F2F6FE;
+    --c-back-inner: #2790C3;
+    --c-front: #F2F6FE;
+    --c-front-shadow: #CDD1D9;
+    --c-window: #000;
+    --rotate: 0deg;
+    --y: 0px;
+    --scale: 1;
+    --default-o: 1;
+    --success-o: 0;
+    --success-offset: 16px;
+    --truck-y: 0px;
+    --truck-base-x: 16px;
+    --truck-wrapper-y: 70px;
+    --light-opacity: 0;
+    padding: 15px 0;
+    width: 260px;
+    border-radius: 27px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    border: none;
+    outline: none;
+    background: var(--c-background);
+    color: var(--c-color);
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+     appearance: none; 
+    -webkit-tap-highlight-color: transparent;
+    transform-style: preserve-3d;
+    transform: translateY(var(--y)) rotateX(var(--rotate)) scale(var(--scale)) translateZ(0);
+  }
+  .pay-button:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: var(--c-background);
+    height: 4px;
+    border-radius: 2px;
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+    transform-origin: 0 100%;
+    transform: rotateX(90deg);
+  }
+  .pay-button .default,
+  .pay-button .success {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    opacity: var(--o, var(--default-o));
+  }
+  .pay-button .success {
+    --o: var(--success-o);
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+  }
+  .pay-button .success svg {
+    width: 16px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: top;
+    fill: none;
+    margin: 5px 0 0 8px;
+    stroke: var(--c-color);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: var(--success-offset);
+  }
+  .pay-button .truck-wrapper {
+    position: absolute;
+    pointer-events: none;
+    top: -140px;
+    left: -100px;
+    right: -40px;
+    bottom: 0px;
+    overflow: hidden;
+    transform: translateY(var(--truck-wrapper-y)) rotateX(90deg);
+    -webkit-mask-image: linear-gradient(to left, transparent 0%, black 60px, black);
+    mask-image: linear-gradient(to left, transparent 0%, black 60px, black);
+  }
+  .pay-button .truck-wrapper .truck {
+    position: absolute;
+    top: 24px;
+    left: 100px;
+    width: 72px;
+    height: 60px;
+    transform: translate3d(var(--truck-base-x), calc(var(--truck-y)), 0);
+  }
+  .pay-button .truck-wrapper .truck:before, .pay-button .truck-wrapper .truck:after {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    left: var(--l, 25px);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: inset 0 0 0 3px var(--c-wheel), inset 0 0 0 6px var(--c-wheel-inner);
+    background: var(--c-wheel-dot);
+    transform: translateY(calc(var(--truck-y) * -1)) translateZ(0);
+  }
+  .pay-button .truck-wrapper .truck:after {
+    --l: 85px;
+  }
+  .pay-button .truck-wrapper .truck .wheel,
+  .pay-button .truck-wrapper .truck .wheel:before {
+    position: absolute;
+    bottom: var(--b, -9px);
+    left: var(--l, 6px);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--c-wheel);
+    transform: translateZ(0);
+  }
+  .pay-button .truck-wrapper .truck .wheel {
+    transform: translateY(calc(var(--truck-y) * -1)) translateZ(0);
+  }
+  .pay-button .truck-wrapper .truck .wheel:before {
+    --l: 60px;
+    --b: 0;
+    content: "";
+  }
+  .pay-button .truck-wrapper .truck .light {
+    position: absolute;
+    right: -41px;
+    bottom: 3px;
+    width: 4px;
+    height: 3px;
+    border-radius: 1px 0 0 1px;
+    background: var(--c-light);
+  }
+  .pay-button .truck-wrapper .truck .light:before, .pay-button .truck-wrapper .truck .light:after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: -6px;
+    display: block;
+    width: 40px;
+    height: 19px;
+    background: var(--c-light-shine);
+    opacity: var(--light-opacity);
+    -webkit-clip-path: polygon(0 6px, 100% 0, 100% 80%, 0 9px);
+            clip-path: polygon(0 6px, 100% 0, 100% 80%, 0 9px);
+  }
+  .pay-button .truck-wrapper .truck .light:after {
+    left: -8px;
+    -webkit-clip-path: polygon(11px 4px, 100% 0, 100% 80%, 11px 11px);
+            clip-path: polygon(11px 4px, 100% 0, 100% 80%, 11px 11px);
+  }
+  .pay-button .truck-wrapper .truck .front,
+  .pay-button .truck-wrapper .truck .back,
+  .pay-button .truck-wrapper .truck .box {
+    position: absolute;
+  }
+  .pay-button .truck-wrapper .truck .back {
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 75px;
+    height: 45px;
+    border-radius: 3px 3px 0 0;
+    background: var(--c-back-inner);
+  }
+  .pay-button .truck-wrapper .truck .back:before, .pay-button .truck-wrapper .truck .back:after {
+    content: "";
+    position: absolute;
+  }
+  .pay-button .truck-wrapper .truck .back:before {
+    left: 17px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    border-radius: 0 2px 0 0;
+    background: var(--c-back);
+  }
+  .pay-button .truck-wrapper .truck .back:after {
+    border-radius: 2px;
+    width: 116px;
+    height: 4px;
+    left: -2px;
+    bottom: -4px;
+    background: var(--c-base);
+  }
+  .pay-button .truck-wrapper .truck .back .shadow {
+    height: 44px;
+    width: 14px;
+    position: absolute;
+    top: 0;
+    left: 3px;
+    z-index: 3;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+    background: rgba(0, 0, 0, 0.15);
+  }
+  .pay-button .truck-wrapper .truck .back svg {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    left: 38px;
+    top: 10px;
+  }
+  .pay-button .truck-wrapper .truck .back svg.icon {
+    top: 30px;
+    right: 20px;
+    z-index: 2;
+    left: auto;
+  }
+  .pay-button .truck-wrapper .truck .front {
+    left: 75px;
+    bottom: 0;
+    height: 33px;
+    width: 37px;
+    -webkit-clip-path: polygon(55% 0, 72% 44%, 100% 58%, 100% 100%, 0 100%, 0 0);
+            clip-path: polygon(55% 0, 72% 44%, 100% 58%, 100% 100%, 0 100%, 0 0);
+    background: linear-gradient(84deg, var(--c-front-shadow) 0%, var(--c-front-shadow) 10%, var(--c-front) 12%, var(--c-front) 100%);
+  }
+  .pay-button .truck-wrapper .truck .front:before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 12px;
+    left: 11px;
+    top: 3px;
+    -webkit-clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
+    background: var(--c-window);
+  }
+  
+  .shorticons {
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    line-height: 32px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    text-decoration: none;
+    transform: translateX(-50%);
+  }
+  
+  html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  * {
+    box-sizing: inherit;
+  }
+  *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    font-family: "Poppins", Arial;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+  }
+  body .dribbble {
+    position: fixed;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+  }
+  body .dribbble img {
+    display: block;
+    height: 28px;
+  }
+  body .twitter {
+    position: fixed;
+    display: block;
+    right: 64px;
+    bottom: 14px;
+  }
+  body .twitter svg {
+    width: 32px;
+    height: 32px;
+    fill: #1da1f2;
+  }
