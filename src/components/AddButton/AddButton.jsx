@@ -27,8 +27,13 @@ const AddButton = () => {
   }, [html, css, js]);
 
   const saveButtonToFirestore = async () => {
-    const buttonCollectionRef = collection(db, "buttons");
-
+    const user = auth.currentUser;
+    if (!user) {
+      alert('Please log in to add a button.');
+      return;
+    }
+  
+    const buttonCollectionRef = collection(db, 'buttons');
     const buttonData = {
       html,
       css,
@@ -38,7 +43,7 @@ const AddButton = () => {
       displayName: "",
       likedUsers: [],
     };
-
+  
     try {
       const user = auth.currentUser;
 
@@ -56,14 +61,14 @@ const AddButton = () => {
         const displayName = user.displayName || "";
         buttonData.displayName = displayName;
       }
-
       const docRef = await addDoc(buttonCollectionRef, buttonData);
-      console.log("Button document saved with ID:", docRef.id);
+      console.log('Button document saved with ID:', docRef.id);
       window.location.reload();
     } catch (error) {
       console.error("Error adding button document:", error);
     }
   };
+  
 
   return (
     <div className={classes.editor_container}>
