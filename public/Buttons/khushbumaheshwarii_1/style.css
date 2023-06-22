@@ -1,0 +1,207 @@
+body {
+    background: #2e394d;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  *:before, *:after {
+    content: "";
+    position: absolute;
+  }
+  
+  input {
+    height: 40px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 40px;
+  }
+  
+.toggle-wrapper {
+    flex: 1 1 calc(100% / 3);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  @media (max-width: 960px) {
+    .toggle-wrapper {
+      flex: 1 1 calc(100% / 2);
+    }
+  }
+  @media (max-width: 700px) {
+    .toggle-wrapper {
+      flex: 1 1 100%;
+    }
+  }
+  .toggle-wrapper:nth-child(1) {
+    background: #dec387;
+  }
+  .toggle-wrapper:nth-child(2) {
+    background: #de8797;
+  }
+  .toggle-wrapper:nth-child(3) {
+    background: #87aade;
+  }
+  .toggle-wrapper:nth-child(4) {
+    background: #c5de87;
+  }
+  .toggle-wrapper:nth-child(5) {
+    background: #87ded2;
+  }
+  .toggle-wrapper:nth-child(6) {
+    background: #c487de;
+  }
+  .toggle-wrapper:nth-child(7) {
+    background: #de8787;
+  }
+  .toggle-wrapper:nth-child(7) .toggle {
+    transform: translate(-40px, 40px);
+  }
+  .toggle-wrapper:nth-child(8) {
+    background: #decf87;
+  }
+  .toggle-wrapper:nth-child(8) .toggle {
+    transform: translate(-40px, 40px);
+  }
+  
+  .name {
+    width: 80%;
+    position: absolute;
+    font: 500 14px "Rubik", sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    bottom: 15px;
+    right: 15px;
+    text-align: right;
+  }
+  
+  .toggle {
+    position: relative;
+    display: inline-block;
+  }
+  
+  label.toggle-item {
+    width: 7em;
+    background: #2e394d;
+    height: 3em;
+    display: inline-block;
+    border-radius: 50px;
+    margin: 40px;
+    position: relative;
+    transition: all 0.3s ease;
+    transform-origin: 20% center;
+    cursor: pointer;
+  }
+  label.toggle-item:before {
+    display: block;
+    transition: all 0.2s ease;
+    width: 2.3em;
+    height: 2.3em;
+    top: 0.25em;
+    left: 0.25em;
+    border-radius: 2em;
+    border: 2px solid #88cf8f;
+    transition: 0.3s ease;
+  }
+
+
+
+  .dog-rollover label:before {
+    content: none;
+  }
+  .dog-rollover label .dog {
+    display: inline-block;
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    top: 0.25em;
+    left: 0.2em;
+    transition: 0.6s ease;
+  }
+  .dog-rollover label .eyes {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #222;
+    border-radius: 50%;
+    transform: translate(8px, 14px);
+    box-shadow: 16px 0 0 #222, 22px -4px 0 12px #e4ac04;
+  }
+  .dog-rollover label .ear {
+    width: 18px;
+    height: 20px;
+    position: absolute;
+    left: -4px;
+    bottom: 80%;
+    background: #f9bb00;
+    margin-bottom: -5px;
+    border-radius: 50% 50% 0 0/100% 100% 0 0;
+    box-shadow: inset 4px 0 0 0px #ffffff, inset -4px 0 0 0px #ffffff;
+    transform: rotate(-40deg);
+  }
+  .dog-rollover label .ear.right {
+    transform: rotate(60deg) scaleX(-1);
+    left: auto;
+    transform-origin: center bottom;
+    transition: 0.4s ease-in-out;
+    right: 0px;
+  }
+  .dog-rollover label .face {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    position: absolute;
+    background: #fff;
+    z-index: 8;
+  }
+  .dog-rollover label .mouth {
+    position: absolute;
+    background: #222;
+    width: 14px;
+    height: 7px;
+    left: 50%;
+    margin-left: -7px;
+    bottom: 12px;
+    border-radius: 2px 2px 20px 20px;
+    bottom: 8px;
+    transform: scale(0);
+    transition: 0.1s ease;
+  }
+  .dog-rollover label .mouth:before {
+    width: 8px;
+    height: 8px;
+    background: #ec788d;
+    border-radius: 0 0 50% 50%;
+    transform: translate(3px, 5px);
+  }
+  .dog-rollover label:before {
+    border-color: white;
+    background: white;
+  }
+  
+  #doggo:checked ~ .cup {
+    animation: 0.2s linear cup 1s forwards;
+  }
+  #doggo:checked + label .dog {
+    left: 68px;
+    transform: rotate(360deg);
+  }
+  #doggo:checked + label .mouth {
+    transform: scale(1);
+    transition-delay: 0.7s;
+  }
+  #doggo:checked + label .ear.right {
+    transform: scaleX(-1) rotate(-35deg);
+    transition-delay: 0.6s;
+  }
