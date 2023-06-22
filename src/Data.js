@@ -858,7 +858,6 @@ export const Data = [
   "yaswika0311",
   "shruuti321_2"
   "yaswika0311"
-  "Kalivarapubindusree_1",
   "dwivedishrey",
   "richaroy7",
   "HimanshuNarware_4",
@@ -877,6 +876,6 @@ export const Data = [
    "lakhan06_5",
    "lakhan06_6",
    "lakhan06_7",
-   "lakhan06_8"
+   "lakhan06_8",
+  "0xabdulkhalid_17"
 ];
-
