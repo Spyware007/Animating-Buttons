@@ -5,6 +5,8 @@
 
 
 export const Data = [
+  "zul132_1",
+  "zul132_2",
   "0xabdulkhalid_1",
   "0xabdulkhalid_10",
   "0xabdulkhalid_11",
@@ -444,4 +446,3 @@ export const Data = [
   "srujana-16_2",
   "srujana-16"
 ];
-
