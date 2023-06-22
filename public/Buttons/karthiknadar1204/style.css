@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0faff;
+}
+
+.button{
+    position: relative;
+    padding: 10px 22px;
+    background: #7d2ae8;
+    border-radius: 6px;
+    color:#fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.button:active{
+    transform: scale(0.96);
+}
+
+.button::before,
+.button::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
+    height: 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+
+.button.animate::before{
+    top: -70%;
+    background-image: radial-gradient(circle,#7d2ae8 20%,transparent 20%),
+    radial-gradient(circle,transparent 20% ,#7d2ae8 20%,transparent 30%),
+    radial-gradient(circle,#7d2ae8 20%,transparent 20%),
+    radial-gradient(circle,transparent 10% ,#7d2ae8 15%,transparent 20%),
+    radial-gradient(circle,#7d2ae8 20%,transparent 20%),
+    radial-gradient(circle,#7d2ae8 20%,transparent 20%),
+    radial-gradient(circle,#7d2ae8 20%,transparent 20%),
+    radial-gradient(circle,#7d2ae8 20%,transparent 20%)
+    ;
+    background-size:10% 10%,20% 20%,15% 15%,20% 20%,18% 18%,10% 10%,15% 15%,18% 18% ;
+    background-position: 5% 90%,10% 90%,10% 90%,15% 90%,25% 90%,25% 90%,40% 90%,55% 90%,70% 90%;
+    animation: topBubbles 0.6s ease-in-out forwards;
+}
+
+@keyframes topBubbles{
+    50%{
+        background-position: 0% 80%, 0% 20%,10% 40%,20% 0%, 30% 30%,22% 50%,50% 50%,65% 20%,90% 30%;
+    }
+    100%{
+        background-position: 0% 70%,0% 10%,10% 30%,20% -10%,30% 20%,22% 40%,50% 40%,65% 10%,90% 20%;
+        background-size: 0% 0%, 0% 0%,0% 0%,0% 0%, 0% 0%, 0% 0% ;
+    }
+}
+
+.button.animate::after{
+    bottom: -70%;
+    background-image: radial-gradient(circle,#7d2ae8 20%,transparent 20%),
+    radial-gradient(circle,transparent 10% ,#7d2ae8 15%,transparent 20%),
+    radial-gradient(circle,#7d2ae8 20%,transparent 20%),
+    radial-gradient(circle,#7d2ae8 20%,transparent 20%),
+    radial-gradient(circle,#7d2ae8 20%,transparent 20%),
+    radial-gradient(circle,#7d2ae8 20%,transparent 20%),
+    radial-gradient(circle,#7d2ae8 20%,transparent 20%)
+    ;
+    background-size: 15% 15%,20% 20%,18% 18%,20% 20%,15% 15%,20% 20%,18% 18% ;
+    background-position: 10% 0%,30% 10%,55% 0%,70% 0%,85% 0%,70% 0%,70% 0%;
+    animation: bottomBubbles 0.6s ease-in-out forwards;
+}
+
+@keyframes bottomBubbles{
+    50%{
+        background-position: 0% 80%,20% 80%,45% 60%,60% 100%,75% 70%,95% 60%,105% 0%;
+    }
+    100%{
+        background-position: 0% 90%,20% 90%,45% 70%,60% 110%,75% 80%,95% 70%,110% 10%;
+        background-size: 0% 0%, 0% 0%,0% 0%,0% 0%, 0% 0%, 0% 0% ;
+
+    }
+}
+
+
