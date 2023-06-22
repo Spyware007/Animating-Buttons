@@ -12,8 +12,7 @@ button {
     letter-spacing: 1px;
     border-radius: 25px;
     display: block;
-    margin: auto;
-    margin-top: 100px;
+    margin: 125px auto;
     cursor: pointer;
 }
 
