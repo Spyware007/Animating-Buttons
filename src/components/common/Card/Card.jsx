@@ -17,9 +17,10 @@ const Card = ({ autoid, button }) => {
     const fetchUser = async () => {
       try {
         if (button.githubUsername) {
+          console.log(button.githubUsername);
           const q = query(
             collection(db, "users"),
-            where("username", "==", button.githubUsername)
+            where("githubUsername", "==", button.githubUsername)
           );
           const querySnapshot = await getDocs(q);
 
