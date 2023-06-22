@@ -1,0 +1,163 @@
+:root {
+  --color: var(--yellow-5);
+  --shadow: var(--yellow-8);
+  --glare: hsl(0 0% 100% / 0.75);
+  --font-size: var(--font-size-fluid-3);
+  --transition: 0.2s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: 'Google Sans', sans-serif, system-ui;
+  background: var(--gray-9);
+}
+
+a {
+  --padding: var(--size-2);
+  padding: var(--padding);
+  border-radius: var(--size-4);
+  text-decoration: none;
+  color: transparent;
+  position: relative;
+  transition: background 0.2s;
+}
+
+a:hover {
+  background: var(--gray-8);
+}
+
+span {
+  display: inline-block;
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: var(--font-weight-9);
+  transition: all 0.2s;
+  text-decoration: none;
+  text-shadow:
+    calc(var(--hover) * (var(--font-size) * -0)) calc(var(--hover) * (var(--font-size) * 0)) var(--shadow),
+    calc(var(--hover) * (var(--font-size) * -0.02)) calc(var(--hover) * (var(--font-size) * 0.02)) var(--shadow),
+    calc(var(--hover) * (var(--font-size) * -0.04)) calc(var(--hover) * (var(--font-size) * 0.04)) var(--shadow),
+    calc(var(--hover) * (var(--font-size) * -0.06)) calc(var(--hover) * (var(--font-size) * 0.06)) var(--shadow),
+    calc(var(--hover) * (var(--font-size) * -0.08)) calc(var(--hover) * (var(--font-size) * 0.08)) var(--shadow),
+    calc(var(--hover) * (var(--font-size) * -0.10)) calc(var(--hover) * (var(--font-size) * 0.10)) var(--shadow);
+/*     calc(var(--hover) * -2px) calc(var(--hover) * 2px) var(--shadow),
+    calc(var(--hover) * -3px) calc(var(--hover) * 3px) var(--shadow),
+    calc(var(--hover) * -4px) calc(var(--hover) * 4px) var(--shadow), */
+/*     calc(var(--hover) * -5px) calc(var(--hover) * 5px) var(--shadow); */
+  transform: translate(calc(var(--hover) * (var(--font-size) * 0.10)), calc(var(--hover) * (var(--font-size) * -0.10)));
+}
+
+span:last-of-type {
+  position: absolute;
+  inset: var(--padding);
+  background: linear-gradient(
+    108deg,
+    transparent 0 55%,
+    var(--glare) 55% 60%,
+    transparent 60% 70%,
+    var(--glare) 70% 85%,
+    transparent 85%
+  ) calc(var(--pos) * -200%) 0% / 200% 100%, var(--color);
+  -webkit-background-clip: text;
+  color: transparent;
+  z-index: 2;
+  text-shadow: none;
+  transform: translate(calc(var(--hover) * (var(--font-size) * 0.10)), calc(var(--hover) * (var(--font-size) * -0.10)));
+}
+
+span:last-of-type {
+  transition: transform 0.2s, background-position 0s;
+}
+
+a:hover span:last-of-type {
+  transition: transform 0.2s, background-position calc(var(--hover) * 1.5s) calc(var(--hover) * 0.25s);
+}
+
+a {
+  --hover: 0.4;
+  --pos: 0;
+}
+
+a:hover {
+  --hover: 1;
+  --pos: 1;
+}
+
+a:active {
+  --hover: 0;
+}
+
+a:active span:last-of-type {
+  --hover: 0;
+  --pos: 1;
+}
+
+a svg {
+	position: absolute;
+	z-index: 3;
+	width: calc(var(--font-size) * 0.5);
+	aspect-ratio: 1;
+}
+
+a svg path {
+	fill: var(--glare);
+}
+
+/* Animation for sparkles */
+
+a:hover svg {
+	animation: sparkle 0.75s calc((var(--delay-step) * var(--d)) * 1s) both;
+}
+
+@keyframes sparkle {
+	50% {
+		transform: translate(-50%, -50%) scale(var(--s, 1));
+	}
+}
+
+a svg {
+	--delay-step: 0.15;
+	top: calc(var(--y, 50) * 1%);
+	left:  calc(var(--x, 0) * 1%);
+	transform: translate(-50%, -50%) scale(0);
+}
+
+a svg:nth-of-type(1) {
+	--x: 0;
+	--y: 20;
+	--s: 1.1;
+	--d: 1;
+}
+
+a svg:nth-of-type(2) {
+	--x: 15;
+	--y: 80;
+	--s: 1.25;
+	--d: 2;
+}
+
+a svg:nth-of-type(3) {
+	--x: 45;
+	--y: 40;
+	--s: 1.1;
+	--d: 3;
+}
+
+a svg:nth-of-type(4) {
+	--x: 75;
+	--y: 60;
+	--s: 0.9;
+	--d: 2;
+}
+
+a svg:nth-of-type(5) {
+	--x: 100;
+	--y: 30;
+	--s: 0.8;
+	--d: 4;
+}

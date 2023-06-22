@@ -11,8 +11,7 @@ button {
     font-weight: bold;
     letter-spacing: 1px;
     display: block;
-    margin: auto;
-    margin-top: 100px;
+    margin: 125px auto;
     cursor: pointer;
 }
 
