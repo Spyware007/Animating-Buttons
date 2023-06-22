@@ -17,7 +17,6 @@
   all: unset;
   width: 280px;
   height: 280px;
-  /* border: 1px solid #8b8b8b; */
   box-shadow: 0px 4px 20px 0px #00000040;
   box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
     0 30px 60px -30px rgba(0, 0, 0, 0.3),
@@ -32,7 +31,7 @@
 .contributor_info {
   width: 300px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-top: 20px;
 }

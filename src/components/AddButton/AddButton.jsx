@@ -63,19 +63,24 @@ const AddButton = () => {
     };
 
     try {
-      const githubId = user.providerData.find(
-        (provider) => provider.providerId === "github.com"
-      ).uid;
-      const response = await axios.get(
-        `https://api.github.com/user/${githubId}`
-      );
-      console.log(response);
-      const { login } = response.data;
-      buttonData.username = login;
+      const user = auth.currentUser;
 
+      if (user) {
+        const githubId = user.providerData.find(
+          (provider) => provider.providerId === "github.com"
+        ).uid;
+        const response = await axios.get(
+          `https://api.github.com/user/${githubId}`
+        );
+        console.log(response);
+        const { login } = response.data;
+        buttonData.githubUsername = login;
+
+        const displayName = user.displayName || "";
+        buttonData.displayName = displayName;
+      }
       const docRef = await addDoc(buttonCollectionRef, buttonData);
       console.log("Button document saved with ID:", docRef.id);
-
       window.location.reload();
     } catch (error) {
       console.error("Error adding button document:", error);
