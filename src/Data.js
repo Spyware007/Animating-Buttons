@@ -1120,9 +1120,7 @@ export const Data = [
   "sabhisharma-ise",
   "NMN03_1",
   "0xabdulkhalid_10",
-
   "vedangc03",
-
   "Roshnijeewani3457"
   "Roshnijeewani3457",
   'vishalvinayram',
@@ -1133,12 +1131,7 @@ export const Data = [
   "Vidip-Ghosh",
   "Somesh-Mallewar",
   "vedangc03_1",
-
-  "Samriddhi15_4"
-
-
   "Samriddhi15_4",
-
   "VardaPanchal005_1",
   "VardaPanchal005_2",
 
@@ -1158,18 +1151,13 @@ export const Data = [
   "Spyware007_1",
   "prasadghadage",
   "Gopal2021025",
-
   "mridul588_1",
   'vishalvinayram',
   "Roshnijeewani3457",
   "0xabdulkhalid_9",
   "Durgesh4993_2",
   "Kalivarapubindusree_2",
-
   "Kalivarapubindusree_1"
-
-  "Kalivarapubindusree_1",
-  "Kalivarapubindusree_1",
   "dwivedishrey",
   "richaroy7",
   "HimanshuNarware_4",
@@ -1180,6 +1168,7 @@ export const Data = [
   "khushbumaheshwarii_3",
    "khushbumaheshwarii_4",
    "khushbumaheshwarii_7",
+   "khushbumaheshwarii_8",
    "Geeta_1123",
    "lakhan06_3",
    "lakhan06_4",
@@ -1191,6 +1180,5 @@ export const Data = [
    "lakhan06_9",
   "0xabdulkhalid_17",
   "lakhan06_10"
-   "lakhan06_5"
 ];
 
