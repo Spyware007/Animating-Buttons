@@ -10,8 +10,13 @@ export default function Socials({ modeToggle }) {
     "Buttons/Spyware007_3/index.html",
   ];
 
-  const iFrameComponent = iframeSrc.map((source) => (
-    <iframe title={source} className={classes.socials} src={source}></iframe>
+  const iFrameComponent = iframeSrc.map((source, id) => (
+    <iframe
+      key={id}
+      title={source}
+      className={classes.socials}
+      src={source}
+    ></iframe>
   ));
 
   return (
