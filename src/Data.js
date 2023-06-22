@@ -1,17 +1,13 @@
 /** @format */
 
 export const Data = [
-
-
-
+  "MukulsinghRajpurohit",
   "SONA-1111",
   "SONA-1111_1",
   "abansal15",
   "Jacinth-Mahanta",
   "Jacinth-Mahanta2",
   "Jacinth-Mahanta3",
-
-
   "sabhisharma-ise_1",
   // "HardikMisri",
   "AbhaBarge",
@@ -380,7 +376,6 @@ export const Data = [
   'vedangc03',
   'Roshnijeewani3457',
   'HimanshuNarware_3',
-
   "thevirengarg_1",
   "Jacinth-Mahanta_1",
   "Jacinth-Mahanta_2",
@@ -395,11 +390,7 @@ export const Data = [
   "Jacinth-Mahanta_11",
   "Jacinth-Mahanta_12",
   "Jacinth-Mahanta_13",
-
-
   "Jacinth-Mahanta_14",
-
-
   // "HardikMisri",
   "Harshu467",
   "AbhaBarge",
@@ -412,33 +403,19 @@ export const Data = [
   "Shreyans2004",
   "Shreyans2004_2",
   "Shreyans2004_3",
-
-
-
   "Shreyans2004_4" ,
-
   "abhi03ruchi",
   "Aryan5464",
-
-
   "Archit-Kohli",
-
-
   "Shreyans2004_4" ,
-
   "Shreyans2004_4",
-
   "abhi03ruchi",
   "Anmol-Baranwal",
   "rahulraj22",
   "Aryan5464",
   "Archit-Kohli",
-
-
   "Ayush9951",
-
   "Shreyans2004_2",
-
   "Guli93",
   "adarshgupta404",
   "amrit2611",
@@ -460,9 +437,7 @@ export const Data = [
   "AFPedreros",
   "akpaswan67",
   "akshaysoni10_1",
-
   "akshaysoni10_2",
-
   "AmanPathan",
   "ANMOLYADAV1402",
   "annakimdev",
@@ -479,9 +454,7 @@ export const Data = [
   "bharat70_2",
   "bharat70_3",
   "Bhushan_Kale",
-
   "Bhushan_Kale_1",
-
   "Bhushan_Kale_2",
   "Binitha12",
   "bibhanshu01",
@@ -786,14 +759,11 @@ export const Data = [
   "0xabdulkhalid_11",
   "Illaf",
   "Bhushan_Kale_1",
-
   "rahulraj22",
   "Aryan5464",
   "RashakDude",
   "Illaf",
-
   "Bhushan_Kale_1",
-
   "BhartiNagpure",
   "adjascently",
   "riddhitech",
@@ -876,7 +846,6 @@ export const Data = [
   "NMN03",
   "FallenEcstasy",
   "GauriBhand023",
-  
   "geeky-hypertext629",
   "Gopal2021025",
   "Gurnav224",
@@ -886,7 +855,6 @@ export const Data = [
   "iamparas0",
   "huzaifa9999",
   "huzaifa9999_1",
-
   "jatin-code21",
   "HimanshuNarware",
   "25Vaishnavibarge17_2",
@@ -912,24 +880,18 @@ export const Data = [
   "Vidip-Ghosh",
   "PranavKale03",
   "jemma-mg",
-
   "jemma-mg_1",
   "jonathanmani",
-
   "JPV2207",
   "JPV2207_1",
-
   "KalebArmbrust",
   "KhushiKhandelwal610",
   "Killer2OP_1",
-
   "Killer2OP_2",
   "Killer2OP_3",
   "Killer2OP_4",
   "Killer2OP_5",
-
   "Killer2OP_6",
-
   "kishanlalchoudhary",
   "KishorBhagat",
   "KratikJain10",
@@ -951,7 +913,6 @@ export const Data = [
   "OneAutumLeaf",
   "OneAutumLeaf_1",
   "onkar2921",
-
   "SakshiRawat13",
   "sidmadke",
   "shraddha761_7",
@@ -969,7 +930,6 @@ export const Data = [
   "varunshankar07_3",
   "Jacinth-Mahanta_4",
   "Shubhammete",
-
   "onkar2921_1",
   "SurbhiMotwani23",
   "varunshankar07_4",
@@ -987,7 +947,6 @@ export const Data = [
   "Jacinth-Mahanta_2",
   "abhinav-m22_1",
   "PriyankaTamhankar01_1",
-
   "PriyankaTamhankar01_2",
   "PriyankaTamhankar01_3",
   "RaghavGoel01",
@@ -1005,7 +964,6 @@ export const Data = [
   "Sapna127",
   "Sapna127_1",
   "Sapna127_2",
-
   "Shreyans2004",
   "varunshankar07_2",
   "Jacinth-Mahanta_5",
@@ -1040,14 +998,12 @@ export const Data = [
   "0xabdulkhalid_15",
   "akpaswan67",
   "Explorer003_2",
-
   "Sapna127_3",
   "dwivedishrey",
   "akshaysoni10_1",
   "sushilverma002-2",
   "Sapna127",
   "Sapna127_4",
-
   "Sapna127_5",
   "Sapna127_6",
   "Sapna127_7",
@@ -1073,10 +1029,8 @@ export const Data = [
   "sidmadke",
   "sks8784",
   "sonalgupta01",
-
   "Hypertext-Workaholics_1",
   "NomikaGajula_2",
-
   "sonalgupta01_1",
   "Aayush895",
   "Vaibhav-xt",
@@ -1099,24 +1053,17 @@ export const Data = [
   "sarthak713_2",
   "ShauryaK-28_2",
   "Spyware007_5",
-
-
-
   "Spyware007_6",
   "Sriparno08",
   "sumeetk10",
-
   "Sushilverma002",
   "THEGAMECHANGER416",
-
-
   "Spyware007_6",
   "Sriparno08",
   "Sriparno08_1",
   "sumeetk10",
   "Sushilverma002",
   "THEGAMECHANGER416",
-
   "tanishq_khandelwal01",
   "tanishq_khandelwal_02",
   "tanmay-S12",
@@ -1124,8 +1071,6 @@ export const Data = [
   "Vaibhav-xt",
   "Vaishnavi2701-mk_1",
   "Vaishnavi2701-mk_2",
-
-
   "Sriparno08_1",
   "parag477",
   "MrCuber",
@@ -1152,11 +1097,9 @@ export const Data = [
   "aishjahan",
   "Bhushan_Kale_2",
   "shell-raiser",
-
   "Vaishnavi2701-mk_3",
   "op-amateur",
   "Vaishnavi2701-mk_4",
-
   "Vaishnavi2701-mk_5",
   "Vaishnavi2701-mk_6",
   "Vishakha0411",
@@ -1182,8 +1125,6 @@ export const Data = [
   "shraddha761_1",
   "Ks103",
   "SyedImtiyazAli",
-
-
   "Princeton21",
   "MrCuber_4",
   "sathasivamthirumoorthi",
@@ -1206,7 +1147,6 @@ export const Data = [
   "AbhaBarge",
   "abhi03ruchi",
   "animex007_2",
-
   "shraddha761_2",
   "25Vaishnavibarge17",
   "shineishukla",
@@ -1218,12 +1158,8 @@ export const Data = [
   "yaswika0311",
   "krishi1211",
   "SyedImtiyazAli",
-
   "mohitparmar1",
-
   "CS50X-RGB",
-
-
   "aniketburman014",
   "adjascently",
   "SyedImtiyazAli",
@@ -1294,7 +1230,6 @@ export const Data = [
   "DipHire",
   "tanmay-S12",
   "0xabdulkhalid_1",
-
   "Samriddhi15_1",
   "Dhruv-Srivastava",
   "Samriddhi15_2",
@@ -1386,6 +1321,7 @@ export const Data = [
   "vedangc03",
   "Roshnijeewani3457",
   "Roshnijeewani3457",
+  "Roshnijeewani3457",
   'vishalvinayram',
   "Roshnijeewani3457", 
   "silky-modi22",  
@@ -1422,6 +1358,7 @@ export const Data = [
   "Kalivarapubindusree_1",
   "Kalivarapubindusree_1",
   "Kalivarapubindusree_1",
+  "Kalivarapubindusree_1",
   "dwivedishrey",
   "richaroy7",
   "HimanshuNarware_4",
@@ -1432,6 +1369,7 @@ export const Data = [
   "khushbumaheshwarii_3",
    "khushbumaheshwarii_4",
    "khushbumaheshwarii_7",
+   "khushbumaheshwarii_8",
    "Geeta_1123",
    "lakhan06_3",
    "lakhan06_4",
@@ -1446,6 +1384,7 @@ export const Data = [
   "0xabdulkhalid_17",
   "lakhan06_10",
   "lakhan06_10",
-   "lakhan06_5"
+   "lakhan06_5",
+  "lakhan06_10"
 ];
 
