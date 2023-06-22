@@ -126,7 +126,7 @@ const UserProfile = () => {
             // .filter((d) => d.toLowerCase().includes(query.toLowerCase()))
             .map((d, i) => {
               console.log(d);
-              return <Card key={i} button={d} />;
+              return <Card key={i} autoid={d.autoid} button={d} />;
             })}
         </div>
       </div>

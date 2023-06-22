@@ -83,7 +83,7 @@ export const saveUserDataToFirestore = async (
       const newUser = {
         bio: bio,
         socials: socialAccounts,
-        username: username,
+        githubUsername: username,
         profilePictureUrl: profilePictureUrl,
       };
       await setDoc(newDocRef, newUser);
@@ -101,9 +101,7 @@ export const fetchGithubData = async (
   //   const githubId = user?.providerData[0]?.uid || user;
   const githubId = user.providerData[0].uid;
   try {
-    const response = await axios.get(
-      `https://api.github.com/user/${githubId}`
-    );
+    const response = await axios.get(`https://api.github.com/user/${githubId}`);
     console.log(response);
     const {
       bio,
