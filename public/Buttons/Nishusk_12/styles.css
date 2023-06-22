@@ -1,0 +1,198 @@
+:root {
+    /*    color type */
+    --main_color: #08bad1;
+    --sub_color: #080033;
+  }
+  
+  body {
+    background: #fff;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 256px;
+    height: 72px;
+    overflow: hidden;
+    font-family: "Homenaje", sans-serif;
+  }
+  .button::before,
+  .button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform-origin: bottom right;
+    transition: all 0.6s ease;
+  }
+  .button::before {
+    width: 16px;
+    height: 56px;
+    transform: skewY(45deg);
+    background: var(--main_color);
+  }
+  .button::after {
+    width: 240px;
+    height: 16px;
+    transform: skewX(45deg);
+    background: var(--sub_color);
+  }
+  .button__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 56px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: solid 2px #000;
+    background: #fff;
+    transition: all 0.6s ease;
+  }
+  .button__inner::before,
+  .button__inner::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: calc(100% - 80px - 8px);
+    height: 8px;
+    transition: all 1.2s linear;
+  }
+  .button__inner::before {
+    z-index: 2;
+    background: var(--main_color);
+    width: 0;
+  }
+  .button__inner::after {
+    z-index: 1;
+    background: var(--sub_color);
+    width: 80px;
+  }
+  .button__text {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: calc(100% - 88px);
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 11px;
+    font-size: 22px;
+    line-height: 22px;
+    color: #000;
+    letter-spacing: 2px;
+  }
+  .button__text::before {
+    content: "CLICK HERE!";
+    position: absolute;
+    top: 0;
+    left: 12px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .button__text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--main_color);
+  }
+  .button__counter {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    box-sizing: border-box;
+    border-right: solid 1px #000;
+    border-bottom: solid 1px #000;
+  }
+  .button__counter::before,
+  .button__counter::after {
+    content: "0";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -16px;
+    width: 12px;
+    height: 24px;
+    font-size: 24px;
+    color: #000;
+    animation: count_reset 0.01s linear;
+    animation-fill-mode: forwards;
+  }
+  .button__counter::before {
+    right: 4px;
+  }
+  .button__counter::after {
+    right: 16px;
+  }
+  .button:hover::before {
+    width: 0;
+  }
+  .button:hover::after {
+    height: 0;
+  }
+  .button:hover .button__inner {
+    top: 16px;
+    left: 16px;
+  }
+  .button:hover .button__inner::before {
+    width: 80px;
+  }
+  .button:hover .button__counter::before,
+  .button:hover .button__counter::after {
+    animation-name: count;
+    animation-timing-function: steps(10);
+    animation-fill-mode: forwards;
+  }
+  .button:hover .button__counter::before {
+    animation-iteration-count: 10;
+    animation-duration: 0.12s;
+  }
+  .button:hover .button__counter::after {
+    animation-duration: 1.2s;
+  }
+  @keyframes count {
+    10% {
+      content: "0";
+    }
+    20% {
+      content: "1";
+    }
+    30% {
+      content: "2";
+    }
+    40% {
+      content: "3";
+    }
+    50% {
+      content: "4";
+    }
+    60% {
+      content: "5";
+    }
+    70% {
+      content: "6";
+    }
+    80% {
+      content: "7";
+    }
+    90% {
+      content: "8";
+    }
+    100% {
+      content: "9";
+    }
+  }
+  
