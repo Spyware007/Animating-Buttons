@@ -52,8 +52,32 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
             <img src={modeToggle ? sun : moon} alt="" />
           </button>
         </ul>
-
-        <a
+        <div className={classes.button_container}>
+          <NavLink to="/add">
+            <button className={classes.add}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  fill="currentColor"
+                  d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
+                ></path>
+              </svg>
+              <span className={classes.addbtn}>Create</span>
+            </button>
+          </NavLink>
+          <button className={classes.github}>
+            <div className={classes.image_container}>
+              <img className={classes.image} src={github} alt="Creator" />
+            </div>
+            <span className={classes.username}>Sign in With GitHub</span>
+          </button>
+        </div>
+        {/* <a
           href="https://github.com/Spyware007/Animating-Buttons"
           target="__blank"
           className={classes.github}
@@ -62,7 +86,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
             <img className={classes.image} src={github} alt="Creator" />
           </div>
           <span className={classes.username}>Spyware007</span>
-        </a>
+        </a> */}
       </nav>
     </>
   );
