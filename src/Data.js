@@ -1188,26 +1188,18 @@ export const Data = [
   "sarthak713_1",
   "khushbumaheshwarii_3",
    "khushbumaheshwarii_4",
+   "khushbumaheshwarii_7",
    "Geeta_1123",
    "lakhan06_3",
    "lakhan06_4",
-
    "lakhan06_5",
    "lakhan06_6",
-
    "lakhan06_7"
-
-
-
-   "lakhan06_7",
    "lakhan06_8",
    "Durgesh4993_3"
    "lakhan06_9",
   "0xabdulkhalid_17",
   "lakhan06_10"
-
    "lakhan06_5"
-
-
 ];
 
