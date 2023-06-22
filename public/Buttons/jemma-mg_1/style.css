@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    animation: tilt 1.8s ease-in-out infinite;
+}
+.btn-text {
+    transform: skew(5deg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: #00005F;
+    letter-spacing: 3px;
+}
+
+@keyframes tilt {
+    0%, 100%{
+        background-image: linear-gradient(-25deg, rgb(76, 159, 210),rgb(31, 176, 220),rgb(41, 193, 223),rgb(110, 229, 242));
+        box-shadow: -1px 4px 2px 2px rgba(8, 36, 59, 0.5);
+        transform: rotate(-5deg) skew(-5deg);
+    }
+    50%{
+        background-image: linear-gradient(25deg,rgb(82, 174, 231),rgb(31, 176, 220),rgb(41, 193, 223),rgb(110, 229, 242));
+        box-shadow: 10px 10px 5px 1px rgba(8, 36, 59,0.25);
+        transform: rotate(5deg) skew(5deg);
+    }
+}
+
+.btn:hover{
+    animation: none;
+    background-image: linear-gradient(25deg,rgb(82, 174, 231),rgb(31, 176, 220),rgb(41, 193, 223),rgb(110, 229, 242));
+    box-shadow: 10px 10px 5px 1px rgba(8, 36, 59,0.25);
+    transform: rotate(5deg) skew(5deg);
+}
+
+.btn:active{
+    animation: none;
+    background-image: linear-gradient(25deg,rgb(82, 174, 231),rgb(31, 176, 220),rgb(41, 193, 223),rgb(110, 229, 242));
+    box-shadow: 1px 4px 5px 4px rgba(8, 36, 59,0.25);
+    transform: rotate(0deg) skew(5deg);
+}
+
+.btn-text:active {
+    transform: skew(0deg);
+}

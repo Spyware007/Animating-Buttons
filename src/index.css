@@ -1,15 +1,18 @@
 :root {
   /* light theme */
   --light-bg-color: #fff;
-  --light-text-color: #151515;
+  --light-text-color: #1a1a1a;
 
   /* dark theme */
-  --dark-bg-color: #151515;
+  --dark-bg-color: #2e2e2e;
   --dark-text-color: #fff;
 }
 
-html,body {
+html,
+body {
   height: 100%;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -26,14 +29,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
   font-family: "Montserrat", sans-serif;
-}
-
-.app {
-  position: relative;
-  display: block;
-  height: 100%;
-  width: 100%;
-  padding-bottom: 50px;
 }
 
 .light {
