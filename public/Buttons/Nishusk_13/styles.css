@@ -1,0 +1,47 @@
+body {
+    background: #DEDCDD;
+    text-align: center;
+    padding: 60px;
+  }
+  *, body {
+    font-family: 'Grand Hotel', sans-serif;
+  }
+  
+  /* replace the button styles below to your custom class */
+  button {
+    height: 80px;
+    width: 240px;
+    font-size: 32px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+  }
+  button:hover {
+    color: #ED8C82;
+    text-shadow: 1px 1px 2px #F6A7A7, 0 0 1.45px #ED8C82, 0 0 1.45px rgba(0, 0, 0, 0.25);
+  /*   box-shadow: 3px 3px 8px #ED8C82, -3px -3px 8px #ED8C82; */
+  }
+  
+  /* Elevated */
+  
+  .elevated {
+    background: linear-gradient(0.45turn, #D4D2D2, #EEECED);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.35), -3px -3px 8px rgba(255, 255, 255, 0.6);
+  }
+  .elevated:active {
+    color: #e1e1e1;
+    background: linear-gradient(90turn, #F6C7CC, #D2837D);
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.35), inset -2px -3px 5px rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Rouned */
+  .rounded {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+  .rounded:active {
+    color: #e1e1e1;
+    background: linear-gradient(90turn, #F6C7CC, #D2837D);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+  
+  
