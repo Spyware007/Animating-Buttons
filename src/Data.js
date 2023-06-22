@@ -846,7 +846,7 @@ export const Data = [
   "Kalivarapubindusree_2",
   "Kalivarapubindusree_1",
   "Kalivarapubindusree_2",
-  "Kalivarapubindusree_1,
+  "Kalivarapubindusree_1",
   "SurbhiMotwani23",
   "HimanshuNarware_5",
   "Kalivarapubindusree_1",
