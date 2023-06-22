@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "file-saver": "^2.0.5",
     "firebase": "^9.22.2",
     "jszip": "^3.10.1",
     "react": "^18.2.0",

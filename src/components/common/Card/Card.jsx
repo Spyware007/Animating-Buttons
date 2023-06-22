@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import LikeButton from "../LikeButton/LikeButton";
 
-import downloadZip from "../../../Functions/DownloadZip";
+import download from "../../../Functions/DownloadZip";
 // import ViewsIcon from "../ViewsIcon/ViewsIcon";
 
 const Card = ({ autoid, button }) => {
@@ -16,11 +16,10 @@ const Card = ({ autoid, button }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        if (button.githubUsername) {
-          console.log(button.githubUsername);
+        if (user) {
           const q = query(
             collection(db, "users"),
-            where("githubUsername", "==", button.githubUsername)
+            where("githubUsername", "==", user)
           );
           const querySnapshot = await getDocs(q);
 
@@ -35,7 +34,7 @@ const Card = ({ autoid, button }) => {
       }
     };
     fetchUser();
-  }, [button.githubUsername]);
+  }, [user]);
 
   return (
     <div className={classes.card_container}>
@@ -60,10 +59,7 @@ const Card = ({ autoid, button }) => {
               alt="User"
             />
           </div>
-          <Link
-            to={`/user/${button.githubUsername}`}
-            className={classes.contributor_name}
-          >
+          <Link to={`/user/${user}`} className={classes.contributor_name}>
             {user}
           </Link>
         </div>
@@ -71,7 +67,9 @@ const Card = ({ autoid, button }) => {
           <Link to={`/show/${autoid}`}>
             <Button show={true} />
           </Link>
-          <Button onClick={() => downloadZip(button)} />
+          <Button
+            onClick={() => download(button.css, button.html, button.js, user)}
+          />
         </div>
       </div>
 
