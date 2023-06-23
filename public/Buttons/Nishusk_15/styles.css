@@ -1,74 +1,48 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #00203fff;
-}
-
-.main {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.button {
-    background-color: #3bba9c;
-    color: #00203fff;
-    width: 20vw;
-    height: 6vw;
-    text-align: center;
-    line-height: 6vw;
-    transform: skew(25deg) rotate(-20deg);
-    transition: 0.5s;
-    font-size: 2vw;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    text-shadow: 0px 0px 10px #adefd1ff;
-    box-shadow: -1.5vw 1.5vw 1vw #000000;
-    border-bottom: 1px solid #00203fff;
-    cursor: pointer;
-    letter-spacing: 0.2vw;
-    position: relative;
-}
-
-.button::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1.5vw;
-    background-color: #2abf9f;
-    bottom: -1.5vw;
-    left: -0.75vw;
-    transform: skew(-45deg);
-}
-
-.button::before {
-    content: "";
-    position: absolute;
-    background-color: #2abf9f;
-    width: 1.5vw;
+  }
+  
+  html, body {
     height: 100%;
-    left: -1.5vw;
-    top: 0.75vw;
-    transform: skewY(-45deg);
-    border-bottom: 1px solid #00203fff;
-}
-
-.button:hover {
-    transform: translateY(-30px) skew(25deg) rotate(-20deg);
-    box-shadow: -60px 40px 100px #589bf7;
-}
-
-.button:active {
-    color: #1f7f90;
-    transform: translateY(-10px) skew(25deg) rotate(-20deg);
-}
+  }
+  
+  .container {
+    display: flex;
+    height: 100%;
+  }
+  
+  .container .button {
+    margin: auto;
+  }
+  
+  .button {
+    background-color: unset;
+    color: white;
+    border: 0;
+    position: relative;
+    font-size: 24px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .button::before {
+    content: "";
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border: 2px solid black;
+    transform-origin: center;
+    transform: perspective(10px) translate(10px) scale(1.2) rotate3d(1, 1, 1, 9deg);
+    transition: 0.2s cubic-bezier(0, 1.5, 1, 1);
+  }
+  
+  .button:hover {
+    color: black;
+  }
+  .button:hover::before {
+    background-color: white;
+    /*transform: perspective(10px) translate(-8px) scale(1.2) rotate3d(1, 1, 1, 352deg);*/
+    transform: perspective(10px) translate(-8px) scale(1.2) rotate3d(1, 1, 1, -8deg);
+    transition: 0.2s cubic-bezier(0, 1.5, 1, 1);
+  }
