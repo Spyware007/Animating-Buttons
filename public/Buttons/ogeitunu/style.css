@@ -1,0 +1,35 @@
+
+  body{
+    background-color: rgb(127, 225, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 30;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #f44336;
+    color: #fcf4f4;
+    cursor: pointer;
+    animation: bounce 0.4s infinite alternate;
+    text-decoration: none;
+  }
+  
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+  }
+  
+  .button:hover {
+    background-color: #ffa2c1;
+  }

@@ -1,18 +1,17 @@
 import { useState, useEffect } from "react";
 import { Loader } from "./components";
 import MainPage from "./MainPage";
-import { BrowserRouter } from "react-router-dom";
 
-const App = () => {
+const App = ({ modeToggleFunc, modeToggle }) => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 100);
+    }, 1000);
   }, []);
 
-  return <BrowserRouter>{loading ? <Loader /> : <MainPage />}</BrowserRouter>;
+  return <>{loading ? <Loader /> : <MainPage modeToggleFunc={modeToggle} />}</>;
 };
 
 export default App;
