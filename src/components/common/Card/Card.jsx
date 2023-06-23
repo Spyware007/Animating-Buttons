@@ -5,9 +5,20 @@ import classes from "./Card.module.css";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import LikeButton from "../LikeButton/LikeButton";
-
-import download from "../../../Functions/DownloadZip";
+import JSZip from "jszip";
+import { saveAs } from "file-saver";
 // import ViewsIcon from "../ViewsIcon/ViewsIcon";
+
+function download(css, html, js, name) {
+  const zip = new JSZip();
+  zip.file("style.css", css);
+  zip.file("index.html", html);
+  zip.file("app.js", js);
+
+  zip.generateAsync({ type: "blob" }).then((zipFile) => {
+    saveAs(zipFile, `${name} files.zip`);
+  });
+}
 
 const Card = ({ autoid, button }) => {
   const user = button.githubUsername;
