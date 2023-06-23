@@ -398,6 +398,7 @@ export const Data = [
   "rohitsinghind",
   "sabhisharma-ise",
   "sabhisharma-ise_1",
+  "sabhisharma-ise_3",
   "sagnik3788",
   "sanjay535",
   "sarthak713_1",
@@ -450,6 +451,7 @@ export const Data = [
   "thevirengarg_1",
   "uddinArsalan",
   "utkarshjaulkar",
+  "karthiknadar1204".
   "varunshankar07_1",
   "varunshankar07_2",
   "varunshankar07_3",
@@ -457,84 +459,6 @@ export const Data = [
   "varunshankar07_5",
   "vedangc03",
   "vedangc03_1",
-
-
-  "Samriddhi15_4"
-
-
-  "Samriddhi15_4",
-
-  "VardaPanchal005_1",
-  "VardaPanchal005_2",
-
-  "Shreyans2004_4",
-  "sudarshan-hub_2",
-  "shubham-2410_3",
-  "Ayush9951_1",
-  "lmalkam",
-  "Shreyans2004_3",
-  "HarshSharma0801",
-  "Spyware007_6",
-  "ShaikhHeeba07",
-  "Killer2OP_3",
-  "Sriparno08_2",
-  "raghav-lightweightcode",
-  "Killer2OP_4",
-  "Spyware007_1",
-  "prasadghadage",
-  "Gopal2021025",
-
-  "mridul588_1",
-  'vishalvinayram',
-  "Roshnijeewani3457",
-  "0xabdulkhalid_9",
-  "Durgesh4993_2",
-  "Kalivarapubindusree_2",
-
-  "Kalivarapubindusree_1"
-
-  "Kalivarapubindusree_1",
-  "Kalivarapubindusree_1",
-  "dwivedishrey",
-  "richaroy7",
-  "HimanshuNarware_4",
-  "dwivedishrey",
-  "0xabdulkhalid_18",
-  "Poonam-13_2",
-  "sarthak713_1",
-  "khushbumaheshwarii_3",
-   "khushbumaheshwarii_4",
-   "Geeta_1123",
-   "lakhan06_3",
-   "lakhan06_4",
-
-   "lakhan06_5",
-   "lakhan06_6",
-
-
-
-   "lakhan06_7"
-
-
-
-
-   "lakhan06_7",
-   "lakhan06_8",
-   "Durgesh4993_3"
-   "lakhan06_9",
-  "0xabdulkhalid_17",
-
-
-  "lakhan06_10",
-  "karthiknadar1204"
-
-  "lakhan06_10"
-
-
-   "lakhan06_5"
-
-
-
   "vishalkumarmahto",
   "vishalvinayram",
   "yaswika0311",
@@ -542,10 +466,5 @@ export const Data = [
   "lakhan06_13",
   "srujana-16",
   "srujana-16_2",
-
-  "srujana-16"
-
-
   "govardhan-26"
-
 ];
