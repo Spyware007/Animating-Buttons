@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <button id="emojiButton">Click me!</button>
+    </div>
+
+    <script>
+        const emojis = ['😀', '😄', '😊', '👍', '🎉'];
+        const button = document.getElementById('emojiButton');
+        let intervalId;
+
+        button.addEventListener('click', function () {
+            clearInterval(intervalId); 
+            intervalId = setInterval(displayEmoji, 100);
+            setTimeout(stopDisplay, 1000);
+        });
+
+        function displayEmoji() {
+            const randomCount = Math.floor(Math.random() * emojis.length) + 1;
+
+            for (let i = 0; i < randomCount; i++) {
+                const emojiElement = document.createElement('span');
+                const randomIndex = Math.floor(Math.random() * emojis.length);
+                const emoji = emojis[randomIndex];
+                emojiElement.textContent = emoji;
+                emojiElement.style.position = 'absolute';
+                emojiElement.style.left = `${getRandomPosition(button.offsetWidth)}px`;
+                emojiElement.style.top = `${getRandomPosition(button.offsetHeight)}px`;
+                emojiElement.style.transform = `translate(-50%, -50%) rotate(${getRandomAngle()}deg)`;
+                button.appendChild(emojiElement);
+                animateEmoji(emojiElement);
+            }
+        }
+
+        function getRandomPosition(dimension) {
+            const halfDimension = dimension / 2;
+            const randomOffset = Math.floor(Math.random() * halfDimension) * (Math.random() > 0.5 ? 1 : -1);
+            return halfDimension + randomOffset;
+        }
+
+        function getRandomAngle() {
+            return Math.floor(Math.random() * 360);
+        }
+
+        function animateEmoji(emojiElement) {
+            const destinationX = getRandomPosition(button.offsetWidth);
+            const destinationY = getRandomPosition(button.offsetHeight);
+            const duration = Math.floor(Math.random() * 1000) + 500;
+            const delay = Math.floor(Math.random() * 500);
+
+            emojiElement.style.transition = `transform ${duration}ms linear ${delay}ms`;
+            emojiElement.style.transform = `translate(${destinationX}px, ${destinationY}px) rotate(${getRandomAngle()}deg)`;
+
+            setTimeout(function () {
+                emojiElement.remove();
+            }, duration + delay);
+        }
+
+        function stopDisplay() {
+            clearInterval(intervalId);
+        }
+    </script>
+</body>
+
+</html>
