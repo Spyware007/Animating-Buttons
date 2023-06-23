@@ -460,5 +460,5 @@ export const Data = [
   "lakhan06_13",
   "srujana-16",
   "srujana-16_2",
-  "govarghan-26"
+  "govardhan-26"
 ];
