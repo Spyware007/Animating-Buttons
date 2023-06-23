@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 40px;
+    background: #091921;
+}
+
+
+
+a{
+    position: absolute;
+    background: #091921;
+    color: #fff;
+    font-size: 2.3em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 30px 90px;
+    transition: 0.3s;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+
+/* a:hover{
+    letter-spacing: 0.25em;
+    color: #f00;
+    border-radius: 7.5px;
+    box-shadow: 0 0 10px #f00, 0 0 20px #f00, 0 0 30px #f00;
+} */
+
+
+i{
+    position: absolute;
+}
+.a::before{
+    position: absolute;
+    content: '';
+    height: 30px;
+    top: -15px;
+    left: -15px;
+    width: 30px;
+    background: #091921;
+    border: 3px solid #ff00aa;
+    z-index: 4;
+    transition: 0.3s;
+}
+.b::before{
+    position: absolute;
+    content: '';
+    height: 30px;
+    bottom: -15px;
+    right: -15px;
+    width: 30px;
+    background: #091921;
+    border: 3px solid #aa00ff;
+    z-index: 4;
+    transition: 0.3s cubic-bezier(0.78, 0.16, 0.18, 0.81);
+}
+
+a:hover{
+    letter-spacing: 0.5em;
+    border: none;
+    color: #ff00aa;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    text-shadow: 0 0 10px #aa00ff,0 0 20px #aa00ff,0 0 30px #aa00ff;
+
+}
+
+a:hover .a::before{
+    right: 50px;
+    box-shadow: 0 0 10px #ff00aa, 0 0 20px #ff00aa;
+    transform: rotate(45deg);
+}
+
+a:hover .b::before{
+    box-shadow: 0 0 10px #aa00ff, 0 0 20px #aa00ff;
+    /* right: 385px; */
+    transform: rotate(45deg);
+}
+
+.shadow::before{
+    content: '';
+    z-index: -2;
+    top: -5px;
+    left: -15px;
+    position: absolute;
+    background: transparent;
+    transition: 0.3s;
+    height: 130px;
+    width: 330px;
+    filter: blur(15px);
+    background: linear-gradient(to right, #ff00aa, #aa00ff);
+
+}
+
+.shadow{
+    position: absolute;
+    background: transparent;
+    height: 120px;
+    width: 300px;
+    z-index: -2;
+    transition: 0.3s cubic-bezier(0.78, 0.16, 0.18, 0.81);
+}
+
+.shadow::before:hover{
+    width: 330px;
+}

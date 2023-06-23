@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.main_container{
+    display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f2f2f;
+}
+
+button{
+    width: 270px;
+    height: 80px;
+    border: 0;
+    outline: none;
+    background: #2f2f2f;
+    color:#fff;
+    font-size: 22px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow:  0 6px 20px -5px rgba(180, 24, 37, 0.4);
+    position: relative;
+    overflow:hidden;
+    cursor: pointer;
+    border: 2px solid #ff2b75;
+}
+
+button:hover{
+    font-size: 30px;
+}
+.check-box{
+    width:80px;
+    height:80px;
+    border-radius:40px;
+    box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
+    position: absolute;
+    top:0;
+    right:-40px;
+    opacity: 0;
+}
+.check-box svg{
+    width: 40px;
+    margin: 20px;
+}
+svg path{
+    stroke-width: 3;
+    stroke: #fff;
+    stroke-dasharray: 34;
+    stroke-dashoffset: 34;
+    stroke-linecap: round;
+}
+
+.active{
+    background: #ff2b75;
+    transition: 1s;
+}
+
+.active .check-box{
+    right:0;
+    opacity: 1;
+    transition: 1s;
+}
+
+.active p{
+    margin-right: 100px;
+    transition: 1s;
+}
+
+.active svg path{
+    stroke-dashoffset: 0;
+    transition: 1s;
+    transition-delay: 1s;
+}

@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9b9bb;
+}
+
+.share-container {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-link {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: #171624;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  box-shadow: 3px 5px 10px rgba(23, 22, 36, 0.4);
+  overflow: hidden;
+}
+
+.share-link li {
+  opacity: 0;
+  color: #fff;
+  text-transform: uppercase;
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  margin-bottom: 2px;
+  padding: 7.5px 0 7.5px 20px;
+  cursor: pointer;
+}
+
+.share-link li img {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  transition: all 0.3s ease 1s;
+}
+
+.share-link.active li:nth-child(1) {
+  transition: all 0.3s ease 0.8s;
+}
+
+.share-link.active li:nth-child(2) {
+  transition: all 0.3s ease 1s;
+}
+
+.share-link.active li:nth-child(3) {
+  transition: all 0.3s ease 1.2s;
+}
+
+.share-link.active li:nth-child(4) {
+  transition: all 0.3s ease 1.4s;
+}
+
+.share-link.active li {
+  transition: all 0.5s ease 0.7s;
+  opacity: 1;
+  font-size: 13.5px;
+}
+
+.share-link.active {
+  width: 170px;
+  height: 170px;
+  border-radius: 15px;
+  transform: translate(-22%, -23%);
+  transition: all 0.5s ease 0.4s;
+  padding: 10px 0;
+}
+
+.social-link {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  background-color: #f34969;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 4px 4px 10px rgba(243, 73, 105, 0.7);
+}
+
+.social-link .send {
+  width: 50%;
+  margin-left: -3px;
+  margin-top: 2px;
+  position: absolute;
+  transition: transform 0.3s ease;
+  transition-delay: 0.2s;
+  animation: sendback 0.3s ease-in-out 0.5s;
+}
+
+.social-link .close {
+  width: 25%;
+  position: absolute;
+  transform: scale(0);
+  animation: rotate-reverse 0.4s ease;
+}
+
+.social-link.active {
+  transition-delay: 0.3s;
+  transform: translate(35%, 160%);
+}
+
+.social-link.active .send {
+  transition-delay: 0.5s;
+  transform: translate(100%, -100%);
+}
+
+.social-link.active .close {
+  transform: scale(1);
+  transition-delay: 0.7s;
+  animation: rotate 0.3s ease 0.7s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  100% {
+    transform: rotate(90deg) scale(1);
+  }
+}
+@keyframes rotate-reverse {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(-90deg) scale(0);
+  }
+}
