@@ -1,0 +1,72 @@
+body{
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.btn-3d-1 {
+  position: relative;
+  background: rgb(1, 26, 25);
+  border: none;
+  color: white;
+  padding: 15px 24px;
+  font-size: 1.4rem;
+  box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
+  outline: none;
+}
+
+ .btn-3d-1:hover {
+    background: hsl(16, 100%, 45%);
+  }
+
+  .btn-3d-1:active {
+    background: hsl(16, 100%, 40%);
+    top: 3px;
+    left: -3px;
+    box-shadow: -3px 3px 0 hsl(170, 89%, 15%);
+  }
+
+  .btn-3d-1::before {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+border: solid 6px transparent;
+border-right: solid 6px hsl(245, 88%, 17%);
+border-left-width: 0px;
+background: none;
+    top: 0px;
+    left: -5px;
+  }
+
+ .btn-3d-1::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    border: solid 6px transparent;
+    border-top: solid 6px hsl(223, 90%, 27%);
+    border-bottom-width: 0px;
+    background: none;
+    right: 0;
+    bottom: -6px;
+  }
+
+
+  .btn-3d-1:active::before {
+      border: solid 3px transparent;
+      border-right: solid 3px hsl(206, 72%, 40%);
+      border-left-width: 0px;
+      left: -2px;
+    }
+
+    .btn-3d-1:active::after {
+      border: solid 3px transparent;
+      border-top: solid 3px hsl(267, 80%, 23%);
+      border-bottom-width: 0px;
+      bottom: -3px;
+    }
