@@ -1,0 +1,192 @@
+.beer-like {
+    --primary: #6D58FF;
+    --secondary: #362A89;
+    --border: #D1D6EE;
+    --background: #fff;
+    --shadow: rgba(0, 13, 88, 0.1);
+    --shadow-light: rgba(0, 13, 88, 0.05);
+    --color-add: #fff;
+    --color-count: #646B8C;
+    position: relative;
+    outline: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--background);
+    box-shadow: 0 1px var(--blur, 4px) var(--shadow-light), 0 2px calc(var(--blur, 4px) * 2) var(--shadow);
+    cursor: pointer;
+    padding: 0;
+    
+    -webkit-tap-highlight-color: transparent;
+    transition: box-shadow 0.3s;
+  }
+  .beer-like:hover {
+    --blur: 7px;
+  }
+  .beer-like:active {
+    --blur: 3px;
+  }
+  .beer-like:before, .beer-like:after {
+    content: var(--content, attr(data-count));
+    display: block;
+    position: absolute;
+    right: 110%;
+    top: 50%;
+    font-family: inherit;
+    text-align: center;
+    font-weight: var(--fw, 500);
+    color: var(--c, var(--color-count));
+    font-size: var(--fs, 14px);
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    margin: -16px 0 0 0;
+  }
+  .beer-like:after {
+    --content: "+1";
+    --fw: bold;
+    --fs: 12px;
+    --c: var(--color-add);
+    border-radius: 50%;
+    background: var(--primary);
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  .beer-like .dot-primary,
+  .beer-like .dot-secondary {
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: inset 0 0 0 1px var(--inner, var(--primary));
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 4px;
+  }
+  .beer-like .dot-secondary {
+    --inner: var(--secondary);
+  }
+  .beer-like svg {
+    width: 30px;
+    height: 38px;
+    display: block;
+    fill: #fff;
+    z-index: 1;
+    stroke: var(--stroke, var(--primary));
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    position: absolute;
+    left: 35px;
+    top: 31px;
+    transform: scaleX(var(--scale-x, 1)) rotate(10deg) translate(var(--x, -11px), var(--y, 4px)) translateZ(0);
+  }
+  .beer-like svg.right {
+    --stroke: var(--secondary);
+    --scale-x: -1;
+    --y: -4px;
+  }
+  .beer-like.cheer:after {
+    -webkit-animation: count 1s ease;
+            animation: count 1s ease;
+  }
+  .beer-like.cheer svg {
+    -webkit-animation: cheer 1s ease;
+            animation: cheer 1s ease;
+  }
+  
+  @-webkit-keyframes count {
+    15% {
+      opacity: 1;
+      transform: scale(1.15) translateZ(0);
+    }
+    25% {
+      transform: scale(0.95) translateZ(0);
+    }
+    50% {
+      transform: scale(1) translateZ(0);
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-60px) translateZ(0);
+    }
+  }
+  
+  @keyframes count {
+    15% {
+      opacity: 1;
+      transform: scale(1.15) translateZ(0);
+    }
+    25% {
+      transform: scale(0.95) translateZ(0);
+    }
+    50% {
+      transform: scale(1) translateZ(0);
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-60px) translateZ(0);
+    }
+  }
+  @-webkit-keyframes cheer {
+    35% {
+      transform: scaleX(var(--scale-x, 1)) rotate(16deg) translate(-18px, var(--y, 4px)) translateZ(0);
+    }
+    55% {
+      transform: scaleX(var(--scale-x, 1)) rotate(6deg) translate(-9px, var(--y, 4px)) translateZ(0);
+    }
+  }
+  @keyframes cheer {
+    35% {
+      transform: scaleX(var(--scale-x, 1)) rotate(16deg) translate(-18px, var(--y, 4px)) translateZ(0);
+    }
+    55% {
+      transform: scaleX(var(--scale-x, 1)) rotate(6deg) translate(-9px, var(--y, 4px)) translateZ(0);
+    }
+  }
+  html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  * {
+    box-sizing: inherit;
+  }
+  *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    font-family: "Inter UI", "Inter", Arial;
+    justify-content: center;
+    align-items: center;
+    background: #FBFCFF;
+  }
+  body .dribbble {
+    position: fixed;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+  }
+  body .dribbble img {
+    display: block;
+    height: 28px;
+  }
+  body .twitter {
+    position: fixed;
+    display: block;
+    right: 64px;
+    bottom: 14px;
+  }
+  body .twitter svg {
+    width: 32px;
+    height: 32px;
+    fill: #1da1f2;
+  }

@@ -1,0 +1,22 @@
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #emojiButton {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    border: 0.5px solid whitesmoke;
+    background-color: transparent;
+    color: white;
+  }
+  
+body{
+    background: black;
+}  
