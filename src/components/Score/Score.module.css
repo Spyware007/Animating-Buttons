@@ -16,6 +16,7 @@
   width: 50%;
   gap: 20px;
   padding: 0 100px;
+  margin-bottom: 5rem;
 }
 
 .item:nth-child(1) .rank{
@@ -90,11 +91,30 @@
   padding-left: 1rem;
 }
 
+.category{
+
+  text-transform: uppercase;
+  letter-spacing:.2em;
+  /* background:#f7f7; */
+  text-align: center;
+
+}
+
+.list{
+  display: flex;
+}
+
 
 @media screen and (max-width: 1008px) {
   .leaderboard {
     padding: 0 20px;
     width: 100%;
+    flex-direction: column;
+  }
+
+  .list{
+    display: flex;
+    flex-direction: column;
   }
 
 
