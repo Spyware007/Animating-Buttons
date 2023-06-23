@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    background-color: #125170;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-size: 2rem;
+    padding: 20px 30px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    display: flex;
+    z-index: 2;
+}
+
+.button:hover {
+    color: #023100;
+}
+
+span {
+  width: 25%;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+  position: absolute;
+  bottom: -100%;
+  border-radius: 100px 100px 0 0;
+}
+
+span:nth-child(1) {
+  left: 0%;
+  transition: 0.1s ease-in-out;
+}
+
+span:nth-child(2) {
+  left: 25%;
+  transition: 0.1s ease-in-out 0.1s;
+}
+
+span:nth-child(3) {
+  left: 50%;
+  transition: 0.1s ease-in-out 0.2s;
+}
+
+span:nth-child(4) {
+  left: 75%;
+  transition: 0.1s ease-in-out 0.3s;
+}
+
+a:hover span {
+  bottom: 0;
+  transform: scale(2);  
+}

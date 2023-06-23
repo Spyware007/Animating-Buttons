@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'EB Garamond', serif;
+  background-color: rgb(232, 225, 217);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow {
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 18px;
+  /* padding in all direction */
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 6px;
+
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.shadow:active {
+  /* active => on clicking the button */
+  margin-top: 6px;
+  margin-left: 6px;
+  box-shadow: none;
+  /* this is how we can remove the box shadow as well */
+}

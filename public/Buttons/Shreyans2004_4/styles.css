@@ -1,0 +1,34 @@
+body{
+    height:48vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-size:18px;
+    background:linear-gradient(90deg,#F5F5DC 50%,#D2691E 50%);
+}
+button{
+    position: relative;
+    top:50px;
+    right:-20px;
+    height:200px;
+    width:200px;
+    border-radius: 200px ;
+    font-size:30px;
+    color:black;
+    background:linear-gradient(90deg,#F5F5DC 50%,#D2691E 50%);
+    box-shadow: black 10px 10px 10px;
+    transition: 0.5s ;
+}
+button:hover{
+    cursor: pointer;
+    background:linear-gradient(90deg,#D2691E 50%,#F5F5DC 50%); 
+    box-shadow: black 0px 0px 0px 0px ; 
+}
+i{
+    color:#DC143C;
+    
+}span{
+    color:#DC143C;
+    font-weight: 700;
+}
