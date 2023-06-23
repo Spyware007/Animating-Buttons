@@ -53,6 +53,14 @@ code {
   font-family: "SansationBold", sans-serif;
 }
 
+.app {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
 .light {
   background-color: var(--light-bg-color);
   color: var(--light-text-color);
