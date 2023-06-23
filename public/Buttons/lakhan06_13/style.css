@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f0ecfc;
+	background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+		-webkit-tap-highlight-color: transparent;
+}
+
+button {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	border: 0px solid #5b3f69;
+	background: #34283b;
+	transition: 200ms;
+}
+
+button span {
+	position: absolute;
+	transform: translateX(-50%) translateY(-50%);
+	font-family: 'Berkshire Swash', cursive;
+	font-size: 30px;
+	color: #f0ecfc;
+	transition: 500ms;
+}
+
+button::before, button::after {
+	content: '';
+	position: absolute;
+	margin-left: -75px;
+	margin-top: -25px;
+	width: 140px;
+	height: 40px;
+	z-index: -1;
+}
+
+button::before {
+	border: 5px solid #7e5791;
+	transition: 200ms;
+}
+
+button::after {
+	border: 5px solid #b37ccf;
+	transition: 500ms;
+}
+
+button:hover {
+	border: 5px solid #5b3f69;
+}
+
+button:hover span {
+	letter-spacing: 4px;
+	font-size: 20px;
+}
+
+button:hover::before {
+	width: 150px;
+	height: 50px;
+	margin-left: -80px;
+	margin-top: -30px;
+}
+
+button:hover::after {
+	width: 160px;
+	height: 60px;
+	margin-left: -85px;
+	margin-top: -35px;
+}
+
+button:focus {
+	outline: none;
+}
