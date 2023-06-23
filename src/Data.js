@@ -68,6 +68,7 @@ export const Data = [
   "CS50X-RGB",
   "Chandak-Keshav",
   "Chinmayjain08",
+  "Chinmayjain08_2",
   "Dhruv-Srivastava",
   "DipHire",
   "DipHire_2",
