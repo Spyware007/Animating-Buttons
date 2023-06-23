@@ -1,0 +1,61 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.rainbow-button
+{
+    position: relative;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    padding: 20px 50px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 5px;
+    background-size: 100%;
+    color: #fff;
+    overflow: hidden;
+}
+.rainbow-button::before
+{
+    content: ' ';
+    position: absolute;
+    display: block;
+    left: -10px;
+    top: 50%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    background-image: conic-gradient(
+        #fd00fc,
+        #fe9000,
+        #fff020,
+        #3edf4b,
+        #3363ff,
+        #b102b7,
+        #fd004c);
+    filter: blur(10px);
+    transform: translateY(-50%) rotate(0);
+    transition: transorm 0.3s;
+}
+.rainbow-button_title
+{
+    position: relative;
+    z-index: 2;
+}
+.rainbow-button:hover::before
+{
+    transform: translateY(-50%) rotate(180deg);
+}

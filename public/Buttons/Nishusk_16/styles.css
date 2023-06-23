@@ -1,77 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --background-page: #22ddce;
-  --pink: #ee5867;
-  --pink-light: #fff0f0;
-  --pink-dark: #ec3a50;
-  font-size: 10px;
-}
-
-html {
-  height: 100vh;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-  background: var(--background-page);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00203fff;
 }
 
-button {
-  font: 500 4rem 'Rubik', sans-serif;
-  cursor: pointer;
-  outline: none;
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.btn_south-face {
-  background: var(--pink);
-  position: relative;
-  width: 30rem;
-  height: 8rem;
-  border: none;
-  border-radius: 1rem;
-  transition: 0.2s;
+.button {
+    background-color: #3bba9c;
+    color: #00203fff;
+    width: 20vw;
+    height: 6vw;
+    text-align: center;
+    line-height: 6vw;
+    transform: skew(25deg) rotate(-20deg);
+    transition: 0.5s;
+    font-size: 2vw;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-shadow: 0px 0px 10px #adefd1ff;
+    box-shadow: -1.5vw 1.5vw 1vw #000000;
+    border-bottom: 1px solid #00203fff;
+    cursor: pointer;
+    letter-spacing: 0.2vw;
+    position: relative;
 }
 
-.btn-3d {
-  background: var(--pink-light);
-  color: #382b22;
-  position: absolute;
-  bottom: 2rem;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: inherit;
-  border-radius: inherit;
-  transition: background 0.2s cubic-bezier(0, 0, 0.58, 1),
-    bottom 0.2s cubic-bezier(0, 0, 0.58, 1);
+.button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5vw;
+    background-color: #2abf9f;
+    bottom: -1.5vw;
+    left: -0.75vw;
+    transform: skew(-45deg);
 }
 
-.btn-3d:hover {
-  background: #ffe5e5;
-  bottom: 1rem;
+.button::before {
+    content: "";
+    position: absolute;
+    background-color: #2abf9f;
+    width: 1.5vw;
+    height: 100%;
+    left: -1.5vw;
+    top: 0.75vw;
+    transform: skewY(-45deg);
+    border-bottom: 1px solid #00203fff;
 }
 
-.btn-3d:active {
-  background: #ffe5e5;
-  bottom: 0;
+.button:hover {
+    transform: translateY(-30px) skew(25deg) rotate(-20deg);
+    box-shadow: -60px 40px 100px #589bf7;
 }
 
-.btn-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
-  overflow: hidden;
+.button:active {
+    color: #1f7f90;
+    transform: translateY(-10px) skew(25deg) rotate(-20deg);
 }
