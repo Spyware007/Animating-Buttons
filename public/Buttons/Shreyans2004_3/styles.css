@@ -1,0 +1,29 @@
+body{
+    height:300px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    overflow: hidden;
+    background:linear-gradient(45deg,#900C3F 50%,#FFA500 50%);
+}
+body:hover{
+    background:linear-gradient(45deg,#FFA500 50%,#900C3F 50%);
+}
+
+button{
+    height:80px;
+    width:400px;
+  font-size:30px;
+  font-weight: bold;
+  border-radius: 30px;
+  background:linear-gradient(45deg,#900C3F 50%,#FFA500 50%);
+  /* border: 4px dashed red; */
+
+}
+button:hover{
+cursor: pointer;
+    transition:1s;
+    color:white;
+    background:linear-gradient(45deg,#FFA500 50%,#900C3F 50%);
+   
+}

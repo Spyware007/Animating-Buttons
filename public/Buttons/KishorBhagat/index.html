@@ -2,17 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Document</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
   </head>
   <body>
-    <button id="send" type="submit">
+    <button
+      id="send"
+      type="submit"
+    >
       <p id="btnText">Send</p>
       <i class="fa-solid fa-paper-plane"></i>
     </button>
@@ -25,7 +37,6 @@
         btnText.innerHTML = "Sent!";
         setTimeout(reset, 1500);
         function reset() {
-          console.log("Clicked");
           e.target.classList.remove("clicked");
           clearTimeout(reset);
         }
