@@ -61,7 +61,7 @@ const ShowCode = () => {
       try {
         const usersQuery = query(
           collection(db, "users"),
-          where("username", "==", user)
+          where("githubUsername", "==", user)
         );
         const usersSnap = await getDocs(usersQuery);
         if (!usersSnap.empty) {
