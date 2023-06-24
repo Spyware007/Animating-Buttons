@@ -44,7 +44,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <img className={classes.github} src={github} alt="github_link" />
+          <img className={classes.github} src={github} alt="github_link" /> 
         </a>
       </nav>
     </>

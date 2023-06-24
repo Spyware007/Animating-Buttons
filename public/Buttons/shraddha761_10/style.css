@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #3ED0DE;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content:center;
+    overflow: hidden;
+    }
+  
+    .container{
+    margin-right: 120px;
+    }
+  
+    #btn-top{
+    cursor: pointer;
+    }
+  
+    #like{
+    opacity: 0;
+    }
