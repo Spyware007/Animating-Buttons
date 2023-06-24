@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #102e37;
+}
+
+.video{
+    width: 800px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.pulse{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #0ef;
+    border-radius: 50%;
+    animation-name: pulse;
+}
+
+.pulse span{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+    opacity: .5;
+    animation: pulseAnimate 2.5s ease-out infinite;
+}
+
+@keyframes pulseAnimate{
+    0%{
+        transform: scale(.5);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(2);
+        opacity: .5;
+    }
+    100%{
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
