@@ -1,0 +1,21 @@
+body {
+    background: white;
+}
+
+button {
+    font-size: 16px;
+    padding: 15px;
+    width: 125px;
+    background: transparent;
+    border: 1px solid ;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: block;
+    margin: 125px auto;
+    cursor: pointer;
+}
+
+button:hover {
+    transition: all 0.1s ease-out;
+    transform: scale(1.1)
+}

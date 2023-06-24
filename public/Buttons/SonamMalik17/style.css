@@ -1,0 +1,18 @@
+button{
+    display:block;
+    margin:50vh auto;
+    padding : 5px 20px;
+    background:#95ff00;
+    border-style:none;
+    font-size:1.5rem;
+    font-weight:550;
+    border-radius : 20px;
+}
+button:hover{
+    background:#b1f373;
+    transition:transform .5s;
+    transform: translateY(-5px);
+    box-shadow:0 0 10px #100d0d;
+    color:rgb(23, 23, 23);
+    font-weight:450;
+}
