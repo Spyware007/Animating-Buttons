@@ -1982,6 +1982,10 @@ export const Data = [
    "lakhan06_5",
    "lakhan06_5",
    "lakhan06_6",
+
+   "lakhan06_7",
+   "HimanshuNarware_7"
+
    "lakhan06_7"
    "lakhan06_7",
    "lakhan06_8"
@@ -1995,4 +1999,5 @@ export const Data = [
   "Durgesh4993_4",
   "madhurafulkar",
   "Durgesh4993_4"
+
 ];
