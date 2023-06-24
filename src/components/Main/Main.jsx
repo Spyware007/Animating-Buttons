@@ -100,7 +100,9 @@ export default function Main({ modeToggle, modeToggleFunc }) {
           onChange={(e) => setQuery(e.target.value)}
         />
       </div>
-
+      <h1 style={{ textAlign: "center" }}>
+        Total number of Buttons added {Data.length}
+      </h1>
       <div className={classes.btns_container}>
         {currentItems
           .filter((d) => d.toLowerCase().includes(query.toLowerCase()))

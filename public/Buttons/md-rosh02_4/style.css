@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: consolas;
+    background-color: #000000;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submitbtn{
+    width: 320px;
+    height: 100px;
+    background-color: transparent;
+    border: 2px solid purple;
+    color: #f1f1f1;
+    font-size: 35px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: .3s ease-in-out;
+    letter-spacing: 3px;
+}
+
+.submitbtn:hover{
+    opacity: .9;
+    border: 2px solid white;
+    box-shadow:inset 0 0 20px rgb(182, 118, 241),
+    0 0 20px rgb(197, 115, 235);
+    letter-spacing: 14px;
+}
+
+.submitbtn.submiting{
+    height: 28px;
+    border: 2px solid white;
+    box-shadow:inset 0 0 20px rgb(182, 118, 241),
+    0 0 20px rgb(197, 115, 235);
+    letter-spacing: 14px;
+}
+
+.submitbtn.submiting::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #f1f1f1;
+    left: 4px;
+    top: 4px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: move 1s infinite ease-in-out;
+}
+
+@keyframes move{
+    50%{
+        opacity: 1;
+    }
+    to{
+        left: 296px;
+    }
+}

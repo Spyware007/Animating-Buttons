@@ -1,0 +1,100 @@
+
+        * {
+            padding: 0px;
+            margin:0px;
+            box-sizing:border-box;
+
+        }
+        body{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            height:100vh;
+            background-color:rgb(189,186,186);
+        }
+        .box {
+            width:400px;
+            height:150px;
+            border-radius:200px;
+            border:2px solid rgb(216,215,215);
+            overflow:hidden;
+            position:relative;
+            background:url("milky-way.jpg")center;
+            background-size: cover;
+            box-shadow:6px 6px 12px white,-6px -6px 12px white;
+            
+        }
+        .button{
+            position:absolute;
+            z-index:10;
+            z-index:10px;
+            width:130px;
+            height:126px;
+            margin-top:10px;
+            margin-left:10px;
+            border-radius:50%;
+            cursor:pointer;
+            background-color:rgba(243,241,241,.9);
+            transition:all 1s;
+        }
+        #so {
+            display:none;
+        }
+        #so:checked~.button{
+            transform:translateX(243px);
+            transition:all 1s;
+
+        }
+        .dayimage {
+            position:absolute;
+            width:400px;
+            height:150px;
+            z-index:9;
+            left:0px;
+            background:url("clouds.jpg")left;
+            background-size:cover;
+            opacity:1;
+            transition:all 1s;
+        }
+        #so:checked~.dayimage{
+            opacity:0;
+            transition:all 1s;
+        }
+        #sun {
+            position:absolute;
+            top:40px;
+            right:80px;
+            font-size:40px;
+            color:white;
+            transition:2s;
+            text-shadow:0px 0px 13px white;
+        }
+        #so:checked~.dayimage #sun {
+            transform:translatey(-80px);
+            transition:2s;
+
+        }
+        #moon{
+            position:absolute;
+            bottom:-50px;
+            left:100px;
+            font-size:40px;
+            color:white;
+            text-shadow:0px 0px 13px white;
+
+        }
+        #so:checked~#moon {
+            transform:translateY(-120px);
+            transition:1s;
+        }
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+    
+        body.light-mode {
+            background-color: #fff;
+            color: #333;
+            background-color:rgb(189,186,186);
+        }
+    

@@ -12,8 +12,8 @@ wrapper{
     background-color: rgb(1, 167, 1);
     border-radius: 50%;
     position: fixed;
-    bottom: 5rem;
-    right: 5rem;
+    bottom: 6rem;
+    right: 1rem;
     z-index: 999;
     display: flex;
     justify-content: center;

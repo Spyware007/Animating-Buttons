@@ -1,11 +1,8 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import { Loader } from "./components";
 import MainPage from "./MainPage";
-import { BrowserRouter } from "react-router-dom";
-import GoToTop from "./components/Top/GoToTop";
 
-const App = () => {
+const App = ({ modeToggleFunc, modeToggle }) => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
@@ -14,11 +11,7 @@ const App = () => {
     }, 1000);
   }, []);
 
-  return (
-    <>
-      {loading ? <Loader /> : <MainPage />} <GoToTop />{" "}
-    </>
-  );
+  return <>{loading ? <Loader /> : <MainPage modeToggleFunc={modeToggle} />}</>;
 };
 
 export default App;

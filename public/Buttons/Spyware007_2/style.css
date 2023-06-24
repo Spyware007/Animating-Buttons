@@ -5,8 +5,8 @@
 }
 .instagram-logo{
 
-    height: 50px;
-    width: 50px;
+    height: 55px;
+    width: 55px;
     background-color: transparent;
     border-radius: 8px;
   
@@ -83,5 +83,5 @@ a:active:before {
   background-color: #1c9bef;
 }
 .instagram::before {
-  background-color: #ef1cbe;
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
 }
