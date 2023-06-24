@@ -6,6 +6,7 @@ export default function Editor(props) {
 
   const handleCopy = () => {
     setIsCopied(true);
+    navigator.clipboard.writeText(value);
     setTimeout(() => {
       setIsCopied(false);
     }, 2000);
@@ -18,12 +19,7 @@ export default function Editor(props) {
         value={value}
       />
 
-      <button
-        type="button"
-        style={classes.copy_button}
-        // onClick={handleCopy}
-        onClick={() => navigator.clipboard.writeText(value)}
-      >
+      <button type="button" style={classes.copy_button} onClick={handleCopy}>
         {isCopied ? "Copied" : `Copy ${displayName}`}
       </button>
     </div>
