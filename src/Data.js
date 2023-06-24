@@ -960,7 +960,7 @@ export const Data = [
   "0xabdulkhalid_10",
   "vedangc03",
   "Roshnijeewani3457",
-  "shruuti321_2"
+  "shruuti321_2",
   "Roshnijeewani3457", 
   "silky-modi22",  
   "Roshnijeewani3457",
@@ -1021,7 +1021,7 @@ export const Data = [
   "Kalivarapubindusree_2",
   "Kalivarapubindusree_1",
 
-  "Prajwal0225_2"
+  "Prajwal0225_2",
 
   "Kalivarapubindusree_1",
   "HimanshuNarware_4",
