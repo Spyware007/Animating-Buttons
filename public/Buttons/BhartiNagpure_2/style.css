@@ -1,0 +1,34 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 250px;
+    height: 150px;
+    background: #fFf;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+#text{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+button{
+    padding: 10px;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #1687a7;
+    color: #fff;
+    border-radius: 5px;
+}
