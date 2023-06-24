@@ -1,0 +1,95 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Roboto;
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2D3235;
+  }
+  
+  .button {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding-right: 40px;
+  }
+  .button:hover .button__border-circle {
+    transform: translateX(60px);
+  }
+  .button:hover .button__mask-circle {
+    -webkit-clip-path: circle(25px at 85px);
+            clip-path: circle(25px at 85px);
+  }
+  
+  .button__text {
+    z-index: 1;
+    font-size: 14px;
+    margin-right: -18px;
+    color: #FAFAFA;
+    letter-spacing: 0.05em;
+  }
+  
+  .button__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .button__arrow {
+    left: 35px;
+    height: 3px;
+    width: 50px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    background-color: #B3D23F;
+  }
+  .button__arrow:after {
+    content: "";
+    width: 0;
+    height: 0;
+    top: -5px;
+    right: -7px;
+    position: absolute;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid #B3D23F;
+  }
+  
+  .button__border-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #BFBFBF;
+    transition: transform 987ms;
+  }
+  
+  .button__mask-circle {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-clip-path: circle(25px);
+            clip-path: circle(25px);
+    transition: -webkit-clip-path 987ms;
+    transition: clip-path 987ms;
+    transition: clip-path 987ms, -webkit-clip-path 987ms;
+  }
+  
+  .button__small-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transform: translateX(60px);
+    background-color: #B3D23F;
+  }
