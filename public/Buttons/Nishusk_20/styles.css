@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+  user-select: none;
+}
+
+.white {
+  height: 50vh;
+  width: 100vw;
+  background-color: #e7e7e7;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+.dark {
+  height: 50vh;
+  width: 100vw;
+  background-color: #1a1a1a;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+
+.btn2_bg {
+  background: rgb(210,210,210);
+  background: linear-gradient(128deg, rgba(210,210,210,1) 0%, rgba(255,255,255,1) 100%);
+  height: 65px;
+  width: 125px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.btn2 {
+  display: grid;
+  height: 55px;
+  width: 115px;
+  background: rgb(255,255,255);
+  background: linear-gradient(140deg, rgba(255,255,255,1) 0%, rgba(177,177,177,1) 100%);
+  border-radius: 50px;
+  align-content: center;
+  justify-content: center;
+}
+.btn2_cover {
+  width: 106px;
+  height: 46px;
+  background: rgb(255,255,255);
+  background: linear-gradient(317deg, rgba(255,255,255,1) 0%, rgba(177,177,177,.5) 100%);
+  border-radius: 50px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+.btn2_cover.active {
+  width: 101px;
+  height: 41px;
+}
+.btn2_text {
+  font-size: 1rem;
+  background: linear-gradient(128deg, rgba(120,120,120,1) 0%, rgba(163,163,163,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Added standard property for compatibility */
+}
+.btn2, .btn2_cover, .btn2_text {
+  transition: all 0.2s ease;
+}
+
+.btn1_bg {
+  background: rgb(15,15,15);
+  background: linear-gradient(128deg, rgba(15,15,15,1) 0%, rgba(57,57,57,1) 100%);
+  height: 65px;
+  width: 125px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.btn1 {
+  display: grid;
+  height: 55px;
+  width: 115px;
+  background: rgb(15,15,15);
+  background: linear-gradient(308deg, rgba(15,15,15,1) 0%, rgba(57,57,57,1) 100%);
+  border-radius: 50px;
+  align-content: center;
+  justify-content: center;
+}
+.btn1_cover {
+  width: 106px;
+  height: 46px;
+  background: rgb(37,37,37);
+  background: linear-gradient(308deg, rgba(37,37,37,1) 0%, rgba(27,27,27,1) 100%);
+  border-radius: 50px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+.btn1_cover.active {
+  width: 101px;
+  height: 41px;
+}
+.btn1_text {
+  font-size: 1rem;
+  background: linear-gradient(29deg, rgba(227,227,227,1) 0%, rgba(196,196,196,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Added standard property for compatibility */
+}
+.btn1, .btn1_cover, .btn1_text {
+  transition: all 0.2s ease;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+}
+.buttons{
+  display: flex;
+  width: 500px;
+  height: 300px;
+  align-items: center;
+  justify-content: space-around;
+}
+.buttons .row{
+  display: block;
+ margin-left: 60px;
+}
+.buttons .row button{
+  position: relative;
+  display: block;
+  height: 55px;
+  width: 150px;
+  margin: 40px 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  transition: all 0s ease-out;
+}
+.row button:active{
+  top: 3px;
+}
+.row button.facebook,
+.row button.facebook span{
+  background: #3B5999;
+  border-left: 1px solid #2E4476;
+  box-shadow: 0px 5px 0px 0px #2E4476;
+}
+.row button.facebook:active{
+  box-shadow: 0px 2px 0px 0px #2E4476;
+}
+.row button.twitter,
+.row button.twitter span{
+  background: #46C1F6;
+  border-left: 1px solid #269BD0;
+  box-shadow: 0px 5px 0px 0px #269BD0;
+}
+.row button.twitter:active{
+  box-shadow: 0px 2px 0px 0px #269BD0;
+}
+.row button.instagram,
+.row button.instagram span{
+  background: #e1306c;
+  border-left: 1px solid #c91d56;
+  box-shadow: 0px 5px 0px 0px #c91d56;
+}
+.row button.instagram:active{
+  box-shadow: 0px 2px 0px 0px #c91d56;
+}
+.row button.youtube,
+.row button.youtube span{
+  background: #DE463B;
+  border-left: 1px solid #C02B21;
+  box-shadow: 0px 5px 0px 0px #C02B21;
+}
+.row button.youtube:active{
+  box-shadow: 0px 2px 0px 0px #C02B21;
+}
+.row button span{
+  position: absolute;
+  height: 55px;
+  width: 60px;
+  top: 0;
+  left: -60px;
+  line-height: 55px;
+  font-size: 25px;
+  display: block;
+  font-weight: normal;
+  border-radius: 5px 0 0 5px;
+}
+.row button:active span{
+  top: -3px;
+}
+.row button.facebook span{
+  border-right: 1px solid #2E4476;
+}
+.row button.twitter span{
+  border-right: 1px solid #269BD0;
+}
+.row button.instagram span{
+  border-right: 1px solid #c91d56;
+}
+.row button.youtube span{
+  border-right: 1px solid #C02B21;
+}
+.row button.facebook:active span{
+  box-shadow: 0px 5px 0px 0px #2E4476,
+              6px 4px 2px rgba(0,0,0,0.3);
+}
+.row button.twitter:active span{
+  box-shadow: 0px 5px 0px 0px #269BD0,
+              6px 4px 2px rgba(0,0,0,0.3);
+}
+.row button.instagram:active span{
+  box-shadow: 0px 5px 0px 0px #c91d56,
+              6px 4px 2px rgba(0,0,0,0.3);
+}
+.row button.youtube:active span{
+  box-shadow: 0px 5px 0px 0px #C02B21,
+              6px 4px 2px rgba(0,0,0,0.3);
+}
