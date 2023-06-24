@@ -1,0 +1,132 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #444;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.send {
+  --hue: 30deg;
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  perspective: 66rem;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.send *, .send *::before, .send *::after {
+  transition: all 1s;
+}
+.send .rotate {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.send .rotate .move {
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.send .rotate .move .part {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+}
+.send .rotate .move .part::before, .send .rotate .move .part::after {
+  content: "SEND";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--hue), 70%, 75%);
+  font-size: 4.4rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+}
+.send .rotate .move .part.left::before {
+  transform-origin: 50% 25%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 1px, 0 calc(50% + 1px));
+          clip-path: polygon(0 0, 100% 0, 100% 1px, 0 calc(50% + 1px));
+}
+.send .rotate .move .part.left::after {
+  -webkit-clip-path: polygon(0 50%, 100% 0, 100% 1px, 1px 100%, 0 100%);
+          clip-path: polygon(0 50%, 100% 0, 100% 1px, 1px 100%, 0 100%);
+}
+.send .rotate .move .part.right::before {
+  -webkit-clip-path: polygon(0 100%, 100% 0, 100% 1px, calc(50% + 1px) 100%, 50% 100%);
+          clip-path: polygon(0 100%, 100% 0, 100% 1px, calc(50% + 1px) 100%, 50% 100%);
+}
+.send .rotate .move .part.right::after {
+  transform-origin: 75% 50%;
+  -webkit-clip-path: polygon(100% 0, 50% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 50% 100%, 100% 100%);
+}
+
+#send:checked ~ .send .rotate {
+  transform: rotate3d(1, -0.2, 0.2, 65deg);
+}
+#send:checked ~ .send .rotate .move {
+  -webkit-animation: fly 3s cubic-bezier(0.72, -0.23, 0.35, 1.03) 1s both;
+          animation: fly 3s cubic-bezier(0.72, -0.23, 0.35, 1.03) 1s both;
+}
+#send:checked ~ .send .rotate .part.left {
+  transform: rotate3d(-1, 1, 0, 60deg);
+}
+#send:checked ~ .send .rotate .part.left::before {
+  transform: rotate3d(-1, 0.5, 0, -60deg);
+}
+#send:checked ~ .send .rotate .part.left::after {
+  background-color: hsl(var(--hue), 50%, 70%);
+}
+#send:checked ~ .send .rotate .part.right {
+  transform: rotate3d(-1, 1, 0, -60deg);
+}
+#send:checked ~ .send .rotate .part.right::before {
+  background-color: hsl(var(--hue), 40%, 60%);
+}
+#send:checked ~ .send .rotate .part.right::after {
+  transform: rotate3d(-0.25, 0.5, 0, 100deg);
+}
+
+@-webkit-keyframes fly {
+  0% {
+    transform: translate3D(0, 0, 0rem);
+  }
+  50% {
+    transform: translate3D(400rem, -400rem, 0rem);
+  }
+  50.00001% {
+    transform: translate3D(-100rem, 100rem, 0rem);
+  }
+  100% {
+    transform: translate3D(0rem, 0rem, 0rem);
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translate3D(0, 0, 0rem);
+  }
+  50% {
+    transform: translate3D(400rem, -400rem, 0rem);
+  }
+  50.00001% {
+    transform: translate3D(-100rem, 100rem, 0rem);
+  }
+  100% {
+    transform: translate3D(0rem, 0rem, 0rem);
+  }
+}
