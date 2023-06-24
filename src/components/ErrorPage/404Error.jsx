@@ -12,15 +12,16 @@ const ErrorPage = () => {
         <h1 className="error">
           4
           <span>
-            <i class="fas fa-ghost"></i>
+            <i className="fas fa-ghost"></i>
           </span>
           4
         </h1>
         <h2>Error: 404 page not found</h2>
         <p>Sorry, the page you're looking for cannot be accessed</p>
         <NavLink to="/">
-          <h3 class="btn">
-            <i class="bx bx-arrow-back bx-tada bx-flip-horizontal"></i> Go Back
+          <h3 className="btn">
+            <i className="bx bx-arrow-back bx-tada bx-flip-horizontal"></i> Go
+            Back
           </h3>
         </NavLink>
       </div>
