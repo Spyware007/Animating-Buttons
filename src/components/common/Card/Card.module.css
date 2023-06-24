@@ -3,7 +3,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 320px;
+  width: 420px;
   height: auto;
   background-color: #000;
   padding: 20px;
@@ -15,7 +15,7 @@
 }
 .iframe_container {
   all: unset;
-  width: 280px;
+  width: 380px;
   height: 280px;
   box-shadow: 0px 4px 20px 0px #00000040;
   box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
