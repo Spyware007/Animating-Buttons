@@ -31,10 +31,5 @@ yarn-error.log*
 
 .vscode
 export_to_firebase.py
-<<<<<<< HEAD
 export_to_firebase_users.py
 serviceAccountKey.json
-=======
-serviceAccountKey.json
-export_to_firebase_users.py
->>>>>>> origin/dev-spidey
