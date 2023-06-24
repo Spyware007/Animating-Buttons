@@ -3,6 +3,8 @@
 
 export const Data = [
   // "HardikMisri",
+  "zul132_1",
+  "zul132_2",
   "BhartiNagpure",
   "BhartiNagpure_1",
   "AbhaBarge",
