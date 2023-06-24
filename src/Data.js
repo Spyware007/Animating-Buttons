@@ -2,6 +2,7 @@
 /** @format */
 
 export const Data = [
+  "uzmakh",
   // "HardikMisri",
   "zul132_1",
   "zul132_2",
