@@ -1,0 +1,45 @@
+.neon-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .neon-button:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background-color: #00fffc;
+    z-index: -1;
+    filter: blur(8px);
+  }
+
+  .neon-button:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background-color: #00fffc;
+    z-index: -2;
+    filter: blur(20px);
+  }
+
+  .neon-button:hover {
+    background-color: #00fffc;
+    color: #333;
+  }
+
+  .neon-button:hover:before,
+  .neon-button:hover:after {
+    background-color: #333;
+  }
