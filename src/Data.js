@@ -1255,7 +1255,7 @@ export const Data = [
   "priyam212001",
   "Anik-Banerjee364",
   "harshita-2003",
-  "harshita-2003_2"
+  "harshita-2003_2",
   "sukanyachopra",
   "Adityamishra9719",
   "shivansh745",
@@ -1458,7 +1458,7 @@ export const Data = [
   "0xabdulkhalid_10",
   "vedangc03",
   "Roshnijeewani3457",
-  "shruuti321_2"
+  "shruuti321_2",
   "Roshnijeewani3457", 
   "silky-modi22",  
   "Roshnijeewani3457",
@@ -1529,12 +1529,12 @@ export const Data = [
   "Roshnijeewani3457",
   "0xabdulkhalid_9",
   "Durgesh4993_2",
-  "Kalivarapubindusree_4"
-  "Kalivarapubindusree_3"
+  "Kalivarapubindusree_4",
+  "Kalivarapubindusree_3",
   "Kalivarapubindusree_2",
   "Kalivarapubindusree_1",
 
-  "Prajwal0225_2"
+  "Prajwal0225_2",
 
   "Kalivarapubindusree_1",
   "HimanshuNarware_4",
@@ -1556,7 +1556,7 @@ export const Data = [
   "0xabdulkhalid_18",
   "coderhersh_2",
   "coderhersh_3",
-  "Kalivarapubindusree_1,
+  "Kalivarapubindusree_1",
   "SurbhiMotwani23",
   "Prajwal0225_2",
   "Kalivarapubindusree_1",
@@ -1595,7 +1595,7 @@ export const Data = [
    "lakhan06_5",
    "lakhan06_6",
    "lakhan06_7",
-
+   "lakhan06_8",
    "lakhan06_7",
    "lakhan06_7",
    "lakhan06_8",
@@ -2047,5 +2047,7 @@ export const Data = [
   "Durgesh4993_4",
   "SyedImtiyazAli-",
   "madhurafulkar",
+  "Durgesh4993_4",
+  "sahadcmd_1",
   "Durgesh4993_4"
 ];
