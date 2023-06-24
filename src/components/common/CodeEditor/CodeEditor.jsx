@@ -1,13 +1,23 @@
 import React, { useState, useRef, useEffect } from "react";
 import classes from "./CodeEditor.module.css";
 import Editor from "@monaco-editor/react";
+import { useNavigate, useLocation } from "react-router-dom";
+
 import LangButton from "../LangButton/LangButton";
 import htmlIcon from "../../../assets/html.png";
 import cssIcon from "../../../assets/css.png";
 import jsIcon from "../../../assets/js.png";
 import copyIcon from "../../../assets/copy.png";
+import { getAuth } from "firebase/auth";
+import { auth, db } from "../../../firebase/auth"; // Import the db and signInWithGitHub from auth.js
+import { collection, addDoc } from "firebase/firestore"; // Import the collection and addDoc functions
+import axios from "axios";
 
 const CodeEditor = ({ html, setHtml, css, setCss, js, setJs }) => {
+  const [userLoggedIn, setUserLoggedIn] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const files = {
     "index.html": {
       name: "index.html",
@@ -29,6 +39,63 @@ const CodeEditor = ({ html, setHtml, css, setCss, js, setJs }) => {
   const [fileName, setFileName] = useState("index.html");
   const editorRef = useRef(null);
   const file = files[fileName];
+  useEffect(() => {
+    const auth = getAuth();
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUserLoggedIn(true);
+      } else {
+        setUserLoggedIn(false);
+        navigate("/login");
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const saveButtonToFirestore = async () => {
+    const user = auth.currentUser;
+    if (!user) {
+      alert("Please log in to add a button.");
+      return;
+    }
+
+    const buttonCollectionRef = collection(db, "buttons");
+
+    const buttonData = {
+      html,
+      css,
+      js,
+      likeCounter: 0,
+      githubUsername: "",
+      displayName: "",
+      likedUsers: [],
+    };
+
+    try {
+      const user = auth.currentUser;
+
+      if (user) {
+        const githubId = user.providerData.find(
+          (provider) => provider.providerId === "github.com"
+        ).uid;
+        const response = await axios.get(
+          `https://api.github.com/user/${githubId}`
+        );
+        console.log(response);
+        const { login } = response.data;
+        buttonData.githubUsername = login;
+
+        const displayName = user.displayName || "";
+        buttonData.displayName = displayName;
+      }
+      const docRef = await addDoc(buttonCollectionRef, buttonData);
+      console.log("Button document saved with ID:", docRef.id);
+      window.location.reload();
+    } catch (error) {
+      console.error("Error adding button document:", error);
+    }
+  };
 
   const getEditorValue = async () => {
     try {
@@ -77,6 +144,11 @@ const CodeEditor = ({ html, setHtml, css, setCss, js, setJs }) => {
           onClick={() => handleEditorChange("app.js")}
         />
         <LangButton name="COPY" image={copyIcon} onClick={getEditorValue} />
+        {location.pathname === "/add" && (
+          <button className={classes.addbtn} onClick={saveButtonToFirestore}>
+            CREATE
+          </button>
+        )}
       </div>
       <div className={classes.editor}>
         <Editor

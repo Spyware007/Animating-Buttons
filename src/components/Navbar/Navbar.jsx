@@ -70,12 +70,14 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               <span className={classes.addbtn}>Create</span>
             </button>
           </NavLink>
-          <button className={classes.github}>
-            <div className={classes.image_container}>
-              <img className={classes.image} src={github} alt="Creator" />
-            </div>
-            <span className={classes.username}>Sign in With GitHub</span>
-          </button>
+          <NavLink to="/login">
+            <button className={classes.github}>
+              <div className={classes.image_container}>
+                <img className={classes.image} src={github} alt="Creator" />
+              </div>
+              <span className={classes.username}>Sign in With GitHub</span>
+            </button>
+          </NavLink>
         </div>
         {/* <a
           href="https://github.com/Spyware007/Animating-Buttons"

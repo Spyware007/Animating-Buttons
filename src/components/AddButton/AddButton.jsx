@@ -1,33 +1,13 @@
 import { useState, useEffect } from "react";
 import classes from "./AddButton.module.css";
-import { useNavigate } from "react-router-dom";
 import CodeEditor from "../common/CodeEditor/CodeEditor";
-import { getAuth } from "firebase/auth";
 import { htmlTemplate, cssTemplate, jsTemplate } from "./templates";
-import { auth, db } from "../../firebase/auth"; // Import the db and signInWithGitHub from auth.js
-import { collection, addDoc } from "firebase/firestore"; // Import the collection and addDoc functions
-import axios from "axios";
 
 const AddButton = () => {
   const [html, setHtml] = useState(htmlTemplate);
   const [css, setCss] = useState(cssTemplate);
   const [js, setJs] = useState(jsTemplate);
   const [srcDoc, setSrcDoc] = useState("");
-  const [userLoggedIn, setUserLoggedIn] = useState(false);
-  const navigate = useNavigate();
-  useEffect(() => {
-    const auth = getAuth();
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
-        setUserLoggedIn(true);
-      } else {
-        setUserLoggedIn(false);
-        navigate("/login");
-      }
-    });
-
-    return () => unsubscribe();
-  }, []);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -42,50 +22,6 @@ const AddButton = () => {
 
     return () => clearTimeout(timeout);
   }, [html, css, js]);
-
-  const saveButtonToFirestore = async () => {
-    const user = auth.currentUser;
-    if (!user) {
-      alert("Please log in to add a button.");
-      return;
-    }
-
-    const buttonCollectionRef = collection(db, "buttons");
-
-    const buttonData = {
-      html,
-      css,
-      js,
-      likeCounter: 0,
-      githubUsername: "",
-      displayName: "",
-      likedUsers: [],
-    };
-
-    try {
-      const user = auth.currentUser;
-
-      if (user) {
-        const githubId = user.providerData.find(
-          (provider) => provider.providerId === "github.com"
-        ).uid;
-        const response = await axios.get(
-          `https://api.github.com/user/${githubId}`
-        );
-        console.log(response);
-        const { login } = response.data;
-        buttonData.githubUsername = login;
-
-        const displayName = user.displayName || "";
-        buttonData.displayName = displayName;
-      }
-      const docRef = await addDoc(buttonCollectionRef, buttonData);
-      console.log("Button document saved with ID:", docRef.id);
-      window.location.reload();
-    } catch (error) {
-      console.error("Error adding button document:", error);
-    }
-  };
 
   return (
     <div className={classes.editor_container}>
@@ -107,9 +43,6 @@ const AddButton = () => {
           js={js}
           setJs={setJs}
         />
-        <button className={classes.blue_button} onClick={saveButtonToFirestore}>
-          Add
-        </button>
       </div>
     </div>
   );
