@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700%7D");
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+
+.pg_not_found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: x-large;
+  color: rgb(0, 0, 0);
+  height: 71vh;
+  width: 100vw;
+}
+.pg_not_found.pg_not_found-dark .heading2,
+.pg_not_found.pg_not_found-dark .para {
+  color: #ff0000;
+}
+.error {
+  color: red;
+  font-size: 12.5rem;
+  letter-spacing: 0.1em;
+  margin: 0.025em 0;
+  text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  font-family: "Montserrat", sans-serif;
+}
+@media (max-width: 30rem) {
+  .error {
+    font-size: 8.5rem;
+  }
+}
+.error > span {
+  -webkit-animation: spooky 2s alternate infinite linear;
+  animation: spooky 2s alternate infinite linear;
+  color: #528cce;
+  display: inline-block;
+}
+
+@-webkit-keyframes spooky {
+  from {
+    transform: translatey(0.15em) scaley(0.95);
+  }
+  to {
+    transform: translatey(-0.15em);
+  }
+}
+
+@keyframes spooky {
+  from {
+    transform: translatey(0.15em) scaley(0.95);
+  }
+  to {
+    transform: translatey(-0.15em);
+  }
+}
+.goback_link {
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .heading2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .para {
+    font-size: 1rem;
+    text-align: center;
+  }
+}

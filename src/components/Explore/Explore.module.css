@@ -1,25 +1,20 @@
-.main_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 50px;
-  /* background-image: linear-gradient(to bottom, #000, #2eb5d2); */
-}
 .text {
   text-align: center;
   margin-bottom: 50px;
 }
+
 .btns_container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 60px 50px;
+  gap: 80px 160px;
 }
 
 .iframe_container {
   all: unset;
+  width: 300px;
+  height: 300px;
   border: 1px solid #8b8b8b;
   box-shadow: 0px 4px 20px 0px #00000040;
   border-radius: 12px;
@@ -111,7 +106,6 @@
   list-style-type: none;
   display: flex;
   gap: 5px;
-  flex-wrap: wrap;
 }
 
 .paginationItem {
@@ -159,9 +153,4 @@
 
 .bar .search:focus {
   outline: none;
-}
-@media screen and (max-width: 768px) {
-  .paginationItem {
-    padding: 5px 8px;
-  }
 }

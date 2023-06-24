@@ -1,76 +1,136 @@
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: black;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: white;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: orange;
-}
-
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2px 20px;
+  padding: 20px 100px;
+  z-index: 1;
 }
-
-.navbar-light {
-  background-color: rgba(256, 256, 256, 1);
-  box-shadow: 0px 7px 18px 0px #0000002e;
+.navlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 30px;
+  padding: 0;
 }
-
-.navbar-dark {
-  background-color: rgb(20, 20, 20);
-  box-shadow: 0px 7px 18px 0px #ffffff2e;
+.list_item {
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
 }
-
-.logo {
-  width: 100px;
+.list_item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fedc02;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+.navbar.navbar-light .navlist .list_item::after {
+  background-color: blue;
+}
+.list_item:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.list_item_link {
+  text-decoration: none;
+  color: #000;
+}
+.navbar.navbar-dark .navlist .list_item .list_item_link {
+  color: #fff;
+}
+.button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.add {
+  all: unset;
+  background-color: #4285f4;
+  border-radius: 12px;
+  padding: 12px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
 }
 .github {
-  width: 52px;
-  position: relative;
-  top: 3px;
-  height: 52px;
+  all: unset;
+  background-color: #21252c;
+  border-radius: 12px;
+  padding: 12px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  gap: 7px;
 }
-.github,
-.spider {
-  width: 50px;
-  filter: grayscale(1);
-  transition: all 0.3s ease;
+.github:hover {
+  background-color: #232b32;
 }
-.github:hover,
-.spider:hover {
-  filter: grayscale(0);
-  transform: rotate(-10deg) scale(1.2);
+
+.image_container,
+.image_container_mobile {
+  width: 30px;
+  height: 30px;
+  /* border-radius: 50%; */
+  overflow: hidden;
+  /* border: 1px solid #fff; */
+  /* box-shadow: 0px 4px 1px 0px #00000040; */
 }
-.spider_img {
-  width: 80px;
+.image_container_mobile {
+  display: none;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.username,
+.addbtn {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px 0px #00000040;
+  filter: drop-shadow(0px 4px 1px rgba(255, 255, 255, 0.25));
+}
+.navbar.navbar-light .github:hover .username {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.github:hover .username {
+  color: #ffffff;
+  transition: all 0.1s ease-in-out;
+}
+.navbar.navbar-dark .username {
+  color: #fff;
+  text-shadow: 0px 4px 4px 0px #ffffff40;
+  filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.25));
+}
+.navbar.navbar-dark .github:hover .username {
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
 }
 .mode_toggle {
   position: relative;
   display: block;
   border: none;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   padding: 10px;
   border-radius: 300px;
   margin-left: auto;
   margin-right: 20px;
-  margin-top: -5px;
+  cursor: pointer;
 }
 
 .dark_mode {
@@ -84,7 +144,6 @@
   color: var(--dark-text-color);
   box-shadow: 3px 3px 5px 0px #828282;
 }
-
 .light_mode img {
   filter: invert(100%);
 }
@@ -94,4 +153,18 @@
   display: block;
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 20px 20px;
+    justify-content: center;
+  }
+  .github {
+    display: none;
+  }
+  .image_container_mobile {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
 }

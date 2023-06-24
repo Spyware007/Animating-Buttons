@@ -1,0 +1,26 @@
+.editor {
+  width: 800px;
+  height: 770px;
+  background-color: #151515;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+  border-radius: 12px;
+}
+.btns_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  background-color: #151515;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+  border-radius: 12px 12px 0 0;
+  color: #fff;
+  padding: 10px;
+}
+.editor_component {
+  border-radius: 20px;
+}
+@media screen and (max-width: 768px) {
+  .editor {
+    width: 100%;
+  }
+}

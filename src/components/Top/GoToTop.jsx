@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
-import "./GoToTop.css";
+import classes from "./GoToTop.module.css";
 const GoToTop = () => {
   const goToBtn = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -25,13 +25,13 @@ const GoToTop = () => {
   }, []);
 
   return (
-    <>
+    <div className={classes.wrapper}>
       {isVisible && (
-        <div className="top-btn" onClick={goToBtn}>
-          <FaArrowUp className="icon" />
+        <div className={classes["top-btn"]} onClick={goToBtn}>
+          <FaArrowUp className={classes.icon} />
         </div>
       )}
-    </>
+    </div>
   );
 };
 
