@@ -1,0 +1,135 @@
+.dl-parachute {
+    --color-text: #fff;
+    --color-icon: #fff;
+    --color-line: #fff;
+    --svg-y: 0px;
+    --arrow-x: 0px;
+    --arrow-y: 2px;
+    --arrow-r: 0deg;
+    --line-opacity: 0;
+    --circle-opacity: 1;
+    --parachute-o: 1;
+    --parachute-y: 0px;
+    --parachute-s: 0;
+    --line-progress-o: 0;
+    --line-progress: 260px;
+    --success-y: 12px;
+    --success-o: 0;
+    --number-y: 12px;
+    --number-o: 0;
+    -webkit-tap-highlight-color: transparent;
+    
+    outline: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Inter";
+    position: relative;
+    width: 120px;
+    height: 120px;
+  }
+  .dl-parachute svg {
+    display: block;
+    pointer-events: none;
+  }
+  .dl-parachute svg.circle, .dl-parachute svg.line {
+    width: 280px;
+    height: 124px;
+    position: absolute;
+    left: -80px;
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke: var(--color-line);
+    fill: none;
+  }
+  .dl-parachute svg.circle {
+    top: -2px;
+    opacity: var(--circle-opacity);
+    transform: translateY(var(--svg-y)) rotate(180deg);
+  }
+  .dl-parachute svg.line {
+    height: 128px;
+    bottom: -65px;
+    opacity: var(--line-opacity);
+  }
+  .dl-parachute svg.line .progress {
+    stroke-width: 6px;
+    stroke-dasharray: 260px;
+    opacity: var(--line-progress-o);
+    stroke-dashoffset: var(--line-progress);
+  }
+  .dl-parachute .arrow {
+    position: absolute;
+    left: 36px;
+    top: 36px;
+    transform: translate(var(--arrow-x), var(--arrow-y)) rotate(var(--arrow-r));
+  }
+  .dl-parachute .arrow .base {
+    fill: var(--color-icon);
+    width: 48px;
+    height: 48px;
+  }
+  .dl-parachute .arrow .parachute {
+    position: absolute;
+    width: 28px;
+    height: 32px;
+    fill: var(--color-icon);
+    left: 10px;
+    bottom: -26px;
+    transform-origin: 50% 0%;
+    opacity: var(--parachute-o);
+    transform: translateY(var(--parachute-y)) scale(var(--parachute-s));
+  }
+  .dl-parachute .number,
+  .dl-parachute .success {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: var(--t, 144px);
+    text-align: center;
+    color: var(--color-text);
+    opacity: var(--o, var(--number-o));
+    transform: translateY(var(--y, var(--number-y)));
+  }
+  .dl-parachute .success {
+    --t: 12px;
+    --o: var(--success-o);
+    --y: var(--success-y);
+  }
+  
+  html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  * {
+    box-sizing: inherit;
+  }
+  *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    overflow: hidden;
+    min-height: 100vh;
+    font-family: "Inter";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #275EFE;
+  }
+  body .dribbble {
+    position: fixed;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+  }
+  body .dribbble img {
+    display: block;
+    width: 76px;
+  }
+ 
