@@ -31,11 +31,11 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               About
             </NavLink>
           </li>
-          <li className={classes.list_item}>
+          {/* <li className={classes.list_item}>
             <Link className={classes.list_item_link} to={"/leaderboard"}>
               Creators
             </Link>
-          </li>
+          </li> */}
           <a
             href="https://github.com/Spyware007/Animating-Buttons"
             target="__blank"
