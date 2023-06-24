@@ -6,6 +6,9 @@ node_modules/
 /.pnp
 .pnp.js
 
+#build
+build
+
 # testing
 /coverage
 
@@ -25,3 +28,8 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.vscode
+export_to_firebase.py
+export_to_firebase_users.py
+serviceAccountKey.json

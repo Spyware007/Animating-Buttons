@@ -9,7 +9,11 @@ import sun from "../../assets/sun.png";
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
   return (
     <>
-      <nav className={classes.navbar}>
+      <nav
+        className={`${classes.navbar} ${
+          !modeToggle ? classes["navbar-light"] : classes["navbar-dark"]
+        }`}
+      >
         <a
           className={classes.link}
           href="https://gdsc.community.dev/dy-patil-college-of-engineering-pune/"
@@ -40,7 +44,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <img className={classes.github} src={github} alt="github_link" />
+          <img className={classes.github} src={github} alt="github_link" /> 
         </a>
       </nav>
     </>

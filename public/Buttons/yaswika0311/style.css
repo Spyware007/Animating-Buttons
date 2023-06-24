@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: aqua;
+}
+body {
+  display: flex;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 255, 255);
+}
+
+.button {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  color: rgb(0, 255, 255);   
+  cursor: pointer;
+  background-color: skyblue;
+  transition: 0.3s ease;
+  background-image: linear-gradient(to right, transparent 50%, rgba(255, 255, 255, 0.5) 50%),
+    linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.5) 50%);
+  background-size: 200% 200%;
+  animation: sparklingBackground 2s linear infinite;
+
+}
+.button:active {
+  transform: scale(0.96);
+}
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+.button.animate::before {
+  top: -70%;
+  background-image: radial-gradient(circle, skyblue 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, skyblue 20%, transparent 30%),
+    radial-gradient(circle, skyblue 20%, transparent 20%),
+    radial-gradient(circle, skyblue 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, skyblue 15%, transparent 20%),
+    radial-gradient(circle, skyblue 20%, transparent 20%),
+    radial-gradient(circle, skyblue 20%, transparent 20%),
+    radial-gradient(circle, skyblue 20%, transparent 20%),
+    radial-gradient(circle, skyblue 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  animation: greentopBubbles ease-in-out 0.6s forwards infinite;
+}
+
+
+.button:hover .span {
+  opacity: 1;
+  animation: dynamicContentFadeIn 0.3s ease;
+}
+
+.span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+
+
+
+@keyframes dynamicContentFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 50% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 20% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 20% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+.button.animate::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, skyblue 30%, transparent 20%),
+    radial-gradient(circle, skyblue 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, skyblue 15%, transparent 20%),
+    radial-gradient(circle, skyblue 20%, transparent 20%),
+    radial-gradient(circle, skyblue 20%, transparent 20%),
+    radial-gradient(circle, skyblue 20%, transparent 20%),
+    radial-gradient(circle, skyblue 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 20% 20%;
+  animation: greenbottomBubbles ease-in-out 0.6s forwards infinite;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+@keyframes sparklingBackground {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
