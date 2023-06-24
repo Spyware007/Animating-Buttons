@@ -98,6 +98,7 @@ export const Data = [
   "Nishusk_15",
   "Nishusk_16",
   "Nishusk_17",
+  "Nishusk_22",
   "NMN03",
   "NMN03_1",
   "Nagapadmini7",
