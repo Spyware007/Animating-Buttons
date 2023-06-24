@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+ function colorGenerator(){
+    var randomColor = (Math.floor(Math.random()*16777216)).toString(16);
+    document.body.style.backgroundColor= '#'+ randomColor;
+    document.getElementById('text').innerHTML= '#'+randomColor;
+ }
+
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="main">
+ <div id="text">#0000000</div>   
+ <button onclick="colorGenerator()">Generate Color</button>
+</div>
+</body>
+
+</html>

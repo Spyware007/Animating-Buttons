@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #333;
+
+	
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+.wrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	margin: 12rem auto;
+}
+.btncontainer {
+	width: 200px;
+	height: 100px;
+	animation-play-state: running;
+}
+.dot-line {
+
+	width: 400px;
+	margin: 2rem auto;
+}
+button {
+    font-family: 'Open Sans', sans-serif;
+	padding: 0.8em 1.5em;
+	background-image: linear-gradient(90deg, #855d17, #32e175, #23e8a3);
+	border: none;
+	border-radius: 15px;
+	color: chocolate;
+	margin: 2rem;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: 800;
+	transition: transform 2s;
+}
+button:hover,
+button:focus-visible {
+	background-image: linear-gradient(45deg, #32e175, #855d17);
+	transform: translateY(2rem);
+	transition: transform 2s;
+	color: lime;
+	
+}
+
+.dots {
+	width: 40%;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: center;
+}
+.dot {
+	background-color: #32e175;
+	width: 10px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
+
+
+.dots.to-fro {
+	animation: to-and-fro 5s ease-in-out infinite alternate;
+	animation-delay: 2s;
+}
+@keyframes to-and-fro {
+	100% {
+		transform: translateX(250px);
+	}
+}
