@@ -1,0 +1,54 @@
+body {
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	background: #000000;
+}
+#reveal{
+    height:100px;
+    width:200px;
+    border:  1px solid black;
+    color: white;
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color: black;
+    box-shadow: outset 0 0 0 0 #daf189;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight:400;
+    transition: ease-out 1s;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    animation: glow 0.5s ease-in-out infinite alternate;
+}
+    
+#reveal:hover {
+    border: 1px solid rgb(3, 69, 3);
+    box-shadow: inset 200px 0 0 0 #f882c5;
+    /* color: white; */
+    text-shadow: 0.5px 0 black, -0.5px 0 black, 0 0.5px black,0 -0.5px black;
+    transition: ease-out 1s;
+    animation: dontglow 1s ease-in-out;
+}
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 2px 10px #ff0080;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 2px 10px #f4d50d;
+    }
+  }
+  @keyframes dontglow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 2px 10px #c50c68;
+    }
+    to {
+      text-shadow: 1px 0 black, -0.5px 0 black, 0 0.5px black,0 -0.5px black;
+    }
+  }
+
+#reveal:hover:active {
+transition: 1s;
+transform: scale(1.5);
+}
