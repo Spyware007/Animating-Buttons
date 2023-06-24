@@ -1,3 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+  user-select: none;
+}
+
+.white {
+  height: 50vh;
+  width: 100vw;
+  background-color: #e7e7e7;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+.dark {
+  height: 50vh;
+  width: 100vw;
+  background-color: #1a1a1a;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+
+.btn2_bg {
+  background: rgb(210,210,210);
+  background: linear-gradient(128deg, rgba(210,210,210,1) 0%, rgba(255,255,255,1) 100%);
+  height: 65px;
+  width: 125px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.btn2 {
+  display: grid;
+  height: 55px;
+  width: 115px;
+  background: rgb(255,255,255);
+  background: linear-gradient(140deg, rgba(255,255,255,1) 0%, rgba(177,177,177,1) 100%);
+  border-radius: 50px;
+  align-content: center;
+  justify-content: center;
+}
+.btn2_cover {
+  width: 106px;
+  height: 46px;
+  background: rgb(255,255,255);
+  background: linear-gradient(317deg, rgba(255,255,255,1) 0%, rgba(177,177,177,.5) 100%);
+  border-radius: 50px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+.btn2_cover.active {
+  width: 101px;
+  height: 41px;
+}
+.btn2_text {
+  font-size: 1rem;
+  background: linear-gradient(128deg, rgba(120,120,120,1) 0%, rgba(163,163,163,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Added standard property for compatibility */
+}
+.btn2, .btn2_cover, .btn2_text {
+  transition: all 0.2s ease;
+}
+
+.btn1_bg {
+  background: rgb(15,15,15);
+  background: linear-gradient(128deg, rgba(15,15,15,1) 0%, rgba(57,57,57,1) 100%);
+  height: 65px;
+  width: 125px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.btn1 {
+  display: grid;
+  height: 55px;
+  width: 115px;
+  background: rgb(15,15,15);
+  background: linear-gradient(308deg, rgba(15,15,15,1) 0%, rgba(57,57,57,1) 100%);
+  border-radius: 50px;
+  align-content: center;
+  justify-content: center;
+}
+.btn1_cover {
+  width: 106px;
+  height: 46px;
+  background: rgb(37,37,37);
+  background: linear-gradient(308deg, rgba(37,37,37,1) 0%, rgba(27,27,27,1) 100%);
+  border-radius: 50px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+.btn1_cover.active {
+  width: 101px;
+  height: 41px;
+}
+.btn1_text {
+  font-size: 1rem;
+  background: linear-gradient(29deg, rgba(227,227,227,1) 0%, rgba(196,196,196,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Added standard property for compatibility */
+}
+.btn1, .btn1_cover, .btn1_text {
+  transition: all 0.2s ease;
+}
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
   margin: 0;
