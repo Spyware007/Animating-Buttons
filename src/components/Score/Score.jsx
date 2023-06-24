@@ -33,7 +33,7 @@ const Score = () => {
 
   function getProfilePicture(username) {
     // find the user object that matches the input parameter
-    let user = users.find(user => user.username.toLowerCase() === username.toLowerCase());
+    let user = users.find(user => user.githubUsername.toLowerCase() === username.toLowerCase());
     return user ? (user.profilePictureUrl) : memoji;
   }
 
