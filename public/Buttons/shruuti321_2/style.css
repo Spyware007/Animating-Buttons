@@ -1,0 +1,36 @@
+
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  
+  .but1,.but2,.but3,.but4{
+    height:53px;
+    width:70px;
+    padding:2px;
+    border-color: purple;
+    background-color: white;
+    border-width:4px;
+    cursor:pointer;
+    border-radius: 35px;
+  }
+  .icon-container{
+    display:flex;
+    gap:5px;
+  }
+  
+  .but1:hover{
+    background-color:yellow;
+  }
+  
+  
+  .button:active {
+    background-color: #666;
+    box-shadow: 0 10px #666;
+    transform: translateY(8px);
+  }

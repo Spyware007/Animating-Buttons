@@ -8,13 +8,19 @@
   font-size: 40px;
   margin: 40px 0px 0px;
 }
-.gradient_bg {
+
+.gradient_bg:hover {
   padding: 4px 10px;
   border-radius: 12px;
+  transition: 1000ms;
+  transform: translateX(3px);
+  background-color: #069412;
 }
 
 .light_mode {
-  background-color: #000 ;
+  background-color: #3d09da;
+  border-radius: 12px;
+ 
 }
 .dark_mode {
   background-color: rgb(240, 240, 240) ;
@@ -23,6 +29,7 @@
 
 .gradient {
   font-size: 40px;
+  padding: 4px 10px;
 }
 
 .light_mode .gradient {
