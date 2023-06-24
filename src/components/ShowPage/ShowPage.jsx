@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Editor from "../Editor/Editor";
 import classes from "./ShowPage.module.css";
 import { useParams } from "react-router-dom";
@@ -9,6 +9,7 @@ function App() {
   const [css, setCss] = useState("");
   const [js, setJs] = useState("");
   const [srcDoc, setSrcDoc] = useState("");
+  const [selectedOption, setSelectedOption] = useState("HTML");
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -35,8 +36,16 @@ function App() {
 
     fetch(`/Buttons/${id}/app.js`)
       .then((response) => response.text())
+      .then((text) => {
+        if (text[0] === "<") text = " ";
+        return text;
+      })
       .then((text) => setJs(text));
   }, [id]);
+
+  const handleOptionChange = (option) => {
+    setSelectedOption(option);
+  };
 
   return (
     <div className={classes.editor_container}>
@@ -50,9 +59,48 @@ function App() {
         />
       </div>
       <div className={classes.components_container}>
-        <Editor displayName="HTML" value={html} onChange={(v) => setHtml(v)} />
-        <Editor displayName="CSS" value={css} onChange={(v) => setCss(v)} />
-        <Editor displayName="JS" value={js} onChange={(v) => setCss(v)} />
+        <div className={classes.navbar}>
+          <button
+            className={`${classes.navbar_option} ${
+              selectedOption === "HTML" ? classes.active : ""
+            }`}
+            onClick={() => handleOptionChange("HTML")}
+          >
+            HTML
+          </button>
+          <button
+            className={`${classes.navbar_option} ${
+              selectedOption === "CSS" ? classes.active : ""
+            }`}
+            onClick={() => handleOptionChange("CSS")}
+          >
+            CSS
+          </button>
+          <button
+            className={`${classes.navbar_option} ${
+              selectedOption === "JS" ? classes.active : ""
+            }`}
+            onClick={() => handleOptionChange("JS")}
+          >
+            JS
+          </button>
+        </div>
+
+        <div className={classes.codes}>
+          {selectedOption === "HTML" && (
+            <Editor
+              displayName="HTML"
+              value={html}
+              onChange={(v) => setHtml(v)}
+            />
+          )}
+          {selectedOption === "CSS" && (
+            <Editor displayName="CSS" value={css} onChange={(v) => setCss(v)} />
+          )}
+          {selectedOption === "JS" && (
+            <Editor displayName="JS" value={js} onChange={(v) => setJs(v)} />
+          )}
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-btn{
+    position: relative;
+    width: 300px;
+    height: 120px;
+    padding: 10px;
+    border-radius: 100px;
+    background-color: #c4c4c4;
+    background-image: url(https://img.freepik.com/free-vector/golf-course-with-green-grass-pond-sunset_107791-6976.jpg?w=996&t=st=1685904858~exp=1685905458~hmac=8740e083fdd1473da2f4772da98dc5763d56f7d2b6cbe05c548d6831d46f1876);
+    background-size: cover;
+    transition: all 0.4s cubic-bezier(0.65,0.05, 0.36,1);
+}
+
+.toggle-btn .switch{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 5px 0px 10px rgba(0,0,0,0.25),
+    inset 5px 0 10px rgba(0,0,0,0.25);
+    transition: all 0.4s cubic-bezier(0.65,0.05,0.36, 1);
+    cursor: pointer;
+}
+
+.toggle-btn.active{
+    background-image: url(https://img.freepik.com/free-vector/ice-rink-night-empty-public-place-skating_33099-2448.jpg?w=996&t=st=1685908538~exp=1685909138~hmac=a2588c87c4303064990ce3a86a3a42858dd252fdcd42ee1f10af4d056b56440e);
+}
+
+.toggle-btn.active .switch{
+ transform: translateX(calc(300px - 120px));
+}
+
