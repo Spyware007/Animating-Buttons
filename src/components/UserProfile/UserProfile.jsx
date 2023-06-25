@@ -36,7 +36,7 @@ const UserProfile = () => {
         login,
         avatar_url,
       } = response.data;
-
+      console.log();
       setGithubBio(bio);
       setAvatarUrl(avatar_url);
       const socialAccounts = [];
