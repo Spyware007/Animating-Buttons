@@ -60,6 +60,7 @@
   background-color: #fff;
   border-radius: 50%;
   border: 2px solid #00d1ff;
+  z-index: 999;
 }
 .landing.landing-dark .memoji {
   background-color: #000;
