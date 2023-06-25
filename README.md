@@ -1,3 +1,6 @@
+# Readme Will be Updated soon.
+# Don't follow this Readme for contributions.
+
 <!-- GDSC DY PATIL COLLEGE OG ENGINEERING, PUNE LOGO -->
 
 <div align="center">
