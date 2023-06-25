@@ -16,6 +16,7 @@ const UserProfile = () => {
   const [githubSocialAccounts, setGithubSocialAccounts] = useState([]);
   const [avatarUrl, setAvatarUrl] = useState("");
   const [buttons, setButtons] = useState([]);
+  const [name , setName] = useState('')
   useEffect(() => {
     fetchGithubData();
   }, []);
@@ -33,12 +34,13 @@ const UserProfile = () => {
         blog,
         twitter_username,
         linkedin_username,
-        login,
+        name,
         avatar_url,
       } = response.data;
-      console.log();
+      console.log(response.data);
       setGithubBio(bio);
       setAvatarUrl(avatar_url);
+      setName(name)
       const socialAccounts = [];
 
       if (blog) {
@@ -111,9 +113,10 @@ const UserProfile = () => {
           </div>
           <div className={classes.user_data}>
             <h3 className={classes.username}>@{user}</h3>
+            <h3 className={classes.name}>{name}</h3>
             <div className={classes.socials}>
-              <Twitter />
-              <LinkedIn />
+                {/* <Twitter />
+              <LinkedIn /> */}
             </div>
           </div>
         </div>
@@ -125,7 +128,6 @@ const UserProfile = () => {
           {buttons
             // .filter((d) => d.toLowerCase().includes(query.toLowerCase()))
             .map((d, i) => {
-              console.log(d);
               return <Card key={i} autoid={d.autoid} button={d} />;
             })}
         </div>
