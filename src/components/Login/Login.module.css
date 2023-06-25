@@ -31,3 +31,10 @@
 .logoutButton:hover {
   background-color: #0056b3;
 }
+.btns_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 80px 160px;
+}
