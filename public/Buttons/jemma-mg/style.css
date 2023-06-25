@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(26, 26, 75);
+}
+
+.box{
+    position: relative;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box h2{
+    color: whitesmoke;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    font-size: 1.1rem;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.box::before{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 320px;
+    border-radius: 50px;
+    background: linear-gradient(0deg, #00ccff, #f86ad9);
+    animation: turn 4s linear infinite;
+}
+
+.box::after{
+    content: "";
+    position: absolute;
+    background: darkblue;
+    inset: 4px;
+    border-radius: 8px;
+}
+
+.box:hover::before{
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50px;
+    background: linear-gradient(180deg, #00ccff,#f86ad9);
+    animation: turn 4s linear infinite;
+}
+
+.box:hover h2{
+    color: whitesmoke;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 139, 0.5);
+}
+
+.box:hover::after{
+    background: radial-gradient(rgba(0, 0, 139, 0.25) 90%, rgba(0, 139, 139, 0.5));
+}
+
+.box:active h2{
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.box:active::after{
+    background: radial-gradient(rgba(0, 0, 139, 0.1) 10%, rgba(0, 139, 139, 0.1)); 
+}
+
+@keyframes turn{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg); 
+    }
+}

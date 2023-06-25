@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
+
+body{
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(93deg,#E7484F,
+  #E7484F 16.65%,
+  #F68B1D 16.65%,
+  #F68B1D 33.3%,
+  #FCED00 33.3%,
+  #FCED00 49.95%,
+  #009E4F 49.95%,
+  #009E4F 66.6%,
+  #00AAC3 66.6%,
+  #00AAC3 83.25%,
+  #732982 83.25%,
+  #732982 100%,
+  #E7484F 100%);
+}
+.container{
+    position: absolute;
+    top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+}
+.rainbow{
+  border-radius: 4px;  
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.262);
+
+}
+.rainbow-1:hover{
+   background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+   animation:slidebg 5s linear infinite;
+   top: -15%;
+
+}
+
+.rainbow-2:hover{
+   background-image:     linear-gradient(
+      to right, 
+      #E7484F,
+      #F68B1D, 
+      #FCED00,
+      #009E4F,
+      #00AAC3,
+      #732982
+    );
+  animation:slidebg 2s linear infinite;
+}
+
+
+.rainbow-3:hover{
+   background-image:     linear-gradient(
+      to right, 
+      #E7484F,
+      #E7484F 16.65%,
+      #F68B1D 16.65%,
+      #F68B1D 33.3%,
+      #FCED00 33.3%,
+      #FCED00 49.95%,
+      #009E4F 49.95%,
+      #009E4F 66.6%,
+      #00AAC3 66.6%,
+      #00AAC3 83.25%,
+      #732982 83.25%,
+      #732982 100%,
+      #E7484F 100%
+     
+     
+     
+    );
+  animation:slidebg 2s linear infinite;
+}
+
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+
+

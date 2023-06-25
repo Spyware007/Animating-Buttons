@@ -1,0 +1,58 @@
+
+body{
+    background-color:black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background: transparent;
+    width: 150px ;
+    height:80px;
+    color: white;
+    border-radius:50px 0px  ;
+    cursor: pointer;
+    box-shadow: 4px 0px 30px 3px #3937378c;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+button:hover{
+    width: 120px;
+    height: 90px;
+    border-radius:0px 30px;
+    animation: animatedBtn 5s infinite;
+}
+
+@keyframes animatedBtn{
+    0%{
+        color: aqua;
+        border: 1px solid aqua;
+        box-shadow: 0 0 20px 10px aqua;
+    }
+    25%{
+        color: rgb(12, 250, 7);
+        border: 1px solid  rgb(12, 250, 7);
+        box-shadow: 0 0 20px 10px  rgb(12, 250, 7);
+    }
+    50%{
+        color: rgb(246, 18, 6);
+        border: 1px solid rgb(246, 18, 6);
+        box-shadow: 0 0 20px 10px rgb(246, 18, 6);
+    }
+  75%{
+        color: gold;
+        border: 1px solid gold;
+        box-shadow: 0 0 20px 10px gold;
+    }
+    100%{
+        color: rgb(162, 0, 255);
+        border: 1px solid rgb(162, 0, 255);
+        box-shadow: 0 0 20px 10px rgb(162, 0, 255);
+    }
+}
