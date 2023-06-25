@@ -104,7 +104,7 @@ const Score = () => {
                 <Link to={`/user/${name}`} key={index} className={classes.item}>
                   <span className=
                     {classes.rank}>{rankNumber++ + "."}</span>
-                  <img src={getProfilePicture(name)} alt="Profile" className={classes.profileImage} />
+                  <img src={getProfilePicture(name)} alt="Profile" className={classes.profileImage} loading="lazy" />
                   <div className={classes.details}>
                     <div className={classes.name}>{name}</div>
                     <div className={classes.count}>{count} buttons added</div>
@@ -121,7 +121,7 @@ const Score = () => {
                 <Link to={`/user/${name}`} key={index} className={classes.item}>
                   <span className=
                     {classes.rank}>{rankLikes++ + "."}</span>
-                  <img src={getProfilePicture(name)} alt="Profile" className={classes.profileImage} />
+                  <img src={getProfilePicture(name)} alt="Profile" className={classes.profileImage} loading="lazy" />
                   <div className={classes.details}>
                     <div className={classes.name}>{name}</div>
                     <div className={classes.count}>Total Likes : {count} </div>

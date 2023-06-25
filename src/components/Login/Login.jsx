@@ -98,7 +98,7 @@ const Login = () => {
               <img
                 src={user.photoURL}
                 alt="Profile"
-                className={classes.profileImage}
+                className={classes.profileImage} loading="lazy"
               />
               <h2 className={classes.displayName}>{user.displayName}</h2>
               <p className={classes.githubBio}>{githubBio}</p>

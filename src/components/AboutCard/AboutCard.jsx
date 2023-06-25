@@ -7,7 +7,7 @@ const AboutCard = () => {
       <div className={classes.about_card}>
         <div className={classes.creator_details}>
           <div className={classes.image_container}>
-            <img className={classes.image} src="" alt="" />
+            <img className={classes.image} src="" alt="" loading="lazy" />
           </div>
           <h1 className={classes.creator_name}>Om Gawande</h1>
           <a

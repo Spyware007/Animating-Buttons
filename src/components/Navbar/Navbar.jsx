@@ -74,14 +74,14 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
             target="__blank"
             className={classes.image_container_mobile}
           >
-            <img className={classes.image} src={github} alt="Creator" />
+            <img className={classes.image} src={github} alt="Creator" loading="lazy" />
           </a>
           <button
             className={`${classes.mode_toggle} ${modeToggle ? classes.dark_mode : classes.light_mode
               }`}
             onClick={() => modeToggleFunc(!modeToggle)}
           >
-            <img src={modeToggle ? sun : moon} alt="" />
+            <img src={modeToggle ? sun : moon} alt="" loading="lazy" />
           </button>
         </ul>
         <div className={classes.button_container}>
@@ -108,7 +108,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               (<NavLink className={classes.list_item_link} to={`/user/${username}`}>
                 <button className={classes.github}>
                   <div className={classes.image_container}>
-                    <img className={classes.image} src={userImage} alt="Creator" />
+                    <img className={classes.image} src={userImage} alt="Creator" loading="lazy" />
                   </div>
                   <span className={classes.username}>My Profile</span>
                 </button>
@@ -118,7 +118,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               (<NavLink className={classes.list_item_link} to="/login">
                 <button className={classes.github}>
                   <div className={classes.image_container}>
-                    <img className={classes.image} src={github} alt="Creator" />
+                    <img className={classes.image} src={github} alt="Creator" loading="lazy" />
                   </div>
                   <span className={classes.username}>Sign in With GitHub</span>
                 </button>

@@ -67,7 +67,7 @@ const Card = ({ autoid, button }) => {
             <img
               className={classes.contributor_img}
               src={profilePicture}
-              alt="User"
+              alt="User" loading="lazy"
             />
           </div>
           <Link to={`/user/${user}`} className={classes.contributor_name}>
