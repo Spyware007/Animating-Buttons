@@ -1,65 +1,38 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import { Data } from "../../Data";
 import classes from "./Main.module.css";
-import downloadFiles from "../../Functions/DownloadFiles";
-import downloadZip from "../../Functions/DownloadZip";
-
-const redirectToGitHub = (username) => {
-  const sure = window.confirm(`This Will Take You To Github of ${username} ?`);
-  if (sure) {
-    const url = `https://github.com/${username}`;
-    window.open(url, "_blank");
-  }
-};
-const CreatedBy = ({ d }) => {
-  return (
-    <div className={classes.download}>
-      <p onClick={() => redirectToGitHub(d)} className={`${classes.createdBy}`}>
-        Created by
-        <span className={classes.user}> {d}</span>
-      </p>
-    </div>
-  );
-};
-
-const DownloadBtn = ({ d, modeToggle }) => {
-  const displayMode = modeToggle ? classes.dark_mode : classes.light_mode;
-  return (
-    <div className={`${classes.buttonContainer}`}>
-      <button className={`${classes.download_btn} ${displayMode}`}>
-        <Link className={`${classes.showcode_btn} `} to={`/show/${d}`}>
-          Show Code
-        </Link>
-      </button>
-      <button
-        onClick={() => downloadFiles(d)}
-        className={`${classes.download_btn} ${displayMode}`}
-      >
-        <i class="fas fa-download"> </i>
-        Files
-      </button>
-      <button
-        onClick={() => downloadZip(d)}
-        className={`${classes.download_btn} ${displayMode}`}
-      >
-        <i class="fas fa-download"> </i>
-        Zip
-      </button>
-    </div>
-  );
-};
+import Card from "../common/Card/Card";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/auth";
 
 export default function Main({ modeToggle, modeToggleFunc }) {
+  const [buttons, setButtons] = useState([]);
   const [currentPage, setCurrentPage] = useState(
     parseInt(localStorage.getItem("current_page")) || 1
   );
-  const itemsPerPage = 24; // Number of items to display per page
+
+  const itemsPerPage = 36;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  // const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
 
-  const isDark = modeToggle ? "dark_mode" : "light_mode";
+  const fetchButtons = async () => {
+    const buttonsCollection = collection(db, "buttons");
+    const querySnapshot = await getDocs(buttonsCollection);
+    const buttonsData = querySnapshot.docs.map((doc) => {
+      const data = doc.data();
+      return { ...data, autoid: doc.id };
+    });
+    return buttonsData;
+  };
+
+  useEffect(() => {
+    const fetchButtonsData = async () => {
+      const fetchedButtons = await fetchButtons();
+      setButtons(fetchedButtons);
+    };
+
+    fetchButtonsData();
+  }, []);
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -68,61 +41,82 @@ export default function Main({ modeToggle, modeToggleFunc }) {
   };
 
   const isActive = (i) => (currentPage === i + 1 ? classes.active : "");
-  const pageNavigationButtions = (
-    <ul className={classes.paginationList}>
-      {Array(Math.ceil(Data.length / itemsPerPage))
-        .fill()
-        .map((_, index) => (
-          <li
-            key={index}
-            className={`${classes.paginationItem} ${isActive(index)}`}
-            onClick={() => handlePageChange(index + 1)}
-          >
-            {index + 1}
-          </li>
-        ))}
-    </ul>
-  );
   const [query, setQuery] = useState("");
-
-  const filteredItems = Data.filter((d) =>
-    d.toLowerCase().includes(query.toLowerCase())
+  const filteredItems = buttons.filter((button) =>
+    button.html.toLowerCase().includes(query.toLowerCase())
   );
   const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
 
+  const pageNavigationButtions = (
+    <ul className={classes.paginationList}>
+      <li
+        className={`${classes.paginationItem} ${isActive(0)}`}
+        onClick={() => handlePageChange(1)}
+      >
+        {"<"}
+      </li>
+      {Array(Math.ceil(filteredItems.length / itemsPerPage))
+        .fill()
+        .map((_, index) => {
+          const pageNumber = index + 1;
+          if (
+            pageNumber === 1 ||
+            pageNumber === currentPage ||
+            (pageNumber >= currentPage - 1 && pageNumber <= currentPage + 1) ||
+            pageNumber === Math.ceil(filteredItems.length / itemsPerPage)
+          ) {
+            return (
+              <li
+                key={index}
+                className={`${classes.paginationItem} ${isActive(index)}`}
+                onClick={() => handlePageChange(pageNumber)}
+              >
+                {pageNumber}
+              </li>
+            );
+          } else if (
+            (pageNumber === currentPage - 2 && pageNumber > 1) ||
+            (pageNumber === currentPage + 2 &&
+              pageNumber < Math.ceil(filteredItems.length / itemsPerPage))
+          ) {
+            return (
+              <li
+                key={index}
+                className={`${classes.paginationItem} ${classes.ellipsis}`}
+                onClick={() => handlePageChange(pageNumber)}
+              >
+                ...
+              </li>
+            );
+          }
+          return null;
+        })}
+      <li
+        className={`${classes.paginationItem} ${isActive(
+          Math.ceil(filteredItems.length / itemsPerPage) - 1
+        )}`}
+        onClick={() =>
+          handlePageChange(Math.ceil(filteredItems.length / itemsPerPage))
+        }
+      >
+        {">"}
+      </li>
+    </ul>
+  );
+
   return (
-    <>
-      <div className={classes.bar}>
-        <input
-          type="text"
-          placeholder="Find Your Perfect Button..."
-          className={classes.search}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-      </div>
+    <div className={classes.main_container}>
       <h1 style={{ textAlign: "center" }}>
-        Total number of Buttons added {Data.length}
+        Total number of Buttons added {buttons.length}
       </h1>
       <div className={classes.btns_container}>
-        {currentItems
-          .filter((d) => d.toLowerCase().includes(query.toLowerCase()))
-          .map((d, i) => {
-            return (
-              <div key={i}>
-                <iframe
-                  className={classes.iframe_container}
-                  title={d}
-                  src={`Buttons/${d}/index.html?c=${isDark}`}
-                ></iframe>
-                <CreatedBy d={d} />
-                <DownloadBtn d={d} modeToggle={modeToggle} />
-              </div>
-            );
-          })}
+        {currentItems.map((button) => (
+          <Card key={button.autoid} button={button} autoid={button.autoid} />
+        ))}
       </div>
       <div className={classes.pagination}>
         {Data.length > itemsPerPage && pageNavigationButtions}
       </div>
-    </>
+    </div>
   );
 }

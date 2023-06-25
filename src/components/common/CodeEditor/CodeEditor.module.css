@@ -1,0 +1,41 @@
+.editor {
+  width: 800px;
+  height: 770px;
+  background-color: #151515;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+  border-radius: 12px;
+}
+
+.btns_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  background-color: #151515;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+  border-radius: 12px 12px 0 0;
+  color: #fff;
+  padding: 10px;
+}
+.editor_component {
+  border-radius: 20px;
+}
+.addbtn {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-image: linear-gradient(to right, #ea163d, #ff1ddd);
+  color: #fff;
+  min-width: 80px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in;
+}
+@media screen and (max-width: 768px) {
+  .editor {
+    width: 100%;
+  }
+}
