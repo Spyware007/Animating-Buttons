@@ -53,7 +53,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
           </button>
         </ul>
         <div className={classes.button_container}>
-          <NavLink to="/add">
+          <NavLink className={classes.list_item_link} to="/add">
             <button className={classes.add}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               <span className={classes.addbtn}>Create</span>
             </button>
           </NavLink>
-          <NavLink to="/login">
+          <NavLink className={classes.list_item_link} to="/login">
             <button className={classes.github}>
               <div className={classes.image_container}>
                 <img className={classes.image} src={github} alt="Creator" />
