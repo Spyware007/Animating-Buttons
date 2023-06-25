@@ -4,10 +4,10 @@ import classes from "./Button.module.css";
 const Button = ({ show, onClick }) => {
   return (
     <>
-      <button onClick={onClick} class={classes.Btn}>
+      <button onClick={onClick} className={classes.Btn}>
         {show ? (
           <svg
-            class={classes.showIcon}
+            className={classes.showIcon}
             width="20"
             height="16"
             viewBox="0 0 82 69"
@@ -21,7 +21,7 @@ const Button = ({ show, onClick }) => {
           </svg>
         ) : (
           <svg
-            class={classes.svgIcon}
+            className={classes.svgIcon}
             viewBox="0 0 384 512"
             height="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -30,11 +30,11 @@ const Button = ({ show, onClick }) => {
           </svg>
         )}
 
-        <span class={classes.icon2}></span>
+        <span className={classes.icon2}></span>
         {show ? (
-          <span class={classes.tooltipr}>Show</span>
+          <span className={classes.tooltipr}>Show</span>
         ) : (
-          <span class={classes.tooltipl}>Download</span>
+          <span className={classes.tooltipl}>Download</span>
         )}
       </button>
     </>
