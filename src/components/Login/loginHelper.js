@@ -64,7 +64,7 @@ export const saveUserDataToFirestore = async (
 
     // Query the collection to find the document with the user's username
     const querySnapshot = await getDocs(
-      query(usersCollectionRef, where("username", "==", username))
+      query(usersCollectionRef, where("githubUsername", "==", username))
     );
 
     // Check if the document already exists
