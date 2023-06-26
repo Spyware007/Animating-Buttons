@@ -1,48 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Data } from "../../Data";
 import classes from "./Main.module.css";
 import Card from "../common/Card/Card";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../firebase/auth";
 
-export default function Main({ modeToggle, modeToggleFunc }) {
-  const [buttons, setButtons] = useState([]);
+export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
   const [currentPage, setCurrentPage] = useState(
     parseInt(localStorage.getItem("current_page")) || 1
   );
-
   const itemsPerPage = 36;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-
-  const fetchButtons = async () => {
-    const buttonsCollection = collection(db, "buttons");
-    const querySnapshot = await getDocs(buttonsCollection);
-    const buttonsData = querySnapshot.docs.map((doc) => {
-      const data = doc.data();
-      return { ...data, autoid: doc.id };
-    });
-    return buttonsData;
-  };
-
-  useEffect(() => {
-    const fetchButtonsData = async () => {
-      const fetchedButtons = await fetchButtons();
-      setButtons(fetchedButtons);
-    };
-
-    fetchButtonsData();
-  }, []);
-
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
     localStorage.setItem("current_page", pageNumber);
     window.scrollTo({ top: 500, behavior: "smooth" });
   };
-
   const isActive = (i) => (currentPage === i + 1 ? classes.active : "");
+
   const [query, setQuery] = useState("");
-  const filteredItems = buttons.filter((button) =>
+  const filteredItems = buttonsData.filter((button) =>
     button.html.toLowerCase().includes(query.toLowerCase())
   );
   const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
@@ -107,7 +83,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
   return (
     <div className={classes.main_container}>
       <h1 style={{ textAlign: "center" }}>
-        Total number of Buttons added {buttons.length}
+        Total number of Buttons added {buttonsData.length}
       </h1>
       <div className={classes.btns_container}>
         {currentItems.map((button) => (

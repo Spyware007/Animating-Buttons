@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { collection, doc, getDoc, updateDoc } from "firebase/firestore";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../../../firebase/auth";
 import axios from "axios";
 import { getAuth } from "firebase/auth";
@@ -16,7 +16,7 @@ function LikeButton({ autoid }) {
     const auth = getAuth();
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        setUserLoggedIn(true)
+        setUserLoggedIn(true);
         fetchGithubData(user);
       } else {
         setUserLoggedIn(false);
@@ -50,7 +50,9 @@ function LikeButton({ autoid }) {
     const githubId = user.providerData[0].uid;
 
     try {
-      const response = await axios.get(`https://api.github.com/user/${githubId}`);
+      const response = await axios.get(
+        `https://api.github.com/user/${githubId}`
+      );
 
       const { login } = response.data;
       setGithubUsername(login);
@@ -65,26 +67,33 @@ function LikeButton({ autoid }) {
       window.alert("Please loggin first");
       return;
     }
-  
+
     try {
       const docRef = doc(db, "buttons", autoid);
       const docSnapshot = await getDoc(docRef);
-  
+
       if (docSnapshot.exists()) {
         const data = docSnapshot.data();
-        const updatedLikeCounter = liked ? data.likeCounter - 1 : data.likeCounter + 1;
+        const updatedLikeCounter = liked
+          ? data.likeCounter - 1
+          : data.likeCounter + 1;
         let updatedLikeUsers = [...data.likedUsers];
-  
+
         if (liked) {
           // Remove the username from the array
-          updatedLikeUsers = updatedLikeUsers.filter((username) => username !== githubUsername);
+          updatedLikeUsers = updatedLikeUsers.filter(
+            (username) => username !== githubUsername
+          );
         } else {
           // Append the username to the array
           updatedLikeUsers.push(githubUsername);
         }
-  
-        await updateDoc(docRef, { likeCounter: updatedLikeCounter, likedUsers: updatedLikeUsers });
-  
+
+        await updateDoc(docRef, {
+          likeCounter: updatedLikeCounter,
+          likedUsers: updatedLikeUsers,
+        });
+
         setLiked((prevState) => !prevState);
         setLikesAmount(updatedLikeCounter);
       }
@@ -96,7 +105,9 @@ function LikeButton({ autoid }) {
   return (
     <div onClick={handleLike} className={classes.likeButton}>
       <div className={classes.heartBg}>
-        <div className={`${classes.heartIcon} ${liked ? classes.liked : ""}`}></div>
+        <div
+          className={`${classes.heartIcon} ${liked ? classes.liked : ""}`}
+        ></div>
       </div>
       <h1 className={classes.likesAmount}>{likesAmount}</h1>
     </div>

@@ -15,6 +15,9 @@ import {
 import SuspenseLoader from "./components/SuspenseLoader/SuspenseLoader";
 import UserProfile from "./components/UserProfile/UserProfile";
 import About from "./pages/About";
+import { getButtonsData } from "./Server/getButtons";
+import { getUsersData } from "./Server/getUsersData";
+
 const ShowCode = lazy(() => import("./components/ShowCode/ShowCode"));
 
 const App = ({ modeToggleFunc, modeToggle }) => {
@@ -26,13 +29,33 @@ const App = ({ modeToggleFunc, modeToggle }) => {
     window.scrollTo(0, 0);
   }, [location]);
 
+  const [buttonsData, setButtonsData] = useState([]);
+  const [usersData, setUsersData] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const buttonsData = await getButtonsData();
+        const usersData = await getUsersData();
+        setButtonsData(buttonsData);
+        setUsersData(usersData);
+      } catch (error) {
+        console.log("Error fetching data:", error);
+      }
+    }
+    fetchData();
+  }, []);
+
   const routes = [
     {
       path: "/",
       element: (
         <>
           <Landing modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
-          <Main modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
+          <Main
+            modeToggle={toggleMode}
+            modeToggleFunc={setToggleMode}
+            buttonsData={buttonsData}
+          />
         </>
       ),
     },
@@ -44,7 +67,7 @@ const App = ({ modeToggleFunc, modeToggle }) => {
       path: "/show/:id",
       element: (
         <Suspense fallback={<SuspenseLoader />}>
-          <ShowCode />
+          <ShowCode buttonsData={buttonsData} />
         </Suspense>
       ),
     },
@@ -62,7 +85,7 @@ const App = ({ modeToggleFunc, modeToggle }) => {
     },
     {
       path: "/leaderboard",
-      element: <Score />,
+      element: <Score buttonsData={buttonsData} usersData={usersData} />,
     },
     {
       path: "*",
