@@ -3,6 +3,7 @@
   flex-direction: column;
   position: relative;
   margin: 40px 0;
+  margin-top: 8rem;
 }
 
 .timeline_container::after {

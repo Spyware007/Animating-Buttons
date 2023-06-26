@@ -31,5 +31,5 @@ yarn-error.log*
 
 .vscode
 export_to_firebase.py
-export_to_firebase_users.py
+export_to__users.py
 serviceAccountKey.json
