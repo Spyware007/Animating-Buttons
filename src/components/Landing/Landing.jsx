@@ -73,6 +73,7 @@ const Landing = ({ modeToggle, modeToggleFunc }) => {
               variants={socialAnim}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               transition={{ type: "spring", stiffness: 50, delay: 0.8 }}
             >
               <LinkedIn />
