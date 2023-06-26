@@ -111,12 +111,11 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
  - [Welcome to Animating Buttons](https://github.com/arcVaishali/Animating-Buttons/tree/main#welcome-to-animating-buttons)
  - [What can you Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#what-can-you-contribute-%EF%B8%8F-)
  - [How to Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#-how-to-start-contributing-%EF%B8%8F)
-    + [Login to the website](#fork-clone-navigate-the-repository)
-    + [Fork, Clone, Navigate](#fork-clone-navigate-the-repository)
-    + [Initiate your contribution with these steps](#initiate-you-contribution-with-these-steps)
-    + [Important Note](#important-note)
+    + [Login to the website](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#login-to-the-animating-buttons--)
+    + [For GSSoC'23 Contribution, follow these steps-](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#for-gssoc23-contribution-follow-these-steps--)
+        - [Fork, Clone, Navigate the Repository](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#fork-clone-navigate-the-repository-)
  - [How to Make a PR?](https://github.com/arcVaishali/Animating-Buttons/tree/main#-how-to-make-a-pr-)
-    + [Stage, Commit, PR](#stage-commit-pr)
+    + [Stage, Commit, PR](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#initiate-your-contribution-for-gssoc23-with-these-steps-)
  - [Key Reminders for your Attention](https://github.com/arcVaishali/Animating-Buttons/tree/main#--key-reminders-for-your-attention-)
  - [Tech Stack](https://github.com/arcVaishali/Animating-Buttons/tree/main#-tech-stack-used-)
  - [Our Involvement in Notable Open Source Programs](https://github.com/arcVaishali/Animating-Buttons/tree/main#-involvement-in-notable-open-source-programs--)
@@ -153,14 +152,14 @@ ________________________________________________________________________________
 <h1 align="center"> How to start contributing? 💻 </h1>
 
 ## Animating Buttons Repository Instructions 🚀🚀  <br>
-### Login to the [Animating Buttons](https://lets-animate-btns.vercel.app/)  <br>
+### Login to the [Animating Buttons](https://lets-animate-btns.vercel.app/) website <br>
 
 1. Create **issue** in the Animating Buttons repository.
 2. Once you are assigned the **issue**.
 3. **No need to make any changes in the repository.**
-4. **Login** using your GitHub Account on our website, as shown in above [screenshots]()
-5. Click on **CREATE** button on the nav-bar, as shown in above [screenshots]() 
-6. Create your button **directly** on the website, as shown in above [screenshots]()  
+4. **Login** using your GitHub Account on our website, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/blob/readme-1102/readme-assets/log-in-page.png)
+5. Click on **CREATE** button on the nav-bar, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/blob/readme-1102/readme-assets/after-login.png) 
+6. Create your button **directly** on the website, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/blob/readme-1102/readme-assets/create.png)  
 
 ### For GSSoC'23 Contribution, follow these steps- <br>
 #### Fork, Clone, Navigate the Repository <br>
