@@ -21,6 +21,7 @@
   .icon-container{
     display:flex;
     gap:5px;
+    
   }
 
   .but1:hover{
@@ -44,4 +45,4 @@
     background-color: #666;
     box-shadow: 0 10px #666;
     transform: translateY(8px);
-  
+  }

@@ -1,0 +1,126 @@
+.landing {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100vw;
+  /* height: calc(100vh - 92px); */
+  height: 86vh;
+  padding: 10px 100px;
+  font-family: "SansationBold", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.landing.landing-dark .header {
+  color: #fff;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  color: #000;
+  z-index: 1;
+}
+.heading {
+  font-size: 5vw;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.para {
+  color: inherit;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  width: 600px;
+}
+.rectangle {
+  position: absolute;
+  width: 1074px;
+  height: 430.34px;
+  left: -300px;
+  top: -470px;
+  /* background: #2eb5d2;
+  filter: blur(415px);
+  transform: rotate(-25deg); */
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 1;
+}
+.memoji {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #00d1ff;
+  z-index: 999;
+}
+.landing.landing-dark .memoji {
+  background-color: #000;
+  /* border: 2px solid #fff; */
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.social_profile {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+.landing.landing-light .link {
+  color: #000;
+}
+@media screen and (max-width: 768px) {
+  .landing {
+    height: auto;
+    padding: 10px 20px;
+    align-items: center;
+    min-height: 86vh;
+  }
+  .header {
+    align-items: center;
+  }
+  .heading {
+    text-align: center;
+    font-size: 9vw;
+  }
+  .para {
+    width: auto;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .rectangle {
+    width: 1686px;
+    height: 1559.34px;
+    left: -611px;
+    top: -224px;
+    transform: rotate(29.5deg);
+  }
+  .button_image {
+    width: 100%;
+    height: 100%;
+  }
+  .socials {
+    align-self: flex-start;
+  }
+}

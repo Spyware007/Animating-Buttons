@@ -1,3 +1,6 @@
+# Readme Will be Updated soon.
+# Don't follow this Readme for contributions.
+
 <!-- GDSC DY PATIL COLLEGE OG ENGINEERING, PUNE LOGO -->
 
 <div align="center">
@@ -75,7 +78,7 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <!-------------------------------------  TABLE OF CONTENT---------------------- -->
-<h1 align="center"> Table of Content </h1>
+<h1 align="center"> Table of Contents </h1>
 <div>
 
  - [Welcome to Animating Buttons](https://github.com/arcVaishali/Animating-Buttons/tree/main#welcome-to-animating-buttons)
