@@ -9,8 +9,35 @@
 
 <br><br>
 
+---
+
 <!-- ANIMATING BUTTONS WEBSITE GLIMPSE -->
-![Screenshot](https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png)
+
+<div align="center" style="display:flex ">
+<img  src = "readme-assets/main-page.png">
+<!-- <img width="500px" src = "./readme_assets/flipkart_grid.png"> -->
+<br><br>
+</div>
+<table>
+  <tr>
+    <td><img width="500px" src = "readme-assets/about.png"></td>
+    <td><img width="500px" src = "readme-assets/log-in-page.png"></td>
+  </tr>
+  <tr>
+    <td><img width="500px" src = "readme-assets/after-login.png"></td>
+    <td><img width="500px" src = "readme-assets/create.png"></td>
+  </tr>
+  <!-- <tr>
+    <td><img width="500px" src = "./readme_assets/verify_warranty.png"></td>
+    <td><img width="500px" src = "./readme_assets/product_page.png"></td>
+  </tr>
+  <tr>
+    <td><img width="500px" src = "./readme_assets/customer_profile.png"></td>
+    <td><img width="500px" src = "./readme_assets/popup.png"></td>
+  </tr> -->
+</table>
+
+---
 
 
 ------------
@@ -81,6 +108,7 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
  - [Welcome to Animating Buttons](https://github.com/arcVaishali/Animating-Buttons/tree/main#welcome-to-animating-buttons)
  - [What can you Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#what-can-you-contribute-%EF%B8%8F-)
  - [How to Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#-how-to-start-contributing-%EF%B8%8F)
+    + [Login to the website](#fork-clone-navigate-the-repository)
     + [Fork, Clone, Navigate](#fork-clone-navigate-the-repository)
     + [Initiate your contribution with these steps](#initiate-you-contribution-with-these-steps)
     + [Important Note](#important-note)
@@ -121,18 +149,26 @@ ________________________________________________________________________________
 
 <h1 align="center"> How to start contributing? 💻 </h1>
 
-### Animating Buttons Repository Instructions 🚀🚀  
+## Animating Buttons Repository Instructions 🚀🚀  <br>
+### Login to the [Animating Buttons](https://lets-animate-btns.vercel.app/)  <br>
 
-<!-- -----------------FORK CLONE NAVIGATE---------- -->
-#### Fork, Clone, Navigate the Repository
-1. First, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
+1. Create **issue** in the Animating Buttons repository.
+2. Once you are assigned the **issue**.
+3. **No need to make any changes in the repository.**
+4. **Login** using your GitHub Account on our website, as shown in above [screenshots]()
+5. Click on **CREATE** button on the nav-bar, as shown in above [screenshots]() 
+6. Create your button **directly** on the website, as shown in above [screenshots]()  
 
-2. Clone the forked repo to your local machine using the following command:
+### For GSSoC'23 Contribution, follow these steps- <br>
+#### Fork, Clone, Navigate the Repository <br>
+7. After you have created the button on the website, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
+
+- Clone the forked repo to your local machine using the following command:
     ```terminal
     git clone https://github.com/**username**/Animating-Buttons.git
     ```
 
-3. Navigate to project directory.
+- Navigate to project directory.
     ```terminal
     cd Animating-Buttons
     ```
@@ -142,64 +178,25 @@ ________________________________________________________________________________
     npm start
     ```
 
-4. Create a new Branch
+- Create a new Branch
     ```
     git checkout -b my-new-branch
     ```
-<!------------- INITIATE YOUR CONTRIBUTION----------->
-#### Initiate your contribution with these steps
-5. Once you have cloned the repository and created a new branch, proceed with the following steps to initiate your contribution-                                 
-      <div align="right">
-
-      | STEPS |               DESCRIPTION                                                                |
-      |-------|------------------------------------------------------------------------------------------|
-      | 1.    | Go to the [public/Buttons folder🚀](https://github.com/Spyware007/Animating-Buttons/tree/main/public/Buttons) in the repository.                                                                                        |
-      | 2.    | Add a new folder with your GitHub username, including your button code (index.html + style.css files).                                                                                            |
-      | 3.    | Go to the [src/Data.js file 🚀](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                                                                                                |
-      | 4.    | Add your folder name (e.g., `github_username`) and your code in the [src/Data.js file](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)                            |
-
-      </div>
-
-
-       Note: Replace `github_username` with your actual GitHub username.
-
-<!-- -------IMPORTANT NOTE-------------- -->
-#### Important Note
-6. Before embarking on your journey, bear these points in mind- ❗❗
-    <div align="right">
-
-    | Note                                                                                            |
-    |-------------------------------------------------------------------------------------------------|
-    | Make sure to align your button centered horizontally as well as vertically.                     |
-    | Don't forget to replace 'your_github_username' with your actual GitHub username.                |
-    | If you are adding more than one button, give them proper names like Spyware007_1, Spyware007_2 your_github_username_1, etc.                                                                      |
-
-    </div>
-
--------------------
-
-<!-- ---------------HOW TO MAKE A PR?--------------------- -->
 <h1 align="center"> How to Make a PR? 👨‍💻 </h1>
 
-<!-- --------STAGE COMMIT AND PR-------------------------- -->
-#### Stage, Commit, PR
-1. Stage your changes. 
-   ```
-   git add .
-   ```
+#### Initiate your contribution for GSSoC'23 with these steps <br>
+8. Once you have cloned the repository and created a new branch, proceed with the following steps to initiate your contribution-                                 
+      - Make an **empty commit**.
+         ```
+         git commit --allow-empty -m "Empty commit for PR"
+         ``` 
+      - Then push 
+         ```
+         git push origin my-new-branch
+         ``` 
+      - Finally, create a new pull request from your forked repository.
 
-2. Commit your changes.
-   ```
-   git commit -m "Relevant message"
-   ```
-
-3. Then push 
-   ```
-   git push origin my-new-branch
-   ```
-
-4. Finally, create a new pull request from your forked repository.
-
+-------------------
 
 <!----- TO KNOW MORE, READ CONTRIBUTING GUIDELINES--- -->
 5. To know more about how to contribute, read the [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 🚀🚀
@@ -222,13 +219,9 @@ ________________________________________________________________________________
 
 |  **SNo.** |      **Description**                                                                      |
 |-----------|-------------------------------------------------------------------------------------------|
-|     1     | Make sure you commit your changes in a new branch ❗❗                                   |
-|     2     | Make sure that your file name and your commit message are relevant.                       |
-|     3     | Also, make sure you comment your code wherever necessary.                                 |
-|     4     | Make sure to align your button centered horizontally as well as vertically.               |
-|     5     | Make sure your folder name is in correct format (GitHub username)                                                                                               |
-|     6     | If you are adding more than one button, give them proper names like Spyware007_1, Spyware007_2 your_github_username_1, etc.                                                               |
-
+|     1     | **No need to make any changes in the repository**❗❗                                   |
+|     2     | Buttons will be added **directly** on the website, Visit the website.                       |
+|     3     | Fork, Clone and Make new branch, and then make an **Empty Commit** as explained above                            |
 </div>
 
 _________________________________________________________________________________________________________________
