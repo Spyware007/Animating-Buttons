@@ -1,0 +1,109 @@
+:root {
+  --bg-color:#191919;
+}
+
+body {
+  margin:0;
+  background-color:var(--bg-color);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:Helvetica,Sans-serif;
+}
+a {
+  text-decoration:none;
+  color:#FFF;
+}
+.rainbow-button {
+  --primary-neon:rgba(231,131,243,.9);
+  --light-neon:rgba(159,87,161,.7);
+  --pulse-neon:rgba(159,87,161,.5);
+  --bright-neon:rgba(159,87,161,1);
+  --off-neon:#333;
+  
+  --neon-shadow:0 0 7px 4px var(--light-neon), 0 0 7px 4px var(--light-neon) inset;
+  --neon-shadow-pulse:0 0 8px 5px var(--pulse-neon), 0 0 8px 5px var(--pulse-neon) inset;
+  --neon-shadow-bright:0 0 8px 4px var(--bright-neon), 0 0 8px 4px var(--bright-neon) inset;
+  --neon-shadow-text:0 0 7px var(--primary-neon);
+  
+  width:calc(20vw + 6px);
+  height:calc(8vw + 6px);
+  color:var(--primary-neon);
+  text-shadow:var(--neon-shadow-text);
+  border:3px solid var(--primary-neon);
+  border-radius:5px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-transform:uppercase;
+  font-size:3vw;
+  font-weight:bold;
+  box-shadow:var(--neon-shadow);
+  animation:flicker 10s linear infinite;
+}
+
+@keyframes flicker {
+  0% {
+    box-shadow:var(--neon-shadow);
+  }
+  45% {
+    box-shadow:var(--neon-shadow-pulse);
+  }
+  90% {
+    box-shadow:var(--neon-shadow);
+    border-color:var(--primary-neon);
+    color:var(--primary-neon);
+    text-shadow:var(--neon-shadow-text);
+  }
+  90.01% {
+    box-shadow:none;
+    border-color:var(--off-neon);
+    color:var(--off-neon);
+    text-shadow:none;
+  }
+  94% {
+    box-shadow:none;
+    border-color:var(--off-neon);
+  }
+  94.01% {
+    box-shadow:var(--neon-shadow);
+    border-color:var(--primary-neon);
+  }
+  95% {
+    box-shadow:var(--neon-shadow);
+    border-color:var(--primary-neon);
+  }
+  95.01% {
+    box-shadow:none;
+    border-color:var(--off-neon);
+  }
+  95.5% {
+    box-shadow:none;
+    border-color:var(--off-neon);
+  }
+  95.51% {
+    box-shadow:var(--neon-shadow);
+    border-color:var(--primary-neon);
+  }
+  96% {
+    box-shadow:var(--neon-shadow);
+    border-color:var(--primary-neon);
+  }
+  96.01% {
+    box-shadow:none;
+    border-color:var(--off-neon);
+  }
+  96.5% {
+    box-shadow:none;
+    border-color:var(--off-neon);
+  }
+  96.51% {
+    box-shadow:var(--neon-shadow-bright);
+    border-color:var(--primary-neon);
+  }
+  100% {
+    box-shadow:var(--neon-shadow);
+    border-color:var(--primary-neon);
+  }
+}

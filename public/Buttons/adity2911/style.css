@@ -1,0 +1,100 @@
+body {
+  align-items: center;
+  background: linear-gradient(
+      20deg,
+      rgba(181, 23, 216, 0.5),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(150deg, rgba(182, 92, 255, 0.5), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(330deg, rgba(221, 44, 121, 0.5), rgba(0, 0, 255, 0) 70.71%);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.buttonContainer {
+  position: relative;
+  height: 174px;
+  transform: scale(0.7);
+  transform-origin: 50% 50%;
+  transition: transform 60ms;
+  width: 486px;
+}
+.buttonContainer:active {
+  transform: scale(0.65);
+}
+.button {
+  position: relative;
+  background-color: transparent;
+  border-radius: 50px;
+  border: 0;
+  box-shadow: 0px 2.4px 2.2px rgba(0, 0, 0, 0.042),
+    0px 5.1px 5.3px rgba(0, 0, 0, 0.061), 0px 8.8px 10px rgba(0, 0, 0, 0.075),
+    0px 15.4px 17.9px rgba(0, 0, 0, 0.089),
+    0px 30.6px 33.4px rgba(0, 0, 0, 0.108), 0px 100px 80px rgba(0, 0, 0, 0.15);
+  color: #47515e;
+  cursor: pointer;
+  font-size: 30px;
+  height: 104px;
+  left: 50px;
+  top: 35px;
+  width: 380px;
+}
+.effect {
+  position: absolute;
+}
+.sprites {
+  animation: Circut 4s linear infinite;
+  offset-path: path(
+    "m 102,40.267155 h 275.99997 c 25.89,0 46.73285,20.842849 46.73285,46.732845 0,25.89 -20.84285,46.73285 -46.73285,46.73285 H 102 C 76.110005,133.73285 55.267155,112.89 55.267155,87 55.267155,61.110004 76.110005,40.267155 102,40.267155 Z"
+  );
+  transform: rotate(90deg);
+}
+
+@keyframes Circut {
+  to {
+    motion-offset: 100%;
+    offset-distance: 100%;
+  }
+}
+
+@keyframes animateScale {
+  0% {
+    transform: scale(1.2);
+  }
+  25% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.sprite1 {
+  animation: animateScale 5s infinite;
+  animation-delay: 0s;
+  fill: #d7d5de;
+}
+
+.sprite2 {
+  animation: animateScale 5s infinite;
+  animation-delay: 0.2s;
+  fill: #ebdfcf;
+}
+
+.sprite3 {
+  animation: animateScale 5s infinite;
+  animation-delay: 0.4s;
+  fill: #eff1f4;
+}
+
+.sprite4 {
+  animation: animateScale 5s infinite;
+  animation-delay: 0.6s;
+  fill: #fff;
+}
