@@ -20,7 +20,8 @@ function download(css, html, js, name) {
   });
 }
 
-const Card = ({ autoid, button }) => {
+const Card = ({ button }) => {
+  const btnId = button.id;
   const user = button.githubUsername;
   const [profilePicture, setProfilePicture] = useState({});
 
@@ -51,7 +52,7 @@ const Card = ({ autoid, button }) => {
     <div className={classes.card_container}>
       <iframe
         className={classes.iframe_container}
-        title={autoid}
+        title={btnId}
         srcDoc={`
             <html>
               <head><style>${button.css}</style></head>
@@ -75,7 +76,7 @@ const Card = ({ autoid, button }) => {
           </Link>
         </div>
         <div className={classes.btns_container}>
-          <Link to={`/show/${autoid}`}>
+          <Link to={`/show/${btnId}`}>
             <Button show={true} />
           </Link>
           <Button
@@ -86,7 +87,7 @@ const Card = ({ autoid, button }) => {
 
       <div className={classes.stats_btn}>
         {/* <ViewsIcon /> */}
-        <LikeButton autoid={autoid} />
+        <LikeButton btnId={btnId} />
       </div>
     </div>
   );

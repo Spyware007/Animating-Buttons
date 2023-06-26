@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Data } from "../../Data";
 import classes from "./Explore.module.css";
-import Card from "../Card/Card";
 
 export default function Explore({ modeToggle, modeToggleFunc }) {
   const [currentPage, setCurrentPage] = useState(

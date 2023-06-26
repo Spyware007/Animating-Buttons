@@ -9,19 +9,20 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
   );
   const itemsPerPage = 36;
   const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const isActive = (i) => (currentPage === i + 1 ? classes.active : "");
+  const [query, setQuery] = useState("");
+  const filteredItems = buttonsData.filter((button) =>
+    button.html.toLowerCase().includes(query.toLowerCase())
+  );
+  const currentItems = filteredItems.slice(
+    indexOfLastItem - itemsPerPage,
+    indexOfLastItem
+  );
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
     localStorage.setItem("current_page", pageNumber);
     window.scrollTo({ top: 500, behavior: "smooth" });
   };
-  const isActive = (i) => (currentPage === i + 1 ? classes.active : "");
-
-  const [query, setQuery] = useState("");
-  const filteredItems = buttonsData.filter((button) =>
-    button.html.toLowerCase().includes(query.toLowerCase())
-  );
-  const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
 
   const pageNavigationButtions = (
     <ul className={classes.paginationList}>
@@ -86,8 +87,8 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
         Total number of Buttons added {buttonsData.length}
       </h1>
       <div className={classes.btns_container}>
-        {currentItems.map((button) => (
-          <Card key={button.autoid} button={button} autoid={button.autoid} />
+        {currentItems.map((button, index) => (
+          <Card key={index} button={button} />
         ))}
       </div>
       <div className={classes.pagination}>

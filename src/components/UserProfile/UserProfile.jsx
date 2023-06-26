@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import classes from "./UserProfile.module.css";
 import { Link, useParams } from "react-router-dom";
 import { Twitter, LinkedIn } from "../../assets/svg";
-import Memoji from "../../assets/memoji.png";
-import { Data } from "../../Data";
 import Card from "../common/Card/Card";
 import axios from "axios";
 import { collection, getDocs, query, where } from "firebase/firestore";
@@ -122,12 +120,9 @@ const UserProfile = () => {
       </div>
       <div>
         <div className={classes.btns_container}>
-          {buttons
-            // .filter((d) => d.toLowerCase().includes(query.toLowerCase()))
-            .map((d, i) => {
-              console.log(d);
-              return <Card key={i} autoid={d.autoid} button={d} />;
-            })}
+          {buttons.map((btn, i) => (
+            <Card key={i} button={btn} />
+          ))}
         </div>
       </div>
     </>

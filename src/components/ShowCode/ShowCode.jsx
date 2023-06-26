@@ -42,7 +42,6 @@ const ShowCode = () => {
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
       const data = docSnap.data();
-      console.log(data); // Log the data object to the console
       setHtml(data.html || "");
       setCss(data.css || "");
       setJs(data.js || "");

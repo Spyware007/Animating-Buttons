@@ -10,8 +10,6 @@ import { auth } from "../../firebase/auth";
 import { getAuth } from "firebase/auth";
 import classes from "./Login.module.css";
 import axios from "axios";
-import { collection, getDocs, query, where } from "firebase/firestore";
-import { db } from "../../firebase/auth";
 import Card from "../common/Card/Card";
 
 const Login = () => {
@@ -122,9 +120,8 @@ const Login = () => {
               <div className={classes.btns_container}>
                 {buttons
                   // .filter((d) => d.toLowerCase().includes(query.toLowerCase()))
-                  .map((d, i) => {
-                    console.log(d);
-                    return <Card key={i} autoid={d.autoid} button={d} />;
+                  .map((button, index) => {
+                    return <Card key={index} button={button} />;
                   })}
               </div>
             </div>
