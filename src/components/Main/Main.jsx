@@ -106,7 +106,7 @@ export default function Main({ modeToggle, modeToggleFunc }) {
 
   return (
     <div className={classes.main_container}>
-      <h1 style={{ textAlign: "center" }}>
+      <h1 style={{ textAlign: "center" , marginTop: "30px"}}>
         Total number of Buttons added {buttons.length}
       </h1>
       <div className={classes.btns_container}>
