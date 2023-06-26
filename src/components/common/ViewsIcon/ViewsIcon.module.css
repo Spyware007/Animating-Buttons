@@ -1,0 +1,25 @@
+.views {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  padding: 4px 10px;
+  height: 30px;
+  background-color: rgb(22, 32, 52);
+  border: 0.5px solid pink;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.views_gif {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+.views_counter {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: #888;
+  font-weight: 900;
+  margin: 0;
+}

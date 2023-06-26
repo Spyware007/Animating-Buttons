@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animating Buttons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="buttonContainer">
+    <svg class="effect" width="486" height="174" viewBox="0 0 486 174">
+      <defs>
+        <clipPath id="theClip">
+          <path d="m 102,35 h 276 c 28.808,0 52,23.192 52,52 0,28.808 -23.192,52
+              -52,52 H 102 C 73.192002,139 50,115.808 50,87 50,58.192 73.192002,35
+              102,35 Z" />
+        </clipPath>
+      </defs>
+      <path style="fill: #e2e0de" d="m 102,35 h 276 c 28.808,0 52,23.192 52,52 0,28.808 -23.192,52
+          -52,52 H 102 C 73.192002,139 50,115.808 50,87 50,58.192 73.192002,35
+          102,35 Z" />
+      <g clip-path="url(#theClip)">
+        <g class="sprites">
+          <circle class="sprite1" cx="0" cy="0" r="70" />
+          <circle class="sprite1" fill="none" stroke="#000" stroke-width="1" cx="0" cy="0" r="70" />
+          <circle class="sprite2" cx="0" cy="0" r="50" />
+          <circle class="sprite2" fill="none" stroke="#000" stroke-width="1" cx="0" cy="0" r="50" />
+          <circle class="sprite3" cx="0" cy="0" r="30" />
+          <circle class="sprite3" fill="none" stroke="#000" stroke-width="1" cx="0" cy="0" r="30" />
+          <circle class="sprite4" cx="0" cy="0" r="10" />
+          <circle class="sprite4" fill="none" stroke="#000" stroke-width="1" cx="0" cy="0" r="10" />
+        </g>
+      </g>
+      <path style="fill: #fcfdff" d="m 102,45 h 276 c 23.268,0 42,18.732 42,42 0,23.268 -18.732,42 -42,42 H 102 C 78.732002,129 60,110.268 60,87 60,63.732 78.732002,45 102,45 Z" />
+    </svg>
+    <button class="button">Click me!</button>
+  </div>
+</body>
+</html>

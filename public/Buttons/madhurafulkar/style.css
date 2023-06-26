@@ -1,0 +1,729 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    }
+
+    .wrapper {
+
+    position: absolute;
+
+    background: #2b3e51;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow-y: scroll;
+
+    }
+
+    .wrapper .switch {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 60%;
+
+    transform: translate(-50%, -50%);
+
+    width: 120px;
+
+    height: 50px;
+
+    }
+
+    .wrapper .switch input {
+
+    display: none;
+
+    }
+
+    .wrapper .switch .wave {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    border-radius: 40px;
+
+    width: 120px;
+
+    height: 50px;
+
+    display: none;
+
+    }
+
+    .wrapper .switch .wave:after {
+
+    content: "";
+
+    width: 60px;
+
+    height: 3px;
+
+    border-radius: 100%;
+
+    background: #fff;
+
+    position: absolute;
+
+    top: 3px;
+
+    left: 20%;
+
+    opacity: 0.4;
+
+    }
+
+    .wrapper .switch .wave:before {
+
+    content: "";
+
+    width: 35px;
+
+    height: 2px;
+
+    border-radius: 100%;
+
+    background: #fff;
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 30%;
+
+    opacity: 0.3;
+
+    }
+
+    .wrapper .switch .slider {
+
+    position: absolute;
+
+    cursor: pointer;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    background-color: #e74a42;
+
+    transition: all 1.4s;
+
+    border-radius: 50px;
+
+    z-index: 100;
+
+    overflow: hidden;
+
+    }
+
+    .wrapper .switch .slider:before,
+
+    .wrapper .switch .slider:after {
+
+    position: absolute;
+
+    content: "";
+
+    height: 40px;
+
+    width: 40px;
+
+    left: 5px;
+
+    bottom: 5px;
+
+    border-radius: 30px;
+
+    background-color: #fff;
+
+    }
+
+    .wrapper .switch .slider:before {
+
+    transition: 0.4s;
+
+    }
+
+    .wrapper .switch .slider:after {
+
+    transition: 0.5s;
+
+    }
+
+    .wrapper .switch .slider .fish {
+
+    position: absolute;
+
+    left: -20%;
+
+    top: 20%;
+
+    transition: 1.5s all;
+
+    }
+
+    .wrapper .switch .slider .fish .body {
+
+    width: 20px;
+
+    height: 20px;
+
+    background: repeating-linear-gradient(-45deg, #e79c2a, #e79c2a 5px, #fb7813 5px, #fb7813 10px);
+
+    border-radius: 0 100% 20% 100%;
+
+    transform: rotate(-45deg);
+
+    position: relative;
+
+    }
+
+    .wrapper .switch .slider .fish .eye {
+
+    position: absolute;
+
+    top: 8px;
+
+    left: 15px;
+
+    width: 4px;
+
+    height: 4px;
+
+    background-color: #000;
+
+    border-radius: 100%;
+
+    }
+
+    .wrapper .switch .slider .fish .eye:after {
+
+    content: "";
+
+    width: 1px;
+
+    height: 1px;
+
+    background-color: #fff;
+
+    border-radius: 100%;
+
+    position: absolute;
+
+    top: 25%;
+
+    left: 25%;
+
+    }
+
+    .wrapper .switch .slider .fish .tail {
+
+    width: 5px;
+
+    height: 5px;
+
+    background: repeating-linear-gradient(-45deg, #e79c2a, #e79c2a 5px, #fb7813 5px, #fb7813 10px);
+
+    border-radius: 100% 10% 0 10%;
+
+    transform: rotate(-45deg);
+
+    position: absolute;
+
+    left: -8px;
+
+    top: 40%;
+
+    }
+
+    .wrapper .switch .sky {
+
+    position: absolute;
+
+    left: -40%;
+
+    top: -150px;
+
+    width: 100px;
+
+    height: 100px;
+
+    transform: scale(0);
+
+    opacity: 0;
+
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    }
+
+    .wrapper .switch .sky .sun .outer {
+
+    background: #e77b21;
+
+    width: 50px;
+
+    height: 50px;
+
+    position: absolute;
+
+    top: -11px;
+
+    border-radius: 5px;
+
+    }
+
+    .wrapper .switch .sky .sun .outer:before,
+
+    .wrapper .switch .sky .sun .outer:after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    height: 50px;
+
+    width: 50px;
+
+    background: #e77b21;
+
+    border-radius: 5px;
+
+    }
+
+    .wrapper .switch .sky .sun .outer:before {
+
+    transform: rotate(30deg);
+
+    }
+
+    .wrapper .switch .sky .sun .outer:after {
+
+    transform: rotate(60deg);
+
+    }
+
+    .wrapper .switch .sky .sun .inner {
+
+    position: absolute;
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 100%;
+
+    background-color: #ffd65a;
+
+    top: -12px;
+
+    overflow: hidden;
+
+    }
+
+    .wrapper .switch .sky .sun .inner:before {
+
+    content: "";
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 100%;
+
+    position: absolute;
+
+    left: 3 px;
+
+    top: 15px;
+
+    background: #ffc631;
+
+    }
+
+    .wrapper .switch .sky .cloud {
+
+    position: absolute;
+
+    filter: url("#cloud");
+
+    z-index: -1;
+
+    }
+
+    .wrapper .switch .sky .cloud .rect {
+
+    width: 100px;
+
+    height: 30px;
+
+    background: #fff;
+
+    border-radius: 100px;
+
+    }
+
+    .wrapper .switch .sky .cloud .circle {
+
+    border-radius: 100%;
+
+    background: #fff;
+
+    position: absolute;
+
+    }
+
+    .wrapper .switch .sky .cloud .circle-lg {
+
+    width: 50px;
+
+    height: 50px;
+
+    top: -55%;
+
+    left: 5%;
+
+    }
+
+    .wrapper .switch .sky .cloud .circle-sm {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 100%;
+
+    left: 35%;
+
+    top: -50%;
+
+    }
+
+    .wrapper .switch .sky .cloud1 {
+
+    left: -60%;
+
+    top: 20%;
+
+    }
+
+    .wrapper .switch .sky .cloud2 {
+
+    left: 150px;
+
+    top: 10%;
+
+    opacity: 0.8;
+
+    }
+
+    .wrapper .switch input:checked + .slider {
+
+    background-color: transparent;
+
+    }
+
+    .wrapper .switch input:checked + .slider .fish {
+
+    animation: fishMovement 4s linear infinite;
+
+    }
+
+    .wrapper .switch input:checked ~ .wave {
+
+    background-color: #3398d9;
+
+    display: block;
+
+    filter: url(#wave);
+
+    }
+
+    .wrapper .switch input:checked + .slider:before {
+
+    transform: translateX(70px);
+
+    }
+
+    .wrapper .switch input:checked + .slider:after {
+
+    transform: translateX(70px);
+
+    }
+
+    .wrapper .switch input:checked ~ .boat {
+
+    top: -25%;
+
+    opacity: 1;
+
+    z-index: -1;
+
+    animation: boatMovement 3s linear alternate infinite;
+
+    }
+
+    .wrapper .switch input:checked ~ .sky {
+
+    transform: scale(1);
+
+    opacity: 1;
+
+    }
+
+    .wrapper .switch input:checked ~ .sky .outer {
+
+    animation: rotateSun 5s infinite linear;
+
+    }
+
+    .wrapper .switch input:checked ~ .sky .cloud {
+
+    animation: swingCloud 10s infinite linear;
+
+    }
+
+    .wrapper .switch .boat {
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 25%;
+
+    width: 40px;
+
+    height: 100px;
+
+    transition: 0.6s all cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+    opacity: 0;
+
+    }
+
+    .wrapper .switch .boat .bottom {
+
+    border-top: 15px solid #d64242;
+
+    border-left: 10px solid transparent;
+
+    border-right: 10px solid transparent;
+
+    height: 0;
+
+    width: 40px;
+
+    border-radius: 2px;
+
+    }
+
+    .wrapper .switch .boat .bottom:after {
+
+    content: "";
+
+    width: 50px;
+
+    border-top: 4px solid #000;
+
+    border-left: 3px solid transparent;
+
+    border-right: 3px solid transparent;
+
+    height: 0;
+
+    position: absolute;
+
+    top: 3px;
+
+    left: 2px;
+
+    opacity: 0.2;
+
+    }
+
+    .wrapper .switch .boat .mast {
+
+    position: absolute;
+
+    width: 3px;
+
+    height: 35px;
+
+    background: #6f4914;
+
+    left: 70%;
+
+    bottom: 100%;
+
+    }
+
+    .wrapper .switch .boat .rectangle-sm {
+
+    width: 0;
+
+    height: 0;
+
+    border-top: 15px solid transparent;
+
+    border-left: 10px solid #d6d6d6;
+
+    border-right: 10px solid transparent;
+
+    border-radius: 0 0 0 0;
+
+    position: absolute;
+
+    left: 80%;
+
+    bottom: 110%;
+
+    }
+
+    .wrapper .switch .boat .rectangle-lg {
+
+    width: 0;
+
+    height: 0;
+
+    border-top: 25px solid transparent;
+
+    border-left: 10px solid transparent;
+
+    border-right: 15px solid #d6d6d6;
+
+    border-radius: 0 0 0 0;
+
+    position: absolute;
+
+    left: 5%;
+
+    bottom: 110%;
+
+    }
+
+    .wrapper a {
+
+    color: #fff;
+
+    padding: 15px;
+
+    display: block;
+
+    font-family: sans-serif;
+
+    font-size: 10px;
+
+    position: absolute;
+
+    }
+
+    svg {
+
+    display: none;
+
+    }
+
+    @keyframes fishMovement {
+
+    60% {
+
+    transform: translate(-50%, 50%);
+
+    }
+
+    65% {
+
+    transform: translate(50%, 50%);
+
+    }
+
+    100% {
+
+    transform: translate(100px, 50%);
+
+    }
+
+    }
+
+    @keyframes boatMovement {
+
+    30% {
+
+    transform: rotate(-5deg);
+
+    }
+
+    60% {
+
+    transform: rotate(5deg);
+
+    }
+
+    100% {
+
+    transform: rotate(0);
+
+    }
+
+    }
+
+    @keyframes twinkling {
+
+    30% {
+
+    opacity: 0.4;
+
+    }
+
+    60% {
+
+    transform: scale(1.2);
+
+    }
+
+    100% {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    }
+
+    }
+
+    @keyframes rotateSun {
+
+    100% {
+
+    transform: rotate(360deg);
+
+    }
+
+    }
+
+    @keyframes swingCloud {
+
+    50% {
+
+    transform: translateX(50px);
+
+    }
+
+    }

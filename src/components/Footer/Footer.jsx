@@ -13,7 +13,7 @@ const Footer = ({ modeToggle }) => {
     <div className={`${classes.footer} ${isDark}`}>
       <div className={classes.footer_left}>
         <p className={classes.footer_copyright}>
-          © 2022 by <a href="https://github.com/spyware007">Spyware007</a>
+          © 2023 by <a href="https://github.com/spyware007">Spyware007</a>
           {""}. All rights reserved.
         </p>
         <p className={classes.footer_rights}>
@@ -27,7 +27,7 @@ const Footer = ({ modeToggle }) => {
             <FaGithubSquare className={classes.glow} />
           </a>
         </li>
-        <li className={classes.footer_icons}>
+        <li className={classes.footer_icons_2}>
           <a
             className={classes.linki}
             href="https://www.instagram.com/spyware007_/"
@@ -43,7 +43,7 @@ const Footer = ({ modeToggle }) => {
             <FaLinkedin className={classes.glow} />
           </a>
         </li>
-        <li className={classes.footer_icons}>
+        <li className={classes.footer_icons_2}>
           <a className={classes.linkt} href="https://twitter.com/oom_gawande">
             <FaTwitterSquare className={classes.glow} />
           </a>
