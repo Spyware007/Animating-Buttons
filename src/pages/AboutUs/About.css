@@ -92,6 +92,11 @@
   margin-top: 8rem;
   text-align: center;
 }
+.Admin-name {
+  margin-top: -2rem;
+  font-size: 35px;
+  text-align: center;
+}
 @media (max-width: 768px) {
   .Header {
     display: flex;

@@ -1,15 +1,16 @@
 import React from "react";
 import Timeline from "../../components/Timeline/Timeline";
-import AdminImg from "./AdminImg.png";
+
 import Contributor from "./Contributor";
+import memoji from "../../assets/memoji.png";
 import "./About.css";
 const About = ({ modeToggle }) => {
   return (
     <>
       <div className="Header">
         <div>
-          <img src={AdminImg} className="admin-img" alt="admin img"></img>
-          <h1 className="About-h1">Bruce Wayen</h1>
+          <img src={memoji} className="admin-img" alt="admin img"></img>
+          <h1 className="Admin-name">Om Gawande</h1>
           <p className="Project-Admin">Project Admin</p>
         </div>
         <div className="Para">
