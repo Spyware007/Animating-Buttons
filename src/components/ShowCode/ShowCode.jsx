@@ -13,7 +13,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../../firebase/auth";
 
-const ShowCode = () => {
+export default function ShowCode() {
   const { id } = useParams();
   const [html, setHtml] = useState("");
   const [css, setCss] = useState("");
@@ -121,6 +121,4 @@ const ShowCode = () => {
       </div>
     </div>
   );
-};
-
-export default ShowCode;
+}

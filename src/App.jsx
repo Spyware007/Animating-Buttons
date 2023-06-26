@@ -67,7 +67,7 @@ const App = ({ modeToggleFunc, modeToggle }) => {
       path: "/show/:id",
       element: (
         <Suspense fallback={<SuspenseLoader />}>
-          <ShowCode buttonsData={buttonsData} />
+          <ShowCode />
         </Suspense>
       ),
     },

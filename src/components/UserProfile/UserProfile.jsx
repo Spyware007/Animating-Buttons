@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import classes from "./UserProfile.module.css";
 import { Link, useParams } from "react-router-dom";
-import { Twitter, LinkedIn } from "../../assets/svg";
 import Card from "../common/Card/Card";
 import axios from "axios";
 import { collection, getDocs, query, where } from "firebase/firestore";
