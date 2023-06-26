@@ -193,7 +193,7 @@ ________________________________________________________________________________
     ```
     git checkout -b my-new-branch
     ```
-<br><br>
+<br>
 <h1 align="center"> How to Make a PR? 👨‍💻 </h1>
 
 #### Initiate your contribution for GSSoC'23 with these steps <br>
