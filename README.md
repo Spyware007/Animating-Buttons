@@ -111,6 +111,7 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
  - [Welcome to Animating Buttons](https://github.com/arcVaishali/Animating-Buttons/tree/main#welcome-to-animating-buttons)
  - [What can you Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#what-can-you-contribute-%EF%B8%8F-)
  - [How to Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#-how-to-start-contributing-%EF%B8%8F)
+    + [First Steps](#first-steps )
     + [Login to the website](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#login-to-the-animating-buttons--)
     + [For GSSoC'23 Contribution, follow these steps-](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#for-gssoc23-contribution-follow-these-steps--)
         - [Fork, Clone, Navigate the Repository](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#fork-clone-navigate-the-repository-)
@@ -151,17 +152,25 @@ ________________________________________________________________________________
 
 <h1 align="center"> How to start contributing? 💻 </h1>
 
-## Animating Buttons Repository Instructions 🚀🚀  <br>
-### Login to the [Animating Buttons](https://lets-animate-btns.vercel.app/) website <br>
+## Animating Buttons Repository Instructions 🚀🚀  <br> <br>
 
+### First Steps-
 1. Create **issue** in the Animating Buttons repository.
-2. Once you are assigned the **issue**.
+2. Once you are assigned the **issue**, move ahead with the following procedure-
+
+<br> 
+
+### Login to the [Animating Buttons](https://lets-animate-btns.vercel.app/) Website <br>
+
 3. **No need to make any changes in the repository.**
 4. **Login** using your GitHub Account on our website, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/blob/readme-1102/readme-assets/log-in-page.png)
 5. Click on **CREATE** button on the nav-bar, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/blob/readme-1102/readme-assets/after-login.png) 
 6. Create your button **directly** on the website, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/blob/readme-1102/readme-assets/create.png)  
 
-### For GSSoC'23 Contribution, follow these steps- <br>
+
+<br>
+
+### For GSSoC'23 Contribution, follow these steps- <br> 
 #### Fork, Clone, Navigate the Repository <br>
 7. After you have created the button on the website, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
 
@@ -184,6 +193,7 @@ ________________________________________________________________________________
     ```
     git checkout -b my-new-branch
     ```
+<br><br>
 <h1 align="center"> How to Make a PR? 👨‍💻 </h1>
 
 #### Initiate your contribution for GSSoC'23 with these steps <br>
@@ -196,16 +206,15 @@ ________________________________________________________________________________
          ```
          git push origin my-new-branch
          ``` 
-      - Finally, create a new pull request from your forked repository.
+      - Finally, create a new pull request from your forked repository. Note this PR will be an **Empty PR**.
 
 -------------------
-
 <!----- TO KNOW MORE, READ CONTRIBUTING GUIDELINES--- -->
-5. To know more about how to contribute, read the [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 🚀🚀
+9. To know more about how to contribute, read the [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 🚀🚀
 
 
 <!-- -------IN CASE YOU GET STUCK ANYWHERE---------- -->
-6. You can refer to the following articles on basics of Git and Github and *also contact the Project   Mentors, in case you are stuck:*
+10. You can refer to the following articles on basics of Git and Github and *also contact the Project   Mentors, in case you are stuck:*
      - [Forking a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
      - [Cloning a Repo](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request-from-github-desktop)
      - [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
