@@ -6,7 +6,7 @@ import { getAuth } from "firebase/auth";
 
 import classes from "./LikeButton.module.css";
 
-function LikeButton({ autoid }) {
+function LikeButton({ id }) {
   const [liked, setLiked] = useState(false);
   const [likesAmount, setLikesAmount] = useState(0);
   const [userLoggedIn, setUserLoggedIn] = useState(false);
@@ -30,7 +30,7 @@ function LikeButton({ autoid }) {
   useEffect(() => {
     const fetchLikes = async () => {
       try {
-        const docRef = doc(db, "buttons", autoid);
+        const docRef = doc(db, "buttons", id);
         const docSnapshot = await getDoc(docRef);
 
         if (docSnapshot.exists()) {
@@ -44,7 +44,7 @@ function LikeButton({ autoid }) {
     };
 
     fetchLikes();
-  }, [autoid, githubUsername]);
+  }, [id, githubUsername]);
 
   const fetchGithubData = async (user) => {
     const githubId = user.providerData[0].uid;
@@ -69,7 +69,7 @@ function LikeButton({ autoid }) {
     }
 
     try {
-      const docRef = doc(db, "buttons", autoid);
+      const docRef = doc(db, "buttons", id);
       const docSnapshot = await getDoc(docRef);
 
       if (docSnapshot.exists()) {
