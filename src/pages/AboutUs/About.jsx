@@ -3,19 +3,19 @@ import Timeline from "../../components/Timeline/Timeline";
 
 import Contributor from "./Contributor";
 import memoji from "../../assets/memoji.png";
-import "./About.css";
+import classes from "./About.module.css";
 const About = ({ modeToggle }) => {
   return (
     <>
-      <div className="Header">
+      <div className={classes.Header}>
         <div>
-          <img src={memoji} className="admin-img" alt="admin img"></img>
-          <h1 className="Admin-name">Om Gawande</h1>
-          <p className="Project-Admin">Project Admin</p>
+          <img src={memoji} className={classes.admin_img} alt="admin img"></img>
+          <h1 className={classes.Admin_name}>Om Gawande</h1>
+          <p className={classes.Project_Admin}>Project Admin</p>
         </div>
-        <div className="Para">
-          <h1 className="About-h1">About Us</h1>
-          <p className="About-p">
+        <div className={classes.Para}>
+          <h1 className={classes.About_h1}>About Us</h1>
+          <p className={classes.About_p}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -31,10 +31,10 @@ const About = ({ modeToggle }) => {
         </div>
       </div>
       <Contributor />
-      <div className="TimeLine-Css">
-        <p className="About-p-o">Timeline</p>
-        <h1 className="About-h1">Do read my blog</h1>
-        <p className="About-p-t">
+      <div className={classes.TimeLine_Css}>
+        <p className={classes.About_p_o}>Timeline</p>
+        <h1 className={classes.About_h1}>Do read my blog</h1>
+        <p className={classes.About_p_t}>
           {" "}
           sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>

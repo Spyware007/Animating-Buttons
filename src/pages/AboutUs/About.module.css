@@ -1,5 +1,5 @@
 .Header {
-  margin-top: 8rem;
+  margin-top: 4rem;
   display: flex;
   gap: 10rem;
   justify-content: center;
@@ -11,18 +11,18 @@
 }
 
 /* -------------------------------------------- */
-.About-Contributor {
+.About_Contributor {
   text-align: center;
   margin-top: 6rem;
 }
 
-.About-Pagination {
+.About_Pagination {
   display: flex;
   justify-content: center;
   gap: 3rem;
   align-items: center;
 }
-.About-Data {
+.About_Data {
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -53,72 +53,80 @@
   text-align: center;
   color: darkgray;
 }
-.Contributors-abt {
+.Contributors_abt {
   display: flex;
   flex-wrap: wrap;
   justify-items: center;
   padding: 1.5rem;
   align-items: center;
-  gap: 6rem;
-  margin-left: 10rem;
+  gap: 8rem;
+  align-items: center;
+  justify-content: center;
   margin-top: 6rem;
 }
-.About-h1 {
+.About_h1 {
   font-size: 40px;
   text-align: center;
 }
-.About-p {
+.About_p {
   font-size: 20px;
 
   color: darkgrey;
 }
-.Project-Admin {
+.Project_Admin {
   margin-top: -1rem;
   text-align: center;
   color: yellow;
 }
-.About-p-o {
+.About_p_o {
   font-size: 20px;
 
   color: yellow;
 }
-.About-p-t {
+.About_p_t {
   text-align: center;
   font-size: 20px;
 
   color: darkgrey;
 }
-.TimeLine-Css {
+.TimeLine_Css {
   margin-top: 8rem;
   text-align: center;
 }
-.Admin-name {
+.Admin_name {
   margin-top: -2rem;
   font-size: 35px;
   text-align: center;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 1024px) {
   .Header {
     display: flex;
     flex-direction: column-reverse;
   }
-  .About-h1 {
+  .About_h1 {
     font-size: 35px;
     text-align: center;
   }
-  .About-p {
-    font-size: 16px;
+  .Para {
+    margin-top: 0.5rem;
+    max-width: 30rem;
+  }
+  .About_p {
+    font-size: 18px;
 
     color: darkgrey;
   }
-  .admin-img {
+  .admin_img {
     margin-top: -6rem;
     height: 14rem;
   }
-  .Para {
-    max-width: 28rem;
+  .Admin_name {
+    margin-top: -1rem;
+    font-size: 28px;
   }
-  .About-p-t {
+
+  .About_p_t {
     text-align: center;
     font-size: 16px;
   }

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./About.css";
+import classes from "./About.module.css";
 import ContributorCard from "./ContributorData";
 import axios from "axios";
 function Pagination({ data, perPage, currentPage, paginate }) {
   return (
     <>
-      <ul className={"About-Pagination"}>
+      <ul className={classes.About_Pagination}>
         {Array.from(
           { length: Math.ceil(data.length / perPage) },
           (_, index) => (
@@ -55,15 +55,15 @@ function Contributor() {
   };
   return (
     <>
-      <div className="About-Contributor">
-        <p className="About-p-o">Open Source</p>
-        <h1 className="About-h1">Our Valuable Contributors</h1>
-        <p className="About-p">
+      <div className={classes.About_Contributor}>
+        <p className={classes.About_p_o}>Open Source</p>
+        <h1 className={classes.About_h1}>Our Valuable Contributors</h1>
+        <p className={classes.About_p}>
           {" "}
           Meet the amazing individuals behind our accomplishments.
         </p>
       </div>
-      <div className="Contributors-abt">
+      <div className={classes.Contributors_abt}>
         {loading ? (
           <p>Loading...</p>
         ) : (

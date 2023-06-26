@@ -1,5 +1,6 @@
 import React from "react";
-import "./About.css";
+
+import classes from "./About.module.css";
 function ContributorCard({ contributor, index }) {
   return (
     <div key={contributor?.id} style={{ width: "11rem" }}>
@@ -7,13 +8,19 @@ function ContributorCard({ contributor, index }) {
         rel="noopener noreferrer"
         href={`https://github.com/${contributor?.login}`}
         aria-label="GitHub"
-        className="About-Data"
+        className={classes.About_Data}
       >
-        <img src={contributor?.avatar_url} alt="avatar" className="Avtar" />
+        <img
+          src={contributor?.avatar_url}
+          alt="avatar"
+          className={classes.Avtar}
+        />
       </a>
-      <div className="Counter1">
-        <h2 className="Counter2">{contributor?.login}</h2>
-        <p className="Counter3">{`Contributions: ${contributor?.contributions}`}</p>
+      <div className={classes.Counter1}>
+        <h2 className={classes.Counter2}>{contributor?.login}</h2>
+        <p
+          className={classes.Counter3}
+        >{`Contributions: ${contributor?.contributions}`}</p>
       </div>
     </div>
   );
