@@ -27,7 +27,7 @@ const Login = () => {
     // Listen for changes in the user's authentication state
     const auth = getAuth();
     const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
+      if (user && localStorage.getItem('githubUsername')) {
         setUser(user);
         console.log(user);
         fetchGithubData(user, setGithubBio, setGithubSocialAccounts);

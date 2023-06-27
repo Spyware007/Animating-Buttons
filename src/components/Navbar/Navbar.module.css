@@ -42,6 +42,7 @@
 .list_item_link {
   text-decoration: none;
   color: #000;
+  cursor: pointer;
 }
 .navbar.navbar-dark .navlist .list_item .list_item_link {
   color: #fff;
@@ -189,6 +190,20 @@
   width: 100%;
   height: 100%;
 }
+
+
+.loggedIn{
+  display: flex;
+
+}
+
+.logOut{
+  margin-left: 1rem;
+  border-radius: 12px;
+}
+
+
+
 
 @media screen and (max-width: 768px) {
   .navbar {
