@@ -19,6 +19,16 @@
   gap: 15px;
   padding: 5px 15px;
 }
+.repo_info_container:hover .counter {
+  transition: ease-in 1s;
+  box-shadow: inset 300px 0 0 0 rgba(213, 231, 227, 0.432);
+  cursor: pointer;
+}
+.repo_info_container:hover {
+  transition: ease-in 1s;
+  box-shadow: inset 300px 0 0 0 rgba(213, 231, 227, 0.432);
+  cursor: pointer;
+}
 .counter {
   background: #123f49;
   border-radius: 20px;

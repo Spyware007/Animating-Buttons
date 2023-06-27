@@ -13,7 +13,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../../firebase/auth";
 
-const ShowCode = () => {
+export default function ShowCode() {
   const { id } = useParams();
   const [html, setHtml] = useState("");
   const [css, setCss] = useState("");
@@ -42,7 +42,6 @@ const ShowCode = () => {
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
       const data = docSnap.data();
-      console.log(data); // Log the data object to the console
       setHtml(data.html || "");
       setCss(data.css || "");
       setJs(data.js || "");
@@ -122,6 +121,4 @@ const ShowCode = () => {
       </div>
     </div>
   );
-};
-
-export default ShowCode;
+}

@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GithubAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import {getAnalytics} from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_apiKey,
@@ -17,4 +18,5 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const provider = new GithubAuthProvider();
-export { db, auth, provider };
+const analytics = getAnalytics(app);
+export { db, auth, provider, analytics };
