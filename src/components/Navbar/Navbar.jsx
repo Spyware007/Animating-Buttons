@@ -81,10 +81,11 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
 
 
   useEffect(() => {
+    const auth = getAuth();
     if (!(userEmail || userImage || displayName || username)) {
       handleLogout()
     }
-    const unsubscribe = onAuthStateChanged((user) => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
       } else {
         localStorage.clear()
