@@ -1,89 +1,146 @@
 
+
+<!-- ANIMATING BUTTONS x GSSOC23 -->
+
+![Readme](https://github.com/Spyware007/Animating-Buttons/assets/89961974/213e31d6-222e-4552-a76c-4c417a066be1)
+
+<!-- ANIMATING BUTTONS HEADING -->
+<h1 style="margin-top:0px"align = "center"> Animating Buttons ✨🚀 </h1> 
+
+<!-- ANIMATING BUTTONS WEBSITE GLIMPSE -->
 <div align="center">
-<img width="300"  alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
+  
+![product_page](https://github.com/Spyware007/Animating-Buttons/assets/89961974/dc902bc6-cb04-47d5-adf9-5a4a0cbf5e9f)
+
+</div>
+
+<br><br>
+
+------------
+
+<!-------------------------------------------------------- BADGES---------------------------------------------------------------- -->
+
+<div align="center">
+
+<img src="https://forthebadge.com/images/badges/open-source.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" />
+<img src="https://forthebadge.com/images/badges/built-by-developers.svg" />
+  <br>
+  <img src="https://img.shields.io/github/contributors/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-pr-closed/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-raw/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/stars/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/repo-size/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-closed-raw/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-pr-closed-raw/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://img.shields.io/github/forks/spyware007/Animating-Buttons?style=for-the-badge" />
+  <img src="https://svgshare.com/i/tYz.svg" />
+ </div> 
+<br>
+
+----------------
+<br>
+<!------------------------------------------- WECOME TO ANIMATING BUTTONS------------------------------------------ -->
+<div align = "center">
+  
+# Welcome to Animating Buttons🎉!![Gif](https://github.com/tuhinaww/Animating-Buttons/assets/119059108/55243a1c-ef56-4e37-86ef-48f2b1036c76) 
+
+</div>
+
+<div align="center">
+
+Coolest place in the digital universe, the Animating Buttons repository! This project aims to provide a collection of animated buttons that you can use to enhance your web development projects. Whether you're a beginner or an experienced developer, these buttons will add a touch of interactivity and flair to your websites. ✨
+
+</div>
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<!-------------------------------------  Vaishali add content here!---------------------- -->
+
+
+_________________________________________________________________________________________________________________
+
+
+<!-------------- OUR INVOLVEMENT IN NOTABLE OPEN SOURCE PROGRAMS----------- -->
+<h1 align="center"> Our Involvement in Notable Open Source Programs </h1>
+
+<div align="center">
+
+
+<a href="https://hacktoberfest.digitalocean.com/" target="_blank" rel="noopener noreferrer">
+  <img width="200" src="https://img.shields.io/badge/Hacktoberfest-2022-orange.svg" alt="Hacktoberfest'22">
+</a>
+
+<br>
+
+
+<a href="https://gssoc.girlscript.tech/" target="_blank" rel="noopener noreferrer">
+  <img width="300" src="https://img.shields.io/badge/GirlScript%20Summer%20of%20Code-2023-blueviolet.svg" alt="GirlScript Summer of Code'23">
+</a>
+
+
+</div>
+
+________________________________________________________________________________________________________________
+
+
+<!-- ------------TECH STACK USED---------------------- -->
+<h1 align ="center"> Tech Stack Used </h1>
+<div align="center">
+
+<img width="100" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS5">
+
+<img width="110" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+
+<img width="150" src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="javascript">
+
+
 </div>
 
 
-# ✅ Animation Buttons 
+____________________________________________________________________________________________________________
 
 
-Welcome to the Animating Buttons repository! 🎉
+<!-- ------------ CONNECT WITH PROJECT ADMIN----------------- -->
 
-This project aims to provide a collection of animated buttons that you can use to enhance your web development projects. Whether you're a beginner or an experienced developer, these buttons will add a touch of interactivity and flair to your websites.
-<h1 align="center">✨✨HacktoberFest 2022✨✨</h1>
-<img width="1440" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png">
-
-## What can You Contribute ⚠️ 
-* You can contribute any animated buttons. 🤩
-* You can update or refine an existing animated button  or even add your own new buttons in this repo. 🚀
-* Make sure you follow the below steps before making your contributions❗❗❗
-
-### Firstly
-### 📢 Register [here](https://hacktoberfest.com/) for Hacktoberfest and make 4️⃣ PRs this month to grab free SWAGS 🔥
-
-- Fork this repo <!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/Spyware007/Animating-Buttons/fork" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">here</a>
-- Clone on your local machine
-
-```terminal
-git clone https://github.com/**username**/Animating-Buttons.git
-```
-- Navigate to project directory.
-```terminal
-cd Animating-Buttons
-```
-
-```terminal
-npm i
-npm start
-```
-
-- Create a new Branch
-
-```
-git checkout -b my-new-branch
-```
-
-🚀🚀  **Go to [public/Buttons](https://github.com/Spyware007/Animating-Buttons/blob/main/src/components/Main/Main.jsx) folder and add a new folder with your GitHub username including your button code (index.html + style.css files)**
-
-- Then go to [src/Data.js](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js)
-
-- Add your folder name (github_username, github_username_1,etc) code in [src/Data.js](https://github.com/Spyware007/Animating-Buttons/blob/main/src/Data.js) file.
-
-# Note: 
-- Make sure to align your button centered horizontally as well as vertically.
-- Don't forget to replace 'your_github_username' with GitHub Username.
-- If you are adding more than one buttons then give proper names such as Spyware007_1,Spyware007_2, your_github_username_1,etc
-
-- Stage your changes. 
-```
-git add .
-```
-- Commit your changes.
-
-```
-git commit -m "Relevant message"
-```
-- Then push 
-```
-git push origin my-new-branch
-```
-- Finally, create a new pull request from your forked repository
-----
+<h1 align='center'> Project Admin </h1>
+<table align='center'>
+<tr>
+    <td align="center">
+        <a href="https://www.linkedin.com/in/om-gawande/">
+            <img src="https://avatars.githubusercontent.com/u/89961974?v=4" width="100;" alt="Aman Kumar Singh"/>
+            <br />
+            <sub><b>Om Gawande</b></sub>
+        </a>
+    </td>
+  </tr>
+</table>
 
 
-----
-### PLEASE NOTE
+___________________________________________________________________________________________________________________________________________________________________
 
-* Make sure you commit your changes in a new branch❗❗
-* Make sure that your file name and your commit message are relevant. 
-* Also, make sure you comment your code wherever necessary. 
 
-----
+<!-- ----------------CONNECT WITH PROJECT MENTORS---------------------- -->
+<h1 align='center'> Project Mentors </h1>
+<table align='center'>
+<td align="center"><a href="https://www.linkedin.com/in/tanyachanchalani/"><img src="https://media.licdn.com/dms/image/D5603AQFPR1ufAvGojA/profile-displayphoto-shrink_800_800/0/1673109782856?e=1691625600&v=beta&t=-BBNWi9eyMZXTMj91hF7ZJpWxEk8xwUtSH7XhbdOxXw" width="100px;" alt=""/><br /><sub><b> Tanya Chanchalani </b></sub></a></td>
 
-# Our Beloved Contributors 😍
+<td align="center"><a href="https://www.linkedin.com/in/poorvi-shetty/"><img src="https://avatars.githubusercontent.com/u/65484904?v=4" width="100px;" alt=""/><br /><sub align="bottom"><b>Poorvi Shetty</b></sub></a></td>
 
----
+</table>
+
+
+__________________________________________________________________________________________________________________
+
+
+
+<!-- -----------------OUR BELOVED CONTRIBUTORS-------------------- -->
+<h1 align="center"> Our Beloved Contributors 😍 </h1>
 
 <a href="https://github.com/Spyware007/Animating-Buttons/graphs/contributors">
   <img align="center" src="https://contrib.rocks/image?max=100&repo=Spyware007/Animating-Buttons" />
@@ -93,13 +150,17 @@ git push origin my-new-branch
 
 A big thank you to all our contributors who have made this project better with their valuable contributions! We appreciate your efforts and dedication.
 
-Don't forget to ⭐ this repository to show your support!
-
 ---
 
 <h3 align="center"> DON'T FORGET TO ⭐ THIS REPOSITORY !!
-</h3> 
+</h3>
+
+### You can follow me [here](https://github.com/Spyware007) ❤
+
+<a href = "#top"> Back to top</a>
 
 
-###  You can follow me [here](https://github.com/Spyware007) ❤
+</div>
+
+</div>
   

@@ -1,108 +1,99 @@
 import React, { useState } from "react";
-import classes from "./Main.module.css";
-import { Link } from "react-router-dom";
 import { Data } from "../../Data";
-import download from "../../Functions/Download";
+import classes from "./Main.module.css";
+import Card from "../common/Card/Card";
 
-export default function Main({ modeToggle, modeToggleFunc }) {
-  // Function To Redirect User To The Github Of Creator
-  const redirectToGitHub = (username) => {
-    const sure = window.confirm(
-      `This Will Take You To Github of ${username} ?`
-    );
-    if (sure) {
-      const url = `https://github.com/${username}`;
-      window.open(url, "_blank");
-    }
-  };
-
-  // Component
-  const CreatedBy = ({ d }) => {
-    return (
-      <p onClick={() => redirectToGitHub(d)} className={classes.createdBy}>
-        Created by
-        <span className={classes.user}> {d}</span>
-      </p>
-    );
-  };
-
-  // Component
-  const DownloadBtn = ({ d, modeToggle }) => {
-    return (
-      <div className={classes.download}>
-        <Link to={`/show/${d}`}>
-          <button
-            className={`${classes.download_btn} ${
-              modeToggle ? classes.dark_mode : classes.light_mode
-            }`}
-          >
-            Show Code
-          </button>
-        </Link>
-        <button
-          onClick={() => download(d)}
-          className={`${classes.download_btn} ${
-            modeToggle ? classes.dark_mode : classes.light_mode
-          }`}
-        >
-          Download
-        </button>
-      </div>
-    );
-  };
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 24; // Number of items to display per page
+export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
+  const [currentPage, setCurrentPage] = useState(
+    parseInt(localStorage.getItem("current_page")) || 1
+  );
+  const itemsPerPage = 36;
   const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = Data.slice(indexOfFirstItem, indexOfLastItem);
-
-  const isDark = modeToggle ? "dark_mode" : "light_mode";
-
+  const isActive = (i) => (currentPage === i + 1 ? classes.active : "");
+  const [query, setQuery] = useState("");
+  const filteredItems = buttonsData.filter((button) =>
+    button.html.toLowerCase().includes(query.toLowerCase())
+  );
+  const currentItems = filteredItems.slice(
+    indexOfLastItem - itemsPerPage,
+    indexOfLastItem
+  );
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
+    localStorage.setItem("current_page", pageNumber);
     window.scrollTo({ top: 500, behavior: "smooth" });
   };
+
+  const pageNavigationButtions = (
+    <ul className={classes.paginationList}>
+      <li
+        className={`${classes.paginationItem} ${isActive(0)}`}
+        onClick={() => handlePageChange(1)}
+      >
+        {"<"}
+      </li>
+      {Array(Math.ceil(filteredItems.length / itemsPerPage))
+        .fill()
+        .map((_, index) => {
+          const pageNumber = index + 1;
+          if (
+            pageNumber === 1 ||
+            pageNumber === currentPage ||
+            (pageNumber >= currentPage - 1 && pageNumber <= currentPage + 1) ||
+            pageNumber === Math.ceil(filteredItems.length / itemsPerPage)
+          ) {
+            return (
+              <li
+                key={index}
+                className={`${classes.paginationItem} ${isActive(index)}`}
+                onClick={() => handlePageChange(pageNumber)}
+              >
+                {pageNumber}
+              </li>
+            );
+          } else if (
+            (pageNumber === currentPage - 2 && pageNumber > 1) ||
+            (pageNumber === currentPage + 2 &&
+              pageNumber < Math.ceil(filteredItems.length / itemsPerPage))
+          ) {
+            return (
+              <li
+                key={index}
+                className={`${classes.paginationItem} ${classes.ellipsis}`}
+                onClick={() => handlePageChange(pageNumber)}
+              >
+                ...
+              </li>
+            );
+          }
+          return null;
+        })}
+      <li
+        className={`${classes.paginationItem} ${isActive(
+          Math.ceil(filteredItems.length / itemsPerPage) - 1
+        )}`}
+        onClick={() =>
+          handlePageChange(Math.ceil(filteredItems.length / itemsPerPage))
+        }
+      >
+        {">"}
+      </li>
+    </ul>
+  );
+
   return (
-    <>
-      <h1 className={classes.text}>
-        Explore from the list of {Data?.length} Buttons by our Contributors.
+    <div className={classes.main_container}>
+      <h1 style={{ textAlign: "center" }}>
+        Total number of Buttons added {buttonsData.length}
       </h1>
       <div className={classes.btns_container}>
-        {currentItems.map((d, i) => {
-          return (
-            <div key={i}>
-              <iframe
-                className={classes.container}
-                title={d}
-                src={`Buttons/${d}/index.html?c=${isDark}`}
-              ></iframe>
-              <CreatedBy d={d} />
-              <></>
-              <DownloadBtn d={d} modeToggle={modeToggle} />
-            </div>
-          );
-        })}
+        {currentItems.map((button, index) => (
+          <Card key={index} button={button} />
+        ))}
       </div>
       <div className={classes.pagination}>
-        {Data.length > itemsPerPage && (
-          <ul className={classes.paginationList}>
-            {Array(Math.ceil(Data.length / itemsPerPage))
-              .fill()
-              .map((_, index) => (
-                <li
-                  key={index}
-                  className={`${classes.paginationItem} ${
-                    currentPage === index + 1 ? classes.active : ""
-                  }`}
-                  onClick={() => handlePageChange(index + 1)}
-                >
-                  {index + 1}
-                </li>
-              ))}
-          </ul>
-        )}
+        {Data.length > itemsPerPage && pageNavigationButtions}
       </div>
-    </>
+    </div>
   );
 }

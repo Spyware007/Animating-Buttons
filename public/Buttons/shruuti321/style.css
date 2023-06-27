@@ -1,0 +1,48 @@
+
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .but1,.but2,.but3,.but4{
+    height:53px;
+    width:70px;
+    padding:2px;
+    border-color: black;
+    border-width:5px;
+    cursor:pointer;
+    border-radius: 5px;
+  }
+  .icon-container{
+    display:flex;
+    gap:5px;
+    
+  }
+
+  .but1:hover{
+    background-color:rgb(55, 117, 233);
+  }
+  
+  .but2:hover{
+    background-color:rgb(113, 131, 230);
+  }
+  
+  .but3:hover{
+    background-color:rgb(226, 85, 85);
+  }
+  
+  .but4:hover{
+    background-color:#e8e84b;
+  }
+
+
+  .button:active {
+    background-color: #666;
+    box-shadow: 0 10px #666;
+    transform: translateY(8px);
+  }

@@ -1,0 +1,86 @@
+.card_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 420px;
+  height: auto;
+  background-color: #000;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
+    0 30px 60px -30px rgba(0, 0, 0, 0.3),
+    inset 0 -2px 6px 0 rgba(255, 255, 255, 0.35);
+}
+.iframe_container {
+  all: unset;
+  width: 380px;
+  height: 280px;
+  box-shadow: 0px 4px 20px 0px #00000040;
+  box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
+    0 30px 60px -30px rgba(0, 0, 0, 0.3),
+    inset 0 -2px 6px 0 rgba(10, 37, 64, 0.35);
+  border-radius: 20px;
+}
+.contributor_data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contributor_info {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.contributor_img_container {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.contributor_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.contributor_name {
+  text-decoration: none;
+  color: #fff;
+}
+.btns_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.btns {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272020;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+.btns:hover {
+  background-color: #4d4d4d;
+}
+.stats_btn {
+  align-self: flex-end;
+}
+
+@media only screen and (max-width: 800px) {
+  .card_container {
+    width: 350px;
+  }
+  .iframe_container {
+    width: 320px;
+  }
+}
