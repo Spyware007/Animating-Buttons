@@ -36,7 +36,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
   //   if (auth.currentUser) {
   //     fetchGithubData(auth.currentUser)
   //   }
-      
+
   // }, [auth.currentUser])
 
 
@@ -75,7 +75,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
             target="__blank"
             className={classes.image_container_mobile}
           >
-            <img className={classes.image} src={github} alt="Creator" />
+            <BsGithub className={classes.image} />
           </a>
           <button
             className={`${classes.mode_toggle} ${modeToggle ? classes.dark_mode : classes.light_mode

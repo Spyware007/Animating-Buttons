@@ -193,4 +193,10 @@
     margin: 0;
     padding: 0;
   }
+  .navbar.navbar-light .navlist .image_container_mobile {
+    color: black;
+  }
+  .navbar.navbar-dark .navlist .image_container_mobile {
+    color: white;
+  }
 }
