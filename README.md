@@ -16,16 +16,18 @@ ________________________________________________________________________________
 <div align="center" style="display:flex ">
 <img  src = "readme-assets/main-page.png">
 <!-- <img width="500px" src = "./readme_assets/flipkart_grid.png"> -->
-<br><br>
 </div>
+
+<br><br>
+
 <table>
   <tr>
-    <td><img width="500px" src = "readme-assets/about.png"></td>
-    <td><img width="500px" src = "readme-assets/log-in-page.png"></td>
+    <td><h4 align="center">About</h4><img width="500px" src = "readme-assets/about.png"></td>
+    <td><h4 align="center">Log-in</h4><img width="500px" src = "readme-assets/log-in-page.png"></td>
   </tr>
   <tr>
-    <td><img width="500px" src = "readme-assets/after-login.png"></td>
-    <td><img width="500px" src = "readme-assets/create.png"></td>
+    <td><h4 align="center">Your Profile, now create button</h4><img width="500px" src = "readme-assets/after-login.png"></td>
+    <td><h4 align="center">Creating Button</h4><img width="500px" src = "readme-assets/create.png"></td>
   </tr>
   <!-- <tr>
     <td><img width="500px" src = "./readme_assets/verify_warranty.png"></td>
