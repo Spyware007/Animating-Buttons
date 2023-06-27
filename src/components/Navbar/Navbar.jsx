@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Navbar.module.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { GithubAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
+import logout from "../../assets/logout-svgrepo-com.svg"
 
 // images
 import github from "../../assets/github.png";
@@ -10,37 +12,89 @@ import { getAuth } from "firebase/auth";
 import axios from "axios";
 
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
-  const auth = getAuth()
-  const [username, setUsername] = useState('')
-  const [userImage, setUserImage] = useState('')
+  const [username, setUsername] = useState(localStorage.getItem('username') || '')
+  const [userImage, setUserImage] = useState(localStorage.getItem('userImage') || '')
+  const [userEmail, setUserEmail] = useState(localStorage.getItem('email') || '')
+  const [displayName, setDisplayName] = useState(localStorage.getItem('displayName') || '')
+
+  const handleGitHubLogin = async () => {
+    const auth = getAuth();
+    const provider = new GithubAuthProvider();
+    provider.addScope("user:email"); // Request email scope
+    provider.addScope("read:user"); // Request user profile scope
+    await signInWithPopup(auth, provider)
+      .then((result) => {
+        // Handle successful login
+        const user = result.user;
+        console.log(user);
+        setDisplayName(user.displayName)
+        localStorage.setItem("displayName", user.displayName)
+        setUserEmail(user.email)
+        localStorage.setItem("email", user.email)
+        setUserImage(user.photoURL)
+        localStorage.setItem("userImage", user.photoURL)
+        fetchGithubData(auth.currentUser.providerData[0].uid)
+      })
+      .catch((error) => {
+        // Handle login error
+        console.error(error);
+      });
+  };
 
 
-  const fetchGithubData = async (user) => {
-      const githubId = user.providerData[0].uid;
-      try {
-        const response = await axios.get(`https://api.github.com/user/${githubId}`);
-        console.log(response);
-        const {
-          login,
-          avatar_url,
-        } = response.data;
-        setUsername(login)
-        setUserImage(avatar_url)
-      }
-      catch (error) {
-        console.error("Error fetching GitHub data:", error);
-      }
-  }
-  useEffect(() => {
-    if (auth.currentUser) {
-      fetchGithubData(auth.currentUser)
+  const handleLogout = () => {
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        setDisplayName('')
+        setUsername('')
+        setUserEmail('')
+        setUserImage('')
+        localStorage.setItem("displayName", null)
+        localStorage.setItem("email", null)
+        localStorage.setItem("userImage", null)
+        localStorage.setItem('username', null)
+        console.log("Logged out.");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+
+
+
+  const fetchGithubData = async (githubId) => {
+    try {
+      const response = await axios.get(`https://api.github.com/user/${githubId}`, {
+      });
+      const {
+        login,
+      } = response.data;
+      setUsername(login)
+      localStorage.setItem('username', login)
     }
-      
-  }, [auth.currentUser])
+    catch (error) {
+      console.error("Error fetching GitHub data:", error);
+    }
+  }
 
 
+  useEffect(() => {
+    if (!(userEmail || userImage || displayName || username)) {
+      handleLogout()
+    }
+    const unsubscribe = onAuthStateChanged((user) => {
+      if (user) {
+      } else {
+        localStorage.clear()
+      }
+    });
 
-
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   return (
     <>
@@ -104,25 +158,33 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
           </NavLink>
 
           {
-            username && userImage ?
-              (<NavLink className={classes.list_item_link} to={`/user/${username}`}>
-                <button className={classes.github}>
-                  <div className={classes.image_container}>
-                    <img className={classes.image} src={userImage} alt="Creator" />
-                  </div>
-                  <span className={classes.username}>My Profile</span>
+            username && userImage && userEmail ?
+              (<div className={classes.loggedIn}>
+                <NavLink className={classes.list_item_link} to={`/user/${username}`}>
+                  <button className={classes.github}>
+                    <div className={classes.image_container}>
+                      <img className={classes.image} src={userImage} alt="Creator" />
+                    </div>
+                    <span className={classes.username}>My Profile</span>
+                  </button>
+
+                </NavLink>
+                <button className={classes.logOut} onClick={handleLogout}>
+                  <img src={logout} alt="Log Out" srcset="" height={'20px'} width={'40px'}/>
                 </button>
-              </NavLink>)
+              </div>)
 
               :
-              (<NavLink className={classes.list_item_link} to="/login">
+              (<div className={classes.list_item_link} onClick={handleGitHubLogin}>
                 <button className={classes.github}>
                   <div className={classes.image_container}>
                     <img className={classes.image} src={github} alt="Creator" />
                   </div>
                   <span className={classes.username}>Sign in With GitHub</span>
                 </button>
-              </NavLink>)
+
+              </div>
+              )
           }
         </div>
       </nav>
