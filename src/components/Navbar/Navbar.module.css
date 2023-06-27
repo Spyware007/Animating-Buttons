@@ -128,7 +128,7 @@
 }
 
 .navbar.navbar-light .github:hover {
-  background: cyan;
+  background: #00CCCC;
   transition: all 0.3s ease-in-out;
 }
 .navbar.navbar-light .github {
