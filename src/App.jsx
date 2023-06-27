@@ -14,7 +14,7 @@ import {
 } from "./components";
 import SuspenseLoader from "./components/SuspenseLoader/SuspenseLoader";
 import UserProfile from "./components/UserProfile/UserProfile";
-import About from "./pages/About";
+import About from "./pages/AboutUs/About";
 import { getButtonsData } from "./Server/getButtons";
 import { getUsersData } from "./Server/getUsersData";
 
