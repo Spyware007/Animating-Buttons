@@ -27,7 +27,7 @@ const GoToTop = () => {
   return (
     <div className={classes.wrapper}>
       {isVisible && (
-        <div className={classes["top-btn"]} onClick={goToBtn}>
+        <div className={`${classes["top-btn"]} ${isVisible ? classes.reveal : ""}`} onClick={goToBtn}>
           <FaArrowUp className={classes.icon} />
         </div>
       )}
@@ -36,3 +36,6 @@ const GoToTop = () => {
 };
 
 export default GoToTop;
+
+
+

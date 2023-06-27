@@ -4,7 +4,10 @@ import ButtonsSvg from "../../assets/buttons.svg";
 import RepoInfo from "../common/RepoInfo/RepoInfo";
 import { Twitter, LinkedIn } from "../../assets/svg";
 import Memoji from "../../assets/memoji.png";
-
+import { motion } from "framer-motion";
+import { paraAnim } from "../Animation/motion";
+import { socialAnim } from "../Animation/motion";
+import { imgAnim } from "../Animation/motion";
 const Landing = ({ modeToggle, modeToggleFunc }) => {
   return (
     <>
@@ -14,33 +17,68 @@ const Landing = ({ modeToggle, modeToggleFunc }) => {
         }`}
       >
         <div className={classes.header}>
-          <h1 className={classes.heading}>Animating-Buttons</h1>
-          <p className={classes.para}>
+          <motion.h1
+            variants={paraAnim}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 60 }}
+            className={classes.heading}
+          >
+            Animating-Buttons
+          </motion.h1>
+          <motion.p
+            variants={paraAnim}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 50 }}
+            className={classes.para}
+          >
             Explore Amazing Buttons animation for your next project.
-          </p>
+          </motion.p>
           <RepoInfo />
         </div>
         <div className={classes.socials}>
-          <div className={classes.memoji}>
+          <motion.div
+            variants={imgAnim}
+            initial="hidden"
+            whileInView={{
+              scale: [0.8, 1],
+              opacity: 1,
+            }}
+            transition={{ duration: 0.84 }}
+            className={classes.memoji}
+          >
             <img className={classes.image} src={Memoji} alt="memoji" />
-          </div>
+          </motion.div>
           <div className={classes.social_profile}>
-            <a
+            <motion.a
               href="https://twitter.com/oom_gawande"
               target="__blank"
               className={classes.link}
+              variants={socialAnim}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ type: "spring", stiffness: 50, delay: 0.4 }}
             >
               <Twitter />
               <span className={classes.text}>@oom_gawande</span>
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="https://www.linkedin.com/in/om-gawande/"
               target="__blank"
               className={classes.link}
+              variants={socialAnim}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ type: "spring", stiffness: 50, delay: 0.8 }}
             >
               <LinkedIn />
               <span className={classes.text}>/om-gawande</span>
-            </a>
+            </motion.a>
           </div>
         </div>
         <div className={classes.rectangle}>
