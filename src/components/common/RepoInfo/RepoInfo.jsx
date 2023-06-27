@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classes from "./RepoInfo.module.css";
-
+import { motion } from "framer-motion";
+import { imgAnim } from "../../Animation/motion";
 import { Star, Fork, Contributors } from "../../../assets/svg";
 
 const RepoInfo = () => {
@@ -51,22 +52,52 @@ const RepoInfo = () => {
     <>
       <div className={classes.repo_info}>
         <div className={classes.repo_info_row1}>
-          <div className={classes.repo_info_container}>
+          <motion.div
+            variants={imgAnim}
+            initial="hidden"
+            whileInView={{
+              scale: [0.9, 1],
+              opacity: 1,
+            }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className={classes.repo_info_container}
+          >
             <Star />
             Stars
             <span className={classes.counter}>{stars}</span>
-          </div>
-          <div className={classes.repo_info_container}>
+          </motion.div>
+          <motion.div
+            variants={imgAnim}
+            initial="hidden"
+            whileInView={{
+              scale: [0.9, 1],
+              opacity: 1,
+            }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className={classes.repo_info_container}
+          >
             <Fork />
             Forks
             <span className={classes.counter}>{forks}</span>
-          </div>
+          </motion.div>
         </div>
-        <div className={classes.repo_info_container}>
+        <motion.div
+          variants={imgAnim}
+          initial="hidden"
+          whileInView={{
+            scale: [0.9, 1],
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 }}
+          className={classes.repo_info_container}
+        >
           <Contributors />
           Contributors
           <span className={classes.counter}>{contributors}</span>
-        </div>
+        </motion.div>
       </div>
     </>
   );
