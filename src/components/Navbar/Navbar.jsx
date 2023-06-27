@@ -91,7 +91,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
 
   const fetchGithubData = async (githubId) => {
     try {
-      const response = await axios.get(`https://api.github.com/user/${githubId}?token=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`, {
+      const response = await axios.get(`https://api.github.com/user/${githubId}`, {
         headers: {
           Authorization: `Bearer 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`
         }
