@@ -33,10 +33,10 @@ const About = ({ modeToggle }) => {
       <Contributor />
       <div className={classes.TimeLine_Css}>
         <p className={classes.About_p_o}>Timeline</p>
-        <h1 className={classes.About_h1}>Do read my blog</h1>
+        <h1 className={classes.About_h1}>Do read this</h1>
         <p className={classes.About_p_t}>
           {" "}
-          sunt in culpa qui officia deserunt mollit anim id est laborum.
+          The Progress of the project so far.
         </p>
       </div>
       <Timeline modeToggle={modeToggle} />

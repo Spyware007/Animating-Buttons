@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Navbar.module.css";
+
 import { NavLink } from "react-router-dom";
 import { GithubAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 import logout from "../../assets/logout-svgrepo-com.svg"
+import { Link, NavLink } from "react-router-dom";
+import { BsGithub } from "react-icons/bs";
+
 
 // images
 import github from "../../assets/github.png";
 import moon from "../../assets/moon.png";
 import sun from "../../assets/sun.png";
-import { getAuth } from "firebase/auth";
+// import { getAuth } from "firebase/auth";
 import axios from "axios";
 
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
+
   const [username, setUsername] = useState(localStorage.getItem('username') || '')
   const [userImage, setUserImage] = useState(localStorage.getItem('userImage') || '')
   const [userEmail, setUserEmail] = useState(localStorage.getItem('email') || '')
@@ -60,7 +65,6 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
         console.error(error);
       });
   };
-
 
 
 
@@ -129,7 +133,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
             target="__blank"
             className={classes.image_container_mobile}
           >
-            <img className={classes.image} src={github} alt="Creator" />
+            <BsGithub className={classes.image} />
           </a>
           <button
             className={`${classes.mode_toggle} ${modeToggle ? classes.dark_mode : classes.light_mode
@@ -145,8 +149,8 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                width="24"
-                height="24"
+                width="30"
+                height="30"
               >
                 <path fill="none" d="M0 0h24v24H0z"></path>
                 <path
@@ -179,7 +183,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               (<div className={classes.list_item_link} onClick={handleGitHubLogin}>
                 <button className={classes.github}>
                   <div className={classes.image_container}>
-                    <img className={classes.image} src={github} alt="Creator" />
+                    <BsGithub className={classes.image} />
                   </div>
                   <span className={classes.username}>Sign in With GitHub</span>
                 </button>
