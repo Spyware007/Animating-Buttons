@@ -1,50 +1,17 @@
-<!-- GDSC DY PATIL COLLEGE OG ENGINEERING, PUNE LOGO -->
 
-<div align="center">
-<img width="250" alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://user-images.githubusercontent.com/89961974/195978518-289c02ba-5643-4424-ab5e-d7947a09140c.png">
-</div>
+
+<!-- ANIMATING BUTTONS x GSSOC23 -->
+
+![Readme](https://github.com/Spyware007/Animating-Buttons/assets/89961974/213e31d6-222e-4552-a76c-4c417a066be1)
 
 <!-- ANIMATING BUTTONS HEADING -->
-<h1 style="margin-top:0px"align = "center"> ✅ Animating Buttons </h1> 
-
-<br><br>
-
-____________________________________________________________________________________________________________________
+<h1 style="margin-top:0px"align = "center"> Animating Buttons ✨🚀 </h1> 
 
 <!-- ANIMATING BUTTONS WEBSITE GLIMPSE -->
+![Screenshot](https://user-images.githubusercontent.com/89961974/195976027-407986aa-6865-4462-859d-b5e4d2deeb64.png)
 
-<div align="center" style="display:flex ">
-<img  src = "readme-assets/main-page.png">
-<!-- <img width="500px" src = "./readme_assets/flipkart_grid.png"> -->
-</div>
 
-<br><br>
-
-<table>
-  <tr>
-    <td><h4 align="center">About</h4><img width="500px" src = "readme-assets/about.png"></td>
-    <td><h4 align="center">Log-in</h4><img width="500px" src = "readme-assets/log-in-page.png"></td>
-  </tr>
-  <tr>
-    <td><h4 align="center">Your Profile, now create button</h4><img width="500px" src = "readme-assets/after-login.png"></td>
-    <td><h4 align="center">Creating Button</h4><img width="500px" src = "readme-assets/create.png"></td>
-  </tr>
-  <!-- <tr>
-    <td><img width="500px" src = "./readme_assets/verify_warranty.png"></td>
-    <td><img width="500px" src = "./readme_assets/product_page.png"></td>
-  </tr>
-  <tr>
-    <td><img width="500px" src = "./readme_assets/customer_profile.png"></td>
-    <td><img width="500px" src = "./readme_assets/popup.png"></td>
-  </tr> -->
-</table>
-
-<br><br>
-
-____________________________________________________________________________________________________________________
-
-<br>
-<br>
+------------
 
 <!-------------------------------------------------------- BADGES---------------------------------------------------------------- -->
 
@@ -64,27 +31,21 @@ ________________________________________________________________________________
   <img src="https://img.shields.io/github/issues-pr-closed-raw/spyware007/Animating-Buttons?style=for-the-badge" />
   <img src="https://img.shields.io/github/forks/spyware007/Animating-Buttons?style=for-the-badge" />
   <img src="https://svgshare.com/i/tYz.svg" />
-
  </div> 
-
-
-<br>
 <br>
 
-____________________________________________________________________________________________________________________
-
+----------------
 <br>
-
 <!------------------------------------------- WECOME TO ANIMATING BUTTONS------------------------------------------ -->
 <div align = "center">
-
+  
 # Welcome to Animating Buttons🎉!![Gif](https://github.com/tuhinaww/Animating-Buttons/assets/119059108/55243a1c-ef56-4e37-86ef-48f2b1036c76) 
 
 </div>
 
 <div align="center">
 
-Coolest place in the digital universe, the Animating Buttons repository! This project aims to provide a collection of animated buttons that you can use to enhance your web development projects. Whether you're a beginner or an experienced developer, these buttons will add a touch of interactivity and flair to your websites.
+Coolest place in the digital universe, the Animating Buttons repository! This project aims to provide a collection of animated buttons that you can use to enhance your web development projects. Whether you're a beginner or an experienced developer, these buttons will add a touch of interactivity and flair to your websites. ✨
 
 </div>
 
@@ -93,159 +54,14 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 ____________________________________________________________________________________________________________________
 
 
-<!------------------------------------ GSSOC'23------------------------ -->
-
-<h1 align="center"> GSSoC 2023 〽️ <h1>
-<div align="center">
-
-<img width="100%" src="https://user-images.githubusercontent.com/98798977/236624352-6f5440bb-1b5a-41e3-a2d2-97b5ef2b7387.png">
-
-</div>
 
 <br>
 
 ____________________________________________________________________________________________________________________
 
-<!-------------------------------------  TABLE OF CONTENT---------------------- -->
-<h1 align="center"> Table of Contents </h1>
-<div>
-
- - [Welcome to Animating Buttons](https://github.com/arcVaishali/Animating-Buttons/tree/main#welcome-to-animating-buttons)
- - [What can you Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#what-can-you-contribute-%EF%B8%8F-)
- - [How to Contribute](https://github.com/arcVaishali/Animating-Buttons/tree/main#-how-to-start-contributing-%EF%B8%8F)
-    + [First Steps](#first-steps )
-    + [Login to the website](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#login-to-the-animating-buttons--)
-    + [For GSSoC'23 Contribution, follow these steps-](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#for-gssoc23-contribution-follow-these-steps--)
-        - [Fork, Clone, Navigate the Repository](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#fork-clone-navigate-the-repository-)
- - [How to Make a PR?](https://github.com/arcVaishali/Animating-Buttons/tree/main#-how-to-make-a-pr-)
-    + [Stage, Commit, PR](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#initiate-your-contribution-for-gssoc23-with-these-steps-)
- - [Key Reminders for your Attention](https://github.com/arcVaishali/Animating-Buttons/tree/main#--key-reminders-for-your-attention-)
- - [Tech Stack](https://github.com/arcVaishali/Animating-Buttons/tree/main#-tech-stack-used-)
- - [Our Involvement in Notable Open Source Programs](https://github.com/arcVaishali/Animating-Buttons/tree/main#-involvement-in-notable-open-source-programs--)
- - [Connect with Project Admin](https://github.com/arcVaishali/Animating-Buttons/tree/main#-project-admin-)
- - [Connect with Project Mentors](https://github.com/arcVaishali/Animating-Buttons/tree/main#-project-mentors-)  
- - [Our Beloved Contributors](https://github.com/arcVaishali/Animating-Buttons/tree/main#-our-beloved-contributors--)
-
- </div>
-
-<br><br>
-
-<!-- --------------------------WHAT CAN YOU CONTRIBUTE---------------------------------------- -->
-________________________________________________________________________________________________________________________
-<h1 align="center">
-What can You Contribute? 👩‍💻 
-</h1>
+<!-------------------------------------  Vaishali add content here!---------------------- -->
 
 
-<div align="center">
-
-| **Contribution Guidelines**                                                                            |
-|--------------------------------------------------------------------------------------------------------|
-| - You can contribute any animated buttons. ⬆️                                                         |
-| - You can update or refine an existing animated button or even add your own new buttons to this repository. 🚀 |                           |
-| - Make sure you follow the below steps before making your contributions. ❗❗❗                      |
-
-</div>
-
-<br><br>
-
-__________________________________________________________________________________________________________________________________________
-
-<!-- ### Contribution Steps: -->
-
-<!-- ----------------HOW TO START CONTRIBUTING------------------------------------------------- -->
-
-<h1 align="center"> How to start contributing? 💻 </h1>
-
-## Animating Buttons Repository Instructions 🚀🚀  <br> <br>
-
-### First Steps-
-1. Create **issue** in the Animating Buttons repository.
-2. Once you are assigned the **issue**, move ahead with the following procedure-
-
-<br> 
-
-### Login to the [Animating Buttons](https://lets-animate-btns.vercel.app/) Website <br>
-
-3. **No need to make any changes in the repository.**
-4. **Login** using your GitHub Account on our website, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#log-in)
-5. Click on **CREATE** button on the nav-bar, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#your-profile-now-create-button)
-6. Create your button **directly** on the website, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#creating-button)
-
-
-<br>
-
-### For GSSoC'23 Contribution, follow these steps- <br> 
-#### Fork, Clone, Navigate the Repository <br>
-7. After you have created the button on the website, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
-
-- Clone the forked repo to your local machine using the following command:
-    ```terminal
-    git clone https://github.com/**username**/Animating-Buttons.git
-    ```
-
-- Navigate to project directory.
-    ```terminal
-    cd Animating-Buttons
-    ```
-
-    ```terminal
-    npm i
-    npm start
-    ```
-
-- Create a new Branch
-    ```
-    git checkout -b my-new-branch
-    ```
-<br>
-<br>
-____________________________________________________________________________________________________________________
-
-
-<h1 align="center"> How to Make a PR? 👨‍💻 </h1>
-
-#### Initiate your contribution for GSSoC'23 with these steps <br>
-8. Once you have cloned the repository and created a new branch, proceed with the following steps to initiate your contribution-                                 
-      - Make an **empty commit**.
-         ```
-         git commit --allow-empty -m "Empty commit for PR"
-         ``` 
-      - Then push 
-         ```
-         git push origin my-new-branch
-         ``` 
-      - Finally, create a new pull request from your forked repository. Note this PR will be an **Empty PR**.
-
--------------------
-<!----- TO KNOW MORE, READ CONTRIBUTING GUIDELINES--- -->
-9. To know more about how to contribute, read the [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 🚀🚀
-
-
-<!-- -------IN CASE YOU GET STUCK ANYWHERE---------- -->
-10. You can refer to the following articles on basics of Git and Github and *also contact the Project   Mentors, in case you are stuck:*
-     - [Forking a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
-     - [Cloning a Repo](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request-from-github-desktop)
-     - [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
-     - [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
-
-
-<br><br>
-________________________________________________________________________________________________________________
-
-<!-- ------------KEY REMINDERS FOR YOUR ATTENTION----------------- -->
-<div align="center">
-
-<h1 align="center">  Key Reminders for Your Attention </h1>
-
-|  **SNo.** |      **Description**                                                                      |
-|-----------|-------------------------------------------------------------------------------------------|
-|     1     | **No need to make any changes in the repository**❗❗                                   |
-|     2     | Buttons will be added **directly** on the website, Visit the website.                       |
-|     3     | Fork, Clone and Make new branch, and then make an **Empty Commit** as explained above                            |
-</div>
-
-<br><br>
 _________________________________________________________________________________________________________________
 
 
@@ -340,36 +156,9 @@ ________________________________________________________________________________
 
 ---
 
-<a align = "right" href = "#top"> Back to top</a>
-
-_##A special note for a particular issue some users can face in the project##_
-
-_Upon initializing <npm run start>, the following message may be prompted on the terminal._
-'react-scripts' is not recognized as an internal or external command, operable program or batch file.
-To eliminate that: You can use <npm install> to acquire the missing dependencies.
-
-_But during npm install, the following error can occur:_
-npm WARN deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
-
-The warning message received indicates that the package 'stable' you have installed is deprecated. The 'stable' package was previously used to provide a stable sorting algorithm for older versions of JavaScript that did not guarantee the stability of the `Array#sort()` method. However, modern versions of JavaScript now ensure that `Array#sort()` is a stable sort, making the 'stable' package unnecessary.
-
-The warning message suggests referring to the compatibility table on MDN (Mozilla Developer Network) to understand the browser compatibility of the `Array#sort()` method. The table provides information about which browser versions support stable sorting using `Array#sort()`.
-
-_To address this issue:_
-we can simply use the command:
-<npm update stable>
-
-After this when we again run the command: <npm run start>, the website will work just fine.
-
----
-
 A big thank you to all our contributors who have made this project better with their valuable contributions! We appreciate your efforts and dedication.
 
-Don't forget to ⭐ this repository to show your support!
-
 ---
-
-PS: A big thank you to all our contributors who have made this project better with their valuable contributions! We appreciate your efforts and dedication.
 
 <h3 align="center"> DON'T FORGET TO ⭐ THIS REPOSITORY !!
 </h3>
@@ -383,7 +172,3 @@ PS: A big thank you to all our contributors who have made this project better wi
 
 </div>
   
-
-  
-
-
