@@ -61,9 +61,15 @@
   justify-content: space-around;
   align-items: center;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.add:hover {
+  background-color: #2762b9;
+
 }
 .github {
   all: unset;
+  transition: all 0.3s ease-in-out;
   background-color: #21252c;
   border-radius: 12px;
   padding: 12px 10px;
@@ -98,6 +104,7 @@
 }
 .username,
 .addbtn {
+  transition: all 0.3s ease-in-out;
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
@@ -105,8 +112,21 @@
   text-shadow: 0px 4px 4px 0px #00000040;
   filter: drop-shadow(0px 4px 1px rgba(255, 255, 255, 0.25));
 }
-.navbar.navbar-light .github:hover .username {
-  color: #fff;
+.navbar.navbar-light .github .username {
+  color: black; 
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.navbar-light .github:hover {
+  background: white; 
+  transition: all 0.3s ease-in-out;
+}
+.navbar.navbar-light .github {
+  background: teal;
+  transition: all 0.3s ease-in-out;
+}
+.navbar.navbar-light .github .image_container {
+  color: black;
   transition: all 0.3s ease-in-out;
 }
 .github:hover .username {
@@ -118,8 +138,11 @@
   text-shadow: 0px 4px 4px 0px #ffffff40;
   filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.25));
 }
+.navbar.navbar-dark .image_container {
+  color: cyan;
+}
 .navbar.navbar-dark .github:hover .username {
-  color: #ffffff;
+  color: cyan;
   transition: all 0.3s ease-in-out;
 }
 .mode_toggle {

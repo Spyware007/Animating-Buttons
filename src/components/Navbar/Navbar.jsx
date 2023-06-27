@@ -1,42 +1,43 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Navbar.module.css";
 import { Link, NavLink } from "react-router-dom";
+import { BsGithub } from "react-icons/bs";
 
 // images
 import github from "../../assets/github.png";
 import moon from "../../assets/moon.png";
 import sun from "../../assets/sun.png";
-import { getAuth } from "firebase/auth";
+// import { getAuth } from "firebase/auth";
 import axios from "axios";
 
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
-  const auth = getAuth()
+  // const auth = getAuth()
   const [username, setUsername] = useState('')
   const [userImage, setUserImage] = useState('')
 
 
-  const fetchGithubData = async (user) => {
-      const githubId = user.providerData[0].uid;
-      try {
-        const response = await axios.get(`https://api.github.com/user/${githubId}`);
-        console.log(response);
-        const {
-          login,
-          avatar_url,
-        } = response.data;
-        setUsername(login)
-        setUserImage(avatar_url)
-      }
-      catch (error) {
-        console.error("Error fetching GitHub data:", error);
-      }
-  }
-  useEffect(() => {
-    if (auth.currentUser) {
-      fetchGithubData(auth.currentUser)
-    }
+  // const fetchGithubData = async (user) => {
+  //     const githubId = user.providerData[0].uid;
+  //     try {
+  //       const response = await axios.get(`https://api.github.com/user/${githubId}`);
+  //       console.log(response);
+  //       const {
+  //         login,
+  //         avatar_url,
+  //       } = response.data;
+  //       setUsername(login)
+  //       setUserImage(avatar_url)
+  //     }
+  //     catch (error) {
+  //       console.error("Error fetching GitHub data:", error);
+  //     }
+  // }
+  // useEffect(() => {
+  //   if (auth.currentUser) {
+  //     fetchGithubData(auth.currentUser)
+  //   }
       
-  }, [auth.currentUser])
+  // }, [auth.currentUser])
 
 
 
@@ -118,7 +119,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               (<NavLink className={classes.list_item_link} to="/login">
                 <button className={classes.github}>
                   <div className={classes.image_container}>
-                    <img className={classes.image} src={github} alt="Creator" />
+                    <BsGithub className={classes.image} />
                   </div>
                   <span className={classes.username}>Sign in With GitHub</span>
                 </button>
