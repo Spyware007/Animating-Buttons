@@ -53,19 +53,29 @@
   gap: 20px;
 }
 .add {
-  all: unset;
-  background-color: #4285f4;
-  border-radius: 12px;
-  padding: 12px 10px;
+  background-image: linear-gradient(
+    to right,
+    #00c6ff 0%,
+    #0072ff 51%,
+    #00c6ff 100%
+  );
+  margin: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  gap: 2px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
 }
 .add:hover {
-  background-color: #2762b9;
-
+  background-position: right center;
+  text-decoration: none;
 }
 .github {
   all: unset;
@@ -113,16 +123,16 @@
   filter: drop-shadow(0px 4px 1px rgba(255, 255, 255, 0.25));
 }
 .navbar.navbar-light .github .username {
-  color: black; 
+  color: black;
   transition: all 0.3s ease-in-out;
 }
 
 .navbar.navbar-light .github:hover {
-  background: white; 
+  background: cyan;
   transition: all 0.3s ease-in-out;
 }
 .navbar.navbar-light .github {
-  background: teal;
+  background: white;
   transition: all 0.3s ease-in-out;
 }
 .navbar.navbar-light .github .image_container {
