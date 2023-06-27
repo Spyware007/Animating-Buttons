@@ -168,9 +168,9 @@ ________________________________________________________________________________
 ### Login to the [Animating Buttons](https://lets-animate-btns.vercel.app/) Website <br>
 
 3. **No need to make any changes in the repository.**
-4. **Login** using your GitHub Account on our website, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/blob/readme-1102/readme-assets/log-in-page.png)
-5. Click on **CREATE** button on the nav-bar, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/blob/readme-1102/readme-assets/after-login.png) 
-6. Create your button **directly** on the website, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/blob/readme-1102/readme-assets/create.png)  
+4. **Login** using your GitHub Account on our website, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#log-in)
+5. Click on **CREATE** button on the nav-bar, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#your-profile-now-create-button)
+6. Create your button **directly** on the website, as shown in above [screenshots](https://github.com/arcVaishali/Animating-Buttons/tree/readme-1102#creating-button)
 
 
 <br>
