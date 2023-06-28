@@ -8,14 +8,13 @@ import htmlIcon from "../../../assets/html.png";
 import cssIcon from "../../../assets/css.png";
 import jsIcon from "../../../assets/js.png";
 import copyIcon from "../../../assets/copy.png";
-import { getAuth } from "firebase/auth";
+// import { getAuth } from "firebase/auth";
 import { auth, db } from "../../../firebase/auth"; // Import the db and signInWithGitHub from auth.js
 import { collection, addDoc } from "firebase/firestore"; // Import the collection and addDoc functions
 import axios from "axios";
 
-const CodeEditor = ({ html, setHtml, css, setCss, js, setJs }) => {
-  const [userLoggedIn, setUserLoggedIn] = useState(false);
-  const navigate = useNavigate();
+export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
+  // const [userLoggedIn, setUserLoggedIn] = useState(false);
   const location = useLocation();
 
   const files = {
@@ -39,19 +38,20 @@ const CodeEditor = ({ html, setHtml, css, setCss, js, setJs }) => {
   const [fileName, setFileName] = useState("index.html");
   const editorRef = useRef(null);
   const file = files[fileName];
-  useEffect(() => {
-    const auth = getAuth();
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
-        setUserLoggedIn(true);
-      } else {
-        setUserLoggedIn(false);
-        navigate("/login");
-      }
-    });
+  // useEffect(() => {
+  //   const auth = getAuth();
+  //   const unsubscribe = auth.onAuthStateChanged((user) => {
+  //     if (user) {
+  //       setUserLoggedIn(true);
+  //     } else {
+  //       setUserLoggedIn(false);
+  //       navigate("/login");
+  //       const navigate = useNavigate();
+  //     }
+  //   });
 
-    return () => unsubscribe();
-  }, []);
+  //   return () => unsubscribe();
+  // }, []);
 
   const saveButtonToFirestore = async () => {
     const user = auth.currentUser;
@@ -61,7 +61,6 @@ const CodeEditor = ({ html, setHtml, css, setCss, js, setJs }) => {
     }
 
     const buttonCollectionRef = collection(db, "buttons");
-
     const buttonData = {
       html,
       css,
@@ -173,6 +172,4 @@ const CodeEditor = ({ html, setHtml, css, setCss, js, setJs }) => {
       </div>
     </>
   );
-};
-
-export default CodeEditor;
+}
