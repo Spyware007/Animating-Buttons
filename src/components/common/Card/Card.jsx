@@ -20,7 +20,7 @@ function download(css, html, js, name) {
   });
 }
 
-const Card = ({ button }) => {
+export default function Card({ button }) {
   const btnId = button.id;
   const user = button.githubUsername;
   const [profilePicture, setProfilePicture] = useState({});
@@ -95,6 +95,4 @@ const Card = ({ button }) => {
       </div>
     </div>
   );
-};
-
-export default Card;
+}
