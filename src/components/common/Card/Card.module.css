@@ -75,3 +75,12 @@
 .stats_btn {
   align-self: flex-end;
 }
+
+@media only screen and (max-width: 800px) {
+  .card_container {
+    width: 350px;
+  }
+  .iframe_container {
+    width: 320px;
+  }
+}

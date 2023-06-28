@@ -45,6 +45,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* font-family: "Montserrat", sans-serif; */
   font-family: "SansationBold", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 code {
