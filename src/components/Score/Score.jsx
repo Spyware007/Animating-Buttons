@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import memoji from "../../assets/memoji.png";
 import Loader from "../common/Loader/Loader";
 
-export default function Score(buttonsData, usersData) {
+export default function Score(props) {
+  const [buttonsData, usersData] = [props.buttonsData, props.usersData];
+
   const [currentList, setCurrentList] = useState("likes");
   const [dropdown, setDropdown] = useState(false);
 
