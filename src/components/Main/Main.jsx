@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Data } from "../../Data";
 import classes from "./Main.module.css";
 import Card from "../common/Card/Card";
 
@@ -10,11 +9,8 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
   const itemsPerPage = 36;
   const indexOfLastItem = currentPage * itemsPerPage;
   const isActive = (i) => (currentPage === i + 1 ? classes.active : "");
-  const [query, setQuery] = useState("");
-  const filteredItems = buttonsData.filter((button) =>
-    button.html.toLowerCase().includes(query.toLowerCase())
-  );
-  const currentItems = filteredItems.slice(
+
+  const currentItems = buttonsData.slice(
     indexOfLastItem - itemsPerPage,
     indexOfLastItem
   );
@@ -32,7 +28,7 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
       >
         {"<"}
       </li>
-      {Array(Math.ceil(filteredItems.length / itemsPerPage))
+      {Array(Math.ceil(buttonsData.length / itemsPerPage))
         .fill()
         .map((_, index) => {
           const pageNumber = index + 1;
@@ -40,7 +36,7 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
             pageNumber === 1 ||
             pageNumber === currentPage ||
             (pageNumber >= currentPage - 1 && pageNumber <= currentPage + 1) ||
-            pageNumber === Math.ceil(filteredItems.length / itemsPerPage)
+            pageNumber === Math.ceil(buttonsData.length / itemsPerPage)
           ) {
             return (
               <li
@@ -54,7 +50,7 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
           } else if (
             (pageNumber === currentPage - 2 && pageNumber > 1) ||
             (pageNumber === currentPage + 2 &&
-              pageNumber < Math.ceil(filteredItems.length / itemsPerPage))
+              pageNumber < Math.ceil(buttonsData.length / itemsPerPage))
           ) {
             return (
               <li
@@ -70,10 +66,10 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
         })}
       <li
         className={`${classes.paginationItem} ${isActive(
-          Math.ceil(filteredItems.length / itemsPerPage) - 1
+          Math.ceil(buttonsData.length / itemsPerPage) - 1
         )}`}
         onClick={() =>
-          handlePageChange(Math.ceil(filteredItems.length / itemsPerPage))
+          handlePageChange(Math.ceil(buttonsData.length / itemsPerPage))
         }
       >
         {">"}
@@ -92,7 +88,7 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
         ))}
       </div>
       <div className={classes.pagination}>
-        {Data.length > itemsPerPage && pageNavigationButtions}
+        {buttonsData.length > itemsPerPage && pageNavigationButtions}
       </div>
     </div>
   );
