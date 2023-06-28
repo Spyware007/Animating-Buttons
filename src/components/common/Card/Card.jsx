@@ -24,6 +24,7 @@ const Card = ({ button }) => {
   const btnId = button.id;
   const user = button.githubUsername;
   const [profilePicture, setProfilePicture] = useState({});
+  const [showIframe, setShowIframe] = useState({});
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -47,20 +48,25 @@ const Card = ({ button }) => {
     };
     fetchUser();
   }, [user]);
+  const handleButtonClick = () => {
+    setShowIframe(!showIframe);
+  };
 
   return (
     <div className={classes.card_container}>
-      <iframe
-        className={classes.iframe_container}
-        title={btnId}
-        srcDoc={`
+      {showIframe && (
+        <iframe
+          className={classes.iframe_container}
+          title={btnId}
+          srcDoc={`
             <html>
               <head><style>${button.css}</style></head>
               <body>${button.html}<script>${button.js}</script></body>
             </html>
           `}
-        sandbox="allow-scripts"
-      ></iframe>
+          sandbox="allow-scripts"
+        ></iframe>
+      )}
 
       <div className={classes.contributor_info}>
         <div className={classes.contributor_data}>
@@ -79,9 +85,7 @@ const Card = ({ button }) => {
           <Link to={`/show/${btnId}`}>
             <Button show={true} />
           </Link>
-          <Button
-            onClick={() => download(button.css, button.html, button.js, user)}
-          />
+          <Button onClick={handleButtonClick} />
         </div>
       </div>
 
