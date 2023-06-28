@@ -105,7 +105,7 @@ const App = ({ modeToggleFunc, modeToggle }) => {
       {loading ? (
         <Loader />
       ) : (
-        <div className={`${toggleMode ? "dark" : "light"}`}>
+        <div className={`${toggleMode ? "dark" : "light"}`} style={{width : "max-content"}}>
           <Navbar modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
           <Routes>
             {routes.map((route, index) => (

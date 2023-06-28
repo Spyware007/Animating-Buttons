@@ -10,6 +10,7 @@
   font-family: "SansationBold", sans-serif;
   position: relative;
   overflow: hidden;
+  background-color: #000;
 }
 .landing.landing-dark .header {
   color: #fff;
@@ -92,10 +93,11 @@
 }
 @media screen and (max-width: 768px) {
   .landing {
-    height: auto;
+    height: max-content;
     padding: 10px 20px;
     align-items: center;
     min-height: 86vh;
+    width: max-content;
   }
   .header {
     align-items: center;
