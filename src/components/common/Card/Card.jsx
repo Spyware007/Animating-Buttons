@@ -20,7 +20,7 @@ function download(css, html, js, name) {
   });
 }
 
-export default function Card({ button }) {
+const Card = ({ button }) => {
   const btnId = button.id;
   const user = button.githubUsername;
   const [profilePicture, setProfilePicture] = useState({});
@@ -85,7 +85,9 @@ export default function Card({ button }) {
           <Link to={`/show/${btnId}`}>
             <Button show={true} />
           </Link>
-          <Button onClick={handleButtonClick} />
+          <Button
+            onClick={() => download(button.css, button.html, button.js, user)}
+          />
         </div>
       </div>
 
@@ -95,4 +97,6 @@ export default function Card({ button }) {
       </div>
     </div>
   );
-}
+};
+
+export default Card;
