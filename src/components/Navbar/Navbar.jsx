@@ -154,9 +154,14 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               Home
             </NavLink>
           </li>
-          <li className={classes.list_item}>
+          {/* <li className={classes.list_item}>
             <NavLink className={classes.list_item_link} to="/explore">
               Explore
+            </NavLink>
+          </li> */}
+          <li className={classes.list_item}>
+            <NavLink className={classes.list_item_link} to="/leaderboard">
+            Leaderboard
             </NavLink>
           </li>
           <li className={classes.list_item}>

@@ -3,6 +3,8 @@ import classes from "./Score.module.css";
 import { Link } from "react-router-dom";
 import memoji from "../../assets/memoji.png";
 import Loader from "../common/Loader/Loader";
+import { delay, motion } from "framer-motion";
+import { fadeIn } from "../Animation/motion";
 
 export default function Score(props) {
   const [buttonsData, usersData] = [props.buttonsData, props.usersData];
@@ -88,37 +90,57 @@ export default function Score(props) {
         {currentList === "buttons" ? (
           <div className={classes.leaderboard}>
             <h2 className={classes.category}>Based On Number Of Buttons</h2>
+
             {sortedUsers.map(([name, count], index) => (
-              <Link to={`/user/${name}`} key={index} className={classes.item}>
-                <span className={classes.rank}>{rankNumber++ + "."}</span>
-                <img
-                  src={getProfilePicture(name)}
-                  alt="Profile"
-                  className={classes.profileImage}
-                />
-                <div className={classes.details}>
-                  <div className={classes.name}>{name}</div>
-                  <div className={classes.count}>{count} buttons added</div>
-                </div>
-              </Link>
+              <motion.div
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ type: "spring", stiffness: 60}}
+                className={classes.itemDiv}
+              >
+                <Link to={`/user/${name}`} key={index}
+                  className={classes.item}
+
+                >
+                  <span className={classes.rank}>{rankNumber++ + "."}</span>
+                  <img
+                    src={getProfilePicture(name)}
+                    alt="Profile"
+                    className={classes.profileImage}
+                  />
+                  <div className={classes.details}>
+                    <div className={classes.name}>{name}</div>
+                    <div className={classes.count}>{count} buttons added</div>
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
         ) : (
           <div className={classes.leaderboard}>
             <h2 className={classes.category}>Based On Number Of Likes</h2>
             {sortedLikes.map(([name, count], index) => (
-              <Link to={`/user/${name}`} key={index} className={classes.item}>
-                <span className={classes.rank}>{rankLikes++ + "."}</span>
-                <img
-                  src={getProfilePicture(name)}
-                  alt="Profile"
-                  className={classes.profileImage}
-                />
-                <div className={classes.details}>
-                  <div className={classes.name}>{name}</div>
-                  <div className={classes.count}>Total Likes : {count} </div>
-                </div>
-              </Link>
+              <motion.div
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ type: "spring", stiffness: 60}}
+                className={classes.itemDiv}
+              >
+                <Link to={`/user/${name}`} key={index} className={classes.item}>
+                  <span className={classes.rank}>{rankLikes++ + "."}</span>
+                  <img
+                    src={getProfilePicture(name)}
+                    alt="Profile"
+                    className={classes.profileImage}
+                  />
+                  <div className={classes.details}>
+                    <div className={classes.name}>{name}</div>
+                    <div className={classes.count}>Total Likes : {count} </div>
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
         )}

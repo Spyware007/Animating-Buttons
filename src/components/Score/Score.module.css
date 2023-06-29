@@ -25,21 +25,20 @@
   margin-bottom: 5rem;
 }
 
-.item:nth-child(1) .rank {
+.itemDiv:nth-child(2) .rank {
   color: #FFD700;
   font-weight: bolder;
 }
 
-.item:nth-child(2) .rank {
+.itemDiv:nth-child(3) .rank {
   color: #C0C0C0;
   font-weight: bolder;
 
 }
 
-.item:nth-child(3) .rank {
+.itemDiv:nth-child(4) .rank {
   color: #CD7F32;
   font-weight: bolder;
-
 }
 
 
