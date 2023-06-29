@@ -26,6 +26,3 @@ function Contributor() {
   );
 }
 export default Contributor;
-<a href="https://oscode-community.github.io/OSCodeCommunitySite/">
-  <strong>OSCode</strong>
-</a>;

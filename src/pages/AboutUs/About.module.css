@@ -75,7 +75,6 @@
   gap: 1rem;
 }
 
-
 .link1:hover {
   scale: 1.1;
   transform: rotate(30deg) scale(1.2);
@@ -97,7 +96,6 @@
 }
 
 @media (max-width: 1089px) {
-
   .Header {
     display: flex;
     flex-direction: column-reverse;
@@ -146,4 +144,27 @@
     align-items: center;
     margin: 6rem;
   }
+}
+/* light mode */
+.about.about-light .About_p {
+  color: #000;
+}
+.about.about-light .About_p_t {
+  color: #000;
+}
+.about.about-light .About_p_c {
+  color: #000;
+}
+
+.about.about-light .Project_Admin {
+  color: #868f11;
+}
+.about.about-light .Project_Admin {
+  color: #868f11;
+}
+.about.about-light .About_p_o {
+  color: #868f11;
+}
+.about.about-light .About_h1_c {
+  color: #868f11;
 }

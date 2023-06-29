@@ -6,7 +6,11 @@ import memoji from "../../assets/memoji.png";
 import classes from "./About.module.css";
 const About = ({ modeToggle }) => {
   return (
-    <>
+    <div
+      className={`${classes.about} ${
+        !modeToggle ? classes["about-light"] : classes["about-dark"]
+      }`}
+    >
       <div className={classes.Header}>
         <div>
           <img src={memoji} className={classes.admin_img} alt="admin img"></img>
@@ -56,7 +60,7 @@ const About = ({ modeToggle }) => {
         </p>
       </div>
       <Timeline modeToggle={modeToggle} />
-    </>
+    </div>
   );
 };
 

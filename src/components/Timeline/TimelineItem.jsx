@@ -20,7 +20,12 @@ const TimelineItem = ({ data, modeToggle }) => {
         <time>{data.date}</time>
         <p>{data.text}</p>
         {data.link && (
-          <a href={data.link.url} target="_blank" rel="noopener noreferrer">
+          <a
+            href={data.link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.link}
+          >
             {data.link.text}
           </a>
         )}
