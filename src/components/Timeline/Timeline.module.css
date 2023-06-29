@@ -63,6 +63,10 @@
 .timeline_item_content:hover {
   scale: 1.03;
 }
+
+.timeline_item_content:hover {
+  scale: 1.02;
+
 .timeline_item_content::after {
   content: " ";
   background-color: rgba(45, 44, 46, 0.8);
