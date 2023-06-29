@@ -1,6 +1,6 @@
 import React from "react";
 import Timeline from "../../components/Timeline/Timeline";
-
+import { Twitter, LinkedIn } from "../../assets/svg";
 import Contributor from "./Contributor";
 import memoji from "../../assets/memoji.png";
 import classes from "./About.module.css";
@@ -12,6 +12,22 @@ const About = ({ modeToggle }) => {
           <img src={memoji} className={classes.admin_img} alt="admin img"></img>
           <h1 className={classes.Admin_name}>Om Gawande</h1>
           <p className={classes.Project_Admin}>Project Admin</p>
+          <div className={classes.social_profilee}>
+            <a
+              href="https://www.linkedin.com/in/om-gawande/"
+              target="__blank"
+              className={classes.link2}
+            >
+              <LinkedIn className={classes.glow} />
+            </a>
+            <a
+              href="https://twitter.com/oom_gawande"
+              target="__blank"
+              className={classes.link1}
+            >
+              <Twitter />
+            </a>
+          </div>
         </div>
         <div className={classes.Para}>
           <h1 className={classes.About_h1}>About Us</h1>

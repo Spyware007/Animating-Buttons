@@ -200,6 +200,7 @@
 .logOut{
   margin-left: 1rem;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 
