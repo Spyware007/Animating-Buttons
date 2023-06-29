@@ -82,12 +82,13 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
   return (
     <div className={classes.main_container}>
 
-      {!buttonsData ?
+      {(buttonsData.length === 0) ?
 
         (<motion.h1 
           variants={paraAnim}
             initial="hidden"
             whileInView="visible"
+            
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 60 }}
           className={classes.wait}>We Are Constantly Working To Provide You With The Best Possible Experience ... <br /><br /> Thank You For Your Patience 🫠 </motion.h1>) :
