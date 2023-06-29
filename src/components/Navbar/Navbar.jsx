@@ -18,21 +18,14 @@ import moon from "../../assets/moon.png";
 import sun from "../../assets/sun.png";
 // import { getAuth } from "firebase/auth";
 import axios from "axios";
+import { auth } from "../../firebase/auth";
 
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
   // const auth = getAuth()
-  const [username, setUsername] = useState(
-    localStorage.getItem("username") || ""
-  );
-  const [userImage, setUserImage] = useState(
-    localStorage.getItem("userImage") || ""
-  );
-  const [userEmail, setUserEmail] = useState(
-    localStorage.getItem("email") || ""
-  );
-  const [displayName, setDisplayName] = useState(
-    localStorage.getItem("displayName") || ""
-  );
+  const [username, setUsername] = useState("");
+  const [userImage, setUserImage] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [displayName, setDisplayName] = useState("");
 
   const handleGitHubLogin = async () => {
     const auth = getAuth();
@@ -43,7 +36,6 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
       .then((result) => {
         // Handle successful login
         const user = result.user;
-        // console.log(user.reloadUserInfo.screenName);
         setDisplayName(user.displayName);
         localStorage.setItem("displayName", user.displayName);
         setUsername(user.reloadUserInfo.screenName);
@@ -63,14 +55,11 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
     const auth = getAuth();
     signOut(auth)
       .then(() => {
-        setDisplayName("");
-        setUsername("");
-        setUserEmail("");
-        setUserImage("");
-        localStorage.setItem("displayName", null);
-        localStorage.setItem("email", null);
-        localStorage.setItem("userImage", null);
-        localStorage.setItem("username", null);
+        setDisplayName(null);
+        setUsername(null);
+        setUserEmail(null);
+        setUserImage(null);
+        localStorage.clear()
         console.log("Logged out.");
       })
       .catch((error) => {
@@ -78,63 +67,32 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
       });
   };
 
-  // const fetchGithubData = async (user) => {
-  //     const githubId = user.providerData[0].uid;
-  //     try {
-  //       const response = await axios.get(`https://api.github.com/user/${githubId}`);
-  //       console.log(response);
-  //       const {
-  //         login,
-  //         avatar_url,
-  //       } = response.data;
-  //       setUsername(login)
-  //       setUserImage(avatar_url)
-  //     }
-  //     catch (error) {
-  //       console.error("Error fetching GitHub data:", error);
-  //     }
-  // }
-  // useEffect(() => {
-  //   if (auth.currentUser) {
-  //     fetchGithubData(auth.currentUser)
-  //   }
 
-  // }, [auth.currentUser])
 
-  const fetchGithubData = async (githubId) => {
-    try {
-      const response = await axios.get(
-        `https://api.github.com/user/${githubId}`,
-        {
-          headers: {
-            Authorization: `Bearer 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`,
-          },
-        }
-      );
-      const { login } = response.data;
-      setUsername(login);
-      localStorage.setItem("username", login);
-    } catch (error) {
-      console.error("Error fetching GitHub data:", error);
-    }
-  };
 
   useEffect(() => {
     const auth = getAuth();
 
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        if (!username) {
-          try {
-            fetchGithubData(auth.currentUser.providerData[0].uid);
-          } catch (error) {
-            console.log(error);
-          }
-        }
-      } else {
+        console.log(user);
+        setDisplayName(user.displayName);
+        localStorage.setItem("displayName", user.displayName);
+        setUsername(user.reloadUserInfo.screenName);
+        localStorage.setItem("username", user.reloadUserInfo.screenName);
+        setUserEmail(user.email);
+        localStorage.setItem("email", user.email);
+        setUserImage(user.photoURL);
+        localStorage.setItem("userImage", user.photoURL);
+
+      }
+      else {
+        handleLogout();
         localStorage.clear();
       }
     });
+
+
 
     return () => {
       unsubscribe();
@@ -144,9 +102,8 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
   return (
     <>
       <nav
-        className={`${classes.navbar} ${
-          !modeToggle ? classes["navbar-light"] : classes["navbar-dark"]
-        }`}
+        className={`${classes.navbar} ${!modeToggle ? classes["navbar-light"] : classes["navbar-dark"]
+          }`}
       >
         <ul className={classes.navlist}>
           <li className={classes.list_item}>
@@ -177,9 +134,8 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
             <BsGithub className={classes.image} />
           </a>
           <button
-            className={`${classes.mode_toggle} ${
-              modeToggle ? classes.dark_mode : classes.light_mode
-            }`}
+            className={`${classes.mode_toggle} ${modeToggle ? classes.dark_mode : classes.light_mode
+              }`}
             onClick={() => modeToggleFunc(!modeToggle)}
           >
             <img src={modeToggle ? sun : moon} alt="" />
