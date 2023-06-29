@@ -98,7 +98,20 @@
   font-size: 35px;
   text-align: center;
 }
+.social_profilee {
+  justify-content: center;
+  display: flex;
+  gap: 1rem;
+}
 
+.link1:hover {
+  scale: 1.1;
+  transform: rotate(30deg) scale(1.2);
+}
+.link2:hover {
+  scale: 1.1;
+  transform: rotate(30deg) scale(1.2);
+}
 @media (max-width: 1024px) {
   .Header {
     display: flex;
