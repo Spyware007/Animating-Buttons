@@ -1,9 +1,16 @@
 import React from "react";
 import classes from "./Timeline.module.css";
+import { motion } from "framer-motion";
+import { timeline_stag } from "../Animation/motion";
 
 const TimelineItem = ({ data, modeToggle }) => {
   return (
-    <div
+    <motion.div
+      variants={timeline_stag}
+      initial="hidden"
+      whileInView="visible"
+      transition={{ duration: 4 }}
+      viewport={{ once: true }}
       className={
         modeToggle
           ? classes.timeline_item
@@ -31,7 +38,7 @@ const TimelineItem = ({ data, modeToggle }) => {
         )}
         <span className={classes.circle} />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

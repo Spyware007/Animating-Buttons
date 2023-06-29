@@ -74,7 +74,10 @@
   display: flex;
   gap: 1rem;
 }
-
+.link1,
+.link2 {
+  z-index: 100;
+}
 .link1:hover {
   scale: 1.1;
   transform: rotate(30deg) scale(1.2);
