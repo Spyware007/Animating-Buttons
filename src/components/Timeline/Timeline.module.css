@@ -61,7 +61,7 @@
   }
 }
 .timeline_item_content:hover {
-  scale: 1.02;
+  scale: 1.03;
 }
 .timeline_item_content::after {
   content: " ";
