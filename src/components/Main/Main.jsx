@@ -82,7 +82,7 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
   return (
     <div className={classes.main_container}>
 
-      {buttonsData ?
+      {!buttonsData ?
 
         (<motion.h1 
           variants={paraAnim}
