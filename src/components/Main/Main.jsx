@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import classes from "./Main.module.css";
 import Card from "../common/Card/Card";
+import { motion } from 'framer-motion'
+import { paraAnim } from "../Animation/motion";
 
 export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
   const [currentPage, setCurrentPage] = useState(
@@ -79,17 +81,31 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
 
   return (
     <div className={classes.main_container}>
-      <h1 style={{ textAlign: "center" }}>
-        Total number of Buttons added {buttonsData.length}
-      </h1>
-      <div className={classes.btns_container}>
-        {currentItems.map((button, index) => (
-          <Card key={index} button={button} />
-        ))}
-      </div>
-      <div className={classes.pagination}>
-        {buttonsData.length > itemsPerPage && pageNavigationButtions}
-      </div>
+
+      {(buttonsData.length === 0) ?
+
+        (<motion.h1 
+          variants={paraAnim}
+            initial="hidden"
+            whileInView="visible"
+            
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 60 }}
+          className={classes.wait}>We Are Constantly Working To Provide You With The Best Possible Experience ... <br /><br /> Thank You For Your Patience 🫠 </motion.h1>) :
+
+        (<div><h1 style={{ textAlign: "center" }}>
+          Total number of Buttons added {buttonsData.length}
+        </h1>
+          <div className={classes.btns_container}>
+            {currentItems.map((button, index) => (
+              <Card key={index} button={button} />
+            ))}
+          </div>
+          <div className={classes.pagination}>
+            {buttonsData.length > itemsPerPage && pageNavigationButtions}
+          </div>
+        </div>)
+      }
     </div>
   );
 }
