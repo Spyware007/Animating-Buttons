@@ -9,7 +9,8 @@
   font-size: x-large;
   color: rgb(0, 0, 0);
   height: 71vh;
-  width: 100vw;
+  width: 99vw;
+  overflow-x: hidden;
 }
 .pg_not_found.pg_not_found-dark .heading2,
 .pg_not_found.pg_not_found-dark .para {

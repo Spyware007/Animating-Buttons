@@ -82,6 +82,7 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
   return (
     <div className={classes.main_container}>
 
+
       {(buttonsData.length === 0) ?
 
         (<motion.h1 
@@ -93,7 +94,7 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
             transition={{ type: "spring", stiffness: 60 }}
           className={classes.wait}>We Are Constantly Working To Provide You With The Best Possible Experience ... <br /><br /> Thank You For Your Patience 🫠 </motion.h1>) :
 
-        (<div><h1 style={{ textAlign: "center" }}>
+        (<div><h1 style={{ textAlign: "center" , marginTop: "30px"}}>
           Total number of Buttons added {buttonsData.length}
         </h1>
           <div className={classes.btns_container}>
@@ -106,6 +107,7 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
           </div>
         </div>)
       }
+
     </div>
   );
 }
