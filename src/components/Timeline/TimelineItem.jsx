@@ -1,15 +1,15 @@
 import React from "react";
 import classes from "./Timeline.module.css";
 import { motion } from "framer-motion";
-import { timeline_stag } from "../Animation/motion";
+import { fadeIn } from "../Animation/motion";
 
 const TimelineItem = ({ data, modeToggle }) => {
   return (
     <motion.div
-      variants={timeline_stag}
+      variants={fadeIn}
       initial="hidden"
       whileInView="visible"
-      transition={{ duration: 4 }}
+      transition={{ duration: 2, delay: data.delayTime }}
       viewport={{ once: true }}
       className={
         modeToggle

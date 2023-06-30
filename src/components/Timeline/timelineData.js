@@ -10,6 +10,7 @@ export const timelineData = [
       url: "https://github.com/Spyware007/Animating-Buttons/",
       text: "Visit Repository",
     },
+    delayTime: 0.2,
   },
   {
     text: "100+ Stars on the Repository.✨",
@@ -22,6 +23,7 @@ export const timelineData = [
       url: "https://github.com/Spyware007/Animating-Buttons/",
       text: "Visit Repository",
     },
+    delayTime: 0.4,
   },
   {
     text: "Project Selected for GSSOC'23.🚀",
@@ -34,6 +36,7 @@ export const timelineData = [
       url: "https://www.linkedin.com/posts/om-gawande_%3F%3F%3F%3F%3F%3F%3F-%3F%3F%3F%3F%3F-%3F%3F%3F%3F%3F-activity-7067364585741201408-Skl5?utm_source=share&utm_medium=member_desktop",
       text: "Read more",
     },
+    delayTime: 0.6,
   },
   {
     text: "Added the Hacktoberfest 2022 tag to my project.🚀",
@@ -46,6 +49,7 @@ export const timelineData = [
       url: "https://www.linkedin.com/posts/om-gawande_spyware007animating-buttons-activity-6991593574479859712-vfx2?utm_source=share&utm_medium=member_desktop",
       text: "Read more",
     },
+    delayTime: 0.8,
   },
   {
     text: "My first open-source project.🚀",
@@ -58,5 +62,6 @@ export const timelineData = [
       url: "https://www.linkedin.com/posts/om-gawande_spyware007animating-buttons-activity-6991593574479859712-vfx2?utm_source=share&utm_medium=member_desktop",
       text: "See here",
     },
+    delayTime: 0.1,
   },
 ];
