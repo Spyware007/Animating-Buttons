@@ -14,7 +14,7 @@ const Timeline = ({ modeToggle }) => {
           }
         >
           {timelineData.map((data, idx) => (
-            <TimelineItem data={data} key={idx} />
+            <TimelineItem data={data} key={idx} index = {idx}/>
           ))}
         </div>
       )}

@@ -21,8 +21,19 @@ export const fadeIn = {
     opacity: 1,
     y: 0,
   },
+  transition: { type: "spring", stiffness: 150 ,}
 };
 export const socialAnim = {
   hidden: { x: "-50%" },
   visible: { x: 0 },
 };
+
+export const leftAnim = {
+  hidden : {x : '-50%'},
+  visible : {x : '0'}
+}
+
+export const rightAnim = {
+  hidden : {x : '50%'},
+  visible : {x : '0'}
+}

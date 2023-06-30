@@ -4,6 +4,9 @@ import { Twitter, LinkedIn } from "../../assets/svg";
 import Contributor from "./Contributor";
 import memoji from "../../assets/memoji.png";
 import classes from "./About.module.css";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../components/Animation/motion";
+
 const About = ({ modeToggle }) => {
   return (
     <div
@@ -13,29 +16,31 @@ const About = ({ modeToggle }) => {
     >
       <div className={classes.Header}>
         <div>
-          <img src={memoji} className={classes.admin_img} alt="admin img"></img>
-          <h1 className={classes.Admin_name}>Om Gawande</h1>
-          <p className={classes.Project_Admin}>Project Admin</p>
+          <motion.img variants={fadeIn} initial={'hidden'} whileInView={"visible"} viewport={{once : true}} src={memoji} className={classes.admin_img} alt="admin img"></motion.img>
+          <motion.h1 variants={fadeIn} initial={'hidden'} whileInView={"visible"} viewport={{once : true}} transition={{delay : 0.1}} className={classes.Admin_name}>Om Gawande</motion.h1>
+          <motion.p variants={fadeIn} initial={'hidden'} whileInView={"visible"} viewport={{once : true}} transition={{delay : 0.2}} className={classes.Project_Admin}>Project Admin</motion.p>
           <div className={classes.social_profilee}>
-            <a
+            <motion.a
+            variants={fadeIn} initial={'hidden'} whileInView={"visible"} viewport={{once : true}} transition={{delay : 0.3}}
               href="https://www.linkedin.com/in/om-gawande/"
               target="__blank"
               className={classes.link2}
             >
               <LinkedIn className={classes.glow} />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+            variants={fadeIn} initial={'hidden'} whileInView={"visible"} viewport={{once : true}} transition={{delay : 0.4}}
               href="https://twitter.com/oom_gawande"
               target="__blank"
               className={classes.link1}
             >
               <Twitter />
-            </a>
+            </motion.a>
           </div>
         </div>
         <div className={classes.Para}>
-          <h1 className={classes.About_h1}>About Us</h1>
-          <p className={classes.About_p}>
+          <motion.h1 variants={fadeIn} initial={'hidden'} whileInView={"visible"} viewport={{once : true}}  className={classes.About_h1}>About Us</motion.h1>
+          <motion.p variants={fadeIn} initial={'hidden'} whileInView={"visible"} viewport={{once : true}} transition={{delay : 0.1}} className={classes.About_p}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -47,7 +52,7 @@ const About = ({ modeToggle }) => {
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi occaecat cupidatat non proident,
             sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          </motion.p>
         </div>
       </div>
       <Contributor />

@@ -21,6 +21,7 @@
   height: 10rem;
   justify-content: center;
   align-items: center;
+  transition: all 0.1s ;
 }
 .Avtar:hover {
   scale: 1.2;

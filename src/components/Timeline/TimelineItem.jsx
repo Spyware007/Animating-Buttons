@@ -1,9 +1,17 @@
 import React from "react";
 import classes from "./Timeline.module.css";
+import { motion } from "framer-motion";
+import { leftAnim, rightAnim } from "../Animation/motion";
 
-const TimelineItem = ({ data, modeToggle }) => {
+const TimelineItem = ({ data, modeToggle, index }) => {
+  console.log(index);
   return (
-    <div
+    <motion.div
+      variants={(index % 2) === 0 ? rightAnim : leftAnim}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ type: "spring", stiffness: 60 }}
       className={
         modeToggle
           ? classes.timeline_item
@@ -31,7 +39,7 @@ const TimelineItem = ({ data, modeToggle }) => {
         )}
         <span className={classes.circle} />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
