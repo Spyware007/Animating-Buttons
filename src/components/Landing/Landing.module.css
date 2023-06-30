@@ -10,7 +10,8 @@
   font-family: "SansationBold", sans-serif;
   position: relative;
   overflow: hidden;
-  background-color: #000;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .landing.landing-dark .header {
   color: #fff;
@@ -54,6 +55,7 @@
   align-items: center;
   gap: 20px;
   z-index: 1;
+  margin-bottom: 20px;
 }
 .memoji {
   width: 60px;

@@ -1,29 +1,57 @@
-import React from "react";
+export default [
+  {
+    head: "Sourav Mishra",
+    imageUrl: "https://avatars.githubusercontent.com/u/89072785?v=4",
+    githubacc: "https://github.com/Souravvmishra",
+  },
 
-import classes from "./About.module.css";
-function ContributorCard({ contributor, index }) {
-  return (
-    <div key={contributor?.id} style={{ width: "11rem" }}>
-      <a
-        rel="noopener noreferrer"
-        href={`https://github.com/${contributor?.login}`}
-        aria-label="GitHub"
-        className={classes.About_Data}
-      >
-        <img
-          src={contributor?.avatar_url}
-          alt="avatar"
-          className={classes.Avtar}
-        />
-      </a>
-      <div className={classes.Counter1}>
-        <h2 className={classes.Counter2}>{contributor?.login}</h2>
-        <p
-          className={classes.Counter3}
-        >{`Contributions: ${contributor?.contributions}`}</p>
-      </div>
-    </div>
-  );
-}
+  {
+    head: "Aditya Tulsiyan",
+    imageUrl: "https://avatars.githubusercontent.com/u/72987111?v=4",
+    githubacc: "https://github.com/adity2911",
+  },
 
-export default ContributorCard;
+  {
+    head: "Akanksha Jha",
+    imageUrl: "https://avatars.githubusercontent.com/u/100708686?v=4",
+    githubacc: "https://github.com/Akanksha-202",
+  },
+  {
+    head: "Nishu Kumari",
+    imageUrl: "https://avatars.githubusercontent.com/u/101655716?v=4",
+    githubacc: "https://github.com/Nishusk",
+  },
+  {
+    head: "Manisha Swain",
+    imageUrl: "https://avatars.githubusercontent.com/u/96622693?v=4",
+    githubacc: "https://github.com/ManishaSwain8",
+  },
+  {
+    head: "shraddha761",
+    imageUrl: "https://avatars.githubusercontent.com/u/106100728?v=4",
+    githubacc: "https://github.com/shraddha761",
+  },
+
+  {
+    head: "Abdul Khalid",
+    imageUrl: "https://avatars.githubusercontent.com/u/92252895?v=4",
+    githubacc: "https://github.com/0xabdulkhalid",
+  },
+  {
+    head: "Jacinth Mahanta",
+    imageUrl: "https://avatars.githubusercontent.com/u/96361743?v=4",
+    githubacc: "https://github.com/jacinth-mahanta",
+  },
+
+  {
+    head: "Khushbu Maheshwari",
+    imageUrl: "https://avatars.githubusercontent.com/u/81244936?v=4",
+    githubacc: "https://github.com/khushbumaheshwarii",
+  },
+
+  {
+    head: "Kalivarapubindusree",
+    imageUrl: "https://avatars.githubusercontent.com/u/114821855?v=4",
+    githubacc: "https://github.com/Kalivarapubindusree",
+  },
+];

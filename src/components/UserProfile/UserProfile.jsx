@@ -122,8 +122,8 @@ const UserProfile = () => {
       </div>
       <div>
         <div className={classes.btns_container}>
-          {buttons.map((btn, i) => (
-            <Card key={i} button={btn} />
+          {buttons.map((button, i) => (
+            <Card key={i} button={button} />
           ))}
         </div>
       </div>

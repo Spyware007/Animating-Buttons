@@ -8,7 +8,7 @@ export const timelineData = [
     },
     link: {
       url: "https://github.com/Spyware007/Animating-Buttons/",
-      text: "Repository link",
+      text: "Visit Repository",
     },
   },
   {
@@ -20,7 +20,7 @@ export const timelineData = [
     },
     link: {
       url: "https://github.com/Spyware007/Animating-Buttons/",
-      text: "Repository link",
+      text: "Visit Repository",
     },
   },
   {
