@@ -103,9 +103,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
   const [hidden, sethidden] = useState(true);
 
   const toggledropdown = () => {
-    console.log("hllo");
     sethidden(!hidden);
-    console.log(hidden)
   };
 
   return (

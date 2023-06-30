@@ -5,12 +5,12 @@ import { getFirestore } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_apiKey,
+  apiKey: "AIzaSyAY_EsFz1WJgGK06l682oa_EDUTi_w2vmI",
   authDomain: process.env.REACT_APP_authDomain,
-  projectId: process.env.REACT_APP_projectId,
+  projectId: "project-marketplace-3618e",
   storageBucket: process.env.REACT_APP_storageBucket,
   messagingSenderId: process.env.REACT_APP_messagingSenderId,
-  appId: process.env.REACT_APP_appId,
+  appId: "1:95883339089:web:64e3abdc345b7e16159f70",
   measurementId: process.env.REACT_APP_measurementId,
 };
 
