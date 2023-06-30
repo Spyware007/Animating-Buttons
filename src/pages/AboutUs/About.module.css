@@ -150,6 +150,27 @@
     margin: 6rem;
   }
 }
+@media (max-width: 600px) {
+  .Avtar {
+    width: 7rem;
+    height: 7rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .Contributors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+  }
+  .About_h1_c {
+    font-size: 20px;
+    text-align: center;
+    color: yellow;
+  }
+}
 /* light mode */
 .about.about-light .About_p {
   color: #000;
