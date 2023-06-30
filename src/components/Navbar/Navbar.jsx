@@ -21,6 +21,8 @@ import axios from "axios";
 
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
   // const auth = getAuth()
+  const [navbarVisible, setNavbarVisible] = useState(true)
+
   const [username, setUsername] = useState(
     localStorage.getItem("username") || ""
   );
@@ -119,8 +121,17 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
     }
   };
 
+
+  const handleResize = () => {
+    setNavbarVisible(window.innerWidth > 768); 
+  };
+
+
   useEffect(() => {
     const auth = getAuth();
+ // Initial check on component mount
+    handleResize();
+    window.addEventListener('resize', handleResize);
 
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
@@ -144,68 +155,74 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
   return (
     <>
       <nav
-        className={`${classes.navbar} ${
-          !modeToggle ? classes["navbar-light"] : classes["navbar-dark"]
-        }`}
+        className={`${classes.navbar} ${!modeToggle ? classes["navbar-light"] : classes["navbar-dark"]
+          }`}
       >
-        <ul className={classes.navlist}>
-          <li className={classes.list_item}>
-            <NavLink className={classes.list_item_link} to="/">
-              Home
-            </NavLink>
-          </li>
-          <li className={classes.list_item}>
-            <NavLink className={classes.list_item_link} to="/explore">
-              Explore
-            </NavLink>
-          </li>
-          <li className={classes.list_item}>
-            <NavLink className={classes.list_item_link} to="/about">
-              About
-            </NavLink>
-          </li>
-          {/* <li className={classes.list_item}>
+
+        <span className={classes.hamburger} onClick={() => setNavbarVisible(true)}>☰</span>
+
+        {navbarVisible && (<div><span className={classes.cross} onClick={() => window.innerWidth < 768 && setNavbarVisible(false)}>✖</span>
+          <ul className={classes.navlist}>
+            <li className={classes.list_item} onClick={() => window.innerWidth < 768 && setNavbarVisible(false)}>
+              <NavLink className={classes.list_item_link}  to="/">
+                Home
+              </NavLink>
+            </li>
+            <li className={classes.list_item} onClick={() => window.innerWidth < 768 && setNavbarVisible(false)}>
+              <NavLink className={classes.list_item_link} to="/explore">
+                Explore
+              </NavLink>
+            </li>
+            <li className={classes.list_item} onClick={() => window.innerWidth < 768 && setNavbarVisible(false)}>
+              <NavLink className={classes.list_item_link} to="/about">
+                About
+              </NavLink>
+            </li>
+            {/* <li className={classes.list_item}>
             <Link className={classes.list_item_link} to={"/leaderboard"}>
               Creators
             </Link>
           </li> */}
-          <a
-            href="https://github.com/Spyware007/Animating-Buttons"
-            target="__blank"
-            className={classes.image_container_mobile}
-          >
-            <BsGithub className={classes.image} />
-          </a>
-          <button
-            className={`${classes.mode_toggle} ${
-              modeToggle ? classes.dark_mode : classes.light_mode
-            }`}
-            onClick={() => modeToggleFunc(!modeToggle)}
-          >
-            <img src={modeToggle ? sun : moon} alt="" />
-          </button>
-        </ul>
-        <div className={classes.button_container}>
-          <NavLink className={classes.list_item_link} to="/add">
-            <button className={classes.add}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="30"
-                height="30"
-              >
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path
-                  fill="currentColor"
-                  d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
-                ></path>
-              </svg>
-              <span className={classes.addbtn}>Create</span>
+            <a
+              href="https://github.com/Spyware007/Animating-Buttons"
+              target="__blank"
+              className={classes.image_container_mobile}
+            >
+              <BsGithub className={classes.image} />
+            </a>
+            <button
+              className={`${classes.mode_toggle} ${modeToggle ? classes.dark_mode : classes.light_mode
+                }`}
+              onClick={() => {modeToggleFunc(!modeToggle); window.innerWidth < 768 && setNavbarVisible(false)}}
+            >
+              <img src={modeToggle ? sun : moon} alt="" />
             </button>
-          </NavLink>
+          </ul>
+        </div>
+        )}
+
+        <div className={classes.button_container}>
+
 
           {userImage && userEmail ? (
             <div className={classes.loggedIn}>
+              <NavLink className={classes.list_item_link} to="/add">
+                <button className={classes.add}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="30"
+                    height="30"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      fill="currentColor"
+                      d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
+                    ></path>
+                  </svg>
+                  <span className={classes.addbtn}>Create</span>
+                </button>
+              </NavLink>
               <NavLink
                 className={classes.list_item_link}
                 to={`/user/${username}`}
