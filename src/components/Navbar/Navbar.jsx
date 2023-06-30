@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Navbar.module.css";
 import { BsGithub } from "react-icons/bs";
+import { FiAlignCenter } from "react-icons/fi";
 
 import { NavLink } from "react-router-dom";
 import {
@@ -141,6 +142,14 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
     };
   }, []);
 
+  const [hidden, sethidden] = useState(true);
+
+  const toggledropdown = () => {
+    console.log("hllo");
+    sethidden(!hidden);
+    console.log(hidden)
+  };
+
   return (
     <>
       <nav
@@ -148,6 +157,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
           !modeToggle ? classes["navbar-light"] : classes["navbar-dark"]
         }`}
       >
+        
         <ul className={classes.navlist}>
           <li className={classes.list_item}>
             <NavLink className={classes.list_item_link} to="/">
@@ -169,6 +179,34 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               Creators
             </Link>
           </li> */}
+
+          {/* Mobile menu */}
+          <div className={classes.mobile_menu}>
+            <FiAlignCenter onClick={() => toggledropdown()} />
+
+            {hidden ? ("") : ( <ul className={classes.mobnavlist}>
+                <li className={classes.moblist_item}>
+                  <NavLink className={classes.list_item_link} to="/">
+                    Home
+                  </NavLink>
+                </li>
+                <li className={classes.moblist_item}>
+                  <NavLink className={classes.list_item_link} to="/explore">
+                    Explore
+                  </NavLink>
+                </li>
+                <li className={classes.moblist_item}>
+                  <NavLink className={classes.list_item_link} to="/about">
+                    About
+                  </NavLink>
+                </li>
+                {/* Add other mobile menu items here */}
+              </ul>)}
+
+            {/* Mobile menu items */}
+           
+          </div>
+
           <a
             href="https://github.com/Spyware007/Animating-Buttons"
             target="__blank"

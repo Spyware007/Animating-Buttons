@@ -225,3 +225,81 @@
     color: white;
   }
 }
+
+/* Existing CSS styles */
+
+/* Mobile menu */
+.mobile_menu {
+  display: none;
+}
+
+.menu_icon {
+  all: unset;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.moblist_item {
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 2.5vh;
+  }
+  .mobnavlist{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding-inline: 0;
+    padding: 10px;
+    border-radius: 9px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+    top: 8vh;
+    gap: 0.5vh;
+    z-index: 10;
+    background-color: #232b32;
+    width: fit-content;
+  }
+
+  .list_item {
+    display: none;
+  }
+
+  .mobile_menu .menu_icon {
+    color: #fff;
+  }
+
+  .mobile_menu .navlist {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile_menu .list_item {
+    margin-bottom: 10px;
+  }
+
+  .mobile_menu .list_item_link {
+    color: #fff; 
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
