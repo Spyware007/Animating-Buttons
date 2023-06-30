@@ -160,7 +160,7 @@
   .Contributors {
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem;
+    gap: 5rem;
     justify-content: center;
     align-items: center;
     margin: 4rem;
