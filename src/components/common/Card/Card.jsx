@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-
-import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { auth, db } from "../../../firebase/auth";
 import {
   getDocs,
@@ -11,14 +9,13 @@ import {
   doc,
 } from "firebase/firestore";
 import classes from "./Card.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Button from "../Button/Button";
 import LikeButton from "../LikeButton/LikeButton";
 import DeleteButton from "../deleteBtn/DeleteButton";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
 import { renderIntoDocument } from "react-dom/test-utils";
-// import ViewsIcon from "../ViewsIcon/ViewsIcon";
 
 function download(css, html, js, name) {
   const zip = new JSZip();
@@ -36,6 +33,7 @@ export default function Card({ button }) {
   const user = button.githubUsername;
   const [profilePicture, setProfilePicture] = useState({});
   const [deleted, setDeleted] = useState(false);
+
   useEffect(() => {
     const fetchUser = async () => {
       try {
@@ -76,52 +74,53 @@ export default function Card({ button }) {
   };
 
   return (
-    !deleted && (
-      <div className={`${classes.card_container} }`}>
+    <div className={classes.card_container}>
+      <div className={classes.iframe_container}>
         <iframe
           className={classes.iframe_container}
+          style={{ width: "100%", height: "100%" }}
           title={btnId}
           srcDoc={`
-  <html>
+            <html>
               <head><style>${button.css}</style></head>
               <body>${button.html}<script>${button.js}</script></body>
-            </html >
-  `}
+            </html>
+          `}
           sandbox="allow-scripts"
         ></iframe>
+      </div>
 
-        <div className={classes.contributor_info}>
-          <div className={classes.contributor_data}>
-            <div className={classes.contributor_img_container}>
-              <img
-                className={classes.contributor_img}
-                src={profilePicture}
-                alt="User"
-              />
-            </div>
-            <Link to={`/user/${user}`} className={classes.contributor_name}>
-              {user}
-            </Link>
-          </div>
-          <div className={classes.btns_container}>
-            <Link to={`/show/${btnId} `}>
-              <Button show={true} />
-            </Link>
-            <Button
-              onClick={() => download(button.css, button.html, button.js, user)}
+      <div className={classes.contributor_info}>
+        <div className={classes.contributor_data}>
+          <div className={classes.contributor_img_container}>
+            <img
+              className={classes.contributor_img}
+              src={profilePicture}
+              alt="User"
             />
           </div>
+          <Link to={`/user/${user}`} className={classes.contributor_name}>
+            {user}
+          </Link>
         </div>
-
-        <div className={classes.stats_btn}>
-          {/* <ViewsIcon /> */}
-          {location.pathname.split("/")[2] ===
-            auth.currentUser.reloadUserInfo.screenName && (
-            <DeleteButton handleDelete={handleDelete} />
-          )}
-          <LikeButton btnId={btnId} />
+        <div className={classes.btns_container}>
+          <Link to={`/show/${btnId}`}>
+            <Button show={true} />
+          </Link>
+          <Button
+            onClick={() => download(button.css, button.html, button.js, user)}
+          />
         </div>
       </div>
-    )
+
+      <div className={classes.stats_btn}>
+        {/* <ViewsIcon /> */}
+        {location.pathname.split("/")[2] ===
+          auth.currentUser.reloadUserInfo.screenName && (
+          <DeleteButton handleDelete={handleDelete} />
+        )}
+        <LikeButton btnId={btnId} />
+      </div>
+    </div>
   );
 }
