@@ -95,8 +95,7 @@ const About = ({ modeToggle }) => {
             viewport={{ once: true }}
             className={classes.About_p}
           >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            Welcome to Amazing Buttons Animation,an initiative by GDSC-DYPCOE for Hacktoberfest. Our website offers a diverse collection of stunning CSS and HTML button animations to enhance your projects. With a focus on engaging user experiences, we provide a range of styles, effects, and transitions to suit any aesthetic.
           </motion.p>
           <motion.p
             variants={leftParaAnim}
@@ -111,10 +110,23 @@ const About = ({ modeToggle }) => {
             className={classes.About_p}
           >
             <br />
-            adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim
+            Leading this project is our esteemed Project Admin, Om Gawande. Our buttons are meticulously designed to meet modern standards, ensuring compatibility across browsers and devices. Whether you seek subtle hover effects or dynamic animations, our collection offers abundant choices.
           </motion.p>
+          <motion.p
+            variants={leftParaAnim}
+            initial="hidden"
+            whileInView="visible"
+            transition={{
+              delay: 0.6,
+              type: "spring",
+              stiffness: 50,
+            }}
+            viewport={{ once: true }}
+            className={classes.About_p}
+          >
+           <br />
+           We invite you to explore our website and discover the endless possibilities. Whether you're a beginner or an experienced developer, Amazing Buttons Animation has something for everyone.
+             </motion.p>
         </div>
       </div>
       <Contributor />
