@@ -1,0 +1,80 @@
+$button-color: #ffffff;
+$button-background-color: #3167c4;
+$button-width: 192px;
+$button-height: 72px;
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+html, body, #app {
+	width: 100%;
+	height: 100%;
+}
+
+#app {
+	font-family: Montserrat, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-3d-icon {
+	font-family: inherit;
+	display: inline-block;
+	position: relative;
+}
+
+.btn-3d-icon__button {
+	color: $button-color;
+	font-family: inherit;
+	background-color: $button-background-color;
+	width: $button-width;
+	height: $button-height;
+	padding: 0;
+	border: 0;
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+	border-radius: 12px;
+	transition: background-color 64ms ease-out;
+	> span {
+		font-family: inherit;
+		display: inline-flex;
+		flex-direction: column;
+		pointer-events: none;
+		transition: transform 64ms ease-out;
+		> span:first-child {
+			font-size: 1.5rem;
+		}
+		> span:last-child {
+			opacity: 0.7;
+		}
+	}
+	&:hover {
+		background-color: darken($button-background-color, 7.5%);
+		> span {
+			transform: translateY(-$button-height);
+		}
+	}
+	&:focus {
+		background-color: darken($button-background-color, 7.5%);
+	}
+	&:active {
+		background-color: darken($button-background-color, 15%);
+	}
+}
+
+.btn-3d-icon__icon {
+	vertical-align: middle;
+	opacity: 0;
+	position: absolute;
+	bottom: -$button-height / 2;
+	left: 50%;
+	transform: translateX(-50%);
+	pointer-events: none;
+	transition: bottom 192ms ease-out, opacity 192ms ease-out;
+}
+
+.btn-3d-icon__icon-shown {
+	bottom: $button-height / 2;
+	opacity: 1;
+}
