@@ -73,21 +73,10 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
 
     try {
       const user = auth.currentUser;
-
-      if (user) {
-        const githubId = user.providerData.find(
-          (provider) => provider.providerId === "github.com"
-        ).uid;
-        const response = await axios.get(
-          `https://api.github.com/user/${githubId}`
-        );
-        console.log(response);
-        const { login } = response.data;
-        buttonData.githubUsername = login;
-
-        const displayName = user.displayName || "";
-        buttonData.displayName = displayName;
-      }
+      // console.log(user.reloadUserInfo.providerUserInfo[0].screenName);
+      buttonData.githubUsername = user.reloadUserInfo.providerUserInfo[0].screenName;
+      const displayName = user.displayName || "";
+      buttonData.displayName = displayName;
       const docRef = await addDoc(buttonCollectionRef, buttonData);
       console.log("Button document saved with ID:", docRef.id);
       window.location.reload();
