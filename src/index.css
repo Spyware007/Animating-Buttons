@@ -48,6 +48,13 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+::-webkit-scrollbar{
+
+  background-color: var(--dark-bg-color);
+}
+::-webkit-scrollbar-thumb{
+background:linear-gradient(to top,rgb(49, 123, 155),transparent);
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
