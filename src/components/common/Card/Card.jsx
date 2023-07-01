@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { db } from "../../../firebase/auth";
-import { getDocs, query, collection, where } from "firebase/firestore";
+
+import { useLocation } from "react-router-dom";
+import { auth, db } from "../../../firebase/auth";
+import { getDocs, query, collection, where, deleteDoc, doc, } from "firebase/firestore";
 import classes from "./Card.module.css";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import LikeButton from "../LikeButton/LikeButton";
+import DeleteButton from "../deleteBtn/DeleteButton";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
+import { renderIntoDocument } from "react-dom/test-utils";
 // import ViewsIcon from "../ViewsIcon/ViewsIcon";
 
 function download(css, html, js, name) {
+
+
   const zip = new JSZip();
   zip.file("style.css", css);
   zip.file("index.html", html);
@@ -24,7 +30,7 @@ export default function Card({ button }) {
   const btnId = button.id;
   const user = button.githubUsername;
   const [profilePicture, setProfilePicture] = useState({});
-
+  const [deleted, setDeleted] = useState(false)
   useEffect(() => {
     const fetchUser = async () => {
       try {
@@ -48,17 +54,36 @@ export default function Card({ button }) {
     fetchUser();
   }, [user]);
 
+  const location = useLocation()
+  const handleDelete = async () => {
+    const sure = window.confirm('Are You Sure ?')
+    if (sure) {
+      const buttonRef = doc(db, "buttons", button.id);
+      await deleteDoc(buttonRef)
+        .then(() => {
+          setDeleted(true)
+          console.log("Document successfully deleted!");
+
+
+        })
+        .catch((error) => {
+          console.error("Error deleting document: ", error);
+        });
+    }
+  }
+
   return (
-    <div className={classes.card_container}>
+
+    !deleted && <div className={`${classes.card_container} }`}>
       <iframe
         className={classes.iframe_container}
         title={btnId}
         srcDoc={`
-            <html>
+  <html>
               <head><style>${button.css}</style></head>
               <body>${button.html}<script>${button.js}</script></body>
-            </html>
-          `}
+            </html >
+  `}
         sandbox="allow-scripts"
       ></iframe>
 
@@ -71,12 +96,12 @@ export default function Card({ button }) {
               alt="User" loading="lazy"
             />
           </div>
-          <Link to={`/user/${user}`} className={classes.contributor_name}>
+          <Link to={`/ user / ${user} `} className={classes.contributor_name}>
             {user}
           </Link>
         </div>
         <div className={classes.btns_container}>
-          <Link to={`/show/${btnId}`}>
+          <Link to={`/ show / ${btnId} `}>
             <Button show={true} />
           </Link>
           <Button
@@ -87,8 +112,10 @@ export default function Card({ button }) {
 
       <div className={classes.stats_btn}>
         {/* <ViewsIcon /> */}
+        {location.pathname.split('/')[2] === auth.currentUser.reloadUserInfo.screenName && <DeleteButton handleDelete={handleDelete} />}
         <LikeButton btnId={btnId} />
       </div>
     </div>
+
   );
 }
