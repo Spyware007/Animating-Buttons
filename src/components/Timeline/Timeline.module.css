@@ -44,9 +44,11 @@
   max-width: 70%;
   text-align: right;
 }
+
 .timeline_item_content:hover {
-  scale: 1.02;
+  scale: 1.03;
 }
+
 .timeline_item_content::after {
   content: " ";
   background-color: rgba(45, 44, 46, 0.8);
