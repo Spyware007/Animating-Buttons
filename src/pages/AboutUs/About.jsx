@@ -32,17 +32,13 @@ const About = ({ modeToggle }) => {
         <div className={classes.Para}>
           <h1 className={classes.About_h1}>About Us</h1>
           <p className={classes.About_p}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.
+            Welcome to Amazing Buttons Animation,an initiative by GDSC-DYPCOE for Hacktoberfest. Our website offers a diverse collection of stunning CSS and HTML button animations to enhance your projects. With a focus on engaging user experiences, we provide a range of styles, effects, and transitions to suit any aesthetic.
             <br />
             <br />
-            adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Leading this project is our esteemed Project Admin, Om Gawande. Our buttons are meticulously designed to meet modern standards, ensuring compatibility across browsers and devices. Whether you seek subtle hover effects or dynamic animations, our collection offers abundant choices.
+            <br />
+            <br />
+            We invite you to explore our website and discover the endless possibilities. Whether you're a beginner or an experienced developer, Amazing Buttons Animation has something for everyone.
           </p>
         </div>
       </div>
