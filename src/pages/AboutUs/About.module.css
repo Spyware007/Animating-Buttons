@@ -75,6 +75,11 @@
   gap: 1rem;
 }
 
+.link1,
+.link2 {
+  z-index: 100;
+}
+
 .link1:hover {
   scale: 1.1;
   transform: rotate(30deg) scale(1.2);
@@ -143,6 +148,27 @@
     justify-content: center;
     align-items: center;
     margin: 6rem;
+  }
+}
+@media (max-width: 600px) {
+  .Avtar {
+    width: 7rem;
+    height: 7rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .Contributors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+  }
+  .About_h1_c {
+    font-size: 20px;
+    text-align: center;
+    color: yellow;
   }
 }
 /* light mode */
