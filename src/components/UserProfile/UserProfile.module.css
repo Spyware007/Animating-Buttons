@@ -81,6 +81,9 @@
   gap: 80px 160px;
 }
 
+.bio {
+  color: #fff;
+}
 
 
 @media screen and (max-width: 768px) {
