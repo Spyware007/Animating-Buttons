@@ -185,6 +185,8 @@
 
 .loggedIn{
   display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -192,6 +194,9 @@
   margin-left: 1rem;
   border-radius: 12px;
   cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+
 }
 
 

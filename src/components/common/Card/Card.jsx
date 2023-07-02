@@ -115,8 +115,8 @@ export default function Card({ button }) {
 
         <div className={classes.stats_btn}>
           {/* <ViewsIcon /> */}
-          {location.pathname.split("/")[2] ===
-            auth.currentUser.reloadUserInfo.screenName && (
+          {auth.currentUser && location.pathname.split("/")[2] ===
+            auth?.currentUser?.reloadUserInfo?.screenName && (
             <DeleteButton handleDelete={handleDelete} />
           )}
           <LikeButton btnId={btnId} />
