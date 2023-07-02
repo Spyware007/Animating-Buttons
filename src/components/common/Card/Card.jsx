@@ -2,7 +2,14 @@ import React, { useState, useEffect } from "react";
 
 import { useLocation } from "react-router-dom";
 import { auth, db } from "../../../firebase/auth";
-import { getDocs, query, collection, where, deleteDoc, doc, } from "firebase/firestore";
+import {
+  getDocs,
+  query,
+  collection,
+  where,
+  deleteDoc,
+  doc,
+} from "firebase/firestore";
 import classes from "./Card.module.css";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
@@ -14,8 +21,6 @@ import { renderIntoDocument } from "react-dom/test-utils";
 // import ViewsIcon from "../ViewsIcon/ViewsIcon";
 
 function download(css, html, js, name) {
-
-
   const zip = new JSZip();
   zip.file("style.css", css);
   zip.file("index.html", html);
@@ -30,7 +35,7 @@ export default function Card({ button }) {
   const btnId = button.id;
   const user = button.githubUsername;
   const [profilePicture, setProfilePicture] = useState({});
-  const [deleted, setDeleted] = useState(false)
+  const [deleted, setDeleted] = useState(false);
   useEffect(() => {
     const fetchUser = async () => {
       try {
@@ -54,68 +59,69 @@ export default function Card({ button }) {
     fetchUser();
   }, [user]);
 
-  const location = useLocation()
+  const location = useLocation();
   const handleDelete = async () => {
-    const sure = window.confirm('Are You Sure ?')
+    const sure = window.confirm("Are You Sure ?");
     if (sure) {
       const buttonRef = doc(db, "buttons", button.id);
       await deleteDoc(buttonRef)
         .then(() => {
-          setDeleted(true)
+          setDeleted(true);
           console.log("Document successfully deleted!");
-
-
         })
         .catch((error) => {
           console.error("Error deleting document: ", error);
         });
     }
-  }
+  };
 
   return (
-
-    !deleted && <div className={`${classes.card_container} }`}>
-      <iframe
-        className={classes.iframe_container}
-        title={btnId}
-        srcDoc={`
+    !deleted && (
+      <div className={`${classes.card_container} }`}>
+        <iframe
+          className={classes.iframe_container}
+          title={btnId}
+          srcDoc={`
   <html>
               <head><style>${button.css}</style></head>
               <body>${button.html}<script>${button.js}</script></body>
             </html >
   `}
-        sandbox="allow-scripts"
-      ></iframe>
+          sandbox="allow-scripts"
+        ></iframe>
 
-      <div className={classes.contributor_info}>
-        <div className={classes.contributor_data}>
-          <div className={classes.contributor_img_container}>
-            <img
-              className={classes.contributor_img}
-              src={profilePicture}
-              alt="User" loading="lazy"
+        <div className={classes.contributor_info}>
+          <div className={classes.contributor_data}>
+            <div className={classes.contributor_img_container}>
+              <img
+                className={classes.contributor_img}
+                src={profilePicture}
+                alt="User" loading="lazy"
+              />
+            </div>
+            <Link to={`/user/${user}`} className={classes.contributor_name}>
+              {user}
+            </Link>
+          </div>
+          <div className={classes.btns_container}>
+            <Link to={`/show/${btnId} `}>
+              <Button show={true} />
+            </Link>
+            <Button
+              onClick={() => download(button.css, button.html, button.js, user)}
             />
           </div>
-          <Link to={`/ user / ${user} `} className={classes.contributor_name}>
-            {user}
-          </Link>
         </div>
-        <div className={classes.btns_container}>
-          <Link to={`/ show / ${btnId} `}>
-            <Button show={true} />
-          </Link>
-          <Button
-            onClick={() => download(button.css, button.html, button.js, user)}
-          />
+
+        <div className={classes.stats_btn}>
+          {/* <ViewsIcon /> */}
+          {location.pathname.split("/")[2] ===
+            auth.currentUser.reloadUserInfo.screenName && (
+            <DeleteButton handleDelete={handleDelete} />
+          )}
+          <LikeButton btnId={btnId} />
         </div>
       </div>
-
-      <div className={classes.stats_btn}>
-        {/* <ViewsIcon /> */}
-        {location.pathname.split('/')[2] === auth.currentUser.reloadUserInfo.screenName && <DeleteButton handleDelete={handleDelete} />}
-        <LikeButton btnId={btnId} />
-      </div>
-    </div>
-
+    )
   );
 }
