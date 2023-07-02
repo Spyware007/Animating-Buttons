@@ -85,6 +85,10 @@
   border-radius: 10px;
 }
 
+.timeline_item_content .date {
+  color: #fff;
+}
+
 .timeline_item:nth-child(odd) .timeline_item_content .tag {
   left: auto;
   right: 5px;
