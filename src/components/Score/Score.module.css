@@ -1,11 +1,7 @@
-
-
-
 .leaderboard_text {
   font-size: 50px;
   font-weight: bold;
   color: #ffffff;
-  /* margin-bottom: 20px; */
   text-align: center;
   background: linear-gradient(90deg, #db00ff 0%, #970d4f 100%);
   -webkit-background-clip: text;
@@ -17,7 +13,6 @@
 .leaderboard {
   display: flex;
   flex-direction: column;
-  /* grid-template-columns: repeat(1, 0.5fr); */
   gap: 20px;
   width: 75%;
   padding: 0 100px;
@@ -26,23 +21,19 @@
 }
 
 .item:nth-child(1) .rank {
-  color: #FFD700;
+  color: #c0c0c0;
   font-weight: bolder;
 }
 
 .item:nth-child(2) .rank {
-  color: #C0C0C0;
+  color: #cd7f32;
   font-weight: bolder;
-
 }
 
 .item:nth-child(3) .rank {
-  color: #CD7F32;
+  color: #ffd700;
   font-weight: bolder;
-
 }
-
-
 
 .item {
   display: flex;
@@ -52,19 +43,15 @@
   border-radius: 5px;
   text-decoration: none;
   color: #fff;
-  box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
-    0 30px 60px -30px rgba(0, 0, 0, 0.3),
-    inset 0 -2px 6px 0 rgba(255, 255, 255, 0.35);
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
 }
 
-
 .item:hover {
+  transform: scale(1.05);
   background-color: #ffffff;
   color: #000000;
-  box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
-    0 30px 60px -30px rgba(0, 0, 0, 0.3),
-    inset 0 -2px 6px 0 rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .profileImage {
@@ -89,8 +76,6 @@
   color: #888888;
 }
 
-
-
 .rank {
   font-size: 1.5rem;
   padding-right: 1rem;
@@ -98,20 +83,15 @@
 }
 
 .category {
-
   text-transform: uppercase;
-  letter-spacing: .2em;
-  /* background:#f7f7; */
+  letter-spacing: 0.2em;
   text-align: center;
-
 }
 
 .list {
   display: flex;
 }
 
-
-/* syles for fropdown in react */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -124,17 +104,15 @@
   font-size: 16px;
   border: none;
   cursor: pointer;
-  margin-bottom: 1rem;
   border-radius: 20% 30%;
   transition: all 0.3s ease-in-out;
 }
 
-.dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover,
+.dropbtn:focus {
   background-color: #ffffff;
   color: #000000;
 }
-
-
 
 .content_btn {
   background-color: #000000;
@@ -147,16 +125,11 @@
   cursor: pointer;
   text-align: left;
   min-width: 6rem;
-  box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
-    0 30px 60px -30px rgba(0, 0, 0, 0.3),
-    inset 0 -2px 6px 0 rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   border-radius: 20% 30%;
   margin-bottom: 10px;
-
 }
-
-
 
 .content_btn:hover {
   background-color: #ffffff;
@@ -167,7 +140,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  ;
   justify-content: center;
   margin-bottom: 1rem;
 }
@@ -186,7 +158,6 @@
     padding: 0 20px;
     width: 100%;
     flex-direction: column;
-    
   }
 
   .leaderboard_text {
@@ -198,15 +169,8 @@
     padding: 10px;
   }
 
-
   .list {
     display: flex;
     flex-direction: column;
   }
-
-
 }
-
-
-
-
