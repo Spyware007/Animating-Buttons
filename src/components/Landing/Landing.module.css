@@ -100,6 +100,7 @@
     align-items: center;
     min-height: 86vh;
     width: max-content;
+    margin-inline: 5vw;
   }
   .header {
     align-items: center;

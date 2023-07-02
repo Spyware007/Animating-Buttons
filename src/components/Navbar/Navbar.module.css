@@ -218,8 +218,6 @@
   }
 }
 
-/* Existing CSS styles */
-
 /* Mobile menu */
 .mobile_menu {
   display: none;
@@ -242,32 +240,39 @@
   cursor: pointer;
   position: relative;
   display: inline-block;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
   .mobile_menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     font-size: 2.5vh;
   }
-  .mobnavlist{
+  .mobnavlist {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
+    justify-content: space-around;
     padding-inline: 0;
+    height: 30vh;
+    width: 100vw;
     padding: 10px;
-    border-radius: 9px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
-    top: 8vh;
-    gap: 0.5vh;
+    top: 0;
     z-index: 10;
-    background-color: #232b32;
-    width: fit-content;
+    background-color: #00c6ff;
+    border-radius: 9px;
+    text-align: center;
   }
+  .mob_item_div{
+    width: 100vw;
+  }
+    /* .mobcrossbutton{
+      
+    } */
 
   .list_item {
     display: none;

@@ -112,131 +112,141 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
         className={`${classes.navbar} ${!modeToggle ? classes["navbar-light"] : classes["navbar-dark"]
           }`}
       >
-        
-        <ul className={classes.navlist}>
-          <li className={classes.list_item}>
-            <NavLink className={classes.list_item_link} to="/">
-              Home
-            </NavLink>
-          </li>
-          <li className={classes.list_item}>
-            <NavLink className={classes.list_item_link} to="/explore">
-              Explore
-            </NavLink>
-          </li>
-          <li className={classes.list_item}>
-            <NavLink className={classes.list_item_link} to="/about">
-              About
-            </NavLink>
-          </li>
-          {/* <li className={classes.list_item}>
-            <Link className={classes.list_item_link} to={"/leaderboard"}>
-              Creators
-            </Link>
-          </li> */}
+        {hidden ? (<><ul className={classes.navlist}>
+<li className={classes.list_item}>
+  <NavLink className={classes.list_item_link} to="/">
+    Home
+  </NavLink>
+</li>
+<li className={classes.list_item}>
+  <NavLink className={classes.list_item_link} to="/explore">
+    Explore
+  </NavLink>
+</li>
+<li className={classes.list_item}>
+  <NavLink className={classes.list_item_link} to="/about">
+    About
+  </NavLink>
+</li>
+{/* <li className={classes.list_item}>
+  <Link className={classes.list_item_link} to={"/leaderboard"}>
+    Creators
+  </Link>
+</li> */}
 
-          {/* Mobile menu */}
-          <div className={classes.mobile_menu}>
-            <FiAlignCenter onClick={() => toggledropdown()} />
+{/* Mobile menu */}
+<div className={classes.mobile_menu}>
+  <FiAlignCenter onClick={() => toggledropdown()} />
 
-            {hidden ? ("") : ( <ul className={classes.mobnavlist}>
-                <li className={classes.moblist_item}>
-                  <NavLink className={classes.list_item_link} to="/">
-                    Home
-                  </NavLink>
-                </li>
-                <li className={classes.moblist_item}>
-                  <NavLink className={classes.list_item_link} to="/explore">
-                    Explore
-                  </NavLink>
-                </li>
-                <li className={classes.moblist_item}>
-                  <NavLink className={classes.list_item_link} to="/about">
-                    About
-                  </NavLink>
-                </li>
-                {/* Add other mobile menu items here */}
-              </ul>)}
 
-            {/* Mobile menu items */}
-           
-          </div>
 
-          <a
-            href="https://github.com/Spyware007/Animating-Buttons"
-            target="__blank"
-            className={classes.image_container_mobile}
-          >
-            <BsGithub className={classes.image} />
-          </a>
-          <button
-            className={`${classes.mode_toggle} ${modeToggle ? classes.dark_mode : classes.light_mode
-              }`}
-            onClick={() => modeToggleFunc(!modeToggle)}
-          >
-            <img src={modeToggle ? sun : moon} alt="" />
-          </button>
-        </ul>
-        <div className={classes.button_container}>
-          <NavLink className={classes.list_item_link} to="/add">
-            <button className={classes.add}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="30"
-                height="30"
-              >
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path
-                  fill="currentColor"
-                  d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
-                ></path>
-              </svg>
-              <span className={classes.addbtn}>Create</span>
-            </button>
-          </NavLink>
+  {/* Mobile menu items */}
+ 
+</div>
 
-          {userImage && userEmail ? (
-            <div className={classes.loggedIn}>
-              <NavLink
-                className={classes.list_item_link}
-                to={`/user/${username}`}
-              >
-                <button className={classes.github}>
-                  <div className={classes.image_container}>
-                    <img
-                      className={classes.image}
-                      src={userImage}
-                      alt="Creator"
-                    />
-                  </div>
-                  <span className={classes.username}>My Profile</span>
-                </button>
-              </NavLink>
-              <button className={classes.logOut} onClick={handleLogout}>
-                <img
-                  src={logout}
-                  alt="Log Out"
-                  srcset=""
-                  height={"20px"}
-                  width={"40px"}
-                />
-              </button>
-            </div>
-          ) : (
-            <div className={classes.list_item_link} onClick={handleGitHubLogin}>
-              <button className={classes.github}>
-                <div className={classes.image_container}>
-                  <BsGithub className={classes.image} />
-                </div>
-                <span className={classes.username}>Sign in With GitHub</span>
-              </button>
-            </div>
-          )}
+<a
+  href="https://github.com/Spyware007/Animating-Buttons"
+  target="__blank"
+  className={classes.image_container_mobile}
+>
+  <BsGithub className={classes.image} />
+</a>
+<button
+  className={`${classes.mode_toggle} ${modeToggle ? classes.dark_mode : classes.light_mode
+    }`}
+  onClick={() => modeToggleFunc(!modeToggle)}
+>
+  <img src={modeToggle ? sun : moon} alt="" />
+</button>
+</ul>
+<div className={classes.button_container}>
+<NavLink className={classes.list_item_link} to="/add">
+  <button className={classes.add}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width="30"
+      height="30"
+    >
+      <path fill="none" d="M0 0h24v24H0z"></path>
+      <path
+        fill="currentColor"
+        d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
+      ></path>
+    </svg>
+    <span className={classes.addbtn}>Create</span>
+  </button>
+</NavLink>
+
+{userImage && userEmail ? (
+  <div className={classes.loggedIn}>
+    <NavLink
+      className={classes.list_item_link}
+      to={`/user/${username}`}
+    >
+      <button className={classes.github}>
+        <div className={classes.image_container}>
+          <img
+            className={classes.image}
+            src={userImage}
+            alt="Creator"
+          />
         </div>
+        <span className={classes.username}>My Profile</span>
+      </button>
+    </NavLink>
+    <button className={classes.logOut} onClick={handleLogout}>
+      <img
+        src={logout}
+        alt="Log Out"
+        srcset=""
+        height={"20px"}
+        width={"40px"}
+      />
+    </button>
+  </div>
+) : (
+  <div className={classes.list_item_link} onClick={handleGitHubLogin}>
+    <button className={classes.github}>
+      <div className={classes.image_container}>
+        <BsGithub className={classes.image} />
+      </div>
+      <span className={classes.username}>Sign in With GitHub</span>
+    </button>
+  </div>
+)}
+</div></>) : ( 
+          <div style={{flex : true  , }}>
+            <a onClick={()=>{toggledropdown()}}>X</a>
+          <ul className={classes.mobnavlist}>
+          
+  <li className={classes.moblist_item}>
+    <NavLink className={classes.list_item_link} to="/">
+      Home
+      <hr style={{color : "white"}}/>
+    </NavLink>
+  </li>   
+  <li className={classes.moblist_item}>
+    <NavLink className={classes.list_item_link} to="/explore">
+      Explore
+      <hr style={{color : "white"}}/>
+    </NavLink>
+  </li>
+  <li className={classes.moblist_item}>
+    <NavLink className={classes.list_item_link} to="/about">
+      About
+      <hr style={{color : "white"}}/>
+    </NavLink>
+  </li>
+  {/* Add other mobile menu items here */}
+</ul></div>)}
       </nav>
     </>
   );
 };
 
 export default Navbar;
+// something
+
+        
+
