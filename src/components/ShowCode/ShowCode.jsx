@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import classes from "./ShowCode.module.css";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import CodeEditor from "../common/CodeEditor/CodeEditor";
+import classes from "./ShowCode.module.css";
 
 import {
+  collection,
   doc,
   getDoc,
   getDocs,
   query,
-  collection,
   where,
 } from "firebase/firestore";
 import { db } from "../../firebase/auth";

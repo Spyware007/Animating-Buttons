@@ -74,4 +74,17 @@
 }
 .stats_btn {
   align-self: flex-end;
+  display: flex;
+  gap: 1rem;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  .card_container {
+    width: 350px;
+  }
+  .iframe_container {
+    width: 320px;
+  }
 }

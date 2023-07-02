@@ -11,58 +11,19 @@
 }
 
 /* -------------------------------------------- */
-.About_Contributor {
-  text-align: center;
+.Contributor_section {
   margin-top: 6rem;
-}
-
-.About_Pagination {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  align-items: center;
-}
-.About_Data {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  gap: 2rem;
-  text-align: center;
 }
 .Avtar {
   padding: 2px;
   border-radius: 50%;
   width: 10rem;
   height: 10rem;
-}
-
-.Counter1 {
-  gap: 2rem;
-
-  margin-top: 0.5rem /* 8px */;
-  margin-bottom: 0.5rem /* 8px */;
-}
-.Counter2 {
-  font-size: 22px;
-  font-weight: 500;
-  color: yellow;
-  text-align: center;
-}
-.Counter3 {
-  font-size: 16px;
-  text-align: center;
-  color: darkgray;
-}
-.Contributors_abt {
-  display: flex;
-  flex-wrap: wrap;
-  justify-items: center;
-  padding: 1.5rem;
-  align-items: center;
-  gap: 8rem;
-  align-items: center;
   justify-content: center;
-  margin-top: 6rem;
+  align-items: center;
+}
+.Avtar:hover {
+  scale: 1.2;
 }
 .About_h1 {
   font-size: 40px;
@@ -73,6 +34,16 @@
 
   color: darkgrey;
 }
+.About_h1_c {
+  font-size: 25px;
+  text-align: center;
+  color: yellow;
+}
+.About_p_c {
+  font-size: 20px;
+  text-align: center;
+  color: darkgrey;
+}
 .Project_Admin {
   margin-top: -1rem;
   text-align: center;
@@ -80,7 +51,7 @@
 }
 .About_p_o {
   font-size: 20px;
-
+  text-align: center;
   color: yellow;
 }
 .About_p_t {
@@ -98,8 +69,38 @@
   font-size: 35px;
   text-align: center;
 }
+.social_profilee {
+  justify-content: center;
+  display: flex;
+  gap: 1rem;
+}
 
-@media (max-width: 1024px) {
+.link1,
+.link2 {
+  z-index: 100;
+}
+
+.link1:hover {
+  scale: 1.1;
+  transform: rotate(30deg) scale(1.2);
+}
+.link2:hover {
+  scale: 1.1;
+  transform: rotate(30deg) scale(1.2);
+}
+
+.Contributors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rem;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12rem;
+  margin-right: 12rem;
+  margin-top: 8rem;
+}
+
+@media (max-width: 1089px) {
   .Header {
     display: flex;
     flex-direction: column-reverse;
@@ -117,6 +118,16 @@
 
     color: darkgrey;
   }
+  .About_h1_c {
+    font-size: 25px;
+    text-align: center;
+    color: yellow;
+  }
+  .About_p_c {
+    font-size: 18px;
+    text-align: center;
+    color: darkgrey;
+  }
   .admin_img {
     margin-top: -6rem;
     height: 14rem;
@@ -130,4 +141,56 @@
     text-align: center;
     font-size: 16px;
   }
+  .Contributors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8rem;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem;
+  }
+}
+@media (max-width: 600px) {
+  .Avtar {
+    width: 7rem;
+    height: 7rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .Contributors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+  }
+  .About_h1_c {
+    font-size: 20px;
+    text-align: center;
+    color: yellow;
+  }
+}
+/* light mode */
+.about.about-light .About_p {
+  color: #000;
+}
+.about.about-light .About_p_t {
+  color: #000;
+}
+.about.about-light .About_p_c {
+  color: #000;
+}
+
+.about.about-light .Project_Admin {
+  color: #868f11;
+}
+.about.about-light .Project_Admin {
+  color: #868f11;
+}
+.about.about-light .About_p_o {
+  color: #868f11;
+}
+.about.about-light .About_h1_c {
+  color: #868f11;
 }

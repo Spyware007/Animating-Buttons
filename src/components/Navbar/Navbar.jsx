@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Navbar.module.css";
-import { Link, NavLink } from "react-router-dom";
 import { BsGithub } from "react-icons/bs";
+
+import { NavLink } from "react-router-dom";
+import {
+  GithubAuthProvider,
+  onAuthStateChanged,
+  signInWithPopup,
+  signOut,
+  getAuth,
+} from "firebase/auth";
+import logout from "../../assets/logout-svgrepo-com.svg";
 
 // images
 import github from "../../assets/github.png";
@@ -9,39 +18,86 @@ import moon from "../../assets/moon.png";
 import sun from "../../assets/sun.png";
 // import { getAuth } from "firebase/auth";
 import axios from "axios";
+import { auth } from "../../firebase/auth";
 
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
   // const auth = getAuth()
-  const [username, setUsername] = useState('')
-  const [userImage, setUserImage] = useState('')
+  const [username, setUsername] = useState("");
+  const [userImage, setUserImage] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [displayName, setDisplayName] = useState("");
+
+  const handleGitHubLogin = async () => {
+    const auth = getAuth();
+    const provider = new GithubAuthProvider();
+    provider.addScope("user:email"); // Request email scope
+    provider.addScope("read:user"); // Request user profile scope
+    await signInWithPopup(auth, provider)
+      .then((result) => {
+        // Handle successful login
+        const user = result.user;
+        setDisplayName(user.displayName);
+        localStorage.setItem("displayName", user.displayName);
+        setUsername(user.reloadUserInfo.screenName);
+        localStorage.setItem("username", user.reloadUserInfo.screenName);
+        setUserEmail(user.email);
+        localStorage.setItem("email", user.email);
+        setUserImage(user.photoURL);
+        localStorage.setItem("userImage", user.photoURL);
+      })
+      .catch((error) => {
+        // Handle login error
+        console.error(error);
+      });
+  };
+
+  const handleLogout = () => {
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        setDisplayName(null);
+        setUsername(null);
+        setUserEmail(null);
+        setUserImage(null);
+        localStorage.clear()
+        console.log("Logged out.");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
 
-  // const fetchGithubData = async (user) => {
-  //     const githubId = user.providerData[0].uid;
-  //     try {
-  //       const response = await axios.get(`https://api.github.com/user/${githubId}`);
-  //       console.log(response);
-  //       const {
-  //         login,
-  //         avatar_url,
-  //       } = response.data;
-  //       setUsername(login)
-  //       setUserImage(avatar_url)
-  //     }
-  //     catch (error) {
-  //       console.error("Error fetching GitHub data:", error);
-  //     }
-  // }
-  // useEffect(() => {
-  //   if (auth.currentUser) {
-  //     fetchGithubData(auth.currentUser)
-  //   }
-
-  // }, [auth.currentUser])
 
 
+  useEffect(() => {
+    const auth = getAuth();
+
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        console.log(user);
+        setDisplayName(user.displayName);
+        localStorage.setItem("displayName", user.displayName);
+        setUsername(user.reloadUserInfo.screenName);
+        localStorage.setItem("username", user.reloadUserInfo.screenName);
+        setUserEmail(user.email);
+        localStorage.setItem("email", user.email);
+        setUserImage(user.photoURL);
+        localStorage.setItem("userImage", user.photoURL);
+
+      }
+      else {
+        handleLogout();
+        localStorage.clear();
+      }
+    });
 
 
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   return (
     <>
@@ -104,27 +160,43 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
             </button>
           </NavLink>
 
-          {
-            username && userImage ?
-              (<NavLink className={classes.list_item_link} to={`/user/${username}`}>
+          {userImage && userEmail ? (
+            <div className={classes.loggedIn}>
+              <NavLink
+                className={classes.list_item_link}
+                to={`/user/${username}`}
+              >
                 <button className={classes.github}>
                   <div className={classes.image_container}>
-                    <img className={classes.image} src={userImage} alt="Creator" />
+                    <img
+                      className={classes.image}
+                      src={userImage}
+                      alt="Creator"
+                    />
                   </div>
                   <span className={classes.username}>My Profile</span>
                 </button>
-              </NavLink>)
-
-              :
-              (<NavLink className={classes.list_item_link} to="/login">
-                <button className={classes.github}>
-                  <div className={classes.image_container}>
-                    <BsGithub className={classes.image} />
-                  </div>
-                  <span className={classes.username}>Sign in With GitHub</span>
-                </button>
-              </NavLink>)
-          }
+              </NavLink>
+              <button className={classes.logOut} onClick={handleLogout}>
+                <img
+                  src={logout}
+                  alt="Log Out"
+                  srcset=""
+                  height={"20px"}
+                  width={"40px"}
+                />
+              </button>
+            </div>
+          ) : (
+            <div className={classes.list_item_link} onClick={handleGitHubLogin}>
+              <button className={classes.github}>
+                <div className={classes.image_container}>
+                  <BsGithub className={classes.image} />
+                </div>
+                <span className={classes.username}>Sign in With GitHub</span>
+              </button>
+            </div>
+          )}
         </div>
       </nav>
     </>
