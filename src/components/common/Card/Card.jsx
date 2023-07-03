@@ -123,8 +123,11 @@ export default function Card({ modeToggle, button }) {
           <div className={classes.stats_btn}>
             {/* <ViewsIcon /> */}
             {location.pathname.split("/")[2] ===
-            auth.currentUser.reloadUserInfo.screenName && (
-              <DeleteButton modeToggle={modeToggle} handleDelete={handleDelete} />
+              auth.currentUser.reloadUserInfo.screenName && (
+              <DeleteButton
+                modeToggle={modeToggle}
+                handleDelete={handleDelete}
+              />
             )}
             <LikeButton modeToggle={modeToggle} btnId={btnId} />
           </div>

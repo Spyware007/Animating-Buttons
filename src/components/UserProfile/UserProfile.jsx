@@ -22,6 +22,8 @@ export default function UserProfile() {
   const [name, setName] = useState("");
   const [editingBio, setEditingBio] = useState(false);
   const [newBio, setNewBio] = useState("");
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
   const [userDocId, setUserDocId] = useState(""); //userID from firestore
 
   useEffect(() => {
@@ -35,15 +37,19 @@ export default function UserProfile() {
         collection(db, "users"),
         where("githubUsername", "==", userId)
       );
+
       const querySnapshot = await getDocs(q);
-      const userData = querySnapshot.docs[0].data();
-      const { bio, name, profilePictureUrl } = userData;
-      setUserDocId(querySnapshot.docs[0].id);
-      setGithubBio(bio);
-      setName(name);
-      setProfilePictureUrl(profilePictureUrl);
+      if (!querySnapshot.empty) {
+        const userData = querySnapshot.docs[0].data();
+        const { bio, name, profilePictureUrl } = userData;
+        setUserDocId(querySnapshot.docs[0].id);
+        setGithubBio(bio);
+        setName(name);
+        setProfilePictureUrl(profilePictureUrl);
+      }
     } catch (error) {
       console.error("Error fetching user data:", error);
+      setError("Error fetching user data.");
     }
   };
 
@@ -61,6 +67,7 @@ export default function UserProfile() {
       }
     } catch (error) {
       console.error("Error fetching buttons data:", error);
+      setError("Error fetching buttons data."); // Update the error state
     }
   };
 
@@ -74,9 +81,12 @@ export default function UserProfile() {
         console.log(`Bio updated for user ${userId}`);
         setGithubBio(newBio);
         setEditingBio(false);
+        setError(null);
+        setSuccess("Bio Updated Successfully. It will be reflected soon.");
       }
     } catch (error) {
       console.error("Error saving bio:", error);
+      setError("Error Updating Bio.");
     }
   };
 
@@ -88,6 +98,7 @@ export default function UserProfile() {
   const handleCancelEditBio = () => {
     setEditingBio(false);
     setNewBio("");
+    setError(null);
   };
 
   const handleBioChange = (event) => {
@@ -95,8 +106,19 @@ export default function UserProfile() {
     setNewBio(newBioValue);
   };
 
+  setTimeout(() => {
+    setError(null);
+    setSuccess(null);
+  }, 7500);
+
   return (
     <>
+      {success && (
+        <div className={`${classes.success} ${classes.message}`}>{success}</div>
+      )}
+      {error && (
+        <div className={`${classes.error} ${classes.message}`}>{error}</div>
+      )}
       <div className={classes.user_info}>
         <div className={classes.user_row}>
           <div className={classes.image_container}>
