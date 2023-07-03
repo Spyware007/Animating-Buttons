@@ -31,7 +31,7 @@ function download(css, html, js, name) {
   });
 }
 
-export default function Card({ button }) {
+export default function Card({ modeToggle, button }) {
   const btnId = button.id;
   const user = button.githubUsername;
   const [profilePicture, setProfilePicture] = useState({});
@@ -77,7 +77,7 @@ export default function Card({ button }) {
 
   return (
     !deleted && (
-      <div className={`${classes.card_container} }`}>
+      <div className={`${classes.card_container} ${modeToggle ? classes["dark-container"] : classes["light-container"]} }`}>
         <iframe
           className={classes.iframe_container}
           title={btnId}
@@ -105,9 +105,10 @@ export default function Card({ button }) {
           </div>
           <div className={classes.btns_container}>
             <Link to={`/show/${btnId} `}>
-              <Button show={true} />
+              <Button modeToggle={modeToggle} show={true} />
             </Link>
             <Button
+              modeToggle={modeToggle}
               onClick={() => download(button.css, button.html, button.js, user)}
             />
           </div>
@@ -117,9 +118,9 @@ export default function Card({ button }) {
           {/* <ViewsIcon /> */}
           {location.pathname.split("/")[2] ===
             auth.currentUser.reloadUserInfo.screenName && (
-            <DeleteButton handleDelete={handleDelete} />
-          )}
-          <LikeButton btnId={btnId} />
+              <DeleteButton modeToggle={modeToggle} handleDelete={handleDelete} />
+            )}
+          <LikeButton modeToggle={modeToggle} btnId={btnId} />
         </div>
       </div>
     )
