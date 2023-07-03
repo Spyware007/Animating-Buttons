@@ -1,16 +1,13 @@
 .card_container {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
   flex-direction: column;
   width: 420px;
   height: auto;
+  background-color: #222222;
   padding: 20px;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
-    0 30px 60px -30px rgba(0, 0, 0, 0.3),
-    inset 0 -2px 6px 0 rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
 }
 
 .dark-container {
@@ -18,7 +15,7 @@
 }
 
 .light-container {
-  background-color: #F0F0F5;
+  background-color: #f0f0f5;
 }
 
 .dark-container .iframe_container {
@@ -39,26 +36,42 @@
     0 30px 60px -30px rgba(0, 0, 0, 0.3),
     inset 0 -2px 6px 0 rgba(255, 255, 255, 0.35);
   border-radius: 20px;
-  background: #F0F0F5;
+  background: #f0f0f5;
 }
-.contributor_data {
+
+.btns:hover {
+  background-color: #0056b3;
+}
+
+.iframe_container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 280px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
+
 .contributor_info {
-  width: 300px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
 }
+
+.contributor_data {
+  display: flex;
+}
+
 .contributor_img_container {
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   margin-right: 10px;
 }
+
 .contributor_img {
   width: 100%;
   height: 100%;
@@ -73,40 +86,32 @@
   text-decoration: none;
   color: black;
 }
+
 .btns_container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-.btns {
-  all: unset;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #272020;
-  width: 30px;
-  height: 30px;
-  padding: 5px;
-  border-radius: 50%;
-  transition: all 0.2s ease-in-out;
-}
-.btns:hover {
-  background-color: #4d4d4d;
-}
+
 .stats_btn {
   align-self: flex-end;
+  margin-top: 10px;
   display: flex;
   gap: 1rem;
 }
-
-
 
 @media only screen and (max-width: 800px) {
   .card_container {
     width: 350px;
   }
   .iframe_container {
-    width: 320px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .card_container {
+    width: 300px;
   }
 }
