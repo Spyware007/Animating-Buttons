@@ -111,18 +111,8 @@ export default function UserProfile() {
             <div className={classes.socials}>{/* Social accounts */}</div>
           </div>
         </div>
-        {userDocId === auth.currentUser.reloadUserInfo.screenName && (
-        <EditBioComponent
-          editingBio={editingBio}
-          newBio={newBio}
-          githubBio={githubBio}
-          handleEditBio={handleEditBio}
-          handleCancelEditBio={handleCancelEditBio}
-          handleSaveBio={handleSaveBio}
-          handleBioChange={handleBioChange}
-          classes={classes}
-        />
-        )}
+        <p className={classes.bio}>{githubBio}</p>
+        <Link to={`/user/${user}`}>See More Buttons from {user}</Link>
       </div>
       <div>
         <div className={classes.btns_container}>

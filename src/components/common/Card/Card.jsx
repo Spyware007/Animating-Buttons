@@ -28,7 +28,7 @@ function download(css, html, js, name) {
   });
 }
 
-export default function Card({ button }) {
+export default function Card({ modeToggle, button }) {
   const btnId = button.id;
   const user = button.githubUsername;
   const [profilePicture, setProfilePicture] = useState({});
@@ -74,53 +74,62 @@ export default function Card({ button }) {
   };
 
   return (
-    <div className={classes.card_container}>
-      <div className={classes.iframe_container}>
-        <iframe
-          className={classes.iframe_container}
-          style={{ width: "100%", height: "100%" }}
-          title={btnId}
-          srcDoc={`
+    <div
+      className={`${classes.card_container} ${
+        modeToggle ? classes["dark-container"] : classes["light-container"]
+      } }`}
+    >
+      {!deleted && (
+        <>
+          <div className={classes.iframe_container}>
+            <iframe
+              className={classes.iframe_container}
+              style={{ width: "100%", height: "100%" }}
+              title={btnId}
+              srcDoc={`
             <html>
               <head><style>${button.css}</style></head>
               <body>${button.html}<script>${button.js}</script></body>
             </html>
           `}
-          sandbox="allow-scripts"
-        ></iframe>
-      </div>
-
-      <div className={classes.contributor_info}>
-        <div className={classes.contributor_data}>
-          <div className={classes.contributor_img_container}>
-            <img
-              className={classes.contributor_img}
-              src={profilePicture}
-              alt="User"
-            />
+              sandbox="allow-scripts"
+            ></iframe>
           </div>
-          <Link to={`/user/${user}`} className={classes.contributor_name}>
-            {user}
-          </Link>
-        </div>
-        <div className={classes.btns_container}>
-          <Link to={`/show/${btnId}`}>
-            <Button show={true} />
-          </Link>
-          <Button
-            onClick={() => download(button.css, button.html, button.js, user)}
-          />
-        </div>
-      </div>
-
-      <div className={classes.stats_btn}>
-        {/* <ViewsIcon /> */}
-        {location.pathname.split("/")[2] ===
-          auth.currentUser.reloadUserInfo.screenName && (
-          <DeleteButton handleDelete={handleDelete} />
-        )}
-        <LikeButton btnId={btnId} />
-      </div>
+          <div className={classes.contributor_info}>
+            <div className={classes.contributor_data}>
+              <div className={classes.contributor_img_container}>
+                <img
+                  className={classes.contributor_img}
+                  src={profilePicture}
+                  alt="User"
+                />
+              </div>
+            </div>
+            <Link to={`/user/${user}`} className={classes.contributor_name}>
+              {user}
+            </Link>
+            <div className={classes.btns_container}>
+              <Link to={`/show/${btnId} `}>
+                <Button modeToggle={modeToggle} show={true} />
+              </Link>
+              <Button
+                modeToggle={modeToggle}
+                onClick={() =>
+                  download(button.css, button.html, button.js, user)
+                }
+              />
+            </div>
+          </div>
+          <div className={classes.stats_btn}>
+            {/* <ViewsIcon /> */}
+            {location.pathname.split("/")[2] ===
+            auth.currentUser.reloadUserInfo.screenName && (
+              <DeleteButton modeToggle={modeToggle} handleDelete={handleDelete} />
+            )}
+            <LikeButton modeToggle={modeToggle} btnId={btnId} />
+          </div>
+        </>
+      )}
     </div>
   );
 }

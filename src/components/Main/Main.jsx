@@ -85,21 +85,21 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
 
       {(buttonsData.length === 0) ?
 
-        (<motion.h1 
+        (<motion.h1
           variants={paraAnim}
-            initial="hidden"
-            whileInView="visible"
-            
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 60 }}
+          initial="hidden"
+          whileInView="visible"
+
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 60 }}
           className={classes.wait}>We Are Constantly Working To Provide You With The Best Possible Experience ... <br /><br /> Thank You For Your Patience 🫠 </motion.h1>) :
 
-        (<div><h1 style={{ textAlign: "center" , marginTop: "30px"}}>
+        (<div><h1 style={{ textAlign: "center", marginTop: "30px" }}>
           Total number of Buttons added {buttonsData.length}
         </h1>
           <div className={classes.btns_container}>
             {currentItems.map((button, index) => (
-              <Card key={index} button={button} />
+              <Card modeToggle={modeToggle} key={index} button={button} />
             ))}
           </div>
           <div className={classes.pagination}>
