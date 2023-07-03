@@ -36,15 +36,12 @@ export default function UserProfile() {
         where("githubUsername", "==", userId)
       );
       const querySnapshot = await getDocs(q);
-
-      if (!querySnapshot.empty) {
-        const userData = querySnapshot.docs[0].data();
-        const { bio, name, profilePictureUrl } = userData;
-        setUserDocId(querySnapshot.docs[0].id);
-        setGithubBio(bio);
-        setName(name);
-        setProfilePictureUrl(profilePictureUrl);
-      }
+      const userData = querySnapshot.docs[0].data();
+      const { bio, name, profilePictureUrl } = userData;
+      setUserDocId(querySnapshot.docs[0].id);
+      setGithubBio(bio);
+      setName(name);
+      setProfilePictureUrl(profilePictureUrl);
     } catch (error) {
       console.error("Error fetching user data:", error);
     }
@@ -111,8 +108,19 @@ export default function UserProfile() {
             <div className={classes.socials}>{/* Social accounts */}</div>
           </div>
         </div>
-        <p className={classes.bio}>{githubBio}</p>
-        <Link to={`/user/${user}`}>See More Buttons from {user}</Link>
+        {/* {auth.currentUser && */}
+        {userDocId === auth?.currentUser?.reloadUserInfo?.screenName && (
+          <EditBioComponent
+            editingBio={editingBio}
+            newBio={newBio}
+            githubBio={githubBio}
+            handleEditBio={handleEditBio}
+            handleCancelEditBio={handleCancelEditBio}
+            handleSaveBio={handleSaveBio}
+            handleBioChange={handleBioChange}
+            classes={classes}
+          />
+        )}
       </div>
       <div>
         <div className={classes.btns_container}>
