@@ -117,7 +117,7 @@ const UserProfile = () => {
             </div>
           </div>
         </div>
-        <p>{githubBio}</p>
+        <p className={classes.bio}>{githubBio}</p>
         <Link to={`/user/${user}`}>See More Buttons from {user}</Link>
       </div>
       <div>

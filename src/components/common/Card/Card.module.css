@@ -10,24 +10,33 @@
   color: #ffffff;
 }
 
-.contributor_name {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
+.dark-container {
+  background-color: #000;
 }
 
-.btns {
+.light-container {
+  background-color: #f0f0f5;
+}
+
+.dark-container .iframe_container {
   all: unset;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #007bff;
-  width: 30px;
-  height: 30px;
-  padding: 5px;
-  border-radius: 50%;
-  transition: background-color 0.2s ease-in-out;
-  color: #ffffff;
+  width: 380px;
+  height: 280px;
+  box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
+    0 30px 60px -30px rgba(0, 0, 0, 0.3),
+    inset 0 -2px 6px 0 rgba(10, 37, 64, 0.35);
+  border-radius: 20px;
+  background: black;
+}
+.light-container .iframe_container {
+  all: unset;
+  width: 380px;
+  height: 280px;
+  box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
+    0 30px 60px -30px rgba(0, 0, 0, 0.3),
+    inset 0 -2px 6px 0 rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+  background: #f0f0f5;
 }
 
 .btns:hover {
@@ -54,12 +63,11 @@
 
 .contributor_data {
   display: flex;
-  align-items: center;
 }
 
 .contributor_img_container {
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -69,6 +77,14 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+}
+.dark-container .contributor_name {
+  text-decoration: none;
+  color: #fff;
+}
+.light-container .contributor_name {
+  text-decoration: none;
+  color: black;
 }
 
 .btns_container {
@@ -94,3 +110,8 @@
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .card_container {
+    width: 300px;
+  }
+}

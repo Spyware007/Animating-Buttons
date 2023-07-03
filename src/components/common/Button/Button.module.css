@@ -3,7 +3,6 @@
   height: 30px;
   border: none;
   border-radius: 50%;
-  background-color: rgb(22, 32, 52);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,6 +25,14 @@
   box-shadow: rgba(255, 255, 255, 0.24) 0px 0px 8px;
 }
 
+.dark-Btn {
+  background-color: rgb(22, 32, 52);
+}
+
+.light-Btn {
+  background-color: rgb(255, 255, 255);
+}
+
 .svgIcon {
   fill: #85b6ff;
 }
@@ -38,7 +45,39 @@
   border-right: 2px solid #85b6ff;
 }
 
+.light-Btn
 .tooltipr,
+.light-Btn
+.tooltipl {
+  position: absolute;
+  left: -202px;
+  top: -301px;
+  width: 280px;
+  height: 280px;
+  opacity: 0;
+  color: rgba(12, 12, 12, 0.85);
+  background-color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+}
+
+.dark-Btn
+.tooltipr,
+.dark-Btn
 .tooltipl {
   position: absolute;
   left: -202px;
@@ -95,20 +134,30 @@
   transition-duration: 0.3s;
 }
 
-.Btn:hover {
+.dark-Btn:hover {
   background-color: rgb(60, 60, 60);
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-
+.light-Btn:hover {
+  background-color: rgb(235, 235, 235);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+src/components/common/Button/Button.module.css
 .Btn:hover .icon2 {
   border-bottom: 2px solid rgb(235, 235, 235);
   border-left: 2px solid rgb(235, 235, 235);
   border-right: 2px solid rgb(235, 235, 235);
 }
 
-.Btn:hover .svgIcon {
+.dark-Btn:hover .svgIcon {
   fill: rgb(255, 255, 255);
+  -webkit-animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.light-Btn:hover .svgIcon {
+  fill: #2b2b2b;
   -webkit-animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
