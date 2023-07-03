@@ -21,6 +21,8 @@
   height: 10rem;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease-in;
+
 }
 .Avtar:hover {
   scale: 1.2;
@@ -73,21 +75,24 @@
   justify-content: center;
   display: flex;
   gap: 1rem;
+  
 }
 
 .link1,
 .link2 {
   z-index: 100;
+  transition: all 0.2s ease-in;
+  /* background-color: #fff; */
+
 }
 
-.link1:hover {
+.link1:hover, .link2:hover  {
   scale: 1.1;
-  transform: rotate(30deg) scale(1.2);
+  transform: rotate(20deg) scale(1.2);
+  
+
 }
-.link2:hover {
-  scale: 1.1;
-  transform: rotate(30deg) scale(1.2);
-}
+
 
 .Contributors {
   display: flex;
@@ -99,6 +104,8 @@
   margin-right: 12rem;
   margin-top: 8rem;
 }
+
+
 
 @media (max-width: 1089px) {
   .Header {
