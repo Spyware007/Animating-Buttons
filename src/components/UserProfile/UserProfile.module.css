@@ -155,42 +155,11 @@
   gap: 80px 120px;
 }
 
-.message {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 20px;
-  padding: 20px 30px;
-  width: 100%;
-  animation: message 0.5s ease-in-out;
-  text-shadow: 1px 1px rgba(250, 250, 250, 0.3);
-}
 .bio {
   color: #fff;
 }
 
-.error {
-  color: #cc0033;
-  background-color: #fce4e4;
-  border: 1px solid #fcc2c3;
-}
-
-.success {
-  color: #339900;
-  background-color: #e6efc2;
-  border: 1px solid #c6d880;
-}
-
 @keyframes user_info {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes message {
   0% {
     opacity: 0;
   }
