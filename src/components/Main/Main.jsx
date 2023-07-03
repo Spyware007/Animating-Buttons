@@ -106,7 +106,7 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
               viewport={{once : true}}
               transition={{ duration : 0.5 ,delay : (index%3)*0.3}}
               >
-                <Card key={index} button={button} />
+                <Card modeToggle={modeToggle} key={index} button={button} />
               </motion.div>
             ))}
           </div>
