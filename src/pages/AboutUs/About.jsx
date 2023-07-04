@@ -12,9 +12,8 @@ import { fadeIn } from "../../components/Animation/motion";
 const About = ({ modeToggle }) => {
   return (
     <div
-      className={`${classes.about} ${
-        !modeToggle ? classes["about-light"] : classes["about-dark"]
-      }`}
+      className={`${classes.about} ${!modeToggle ? classes["about-light"] : classes["about-dark"]
+        }`}
     >
       <div className={classes.Header}>
         <div>
@@ -124,9 +123,9 @@ const About = ({ modeToggle }) => {
             viewport={{ once: true }}
             className={classes.About_p}
           >
-           <br />
-           We invite you to explore our website and discover the endless possibilities. Whether you're a beginner or an experienced developer, Amazing Buttons Animation has something for everyone.
-             </motion.p>
+            <br />
+            We invite you to explore our website and discover the endless possibilities. Whether you're a beginner or an experienced developer, Amazing Buttons Animation has something for everyone.
+          </motion.p>
         </div>
       </div>
       <Contributor />
