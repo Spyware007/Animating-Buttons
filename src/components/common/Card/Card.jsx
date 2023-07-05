@@ -75,8 +75,9 @@ export default function Card({ modeToggle, button }) {
 
   return (
     <div
-      className={`${classes.card_container} ${modeToggle ? classes["dark-container"] : classes["light-container"]
-        } }`}
+      className={`${classes.card_container} ${
+        modeToggle ? classes["dark-container"] : classes["light-container"]
+      } }`}
     >
       {!deleted && (
         <>
@@ -120,18 +121,17 @@ export default function Card({ modeToggle, button }) {
             </div>
           </div>
 
-
           <div className={classes.stats_btn}>
             {/* <ViewsIcon /> */}
-            {auth.currentUser && location.pathname.split("/")[2] ===
-              auth?.currentUser?.reloadUserInfo?.screenName && (
+            {auth.currentUser &&
+              location.pathname.split("/")[2] ===
+                auth?.currentUser?.reloadUserInfo?.screenName && (
                 <DeleteButton handleDelete={handleDelete} />
               )}
             <LikeButton btnId={btnId} />
           </div>
         </>
-      )
-      }
+      )}
     </div>
   );
 }

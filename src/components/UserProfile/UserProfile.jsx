@@ -7,12 +7,10 @@ import {
   query,
   where,
   doc,
-  getDoc,
-  updateDoc,
+  setDoc,
 } from "firebase/firestore";
 import classes from "./UserProfile.module.css";
 import Card from "../common/Card/Card";
-import EditBioComponent from "./EditBio.jsx";
 
 export default function UserProfile() {
   const { userId } = useParams(); //it is actually githubUsername
@@ -35,13 +33,16 @@ export default function UserProfile() {
         collection(db, "users"),
         where("githubUsername", "==", userId)
       );
+
       const querySnapshot = await getDocs(q);
-      const userData = querySnapshot.docs[0].data();
-      const { bio, name, profilePictureUrl } = userData;
-      setUserDocId(querySnapshot.docs[0].id);
-      setGithubBio(bio);
-      setName(name);
-      setProfilePictureUrl(profilePictureUrl);
+      if (!querySnapshot.empty) {
+        const userData = querySnapshot.docs[0].data();
+        const { bio, name, profilePictureUrl } = userData;
+        setUserDocId(querySnapshot.docs[0].id);
+        setGithubBio(bio);
+        setName(name);
+        setProfilePictureUrl(profilePictureUrl);
+      }
     } catch (error) {
       console.error("Error fetching user data:", error);
     }
@@ -67,14 +68,10 @@ export default function UserProfile() {
   const handleSaveBio = async () => {
     try {
       const userDocRef = doc(db, "users", userDocId);
-      const userDocSnap = await getDoc(userDocRef);
-
-      if (userDocSnap.exists()) {
-        await updateDoc(userDocRef, { bio: newBio });
-        console.log(`Bio updated for user ${userId}`);
-        setGithubBio(newBio);
-        setEditingBio(false);
-      }
+      await setDoc(userDocRef, { bio: newBio }, { merge: true });
+      console.log(`Bio updated for user ${userId}`);
+      setGithubBio(newBio);
+      setEditingBio(false);
     } catch (error) {
       console.error("Error saving bio:", error);
     }
@@ -108,18 +105,28 @@ export default function UserProfile() {
             <div className={classes.socials}>{/* Social accounts */}</div>
           </div>
         </div>
-        {/* {auth.currentUser && */}
-        {userDocId === auth?.currentUser?.reloadUserInfo?.screenName && (
-          <EditBioComponent
-            editingBio={editingBio}
-            newBio={newBio}
-            githubBio={githubBio}
-            handleEditBio={handleEditBio}
-            handleCancelEditBio={handleCancelEditBio}
-            handleSaveBio={handleSaveBio}
-            handleBioChange={handleBioChange}
-            classes={classes}
-          />
+        {editingBio ? (
+          <>
+            <textarea
+              value={newBio}
+              onChange={handleBioChange}
+              className={classes.bio_textarea}
+            />
+            <div className={classes.edit_button}>
+              <button onClick={handleSaveBio}>Save</button>
+              <button onClick={handleCancelEditBio}>Cancel</button>
+            </div>
+          </>
+        ) : (
+          <>
+            <p>{githubBio}</p>
+            {auth.currentUser &&
+              userId === auth?.currentUser?.reloadUserInfo?.screenName && (
+                <div className={classes.edit_button}>
+                  <button onClick={handleEditBio}>Edit Bio</button>
+                </div>
+              )}
+          </>
         )}
       </div>
       <div>
