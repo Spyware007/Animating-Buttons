@@ -119,10 +119,11 @@
   .Para {
     margin-top: 0.5rem;
     max-width: 30rem;
+    padding: 1rem;
+
   }
   .About_p {
     font-size: 18px;
-
     color: darkgrey;
   }
   .About_h1_c {
