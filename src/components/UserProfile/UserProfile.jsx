@@ -57,7 +57,7 @@ export default function UserProfile() {
       const querySnapshot = await getDocs(q);
 
       if (!querySnapshot.empty) {
-        const buttonsData = querySnapshot.docs.map((doc) => doc.data());
+        const buttonsData = querySnapshot.docs.map((doc) => ({...doc.data(), id: doc.id }));
         setButtons(buttonsData);
       }
     } catch (error) {
