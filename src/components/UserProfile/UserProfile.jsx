@@ -12,7 +12,7 @@ import {
 import classes from "./UserProfile.module.css";
 import Card from "../common/Card/Card";
 
-export default function UserProfile() {
+export default function UserProfile({modeToggle}) {
   const { userId } = useParams(); //it is actually githubUsername
   const [githubBio, setGithubBio] = useState("");
   const [profilePictureUrl, setProfilePictureUrl] = useState("");
@@ -58,7 +58,7 @@ export default function UserProfile() {
       const querySnapshot = await getDocs(q);
 
       if (!querySnapshot.empty) {
-        const buttonsData = querySnapshot.docs.map((doc) => doc.data());
+        const buttonsData = querySnapshot.docs.map((doc) => ({...doc.data(), id: doc.id }));
         setButtons(buttonsData);
       }
     } catch (error) {
@@ -132,9 +132,11 @@ export default function UserProfile() {
       </div>
       <div>
         <div className={classes.btns_container}>
+
           {buttons.length !== 0 ? (buttons.map((button, i) => (
             <Card key={i} button={button} />
           ))) : <span className={classes.no_btn}>No Button Found</span>}
+
         </div>
       </div>
     </section>

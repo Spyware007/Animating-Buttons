@@ -34,6 +34,8 @@ export default function Card({ modeToggle, button }) {
   const [profilePicture, setProfilePicture] = useState({});
   const [deleted, setDeleted] = useState(false);
 
+  { console.log(button); }
+
   useEffect(() => {
     const fetchUser = async () => {
       try {
@@ -74,13 +76,12 @@ export default function Card({ modeToggle, button }) {
   };
 
   return (
-    <div
-      className={`${classes.card_container} ${
-        modeToggle ? classes["dark-container"] : classes["light-container"]
-      } }`}
-    >
+    <>
       {!deleted && (
-        <>
+        <div
+          className={`${classes.card_container} ${modeToggle ? classes["dark-container"] : classes["light-container"]
+            } }`}
+        >
           <div className={classes.iframe_container}>
             <iframe
               className={classes.iframe_container}
@@ -125,13 +126,13 @@ export default function Card({ modeToggle, button }) {
             {/* <ViewsIcon /> */}
             {auth.currentUser &&
               location.pathname.split("/")[2] ===
-                auth?.currentUser?.reloadUserInfo?.screenName && (
+              auth?.currentUser?.reloadUserInfo?.screenName && (
                 <DeleteButton handleDelete={handleDelete} />
               )}
             <LikeButton btnId={btnId} />
           </div>
-        </>
+        </div>
       )}
-    </div>
-  );
+    </>
+  )
 }
