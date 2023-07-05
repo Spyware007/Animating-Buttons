@@ -38,6 +38,7 @@ export default function UserProfile() {
       if (!querySnapshot.empty) {
         const userData = querySnapshot.docs[0].data();
         const { bio, name, profilePictureUrl } = userData;
+        console.log(userData);
         setUserDocId(querySnapshot.docs[0].id);
         setGithubBio(bio);
         setName(name);
@@ -93,7 +94,7 @@ export default function UserProfile() {
   };
 
   return (
-    <>
+    <section className={classes.main_div}>
       <div className={classes.user_info}>
         <div className={classes.user_row}>
           <div className={classes.image_container}>
@@ -131,11 +132,11 @@ export default function UserProfile() {
       </div>
       <div>
         <div className={classes.btns_container}>
-          {buttons.map((button, i) => (
+          {buttons.length !== 0 ? (buttons.map((button, i) => (
             <Card key={i} button={button} />
-          ))}
+          ))) : <span className={classes.no_btn}>No Button Found</span>}
         </div>
       </div>
-    </>
+    </section>
   );
 }
