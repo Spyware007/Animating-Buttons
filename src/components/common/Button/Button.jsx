@@ -1,9 +1,9 @@
 import classes from "./Button.module.css";
 
-const Button = ({ show, onClick }) => {
+const Button = ({ modeToggle, show, onClick }) => {
   return (
     <>
-      <button onClick={onClick} className={classes.Btn}>
+      <button onClick={onClick} className={`${classes.Btn} ${modeToggle ? classes["dark-Btn"] : classes["light-Btn"]}`}>
         {show ? (
           <svg
             className={classes.showIcon}

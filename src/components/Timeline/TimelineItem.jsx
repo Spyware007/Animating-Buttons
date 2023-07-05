@@ -24,7 +24,7 @@ const TimelineItem = ({ data, modeToggle }) => {
         >
           {data.category.tag}
         </span>
-        <time>{data.date}</time>
+        <time className={classes.date}>{data.date}</time>
         <p>{data.text}</p>
         {data.link && (
           <a
