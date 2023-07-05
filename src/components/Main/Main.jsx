@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import classes from "./Main.module.css";
 import Card from "../common/Card/Card";
 import { motion } from 'framer-motion'
-import { paraAnim } from "../Animation/motion";
+import { fadeIn, paraAnim } from "../Animation/motion";
 
 export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
   const [currentPage, setCurrentPage] = useState(
@@ -89,7 +89,6 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
           variants={paraAnim}
           initial="hidden"
           whileInView="visible"
-
           viewport={{ once: true }}
           transition={{ type: "spring", stiffness: 60 }}
           className={classes.wait}>We Are Constantly Working To Provide You With The Best Possible Experience ... <br /><br /> Thank You For Your Patience 🫠 </motion.h1>) :
@@ -99,7 +98,16 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
         </h1>
           <div className={classes.btns_container}>
             {currentItems.map((button, index) => (
-              <Card modeToggle={modeToggle} key={index} button={button} />
+              <motion.div
+              key={index}
+              variants={fadeIn}
+              initial={'hidden'}
+              whileInView={'visible'}
+              viewport={{once : true}}
+              transition={{ duration : 0.5 ,delay : (index%3)*0.3}}
+              >
+                <Card modeToggle={modeToggle} key={index} button={button} />
+              </motion.div>
             ))}
           </div>
           <div className={classes.pagination}>
