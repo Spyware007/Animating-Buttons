@@ -12,7 +12,7 @@ import {
 import classes from "./UserProfile.module.css";
 import Card from "../common/Card/Card";
 
-export default function UserProfile() {
+export default function UserProfile({modeToggle}) {
   const { userId } = useParams(); //it is actually githubUsername
   const [githubBio, setGithubBio] = useState("");
   const [profilePictureUrl, setProfilePictureUrl] = useState("");
@@ -131,9 +131,9 @@ export default function UserProfile() {
       </div>
       <div>
         <div className={classes.btns_container}>
-          {buttons.map((button, i) => (
-            <Card key={i} button={button} />
-          ))}
+          {buttons ? buttons.map((button, i) => (
+            <Card modeToggle={modeToggle}  key={i} button={button} />
+          )) : <h3>No Button Found </h3>}
         </div>
       </div>
     </>
