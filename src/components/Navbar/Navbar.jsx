@@ -70,9 +70,9 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
 
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        // console.log(user);
+        console.log(user);
         localStorage.setItem("displayName", user.displayName);
-        localStorage.setItem("username", user.reloadUserInfo.screenName);
+        localStorage.setItem("username", user?.reloadUserInfo?.screenName);
         localStorage.setItem("email", user.email);
         localStorage.setItem("userImage", user.photoURL);
 
