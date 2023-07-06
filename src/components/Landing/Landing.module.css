@@ -95,12 +95,10 @@
 }
 @media screen and (max-width: 768px) {
   .landing {
-    height: max-content;
+    height: auto;
     padding: 10px 20px;
     align-items: center;
     min-height: 86vh;
-    width: max-content;
-    margin-inline: 5vw;
   }
   .header {
     align-items: center;
