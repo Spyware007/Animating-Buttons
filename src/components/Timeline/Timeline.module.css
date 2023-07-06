@@ -13,6 +13,7 @@
   width: 3px;
   height: 100%;
 }
+
 .timeline_item {
   display: flex;
   justify-content: flex-end;
@@ -28,6 +29,7 @@
   padding-left: 30px;
   padding-right: 0;
 }
+
 .timeline_item_content {
   box-shadow: 0 0 10px rgba(8, 8, 8, 0.3);
   border-radius: 15px;
@@ -43,11 +45,16 @@
   height: auto;
   max-width: 70%;
   text-align: right;
+  margin-top: 2rem;
+  transition: all 0.2s ease-in;
 }
 
 .timeline_item_content:hover {
   scale: 1.03;
+  z-index: 1000;
 }
+
+
 
 .timeline_item_content::after {
   content: " ";
@@ -72,6 +79,7 @@
   left: -7.5px;
   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
 }
+
 .timeline_item_content .tag {
   color: #fff;
   font-size: 12px;
@@ -83,6 +91,10 @@
   position: absolute;
   text-transform: uppercase;
   border-radius: 10px;
+}
+
+.timeline_item_content .date {
+  color: #fff;
 }
 
 .timeline_item:nth-child(odd) .timeline_item_content .tag {
@@ -131,14 +143,17 @@
   right: auto;
   left: -40px;
 }
+
 .link {
   margin-top: 1rem;
   text-decoration: none;
   color: rgba(25, 128, 247, 0.938);
 }
+
 .link:hover {
   color: rgb(6, 209, 245);
 }
+
 @media only screen and (max-width: 1023px) {
   .timeline_item_content {
     max-width: 100%;
@@ -146,15 +161,16 @@
 }
 
 @media only screen and (max-width: 767px) {
+
   .timeline_item_content,
-  .timeline_item:nth-child(odd) .timeline_item_content {
+  .timeline_item .timeline_item_content {
     padding: 15px 10px;
     text-align: center;
     align-items: center;
   }
 
   .timeline_item_content .tag {
-    width: calc(100% - 10px);
+    /* width: calc(100% - 10px); */
     text-align: center;
   }
 
@@ -169,4 +185,48 @@
   .timeline_item_content a::after {
     display: none;
   }
+
+  /* Timeline In Small Screen */
+
+  .timeline_item_content{
+    width: 85vw;
+  }
+  .timeline_container::after {
+    left: calc(5% - 2px);
+  }
+
+  .timeline_item {
+    align-self: auto;
+    width: 95vw;
+
+  }
+
+  .timeline_item{
+  align-self: flex-end;
+  justify-content: flex-start;
+  padding-left: 30px;
+  padding-right: 0;
+}
+
+  .timeline_item .timeline_item_content {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.timeline_item .timeline_item_content::after {
+  right: auto;
+  left: -7.5px;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+  .timeline_item .timeline_item_content .tag {
+  left: auto;
+  right: 5px;
+}
+
+  .timeline_item .timeline_item_content .circle {
+  right: auto;
+  left: -40px;
+}
+
 }

@@ -5,14 +5,27 @@
     width: 50px;
     padding: 4px 10px;
     height: 30px;
-    background-color: rgb(37, 47, 66);
     border: 0.5px solid pink;
     border-radius: 20px;
     cursor: pointer;
     margin-top: 20px;
   }
-  .deleteButton:hover {
+
+  .dark {
+    background-color: rgb(37, 47, 66);
+    color: white;
+  }
+
+  .light {
+    background-color: rgb(255, 255, 255);
+    color: rgb(37, 47, 66);
+  }
+
+  .dark:hover {
     background-color: rgb(72, 82, 101);
+  }
+  .light:hover {
+    background-color: #F0F0F5;
   }
   
   .heartIcon {

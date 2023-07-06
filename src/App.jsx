@@ -81,7 +81,7 @@ const App = ({ modeToggleFunc, modeToggle }) => {
     },
     {
       path: "/user/:userId",
-      element: <UserProfile />,
+      element: <UserProfile modeToggle={toggleMode} />,
     },
     {
       path: "/leaderboard",
