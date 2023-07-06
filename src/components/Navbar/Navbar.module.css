@@ -224,6 +224,12 @@
   .github {
     display: none;
   }
+  .addbtn{
+    display: none;
+  }
+  .username{
+    display: none;
+  }
   .image_container_mobile {
     display: block;
     margin: 0;
