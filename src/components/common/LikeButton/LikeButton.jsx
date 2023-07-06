@@ -57,7 +57,7 @@ export default function LikeButton({ modeToggle, btnId }) {
       const { login } = response.data;
       setGithubUsername(login);
     } catch (error) {
-      console.log("Error fetching GitHub data:", error);
+      // console.log("Error fetching GitHub data:", error);
     }
   };
 
