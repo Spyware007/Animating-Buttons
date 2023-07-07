@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import classes from "./AddButton.module.css";
 import CodeEditor from "../common/CodeEditor/CodeEditor";
 import { htmlTemplate, cssTemplate, jsTemplate } from "./templates";
+import { Toaster } from 'react-hot-toast';
 
 const AddButton = () => {
   const [html, setHtml] = useState(htmlTemplate);
@@ -43,6 +44,7 @@ const AddButton = () => {
           js={js}
           setJs={setJs}
         />
+        <Toaster />
       </div>
     </div>
   );

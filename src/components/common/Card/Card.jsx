@@ -16,6 +16,9 @@ import DeleteButton from "../deleteBtn/DeleteButton";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
 import { renderIntoDocument } from "react-dom/test-utils";
+import { toast } from "react-hot-toast";
+ 
+
 
 function download(css, html, js, name) {
   const zip = new JSZip();
@@ -68,9 +71,11 @@ export default function Card({ modeToggle, button }) {
         .then(() => {
           setDeleted(true);
           console.log("Document successfully deleted!");
+          toast.success("Successfully deleted!")
         })
         .catch((error) => {
           console.error("Error deleting document: ", error);
+          toast.error("Error in deleting component!")
         });
     }
   };

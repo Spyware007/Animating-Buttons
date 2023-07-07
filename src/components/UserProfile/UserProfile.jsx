@@ -15,6 +15,8 @@ import {
   signOut,
   getAuth,
 } from "firebase/auth";
+import { Toaster } from 'react-hot-toast';
+
 
 export default function UserProfile({ modeToggle }) {
   const { userId } = useParams(); //it is actually githubUsername
@@ -174,7 +176,7 @@ export default function UserProfile({ modeToggle }) {
           {buttons.length !== 0 ? (buttons.map((button, i) => (
             <Card key={i} button={button} />
           ))) : <span className={classes.no_btn}>No Button Found</span>}
-
+          <Toaster />
         </div>
       </div>
     </section>
