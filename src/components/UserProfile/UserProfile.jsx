@@ -11,8 +11,12 @@ import {
 } from "firebase/firestore";
 import classes from "./UserProfile.module.css";
 import Card from "../common/Card/Card";
+import {
+  signOut,
+  getAuth,
+} from "firebase/auth";
 
-export default function UserProfile({modeToggle}) {
+export default function UserProfile({ modeToggle }) {
   const { userId } = useParams(); //it is actually githubUsername
   const [githubBio, setGithubBio] = useState("");
   const [profilePictureUrl, setProfilePictureUrl] = useState("");
@@ -26,6 +30,40 @@ export default function UserProfile({modeToggle}) {
     fetchUserData();
     fetchButtonData();
   }, []);
+
+
+
+  const handleLogout = () => {
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        // setUser(null)
+        localStorage.clear()
+        console.log("Logged out.");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  useEffect(() => {
+    const auth = getAuth();
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        console.log(user);
+        localStorage.setItem("displayName", user.displayName);
+        localStorage.setItem("username", user?.reloadUserInfo?.screenName);
+        localStorage.setItem("email", user.email);
+        localStorage.setItem("userImage", user.photoURL);
+
+      }
+      else {
+        handleLogout();
+        localStorage.clear();
+      }
+    });
+
+  })
 
   const fetchUserData = async () => {
     try {
@@ -58,7 +96,7 @@ export default function UserProfile({modeToggle}) {
       const querySnapshot = await getDocs(q);
 
       if (!querySnapshot.empty) {
-        const buttonsData = querySnapshot.docs.map((doc) => ({...doc.data(), id: doc.id }));
+        const buttonsData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
         setButtons(buttonsData);
       }
     } catch (error) {
