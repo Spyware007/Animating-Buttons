@@ -1,0 +1,122 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(92, 92, 92);
+}
+
+button{
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    border: none;
+    background: linear-gradient(
+        145deg,
+        pink, 
+        rgb(249, 166, 180)
+    );
+    box-shadow: 
+    5px 5px pink,
+    2px 2px 5px pink,
+    2px 2px 10px pink,
+    2px 2px 15px pink,
+    -2px -2px 5px pink,
+    -2px -2px 10px pink,
+    -2px -2px 15px pink
+    ;
+    border: 1px solid #eee;
+    cursor: pointer;
+    color: rgb(55, 55, 55);
+    font-weight: bold;
+}
+
+button:active{
+    box-shadow:
+    2px 2px 5px pink,
+    2px 2px 10px pink,
+    2px 2px 15px pink,
+    -2px -2px 5px pink,
+    -2px -2px 10px pink,
+    -2px -2px 15px pink
+    ;
+    transform: translate(5px, 5px);
+}
+
+button img{
+    position: absolute;
+    width: 35px;
+    z-index: -1;
+    transform: scale(0);
+}
+
+button img:nth-child(1){
+    top: -200%;
+    left: -10%;
+}
+
+button img:nth-child(2){
+    bottom: -180%;
+    left: 0%;
+}
+
+button img:nth-child(3){
+    top: 20%;
+    left: -90%;
+}
+
+button img:nth-child(4){
+    top: -80%;
+    left: -60%;
+}
+
+button img:nth-child(5){
+    top: 120%;
+    left: -30%;
+}
+button img:nth-child(6){
+    top: -90%;
+    left: 50%;
+}
+button img:nth-child(7){
+    top: 190%;
+    left: 90%;
+}
+button img:nth-child(8){
+    top: -160%;
+    left: 100%;
+}
+button img:nth-child(9){
+    top: 80%;
+    left: 140%;
+}
+button img:nth-child(10){
+    top: -20%;
+    left: 120%;
+}
+button img:nth-child(11){
+    top: -200%;
+    left: 50%;
+}
+button img:nth-child(12){
+    top: 160%;
+    left: 50%;
+} 
+
+.anim{
+    animation: moving 0.5s linear reverse forwards;
+}
+
+@keyframes moving {
+    0%{
+        transform: scale(0);
+    }
+    10%{
+        transform: scale(1);
+    }
+    100%{
+        top: 50%;
+        left: 50%;
+    }
+}

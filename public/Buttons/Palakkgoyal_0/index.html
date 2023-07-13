@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodiee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="btn">
+        <img src="burger.png" alt="">
+        <img src="coke.webp" alt="">
+        <img src="burger.png" alt="">
+        <img src="cake.png" alt="">
+        <img src="cake.png" alt="">
+        <img src="pizza.png" alt="">
+        <img src="burger.png" alt="">
+        <img src="coke.webp" alt="">
+        <img src="cake.png" alt="">
+        <img src="pizza.png" alt="">
+        <img src="coke.webp" alt="">
+        <img src="pizza.png" alt="">
+        Order Now
+    </button>
+
+    <script>
+        let btn = document.getElementById("btn")
+        let spans = document.getElementsByTagName("img")
+
+        btn.onclick = function(){
+            for(span of spans){
+                span.classList.add("anim")
+            }
+            
+            setTimeout(function(){
+                for(span of spans){
+                    span.classList.remove("anim")
+                }
+            }, 700)
+        }
+    </script>
+</body>
+</html>
