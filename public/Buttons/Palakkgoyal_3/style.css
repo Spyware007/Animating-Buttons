@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(68, 66, 66);
+    min-height: 100vh;
+}
+
+.btn{
+    position: relative;
+    font-family: cursive;
+    box-shadow: 5px 5px green;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.tree-img{
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    width: 30px;
+    filter: drop-shadow(2px 2px 4px #eee);
+}
+
+.btn:hover{
+    color: green;
+    background-color: green;
+    box-shadow: 5px 5px white;
+    color: white;
+    font-weight: bold;
+    transform: translate(5px, -5px);
+}
