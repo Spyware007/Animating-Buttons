@@ -1,0 +1,53 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: bisque;
+}
+
+.sparkle-button {
+    display: inline-block;
+    padding: 30px 60px;
+    background-color: #1d1212;
+    border: none;
+    border-radius: 50%;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+    transition: 0.7s ease-in-out;
+  }
+
+  .sparkle-button:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.8), transparent);
+    animation: sparkle 3s infinite;
+  }
+
+  .sparkle-button:hover {
+    background-color: rgb(79, 76, 76);
+    border-radius: 4px;
+  }
+
+
+  @keyframes sparkle {
+    0% {
+      transform: rotate(-45deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-45deg) translate(100%, 100%);
+      opacity: 0;
+    }
+  }
