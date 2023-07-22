@@ -34,7 +34,7 @@ export default function Card({ modeToggle, button }) {
   const [profilePicture, setProfilePicture] = useState({});
   const [deleted, setDeleted] = useState(false);
 
-  { console.log(button); }
+  // { console.log(button); }
 
   useEffect(() => {
     const fetchUser = async () => {
