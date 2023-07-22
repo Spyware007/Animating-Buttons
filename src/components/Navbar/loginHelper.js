@@ -105,9 +105,6 @@ export const fetchGithubData = async (
   // console.log(githubId);
   try {
     const response = await axios.get(`https://api.github.com/user/${githubId}`, {
-      headers: {
-        Authorization: 'Bearer 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'
-      }
     });
     console.log(response);
     const {

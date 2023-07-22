@@ -11,15 +11,12 @@ import {
   getAuth,
 } from "firebase/auth";
 import logout from "../../assets/logout-svgrepo-com.svg";
-import { fetchGithubData } from "./loginHelper";
+import { fetchGithubData, saveUserDataToFirestore } from "./loginHelper";
 
 // images
-import github from "../../assets/github.png";
 import moon from "../../assets/moon.png";
 import sun from "../../assets/sun.png";
 // import { getAuth } from "firebase/auth";
-import axios from "axios";
-import { auth } from "../../firebase/auth";
 
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
 
@@ -49,6 +46,51 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
       });
   };
 
+
+
+  // const saveUserDataToFirestore = async (
+  //   username,
+  //   profilePictureUrl,
+  //   bio,
+  //   socialAccounts
+  // ) => {
+  //   try {
+  //     const usersCollectionRef = collection(db, "users");
+
+  //     // Query the collection to find the document with the user's username
+  //     const querySnapshot = await getDocs(
+  //       query(usersCollectionRef, where("githubUsername", "==", username))
+  //     );
+
+  //     // Check if the document already exists
+  //     if (querySnapshot.size > 0) {
+  //       // Update the existing document
+  //       const docRef = querySnapshot.docs[0].ref;
+  //       await updateDoc(docRef, {
+  //         bio: bio,
+  //         socials: socialAccounts,
+  //         profilePictureUrl: profilePictureUrl,
+  //       });
+  //       console.log("User data updated in Firestore");
+  //     } else {
+  //       // Create a new document
+  //       const newDocRef = doc(usersCollectionRef); // Automatically generate a new document ID
+  //       const newUser = {
+  //         bio: bio,
+  //         socials: socialAccounts,
+  //         githubUsername: username,
+  //         profilePictureUrl: profilePictureUrl,
+  //       };
+  //       await setDoc(newDocRef, newUser);
+  //       console.log("User data saved to Firestore");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error saving user data to Firestore:", error);
+  //   }
+  // };
+
+
+
   const handleLogout = () => {
     const auth = getAuth();
     signOut(auth)
@@ -70,7 +112,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
 
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        console.log(user);
+        // console.log(user);
         localStorage.setItem("displayName", user.displayName);
         localStorage.setItem("username", user?.reloadUserInfo?.screenName);
         localStorage.setItem("email", user.email);

@@ -7,3 +7,4 @@ export { default as AddButton } from "./AddButton/AddButton";
 export { default as Score } from "./Score/Score";
 export { default as Footer } from "./Footer/Footer";
 export { default as ShowCode } from "./ShowCode/ShowCode";
+export { default as ExploreButtons} from './ExploreButtons/ExploreButtons'
