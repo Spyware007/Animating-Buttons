@@ -116,6 +116,6 @@
 
 @media only screen and (max-width: 400px) {
   .card_container {
-    width: 300px;
+    width: 90vw;
   }
 }
