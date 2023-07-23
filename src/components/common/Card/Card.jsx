@@ -82,7 +82,7 @@ export default function Card({ modeToggle, button }) {
           className={`${classes.card_container} ${modeToggle ? classes["dark-container"] : classes["light-container"]
             } }`}
         >
-          <div className={classes.iframe_container}>
+          <div className={classes.frame} >
             <iframe
               className={classes.iframe_container}
               style={{ width: "100%", height: "100%" }}
