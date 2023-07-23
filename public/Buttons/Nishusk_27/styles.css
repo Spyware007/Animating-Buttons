@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: -webkit-radial-gradient(
+      center top, circle farthest-corner,
+      #FFF 0%, #D8DFE9 100%);
+    background-image: radial-gradient(
+      circle farthest-corner at center top,
+      #FFF 0%, #D8DFE9 100%);
+    overflow: hidden;
+  }
+  
+  /* The @font-face and @include directives are removed as they are SASS-specific */
+  
+  /* You can add your custom styles here, if needed */
+  
