@@ -136,7 +136,7 @@ export default function UserProfile({ modeToggle }) {
       <div className={classes.user_info}>
         <div className={classes.user_row}>
           <div className={classes.image_container}>
-            <img className={classes.image} src={profilePictureUrl} alt="" />
+            <img className={classes.image} src={profilePictureUrl} alt="" loading="lazy" />
           </div>
           <div className={classes.user_data}>
             <h3 className={classes.username}>@{userId}</h3>

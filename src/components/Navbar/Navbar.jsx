@@ -171,11 +171,10 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               }`}
             onClick={() => modeToggleFunc(!modeToggle)}
           >
-            <img src={modeToggle ? sun : moon} alt="" />
+            <img src={modeToggle ? sun : moon} alt="" loading="lazy" />
           </button>
         </ul>
         <div className={classes.button_container}>
-
           {user ? (
 
             <div className={classes.loggedIn}>
@@ -206,6 +205,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
                       className={classes.image}
                       src={user.photoURL}
                       alt="Creator"
+                      loading="lazy"
                     />
                   </div>
                   <span className={classes.username}>My Profile</span>
@@ -220,6 +220,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
                   alt="Log Out"
                   height={"20px"}
                   width={"40px"}
+                  loading="lazy"
                 />
               </button>
             </div>

@@ -102,7 +102,7 @@ export default function Card({ modeToggle, button }) {
                 <img
                   className={classes.contributor_img}
                   src={profilePicture}
-                  alt="User"
+                  alt="User" loading="lazy"
                 />
               </div>
             </div>

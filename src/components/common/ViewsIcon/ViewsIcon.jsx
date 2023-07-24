@@ -6,7 +6,7 @@ const ViewsIcon = ({ viewsCounter = 200 }) => {
   return (
     <>
       <div className={classes.views}>
-        <img className={classes.views_gif} src={views} alt="" />
+        <img className={classes.views_gif} src={views} alt="" loading="lazy" />
         <h1 className={classes.views_counter}>{viewsCounter}</h1>
       </div>
     </>
