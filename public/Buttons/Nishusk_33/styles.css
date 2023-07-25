@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Bitter:700);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: 'Bitter', Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 4em;
+  text-align: right;
+}
+a {
+  color: #1a1a1a;
+  margin-left: 20px;
+  position: relative;
+  text-decoration: none;
+}
+
+.availability {
+  color: #ffffff;
+  margin-right: 1em;
+  position: absolute;
+  right: 100px;
+  top: 8px;
+  width: 200px;
+  transition: all 300ms;
+}
+.button {
+  border: 3px #cc0000 solid;
+  bottom: 2px;
+  color: #cc0000;
+  display: inline-block;
+  font-weight: bold;
+  height: 44px;
+  overflow: hidden;
+  padding: 0.5em 1.5em 0.5em 0;
+  position: relative;
+  text-align: right;
+  text-decoration: none;
+  vertical-align: middle;
+  width: 117px;
+  border-radius: 100px;
+  transition: all 300ms;
+}
+.button:hover {
+  border-color: #cc0000;
+  color: #cc0000;
+  width: 340px;
+}
+.button:hover .availability {
+  color: #cc0000;
+  display: inline-block;
+}
+.button:active {
+  background: #b30000;
+  border-color: #b30000;
+}
+.hire-me {
+  position: absolute;
+  right: 24px;
+  top: 8px;
+}
