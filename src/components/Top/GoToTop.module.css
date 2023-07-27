@@ -26,10 +26,18 @@
     rgba(77, 169, 255, 0.35) 0px -2px 6px 0px inset;
 }
 
+.top-btn:hover {
+  box-shadow: 0 55px 25px rgba(255,255,0,0.4);
+}
+
 .top-btn > .icon {
   color: #000;
   width: 20px;
   animation: gototop 1.2s linear infinite alternate-reverse;
+}
+
+.top-btn:hover > .icon {
+  box-shadow: 0 0 55px 25px rgba(255,255,0,0.4);
 }
 
 .reveal{
