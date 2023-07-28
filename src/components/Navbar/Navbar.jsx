@@ -3,20 +3,13 @@ import classes from "./Navbar.module.css";
 import { BsGithub } from "react-icons/bs";
 
 import { NavLink } from "react-router-dom";
-import {
-  GithubAuthProvider,
-  onAuthStateChanged,
-  signInWithPopup,
-  signOut,
-  getAuth,
-} from "firebase/auth";
+import { getAuth } from "firebase/auth";
 import logout from "../../assets/logout-svgrepo-com.svg";
-import { fetchGithubData, saveUserDataToFirestore } from "./loginHelper";
+import { handleLogout, handleGitHubLogin } from "./loginHelper";
 
 // images
 import moon from "../../assets/moon.png";
 import sun from "../../assets/sun.png";
-// import { getAuth } from "firebase/auth";
 
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
 
@@ -24,92 +17,11 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
   const [githubBio, setGithubBio] = useState("");
   const [githubSocialAccounts, setGithubSocialAccounts] = useState([]);
 
-  const handleGitHubLogin = async () => {
-    const auth = getAuth();
-    const provider = new GithubAuthProvider();
-    provider.addScope("user:email"); // Request email scope
-    provider.addScope("read:user"); // Request user profile scope
-    await signInWithPopup(auth, provider)
-      .then((result) => {
-        // Handle successful login
-        setUser(result.user)
-        fetchGithubData(result.user, setGithubBio, setGithubSocialAccounts)
-        console.log(result.user);
-        localStorage.setItem("displayName", result.user.displayName);
-        localStorage.setItem("username", result.user?.reloadUserInfo.screenName);
-        localStorage.setItem("email", result.user.email);
-        localStorage.setItem("userImage", result.user.photoURL);
-      })
-      .catch((error) => {
-        // Handle login error
-        console.error(error);
-      });
-  };
-
-
-
-  // const saveUserDataToFirestore = async (
-  //   username,
-  //   profilePictureUrl,
-  //   bio,
-  //   socialAccounts
-  // ) => {
-  //   try {
-  //     const usersCollectionRef = collection(db, "users");
-
-  //     // Query the collection to find the document with the user's username
-  //     const querySnapshot = await getDocs(
-  //       query(usersCollectionRef, where("githubUsername", "==", username))
-  //     );
-
-  //     // Check if the document already exists
-  //     if (querySnapshot.size > 0) {
-  //       // Update the existing document
-  //       const docRef = querySnapshot.docs[0].ref;
-  //       await updateDoc(docRef, {
-  //         bio: bio,
-  //         socials: socialAccounts,
-  //         profilePictureUrl: profilePictureUrl,
-  //       });
-  //       console.log("User data updated in Firestore");
-  //     } else {
-  //       // Create a new document
-  //       const newDocRef = doc(usersCollectionRef); // Automatically generate a new document ID
-  //       const newUser = {
-  //         bio: bio,
-  //         socials: socialAccounts,
-  //         githubUsername: username,
-  //         profilePictureUrl: profilePictureUrl,
-  //       };
-  //       await setDoc(newDocRef, newUser);
-  //       console.log("User data saved to Firestore");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error saving user data to Firestore:", error);
-  //   }
-  // };
-
-
-
-  const handleLogout = () => {
-    const auth = getAuth();
-    signOut(auth)
-      .then(() => {
-        setUser(null)
-        localStorage.clear()
-        console.log("Logged out.");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
-
 
 
 
   useEffect(() => {
     const auth = getAuth();
-
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         // console.log(user);
@@ -120,13 +32,10 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
 
       }
       else {
-        handleLogout();
+        handleLogout(setUser);
         localStorage.clear();
       }
     });
-
-
-
     return () => {
       unsubscribe();
     };
@@ -197,13 +106,13 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               </NavLink>
               <NavLink
                 className={classes.list_item_link}
-                to={`/user/${localStorage.getItem('username')}`}
+                to={`/user/${user?.reloadUserInfo?.screenName ? user.reloadUserInfo.screenName : localStorage.getItem('username')}`}
               >
                 <button className={classes.github}>
                   <div className={classes.image_container}>
                     <img
                       className={classes.image}
-                      src={user.photoURL}
+                      src={user.photoURL ? user.photoURL : localStorage.getItem('userImage')}
                       alt="Creator"
                       loading="lazy"
                     />
@@ -225,7 +134,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               </button>
             </div>
           ) : (
-            <div className={classes.list_item_link} onClick={handleGitHubLogin}>
+            <div className={classes.list_item_link} onClick={() => handleGitHubLogin(setUser, setGithubBio, setGithubSocialAccounts)}>
               <button className={classes.github}>
                 <div className={classes.image_container}>
                   <BsGithub className={classes.image} />

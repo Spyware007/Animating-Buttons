@@ -17,16 +17,23 @@ import {
 import { db } from "../../firebase/auth";
 import axios from "axios";
 
-export const handleGitHubLogin = (setUser) => {
+
+
+export const handleGitHubLogin = async (setUser, setGithubBio, setGithubSocialAccounts) => {
   const auth = getAuth();
   const provider = new GithubAuthProvider();
   provider.addScope("user:email"); // Request email scope
   provider.addScope("read:user"); // Request user profile scope
-  signInWithPopup(auth, provider)
+  await signInWithPopup(auth, provider)
     .then((result) => {
       // Handle successful login
-      const user = result.user;
-      setUser(user);
+      setUser(result.user)
+      fetchGithubData(result.user, setGithubBio, setGithubSocialAccounts)
+      console.log(result.user);
+      localStorage.setItem("displayName", result.user.displayName);
+      localStorage.setItem("username", result.user?.reloadUserInfo.screenName);
+      localStorage.setItem("email", result.user.email);
+      localStorage.setItem("userImage", result.user.photoURL);
     })
     .catch((error) => {
       // Handle login error
@@ -34,25 +41,26 @@ export const handleGitHubLogin = (setUser) => {
     });
 };
 
-export const handleLogout = (
-  setGithubBio,
-  setUser,
-  setGithubSocialAccounts
-) => {
+
+
+
+export const handleLogout = (setUser) => {
   const auth = getAuth();
   signOut(auth)
     .then(() => {
-      // Handle successful logout
-      setUser(null);
-      setGithubBio("");
-      setGithubSocialAccounts([]);
+      setUser(null)
+      localStorage.clear()
       console.log("Logged out.");
     })
     .catch((error) => {
-      // Handle logout error
       console.error(error);
     });
 };
+
+
+
+
+
 export const saveUserDataToFirestore = async (
   username,
   profilePictureUrl,
@@ -93,6 +101,8 @@ export const saveUserDataToFirestore = async (
     console.error("Error saving user data to Firestore:", error);
   }
 };
+
+
 
 
 export const fetchGithubData = async (
@@ -139,7 +149,7 @@ export const fetchGithubData = async (
     }
 
     setGithubSocialAccounts(socialAccounts);
-    saveUserDataToFirestore(login,avatar_url,  bio, socialAccounts );
+    saveUserDataToFirestore(login, avatar_url, bio, socialAccounts);
 
   } catch (error) {
     console.error("Error fetching GitHub data:", error);
