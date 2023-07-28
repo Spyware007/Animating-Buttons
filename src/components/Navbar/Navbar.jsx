@@ -197,7 +197,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               </NavLink>
               <NavLink
                 className={classes.list_item_link}
-                to={`/user/${user?.reloadUserInfo?.screenName}`}
+                to={`/user/${localStorage.getItem('username')}`}
               >
                 <button className={classes.github}>
                   <div className={classes.image_container}>
