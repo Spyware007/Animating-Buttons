@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+.bg{
+  background-image: radial-gradient(
+                    circle at 100% 50%,  
+                    #FF8B8C 65%, 
+                    #FF3F40 35%);
+  
+    width: 55rem;
+    height: 31rem;
+     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.btn {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    border: none;
+    border-radius: .5rem;
+    width: 30rem;
+    height: 11rem;
+    box-shadow: 
+      0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.blue {
+    color: #fff;
+  background-image: radial-gradient(circle at 0% 50%, #7FC2F7 50%, #2196F3 50%);
+    
+}
+
+.blue:hover {
+   background-image: radial-gradient(circle at 0% 50%, #7fc2f7b3 50%, #2196f3b8 50%);
+}
+
