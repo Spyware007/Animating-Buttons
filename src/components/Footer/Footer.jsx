@@ -23,13 +23,22 @@ const Footer = ({ modeToggle }) => {
       </div>
       <ul className={classes.footer_right}>
         <li className={classes.footer_icons}>
-          <a className={classes.linkg} href="https://github.com/spyware007">
+          <a 
+            className={classes.linkg}
+            aria-label="Follow me on Github"
+            title="Instagram (External Link)"
+            rel="noopener noreferrer"
+            href="https://github.com/spyware007"
+          >
             <FaGithubSquare className={classes.glow} />
           </a>
         </li>
         <li className={classes.footer_icons_2}>
           <a
             className={classes.linki}
+            aria-label="Follow me on Instagram"
+            title="Instagram (External Link)"
+            rel="noopener noreferrer"
             href="https://www.instagram.com/spyware007_/"
           >
             <FaInstagramSquare className={classes.glow} />
@@ -38,13 +47,22 @@ const Footer = ({ modeToggle }) => {
         <li className={classes.footer_icons}>
           <a
             className={classes.linkl}
+            aria-label="Follow me on Linkedin"
+            title="Instagram (External Link)"
+            rel="noopener noreferrer"
             href="https://www.linkedin.com/in/om-gawande/"
           >
             <FaLinkedin className={classes.glow} />
           </a>
         </li>
         <li className={classes.footer_icons_2}>
-          <a className={classes.linkt} href="https://twitter.com/oom_gawande">
+          <a 
+            className={classes.linkt} 
+            aria-label="Follow me on Twitter"
+            title="Instagram (External Link)"
+            rel="noopener noreferrer"
+            href="https://twitter.com/oom_gawande"
+          >
             <FaTwitterSquare className={classes.glow} />
           </a>
         </li>
