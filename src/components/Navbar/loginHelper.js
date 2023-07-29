@@ -54,10 +54,10 @@ export const handleLogout = (
     });
 };
 export const saveUserDataToFirestore = async (
-  bio,
-  socialAccounts,
   username,
-  profilePictureUrl
+  profilePictureUrl,
+  bio,
+  socialAccounts
 ) => {
   try {
     const usersCollectionRef = collection(db, "users");
@@ -101,9 +101,11 @@ export const fetchGithubData = async (
   setGithubSocialAccounts
 ) => {
   //   const githubId = user?.providerData[0]?.uid || user;
-  const githubId = user.providerData[0].uid;
+  const githubId = user?.providerData[0].uid;
+  // console.log(githubId);
   try {
-    const response = await axios.get(`https://api.github.com/user/${githubId}`);
+    const response = await axios.get(`https://api.github.com/user/${githubId}`, {
+    });
     console.log(response);
     const {
       bio,
@@ -115,6 +117,7 @@ export const fetchGithubData = async (
     } = response.data;
 
     setGithubBio(bio);
+    console.log(bio);
     const socialAccounts = [];
 
     if (blog) {
@@ -136,8 +139,8 @@ export const fetchGithubData = async (
     }
 
     setGithubSocialAccounts(socialAccounts);
+    saveUserDataToFirestore(login,avatar_url,  bio, socialAccounts );
 
-    saveUserDataToFirestore(bio, socialAccounts, login, avatar_url);
   } catch (error) {
     console.error("Error fetching GitHub data:", error);
   }

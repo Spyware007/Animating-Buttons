@@ -79,7 +79,7 @@
   background-position: right center;
   text-decoration: none;
 }
-.github {
+.navbar.navbar-dark .github {
   all: unset;
   transition: all 0.3s ease-in-out;
   background-color: #21252c;
@@ -91,8 +91,23 @@
   text-decoration: none;
   gap: 7px;
 }
-.github:hover {
+.navbar.navbar-light .github {
+  all: unset;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  border-radius: 12px;
+  padding: 12px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  gap: 7px;
+}
+.navbar.navbar-dark .github:hover {
   background-color: #232b32;
+}
+.navbar.navbar-light .github:hover {
+  background-color: cyan;
 }
 
 .image_container,
@@ -114,7 +129,6 @@
   border-radius: 100%;
   margin-right: 2rem;
 }
-.username,
 .addbtn {
   transition: all 0.3s ease-in-out;
   text-decoration: none;
@@ -128,7 +142,7 @@
   margin-left: 3px;
 }
 .navbar.navbar-light .github:hover .username {
-  color: #fff;
+  color: black;
   transition: all 0.3s ease-in-out;
 }
 .github:hover .username {
@@ -185,6 +199,8 @@
 
 .loggedIn{
   display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -192,6 +208,9 @@
   margin-left: 1rem;
   border-radius: 12px;
   cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+
 }
 
 

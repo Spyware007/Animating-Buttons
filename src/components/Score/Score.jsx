@@ -94,7 +94,7 @@ export default function Score(props) {
                   <img
                     src={getProfilePicture(name)}
                     alt="Profile"
-                    className={classes.profileImage}
+                    className={classes.profileImage} loading="lazy"
                   />
                   <div className={classes.details}>
                     <div className={classes.name}>{name}</div>
@@ -108,7 +108,7 @@ export default function Score(props) {
                   <img
                     src={getProfilePicture(name)}
                     alt="Profile"
-                    className={classes.profileImage}
+                    className={classes.profileImage} loading="lazy"
                   />
                   <div className={classes.details}>
                     <div className={classes.name}>{name}</div>

@@ -11,21 +11,18 @@ import {
   getAuth,
 } from "firebase/auth";
 import logout from "../../assets/logout-svgrepo-com.svg";
+import { fetchGithubData, saveUserDataToFirestore } from "./loginHelper";
 
 // images
-import github from "../../assets/github.png";
 import moon from "../../assets/moon.png";
 import sun from "../../assets/sun.png";
 // import { getAuth } from "firebase/auth";
-import axios from "axios";
-import { auth } from "../../firebase/auth";
 
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
-  // const auth = getAuth()
-  const [username, setUsername] = useState("");
-  const [userImage, setUserImage] = useState("");
-  const [userEmail, setUserEmail] = useState("");
-  const [displayName, setDisplayName] = useState("");
+
+  const [user, setUser] = useState({ username: "", profilePictureUrl: "" });
+  const [githubBio, setGithubBio] = useState("");
+  const [githubSocialAccounts, setGithubSocialAccounts] = useState([]);
 
   const handleGitHubLogin = async () => {
     const auth = getAuth();
@@ -35,15 +32,13 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
     await signInWithPopup(auth, provider)
       .then((result) => {
         // Handle successful login
-        const user = result.user;
-        setDisplayName(user.displayName);
-        localStorage.setItem("displayName", user.displayName);
-        setUsername(user.reloadUserInfo.screenName);
-        localStorage.setItem("username", user.reloadUserInfo.screenName);
-        setUserEmail(user.email);
-        localStorage.setItem("email", user.email);
-        setUserImage(user.photoURL);
-        localStorage.setItem("userImage", user.photoURL);
+        setUser(result.user)
+        fetchGithubData(result.user, setGithubBio, setGithubSocialAccounts)
+        console.log(result.user);
+        localStorage.setItem("displayName", result.user.displayName);
+        localStorage.setItem("username", result.user?.reloadUserInfo.screenName);
+        localStorage.setItem("email", result.user.email);
+        localStorage.setItem("userImage", result.user.photoURL);
       })
       .catch((error) => {
         // Handle login error
@@ -51,14 +46,56 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
       });
   };
 
+
+
+  // const saveUserDataToFirestore = async (
+  //   username,
+  //   profilePictureUrl,
+  //   bio,
+  //   socialAccounts
+  // ) => {
+  //   try {
+  //     const usersCollectionRef = collection(db, "users");
+
+  //     // Query the collection to find the document with the user's username
+  //     const querySnapshot = await getDocs(
+  //       query(usersCollectionRef, where("githubUsername", "==", username))
+  //     );
+
+  //     // Check if the document already exists
+  //     if (querySnapshot.size > 0) {
+  //       // Update the existing document
+  //       const docRef = querySnapshot.docs[0].ref;
+  //       await updateDoc(docRef, {
+  //         bio: bio,
+  //         socials: socialAccounts,
+  //         profilePictureUrl: profilePictureUrl,
+  //       });
+  //       console.log("User data updated in Firestore");
+  //     } else {
+  //       // Create a new document
+  //       const newDocRef = doc(usersCollectionRef); // Automatically generate a new document ID
+  //       const newUser = {
+  //         bio: bio,
+  //         socials: socialAccounts,
+  //         githubUsername: username,
+  //         profilePictureUrl: profilePictureUrl,
+  //       };
+  //       await setDoc(newDocRef, newUser);
+  //       console.log("User data saved to Firestore");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error saving user data to Firestore:", error);
+  //   }
+  // };
+
+
+
   const handleLogout = () => {
     const auth = getAuth();
     signOut(auth)
       .then(() => {
-        setDisplayName(null);
-        setUsername(null);
-        setUserEmail(null);
-        setUserImage(null);
+        setUser(null)
         localStorage.clear()
         console.log("Logged out.");
       })
@@ -75,14 +112,10 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
 
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        console.log(user);
-        setDisplayName(user.displayName);
+        // console.log(user);
         localStorage.setItem("displayName", user.displayName);
-        setUsername(user.reloadUserInfo.screenName);
-        localStorage.setItem("username", user.reloadUserInfo.screenName);
-        setUserEmail(user.email);
+        localStorage.setItem("username", user?.reloadUserInfo?.screenName);
         localStorage.setItem("email", user.email);
-        setUserImage(user.photoURL);
         localStorage.setItem("userImage", user.photoURL);
 
       }
@@ -138,40 +171,41 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               }`}
             onClick={() => modeToggleFunc(!modeToggle)}
           >
-            <img src={modeToggle ? sun : moon} alt="" />
+            <img src={modeToggle ? sun : moon} alt="" loading="lazy" />
           </button>
         </ul>
         <div className={classes.button_container}>
-          <NavLink className={classes.list_item_link} to="/add">
-            <button className={classes.add}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="30"
-                height="30"
-              >
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path
-                  fill="currentColor"
-                  d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
-                ></path>
-              </svg>
-              <span className={classes.addbtn}>Create</span>
-            </button>
-          </NavLink>
+          {user ? (
 
-          {userImage && userEmail ? (
             <div className={classes.loggedIn}>
+              <NavLink className={classes.list_item_link} to="/add">
+                <button className={classes.add}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="30"
+                    height="30"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      fill="currentColor"
+                      d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
+                    ></path>
+                  </svg>
+                  <span className={classes.addbtn}>Create</span>
+                </button>
+              </NavLink>
               <NavLink
                 className={classes.list_item_link}
-                to={`/user/${username}`}
+                to={`/user/${localStorage.getItem('username')}`}
               >
                 <button className={classes.github}>
                   <div className={classes.image_container}>
                     <img
                       className={classes.image}
-                      src={userImage}
+                      src={user.photoURL}
                       alt="Creator"
+                      loading="lazy"
                     />
                   </div>
                   <span className={classes.username}>My Profile</span>
@@ -179,11 +213,14 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               </NavLink>
               <button className={classes.logOut} onClick={handleLogout}>
                 <img
+                  style={{
+                    width: '1rem', height: '1rem'
+                  }}
                   src={logout}
                   alt="Log Out"
-                  srcset=""
                   height={"20px"}
                   width={"40px"}
+                  loading="lazy"
                 />
               </button>
             </div>

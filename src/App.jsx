@@ -11,6 +11,7 @@ import {
   Main,
   Navbar,
   Score,
+  ExploreButtons
 } from "./components";
 import ErrorPage from "./components/ErrorPage/404Error";
 import SuspenseLoader from "./components/SuspenseLoader/SuspenseLoader";
@@ -75,17 +76,21 @@ const App = ({ modeToggleFunc, modeToggle }) => {
       path: "/add",
       element: <AddButton />,
     },
-    {
-      path: "/login",
-      element: <Login />,
-    },
+    // {
+    //   path: "/login",
+    //   element: <Login />,
+    // },
     {
       path: "/user/:userId",
-      element: <UserProfile />,
+      element: <UserProfile modeToggle={toggleMode} />,
     },
     {
       path: "/leaderboard",
       element: <Score buttonsData={buttonsData} usersData={usersData} />,
+    },
+    {
+      path: "/explore",
+      element: <ExploreButtons data={buttonsData} toggleMode={toggleMode}/>,
     },
     {
       path: "*",
@@ -97,7 +102,7 @@ const App = ({ modeToggleFunc, modeToggle }) => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 500);
   }, []);
 
   return (

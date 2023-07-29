@@ -33,3 +33,5 @@ yarn-error.log*
 export_to_firebase.py
 export_to_firebase_users.py
 serviceAccountKey.json
+remove_redundant_users.py
+serviceAccountKeyMain.json

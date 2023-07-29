@@ -6,7 +6,7 @@ import { getAuth } from "firebase/auth";
 
 import classes from "./LikeButton.module.css";
 
-export default function LikeButton({ btnId }) {
+export default function LikeButton({ modeToggle, btnId }) {
   const [liked, setLiked] = useState(false);
   const [likesAmount, setLikesAmount] = useState(0);
   const [userLoggedIn, setUserLoggedIn] = useState(false);
@@ -57,7 +57,7 @@ export default function LikeButton({ btnId }) {
       const { login } = response.data;
       setGithubUsername(login);
     } catch (error) {
-      console.log("Error fetching GitHub data:", error);
+      // console.log("Error fetching GitHub data:", error);
     }
   };
 
@@ -103,7 +103,7 @@ export default function LikeButton({ btnId }) {
   };
 
   return (
-    <div onClick={handleLike} className={classes.likeButton}>
+    <div onClick={handleLike} className={`${classes.likeButton} ${modeToggle ? classes["dark"] : classes["light"]}`}>
       <div className={classes.heartBg}>
         <div
           className={`${classes.heartIcon} ${liked ? classes.liked : ""}`}

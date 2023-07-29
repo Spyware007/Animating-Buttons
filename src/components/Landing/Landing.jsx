@@ -50,7 +50,7 @@ const Landing = ({ modeToggle, modeToggleFunc }) => {
             transition={{ duration: 0.84 }}
             className={classes.memoji}
           >
-            <img className={classes.image} src={Memoji} alt="memoji" />
+            <img className={classes.image} src={Memoji} alt="memoji" loading="lazy" />
           </motion.div>
           <div className={classes.social_profile}>
             <motion.a
@@ -85,7 +85,7 @@ const Landing = ({ modeToggle, modeToggleFunc }) => {
           <img
             className={classes.button_image}
             src={ButtonsSvg}
-            alt="buttons"
+            alt="buttons" loading="lazy"
           />
         </div>
       </section>
