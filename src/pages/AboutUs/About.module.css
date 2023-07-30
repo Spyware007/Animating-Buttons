@@ -37,7 +37,7 @@
   color: darkgrey;
 }
 .About_h1_c {
-  font-size: 25px;
+  font-size: 1.3rem !important;
   text-align: center;
   color: yellow;
 }
@@ -82,29 +82,25 @@
 .link2 {
   z-index: 100;
   transition: all 0.2s ease-in;
-  /* background-color: #fff; */
-
 }
 
 .link1:hover, .link2:hover  {
   scale: 1.1;
   transform: rotate(20deg) scale(1.2);
-  
-
 }
-
 
 .Contributors {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8rem;
-  justify-content: center;
-  align-items: center;
-  margin-left: 12rem;
-  margin-right: 12rem;
-  margin-top: 8rem;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  margin: 5rem 5rem 0 5rem;
+  place-items: center;
 }
 
+.Contributors > div {
+  display: grid;
+  place-items: center;
+}
 
 
 @media (max-width: 1089px) {
@@ -120,7 +116,6 @@
     margin-top: 0.5rem;
     max-width: 30rem;
     padding: 1rem;
-
   }
   .About_p {
     font-size: 18px;
@@ -150,12 +145,7 @@
     font-size: 16px;
   }
   .Contributors {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8rem;
-    justify-content: center;
-    align-items: center;
-    margin: 6rem;
+    margin: 5rem 10rem 0 10rem;
   }
 }
 @media (max-width: 600px) {
@@ -165,18 +155,13 @@
     align-items: center;
     justify-content: center;
   }
-  .Contributors {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
-    justify-content: center;
-    align-items: center;
-    margin: 4rem;
-  }
   .About_h1_c {
     font-size: 20px;
     text-align: center;
     color: yellow;
+  }
+  .Contributors {
+    margin: 5rem 6rem 0 6rem;
   }
 }
 /* light mode */
