@@ -172,7 +172,7 @@ export default function UserProfile({ modeToggle }) {
         <div className={classes.btns_container}>
 
           {buttons.length !== 0 ? (buttons.map((button, i) => (
-            <Card key={i} button={button} />
+            <Card modeToggle={modeToggle} key={i} button={button} />
           ))) : <span className={classes.no_btn}>No Button Found</span>}
 
         </div>
