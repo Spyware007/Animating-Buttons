@@ -94,6 +94,7 @@
   grid-gap: 3rem;
   grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
   margin: 5rem 5rem 0 5rem;
+  place-items: center;
 }
 
 .Contributors > div {
