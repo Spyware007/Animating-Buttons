@@ -12,6 +12,7 @@ import copyIcon from "../../../assets/copy.png";
 import { auth, db } from "../../../firebase/auth"; // Import the db and signInWithGitHub from auth.js
 import { collection, addDoc } from "firebase/firestore"; // Import the collection and addDoc functions
 import axios from "axios";
+import toast from "react-hot-toast";
 
 export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
   // const [userLoggedIn, setUserLoggedIn] = useState(false);
@@ -80,8 +81,10 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
       const docRef = await addDoc(buttonCollectionRef, buttonData);
       console.log("Button document saved with ID:", docRef.id);
       window.location.reload();
+      toast.success("Successfully added!");
     } catch (error) {
       console.error("Error adding button document:", error);
+      toast.error("Action Failed!");
     }
   };
 
