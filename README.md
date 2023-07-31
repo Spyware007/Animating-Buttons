@@ -60,7 +60,124 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<!-------------------------------------  Vaishali add content here!---------------------- -->
+<br><br>
+
+<!-- --------------------------WHAT CAN YOU CONTRIBUTE---------------------------------------- -->
+________________________________________________________________________________________________________________________
+<h1 align="center">
+What can You Contribute? 👩‍💻 
+</h1>
+
+
+<div align="center">
+
+| **Contribution Guidelines**                                                                            |
+|--------------------------------------------------------------------------------------------------------|
+| - You can contribute any animated buttons. ⬆️                                                         |
+| - You can update or refine an existing animated button or even add your own new buttons to this repository. 🚀 |                           |
+| - Make sure you follow the below steps before making your contributions. ❗❗❗                      |
+
+</div>
+
+<br><br>
+
+__________________________________________________________________________________________________________________________________________
+
+<!-- ### Contribution Steps: -->
+
+<!-- ----------------HOW TO START CONTRIBUTING------------------------------------------------- -->
+
+<h1 align="center"> How to start contributing? 💻 </h1>
+
+## Animating Buttons Repository Instructions 🚀🚀  <br> <br>
+
+### First Steps-
+1. Create **issue** in the Animating Buttons repository.
+2. Once you are assigned the **issue**, move ahead with the following procedure-
+
+<br> 
+
+### Login to the [Animating Buttons](https://lets-animate-btns.vercel.app/) Website <br>
+
+3. **No need to make any changes in the repository.**
+4. **Login** using your GitHub Account on our website.
+5. Click on **CREATE** button on the nav-bar.
+6. Create your button **directly** on the website.
+
+<br>
+
+### For GSSoC'23 Contribution, follow these steps- <br> 
+#### Fork, Clone, Navigate the Repository <br>
+7. After you have created the button on the website, fork the repository (Click the <b><b><a href="https://github.com/Spyware007/Animating-Buttons/fork" class="github-button" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">Fork</a></b></b> button in the top right corner of the page).
+
+- Clone the forked repo to your local machine using the following command:
+    ```terminal
+    git clone https://github.com/**username**/Animating-Buttons.git
+    ```
+
+- Navigate to project directory.
+    ```terminal
+    cd Animating-Buttons
+    ```
+
+    ```terminal
+    npm i
+    npm start
+    ```
+
+- Create a new Branch
+    ```
+    git checkout -b my-new-branch
+    ```
+<br>
+<br>
+____________________________________________________________________________________________________________________
+
+
+<h1 align="center"> How to Make a PR? 👨‍💻 </h1>
+
+#### Initiate your contribution for GSSoC'23 with these steps <br>
+8. Once you have cloned the repository and created a new branch, proceed with the following steps to initiate your contribution-                                 
+      - Make an **empty commit**.
+         ```
+         git commit --allow-empty -m "Empty commit for PR"
+         ``` 
+      - Then push 
+         ```
+         git push origin my-new-branch
+         ``` 
+      - Finally, create a new pull request from your forked repository. Note this PR will be an **Empty PR**.
+
+-------------------
+<!----- TO KNOW MORE, READ CONTRIBUTING GUIDELINES--- -->
+9. To know more about how to contribute, read the [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 🚀🚀
+
+
+<!-- -------IN CASE YOU GET STUCK ANYWHERE---------- -->
+10. You can refer to the following articles on basics of Git and Github and *also contact the Project   Mentors, in case you are stuck:*
+     - [Forking a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+     - [Cloning a Repo](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request-from-github-desktop)
+     - [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
+     - [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
+
+
+<br><br>
+________________________________________________________________________________________________________________
+
+<!-- ------------KEY REMINDERS FOR YOUR ATTENTION----------------- -->
+<div align="center">
+
+<h1 align="center">  Key Reminders for Your Attention </h1>
+
+|  **SNo.** |      **Description**                                                                      |
+|-----------|-------------------------------------------------------------------------------------------|
+|     1     | **No need to make any changes in the repository**❗❗                                   |
+|     2     | Buttons will be added **directly** on the website, Visit the website.                       |
+|     3     | Fork, Clone and Make new branch, and then make an **Empty Commit** as explained above                            |
+</div>
+
+<br><br>
+_________________________________________________________________________________________________________________
 
 
 _________________________________________________________________________________________________________________
