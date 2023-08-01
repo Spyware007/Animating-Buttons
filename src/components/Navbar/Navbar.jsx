@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import { getAuth } from "firebase/auth";
 import logout from "../../assets/logout-svgrepo-com.svg";
 import { handleLogout, handleGitHubLogin } from "./loginHelper";
+import { Toaster } from "react-hot-toast";
 
 // images
 import moon from "../../assets/moon.png";
@@ -144,6 +145,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
             </div>
           )}
         </div>
+        <Toaster />
       </nav>
     </>
   );

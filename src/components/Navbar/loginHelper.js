@@ -16,6 +16,8 @@ import {
 } from "firebase/auth";
 import { db } from "../../firebase/auth";
 import axios from "axios";
+import toast from "react-hot-toast";
+
 
 
 
@@ -34,10 +36,13 @@ export const handleGitHubLogin = async (setUser, setGithubBio, setGithubSocialAc
       localStorage.setItem("username", result.user?.reloadUserInfo.screenName);
       localStorage.setItem("email", result.user.email);
       localStorage.setItem("userImage", result.user.photoURL);
+      toast.success(`Welcome ${result.user.displayName}`)
     })
     .catch((error) => {
       // Handle login error
       console.error(error);
+      toast.error(`Sign In failed, Please Try Again`)
+
     });
 };
 
@@ -51,9 +56,12 @@ export const handleLogout = (setUser) => {
       setUser(null)
       localStorage.clear()
       console.log("Logged out.");
+      toast.success('Logged Out Successfully')
     })
     .catch((error) => {
       console.error(error);
+      // toast.error('Something Went Wrong')
+
     });
 };
 

@@ -15,20 +15,26 @@ import LikeButton from "../LikeButton/LikeButton";
 import DeleteButton from "../deleteBtn/DeleteButton";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
-import { renderIntoDocument } from "react-dom/test-utils";
+// import { renderIntoDocument } from "react-dom/test-utils";
 import { toast } from "react-hot-toast";
  
 
 
 function download(css, html, js, name) {
   const zip = new JSZip();
-  zip.file("style.css", css);
-  zip.file("index.html", html);
-  zip.file("app.js", js);
-
-  zip.generateAsync({ type: "blob" }).then((zipFile) => {
-    saveAs(zipFile, `${name} files.zip`);
-  });
+  try {
+    zip.file("style.css", css);
+    zip.file("index.html", html);
+    zip.file("app.js", js);
+  
+    zip.generateAsync({ type: "blob" }).then((zipFile) => {
+      saveAs(zipFile, `${name} files.zip`);
+    });
+    toast.success('Downloaded Successfully')
+  } catch (error) {
+    console.log(error)
+    toast.error('Something Went Wrong')
+  }
 }
 
 export default function Card({ modeToggle, button }) {
