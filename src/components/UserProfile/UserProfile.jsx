@@ -16,6 +16,8 @@ import {
   getAuth,
 } from "firebase/auth";
 import { Toaster } from 'react-hot-toast';
+import toast from "react-hot-toast";
+
 
 
 export default function UserProfile({ modeToggle }) {
@@ -113,7 +115,9 @@ export default function UserProfile({ modeToggle }) {
       console.log(`Bio updated for user ${userId}`);
       setGithubBio(newBio);
       setEditingBio(false);
+      toast.success("Bio Updated Successfully")
     } catch (error) {
+      toast.error("Error saving bio")
       console.error("Error saving bio:", error);
     }
   };
