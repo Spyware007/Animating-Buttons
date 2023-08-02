@@ -33,7 +33,8 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
 
       }
       else {
-        handleLogout(setUser);
+        // handleLogout(setUser);
+        // setUser(null)
         localStorage.clear();
       }
     });
@@ -121,7 +122,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
                   <span className={classes.username}>My Profile</span>
                 </button>
               </NavLink>
-              <button className={classes.logOut} onClick={handleLogout}>
+              <button className={classes.logOut} onClick={() => handleLogout(setUser)}>
                 <img
                   style={{
                     width: '1rem', height: '1rem'
