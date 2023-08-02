@@ -6,6 +6,7 @@
   z-index: 1;
   overflow-x: hidden;
 }
+
 .navlist {
   display: flex;
   justify-content: center;
@@ -13,6 +14,7 @@
   gap: 0 30px;
   padding: 0;
 }
+
 .list_item {
   list-style-type: none;
   font-size: 18px;
@@ -21,6 +23,7 @@
   position: relative;
   display: inline-block;
 }
+
 .list_item::after {
   content: "";
   position: absolute;
@@ -33,34 +36,47 @@
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
 }
+
 .navbar.navbar-light .navlist .list_item::after {
   background-color: blue;
 }
+
 .list_item:hover::after {
   visibility: visible;
   transform: scaleX(1);
 }
+
+.active::after {
+  visibility: visible;
+  transform: scaleX(1);
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
 .list_item_link {
   text-decoration: none;
   color: #000;
   cursor: pointer;
 }
+
 .navbar.navbar-dark .navlist .list_item .list_item_link {
   color: #fff;
 }
+
 .button_container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
+
 .add {
-  background-image: linear-gradient(
-    to right,
-    #00c6ff 0%,
-    #0072ff 51%,
-    #00c6ff 100%
-  );
+  background-image: linear-gradient(to right,
+      #00c6ff 0%,
+      #0072ff 51%,
+      #00c6ff 100%);
   margin: 10px;
   padding: 10px 20px;
   text-align: center;
@@ -75,10 +91,12 @@
   border: none;
   cursor: pointer;
 }
+
 .add:hover {
   background-position: right center;
   text-decoration: none;
 }
+
 .navbar.navbar-dark .github {
   all: unset;
   transition: all 0.3s ease-in-out;
@@ -91,6 +109,7 @@
   text-decoration: none;
   gap: 7px;
 }
+
 .navbar.navbar-light .github {
   all: unset;
   transition: all 0.3s ease-in-out;
@@ -103,9 +122,11 @@
   text-decoration: none;
   gap: 7px;
 }
+
 .navbar.navbar-dark .github:hover {
   background-color: #232b32;
 }
+
 .navbar.navbar-light .github:hover {
   background-color: cyan;
 }
@@ -119,9 +140,11 @@
   /* border: 1px solid #fff; */
   /* box-shadow: 0px 4px 1px 0px #00000040; */
 }
+
 .image_container_mobile {
   display: none;
 }
+
 .image {
   width: 100%;
   height: 100%;
@@ -129,6 +152,7 @@
   border-radius: 100%;
   margin-right: 2rem;
 }
+
 .addbtn {
   transition: all 0.3s ease-in-out;
   text-decoration: none;
@@ -138,29 +162,36 @@
   text-shadow: 0px 4px 4px 0px #00000040;
   filter: drop-shadow(0px 4px 1px rgba(255, 255, 255, 0.25));
 }
+
 .addbtn {
   margin-left: 3px;
 }
+
 .navbar.navbar-light .github:hover .username {
   color: black;
   transition: all 0.3s ease-in-out;
 }
+
 .github:hover .username {
   color: #ffffff;
   transition: all 0.1s ease-in-out;
 }
+
 .navbar.navbar-dark .username {
   color: #fff;
   text-shadow: 0px 4px 4px 0px #ffffff40;
   filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.25));
 }
+
 .navbar.navbar-dark .image_container {
   color: cyan;
 }
+
 .navbar.navbar-dark .github:hover .username {
   color: cyan;
   transition: all 0.3s ease-in-out;
 }
+
 .mode_toggle {
   position: relative;
   display: block;
@@ -185,6 +216,7 @@
   color: var(--dark-text-color);
   box-shadow: 3px 3px 5px 0px #828282;
 }
+
 .light_mode img {
   filter: invert(100%);
 }
@@ -197,14 +229,14 @@
 }
 
 
-.loggedIn{
+.loggedIn {
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
 
-.logOut{
+.logOut {
   margin-left: 1rem;
   border-radius: 12px;
   cursor: pointer;
@@ -221,17 +253,21 @@
     padding: 20px 20px;
     justify-content: center;
   }
+
   .github {
     display: none;
   }
+
   .image_container_mobile {
     display: block;
     margin: 0;
     padding: 0;
   }
+
   .navbar.navbar-light .navlist .image_container_mobile {
     color: black;
   }
+
   .navbar.navbar-dark .navlist .image_container_mobile {
     color: white;
   }
