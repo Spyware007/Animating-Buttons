@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import classes from "./CodeEditor.module.css";
 import Editor from "@monaco-editor/react";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -157,6 +157,7 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
             },
             fontSize: 16,
             automaticLayout: true,
+            wordWrap: true,            
             // Add any additional editor options here
           }}
           editorDidMount={(editor, _) => {

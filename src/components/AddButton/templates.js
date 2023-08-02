@@ -5,14 +5,17 @@ export const htmlTemplate = `<!DOCTYPE html>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Animating Buttons</title>
   </head>
   <body>
   <!-- Add Your button code here -->
-  <button class="btn">Click Me</button>
+  <button class="btn bg-white text-black px-4 py-2 font-semibold rounded-lg hover:bg-black hover:text-white transition-all duration-300  ">Click Me</button>
   <script src="./app.js"></script>
   </body>
 </html>
+
+
 `;
 export const cssTemplate = `* {
   padding: 0;
