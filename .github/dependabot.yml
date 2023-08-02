@@ -4,3 +4,11 @@ updates:
     directory: '/'
     schedule:
       interval: 'daily'
+
+# For JSON Files
+       - package-ecosystem: "json"
+    directory: "/"
+    schedule:
+      interval: "weekly" 
+  
+  
