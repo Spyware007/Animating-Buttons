@@ -329,3 +329,31 @@
     font-size: 1.5rem;
   }
 }
+
+
+@media screen and (max-width: 420px) {
+  .loggedIn {
+    scale: 0.7;
+    margin-right: -3rem;
+  }
+
+  .hamburger {
+    scale: 0.8;
+  }
+
+  .addbtn {
+    display: none;
+  }
+
+  .add {
+    scale: 0.9;
+  }
+
+  /* .username{
+    display: none;
+  } */
+
+  .image {
+    padding: 0;
+  }
+}
