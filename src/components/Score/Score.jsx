@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Score.module.css";
 import { Link } from "react-router-dom";
-import memoji from "../../assets/memoji.png";
+import memoji from "../../assets/memoji.webp";
 import Loader from "../common/Loader/Loader";
 
 export default function Score(props) {

@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./ViewsIcon.module.css";
-import views from "./views.png";
+import views from "./views.webp";
 
 const ViewsIcon = ({ viewsCounter = 200 }) => {
   return (
