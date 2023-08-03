@@ -9,12 +9,17 @@ import { motion } from "framer-motion";
 import { leftParaAnim } from "../../components/Animation/motion";
 import { imgAnim } from "../../components/Animation/motion";
 import { fadeIn } from "../../components/Animation/motion";
+
+
+
 const About = ({ modeToggle }) => {
   return (
     <div
       className={`${classes.about} ${!modeToggle ? classes["about-light"] : classes["about-dark"]
         }`}
     >
+
+
       <div className={classes.Header}>
         <div>
           <motion.img

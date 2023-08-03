@@ -56,6 +56,7 @@ const App = ({ modeToggleFunc, modeToggle }) => {
             modeToggle={toggleMode}
             modeToggleFunc={setToggleMode}
             buttonsData={buttonsData}
+            setButtonsData={setButtonsData}
           />
         </>
       ),

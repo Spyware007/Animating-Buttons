@@ -4,11 +4,19 @@ import Card from "../common/Card/Card";
 import { motion } from 'framer-motion'
 import { fadeIn, paraAnim } from "../Animation/motion";
 
-export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
+import { getMoreButtonsData } from "../../Server/getButtons";
+
+
+export default function Main({ modeToggle, modeToggleFunc, buttonsData,setButtonsData }) {
+
+
+
+// const [buttonData,setButtonData]=useState([])
+
   const [currentPage, setCurrentPage] = useState(
     parseInt(localStorage.getItem("current_page")) || 1
   );
-  const itemsPerPage = 36;
+  const itemsPerPage = 6;
   const indexOfLastItem = currentPage * itemsPerPage;
   const isActive = (i) => (currentPage === i + 1 ? classes.active : "");
 
@@ -16,10 +24,14 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
     indexOfLastItem - itemsPerPage,
     indexOfLastItem
   );
-  const handlePageChange = (pageNumber) => {
+  const handlePageChange = async(pageNumber) => {
     setCurrentPage(pageNumber);
     localStorage.setItem("current_page", pageNumber);
-    window.scrollTo({ top: 500, behavior: "smooth" });
+    // window.scrollTo({ top: 500, behavior: "smooth" });
+
+    const newButtonsData=await getMoreButtonsData()
+    // setButtonData([...buttonData,newButtonsData])
+    setButtonsData([...buttonsData,...newButtonsData])
   };
 
   const pageNavigationButtions = (
@@ -83,6 +95,10 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
     <div className={classes.main_container}>
 
 
+
+      {/* <button onClick={()=>getMoreButtonsData()}>more----</button> */}
+
+
       {(buttonsData.length === 0) ?
 
         (<motion.h1
@@ -111,7 +127,9 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData }) {
             ))}
           </div>
           <div className={classes.pagination}>
-            {buttonsData.length > itemsPerPage && pageNavigationButtions}
+            {buttonsData.length >= itemsPerPage && pageNavigationButtions}
+
+            {/* <button onClick={()=>handlePageChange()}>Load More</button> */}
           </div>
         </div>)
       }
