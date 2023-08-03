@@ -16,43 +16,59 @@ import {
 } from "firebase/auth";
 import { db } from "../../firebase/auth";
 import axios from "axios";
+import toast from "react-hot-toast";
 
-export const handleGitHubLogin = (setUser) => {
+
+
+
+export const handleGitHubLogin = async (setUser, setGithubBio, setGithubSocialAccounts) => {
   const auth = getAuth();
   const provider = new GithubAuthProvider();
   provider.addScope("user:email"); // Request email scope
   provider.addScope("read:user"); // Request user profile scope
-  signInWithPopup(auth, provider)
+  await signInWithPopup(auth, provider)
     .then((result) => {
       // Handle successful login
-      const user = result.user;
-      setUser(user);
+      setUser(result.user)
+      fetchGithubData(result.user, setGithubBio, setGithubSocialAccounts)
+      console.log(result.user);
+      localStorage.setItem("displayName", result.user.displayName);
+      localStorage.setItem("username", result.user?.reloadUserInfo.screenName);
+      localStorage.setItem("email", result.user.email);
+      localStorage.setItem("userImage", result.user.photoURL);
+      toast.success(`Welcome ${result.user.displayName}`)
     })
     .catch((error) => {
       // Handle login error
       console.error(error);
+      toast.error(`Sign In failed, Please Try Again`)
+
     });
 };
 
-export const handleLogout = (
-  setGithubBio,
-  setUser,
-  setGithubSocialAccounts
-) => {
+
+
+
+export const handleLogout = (setUser) => {
   const auth = getAuth();
   signOut(auth)
     .then(() => {
-      // Handle successful logout
-      setUser(null);
-      setGithubBio("");
-      setGithubSocialAccounts([]);
+      setUser(null)
+      localStorage.clear()
       console.log("Logged out.");
+      toast.success('Logged Out Successfully')
     })
     .catch((error) => {
-      // Handle logout error
       console.error(error);
+      // toast.error('Something Went Wrong')
+
     });
 };
+
+
+
+
+
 export const saveUserDataToFirestore = async (
   bio,
   socialAccounts,
@@ -93,6 +109,8 @@ export const saveUserDataToFirestore = async (
     console.error("Error saving user data to Firestore:", error);
   }
 };
+
+
 
 
 export const fetchGithubData = async (
@@ -136,7 +154,6 @@ export const fetchGithubData = async (
     }
 
     setGithubSocialAccounts(socialAccounts);
-
     saveUserDataToFirestore(bio, socialAccounts, login, avatar_url);
   } catch (error) {
     console.error("Error fetching GitHub data:", error);

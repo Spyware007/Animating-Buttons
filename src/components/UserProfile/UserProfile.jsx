@@ -6,6 +6,9 @@ import axios from "axios";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebase/auth";
 
+
+
+
 const UserProfile = () => {
   const { userId } = useParams();
   const user = userId;
@@ -98,9 +101,9 @@ const UserProfile = () => {
       const fetchedButtons = await fetchButtons();
       setButtons(fetchedButtons);
     };
-
     fetchButtonsData();
   }, []);
+  
   return (
     <>
       <div className={classes.user_info}>
@@ -122,9 +125,11 @@ const UserProfile = () => {
       </div>
       <div>
         <div className={classes.btns_container}>
-          {buttons.map((button, i) => (
-            <Card key={i} button={button} />
-          ))}
+
+          {buttons.length !== 0 ? (buttons.map((button, i) => (
+            <Card modeToggle={modeToggle} key={i} button={button} />
+          ))) : <span className={classes.no_btn}>No Button Found</span>}
+          <Toaster />
         </div>
       </div>
     </>

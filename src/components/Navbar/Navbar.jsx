@@ -3,20 +3,15 @@ import classes from "./Navbar.module.css";
 import { BsGithub } from "react-icons/bs";
 
 import { NavLink } from "react-router-dom";
-import {
-  GithubAuthProvider,
-  onAuthStateChanged,
-  signInWithPopup,
-  signOut,
-  getAuth,
-} from "firebase/auth";
+import { getAuth } from "firebase/auth";
 import logout from "../../assets/logout-svgrepo-com.svg";
+import { handleLogout, handleGitHubLogin } from "./loginHelper";
+import { Toaster } from "react-hot-toast";
 
 // images
 import github from "../../assets/github.png";
 import moon from "../../assets/moon.png";
 import sun from "../../assets/sun.png";
-// import { getAuth } from "firebase/auth";
 import axios from "axios";
 
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
@@ -36,72 +31,6 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
     localStorage.getItem("displayName") || ""
   );
 
-  const handleGitHubLogin = async () => {
-    const auth = getAuth();
-    const provider = new GithubAuthProvider();
-    provider.addScope("user:email"); // Request email scope
-    provider.addScope("read:user"); // Request user profile scope
-    await signInWithPopup(auth, provider)
-      .then((result) => {
-        // Handle successful login
-        const user = result.user;
-        // console.log(user.reloadUserInfo.screenName);
-        setDisplayName(user.displayName);
-        localStorage.setItem("displayName", user.displayName);
-        setUsername(user.reloadUserInfo.screenName);
-        localStorage.setItem("username", user.reloadUserInfo.screenName);
-        setUserEmail(user.email);
-        localStorage.setItem("email", user.email);
-        setUserImage(user.photoURL);
-        localStorage.setItem("userImage", user.photoURL);
-      })
-      .catch((error) => {
-        // Handle login error
-        console.error(error);
-      });
-  };
-
-  const handleLogout = () => {
-    const auth = getAuth();
-    signOut(auth)
-      .then(() => {
-        setDisplayName("");
-        setUsername("");
-        setUserEmail("");
-        setUserImage("");
-        localStorage.setItem("displayName", null);
-        localStorage.setItem("email", null);
-        localStorage.setItem("userImage", null);
-        localStorage.setItem("username", null);
-        console.log("Logged out.");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
-
-  // const fetchGithubData = async (user) => {
-  //     const githubId = user.providerData[0].uid;
-  //     try {
-  //       const response = await axios.get(`https://api.github.com/user/${githubId}`);
-  //       console.log(response);
-  //       const {
-  //         login,
-  //         avatar_url,
-  //       } = response.data;
-  //       setUsername(login)
-  //       setUserImage(avatar_url)
-  //     }
-  //     catch (error) {
-  //       console.error("Error fetching GitHub data:", error);
-  //     }
-  // }
-  // useEffect(() => {
-  //   if (auth.currentUser) {
-  //     fetchGithubData(auth.currentUser)
-  //   }
-
-  // }, [auth.currentUser])
 
   const fetchGithubData = async (githubId) => {
     try {
@@ -145,11 +74,24 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
       } else {
         localStorage.clear();
       }
-    });
 
-    return () => {
-      unsubscribe();
-    };
+      if (user) {
+        // console.log(user);
+        localStorage.setItem("displayName", user.displayName);
+        localStorage.setItem("username", user?.reloadUserInfo?.screenName);
+        localStorage.setItem("email", user.email);
+        localStorage.setItem("userImage", user.photoURL);
+
+      }
+      else {
+        handleLogout(setUser);
+        localStorage.clear();
+      }
+      return () => {
+        unsubscribe();
+      };
+    });
+    
   }, []);
 
   return (
@@ -225,13 +167,13 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               </NavLink>
               <NavLink
                 className={classes.list_item_link}
-                to={`/user/${username}`}
+                to={`/user/${user?.reloadUserInfo?.screenName ? user.reloadUserInfo.screenName : localStorage.getItem('username')}`}
               >
                 <button className={classes.github}>
                   <div className={classes.image_container}>
                     <img
                       className={classes.image}
-                      src={userImage}
+                      src={user.photoURL ? user.photoURL : localStorage.getItem('userImage')}
                       alt="Creator"
                     />
                   </div>
@@ -249,7 +191,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               </button>
             </div>
           ) : (
-            <div className={classes.list_item_link} onClick={handleGitHubLogin}>
+            <div className={classes.list_item_link} onClick={() => handleGitHubLogin(setUser, setGithubBio, setGithubSocialAccounts)}>
               <button className={classes.github}>
                 <div className={classes.image_container}>
                   <BsGithub className={classes.image} />
@@ -259,6 +201,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
             </div>
           )}
         </div>
+        <Toaster />
       </nav>
     </>
   );

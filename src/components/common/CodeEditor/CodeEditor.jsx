@@ -11,11 +11,12 @@ import copyIcon from "../../../assets/copy.png";
 // import { getAuth } from "firebase/auth";
 import { auth, db } from "../../../firebase/auth"; // Import the db and signInWithGitHub from auth.js
 import { collection, addDoc } from "firebase/firestore"; // Import the collection and addDoc functions
-import axios from "axios";
+import toast from "react-hot-toast";
 
 export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
   // const [userLoggedIn, setUserLoggedIn] = useState(false);
   const location = useLocation();
+  const naviagte = useNavigate()
 
   const files = {
     "index.html": {
@@ -90,9 +91,13 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
       }
       const docRef = await addDoc(buttonCollectionRef, buttonData);
       console.log("Button document saved with ID:", docRef.id);
-      window.location.reload();
+      toast.success("Successfully added!");
+      setTimeout(() => {
+        naviagte('/')
+      }, 1000);
     } catch (error) {
       console.error("Error adding button document:", error);
+      toast.error("Action Failed!");
     }
   };
 
