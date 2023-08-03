@@ -13,7 +13,7 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData,setButton
 
 // const [buttonData,setButtonData]=useState([])
 const [check,setCheck]=useState([])
-const [count,setCount]=useState(0)
+// const [count,setCount]=useState(0)
   const [currentPage, setCurrentPage] = useState(
     parseInt(localStorage.getItem("current_page")) || 1
   );
@@ -28,7 +28,7 @@ const [count,setCount]=useState(0)
   const handlePageChange = async(pageNumber) => {
     setCurrentPage(pageNumber);
 
-    setCount(count+1)
+    // setCount(count+1)
 
     // let valid=check.includes(count)
 
