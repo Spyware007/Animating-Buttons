@@ -21,6 +21,8 @@
   height: 10rem;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease-in;
+
 }
 .Avtar:hover {
   scale: 1.2;
@@ -73,6 +75,7 @@
   justify-content: center;
   display: flex;
   gap: 1rem;
+  
 }
 
 .link1,
@@ -116,7 +119,6 @@
   }
   .About_p {
     font-size: 18px;
-
     color: darkgrey;
   }
   .About_h1_c {

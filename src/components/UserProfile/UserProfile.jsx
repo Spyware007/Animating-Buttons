@@ -5,11 +5,11 @@ import Card from "../common/Card/Card";
 import axios from "axios";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebase/auth";
+import { Toaster } from "react-hot-toast";
 
 
 
-
-const UserProfile = () => {
+const UserProfile = ({modeToggle}) => {
   const { userId } = useParams();
   const user = userId;
   const [githubBio, setGithubBio] = useState("");

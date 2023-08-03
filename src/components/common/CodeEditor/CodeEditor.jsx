@@ -12,6 +12,7 @@ import copyIcon from "../../../assets/copy.png";
 import { auth, db } from "../../../firebase/auth"; // Import the db and signInWithGitHub from auth.js
 import { collection, addDoc } from "firebase/firestore"; // Import the collection and addDoc functions
 import toast from "react-hot-toast";
+import axios from "axios";
 
 export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
   // const [userLoggedIn, setUserLoggedIn] = useState(false);

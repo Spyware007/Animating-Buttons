@@ -16,6 +16,10 @@ import axios from "axios";
 
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
   // const auth = getAuth()
+  const [user, setUser] = useState({ username: "", profilePictureUrl: "" });
+  const [githubBio, setGithubBio] = useState("");
+  const [githubSocialAccounts, setGithubSocialAccounts] = useState([]);
+  
   const [navbarVisible, setNavbarVisible] = useState(true)
 
   const [username, setUsername] = useState(
