@@ -12,7 +12,8 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData,setButton
 
 
 // const [buttonData,setButtonData]=useState([])
-
+const [check,setCheck]=useState([])
+const [count,setCount]=useState(0)
   const [currentPage, setCurrentPage] = useState(
     parseInt(localStorage.getItem("current_page")) || 1
   );
@@ -26,12 +27,28 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData,setButton
   );
   const handlePageChange = async(pageNumber) => {
     setCurrentPage(pageNumber);
-    localStorage.setItem("current_page", pageNumber);
-    // window.scrollTo({ top: 500, behavior: "smooth" });
 
-    const newButtonsData=await getMoreButtonsData()
-    // setButtonData([...buttonData,newButtonsData])
-    setButtonsData([...buttonsData,...newButtonsData])
+    setCount(count+1)
+
+    // let valid=check.includes(count)
+
+    // if(!valid){
+    // }
+    setCheck(()=>[...check,pageNumber])
+console.log("arrraaayyy---",check)
+
+    
+    localStorage.setItem("current_page", pageNumber);
+    window.scrollTo({ top: 500, behavior: "smooth" });
+
+    let pageValid=check.includes(pageNumber)
+    if(!pageValid){
+
+      const newButtonsData=await getMoreButtonsData()
+      // setButtonData([...buttonData,newButtonsData])
+      setButtonsData([...buttonsData,...newButtonsData])
+    }
+   
   };
 
   const pageNavigationButtions = (
