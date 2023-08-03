@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import classes from "./Navbar.module.css";
 import { BsGithub } from "react-icons/bs";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { getAuth } from "firebase/auth";
 import logout from "../../assets/logout-svgrepo-com.svg";
 import { handleLogout, handleGitHubLogin } from "./loginHelper";
 import { Toaster } from "react-hot-toast";
+
 
 // images
 import github from "../../assets/github.png";
@@ -59,6 +60,9 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
     setNavbarVisible(window.innerWidth > 768); 
   };
 
+  const location = useLocation();
+
+
 
   useEffect(() => {
     const auth = getAuth();
@@ -88,7 +92,8 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
 
       }
       else {
-        handleLogout(setUser);
+        // handleLogout(setUser);
+        // setUser(null)
         localStorage.clear();
       }
       return () => {
@@ -109,22 +114,23 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
 
         {navbarVisible && (<div><span className={classes.cross} onClick={() => window.innerWidth < 768 && setNavbarVisible(false)}>✖</span>
           <ul className={classes.navlist}>
-            <li className={classes.list_item} onClick={() => window.innerWidth < 768 && setNavbarVisible(false)}>
+            <li className={`${classes.list_item} ${location.pathname === '/' && classes.active} `} onClick={() => window.innerWidth < 768 && setNavbarVisible(false)}>
               <NavLink className={classes.list_item_link}  to="/">
                 Home
               </NavLink>
             </li>
-            <li className={classes.list_item} onClick={() => window.innerWidth < 768 && setNavbarVisible(false)}>
+            <li className={`${classes.list_item} ${location.pathname === '/explore' && classes.active} `} onClick={() => window.innerWidth < 768 && setNavbarVisible(false)}>
               <NavLink className={classes.list_item_link} to="/explore">
                 Explore
               </NavLink>
             </li>
-            <li className={classes.list_item} onClick={() => window.innerWidth < 768 && setNavbarVisible(false)}>
+            <li className={`${classes.list_item} ${location.pathname === '/about' && classes.active} `} onClick={() => window.innerWidth < 768 && setNavbarVisible(false)}>
               <NavLink className={classes.list_item_link} to="/about">
                 About
               </NavLink>
             </li>
             {/* <li className={classes.list_item}>
+            
             <Link className={classes.list_item_link} to={"/leaderboard"}>
               Creators
             </Link>
@@ -153,7 +159,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
           {userImage && userEmail ? (
             <div className={classes.loggedIn}>
               <NavLink className={classes.list_item_link} to="/add">
-                <button className={classes.add}>
+                <button className={classes.add} title="Create New Button">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -184,7 +190,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
                   <span className={classes.username}>My Profile</span>
                 </button>
               </NavLink>
-              <button className={classes.logOut} onClick={handleLogout}>
+              <button className={classes.logOut} onClick={() => handleLogout(setUser)}>
                 <img
                   src={logout}
                   alt="Log Out"

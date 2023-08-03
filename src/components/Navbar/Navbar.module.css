@@ -45,6 +45,15 @@
   transform: scaleX(1);
 }
 
+.active::after {
+  visibility: visible;
+  transform: scaleX(1);
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
 .list_item_link {
   text-decoration: none;
   color: #000;
@@ -87,7 +96,8 @@
   text-decoration: none;
 }
 
-.github {
+
+.navbar.navbar-dark .github {
   all: unset;
   transition: all 0.3s ease-in-out;
   background-color: #21252c;
@@ -100,8 +110,26 @@
   gap: 7px;
 }
 
-.github:hover {
+
+.navbar.navbar-light .github {
+  all: unset;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  border-radius: 12px;
+  padding: 12px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  gap: 7px;
+}
+
+.navbar.navbar-dark .github:hover {
   background-color: #232b32;
+}
+
+.navbar.navbar-light .github:hover {
+  background-color: cyan;
 }
 
 .image_container,
@@ -137,10 +165,6 @@
   filter: drop-shadow(0px 4px 1px rgba(255, 255, 255, 0.25));
 }
 
-.navbar.navbar-light .github .username {
-  color: black;
-  transition: all 0.3s ease-in-out;
-}
 
 .navbar.navbar-light .github:hover {
   background: #00CCCC;
@@ -152,7 +176,11 @@
   transition: all 0.3s ease-in-out;
 }
 
-.navbar.navbar-light .github .image_container {
+.addbtn {
+  margin-left: 3px;
+}
+
+.navbar.navbar-light .github:hover .username {
   color: black;
   transition: all 0.3s ease-in-out;
 }
@@ -253,9 +281,7 @@
     /* scale: 0.8; */
   }
 
-  /* .github {
-    display: none;
-  } */
+
 
   .navlist {
     flex-direction: column;
@@ -270,12 +296,13 @@
 
 
 
-
   .mode_toggle {
     position: static;
     margin: 0;
     scale: 0.9;
     gap: 0;
+  .image_container_mobile {
+    display: block;
     margin: 0;
   }
 
@@ -314,4 +341,11 @@
   }
 
 
+  .navbar.navbar-light .navlist .image_container_mobile {
+    color: black;
+  }
+
+  .navbar.navbar-dark .navlist .image_container_mobile {
+    color: white;
+  }
 }
