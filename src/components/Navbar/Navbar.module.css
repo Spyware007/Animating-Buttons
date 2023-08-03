@@ -245,18 +245,61 @@
 
 }
 
+.hamburger {
+  display: none;
+}
 
+.cross {
+  display: none;
+}
 
 
 @media screen and (max-width: 768px) {
   .navbar {
     padding: 20px 20px;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .github {
     display: none;
   }
+
+
+  .navlist {
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    gap: 2rem;
+    background-color: black;
+    margin-top: -5rem;
+    overflow: hidden;
+    z-index: 10;
+    margin: 0;
+  }
+
+  .mode_toggle {
+    position: static;
+    margin: 0;
+    scale: 0.8;
+    gap: 0;
+    display: block;
+    padding: 0.2;
+  }
+
+  .list_item_link {
+    color: #fff;
+  }
+
+  .image_container_mobile {
+    color: white;
+
+  }
+
+  .loggedIn {
+    scale: 0.8;
+    margin-right: -2rem;
+  }
+
 
   .image_container_mobile {
     display: block;
@@ -264,11 +307,53 @@
     padding: 0;
   }
 
-  .navbar.navbar-light .navlist .image_container_mobile {
-    color: black;
+  .navbar.navbar-dark .navlist .image_container_mobile .image {
+    color: white;
   }
 
-  .navbar.navbar-dark .navlist .image_container_mobile {
-    color: white;
+  .cross {
+    display: block;
+    position: absolute;
+    z-index: 19;
+    right: 5%;
+    top: 5%;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+  }
+
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+  .loggedIn {
+    scale: 0.7;
+    margin-right: -3rem;
+  }
+
+  .hamburger {
+    scale: 0.8;
+  }
+
+  .addbtn {
+    display: none;
+  }
+
+  .add {
+    scale: 0.9;
+  }
+
+  /* .username{
+    display: none;
+  } */
+
+  .image {
+    padding: 0;
   }
 }
