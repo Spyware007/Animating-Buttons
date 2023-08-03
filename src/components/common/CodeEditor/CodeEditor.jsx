@@ -11,7 +11,8 @@ import copyIcon from "../../../assets/copy.png";
 // import { getAuth } from "firebase/auth";
 import { auth, db } from "../../../firebase/auth"; // Import the db and signInWithGitHub from auth.js
 import { collection, addDoc } from "firebase/firestore"; // Import the collection and addDoc functions
-import toast from "react-hot-toast";
+import {toast, Toaster} from "react-hot-toast";
+
 
 export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
   // const [userLoggedIn, setUserLoggedIn] = useState(false);
@@ -95,6 +96,7 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
       const editorValue = editorRef.current.getValue();
       await navigator.clipboard.writeText(editorValue);
       console.log("Value copied to clipboard:", editorValue);
+      toast.success('Value copied to clipboard')
     } catch (error) {
       console.error("Failed to copy value to clipboard:", error);
     }
@@ -159,10 +161,12 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
             automaticLayout: true,
             // Add any additional editor options here
           }}
-          editorDidMount={(editor, _) => {
+          onMount={(editor, _) => {
             editorRef.current = editor;
           }}
         />
+
+        <Toaster />
       </div>
     </>
   );
