@@ -23,17 +23,31 @@
 
 import { db } from "../firebase/auth";
 import { collection, getDocs, limit, query, startAfter,orderBy ,startAt} from "firebase/firestore";
+// import { GlobalContext } from "../Context/GlobalContext";
+
+
 let document=[];
 
 
 
-const BUTTONS_CACHE_KEY = "buttonsData";
+// const BUTTONS_CACHE_KEY = "buttonsData";
 
-export async function getButtonsData() {
-  const cachedData = localStorage.getItem(BUTTONS_CACHE_KEY);
-  if (cachedData) {
-    return JSON.parse(cachedData);
-  }
+export async function getButtonsData(dispatch) {
+
+  // const { state } = useContext(GlobalContext);
+  // const globalButtonsData = state.buttonsData;
+  // const { dispatch } = useContext(GlobalContext);
+
+
+
+
+
+
+
+  // const cachedData = localStorage.getItem(BUTTONS_CACHE_KEY);
+  // if (cachedData) {
+  //   return JSON.parse(cachedData);
+  // }
 
   const buttonCollectionRef = collection(db,"buttons");
   const pageSize = 6;
@@ -41,7 +55,8 @@ export async function getButtonsData() {
 
   const data = await getDocs(q);
   const buttonsData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-  localStorage.setItem(BUTTONS_CACHE_KEY, JSON.stringify(buttonsData));
+  // localStorage.setItem(BUTTONS_CACHE_KEY, JSON.stringify(buttonsData));
+  dispatch({type:"SETBUTTONS",payload:buttonsData})
 
   console.log("btn data--",buttonsData[0])
 
@@ -72,7 +87,7 @@ console.log("noraml---",data.docs[data.docs.length-1])
 
 
 
-export async function getMoreButtonsData() {
+export async function getMoreButtonsData(dispatch) {
   // const LastDocument = JSON.parse(localStorage.getItem("lastDoc"));
 
   // console.log("last -----",LastDocument)
@@ -95,10 +110,12 @@ export async function getMoreButtonsData() {
   const data = await getDocs(q);
   const buttonsData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
   // let localdata=JSON.parse(localStorage.getItem(BUTTONS_CACHE_KEY))
-  const localdata = JSON.parse(localStorage.getItem(BUTTONS_CACHE_KEY)) || [];
+  // const localdata = JSON.parse(localStorage.getItem(BUTTONS_CACHE_KEY)) || [];
+  
   // let updatedData=[...localdata,buttonsData]
-  const updatedData = [...localdata, ...buttonsData];
-  localStorage.setItem(BUTTONS_CACHE_KEY, JSON.stringify(updatedData));
+  // const updatedData = [...localdata, ...buttonsData];
+  // localStorage.setItem(BUTTONS_CACHE_KEY, JSON.stringify(updatedData));
+  dispatch({type:"SETBUTTONS",payload:buttonsData})
 
 
 

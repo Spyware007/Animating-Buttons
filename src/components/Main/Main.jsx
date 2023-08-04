@@ -1,19 +1,27 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import classes from "./Main.module.css";
 import Card from "../common/Card/Card";
 import { motion } from 'framer-motion'
 import { fadeIn, paraAnim } from "../Animation/motion";
 
 import { getMoreButtonsData } from "../../Server/getButtons";
+import { GlobalContext } from "../../Context/GlobalContext";
 
+export default function Main({ modeToggle, modeToggleFunc}) {
 
-export default function Main({ modeToggle, modeToggleFunc, buttonsData,setButtonsData }) {
+//use global context 
+const { state,dispatch}=useContext(GlobalContext)
+
+const {buttonsData,check}=state
+
 
 
 
 // const [buttonData,setButtonData]=useState([])
-const [check,setCheck]=useState([])
+// const [check,setCheck]=useState([])
 // const [count,setCount]=useState(0)
+
+
   const [currentPage, setCurrentPage] = useState(
     parseInt(localStorage.getItem("current_page")) || 1
   );
@@ -34,19 +42,25 @@ const [check,setCheck]=useState([])
 
     // if(!valid){
     // }
-    setCheck(()=>[...check,pageNumber])
+
+
+    // setCheck(()=>[...check,pageNumber])
+   await dispatch({type:"SETCHECK",payload:pageNumber})
+    
 console.log("arrraaayyy---",check)
 
     
     localStorage.setItem("current_page", pageNumber);
     window.scrollTo({ top: 500, behavior: "smooth" });
 
-    let pageValid=check.includes(pageNumber)
+    let pageValid=check?.includes(pageNumber)
     if(!pageValid){
 
-      const newButtonsData=await getMoreButtonsData()
+      // const newButtonsData=
+      await getMoreButtonsData(dispatch)
       // setButtonData([...buttonData,newButtonsData])
-      setButtonsData([...buttonsData,...newButtonsData])
+      // setButtonsData([...buttonsData,...newButtonsData])
+      // dispatch({type:"SETBUTTONS",payload:newButtonsData})
     }
    
   };
