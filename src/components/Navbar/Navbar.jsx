@@ -43,11 +43,11 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
         localStorage.setItem("username", user?.reloadUserInfo?.screenName);
         localStorage.setItem("email", user.email);
         localStorage.setItem("userImage", user.photoURL);
-
+        
       }
       else {
         // handleLogout(setUser);
-        // setUser(null)
+        setUser(null)
         localStorage.clear();
       }
     });
@@ -154,7 +154,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               </button>
             </div>
           ) : (
-            <div className={classes.list_item_link} onClick={() => handleGitHubLogin(setUser, setGithubBio, setGithubSocialAccounts)}>
+            <div className={`${classes.list_item_link}  ${classes.signInBtn}`} onClick={() => handleGitHubLogin(setUser, setGithubBio, setGithubSocialAccounts)}>
               <button className={classes.github}>
                 <div className={classes.image_container}>
                   <BsGithub className={classes.image} />
