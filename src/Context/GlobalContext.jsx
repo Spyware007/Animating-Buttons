@@ -3,12 +3,12 @@ import { GlobalReducer } from "../Reducers/GlobalReducer";
 
 export const GlobalContext = createContext(null);
 
-export function GlobalContextProvider({ children }) {
+export  function  GlobalContextProvider({ children }) {
   const initialState = {
     // buttonsData: [],
     // check: [],
     buttonsData: JSON.parse(localStorage.getItem("buttonsData")) || [],
-    check: [],
+    // check: JSON.parse(localStorage.getItem("check"))||[],
   };
 
 
@@ -18,8 +18,9 @@ export function GlobalContextProvider({ children }) {
 
   
   useEffect(() => {
-    // Save buttonsData to localStorage whenever it changes
+    
     localStorage.setItem("buttonsData", JSON.stringify(state.buttonsData));
+    //  localStorage.setItem("check", JSON.stringify(state.check));
   }, [state.buttonsData]);
 
 

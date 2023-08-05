@@ -30,7 +30,7 @@ let document=[];
 
 
 
-// const BUTTONS_CACHE_KEY = "buttonsData";
+const BUTTONS_CACHE_KEY = "buttonsData";
 
 export async function getButtonsData(dispatch) {
 
@@ -116,8 +116,7 @@ export async function getMoreButtonsData(dispatch) {
   // const updatedData = [...localdata, ...buttonsData];
   // localStorage.setItem(BUTTONS_CACHE_KEY, JSON.stringify(updatedData));
   dispatch({type:"SETBUTTONS",payload:buttonsData})
-
-
+ 
 
 
   

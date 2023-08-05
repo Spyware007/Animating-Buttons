@@ -62,6 +62,8 @@ const lenofLocal = JSON.parse(localStorage.getItem("buttonsData") || "[]");
 console.log("local length",lenofLocal)
 if (lenofLocal.length ===0) {
    await getButtonsData(dispatch);
+   dispatch({type:"SETCHECK",payload:1})
+
   
 }
 

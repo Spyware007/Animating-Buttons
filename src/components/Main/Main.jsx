@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState,useContext, useEffect } from "react";
 import classes from "./Main.module.css";
 import Card from "../common/Card/Card";
 import { motion } from 'framer-motion'
@@ -12,13 +12,17 @@ export default function Main({ modeToggle, modeToggleFunc}) {
 //use global context 
 const { state,dispatch}=useContext(GlobalContext)
 
-const {buttonsData,check}=state
+const {buttonsData}=state
 
 
 
 
 // const [buttonData,setButtonData]=useState([])
-// const [check,setCheck]=useState([])
+
+const localCheck=JSON.parse(localStorage.getItem("check"))
+const finalCheck=localCheck || []
+
+const [check,setCheck]=useState(finalCheck)
 // const [count,setCount]=useState(0)
 
 
@@ -45,8 +49,23 @@ const {buttonsData,check}=state
 
 
     // setCheck(()=>[...check,pageNumber])
-   await dispatch({type:"SETCHECK",payload:pageNumber})
+
+    console.log("page number in handel page change",pageNumber)
     
+  //  await dispatch({type:"SETCHECK",payload:pageNumber})
+  setCheck((value)=>{
+    let updatedCheck=value
+    if(!check.includes(pageNumber)){
+
+      updatedCheck=[...value,pageNumber]
+      console.log("updated  check",updatedCheck)
+    }
+    
+    return updatedCheck
+   
+  })
+
+ 
 console.log("arrraaayyy---",check)
 
     
@@ -55,6 +74,7 @@ console.log("arrraaayyy---",check)
 
     let pageValid=check?.includes(pageNumber)
     if(!pageValid){
+      
 
       // const newButtonsData=
       await getMoreButtonsData(dispatch)
@@ -64,6 +84,16 @@ console.log("arrraaayyy---",check)
     }
    
   };
+
+
+
+
+  useEffect(()=>{
+
+    console.log("return check",check)
+    localStorage.setItem("check", JSON.stringify(check));
+  },[check])
+    
 
   const pageNavigationButtions = (
     <ul className={classes.paginationList}>
