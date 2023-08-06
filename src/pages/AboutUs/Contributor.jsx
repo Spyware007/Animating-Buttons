@@ -1,37 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./About.module.css";
-import ContributorData from "./ContributorData";
+import fetchContributorData from "./ContributorData";
 import { motion } from "framer-motion";
 import { stag } from "../../components/Animation/motion";
 import { fadeIn } from "../../components/Animation/motion";
 
 function Contributor() {
+  const [contributorData, setContributorData] = useState([]);
+
+  useEffect(() => {
+    // Fetch data and update state when the component mounts
+    async function fetchData() {
+      try {
+        const data = await fetchContributorData();
+        setContributorData(data);
+      } catch (error) {
+        // Handle error if needed
+      }
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <div className={classes.Contributor_section}>
-      <p className={classes.About_p_o}>Open Source</p>
-      <motion.h1
-        variants={fadeIn}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ delay: 0.1, duration: 0.4 }}
-        className={classes.About_h1}
-      >
-        Our Valuable Contributors
-      </motion.h1>
-      <motion.p
-        variants={fadeIn}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ delay: 0.2, duration: 0.45 }}
-        className={classes.About_p_c}
-      >
-        {" "}
-        Meet the amazing individuals behind our accomplishments.
-      </motion.p>
+      {/* Rest of your JSX code */}
       <div className={classes.Contributors}>
-        {ContributorData.map((card, i) => (
+        {contributorData.map((card, i) => (
           <motion.div
             variants={stag}
             initial="hidden"
@@ -42,7 +37,7 @@ function Contributor() {
             key={i}
           >
             <a href={card.githubacc}>
-              <img src={card.imageUrl} className={classes.Avtar}></img>
+              <img src={card.imageUrl} className={classes.Avtar} alt="Avatar" />
             </a>
             <h3 className={classes.About_h1_c}>{card.head}</h3>
             {/* <h4 className={classes.About_p_c}>{card.para}</h4> */}
@@ -52,4 +47,5 @@ function Contributor() {
     </div>
   );
 }
+
 export default Contributor;
