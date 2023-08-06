@@ -1,6 +1,6 @@
 async function fetchContributorData() {
   try {
-    const response = await fetch('https://api.github.com/users');
+    const response = await fetch('https://api.github.com/repos/Spyware007/Animating-Buttons/contributors');
     const data = await response.json();
     
     const contributorData = data.map(item => ({
