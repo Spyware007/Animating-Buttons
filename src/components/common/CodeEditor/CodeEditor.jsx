@@ -4,10 +4,10 @@ import Editor from "@monaco-editor/react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 import LangButton from "../LangButton/LangButton";
-import htmlIcon from "../../../assets/html.png";
-import cssIcon from "../../../assets/css.png";
-import jsIcon from "../../../assets/js.png";
-import copyIcon from "../../../assets/copy.png";
+import htmlIcon from "../../../assets/html.webp";
+import cssIcon from "../../../assets/css.webp";
+import jsIcon from "../../../assets/js.webp";
+import copyIcon from "../../../assets/copy.webp";
 // import { getAuth } from "firebase/auth";
 import { auth, db } from "../../../firebase/auth"; // Import the db and signInWithGitHub from auth.js
 import { collection, addDoc } from "firebase/firestore"; // Import the collection and addDoc functions

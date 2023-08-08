@@ -2,7 +2,7 @@ import React from "react";
 import Timeline from "../../components/Timeline/Timeline";
 import { Twitter, LinkedIn } from "../../assets/svg";
 import Contributor from "./Contributor";
-import memoji from "../../assets/memoji.png";
+import memoji from "../../assets/memoji.webp";
 import classes from "./About.module.css";
 import { motion } from "framer-motion";
 

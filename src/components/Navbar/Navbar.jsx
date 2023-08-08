@@ -10,8 +10,8 @@ import { Toaster } from "react-hot-toast";
 
 
 // images
-import moon from "../../assets/moon.png";
-import sun from "../../assets/sun.png";
+import moon from "../../assets/moon.webp";
+import sun from "../../assets/sun.webp";
 
 const Navbar = ({ modeToggle, modeToggleFunc }) => {
 

@@ -3,7 +3,7 @@ import classes from "./Landing.module.css";
 import ButtonsSvg from "../../assets/buttons.svg";
 import RepoInfo from "../common/RepoInfo/RepoInfo";
 import { Twitter, LinkedIn } from "../../assets/svg";
-import Memoji from "../../assets/memoji.png";
+import Memoji from "../../assets/memoji.webp";
 import { motion } from "framer-motion";
 import { paraAnim } from "../Animation/motion";
 import { socialAnim } from "../Animation/motion";
