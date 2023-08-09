@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./DeleteButton.module.css";
 import { useAuthState } from "react-firebase-hooks/auth"; // Import the appropriate hook
 import { auth } from "../../../firebase/auth";
+
 import { useLocation } from "react-router-dom";
 
 const DeleteButton = ({ modeToggle, handleDelete }) => {
@@ -21,8 +22,6 @@ const DeleteButton = ({ modeToggle, handleDelete }) => {
   if (!user) {
     return null; // Return nothing if the user is not logged in
   }
-
-
   return (
       auth.currentUser &&
         location.pathname.split("/")[2] ===

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { auth, db } from "../../firebase/auth";
+import { db } from "../../firebase/auth";
 import {
   collection,
   getDocs,
@@ -17,6 +17,7 @@ import {
 } from "firebase/auth";
 import { Toaster } from 'react-hot-toast';
 import toast from "react-hot-toast";
+import EditBioBtn from "../common/EditBioBtn/EditBioBtn";
 
 
 
@@ -166,12 +167,7 @@ export default function UserProfile({ modeToggle }) {
           ) : (
             <>
               <p>{githubBio}</p>
-              {auth.currentUser &&
-                userId === auth?.currentUser?.reloadUserInfo?.screenName && (
-                  <div className={classes.edit_button}>
-                    <button onClick={handleEditBio}>Edit Bio</button>
-                  </div>
-                )}
+              <EditBioBtn userId={userId} handleEditBio={handleEditBio} />
             </>
           )}
         </div>
