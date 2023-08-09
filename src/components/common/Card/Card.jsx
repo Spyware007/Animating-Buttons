@@ -12,7 +12,7 @@ import classes from "./Card.module.css";
 import { Link, useLocation } from "react-router-dom";
 import Button from "../Button/Button";
 import LikeButton from "../LikeButton/LikeButton";
-import DeleteButton from "../DeleteBtn/DeleteButton";
+import DeleteButton from "../deleteBtn/DeleteButton";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
 // import { renderIntoDocument } from "react-dom/test-utils";
