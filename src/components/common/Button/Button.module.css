@@ -50,10 +50,10 @@
 .light-Btn
 .tooltipl {
   position: absolute;
-  left: -202px;
-  top: -301px;
-  width: 280px;
-  height: 280px;
+  left: -50px;
+  top: -110px;
+  width: 100px;
+  height: 80px;
   opacity: 0;
   color: rgba(12, 12, 12, 0.85);
   background-color: rgb(255, 255, 255);
@@ -80,10 +80,10 @@
 .dark-Btn
 .tooltipl {
   position: absolute;
-  left: -202px;
-  top: -301px;
-  width: 280px;
-  height: 280px;
+  left: -50px;
+  top: -110px;
+  width: 100px;
+  height: 80px;
   opacity: 0;
   background-color: rgba(12, 12, 12, 0.85);
   color: rgb(255, 255, 255);
