@@ -2,8 +2,11 @@ import React from "react";
 import classes from "./DeleteButton.module.css";
 import { useAuthState } from "react-firebase-hooks/auth"; // Import the appropriate hook
 import { auth } from "../../../firebase/auth";
+import { useLocation } from "react-router-dom";
 
 const DeleteButton = ({ modeToggle, handleDelete }) => {
+  const location = useLocation();
+
   const [user, loading, error] = useAuthState(auth); // Use the useAuthState hook
   if (loading) {
     return null; // Return nothing while authentication state is loading
@@ -19,17 +22,21 @@ const DeleteButton = ({ modeToggle, handleDelete }) => {
     return null; // Return nothing if the user is not logged in
   }
 
+
   return (
-    <div
-      onClick={handleDelete}
-      className={`${classes.deleteButton} ${
-        modeToggle ? classes["dark"] : classes["light"]
-      }`}
-    >
-      <div className={classes.heartBg}>
-        <div className={`${classes.heartIcon} `}></div>
-      </div>
-    </div>
+      auth.currentUser &&
+        location.pathname.split("/")[2] ===
+        auth?.currentUser?.reloadUserInfo?.screenName && (
+          <div
+            onClick={handleDelete}
+            className={`${classes.deleteButton} ${modeToggle ? classes["dark"] : classes["light"]
+              }`}
+          >
+            <div className={classes.heartBg}>
+              <div className={`${classes.heartIcon} `}></div>
+            </div>
+          </div>
+        )
   );
 };
 
