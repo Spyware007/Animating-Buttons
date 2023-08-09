@@ -52,7 +52,7 @@
   position: absolute;
   left: -50px;
   top: -110px;
-  width: 100px;
+  width: 101px;
   height: 80px;
   opacity: 0;
   color: rgba(12, 12, 12, 0.85);
@@ -82,7 +82,7 @@
   position: absolute;
   left: -50px;
   top: -110px;
-  width: 100px;
+  width: 101px;
   height: 80px;
   opacity: 0;
   background-color: rgba(12, 12, 12, 0.85);
