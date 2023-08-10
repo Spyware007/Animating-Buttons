@@ -154,6 +154,7 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs, gith
     }
   };
 
+
   return (
     <>
       <div className={classes.btns_container}>
@@ -182,7 +183,9 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs, gith
           </button>
         )}
         {
-          auth?.currentUser?.reloadUserInfo?.screenName === githubUsername &&
+          ((auth.currentUser &&
+            location.pathname.split("/")[2] ===
+            auth?.currentUser?.reloadUserInfo?.screenName) || (process.env.REACT_APP_admin_id.split(',').includes(auth?.currentUser?.reloadUserInfo?.screenName))) &&
           <button className={classes.addbtn} onClick={() => toast.promise(
             updateButtonInFirestore(id),
             {
@@ -191,10 +194,10 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs, gith
               error: 'Updation Failed',
             }
           )}>
-        UPDATE
-      </button>
+            UPDATE
+          </button>
         }
-    </div >
+      </div >
       <div className={classes.editor}>
         <Editor
           className={classes.editor_component}
