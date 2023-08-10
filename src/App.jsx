@@ -42,7 +42,7 @@ const App = ({ modeToggleFunc, modeToggle }) => {
     async function fetchData() {
       try {
         const buttonsData = await getButtonsData();
-        const usersData = await getUsersData();
+        const usersData = await getUsersData(buttonsData);
         const totalBtns = await getTotalBtns();
         setButtonsData(buttonsData);
         setUsersData(usersData);
