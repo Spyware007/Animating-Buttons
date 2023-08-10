@@ -27,7 +27,7 @@ const Footer = ({ modeToggle }) => {
             target="_blank"
             className={classes.linkg}
             aria-label="Follow me on Github"
-            title="Instagram (External Link)"
+            title="GitHub (External Link)"
             rel="noopener noreferrer"
             href="https://github.com/spyware007"
           >
@@ -51,7 +51,7 @@ const Footer = ({ modeToggle }) => {
             target="_blank"
             className={classes.linkl}
             aria-label="Follow me on Linkedin"
-            title="Instagram (External Link)"
+            title="LinkedIn (External Link)"
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/om-gawande/"
           >
@@ -63,7 +63,7 @@ const Footer = ({ modeToggle }) => {
             target="_blank"
             className={classes.linkt}
             aria-label="Follow me on Twitter"
-            title="Instagram (External Link)"
+            title="Twitter (External Link)"
             rel="noopener noreferrer"
             href="https://twitter.com/oom_gawande"
           >

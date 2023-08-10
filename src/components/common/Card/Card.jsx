@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { auth, db } from "../../../firebase/auth";
+import { db } from "../../../firebase/auth";
 import {
   getDocs,
   query,
@@ -9,26 +9,33 @@ import {
   doc,
 } from "firebase/firestore";
 import classes from "./Card.module.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import LikeButton from "../LikeButton/LikeButton";
 import DeleteButton from "../deleteBtn/DeleteButton";
+import EditbtnBtn from "../EditbtnBtn/EditbtnBtn";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
-import { renderIntoDocument } from "react-dom/test-utils";
+// import { renderIntoDocument } from "react-dom/test-utils";
 import { toast } from "react-hot-toast";
- 
+
 
 
 function download(css, html, js, name) {
   const zip = new JSZip();
-  zip.file("style.css", css);
-  zip.file("index.html", html);
-  zip.file("app.js", js);
+  try {
+    zip.file("style.css", css);
+    zip.file("index.html", html);
+    zip.file("app.js", js);
 
-  zip.generateAsync({ type: "blob" }).then((zipFile) => {
-    saveAs(zipFile, `${name} files.zip`);
-  });
+    zip.generateAsync({ type: "blob" }).then((zipFile) => {
+      saveAs(zipFile, `${name} files.zip`);
+    });
+    toast.success('Downloaded Successfully')
+  } catch (error) {
+    console.log(error)
+    toast.error('Something Went Wrong')
+  }
 }
 
 export default function Card({ modeToggle, button }) {
@@ -62,7 +69,6 @@ export default function Card({ modeToggle, button }) {
     fetchUser();
   }, [user]);
 
-  const location = useLocation();
   const handleDelete = async () => {
     const sure = window.confirm("Are You Sure ?");
     if (sure) {
@@ -128,12 +134,10 @@ export default function Card({ modeToggle, button }) {
           </div>
 
           <div className={classes.stats_btn}>
-            {/* <ViewsIcon /> */}
-            {auth.currentUser &&
-              location.pathname.split("/")[2] ===
-              auth?.currentUser?.reloadUserInfo?.screenName && (
-                <DeleteButton handleDelete={handleDelete} />
-              )}
+            <DeleteButton modeToggle={modeToggle} handleDelete={handleDelete} />
+            <Link to={`/show/${btnId} `}>
+              <EditbtnBtn modeToggle={modeToggle}  />
+            </Link>
             <LikeButton btnId={btnId} />
           </div>
         </div>

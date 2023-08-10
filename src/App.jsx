@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, useEffect, useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { getButtonsData } from "./Server/getButtons";
+import { getTotalBtns } from "./Server/getButtons";
 import { getUsersData } from "./Server/getUsersData";
 import {
   AddButton,
@@ -19,11 +20,15 @@ import GoToTop from "./components/Top/GoToTop";
 import UserProfile from "./components/UserProfile/UserProfile";
 import About from "./pages/AboutUs/About";
 
+
+
 const ShowCode = lazy(() => import("./components/ShowCode/ShowCode"));
+
 
 const App = ({ modeToggleFunc, modeToggle }) => {
   const [loading, setLoading] = useState(false);
   const [toggleMode, setToggleMode] = useState(true);
+
 
   const location = useLocation();
   useEffect(() => {
@@ -32,13 +37,16 @@ const App = ({ modeToggleFunc, modeToggle }) => {
 
   const [buttonsData, setButtonsData] = useState([]);
   const [usersData, setUsersData] = useState([]);
+  const [totalBtns, setTotalBtns] = useState(0)
   useEffect(() => {
     async function fetchData() {
       try {
         const buttonsData = await getButtonsData();
-        const usersData = await getUsersData();
+        const usersData = await getUsersData(buttonsData);
+        const totalBtns = await getTotalBtns();
         setButtonsData(buttonsData);
         setUsersData(usersData);
+        setTotalBtns(totalBtns);
       } catch (error) {
         console.log("Error fetching data:", error);
       }
@@ -56,6 +64,8 @@ const App = ({ modeToggleFunc, modeToggle }) => {
             modeToggle={toggleMode}
             modeToggleFunc={setToggleMode}
             buttonsData={buttonsData}
+            setButtonsData={setButtonsData}
+            totalBtns={totalBtns}
           />
         </>
       ),
@@ -90,7 +100,7 @@ const App = ({ modeToggleFunc, modeToggle }) => {
     },
     {
       path: "/explore",
-      element: <ExploreButtons data={buttonsData} toggleMode={toggleMode}/>,
+      element: <ExploreButtons data={buttonsData} toggleMode={toggleMode} />,
     },
     {
       path: "*",
@@ -122,6 +132,7 @@ const App = ({ modeToggleFunc, modeToggle }) => {
         </div>
       )}
     </>
+
   );
 };
 

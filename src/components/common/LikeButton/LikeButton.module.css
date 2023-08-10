@@ -27,7 +27,7 @@
 .heartIcon {
   height: 100px;
   width: 100px;
-  background: url("heart.png");
+  background: url("heart.webp");
   background-position: left;
   cursor: pointer;
   position: absolute;
