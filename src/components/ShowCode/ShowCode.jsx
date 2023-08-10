@@ -46,6 +46,7 @@ export default function ShowCode() {
       setCss(data.css || "");
       setJs(data.js || "");
       setUser(data.githubUsername || "");
+      // console.log(data.githubUsername);
     } else {
       console.log("Link Invalid");
     }
@@ -116,6 +117,7 @@ export default function ShowCode() {
             setCss={setCss}
             js={js}
             setJs={setJs}
+            githubUsername={user}
           />
         )}
       </div>

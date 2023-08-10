@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import classes from "./CodeEditor.module.css";
 import Editor from "@monaco-editor/react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, useParams, redirect } from "react-router-dom";
 
 import LangButton from "../LangButton/LangButton";
 import htmlIcon from "../../../assets/html.webp";
@@ -10,14 +10,16 @@ import jsIcon from "../../../assets/js.webp";
 import copyIcon from "../../../assets/copy.webp";
 // import { getAuth } from "firebase/auth";
 import { auth, db } from "../../../firebase/auth"; // Import the db and signInWithGitHub from auth.js
-import { collection, addDoc } from "firebase/firestore"; // Import the collection and addDoc functions
-import {toast, Toaster} from "react-hot-toast";
+import { collection, addDoc, doc, getDoc, updateDoc } from "firebase/firestore"; // Import the collection and addDoc functions
+import { toast, Toaster } from "react-hot-toast";
 
 
-export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
+export default function CodeEditor({ html, setHtml, css, setCss, js, setJs, githubUsername }) {
   // const [userLoggedIn, setUserLoggedIn] = useState(false);
   const location = useLocation();
   const naviagte = useNavigate()
+  const { id } = useParams();
+
 
   const files = {
     "index.html": {
@@ -91,6 +93,41 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
     }
   };
 
+  const updateButtonInFirestore = async (buttonId) => {
+
+    try {
+      const user = auth.currentUser;
+      if (!user) {
+        alert("Please log in to update a button.");
+        return;
+      }
+
+      const buttonDocRef = doc(db, "buttons", buttonId);
+      const buttonSnapshot = await getDoc(buttonDocRef);
+
+      if (!buttonSnapshot.exists()) {
+        console.log("Button document not found.");
+        return;
+      }
+      const currentData = buttonSnapshot.data();
+
+      const updatedData = {
+        ...currentData,
+        html,
+        css,
+        js,
+      };
+
+      await updateDoc(buttonDocRef, updatedData);
+
+      console.log("Button document updated:", buttonId);
+      return naviagte(`/user/${githubUsername}`)
+    } catch (error) {
+      console.error("Error updating button document:", error);
+    }
+  };
+
+
   const getEditorValue = async () => {
     try {
       const editorValue = editorRef.current.getValue();
@@ -144,7 +181,20 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
             CREATE
           </button>
         )}
-      </div>
+        {
+          auth?.currentUser?.reloadUserInfo?.screenName === githubUsername &&
+          <button className={classes.addbtn} onClick={() => toast.promise(
+            updateButtonInFirestore(id),
+            {
+              loading: 'Updating...',
+              success: 'Button Updated Successfully',
+              error: 'Updation Failed',
+            }
+          )}>
+        UPDATE
+      </button>
+        }
+    </div >
       <div className={classes.editor}>
         <Editor
           className={classes.editor_component}
