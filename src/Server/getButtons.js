@@ -19,7 +19,6 @@ export async function getTotalBtns() {
 export async function getButtonsData() {
   const cachedData = localStorage.getItem(BUTTONS_CACHE_KEY);
   if (cachedData) {
-    const data = JSON.parse(cachedData)
     return JSON.parse(cachedData);
   }
 
@@ -27,7 +26,6 @@ export async function getButtonsData() {
   const data = await getDocs(firstQuery);
   // const lastDoc1 = Firestore.toJSON(buttonCollectionRef)
   lastDocId = data.docs[data.docs.length - 1].id
-  console.log(lastDocId);
   const buttonsData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
   localStorage.setItem(BUTTONS_CACHE_KEY, JSON.stringify(buttonsData));
   localStorage.setItem("fetchedPage", 1)

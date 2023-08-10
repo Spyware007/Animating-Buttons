@@ -4,6 +4,7 @@ import Card from "../common/Card/Card";
 import { motion } from 'framer-motion'
 import { fadeIn, paraAnim } from "../Animation/motion";
 import { nextData, getPageNoData } from "../../Server/getButtons";
+import { getUsersData } from "../../Server/getUsersData";
 
 
 export default function Main({ modeToggle, modeToggleFunc, buttonsData, setButtonsData, totalBtns }) {
@@ -26,11 +27,13 @@ export default function Main({ modeToggle, modeToggleFunc, buttonsData, setButto
       // if (pageNumber > currentPage) {
         if (pageNumber - currentPage === Math.abs(1)){
         const nextPageData = await nextData(pageNumber)
+        const nextPageUsers = await getUsersData(nextPageData)
         if (nextPageData )
         setButtonsData([...buttonsData, ...nextPageData])
-      }
-      if (pageNumber -currentPage > Math.abs(1)){
-        const nextPageData = await getPageNoData(pageNumber)
+    }
+    if (pageNumber - currentPage > Math.abs(1)){
+      const nextPageData = await getPageNoData(pageNumber)
+      const nextPageUsers = await getUsersData(nextPageData)
         if (nextPageData )
         setButtonsData([...buttonsData, ...nextPageData])
       }
