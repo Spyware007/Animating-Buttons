@@ -4,19 +4,20 @@ import Editor from "@monaco-editor/react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 import LangButton from "../LangButton/LangButton";
-import htmlIcon from "../../../assets/html.png";
-import cssIcon from "../../../assets/css.png";
-import jsIcon from "../../../assets/js.png";
-import copyIcon from "../../../assets/copy.png";
+import htmlIcon from "../../../assets/html.webp";
+import cssIcon from "../../../assets/css.webp";
+import jsIcon from "../../../assets/js.webp";
+import copyIcon from "../../../assets/copy.webp";
 // import { getAuth } from "firebase/auth";
 import { auth, db } from "../../../firebase/auth"; // Import the db and signInWithGitHub from auth.js
 import { collection, addDoc } from "firebase/firestore"; // Import the collection and addDoc functions
-import axios from "axios";
-import toast from "react-hot-toast";
+import {toast, Toaster} from "react-hot-toast";
+
 
 export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
   // const [userLoggedIn, setUserLoggedIn] = useState(false);
   const location = useLocation();
+  const naviagte = useNavigate()
 
   const files = {
     "index.html": {
@@ -80,8 +81,10 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
       buttonData.displayName = displayName;
       const docRef = await addDoc(buttonCollectionRef, buttonData);
       console.log("Button document saved with ID:", docRef.id);
-      window.location.reload();
       toast.success("Successfully added!");
+      setTimeout(() => {
+        naviagte('/')
+      }, 1000);
     } catch (error) {
       console.error("Error adding button document:", error);
       toast.error("Action Failed!");
@@ -93,6 +96,7 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
       const editorValue = editorRef.current.getValue();
       await navigator.clipboard.writeText(editorValue);
       console.log("Value copied to clipboard:", editorValue);
+      toast.success('Value copied to clipboard')
     } catch (error) {
       console.error("Failed to copy value to clipboard:", error);
     }
@@ -157,10 +161,12 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs }) {
             automaticLayout: true,
             // Add any additional editor options here
           }}
-          editorDidMount={(editor, _) => {
+          onMount={(editor, _) => {
             editorRef.current = editor;
           }}
         />
+
+        <Toaster />
       </div>
     </>
   );

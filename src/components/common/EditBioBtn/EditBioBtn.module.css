@@ -1,0 +1,33 @@
+
+.edit_button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .edit_button button {
+    background-color: #00d1ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: backgroundcolor 0.3s ease-in-out;
+  }
+  
+  .edit_button button:hover {
+    background-color: #00b8e6;
+  }
+  .edit_button button:focus {
+    outline: none;
+  }
+  .edit_button button:active {
+    background-color: #00a3cc;
+  }
+  .edit_button button:disabled {
+    background-color: #00d1ff;
+    cursor: not-allowed;
+  }
+  
