@@ -24,9 +24,9 @@ const EditbtnBtn = ({ modeToggle, handleDelete }) => {
         return null; // Return nothing if the user is not logged in
     }
     return (
-        auth.currentUser &&
+        ((auth.currentUser &&
         location.pathname.split("/")[2] ===
-        auth?.currentUser?.reloadUserInfo?.screenName && (
+        auth?.currentUser?.reloadUserInfo?.screenName) || (auth?.currentUser?.reloadUserInfo?.screenName === 'Souravvmishra')) && (
             <div
                 onClick={handleDelete}
                 className={`${classes.deleteButton} ${modeToggle ? classes["dark"] : classes["light"]
