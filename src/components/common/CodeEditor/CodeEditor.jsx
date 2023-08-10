@@ -154,7 +154,6 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs, gith
     }
   };
 
-  console.log(process.env.REACT_APP_admin_id.split(','));
 
   return (
     <>
