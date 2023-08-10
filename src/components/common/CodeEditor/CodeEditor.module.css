@@ -10,7 +10,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 5px;
+  flex-wrap: wrap;
+  gap: 10px;
   background-color: #151515;
   box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
   border-radius: 12px 12px 0 0;
