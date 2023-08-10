@@ -19,6 +19,7 @@ export async function getTotalBtns() {
 export async function getButtonsData() {
   const cachedData = localStorage.getItem(BUTTONS_CACHE_KEY);
   if (cachedData) {
+    const data = JSON.parse(cachedData)
     return JSON.parse(cachedData);
   }
 

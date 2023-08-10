@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { auth, db } from "../../firebase/auth";
+import { db } from "../../firebase/auth";
 import {
   collection,
   getDocs,
@@ -17,6 +17,7 @@ import {
 } from "firebase/auth";
 import { Toaster } from 'react-hot-toast';
 import toast from "react-hot-toast";
+import EditBioBtn from "../common/EditBioBtn/EditBioBtn";
 
 
 
@@ -137,52 +138,49 @@ export default function UserProfile({ modeToggle }) {
     setNewBio(newBioValue);
   };
 
-  return (
-    <section className={classes.main_div}>
-      <div className={classes.user_info}>
-        <div className={classes.user_row}>
-          <div className={classes.image_container}>
-            <img className={classes.image} src={profilePictureUrl} alt="" loading="lazy" />
-          </div>
-          <div className={classes.user_data}>
-            <h3 className={classes.username}>@{userId}</h3>
-            <h3 className={classes.name}>{name}</h3>
-            <div className={classes.socials}>{/* Social accounts */}</div>
-          </div>
-        </div>
-        {editingBio ? (
-          <>
-            <textarea
-              value={newBio}
-              onChange={handleBioChange}
-              className={classes.bio_textarea}
-            />
-            <div className={classes.edit_button}>
-              <button onClick={handleSaveBio}>Save</button>
-              <button onClick={handleCancelEditBio}>Cancel</button>
-            </div>
-          </>
-        ) : (
-          <>
-            <p>{githubBio}</p>
-            {auth.currentUser &&
-              userId === auth?.currentUser?.reloadUserInfo?.screenName && (
-                <div className={classes.edit_button}>
-                  <button onClick={handleEditBio}>Edit Bio</button>
-                </div>
-              )}
-          </>
-        )}
-      </div>
-      <div>
-        <div className={classes.btns_container}>
 
-          {buttons.length !== 0 ? (buttons.map((button, i) => (
-            <Card modeToggle={modeToggle} key={i} button={button} />
-          ))) : <span className={classes.no_btn}>No Button Found</span>}
-          <Toaster />
+    return (
+      <section className={classes.main_div}>
+        <div className={classes.user_info}>
+          <div className={classes.user_row}>
+            <div className={classes.image_container}>
+              <img className={classes.image} src={profilePictureUrl} alt="" loading="lazy" />
+            </div>
+            <div className={classes.user_data}>
+              <h3 className={classes.username}>@{userId}</h3>
+              <h3 className={classes.name}>{name}</h3>
+              <div className={classes.socials}>{/* Social accounts */}</div>
+            </div>
+          </div>
+          {editingBio ? (
+            <>
+              <textarea
+                value={newBio}
+                onChange={handleBioChange}
+                className={classes.bio_textarea}
+              />
+              <div className={classes.edit_button}>
+                <button onClick={handleSaveBio}>Save</button>
+                <button onClick={handleCancelEditBio}>Cancel</button>
+              </div>
+            </>
+          ) : (
+            <>
+              <p>{githubBio}</p>
+              <EditBioBtn userId={userId} handleEditBio={handleEditBio} />
+            </>
+          )}
         </div>
-      </div>
-    </section>
-  );
-}
+        <div>
+          <div className={classes.btns_container}>
+
+            {buttons.length !== 0 ? (buttons.map((button, i) => (
+              <Card modeToggle={modeToggle} key={i} button={button} />
+            ))) : <span className={classes.no_btn}>No Button Found</span>}
+            <Toaster />
+          </div>
+        </div>
+      </section>
+    )
+  }
+

@@ -5,6 +5,7 @@ import axios from "axios";
 import { getAuth } from "firebase/auth";
 
 import classes from "./LikeButton.module.css";
+import { toast, Toaster } from "react-hot-toast";
 
 export default function LikeButton({ modeToggle, btnId }) {
   const [liked, setLiked] = useState(false);
@@ -64,7 +65,8 @@ export default function LikeButton({ modeToggle, btnId }) {
   const handleLike = async () => {
     if (!userLoggedIn) {
       // If user is not logged in, don't perform the like action
-      window.alert("Please loggin first");
+      // window.alert("Please loggin first");
+      toast.error("Please Login First")
       return;
     }
 
@@ -110,6 +112,7 @@ export default function LikeButton({ modeToggle, btnId }) {
         ></div>
       </div>
       <h1 className={classes.likesAmount}>{likesAmount}</h1>
+      <Toaster />
     </div>
   );
 }
