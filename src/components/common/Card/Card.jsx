@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import LikeButton from "../LikeButton/LikeButton";
 import DeleteButton from "../deleteBtn/DeleteButton";
+import EditbtnBtn from "../EditbtnBtn/EditbtnBtn";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
 // import { renderIntoDocument } from "react-dom/test-utils";
@@ -134,6 +135,9 @@ export default function Card({ modeToggle, button }) {
 
           <div className={classes.stats_btn}>
             <DeleteButton modeToggle={modeToggle} handleDelete={handleDelete} />
+            <Link to={`/show/${btnId} `}>
+              <EditbtnBtn modeToggle={modeToggle}  />
+            </Link>
             <LikeButton btnId={btnId} />
           </div>
         </div>
