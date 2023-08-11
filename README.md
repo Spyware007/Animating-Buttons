@@ -155,9 +155,9 @@ What can You Contribute? 👩‍💻
 
 9. You can go ahead and read the following to know more on how to contribute
 
-- [To Frontend](https://github.com/arcVaishali/Animating-Buttons/blob/main/FRONTEND.md)
-- [To Backend](https://github.com/arcVaishali/Animating-Buttons/blob/main/BACKEND.md)
-- [To AddButton](https://github.com/arcVaishali/Animating-Buttons/blob/main/ADDBUTTON.md)
+- [To Frontend](https://github.com/Spyware007/Animating-Buttons/blob/main/FRONTEND.md)
+- [To Backend](https://github.com/Spyware007/Animating-Buttons/blob/main/BACKEND.md)
+- [To AddButton](https://github.com/Spyware007/Animating-Buttons/blob/main/ADDBUTTON.md)
 
 10. To know more about how to contribute, read the [Countributing Guidelines](https://github.com/arcVaishali/Animating-Buttons/blob/main/CONTRIBUTING.md) 🚀🚀
 
