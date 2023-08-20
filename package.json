@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^14.4.3",
     "axios": "^1.4.0",
     "file-saver": "^2.0.5",
-    "firebase": "^10.1.0",
+    "firebase": "^10.2.0",
     "framer-motion": "^10.16.0",
     "jszip": "^3.10.1",
     "react": "^18.2.0",
