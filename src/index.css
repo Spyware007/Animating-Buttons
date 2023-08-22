@@ -34,6 +34,7 @@ body {
   font-family: "SansationBold", sans-serif;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  background-color: #151515;
 }
 
 body {
@@ -48,12 +49,11 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-::-webkit-scrollbar{
-
+::-webkit-scrollbar {
   background-color: var(--dark-bg-color);
 }
-::-webkit-scrollbar-thumb{
-background:linear-gradient(to top,rgb(49, 123, 155),transparent);
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, rgb(49, 123, 155), transparent);
 }
 
 code {
