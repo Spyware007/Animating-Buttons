@@ -63,7 +63,9 @@ Coolest place in the digital universe, the Animating Buttons repository! This pr
 What can You Contribute? 👩‍💻 
 </h1>
 
+<div>
 **Contribution Guidelines**
+</div>
 
 <div align="center">
 
@@ -102,18 +104,13 @@ What can You Contribute? 👩‍💻
 
 <!-- ------------TECH STACK USED---------------------- -->
 <h1 align ="center"> Tech Stack Used </h1>
-<div  style="display:flex;gap:4px;flex-wrap:wrap;justify-content:center;align-items:center;">
-
+<div align ="center">
+  
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-
 ![Framer](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue)
-
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
-
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 </div>
