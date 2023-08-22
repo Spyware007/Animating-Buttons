@@ -11,15 +11,10 @@ import {
 } from "firebase/firestore";
 import classes from "./UserProfile.module.css";
 import Card from "../common/Card/Card";
-import {
-  signOut,
-  getAuth,
-} from "firebase/auth";
-import { Toaster } from 'react-hot-toast';
+import { signOut, getAuth } from "firebase/auth";
+import { Toaster } from "react-hot-toast";
 import toast from "react-hot-toast";
 import EditBioBtn from "../common/EditBioBtn/EditBioBtn";
-
-
 
 export default function UserProfile({ modeToggle }) {
   const { userId } = useParams(); //it is actually githubUsername
@@ -36,14 +31,12 @@ export default function UserProfile({ modeToggle }) {
     fetchButtonData();
   }, []);
 
-
-
   const handleLogout = () => {
     const auth = getAuth();
     signOut(auth)
       .then(() => {
         // setUser(null)
-        localStorage.clear()
+        localStorage.clear();
         console.log("Logged out.");
       })
       .catch((error) => {
@@ -60,15 +53,12 @@ export default function UserProfile({ modeToggle }) {
         localStorage.setItem("username", user?.reloadUserInfo?.screenName);
         localStorage.setItem("email", user.email);
         localStorage.setItem("userImage", user.photoURL);
-
-      }
-      else {
+      } else {
         handleLogout();
         localStorage.clear();
       }
     });
-
-  })
+  });
 
   const fetchUserData = async () => {
     try {
@@ -101,7 +91,10 @@ export default function UserProfile({ modeToggle }) {
       const querySnapshot = await getDocs(q);
 
       if (!querySnapshot.empty) {
-        const buttonsData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+        const buttonsData = querySnapshot.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
         setButtons(buttonsData);
       }
     } catch (error) {
@@ -116,9 +109,9 @@ export default function UserProfile({ modeToggle }) {
       console.log(`Bio updated for user ${userId}`);
       setGithubBio(newBio);
       setEditingBio(false);
-      toast.success("Bio Updated Successfully")
+      toast.success("Bio Updated Successfully");
     } catch (error) {
-      toast.error("Error saving bio")
+      toast.error("Error saving bio");
       console.error("Error saving bio:", error);
     }
   };
@@ -138,13 +131,18 @@ export default function UserProfile({ modeToggle }) {
     setNewBio(newBioValue);
   };
 
-
-    return (
+  return (
+    <>
       <section className={classes.main_div}>
         <div className={classes.user_info}>
           <div className={classes.user_row}>
             <div className={classes.image_container}>
-              <img className={classes.image} src={profilePictureUrl} alt="" loading="lazy" />
+              <img
+                className={classes.image}
+                src={profilePictureUrl}
+                alt=""
+                loading="lazy"
+              />
             </div>
             <div className={classes.user_data}>
               <h3 className={classes.username}>@{userId}</h3>
@@ -173,14 +171,17 @@ export default function UserProfile({ modeToggle }) {
         </div>
         <div>
           <div className={classes.btns_container}>
-
-            {buttons.length !== 0 ? (buttons.map((button, i) => (
-              <Card modeToggle={modeToggle} key={i} button={button} />
-            ))) : <span className={classes.no_btn}>No Button Found</span>}
+            {buttons.length !== 0 ? (
+              buttons.map((button, i) => (
+                <Card modeToggle={modeToggle} key={i} button={button} />
+              ))
+            ) : (
+              <span className={classes.no_btn}>No Button Found</span>
+            )}
             <Toaster />
           </div>
         </div>
       </section>
-    )
-  }
-
+    </>
+  );
+}

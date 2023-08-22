@@ -1,28 +1,34 @@
-import React from 'react'
-import classes from './ExploreButtons.module.css'
+import React from "react";
+import classes from "./ExploreButtons.module.css";
 
 const ExploreButtons = () => {
-    return (
-        <div className={classes.container}>
-            <div class={classes.main}>
-                <span class={classes.animated}>C</span>
-                <span class={classes.animated}>o</span>
-                <span class={classes.animated}>m</span>
-                <span class={classes.animated}>m</span>
-                <span class={classes.animated}>i</span>
-                <span class={classes.animated}>n</span>
-                <span class={classes.animated}>g</span>
-            </div>
+  return (
+    <div className={classes.container}>
+      <div class={classes.main}>
+        {"More Buttons".split("").map((char, index) => (
+          <span
+            key={index}
+            className={classes.animated}
+            // style={{ "--i": index }}
+          >
+            {char === " " ? "\u00A0" : char}
+          </span>
+        ))}
+      </div>
 
-            <div className={classes.main}>
-                <span class={classes.animated}>S</span>
-                <span class={classes.animated}>o</span>
-                <span class={classes.animated}>o</span>
-                <span class={classes.animated}>n</span>
-            </div>
-        </div>
+      <div className={classes.main}>
+        {"Coming Soon".split("").map((char, index) => (
+          <span
+            key={index}
+            className={classes.animated}
+            // style={{ "--i": index }}
+          >
+            {char === " " ? "\u00A0" : char}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-    )
-}
-
-export default ExploreButtons
+export default ExploreButtons;
