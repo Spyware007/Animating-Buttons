@@ -40,7 +40,7 @@ npm start
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`REACT_APPapiKey`
+`REACT_APP_apiKey`
 
 `REACT_APP_authDomain`
 
@@ -61,13 +61,7 @@ Now that you have the environment set up, you can start making contributions:
 1. _Navigate to Backend Directory_ : Move to the backend directory of the project using:
 
 ```bash
-cd Animating-Buttons/src/Server
-```
-
-OR
-
-```bash
-cd Animating-Buttons/src/firebase
+cd Animating-Buttons
 ```
 
 2. _Create a New Branch_ : Create a new branch for your feature or bug fix using a descriptive name:

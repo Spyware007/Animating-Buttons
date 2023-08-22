@@ -40,7 +40,7 @@ npm start
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`REACT_APPapiKey`
+`REACT_APP_apiKey`
 
 `REACT_APP_authDomain`
 

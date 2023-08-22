@@ -29,7 +29,21 @@ Log in to the website using your GitHub account.
 
 #### 4. Create an **Empty** Pull Request (PR) :
 
-- After creating the button, you'll need to create a Pull Request on the GitHub repository.
+---
+
+- Make an **empty commit**.
+  ```
+  git commit --allow-empty -m "Empty commit for PR"
+  ```
+- Then push
+  ```
+  git push origin my-new-branch
+  ```
+- Finally, create a new pull request from your forked repository. Note this PR will be an **Empty PR**.
+
+---
+
+- After creating the button and empty PR, you'll need to create a Pull Request on the GitHub repository.
 - Navigate to the repository's main page.
 - Click on the "Pull Requests" tab.
 - Click the "New Pull Request" button.
