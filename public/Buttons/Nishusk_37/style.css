@@ -43,7 +43,6 @@ body .container .button {
   --text: #F5F9FF;
   --success: #2F3545;
 }
-
 .button {
   --background: #275efe;
   --rectangle: #184fee;
@@ -51,16 +50,18 @@ body .container .button {
   --text: #fff;
   --arrow: #fff;
   --checkmark: #fff;
-  --shadow: rgba(10, 22, 50, .24);
+  --shadow: rgba(10, 22, 50, 0.24);
   display: flex;
   overflow: hidden;
   text-decoration: none;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black); /* Standard property */
   background: var(--background);
   border-radius: 8px;
   box-shadow: 0 2px 8px -1px var(--shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .button:active {
   transform: scale(0.95);
   box-shadow: 0 1px 4px -1px var(--shadow);
