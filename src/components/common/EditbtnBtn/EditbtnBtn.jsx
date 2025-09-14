@@ -22,13 +22,13 @@ const EditbtnBtn = ({ modeToggle, handleDelete }) => {
   if (!user) {
     return null; // Return nothing if the user is not logged in
   }
+  const currentScreenName = auth?.currentUser?.reloadUserInfo?.screenName;
+  const isOwner = auth.currentUser && location.pathname.split("/")[2] === currentScreenName;
+  const adminIds = process.env.REACT_APP_ADMIN_ID ? process.env.REACT_APP_ADMIN_ID.split(",") : [];
+  const isAdmin = adminIds.includes(currentScreenName);
+
   return (
-    ((auth.currentUser &&
-      location.pathname.split("/")[2] ===
-        auth?.currentUser?.reloadUserInfo?.screenName) ||
-      process.env.REACT_APP_admin_id.split(",").includes(
-        auth?.currentUser?.reloadUserInfo?.screenName
-      )) && (
+    (isOwner || isAdmin) && (
       <div
         onClick={handleDelete}
         className={`${classes.deleteButton} ${
