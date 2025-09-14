@@ -336,7 +336,66 @@
   margin-top: 5%;
   margin-bottom: 5%;
   text-align: center;
-  
+}
+
+/* Error message styles */
+.error_message {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  color: #c33;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.error_message button {
+  background-color: #c33;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Loading indicator styles */
+.loading_indicator {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Disabled pagination item */
+.paginationItem.disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+
+.paginationItem.disabled:hover {
+  transform: none !important;
+  background-color: #494949 !important;
+}
+
+/* Loading state for pagination items */
+.paginationItem.loading {
+  opacity: 0.7;
+  cursor: wait !important;
+}
+
+/* Ellipsis styling */
+.paginationItem.ellipsis {
+  cursor: default;
+  background-color: transparent;
+  border: none;
+  color: #666;
+}
+
+.paginationItem.ellipsis:hover {
+  transform: none !important;
+  background-color: transparent !important;
 }
 @media screen and (max-width: 768px) {
   .paginationItem {

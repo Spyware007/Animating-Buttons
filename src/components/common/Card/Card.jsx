@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { db } from "../../../firebase/auth";
 import {
   getDocs,
@@ -16,75 +16,117 @@ import DeleteButton from "../deleteBtn/DeleteButton";
 import EditbtnBtn from "../EditbtnBtn/EditbtnBtn";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
-// import { renderIntoDocument } from "react-dom/test-utils";
 import { toast } from "react-hot-toast";
 
 
 
-function download(css, html, js, name) {
+const download = async (css, html, js, name) => {
   const zip = new JSZip();
   try {
-    zip.file("style.css", css);
-    zip.file("index.html", html);
-    zip.file("app.js", js);
+    zip.file("style.css", css || '');
+    zip.file("index.html", html || '');
+    zip.file("app.js", js || '');
 
-    zip.generateAsync({ type: "blob" }).then((zipFile) => {
-      saveAs(zipFile, `${name} files.zip`);
-    });
-    toast.success('Downloaded Successfully')
+    const zipFile = await zip.generateAsync({ type: "blob" });
+    saveAs(zipFile, `${name || 'button'}_files.zip`);
+    toast.success('Downloaded Successfully');
   } catch (error) {
-    console.log(error)
-    toast.error('Something Went Wrong')
+    console.error('Download error:', error);
+    toast.error('Download failed. Please try again.');
   }
-}
+};
 
-export default function Card({ modeToggle, button }) {
+const Card = React.memo(function Card({ modeToggle, button }) {
+  if (!button || !button.id) {
+    return null;
+  }
+
   const btnId = button.id;
   const user = button.githubUsername;
-  const [profilePicture, setProfilePicture] = useState({});
+  const [profilePicture, setProfilePicture] = useState("");
   const [deleted, setDeleted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  // { console.log(button); }
+  // Memoized profile picture URL
+  const profilePictureUrl = useMemo(() => {
+    return profilePicture || `https://github.com/${user}.png`;
+  }, [profilePicture, user]);
+
+  // Memoized iframe content
+  const iframeContent = useMemo(() => {
+    return `
+      <html>
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <style>${button.css || ''}</style>
+        </head>
+        <body>
+          ${button.html || ''}
+          <script>${button.js || ''}</script>
+        </body>
+      </html>
+    `;
+  }, [button.css, button.html, button.js]);
 
   useEffect(() => {
+    let isMounted = true;
+    
     const fetchUser = async () => {
+      if (!user) return;
+      
       try {
-        if (user) {
-          const q = query(
-            collection(db, "users"),
-            where("githubUsername", "==", user)
-          );
-          const querySnapshot = await getDocs(q);
+        setIsLoading(true);
+        const q = query(
+          collection(db, "users"),
+          where("githubUsername", "==", user)
+        );
+        const querySnapshot = await getDocs(q);
 
-          if (!querySnapshot.empty) {
-            const userData = querySnapshot.docs[0].data();
-            const { profilePictureUrl } = userData;
+        if (isMounted && !querySnapshot.empty) {
+          const userData = querySnapshot.docs[0].data();
+          const { profilePictureUrl } = userData;
+          if (profilePictureUrl) {
             setProfilePicture(profilePictureUrl);
           }
         }
       } catch (error) {
         console.error("Error fetching user:", error);
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
       }
     };
+    
     fetchUser();
+    
+    return () => {
+      isMounted = false;
+    };
   }, [user]);
 
-  const handleDelete = async () => {
-    const sure = window.confirm("Are You Sure ?");
-    if (sure) {
+  const handleDelete = useCallback(async () => {
+    const sure = window.confirm("Are you sure you want to delete this button?");
+    if (!sure) return;
+
+    try {
+      setIsLoading(true);
       const buttonRef = doc(db, "buttons", button.id);
-      await deleteDoc(buttonRef)
-        .then(() => {
-          setDeleted(true);
-          console.log("Document successfully deleted!");
-          toast.success("Successfully deleted!")
-        })
-        .catch((error) => {
-          console.error("Error deleting document: ", error);
-          toast.error("Error in deleting component!")
-        });
+      await deleteDoc(buttonRef);
+      setDeleted(true);
+      toast.success("Button deleted successfully!");
+    } catch (error) {
+      console.error("Error deleting document:", error);
+      toast.error("Failed to delete button. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
-  };
+  }, [button.id]);
+
+  const handleDownload = useCallback(() => {
+    download(button.css, button.html, button.js, user);
+  }, [button.css, button.html, button.js, user]);
 
   return (
     <>
@@ -93,28 +135,32 @@ export default function Card({ modeToggle, button }) {
           className={`${classes.card_container} ${modeToggle ? classes["dark-container"] : classes["light-container"]
             } }`}
         >
-          <div className={classes.frame} >
+          <div className={classes.frame}>
             <iframe
               className={classes.iframe_container}
               style={{ width: "100%", height: "100%" }}
-              title={btnId}
-              srcDoc={`
-            <html>
-              <head><style>${button.css}</style></head>
-              <body>${button.html}<script>${button.js}</script></body>
-            </html>
-          `}
-              sandbox="allow-scripts"
-            ></iframe>
+              title={`Button ${btnId}`}
+              srcDoc={iframeContent}
+              sandbox="allow-scripts allow-same-origin"
+              loading="lazy"
+            />
           </div>
           <div className={classes.contributor_info}>
             <div className={classes.contributor_data}>
               <div className={classes.contributor_img_container}>
-                <img
-                  className={classes.contributor_img}
-                  src={profilePicture}
-                  alt="User" loading="lazy"
-                />
+                {isLoading ? (
+                  <div className={classes.loading_placeholder}>...</div>
+                ) : (
+                  <img
+                    className={classes.contributor_img}
+                    src={profilePictureUrl}
+                    alt={`${user}'s profile`}
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.src = `https://github.com/${user}.png`;
+                    }}
+                  />
+                )}
               </div>
             </div>
             <Link to={`/user/${user}`} className={classes.contributor_name}>
@@ -126,22 +172,26 @@ export default function Card({ modeToggle, button }) {
               </Link>
               <Button
                 modeToggle={modeToggle}
-                onClick={() =>
-                  download(button.css, button.html, button.js, user)
-                }
+                onClick={handleDownload}
               />
             </div>
           </div>
 
           <div className={classes.stats_btn}>
-            <DeleteButton modeToggle={modeToggle} handleDelete={handleDelete} />
-            <Link to={`/show/${btnId} `}>
-              <EditbtnBtn modeToggle={modeToggle}  />
+            <DeleteButton 
+              modeToggle={modeToggle} 
+              handleDelete={handleDelete}
+              disabled={isLoading}
+            />
+            <Link to={`/show/${btnId}`}>
+              <EditbtnBtn modeToggle={modeToggle} />
             </Link>
             <LikeButton btnId={btnId} />
           </div>
         </div>
       )}
     </>
-  )
-}
+  );
+});
+
+export default Card;

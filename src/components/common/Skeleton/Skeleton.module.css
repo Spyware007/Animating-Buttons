@@ -1,0 +1,135 @@
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.rectangular {
+  /* Default rectangular skeleton */
+}
+
+.circular {
+  border-radius: 50% !important;
+}
+
+.text {
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* Card skeleton styles */
+.card_skeleton {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  height: auto;
+  background-color: #222222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.frame_skeleton {
+  height: 20rem;
+  margin-bottom: 16px;
+}
+
+.contributor_skeleton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.profile_section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.buttons_skeleton {
+  display: flex;
+  gap: 8px;
+}
+
+.stats_skeleton {
+  display: flex;
+  gap: 16px;
+  align-self: flex-end;
+}
+
+/* Grid skeleton */
+.grid_skeleton {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 60px 50px;
+}
+
+/* Text skeleton */
+.text_skeleton {
+  margin-bottom: 16px;
+}
+
+.text_skeleton .skeleton {
+  margin-bottom: 8px;
+}
+
+.text_skeleton .skeleton:last-child {
+  margin-bottom: 0;
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .skeleton {
+    background: linear-gradient(90deg, #333 25%, #444 50%, #333 75%);
+    background-size: 200% 100%;
+  }
+}
+
+/* Mobile responsive */
+@media only screen and (max-width: 800px) {
+  .card_skeleton {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .card_skeleton {
+    width: 90vw;
+  }
+  
+  .grid_skeleton {
+    gap: 30px 20px;
+  }
+}
+
+/* Light theme card skeleton */
+.light_skeleton {
+  background-color: #f0f0f5;
+}
+
+.light_skeleton .skeleton {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+}
+
+/* Dark theme card skeleton */
+.dark_skeleton {
+  background-color: #000;
+}
+
+.dark_skeleton .skeleton {
+  background: linear-gradient(90deg, #333 25%, #444 50%, #333 75%);
+  background-size: 200% 100%;
+}

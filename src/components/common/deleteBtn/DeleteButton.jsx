@@ -25,11 +25,15 @@ const DeleteButton = ({ modeToggle, handleDelete }) => {
   return (
     ((auth.currentUser &&
       location.pathname.split("/")[2] ===
-      auth?.currentUser?.reloadUserInfo?.screenName) || (process.env.REACT_APP_admin_id.split(',').includes(auth?.currentUser?.reloadUserInfo?.screenName))) && (
+        auth?.currentUser?.reloadUserInfo?.screenName) ||
+      process.env.REACT_APP_admin_id.split(",").includes(
+        auth?.currentUser?.reloadUserInfo?.screenName
+      )) && (
       <div
         onClick={handleDelete}
-        className={`${classes.deleteButton} ${modeToggle ? classes["dark"] : classes["light"]
-          }`}
+        className={`${classes.deleteButton} ${
+          modeToggle ? classes["dark"] : classes["light"]
+        }`}
       >
         <div className={classes.heartBg}>
           <div className={`${classes.heartIcon} `}></div>

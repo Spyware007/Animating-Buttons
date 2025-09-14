@@ -107,6 +107,22 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
                   About
                 </NavLink>
               </li>
+              {/* Admin link - only show for admin users */}
+              {localStorage.getItem("username")?.toLowerCase() ===
+                process.env.REACT_APP_admin_id?.toLowerCase() && (
+                <li
+                  className={`${classes.list_item} ${
+                    location.pathname === "/admin" && classes.active
+                  }`}
+                  onClick={() =>
+                    window.innerWidth < 768 && setNavbarVisible(false)
+                  }
+                >
+                  <NavLink className={classes.list_item_link} to="/admin">
+                    Admin
+                  </NavLink>
+                </li>
+              )}
               {/* <li className={classes.list_item}>
             <Link className={classes.list_item_link} to={"/leaderboard"}>
               Creators

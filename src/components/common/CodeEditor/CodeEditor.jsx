@@ -1,7 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import classes from "./CodeEditor.module.css";
 import Editor from "@monaco-editor/react";
-import { useNavigate, useLocation, useParams, redirect } from "react-router-dom";
+import {
+  useNavigate,
+  useLocation,
+  useParams,
+  redirect,
+} from "react-router-dom";
 
 import LangButton from "../LangButton/LangButton";
 import htmlIcon from "../../../assets/html.webp";
@@ -13,13 +18,19 @@ import { auth, db } from "../../../firebase/auth"; // Import the db and signInWi
 import { collection, addDoc, doc, getDoc, updateDoc } from "firebase/firestore"; // Import the collection and addDoc functions
 import { toast, Toaster } from "react-hot-toast";
 
-
-export default function CodeEditor({ html, setHtml, css, setCss, js, setJs, githubUsername }) {
+export default function CodeEditor({
+  html,
+  setHtml,
+  css,
+  setCss,
+  js,
+  setJs,
+  githubUsername,
+}) {
   // const [userLoggedIn, setUserLoggedIn] = useState(false);
   const location = useLocation();
-  const naviagte = useNavigate()
+  const naviagte = useNavigate();
   const { id } = useParams();
-
 
   const files = {
     "index.html": {
@@ -73,20 +84,26 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs, gith
       githubUsername: "",
       displayName: "",
       likedUsers: [],
+      status: "pending", // New buttons start as pending for admin review
+      createdAt: new Date(),
+      updatedAt: new Date(),
     };
 
     try {
       const user = auth.currentUser;
       // console.log(user.reloadUserInfo.providerUserInfo[0].screenName);
-      buttonData.githubUsername = user.reloadUserInfo.providerUserInfo[0].screenName;
+      buttonData.githubUsername =
+        user.reloadUserInfo.providerUserInfo[0].screenName;
       const displayName = user.displayName || "";
       buttonData.displayName = displayName;
       const docRef = await addDoc(buttonCollectionRef, buttonData);
       console.log("Button document saved with ID:", docRef.id);
-      toast.success("Successfully added!");
+      toast.success(
+        "Button submitted for review! It will appear on the site after admin approval."
+      );
       setTimeout(() => {
-        naviagte('/')
-      }, 1000);
+        naviagte("/");
+      }, 2000);
     } catch (error) {
       console.error("Error adding button document:", error);
       toast.error("Action Failed!");
@@ -94,7 +111,6 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs, gith
   };
 
   const updateButtonInFirestore = async (buttonId) => {
-
     try {
       const user = auth.currentUser;
       if (!user) {
@@ -121,19 +137,18 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs, gith
       await updateDoc(buttonDocRef, updatedData);
 
       console.log("Button document updated:", buttonId);
-      return naviagte(`/user/${githubUsername}`)
+      return naviagte(`/user/${githubUsername}`);
     } catch (error) {
       console.error("Error updating button document:", error);
     }
   };
-
 
   const getEditorValue = async () => {
     try {
       const editorValue = editorRef.current.getValue();
       await navigator.clipboard.writeText(editorValue);
       console.log("Value copied to clipboard:", editorValue);
-      toast.success('Value copied to clipboard')
+      toast.success("Value copied to clipboard");
     } catch (error) {
       console.error("Failed to copy value to clipboard:", error);
     }
@@ -153,7 +168,6 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs, gith
       setJs(value);
     }
   };
-
 
   return (
     <>
@@ -182,22 +196,26 @@ export default function CodeEditor({ html, setHtml, css, setCss, js, setJs, gith
             CREATE
           </button>
         )}
-        {
-          ((auth.currentUser &&
-            location.pathname.split("/")[2] ===
-            auth?.currentUser?.reloadUserInfo?.screenName) || (process.env.REACT_APP_admin_id.split(',').includes(auth?.currentUser?.reloadUserInfo?.screenName))) &&
-          <button className={classes.addbtn} onClick={() => toast.promise(
-            updateButtonInFirestore(id),
-            {
-              loading: 'Updating...',
-              success: 'Button Updated Successfully',
-              error: 'Updation Failed',
+        {((auth.currentUser &&
+          location.pathname.split("/")[2] ===
+            auth?.currentUser?.reloadUserInfo?.screenName) ||
+          process.env.REACT_APP_admin_id.split(",").includes(
+            auth?.currentUser?.reloadUserInfo?.screenName
+          )) && (
+          <button
+            className={classes.addbtn}
+            onClick={() =>
+              toast.promise(updateButtonInFirestore(id), {
+                loading: "Updating...",
+                success: "Button Updated Successfully",
+                error: "Updation Failed",
+              })
             }
-          )}>
+          >
             UPDATE
           </button>
-        }
-      </div >
+        )}
+      </div>
       <div className={classes.editor}>
         <Editor
           className={classes.editor_component}

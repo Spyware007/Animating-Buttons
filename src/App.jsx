@@ -19,6 +19,9 @@ import SuspenseLoader from "./components/SuspenseLoader/SuspenseLoader";
 import GoToTop from "./components/Top/GoToTop";
 import UserProfile from "./components/UserProfile/UserProfile";
 import About from "./pages/AboutUs/About";
+import AdminRoute from "./components/Admin/AdminRoute";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
+import { AppProvider } from "./context/AppContext";
 
 
 
@@ -86,10 +89,10 @@ const App = ({ modeToggleFunc, modeToggle }) => {
       path: "/add",
       element: <AddButton />,
     },
-    // {
-    //   path: "/login",
-    //   element: <Login />,
-    // },
+    {
+      path: "/admin",
+      element: <AdminRoute modeToggle={toggleMode} />,
+    },
     {
       path: "/user/:userId",
       element: <UserProfile modeToggle={toggleMode} />,
@@ -116,23 +119,24 @@ const App = ({ modeToggleFunc, modeToggle }) => {
   }, []);
 
   return (
-    <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <div className={`${toggleMode ? "dark" : "light"}`}>
-          <Navbar modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
-          <Routes>
-            {routes.map((route, index) => (
-              <Route key={index} path={route.path} element={route.element} />
-            ))}
-          </Routes>
-          <GoToTop />
-          <Footer modeToggle={toggleMode} />
-        </div>
-      )}
-    </>
-
+    <AppProvider>
+      <ErrorBoundary>
+        {loading ? (
+          <Loader />
+        ) : (
+          <div className={`${toggleMode ? "dark" : "light"}`}>
+            <Navbar modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
+            <Routes>
+              {routes.map((route, index) => (
+                <Route key={index} path={route.path} element={route.element} />
+              ))}
+            </Routes>
+            <GoToTop />
+            <Footer modeToggle={toggleMode} />
+          </div>
+        )}
+      </ErrorBoundary>
+    </AppProvider>
   );
 };
 
