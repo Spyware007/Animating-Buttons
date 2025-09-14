@@ -109,7 +109,7 @@ const Navbar = ({ modeToggle, modeToggleFunc }) => {
               </li>
               {/* Admin link - only show for admin users */}
               {localStorage.getItem("username")?.toLowerCase() ===
-                process.env.REACT_APP_admin_id?.toLowerCase() && (
+                process.env.REACT_APP_ADMIN_ID?.toLowerCase() && (
                 <li
                   className={`${classes.list_item} ${
                     location.pathname === "/admin" && classes.active

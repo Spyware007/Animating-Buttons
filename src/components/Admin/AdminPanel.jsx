@@ -36,7 +36,7 @@ const AdminPanel = ({ modeToggle }) => {
         const currentUser = localStorage.getItem("username");
 
         // Get admin ID from environment variable
-        const adminId = process.env.REACT_APP_admin_id;
+        const adminId = process.env.REACT_APP_ADMIN_ID;
 
         // Debug logging
         console.log("Debug Admin Check:");
@@ -48,7 +48,7 @@ const AdminPanel = ({ modeToggle }) => {
         );
 
         if (!adminId) {
-          console.error("REACT_APP_admin_id environment variable not set");
+          console.error("REACT_APP_ADMIN_ID environment variable not set");
           setIsAdmin(false);
           toast.error(
             "Admin configuration error - Environment variable not found"

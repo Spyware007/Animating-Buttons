@@ -199,7 +199,7 @@ export default function CodeEditor({
         {((auth.currentUser &&
           location.pathname.split("/")[2] ===
             auth?.currentUser?.reloadUserInfo?.screenName) ||
-          process.env.REACT_APP_admin_id.split(",").includes(
+          process.env.REACT_APP_ADMIN_ID.split(",").includes(
             auth?.currentUser?.reloadUserInfo?.screenName
           )) && (
           <button

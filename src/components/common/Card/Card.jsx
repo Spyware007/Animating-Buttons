@@ -18,8 +18,6 @@ import JSZip from "jszip";
 import { saveAs } from "file-saver";
 import { toast } from "react-hot-toast";
 
-
-
 const download = async (css, html, js, name) => {
   const zip = new JSZip();
   try {
@@ -37,19 +35,21 @@ const download = async (css, html, js, name) => {
 };
 
 const Card = React.memo(function Card({ modeToggle, button }) {
-  if (!button || !button.id) {
-    return null;
-  }
-
-  const btnId = button.id;
-  const user = button.githubUsername;
+  // ALL HOOKS MUST BE AT THE TOP - NO CONDITIONS ABOVE THEM
   const [profilePicture, setProfilePicture] = useState("");
   const [deleted, setDeleted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  // Extract values safely for hooks dependencies
+  const btnId = button?.id;
+  const user = button?.githubUsername;
+  const buttonCss = button?.css;
+  const buttonHtml = button?.html; 
+  const buttonJs = button?.js;
+
   // Memoized profile picture URL
   const profilePictureUrl = useMemo(() => {
-    return profilePicture || `https://github.com/${user}.png`;
+    return profilePicture || `https://github.com/${user || 'default'}.png`;
   }, [profilePicture, user]);
 
   // Memoized iframe content
@@ -59,22 +59,22 @@ const Card = React.memo(function Card({ modeToggle, button }) {
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <style>${button.css || ''}</style>
+          <style>${buttonCss || ''}</style>
         </head>
         <body>
-          ${button.html || ''}
-          <script>${button.js || ''}</script>
+          ${buttonHtml || ''}
+          <script>${buttonJs || ''}</script>
         </body>
       </html>
     `;
-  }, [button.css, button.html, button.js]);
+  }, [buttonCss, buttonHtml, buttonJs]);
 
   useEffect(() => {
+    if (!user) return;
+    
     let isMounted = true;
     
     const fetchUser = async () => {
-      if (!user) return;
-      
       try {
         setIsLoading(true);
         const q = query(
@@ -107,12 +107,14 @@ const Card = React.memo(function Card({ modeToggle, button }) {
   }, [user]);
 
   const handleDelete = useCallback(async () => {
+    if (!btnId) return;
+    
     const sure = window.confirm("Are you sure you want to delete this button?");
     if (!sure) return;
 
     try {
       setIsLoading(true);
-      const buttonRef = doc(db, "buttons", button.id);
+      const buttonRef = doc(db, "buttons", btnId);
       await deleteDoc(buttonRef);
       setDeleted(true);
       toast.success("Button deleted successfully!");
@@ -122,75 +124,78 @@ const Card = React.memo(function Card({ modeToggle, button }) {
     } finally {
       setIsLoading(false);
     }
-  }, [button.id]);
+  }, [btnId]);
 
   const handleDownload = useCallback(() => {
-    download(button.css, button.html, button.js, user);
-  }, [button.css, button.html, button.js, user]);
+    download(buttonCss, buttonHtml, buttonJs, user);
+  }, [buttonCss, buttonHtml, buttonJs, user]);
+
+  // NOW we can do conditional rendering - after all hooks
+  if (!button || !btnId || deleted) {
+    return null;
+  }
 
   return (
-    <>
-      {!deleted && (
-        <div
-          className={`${classes.card_container} ${modeToggle ? classes["dark-container"] : classes["light-container"]
-            } }`}
-        >
-          <div className={classes.frame}>
-            <iframe
-              className={classes.iframe_container}
-              style={{ width: "100%", height: "100%" }}
-              title={`Button ${btnId}`}
-              srcDoc={iframeContent}
-              sandbox="allow-scripts allow-same-origin"
-              loading="lazy"
-            />
-          </div>
-          <div className={classes.contributor_info}>
-            <div className={classes.contributor_data}>
-              <div className={classes.contributor_img_container}>
-                {isLoading ? (
-                  <div className={classes.loading_placeholder}>...</div>
-                ) : (
-                  <img
-                    className={classes.contributor_img}
-                    src={profilePictureUrl}
-                    alt={`${user}'s profile`}
-                    loading="lazy"
-                    onError={(e) => {
-                      e.target.src = `https://github.com/${user}.png`;
-                    }}
-                  />
-                )}
-              </div>
-            </div>
-            <Link to={`/user/${user}`} className={classes.contributor_name}>
-              {user}
-            </Link>
-            <div className={classes.btns_container}>
-              <Link to={`/show/${btnId} `}>
-                <Button modeToggle={modeToggle} show={true} />
-              </Link>
-              <Button
-                modeToggle={modeToggle}
-                onClick={handleDownload}
+    <div
+      className={`${classes.card_container} ${
+        modeToggle ? classes["dark-container"] : classes["light-container"]
+      }`}
+    >
+      <div className={classes.frame}>
+        <iframe
+          className={classes.iframe_container}
+          style={{ width: "100%", height: "100%" }}
+          title={`Button ${btnId}`}
+          srcDoc={iframeContent}
+          sandbox="allow-scripts allow-same-origin"
+          loading="lazy"
+        />
+      </div>
+      
+      <div className={classes.contributor_info}>
+        <div className={classes.contributor_data}>
+          <div className={classes.contributor_img_container}>
+            {isLoading ? (
+              <div className={classes.loading_placeholder}>...</div>
+            ) : (
+              <img
+                className={classes.contributor_img}
+                src={profilePictureUrl}
+                alt={`${user}'s profile`}
+                loading="lazy"
+                onError={(e) => {
+                  e.target.src = `https://github.com/${user}.png`;
+                }}
               />
-            </div>
-          </div>
-
-          <div className={classes.stats_btn}>
-            <DeleteButton 
-              modeToggle={modeToggle} 
-              handleDelete={handleDelete}
-              disabled={isLoading}
-            />
-            <Link to={`/show/${btnId}`}>
-              <EditbtnBtn modeToggle={modeToggle} />
-            </Link>
-            <LikeButton btnId={btnId} />
+            )}
           </div>
         </div>
-      )}
-    </>
+        <Link to={`/user/${user}`} className={classes.contributor_name}>
+          {user}
+        </Link>
+        <div className={classes.btns_container}>
+          <Link to={`/show/${btnId}`}>
+            <Button modeToggle={modeToggle} show={true} />
+          </Link>
+          <Button
+            modeToggle={modeToggle}
+            onClick={handleDownload}
+          />
+        </div>
+      </div>
+
+      <div className={classes.stats_btn}>
+        <DeleteButton 
+          modeToggle={modeToggle} 
+          handleDelete={handleDelete}
+          disabled={isLoading}
+        />
+        <Link to={`/show/${btnId}`}>
+          <EditbtnBtn modeToggle={modeToggle} />
+        </Link>
+        <LikeButton btnId={btnId} />
+      </div>
+    </div>
   );
 });
 

@@ -14,10 +14,10 @@ const AdminRoute = ({ modeToggle }) => {
         const currentUser = localStorage.getItem("username");
 
         // Get admin ID from environment variable
-        const adminId = process.env.REACT_APP_admin_id;
+        const adminId = process.env.REACT_APP_ADMIN_ID;
 
         if (!adminId) {
-          console.error("REACT_APP_admin_id environment variable not set");
+          console.error("REACT_APP_ADMIN_ID environment variable not set");
           toast.error("Admin configuration error");
           setIsAdmin(false);
           setIsLoading(false);
