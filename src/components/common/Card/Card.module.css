@@ -8,6 +8,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: #ffffff;
+  transition: all 0.3s ease;
 }
 
 .dark-container {
@@ -15,7 +16,20 @@
 }
 
 .light-container {
-  background-color: #f0f0f5;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.light-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 25px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color: #cbd5e1;
 }
 
 .dark-container .iframe_container {
@@ -32,11 +46,13 @@
   all: unset;
   width: 380px;
   height: 280px;
-  box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
-    0 30px 60px -30px rgba(0, 0, 0, 0.3),
-    inset 0 -2px 6px 0 rgba(255, 255, 255, 0.35);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 2px 4px 0 rgba(0, 0, 0, 0.04);
   border-radius: 20px;
-  background: #f0f0f5;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
 }
 
 .btns:hover {
@@ -74,6 +90,15 @@
   height: 45px;
   border-radius: 50%;
   margin-right: 10px;
+  position: relative;
+}
+
+.light-container .contributor_img_container {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light-container .contributor_img_container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .contributor_img {
@@ -81,6 +106,11 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.light-container .contributor_img:hover {
+  transform: scale(1.05);
 }
 .dark-container .contributor_name {
   text-decoration: none;
@@ -88,7 +118,13 @@
 }
 .light-container .contributor_name {
   text-decoration: none;
-  color: black;
+  color: #334155;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.light-container .contributor_name:hover {
+  color: #3b82f6;
 }
 
 .btns_container {
@@ -130,6 +166,21 @@
   align-items: center;
   justify-content: center;
   animation: pulse 1.5s ease-in-out infinite;
+}
+
+.light-container .loading_placeholder {
+  background: linear-gradient(45deg, #e2e8f0, #cbd5e1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Light theme specific improvements */
+.light-container .contributor_info {
+  padding: 4px 0;
+}
+
+.light-container .stats_btn {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 16px;
 }
 
 @keyframes pulse {
