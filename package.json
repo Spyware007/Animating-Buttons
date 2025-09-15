@@ -7,7 +7,7 @@
     "@testing-library/jest-dom": "^6.1.2",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
-    "axios": "^1.5.0",
+    "axios": "^1.12.2",
     "file-saver": "^2.0.5",
     "firebase": "^10.3.1",
     "framer-motion": "^10.16.2",
