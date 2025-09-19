@@ -23,8 +23,11 @@ const DeleteButton = ({ modeToggle, handleDelete }) => {
     return null; // Return nothing if the user is not logged in
   }
   const currentScreenName = auth?.currentUser?.reloadUserInfo?.screenName;
-  const isOwner = auth.currentUser && location.pathname.split("/")[2] === currentScreenName;
-  const adminIds = process.env.REACT_APP_ADMIN_ID ? process.env.REACT_APP_ADMIN_ID.split(",") : [];
+  const isOwner =
+    auth.currentUser && location.pathname.split("/")[2] === currentScreenName;
+  const adminIds = process.env.REACT_APP_admin_id
+    ? process.env.REACT_APP_admin_id.split(",")
+    : [];
   const isAdmin = adminIds.includes(currentScreenName);
 
   return (
