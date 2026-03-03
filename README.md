@@ -1,4 +1,4 @@
-<!-- ANIMATING BUTTONS x GSSOC23 -->
+<!-- ANIMATING BUTTONS x GSSOC23x -->
 
 ![Readme](https://github.com/Spyware007/Animating-Buttons/assets/89961974/213e31d6-222e-4552-a76c-4c417a066be1)
 
